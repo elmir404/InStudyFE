@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+ <div class="frontpage-banner-section frontpage-banner-style-three page-inner-block pd-b-200">
+            <div class="element-group">
+                <div class="element one"></div>
+                <div class="element two"></div>
+            </div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-10 col-md-10">
+                        <div class="frontpage-banner-content">
+                            <h2 class="hero-title w-200 aos-item mrb-0" data-aos="fade-left" data-aos-duration="100" data-aos-once="true">Contact Us</h2>
+                            <h2 class="hero-title w-800 aos-item" data-aos="fade-left" data-aos-duration="200" data-aos-once="true">Let Us Know What You're Looking For.</h2>
+                            <!-- /.hero-title -->
+                        </div><!-- /.hero-content-area -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Contact Block -->
+        <div class="contact-form-block style-two style-three ptb-130">
+            <ul class="particle-shapes">
+				<li class="dot-shape shape-one"></li>
+				<li class="dot-shape shape-two"></li>
+				<li class="dot-shape shape-three"></li>
+				<li class="dot-shape shape-four"></li>
+				<li class="dot-shape shape-five"></li>
+			</ul>
+			<div class="container ml-b-40">
+				<div class="row align-items-center">
+					<div class="col-lg-8 col-md-8">
+						<div class="contact-form-area">
+							<form id="contact_form" class="contact-form">
+								<div class="row">
+									<div class="col-lg-6 col-md-6">
+										<div class="form-group">
+											<label for="name">Your Name </label>
+											<input class="form-controller" id="name" name="name" type="text">
+										</div>
+									</div>
+									<!--./ col-lg-6-->
+									<div class="col-lg-6 col-md-6">
+										<div class="form-group">
+											<label for="email">Your Email </label>
+											<input class="form-controller" id="email" name="email" type="email">
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6">
+										<div class="form-group">
+											<label for="email">Your Phone </label>
+											<input class="form-controller" id="phone" name="phone" type="text">
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6">
+										<div class="form-group">
+											<label for="email">Subject </label>
+											<input class="form-controller" id="subject" name="subject" type="text">
+										</div>
+									</div>
+									<!--./ col-lg-6 -->
+									<div class="col-12">
+										<div class="form-group">
+											<label for="name">Your Message </label>
+											<textarea id="message" name="message" class="form-controller" rows="4"
+												cols="50"></textarea>
+										</div>
+									</div><!-- /.col-12 -->
+									<div class="col-12 mrt-15">
+										<button type="submit" class="btn btn-primary rounded-pill btn-gradient-three">Submit
+											Mail</button>
+									</div>
+									<!--./ col-lg-6 -->
+								</div><!-- /.row -->
+							</form><!-- /.contact-form -->
+						</div><!-- /.contact-form-area -->
+					</div><!-- /.col-lg-8 -->
+                    <div class="col-lg-3 offset-lg-1 col-md-3">
+                        <div class="single-contact-info">
+                            <h3 class="title">Contacts</h3>
+                            <div class="card-info">
+                                <ul id="contactAbout" class="info-list">
+                                    
+                                </ul>
+                            </div><!-- /.card-info -->
+                        </div><!-- /.single-contact-info -->
+                        <div class="single-contact-info">
+                            <h3 class="title">Address</h3>
+                            <div id="addresAbout" class="card-info">
+                            </div><!-- /.card-info -->
+                        </div><!-- /.single-contact-info -->
+                    </div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div>
+<!-- ========== Contact section End ========== -->
+@section Scripts{
+	<script src="~/js/contact.js"> </script>
+}
