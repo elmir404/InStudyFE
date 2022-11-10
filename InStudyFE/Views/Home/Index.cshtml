@@ -2,7 +2,907 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+      <section class="homepage-banner">
+         <div class="banner-div container">
+            <div class="banner-text-div">
+               <div class="banner-title">Yurtdışında Eğitim Al, <span class="blue">Hayalindeki Geleceğe</span> Bugün Başla!</div>
+               <p class="detail-text-dark-blue text-left">Dünyanın en güzel ülkelerinde, kaliteli okullarda yüzlerce farklı eğitim programı seni bekliyor. Ülkeni seç, dilediğin programı belirle ve saniyeler içinde sana uygun programları gör.</p>
+               <div class="btn-div"> <button class="btn-green" data-bs-toggle="modal" data-bs-target="#getAnOffer">Teklif Al</button> <a class="btn-grey-border" href="ulkeler.html" class="btn-grey-border">Keşfet</a> </div>
+            </div>
+            <div class="banner-image ">  <img class="float-end wtd-100" src="../d92mazmete5uc.cloudfront.net/public/~/css/images/slide-tr-min.jpg" alt="banner-img">  </div>
+         </div>
+      </section>
+      <section class="why-endless">
+         <div class="opacity-div"></div>
+         <div class="container">
+            <div class="detail-div pt-20">
+               <div class="detail-header-div">
+                  <div class="detail-header-text-div">
+                     <h4 class="section-sub-title">Neden Endless Abroad?</h4>
+                     <p class="container-text">Dünyanın en güzel ülkelerindeki, en kaliteli okulları saniyeler içinde listeleyerek, danışmanlarımızın yardımıyla hayalindeki ülkede eğitimine başlayabilirsin.</p>
+                  </div>
+                  <div class="detail-header-btn-div"> <button class="btn-blue"><a href="hakkimizda.html">Hakkımızda</a></button> </div>
+               </div>
+               <div class="card-why-div">
+                  <div class="card-icon-text text-center">
+                     <img src="~/css/images/icons/icon-search-cursor.svg" alt=""> 
+                     <h3 class="darkblue">Okul Ara</h3>
+                     <p class="detail-text-dark-blue">Eğitim almak istediğin alanı, ülkeyi, dili ve süreyi seç. Dünyanın en iyi okulları saniyeler içinde karşında!</p>
+                  </div>
+                  <div class="line-icon-div">
+                     <div class="ellipse-div"> <img src="~/css/images/icons/icon-greater.svg" alt=""> </div>
+                  </div>
+                  <div class="card-icon-text text-center">
+                     <img src="~/css/images/icons/icon-get-in-touch.svg" alt=""> 
+                     <h3 class="darkblue">İletişime Geç</h3>
+                     <p class="detail-text-dark-blue">Yurtdışı eğitim ile ilgili tüm sorularına cevap veren uzman danışmanlar daima yanında!</p>
+                  </div>
+                  <div class="line-icon-div">
+                     <div class="ellipse-div"> <img src="~/css/images/icons/icon-greater.svg" alt=""> </div>
+                  </div>
+                  <div class="card-icon-text text-center">
+                     <img src="~/css/images/icons/icon-join-successfully.svg" alt=""> 
+                     <h3 class="darkblue">Eğitimine Başla</h3>
+                     <p class="detail-text-dark-blue">Okul seçimine danışmanlardan aldığın bilgilerle karar ver, hayalindeki ülkede istediğin programa doğru yola çık!</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <div class="vue-app">
+         <detail-search route="https://www.endlessabroad.com.tr" trans="{&quot;programs&quot;:&quot;Programlar&quot;,&quot;country&quot;:&quot;\u00dclke&quot;,&quot;city&quot;:&quot;\u015eehir&quot;,&quot;error_message_text&quot;:&quot;Sayfa y\u00fcklenirken bir hata olu\u015ftu. L\u00fctfen sayfay\u0131 yenileyin ve tekrar deneyin.&quot;,&quot;duration&quot;:&quot;S\u00fcre&quot;,&quot;at&quot;:&quot;&quot;,&quot;in&quot;:&quot;de&quot;,&quot;with&quot;:&quot;ile&quot;,&quot;language&quot;:&quot;Dil&quot;,&quot;discipline&quot;:&quot;B\u00f6l\u00fcm&quot;,&quot;want_study&quot;:&quot;E\u011fitim almak istiyorum&quot;,&quot;filter_title&quot;:&quot;F\u0130LTRE&quot;,&quot;accommodation_btn&quot;:&quot;Konaklama Dahil&quot;,&quot;search&quot;:&quot;Ara&quot;,&quot;start_date&quot;:&quot;Ba\u015flang\u0131\u00e7 Tarihi&quot;,&quot;lesson_time&quot;:&quot;Ders Saati&quot;,&quot;age_range&quot;:&quot;Ya\u015f Aral\u0131\u011f\u0131&quot;,&quot;location&quot;:&quot;Yer&quot;,&quot;price_range&quot;:&quot;Fiyat Aral\u0131\u011f\u0131&quot;,&quot;confirm_filter&quot;:&quot;Filtreyi Onayla&quot;,&quot;reset_filter&quot;:&quot;Filtreyi Kald\u0131r&quot;,&quot;weeks&quot;:&quot;Hafta&quot;,&quot;selected&quot;:&quot;Se\u00e7ildi&quot;,&quot;compare&quot;:&quot;Kar\u015f\u0131la\u015ft\u0131r&quot;,&quot;class_capacity&quot;:&quot;S\u0131n\u0131f Kapasitesi&quot;,&quot;student_capacity&quot;:&quot;\u00d6\u011frenci Kapasitesi&quot;,&quot;average_age&quot;:&quot;Ortalama ya\u015f&quot;,&quot;school_fee&quot;:&quot;Okul \u00dccreti&quot;,&quot;accomodation&quot;:&quot;Konaklama&quot;,&quot;total_fee&quot;:&quot;Toplam \u00dccret&quot;,&quot;total_fee_accomodation&quot;:&quot;Toplam \u00dccret Konaklama Dahil&quot;,&quot;year_fee&quot;:&quot;Y\u0131ll\u0131k \u00dccret&quot;,&quot;application_fee&quot;:&quot;Ba\u015fvuru \u00dccreti&quot;,&quot;see_more&quot;:&quot;Daha Fazla Program G\u00f6r&quot;,&quot;no_more&quot;:&quot;Program Yok&quot;,&quot;sorting&quot;:&quot;S\u0131ralama&quot;,&quot;categories&quot;:&quot;T\u00fcm Kategoriler&quot;,&quot;all&quot;:&quot;T\u00fcm\u00fc&quot;,&quot;all_countries&quot;:&quot;T\u00fcm \u00dclkeler&quot;,&quot;all_cities&quot;:&quot;T\u00fcm \u015eehirler&quot;,&quot;thanks_title&quot;:&quot;Teklifiniz Bize G\u00f6nderildi!&quot;,&quot;thanks_desc&quot;:&quot;Teklifiniz bize ula\u015ft\u0131 ve size geri bildirimde bulunaca\u011f\u0131z.&quot;,&quot;compare_modal&quot;:{&quot;title&quot;:&quot;Se\u00e7ilen Programlar&quot;,&quot;duration&quot;:&quot;S\u00fcre&quot;,&quot;week&quot;:&quot;Hafta&quot;,&quot;weeks&quot;:&quot;Hafta&quot;,&quot;school_fee&quot;:&quot;Okul \u00dccreti&quot;,&quot;total_fee&quot;:&quot;Toplam \u00dccret&quot;,&quot;should_select_one_more&quot;:&quot;En az bir program daha se\u00e7melisiniz.&quot;,&quot;can_select_one_more_too&quot;:&quot;Bir program daha se\u00e7ebilirsiniz.&quot;,&quot;multiple_request&quot;:&quot;Teklif Al&quot;,&quot;cant_decide&quot;:&quot;Hangi okulun sizin i\u00e7in m\u00fckemmel oldu\u011funa karar veremiyor musunuz?&quot;,&quot;program_selected&quot;:&quot;Program se\u00e7ildi&quot;,&quot;programs_selected&quot;:&quot;Program se\u00e7ildi&quot;,&quot;send_button&quot;:&quot;\u00c7OKLU F\u0130YAT TALEP FORMU G\u00d6NDER\u0130N&quot;,&quot;compare_these_programs&quot;:&quot;BU PROGRAMLARI KAR\u015eILA\u015eTIRIN&quot;},&quot;course_subject&quot;:&quot;Kurs Konusu&quot;,&quot;education_methods&quot;:&quot;E\u011fitim Modeli&quot;,&quot;education_type&quot;:&quot;E\u011fitim Tipi&quot;,&quot;required_tests&quot;:&quot;Gerekli Testler&quot;}" image="https://d92mazmete5uc.cloudfront.net/public/~/css/images/search-bg-min.png" academic-school-types="[{&quot;key&quot;:8,&quot;label&quot;:&quot;\u00dcniversite&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/universiteler&quot;,&quot;countries&quot;:[{&quot;key&quot;:52702,&quot;label&quot;:&quot;\u0130ngiltere&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ingiltere-universiteleri-lisans-egitimi&quot;,&quot;cities&quot;:[{&quot;key&quot;:52721,&quot;label&quot;:&quot;Bournemouth&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bournemouth-universiteleri&quot;},{&quot;key&quot;:52724,&quot;label&quot;:&quot;Birmingham&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/birmingham-universiteleri&quot;},{&quot;key&quot;:52704,&quot;label&quot;:&quot;Brighton&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/brighton-universiteleri&quot;},{&quot;key&quot;:52707,&quot;label&quot;:&quot;Bristol&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bristol-universiteleri&quot;},{&quot;key&quot;:52706,&quot;label&quot;:&quot;Cambridge&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/cambridge-universiteleri&quot;},{&quot;key&quot;:52897,&quot;label&quot;:&quot;Colchester&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/colchester-universiteleri&quot;},{&quot;key&quot;:52896,&quot;label&quot;:&quot;Cranfield&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/cranfield-universiteleri&quot;},{&quot;key&quot;:52715,&quot;label&quot;:&quot;Liverpool&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/liverpool-universiteleri&quot;},{&quot;key&quot;:52703,&quot;label&quot;:&quot;Londra&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/londra-universiteleri&quot;},{&quot;key&quot;:52895,&quot;label&quot;:&quot;Nottingham&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/nottingham-universiteleri&quot;},{&quot;key&quot;:52773,&quot;label&quot;:&quot;Scotland&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/scotland-universiteleri&quot;},{&quot;key&quot;:52716,&quot;label&quot;:&quot;York&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/york-universiteleri&quot;}]},{&quot;key&quot;:52680,&quot;label&quot;:&quot;Amerika&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/amerika-universiteleri-lisans-egitimi&quot;,&quot;cities&quot;:[{&quot;key&quot;:46742,&quot;label&quot;:&quot;Alabama&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/alabama-liseleri&quot;},{&quot;key&quot;:52684,&quot;label&quot;:&quot;San Diego&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/san-diego-universiteleri&quot;},{&quot;key&quot;:52685,&quot;label&quot;:&quot;San Francisco&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/san-francisco-universiteleri&quot;},{&quot;key&quot;:52694,&quot;label&quot;:&quot;Texas&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/texas-universiteleri&quot;}]},{&quot;key&quot;:52726,&quot;label&quot;:&quot;Kanada&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/kanada-universiteleri&quot;,&quot;cities&quot;:[{&quot;key&quot;:52730,&quot;label&quot;:&quot;Ottawa&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ottawa-universiteleri&quot;},{&quot;key&quot;:52727,&quot;label&quot;:&quot;Toronto&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/toronto-universiteleri&quot;},{&quot;key&quot;:52729,&quot;label&quot;:&quot;Vancouver&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/vancouver-universiteleri&quot;}]},{&quot;key&quot;:52831,&quot;label&quot;:&quot;Polonya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/polonya-universiteleri&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:9455,&quot;label&quot;:&quot;\u00c7ekya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/cekya-universiteleri-lisans-egitimi&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52758,&quot;label&quot;:&quot;\u0130rlanda&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/irlanda-universiteleri-lisans-egitimi&quot;,&quot;cities&quot;:[{&quot;key&quot;:52762,&quot;label&quot;:&quot;Dublin&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/dublin-universiteleri-lisans-egitimi&quot;}]},{&quot;key&quot;:52736,&quot;label&quot;:&quot;Avustralya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/avustralya-universiteleri-lisans-egitimi&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52834,&quot;label&quot;:&quot;Ukrayna&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ukrayna-universiteleri&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52750,&quot;label&quot;:&quot;Malta&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/malta-universiteleri-lisans-egitimi&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52832,&quot;label&quot;:&quot;Fransa&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/fransa-universiteleri-lisans-egitimi&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52951,&quot;label&quot;:&quot;Hollanda&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/hollanda-universiteleri-lisans-egitimi&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52838,&quot;label&quot;:&quot;Rusya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/rusya-universiteleri-lisans-egitimi&quot;,&quot;cities&quot;:[{&quot;key&quot;:52839,&quot;label&quot;:&quot;Nijniy Novgorod&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/nijniy-novgorod-universiteleri&quot;}]},{&quot;key&quot;:52784,&quot;label&quot;:&quot;Almanya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/almanya-universiteleri-lisans-egitimi&quot;,&quot;cities&quot;:[{&quot;key&quot;:52789,&quot;label&quot;:&quot;Berlin&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/berlin-universiteleri&quot;},{&quot;key&quot;:52799,&quot;label&quot;:&quot;Hamburg&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/hamburg-universiteleri&quot;},{&quot;key&quot;:52829,&quot;label&quot;:&quot;Hannover&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/hannover-universiteleri&quot;}]},{&quot;key&quot;:52801,&quot;label&quot;:&quot;\u0130spanya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ispanya-universiteleri-lisans-egitimi&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52828,&quot;label&quot;:&quot;BAE-Dubai&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bae-dubai-universiteleri-lisans-egitimi&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52818,&quot;label&quot;:&quot;\u0130talya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/italya-universiteleri&quot;,&quot;cities&quot;:[{&quot;key&quot;:52819,&quot;label&quot;:&quot;Bologna&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bologna-universiteleri&quot;},{&quot;key&quot;:52818,&quot;label&quot;:&quot;Firenze&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/firenze-universiteleri-lisans-egitimi&quot;},{&quot;key&quot;:52818,&quot;label&quot;:&quot;Genova&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/genova-universiteleri-lisans-egitimi&quot;},{&quot;key&quot;:52819,&quot;label&quot;:&quot;Milano&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/milano-universiteleri&quot;},{&quot;key&quot;:52905,&quot;label&quot;:&quot;Padova&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/padova-universiteleri-lisans-egitimi&quot;},{&quot;key&quot;:52818,&quot;label&quot;:&quot;Pavia&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/pavia-universiteleri-lisans-egitimi&quot;},{&quot;key&quot;:52818,&quot;label&quot;:&quot;Perugia&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/perugia-universiteleri-lisans-egitimi&quot;},{&quot;key&quot;:52818,&quot;label&quot;:&quot;Pisa&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/pisa-universiteleri-lisans-egitimi&quot;},{&quot;key&quot;:52818,&quot;label&quot;:&quot;Roma&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/roma-universiteleri-lisans-egitimi&quot;},{&quot;key&quot;:52818,&quot;label&quot;:&quot;Trento&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/trento-universiteleri-lisans-egitimi&quot;},{&quot;key&quot;:52903,&quot;label&quot;:&quot;Turin&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/turin-universiteleri-lisans-egitimi&quot;},{&quot;key&quot;:52818,&quot;label&quot;:&quot;Venezia&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/venezia-universiteleri-lisans-egitimi&quot;},{&quot;key&quot;:52906,&quot;label&quot;:&quot;Verona&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/verona-universiteleri-lisans-egitimi&quot;}]},{&quot;key&quot;:52891,&quot;label&quot;:&quot;\u0130svi\u00e7re&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/isvicre-universiteleri-lisans-egitimi&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:16659,&quot;label&quot;:&quot;Macaristan&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/macaristan-universiteleri-lisans-egitimi&quot;,&quot;cities&quot;:[]}]},{&quot;key&quot;:5,&quot;label&quot;:&quot;Lise&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/liseler&quot;,&quot;countries&quot;:[{&quot;key&quot;:52702,&quot;label&quot;:&quot;\u0130ngiltere&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ingiltere-liseleri&quot;,&quot;cities&quot;:[{&quot;key&quot;:52703,&quot;label&quot;:&quot;London&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/london-liseleri&quot;}]},{&quot;key&quot;:52680,&quot;label&quot;:&quot;Amerika&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/amerika-liseleri&quot;,&quot;cities&quot;:[{&quot;key&quot;:52852,&quot;label&quot;:&quot;Chicago&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/chicago-liseleri&quot;},{&quot;key&quot;:52872,&quot;label&quot;:&quot;Ohio&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ohio-liseleri&quot;},{&quot;key&quot;:52701,&quot;label&quot;:&quot;Pennsylvania&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/pennsylvania-liseleri&quot;}]},{&quot;key&quot;:52726,&quot;label&quot;:&quot;Kanada&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/kanada-liseleri&quot;,&quot;cities&quot;:[{&quot;key&quot;:52727,&quot;label&quot;:&quot;Toronto&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/toronto-liseleri&quot;},{&quot;key&quot;:52729,&quot;label&quot;:&quot;Vancouver&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/vancouver-liseleri&quot;}]},{&quot;key&quot;:45410,&quot;label&quot;:&quot;BAE-Dubai&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bae-dubai-liseleri&quot;,&quot;cities&quot;:[{&quot;key&quot;:45418,&quot;label&quot;:&quot;Dubai&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/dubai-liseleri&quot;}]},{&quot;key&quot;:52832,&quot;label&quot;:&quot;Fransa&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/fransa-liseleri&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52758,&quot;label&quot;:&quot;\u0130rlanda&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/irlanda-liseleri&quot;,&quot;cities&quot;:[{&quot;key&quot;:52762,&quot;label&quot;:&quot;Dublin&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/dublin-liseleri&quot;}]},{&quot;key&quot;:52784,&quot;label&quot;:&quot;Almanya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/almanya-liseleri&quot;,&quot;cities&quot;:[{&quot;key&quot;:52789,&quot;label&quot;:&quot;Berlin&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/berlin-liseleri&quot;}]},{&quot;key&quot;:52801,&quot;label&quot;:&quot;\u0130spanya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ispanya-liseleri&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52891,&quot;label&quot;:&quot;\u0130svi\u00e7re&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/isvicre-liseleri&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52736,&quot;label&quot;:&quot;Avustralya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/avustralya-liseleri&quot;,&quot;cities&quot;:[{&quot;key&quot;:52740,&quot;label&quot;:&quot;Melbourne&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/melbourne-liseleri&quot;}]},{&quot;key&quot;:52818,&quot;label&quot;:&quot;\u0130talya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/italya-liseleri&quot;,&quot;cities&quot;:[]}]},{&quot;key&quot;:9,&quot;label&quot;:&quot;Y\u00fcksek Lisans&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/yuksek-lisanslar&quot;,&quot;countries&quot;:[{&quot;key&quot;:52702,&quot;label&quot;:&quot;\u0130ngiltere&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ingiltere-yuksek-lisans&quot;,&quot;cities&quot;:[{&quot;key&quot;:52706,&quot;label&quot;:&quot;Cambridge&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/cambridge-yuksek-lisans&quot;},{&quot;key&quot;:52703,&quot;label&quot;:&quot;Londra&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/londra-yuksek-lisans&quot;}]},{&quot;key&quot;:52680,&quot;label&quot;:&quot;Amerika&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/amerika-yuksek-lisans&quot;,&quot;cities&quot;:[{&quot;key&quot;:52688,&quot;label&quot;:&quot;Illinois&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/illinois-yuksek-lisans&quot;},{&quot;key&quot;:52681,&quot;label&quot;:&quot;New York&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/new-york-yuksek-lisans&quot;},{&quot;key&quot;:52689,&quot;label&quot;:&quot;Washington&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/washington-yuksek-lisans&quot;}]},{&quot;key&quot;:52726,&quot;label&quot;:&quot;Kanada&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/kanada-yuksek-lisans&quot;,&quot;cities&quot;:[{&quot;key&quot;:52727,&quot;label&quot;:&quot;Toronto&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/toronto-yuksek-lisans&quot;}]},{&quot;key&quot;:52831,&quot;label&quot;:&quot;Polonya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/polonya-yuksek-lisans&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:9455,&quot;label&quot;:&quot;\u00c7ekya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/cekya-yuksek-lisans&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52832,&quot;label&quot;:&quot;Fransa&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/fransa-yuksek-lisans&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52951,&quot;label&quot;:&quot;Hollanda&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/hollanda-yuksek-lisans&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52891,&quot;label&quot;:&quot;\u0130svi\u00e7re&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/isvicre-yuksek-lisans&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52758,&quot;label&quot;:&quot;\u0130rlanda&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/irlanda-yuksek-lisans&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52736,&quot;label&quot;:&quot;Avustralya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/avustralya-yuksek-lisans&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52784,&quot;label&quot;:&quot;Almanya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/almanya-yuksek-lisans&quot;,&quot;cities&quot;:[{&quot;key&quot;:52789,&quot;label&quot;:&quot;Berlin&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/berlin-yuksek-lisans&quot;},{&quot;key&quot;:52799,&quot;label&quot;:&quot;Hamburg&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/hamburg-yuksek-lisans&quot;}]},{&quot;key&quot;:52801,&quot;label&quot;:&quot;\u0130spanya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ispanya-yuksek-lisans&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52818,&quot;label&quot;:&quot;\u0130talya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/italya-yuksek-lisans&quot;,&quot;cities&quot;:[{&quot;key&quot;:52819,&quot;label&quot;:&quot;Milano&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/milano-yuksek-lisans&quot;}]},{&quot;key&quot;:16659,&quot;label&quot;:&quot;Macaristan&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/macaristan-yuksek-lisans&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52750,&quot;label&quot;:&quot;Malta&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/malta-yuksek-lisans&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52838,&quot;label&quot;:&quot;Rusya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/rusya-yuksek-lisans&quot;,&quot;cities&quot;:[{&quot;key&quot;:52839,&quot;label&quot;:&quot;Nijniy Novgorod&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/nijniy-novgorod-yuksek-lisans&quot;}]},{&quot;key&quot;:52834,&quot;label&quot;:&quot;Ukrayna&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ukrayna-yuksek-lisans&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52828,&quot;label&quot;:&quot;BAE-Dubai&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bae-dubai-yuksek-lisans&quot;,&quot;cities&quot;:[]}]},{&quot;key&quot;:10,&quot;label&quot;:&quot;Sertifika&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/sertifika-diploma-programlari&quot;,&quot;countries&quot;:[{&quot;key&quot;:52726,&quot;label&quot;:&quot;Kanada&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/kanada-sertifika-ve-diploma-programlari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52733,&quot;label&quot;:&quot;Calgary&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/calgary-sertifika-ve-diploma-programlari&quot;},{&quot;key&quot;:0,&quot;label&quot;:&quot;Montreal&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/montreal-sertifika-programlari&quot;},{&quot;key&quot;:52730,&quot;label&quot;:&quot;Ottawa&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ottawa-sertifika-programlari&quot;},{&quot;key&quot;:52727,&quot;label&quot;:&quot;Toronto&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/toronto-sertifika-programlari&quot;},{&quot;key&quot;:52729,&quot;label&quot;:&quot;Vancouver&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/vancouver-sertifika-programlari&quot;}]},{&quot;key&quot;:52702,&quot;label&quot;:&quot;\u0130ngiltere&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ingiltere-sertifika-ve-diploma-programlari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52721,&quot;label&quot;:&quot;Bournemouth&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bournemouth-sertifika-programlari&quot;},{&quot;key&quot;:52704,&quot;label&quot;:&quot;Brighton&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/brighton-sertifika-programlari&quot;},{&quot;key&quot;:52715,&quot;label&quot;:&quot;Liverpool&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/liverpool-sertifika-programlari&quot;},{&quot;key&quot;:52703,&quot;label&quot;:&quot;Londra&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/londra-sertifika-programlari&quot;},{&quot;key&quot;:52720,&quot;label&quot;:&quot;Torbay&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/torbay-sertifika-programlari&quot;}]},{&quot;key&quot;:52680,&quot;label&quot;:&quot;Amerika&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/amerika-sertifika-ve-diploma-programlari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52683,&quot;label&quot;:&quot;Boston&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/boston-sertifika-programlari&quot;},{&quot;key&quot;:52852,&quot;label&quot;:&quot;Chicago&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/chicago-sertifika-programlari&quot;},{&quot;key&quot;:52684,&quot;label&quot;:&quot;San Diego&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/san-diego-sertifika-programlari&quot;},{&quot;key&quot;:52685,&quot;label&quot;:&quot;San Francisco&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/san-francisco-sertifika-programlari&quot;}]},{&quot;key&quot;:52736,&quot;label&quot;:&quot;Avustralya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/avustralya-sertifika-ve-diploma-programlari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52738,&quot;label&quot;:&quot;Brisbane&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/brisbane-sertifika-programlari&quot;},{&quot;key&quot;:52740,&quot;label&quot;:&quot;Melbourne&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/melbourne-sertifika-programlari&quot;},{&quot;key&quot;:52748,&quot;label&quot;:&quot;Perth&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/perth-sertifika-ve-diploma-programlari&quot;},{&quot;key&quot;:52742,&quot;label&quot;:&quot;Sydney&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/sydney-sertifika-programlari&quot;}]},{&quot;key&quot;:16659,&quot;label&quot;:&quot;Macaristan&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/macaristan-sertifika-ve-diploma-programlari&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52758,&quot;label&quot;:&quot;\u0130rlanda&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/irlanda-sertifika-ve-diploma-programlari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52766,&quot;label&quot;:&quot;Cork&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/cork-sertifika-programlari&quot;},{&quot;key&quot;:52762,&quot;label&quot;:&quot;Dublin&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/dublin-sertifika-programlari&quot;}]},{&quot;key&quot;:52784,&quot;label&quot;:&quot;Almanya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/almanya-sertifika-ve-diploma-programlari&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:10,&quot;label&quot;:&quot;\u0130spanya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ispanya--sertifika-ve-diploma-programlari&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:10,&quot;label&quot;:&quot;\u0130talya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/italya-sertifika-ve-diploma-programlari&quot;,&quot;cities&quot;:[]}]}]" languages-school-types="[{&quot;key&quot;:2,&quot;label&quot;:&quot;Dil Okulu&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/yurtdisi-dil-okullari&quot;,&quot;countries&quot;:[{&quot;key&quot;:52702,&quot;label&quot;:&quot;\u0130ngiltere&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ingiltere-dil-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52703,&quot;label&quot;:&quot;Londra&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/londra-dil-okullari&quot;},{&quot;key&quot;:45922,&quot;label&quot;:&quot;Newcastle&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/newcastle-dil-okullari&quot;},{&quot;key&quot;:52895,&quot;label&quot;:&quot;Nottingham&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/nottingham-dil-okullari&quot;},{&quot;key&quot;:52709,&quot;label&quot;:&quot;Oxford&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/oxford-dil-okullari&quot;},{&quot;key&quot;:52712,&quot;label&quot;:&quot;Manchester&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/manchester-dil-okullari&quot;},{&quot;key&quot;:52705,&quot;label&quot;:&quot;Leeds&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/leeds-dil-okullari&quot;},{&quot;key&quot;:52724,&quot;label&quot;:&quot;Birmingham&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/birmingham-dil-okullari&quot;},{&quot;key&quot;:52717,&quot;label&quot;:&quot;Bath&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bath-dil-okullari&quot;},{&quot;key&quot;:52721,&quot;label&quot;:&quot;Bournemouth&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bournemouth-dil-okullari&quot;},{&quot;key&quot;:52707,&quot;label&quot;:&quot;Bristol&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bristol-dil-okullari&quot;},{&quot;key&quot;:52713,&quot;label&quot;:&quot;Canterbury&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/canterbury-dil-okullari&quot;},{&quot;key&quot;:52710,&quot;label&quot;:&quot;Eastbourne&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/eastbourne-dil-okullari&quot;},{&quot;key&quot;:52719,&quot;label&quot;:&quot;Harrogate&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/harrogate-dil-okullari&quot;},{&quot;key&quot;:52720,&quot;label&quot;:&quot;Torbay&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/torbay-dil-okullari&quot;},{&quot;key&quot;:52714,&quot;label&quot;:&quot;Torquay&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/torquay-dil-okullari&quot;},{&quot;key&quot;:52722,&quot;label&quot;:&quot;Worthing&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/worthing-dil-okullari&quot;},{&quot;key&quot;:52716,&quot;label&quot;:&quot;York&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/york-dil-okullari&quot;},{&quot;key&quot;:52704,&quot;label&quot;:&quot;Brighton&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/brighton-dil-okullari&quot;},{&quot;key&quot;:52706,&quot;label&quot;:&quot;Cambridge&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/cambridge-dil-okullari&quot;},{&quot;key&quot;:52715,&quot;label&quot;:&quot;Liverpool&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/liverpool-dil-okullari&quot;},{&quot;key&quot;:52718,&quot;label&quot;:&quot;Greenwich&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/greenwich-dil-okullari&quot;}]},{&quot;key&quot;:52726,&quot;label&quot;:&quot;Kanada&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/kanada-dil-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52733,&quot;label&quot;:&quot;Calgary&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/calgary-dil-okullari&quot;},{&quot;key&quot;:52731,&quot;label&quot;:&quot;Halifax&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/halifax-dil-okullari&quot;},{&quot;key&quot;:52728,&quot;label&quot;:&quot;Montreal&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/montreal-dil-okullari&quot;},{&quot;key&quot;:52730,&quot;label&quot;:&quot;Ottawa&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ottawa-dil-okullari&quot;},{&quot;key&quot;:52727,&quot;label&quot;:&quot;Toronto&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/toronto-dil-okullari&quot;},{&quot;key&quot;:52729,&quot;label&quot;:&quot;Vancouver&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/vancouver-dil-okullari&quot;},{&quot;key&quot;:52732,&quot;label&quot;:&quot;Victoria&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/victoria-dil-okullari&quot;}]},{&quot;key&quot;:52680,&quot;label&quot;:&quot;Amerika&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/amerika-dil-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52690,&quot;label&quot;:&quot;Atlanta&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/atlanta-dil-okullari&quot;},{&quot;key&quot;:52691,&quot;label&quot;:&quot;Atlantik City&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/atlantik-city-dil-okullari&quot;},{&quot;key&quot;:52893,&quot;label&quot;:&quot;Berkeley&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/berkeley-dil-okullari&quot;},{&quot;key&quot;:52683,&quot;label&quot;:&quot;Boston&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/boston-dil-okullari&quot;},{&quot;key&quot;:52840,&quot;label&quot;:&quot;California&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/california-dil-okullari&quot;},{&quot;key&quot;:52871,&quot;label&quot;:&quot;Charlotte&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/charlotte-dil-okullari&quot;},{&quot;key&quot;:52852,&quot;label&quot;:&quot;Chicago&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/chicago-dil-okullari&quot;},{&quot;key&quot;:52687,&quot;label&quot;:&quot;Fort Lauderdale&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/fort-lauderdale-dil-okullari&quot;},{&quot;key&quot;:52694,&quot;label&quot;:&quot;Houston&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/houston-dil-okullari&quot;},{&quot;key&quot;:52682,&quot;label&quot;:&quot;Los Angeles&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/los-angeles-dil-okullari&quot;},{&quot;key&quot;:52686,&quot;label&quot;:&quot;Miami&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/miami-dil-okullari&quot;},{&quot;key&quot;:52863,&quot;label&quot;:&quot;Minnesota&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/minnesota-dil-okullari&quot;},{&quot;key&quot;:52868,&quot;label&quot;:&quot;New Jersey&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/new-jersey-dil-okullari&quot;},{&quot;key&quot;:52681,&quot;label&quot;:&quot;New York&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/new-york-dil-okullari&quot;},{&quot;key&quot;:52879,&quot;label&quot;:&quot;Oklahoma City&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/oklahoma-city-dil-okullari&quot;},{&quot;key&quot;:52882,&quot;label&quot;:&quot;Philadelphia&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/philadelphia-dil-okullari&quot;},{&quot;key&quot;:52698,&quot;label&quot;:&quot;Portland&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/portland-dil-okullari&quot;},{&quot;key&quot;:52684,&quot;label&quot;:&quot;San Diego&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/san-diego-dil-okullari&quot;},{&quot;key&quot;:52685,&quot;label&quot;:&quot;San Francisco&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/san-francisco-dil-okullari&quot;},{&quot;key&quot;:52894,&quot;label&quot;:&quot;Santa Barbara&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/santa-barbara-dil-okullari&quot;},{&quot;key&quot;:52842,&quot;label&quot;:&quot;Santa Rosa&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/santa-rosa-dil-okullari&quot;},{&quot;key&quot;:52699,&quot;label&quot;:&quot;Seattle&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/seattle-dil-okullari&quot;},{&quot;key&quot;:52867,&quot;label&quot;:&quot;St. Louis&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/st-louis-dil-okullari&quot;},{&quot;key&quot;:52847,&quot;label&quot;:&quot;St. Petersburg&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/st-petersburg-dil-okullari&quot;},{&quot;key&quot;:52848,&quot;label&quot;:&quot;Tampa&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/tampa-dil-okullari&quot;},{&quot;key&quot;:52843,&quot;label&quot;:&quot;Thousand Oaks&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/thousand-oaks-dil-okullari&quot;},{&quot;key&quot;:52689,&quot;label&quot;:&quot;Washington DC&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/washington-dil-okullari&quot;}]},{&quot;key&quot;:52750,&quot;label&quot;:&quot;Malta&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/malta-dil-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52756,&quot;label&quot;:&quot;Gozo&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/gozo-dil-okullari&quot;},{&quot;key&quot;:52827,&quot;label&quot;:&quot;Gzira&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/gzira-dil-okullari&quot;},{&quot;key&quot;:52759,&quot;label&quot;:&quot;Sliema&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/sliema-dil-okullari&quot;},{&quot;key&quot;:52752,&quot;label&quot;:&quot;St Julians&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/st-julians-dil-okullari&quot;}]},{&quot;key&quot;:52758,&quot;label&quot;:&quot;\u0130rlanda&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/irlanda-dil-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52762,&quot;label&quot;:&quot;Dublin&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/dublin-dil-okullari&quot;},{&quot;key&quot;:23680,&quot;label&quot;:&quot;Athlone&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/athlone-dil-okullari&quot;},{&quot;key&quot;:52771,&quot;label&quot;:&quot;Bray&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bray-dil-okullari&quot;},{&quot;key&quot;:52766,&quot;label&quot;:&quot;Cork&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/cork-dil-okullari&quot;},{&quot;key&quot;:52769,&quot;label&quot;:&quot;Galway&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/galway-dil-okullari&quot;},{&quot;key&quot;:52764,&quot;label&quot;:&quot;Limerick&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/limerick-dil-okullari&quot;},{&quot;key&quot;:52760,&quot;label&quot;:&quot;Waterford&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/waterford-dil-okullari&quot;}]},{&quot;key&quot;:52736,&quot;label&quot;:&quot;Avustralya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/avustralya-dil-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52746,&quot;label&quot;:&quot;Adelaide&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/adelaide-dil-okullari&quot;},{&quot;key&quot;:52972,&quot;label&quot;:&quot;Bondi&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bondi-dil-okullari&quot;},{&quot;key&quot;:52738,&quot;label&quot;:&quot;Brisbane&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/brisbane-dil-okullari&quot;},{&quot;key&quot;:52973,&quot;label&quot;:&quot;Byron Bay&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/byron-bay-dil-okullari&quot;},{&quot;key&quot;:52974,&quot;label&quot;:&quot;Darwin&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/darwin-dil-okullari&quot;},{&quot;key&quot;:52744,&quot;label&quot;:&quot;Gold Coast&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/gold-coast-dil-okullari&quot;},{&quot;key&quot;:52740,&quot;label&quot;:&quot;Melbourne&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/melbourne-dil-okullari&quot;},{&quot;key&quot;:992,&quot;label&quot;:&quot;Noosa&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/noosa-dil-okullari&quot;},{&quot;key&quot;:52748,&quot;label&quot;:&quot;Perth&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/perth-dil-okullari&quot;},{&quot;key&quot;:1005,&quot;label&quot;:&quot;Sunshine Coast&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/sunshine-coast-dil-okullari&quot;},{&quot;key&quot;:52742,&quot;label&quot;:&quot;Sydney&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/sydney-dil-okullari&quot;}]},{&quot;key&quot;:52828,&quot;label&quot;:&quot;BAE-Dubai&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bae-dubai-dil-okullari&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52784,&quot;label&quot;:&quot;Almanya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/almanya-dil-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52789,&quot;label&quot;:&quot;Berlin&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/berlin-dil-okullari&quot;},{&quot;key&quot;:52797,&quot;label&quot;:&quot;Frankfurt&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/frankfurt-dil-okullari&quot;},{&quot;key&quot;:52795,&quot;label&quot;:&quot;Freiburg&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/freiburg-dil-okullari&quot;},{&quot;key&quot;:52799,&quot;label&quot;:&quot;Hamburg&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/hamburg-dil-okullari&quot;},{&quot;key&quot;:52829,&quot;label&quot;:&quot;Hannover&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/hannover-dil-okullari&quot;},{&quot;key&quot;:52787,&quot;label&quot;:&quot;Heidelberg&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/heidelberg-dil-okullari&quot;},{&quot;key&quot;:52793,&quot;label&quot;:&quot;K\u00f6ln&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/koln-dil-okullari&quot;},{&quot;key&quot;:52791,&quot;label&quot;:&quot;M\u00fcnih&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/munih-dil-okullari&quot;}]},{&quot;key&quot;:52832,&quot;label&quot;:&quot;Fransa&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/fransa-dil-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52977,&quot;label&quot;:&quot;Chanes&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/chanes-dil-okullari&quot;},{&quot;key&quot;:52978,&quot;label&quot;:&quot;Lyon&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/lyon-dil-okullari&quot;},{&quot;key&quot;:52833,&quot;label&quot;:&quot;Paris&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/paris-dil-okullari&quot;}]},{&quot;key&quot;:52773,&quot;label&quot;:&quot;\u0130sko\u00e7ya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/iskocya-dil-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52775,&quot;label&quot;:&quot;Edinburgh&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/edinburgh-dil-okullari&quot;},{&quot;key&quot;:52777,&quot;label&quot;:&quot;Glasgow&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/glasgow-dil-okullari&quot;}]},{&quot;key&quot;:52801,&quot;label&quot;:&quot;\u0130spanya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ispanya-dil-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52814,&quot;label&quot;:&quot;Alicante&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/alicante-dil-okullari&quot;},{&quot;key&quot;:52803,&quot;label&quot;:&quot;Barcelona&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/barcelona-dil-okullari&quot;},{&quot;key&quot;:52805,&quot;label&quot;:&quot;Madrid&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/madrid-dil-okullari&quot;},{&quot;key&quot;:52807,&quot;label&quot;:&quot;Malaga&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/malaga-dil-okullari&quot;},{&quot;key&quot;:52810,&quot;label&quot;:&quot;Sevilla&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/sevilla-dil-okullari&quot;},{&quot;key&quot;:52811,&quot;label&quot;:&quot;Valencia&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/valencia-dil-okullari&quot;}]},{&quot;key&quot;:25928,&quot;label&quot;:&quot;Japonya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/japonya-dil-okullari&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52818,&quot;label&quot;:&quot;\u0130talya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/italya-dil-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52823,&quot;label&quot;:&quot;Floransa&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/floransa-dil-okullari&quot;},{&quot;key&quot;:52819,&quot;label&quot;:&quot;Milano&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/milano-dil-okullari&quot;},{&quot;key&quot;:52821,&quot;label&quot;:&quot;Roma&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/roma-dil-okullari&quot;}]},{&quot;key&quot;:52891,&quot;label&quot;:&quot;\u0130svi\u00e7re&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/isvicre-dil-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52979,&quot;label&quot;:&quot;Basel&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/basel-dil-okullari&quot;},{&quot;key&quot;:52980,&quot;label&quot;:&quot;Bern&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bern-dil-okullari&quot;},{&quot;key&quot;:52981,&quot;label&quot;:&quot;Cenevre&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/cenevre-dil-okullari&quot;},{&quot;key&quot;:52892,&quot;label&quot;:&quot;Z\u00fcrih&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/zurih-dil-okullari&quot;}]},{&quot;key&quot;:52831,&quot;label&quot;:&quot;Polonya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/polonya-dil-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52900,&quot;label&quot;:&quot;Poznan&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/poznan-dil-okullari&quot;},{&quot;key&quot;:52901,&quot;label&quot;:&quot;Var\u015fova&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/varsova-dil-okullari&quot;}]},{&quot;key&quot;:52838,&quot;label&quot;:&quot;Rusya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/rusya-dil-okullari&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52834,&quot;label&quot;:&quot;Ukrayna&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ukrayna-dil-okullari&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52830,&quot;label&quot;:&quot;Yeni Zelanda&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/yeni-zelanda-dil-okullari&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52780,&quot;label&quot;:&quot;G\u00fcney Afrika&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/guney-afrika-dil-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52782,&quot;label&quot;:&quot;Cape Town&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/cape-town-dil-okullari&quot;}]},{&quot;key&quot;:751,&quot;label&quot;:&quot;Arjantin&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/arjantin-dil-okullari&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:27503,&quot;label&quot;:&quot;G\u00fcney Kore&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/guney-kore-dil-okullari&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:5984,&quot;label&quot;:&quot;\u00c7in&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/cin-dil-okullari&quot;,&quot;cities&quot;:[]}]},{&quot;key&quot;:31,&quot;label&quot;:&quot;Yaz Okulu&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/yaz-okullari&quot;,&quot;countries&quot;:[{&quot;key&quot;:52702,&quot;label&quot;:&quot;\u0130ngiltere&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ingiltere-yaz-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52717,&quot;label&quot;:&quot;Bath&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bath-yaz-okullari&quot;},{&quot;key&quot;:52721,&quot;label&quot;:&quot;Bournemouth&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bournemouth-yaz-okullari&quot;},{&quot;key&quot;:52704,&quot;label&quot;:&quot;Brighton&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/brighton-yaz-okullari&quot;},{&quot;key&quot;:52706,&quot;label&quot;:&quot;Cambridge&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/cambridge-yaz-okullari&quot;},{&quot;key&quot;:52710,&quot;label&quot;:&quot;Eastbourne&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/eastbourne-yaz-okullari&quot;},{&quot;key&quot;:52718,&quot;label&quot;:&quot;Greenwich&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/greenwich-yaz-okullari&quot;},{&quot;key&quot;:52715,&quot;label&quot;:&quot;Liverpool&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/liverpool-yaz-okullari&quot;},{&quot;key&quot;:52703,&quot;label&quot;:&quot;Londra&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/londra-yaz-okullari&quot;},{&quot;key&quot;:52712,&quot;label&quot;:&quot;Manchester&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/manchester-yaz-okullari&quot;},{&quot;key&quot;:52895,&quot;label&quot;:&quot;Nottingham&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/nottingham-yaz-okullari&quot;},{&quot;key&quot;:52709,&quot;label&quot;:&quot;Oxford&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/oxford-yaz-okullari&quot;}]},{&quot;key&quot;:52680,&quot;label&quot;:&quot;Amerika&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/amerika-yaz-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52683,&quot;label&quot;:&quot;Boston&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/boston-yaz-okullari&quot;},{&quot;key&quot;:52686,&quot;label&quot;:&quot;Miami&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/miami-yaz-okullari&quot;},{&quot;key&quot;:52682,&quot;label&quot;:&quot;Los Angeles&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/los-angeles-yaz-okullari&quot;},{&quot;key&quot;:52681,&quot;label&quot;:&quot;New York&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/new-york-yaz-okullari&quot;}]},{&quot;key&quot;:52726,&quot;label&quot;:&quot;Kanada&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/kanada-yaz-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:526728,&quot;label&quot;:&quot;Montreal&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/Montreal-yaz-okullari&quot;},{&quot;key&quot;:52727,&quot;label&quot;:&quot;Toronto&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/toronto-yaz-okullari&quot;},{&quot;key&quot;:52729,&quot;label&quot;:&quot;Vancouver&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/vancouver-yaz-okullari&quot;}]},{&quot;key&quot;:52750,&quot;label&quot;:&quot;Malta&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/malta-yaz-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52752,&quot;label&quot;:&quot;St Julians&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/st-julians-yaz-okullari&quot;}]},{&quot;key&quot;:52784,&quot;label&quot;:&quot;Almanya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/almanya-yaz-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52789,&quot;label&quot;:&quot;Berlin&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/berlin-yaz-okullari&quot;},{&quot;key&quot;:52791,&quot;label&quot;:&quot;M\u00fcnih&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/munih-yaz-okullari&quot;}]},{&quot;key&quot;:45410,&quot;label&quot;:&quot;BAE-Dubai&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bae-dubai-yaz-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:45418,&quot;label&quot;:&quot;Dubai&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/dubai-yaz-okullari&quot;}]},{&quot;key&quot;:9455,&quot;label&quot;:&quot;\u00c7ekya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/cekya-yaz-okullari&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:0,&quot;label&quot;:&quot;Fransa&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/fransa-yaz-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52833,&quot;label&quot;:&quot;Paris&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/paris-yaz-okullari&quot;}]},{&quot;key&quot;:52758,&quot;label&quot;:&quot;\u0130rlanda&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/irlanda-yaz-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52955,&quot;label&quot;:&quot;Cork&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/cork-yaz-okullari&quot;},{&quot;key&quot;:52762,&quot;label&quot;:&quot;Dublin&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/dublin-yaz-okullari&quot;},{&quot;key&quot;:52769,&quot;label&quot;:&quot;Galway&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/galway-yaz-okullari&quot;},{&quot;key&quot;:23618,&quot;label&quot;:&quot;Limerick&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/limerick-yaz-okullari&quot;}]},{&quot;key&quot;:0,&quot;label&quot;:&quot;\u0130sko\u00e7ya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/iskocya-yaz-okullari&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52801,&quot;label&quot;:&quot;\u0130spanya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/ispanya-yaz-okullari&quot;,&quot;cities&quot;:[{&quot;key&quot;:52803,&quot;label&quot;:&quot;Barcelona&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/barcelona-yaz-okullari&quot;},{&quot;key&quot;:52805,&quot;label&quot;:&quot;Madrid&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/madrid-yaz-okullari&quot;},{&quot;key&quot;:52810,&quot;label&quot;:&quot;Sevilla&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/sevilla-yaz-okullari&quot;}]}]},{&quot;key&quot;:35,&quot;label&quot;:&quot;Work &amp; Study&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/work-and-study&quot;,&quot;countries&quot;:[{&quot;key&quot;:52736,&quot;label&quot;:&quot;Avustralya&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/avustralya-work-and-study&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52828,&quot;label&quot;:&quot;BAE-Dubai&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/bae-dubai-work-and-study&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52758,&quot;label&quot;:&quot;\u0130rlanda&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/irlanda-work-and-study&quot;,&quot;cities&quot;:[{&quot;key&quot;:52762,&quot;label&quot;:&quot;Dublin&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/dublin-work-and-study&quot;}]},{&quot;key&quot;:52726,&quot;label&quot;:&quot;Kanada&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/kanada-work-and-study&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52750,&quot;label&quot;:&quot;Malta&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/malta-work-and-study&quot;,&quot;cities&quot;:[]},{&quot;key&quot;:52830,&quot;label&quot;:&quot;Yeni Zelanda&quot;,&quot;slug&quot;:&quot;https:\/\/www.endlessabroad.com.tr\/yeni-zelanda-work-and-study&quot;,&quot;cities&quot;:[]}]}]" ></detail-search>
+      </div>
+      <section class="programs-endless pt-60">
+         <div class="container">
+            <div class="detail-div">
+               <div class="detail-header-div">
+                  <div class="detail-header-text-div">
+                     <h4 class="section-sub-title">Programlar</h4>
+                     <p class="container-text">Dünyanın en güzel ülkelerinde,<br/>Birbirinden farklı eğitim programına şimdi göz at.</p>
+                  </div>
+               </div>
+               <div class="card-div">
+                  <div class="card-rows-one">
+                     <div class="programs-card-detail">
+                        <div class="opacity-div"></div>
+                        <div class="img-div"> <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post_types/2/01dil-okulu-thumb_post_type_home.jpg" alt="Dil Okulu" title="Dil Okulu" class="w-100 lazy"> </div>
+                        <div class="title-programs">
+                           <h3> <a href="yurtdisi-dil-okullari.html" title="link" hreflang="tr" > Dil Okulu </a> </h3>
+                           <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt=""> <span>22 Ülkeler</span> </div>
+                        </div>
+                     </div>
+                     <div class="programs-card-detail">
+                        <div class="opacity-div"></div>
+                        <div class="img-div"> <img data-class="lazy" src="../d92mazmete5uc.cloudfront.net/public/uploads/post_types/5/02lise-thumb_post_type_home.jpg" alt="Lise" title="Lise" class="w-100"> </div>
+                        <div class="title-programs">
+                           <h3> <a href="liseler.html" title="link" hreflang="tr" > Lise </a> </h3>
+                           <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt=""> <span>11 Ülkeler</span> </div>
+                        </div>
+                     </div>
+                     <div class="programs-card-detail">
+                        <div class="opacity-div"></div>
+                        <div class="img-div"> <img data-class="lazy" src="../d92mazmete5uc.cloudfront.net/public/uploads/post_types/8/university-1664370321-thumb_post_type_home.jpg" alt="Üniversite" title="Üniversite" class="w-100"> </div>
+                        <div class="title-programs">
+                           <h3> <a href="universiteler.html" title="link" hreflang="tr" > Üniversite </a> </h3>
+                           <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt=""> <span>18 Ülkeler</span> </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card-rows-two">
+                     <div class="programs-card-detail">
+                        <div class="opacity-div"></div>
+                        <div class="img-div"> <img data-class="lazy" src="../d92mazmete5uc.cloudfront.net/public/uploads/post_types/9/04yukseklisans-thumb_post_type_home.jpg" alt="Yüksek Lisans" title="Yüksek Lisans" class="w-100"> </div>
+                        <div class="title-programs">
+                           <h3> <a href="yuksek-lisanslar.html" title="link" hreflang="tr" > Yüksek Lisans </a> </h3>
+                           <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt=""> <span>18 Ülkeler</span> </div>
+                        </div>
+                     </div>
+                     <div class="programs-card-detail">
+                        <div class="opacity-div"></div>
+                        <div class="img-div"> <img data-class="lazy" src="../d92mazmete5uc.cloudfront.net/public/uploads/post_types/10/05certificat-thumb_post_type_home.jpg" alt="Sertifika" title="Sertifika" class="w-100"> </div>
+                        <div class="title-programs">
+                           <h3> <a href="sertifika-diploma-programlari.html" title="link" hreflang="tr" > Sertifika </a> </h3>
+                           <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt=""> <span>9 Ülkeler</span> </div>
+                        </div>
+                     </div>
+                     <div class="programs-card-detail">
+                        <div class="opacity-div"></div>
+                        <div class="img-div"> <img data-class="lazy" src="../d92mazmete5uc.cloudfront.net/public/uploads/post_types/35/06workandstudy-thumb_post_type_home.jpg" alt="Work &amp; Study" title="Work &amp; Study" class="w-100"> </div>
+                        <div class="title-programs">
+                           <h3> <a href="work-and-study.html" title="link" hreflang="tr" > Work &amp; Study </a> </h3>
+                           <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt=""> <span>6 Ülkeler</span> </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </div> 
+      </section>
+      <section class="ask-team-endless">
+         <div class="mobil-div-top-grey"></div>
+         <div class="container border-bottom-grey">
+            <div class="detail-div">
+               <div class="detail-header-div">
+                  <div class="detail-header-text-div">
+                     <h4 class="section-sub-title">EA Team&#039;e sor!</h4>
+                     <p class="container-text">Uzman danışmanlarımız<br/>her soru ve sorunda yanında!</p>
+                  </div>
+                  <div class="detail-header-btn-div"> </div>
+               </div>
+               <div class="card-div">
+                  <div id="news-slider" class="owl-carousel">
+                     <div class="post-slide cursore-pointer" id="post-31989">
+                        <div class="post-content">
+                           <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/31989/ea-web-sitesi-kapaklar-kare.png" alt="İngiltere&#039;de Lisans ve Yuksek Lisans" class="w-100">  
+                           <div class="absolute-div">
+                              <h3 class="post-title">İngiltere&#039;de Lisans ve Yuksek Lisans</h3>
+                              <span class="post-description">Orhun Koçyigit</span> 
+                           </div>
+                        </div>
+                        <div class="vue-app">
+                           <player-button data-video-id="757112439?h=beb6bc9c81"/>
+                        </div>
+                     </div>
+                     <div class="post-slide cursore-pointer" id="post-32063">
+                        <div class="post-content">
+                           <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/32063/ea-web-sitesi-kapaklar-02.png" alt="Kanada’nın en çok tercih edilen sertifika programları nelerdir?" class="w-100">  
+                           <div class="absolute-div">
+                              <h3 class="post-title">Kanada’nın en çok tercih edilen sertifika programları nelerdir?</h3>
+                              <span class="post-description">Osman Temur</span> 
+                           </div>
+                        </div>
+                        <div class="vue-app">
+                           <player-button data-video-id="757208006?h=f251db5bb1"/>
+                        </div>
+                     </div>
+                     <div class="post-slide cursore-pointer" id="post-32038">
+                        <div class="post-content">
+                           <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/32038/ea-web-sitesi-kapaklar-04.png" alt="Avrupa’da Sınavsız Üniversite okuma şartları nelerdir?" class="w-100">  
+                           <div class="absolute-div">
+                              <h3 class="post-title">Avrupa’da Sınavsız Üniversite okuma şartları nelerdir?</h3>
+                              <span class="post-description">Özlem Toraman</span> 
+                           </div>
+                        </div>
+                        <div class="vue-app">
+                           <player-button data-video-id="757206986?h=f948d529d4"/>
+                        </div>
+                     </div>
+                     <div class="post-slide cursore-pointer" id="post-32037">
+                        <div class="post-content">
+                           <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/32037/ea-web-sitesi-kapaklar-05-1664982585.png" alt="Yurtdışında Dil Eğitimi Alırken Çalışmak Mümkün mü?" class="w-100">  
+                           <div class="absolute-div">
+                              <h3 class="post-title">Yurtdışında Dil Eğitimi Alırken Çalışmak Mümkün mü?</h3>
+                              <span class="post-description">Eren Erkek</span> 
+                           </div>
+                        </div>
+                        <div class="vue-app">
+                           <player-button data-video-id="757208332?h=e480656a5a"/>
+                        </div>
+                     </div>
+                     <div class="post-slide cursore-pointer" id="post-32039">
+                        <div class="post-content">
+                           <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/32039/ea-web-sitesi-kapaklar-03.png" alt="Amerika Üniversitelerinden Nasıl kabul alınır?" class="w-100">  
+                           <div class="absolute-div">
+                              <h3 class="post-title">Amerika Üniversitelerinden Nasıl kabul alınır?</h3>
+                              <span class="post-description">Ezgi Erdal</span> 
+                           </div>
+                        </div>
+                        <div class="vue-app">
+                           <player-button data-video-id="757211181?h=ee696c3951"/>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="student-stories">
+         <div class="vue-app">
+            <video-player-modal/>
+         </div>
+         <div class="mobil-div-top-grey"></div>
+         <div class="container">
+            <div class="detail-div">
+               <div class="detail-header-div">
+                  <div class="detail-header-text-div">
+                     <h4 class="section-sub-title">Öğrenci Hikayeleri</h4>
+                     <p class="container-text">Birbirinden güzel ülkede, birbirinden güzel deneyim! Öğrenirken eğlenen, yeni bakış açılarıyla gelişen öğrencilerimizin hikayelerine göz at.</p>
+                  </div>
+                  <div class="detail-header-btn-div"> </div>
+               </div>
+            </div>
+         </div>
+         <div class="card-div">
+            <div id="news-slider" class="owl-carousel-student ea-team-slider">
+               <div class="post-slide cursore-pointer" style="">
+                  <div class="opacity-div"></div>
+                  <div class="post-content">
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/32064/oyku.png" alt="Öykü Güler" class="w-100 img-full post-slide"> 
+                     <div class="absolute-div">
+                        <span class="student-school">Proyeto Espanol Madrid</span> 
+                        <h3 class="post-usurnane">Öykü Güler</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt="icon-location"> <span class="post-country">İspanya</span> </div>
+                     </div>
+                  </div>
+                  <div class="vue-app">
+                     <player-button data-video-id="754202102?h=332694f0d4"/>
+                  </div>
+               </div>
+               <div class="post-slide cursore-pointer" style="margin-top: 65px">
+                  <div class="opacity-div"></div>
+                  <div class="post-content">
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/31991/fethi.png" alt="Fahrettin Bilgehan Dokuyucu" class="w-100 img-full post-slide"> 
+                     <div class="absolute-div">
+                        <span class="student-school">Varşova Tıp Üniversitesi</span> 
+                        <h3 class="post-usurnane">Fahrettin Bilgehan Dokuyucu</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt="icon-location"> <span class="post-country">Polonya</span> </div>
+                     </div>
+                  </div>
+                  <div class="vue-app">
+                     <player-button data-video-id="754200795?h=9d5c974d5d"/>
+                  </div>
+               </div>
+               <div class="post-slide cursore-pointer" style="">
+                  <div class="opacity-div"></div>
+                  <div class="post-content">
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/31992/ea-ogrenci-roportajlari.see.png" alt="Eren Çalışkan" class="w-100 img-full post-slide"> 
+                     <div class="absolute-div">
+                        <span class="student-school">WSB Üniversitesi</span> 
+                        <h3 class="post-usurnane">Eren Çalışkan</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt="icon-location"> <span class="post-country">Polonya</span> </div>
+                     </div>
+                  </div>
+                  <div class="vue-app">
+                     <player-button data-video-id="754199741?h=77fe4c796a"/>
+                  </div>
+               </div>
+               <div class="post-slide cursore-pointer" style="margin-top: 170px">
+                  <div class="opacity-div"></div>
+                  <div class="post-content">
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/3050/berkay-derman.jpg" alt="Berkay Derman" class="w-100 img-full post-slide"> 
+                     <div class="absolute-div">
+                        <span class="student-school">ILAC</span> 
+                        <h3 class="post-usurnane">Berkay Derman</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt="icon-location"> <span class="post-country">Kanada</span> </div>
+                     </div>
+                  </div>
+                  <div class="review-content"> <button class="show-review-btn" data-bs-toggle="modal" data-bs-target="#studentReview3">Show Student Review</button> </div>
+               </div>
+               <div class="post-slide cursore-pointer" style="margin-top: 65px">
+                  <div class="opacity-div"></div>
+                  <div class="post-content">
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/3049/caner-nejdet-alkap.jpg" alt="Caner Nejdet Alkap" class="w-100 img-full post-slide"> 
+                     <div class="absolute-div">
+                        <span class="student-school">ILAC College Business</span> 
+                        <h3 class="post-usurnane">Caner Nejdet Alkap</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt="icon-location"> <span class="post-country">Kanada</span> </div>
+                     </div>
+                  </div>
+                  <div class="review-content"> <button class="show-review-btn" data-bs-toggle="modal" data-bs-target="#studentReview4">Show Student Review</button> </div>
+               </div>
+               <div class="post-slide cursore-pointer" style="">
+                  <div class="opacity-div"></div>
+                  <div class="post-content">
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/3694/pinar-tok.png" alt="Pınar Tok" class="w-100 img-full post-slide"> 
+                     <div class="absolute-div">
+                        <span class="student-school">LSI</span> 
+                        <h3 class="post-usurnane">Pınar Tok</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt="icon-location"> <span class="post-country">İngiltere</span> </div>
+                     </div>
+                  </div>
+                  <div class="review-content"> <button class="show-review-btn" data-bs-toggle="modal" data-bs-target="#studentReview5">Show Student Review</button> </div>
+               </div>
+               <div class="post-slide cursore-pointer" style="margin-top: 170px">
+                  <div class="opacity-div"></div>
+                  <div class="post-content">
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/3023/songul.jpg" alt="Songül Topaloğlu" class="w-100 img-full post-slide"> 
+                     <div class="absolute-div">
+                        <span class="student-school">Berlitz</span> 
+                        <h3 class="post-usurnane">Songül Topaloğlu</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt="icon-location"> <span class="post-country">İrlanda</span> </div>
+                     </div>
+                  </div>
+                  <div class="review-content"> <button class="show-review-btn" data-bs-toggle="modal" data-bs-target="#studentReview6">Show Student Review</button> </div>
+               </div>
+               <div class="post-slide cursore-pointer" style="margin-top: 65px">
+                  <div class="opacity-div"></div>
+                  <div class="post-content">
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/3022/hulya.png" alt="Hülya Ertaş" class="w-100 img-full post-slide"> 
+                     <div class="absolute-div">
+                        <span class="student-school">Clubclass Language School</span> 
+                        <h3 class="post-usurnane">Hülya Ertaş</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt="icon-location"> <span class="post-country">Malta</span> </div>
+                     </div>
+                  </div>
+                  <div class="review-content"> <button class="show-review-btn" data-bs-toggle="modal" data-bs-target="#studentReview7">Show Student Review</button> </div>
+               </div>
+               <div class="post-slide cursore-pointer" style="">
+                  <div class="opacity-div"></div>
+                  <div class="post-content">
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/2188/o_1dq15411q1k2lse8e3t1j0r1er8c.jpg" alt="Arda Batikan Durgut" class="w-100 img-full post-slide"> 
+                     <div class="absolute-div">
+                        <span class="student-school">Londra</span> 
+                        <h3 class="post-usurnane">Arda Batikan Durgut</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt="icon-location"> <span class="post-country">İngiltere</span> </div>
+                     </div>
+                  </div>
+                  <div class="review-content"> <button class="show-review-btn" data-bs-toggle="modal" data-bs-target="#studentReview8">Show Student Review</button> </div>
+               </div>
+               <div class="post-slide cursore-pointer" style="margin-top: 170px">
+                  <div class="opacity-div"></div>
+                  <div class="post-content">
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/2186/o_1dq1473iu13pf1eq1joo1s0nikk7.jpg" alt="Beste Helezür" class="w-100 img-full post-slide"> 
+                     <div class="absolute-div">
+                        <span class="student-school">Varşova Sosyal Bilimler ve Psikoloji Üniversitesi</span> 
+                        <h3 class="post-usurnane">Beste Helezür</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt="icon-location"> <span class="post-country">Polonya</span> </div>
+                     </div>
+                  </div>
+                  <div class="review-content"> <button class="show-review-btn" data-bs-toggle="modal" data-bs-target="#studentReview9">Show Student Review</button> </div>
+               </div>
+               <div class="post-slide cursore-pointer" style="margin-top: 65px">
+                  <div class="opacity-div"></div>
+                  <div class="post-content">
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/2158/o_1dk3dnp8crvc3lr1rq61npa9gl7.png" alt="Büşra Yıldızhan" class="w-100 img-full post-slide"> 
+                     <div class="absolute-div">
+                        <span class="student-school">-</span> 
+                        <h3 class="post-usurnane">Büşra Yıldızhan</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt="icon-location"> <span class="post-country">İrlanda</span> </div>
+                     </div>
+                  </div>
+                  <div class="review-content"> <button class="show-review-btn" data-bs-toggle="modal" data-bs-target="#studentReview10">Show Student Review</button> </div>
+               </div>
+               <div class="post-slide cursore-pointer" style="">
+                  <div class="opacity-div"></div>
+                  <div class="post-content">
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/2157/o_1dk3e0371o851gbu96q55g1spm7.png" alt="Can Emre Üstün" class="w-100 img-full post-slide"> 
+                     <div class="absolute-div">
+                        <span class="student-school">Stafford House London</span> 
+                        <h3 class="post-usurnane">Can Emre Üstün</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt="icon-location"> <span class="post-country">İngiltere</span> </div>
+                     </div>
+                  </div>
+                  <div class="review-content"> <button class="show-review-btn" data-bs-toggle="modal" data-bs-target="#studentReview11">Show Student Review</button> </div>
+               </div>
+               <div class="post-slide cursore-pointer" style="margin-top: 170px">
+                  <div class="opacity-div"></div>
+                  <div class="post-content">
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/2168/o_1dk3fne4g1efuo781dvm1tn1np47.png" alt="İlayda Horuzoğlu" class="w-100 img-full post-slide"> 
+                     <div class="absolute-div">
+                        <span class="student-school">Bournemouth</span> 
+                        <h3 class="post-usurnane">İlayda Horuzoğlu</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt="icon-location"> <span class="post-country">İngiltere</span> </div>
+                     </div>
+                  </div>
+                  <div class="review-content"> <button class="show-review-btn" data-bs-toggle="modal" data-bs-target="#studentReview12">Show Student Review</button> </div>
+               </div>
+               <div class="post-slide cursore-pointer" style="margin-top: 65px">
+                  <div class="opacity-div"></div>
+                  <div class="post-content">
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/2156/o_1dk3cdk75lnkcbpml0vd11dm17.png" alt="İpek Savucu" class="w-100 img-full post-slide"> 
+                     <div class="absolute-div">
+                        <span class="student-school">Kaplan International Languages</span> 
+                        <h3 class="post-usurnane">İpek Savucu</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt="icon-location"> <span class="post-country">İngiltere</span> </div>
+                     </div>
+                  </div>
+                  <div class="review-content"> <button class="show-review-btn" data-bs-toggle="modal" data-bs-target="#studentReview13">Show Student Review</button> </div>
+               </div>
+               <div class="post-slide cursore-pointer" style="">
+                  <div class="opacity-div"></div>
+                  <div class="post-content">
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/2232/o_1dvj1b0gm3j1s1j1auivr2lc67.png" alt="Kaan Karışmaz" class="w-100 img-full post-slide"> 
+                     <div class="absolute-div">
+                        <span class="student-school">Dublin</span> 
+                        <h3 class="post-usurnane">Kaan Karışmaz</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt="icon-location"> <span class="post-country">İrlanda</span> </div>
+                     </div>
+                  </div>
+                  <div class="review-content"> <button class="show-review-btn" data-bs-toggle="modal" data-bs-target="#studentReview14">Show Student Review</button> </div>
+               </div>
+               <div class="post-slide cursore-pointer" style="margin-top: 170px">
+                  <div class="opacity-div"></div>
+                  <div class="post-content">
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/2166/o_1dk3fkhspf9um00dkf12c41n587.png" alt="Kazım Oğuz" class="w-100 img-full post-slide"> 
+                     <div class="absolute-div">
+                        <span class="student-school">ACE English</span> 
+                        <h3 class="post-usurnane">Kazım Oğuz</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt="icon-location"> <span class="post-country">Malta</span> </div>
+                     </div>
+                  </div>
+                  <div class="review-content"> <button class="show-review-btn" data-bs-toggle="modal" data-bs-target="#studentReview15">Show Student Review</button> </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="featured-countries">
+         <div class="container">
+            <div class="opacity-div"></div>
+            <div class="detail-div">
+               <div class="detail-header-div">
+                  <div class="detail-header-text-div">
+                     <h4 class="section-sub-title">Prestijli Ülkeler</h4>
+                     <p class="container-text">Endless Abroad dünyanın en prestijli ülkeleri ile çalışır.<br/>Şimdi keşfet.</p>
+                  </div>
+                  <div class="detail-header-txt-div">
+                     <div class="grid-counter">
+                        <span class="count-span-text">20+</span> 
+                        <p class="detail-text-dark-blue">Ülke</p>
+                     </div>
+                     <div class="grid-counter">
+                        <span class="count-span-text">80+</span> 
+                        <p class="detail-text-dark-blue">Şehir</p>
+                     </div>
+                     <div class="grid-counter">
+                        <span class="count-span-text">750+</span> 
+                        <p class="detail-text-dark-blue">Global Partner</p>
+                     </div>
+                     <div class="grid-counter">
+                        <span class="count-span-text">3000+</span> 
+                        <p class="detail-text-dark-blue">Öğrenci</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="card-div">
+                  <div class="featured-card-detail cursore-pointer genel-box-shadow">
+                     <div class="opacity-div"></div>
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/20/uk4-1664800733-thumb_sq.jpg" alt="" class="w-100 full-img"> 
+                     <div class="title-programs text-center">
+                        <div class="country-icon">  <img src="~/css/images/united-kingdom.svg" alt="İngiltere" width="48">  </div>
+                        <h3>İngiltere</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt=""> <span>4 Şehir</span> </div>
+                        <div class="detail-country-right" > <a href="ingiltere.html"> <img src="~/css/images/icons/icon-bg-white-right.svg" alt="İngiltere"> </a> </div>
+                     </div>
+                     <div class="bottom-opacity-div"></div>
+                  </div>
+                  <div class="featured-card-detail cursore-pointer genel-box-shadow">
+                     <div class="opacity-div"></div>
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/30/ca2-thumb_sq.jpg" alt="" class="w-100 full-img"> 
+                     <div class="title-programs text-center">
+                        <div class="country-icon">  <img src="~/css/images/canada.svg" alt="Kanada" width="48">  </div>
+                        <h3>Kanada</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt=""> <span>4 Şehir</span> </div>
+                        <div class="detail-country-right" > <a href="kanada.html"> <img src="~/css/images/icons/icon-bg-white-right.svg" alt="Kanada"> </a> </div>
+                     </div>
+                     <div class="bottom-opacity-div"></div>
+                  </div>
+                  <div class="featured-card-detail cursore-pointer genel-box-shadow">
+                     <div class="opacity-div"></div>
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/378/us5-thumb_sq.jpg" alt="" class="w-100 full-img"> 
+                     <div class="title-programs text-center">
+                        <div class="country-icon">  <img src="~/css/images/us.png" alt="Amerika" width="48">  </div>
+                        <h3>Amerika</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt=""> <span>4 Şehir</span> </div>
+                        <div class="detail-country-right" > <a href="amerika.html"> <img src="~/css/images/icons/icon-bg-white-right.svg" alt="Amerika"> </a> </div>
+                     </div>
+                     <div class="bottom-opacity-div"></div>
+                  </div>
+                  <div class="featured-card-detail cursore-pointer genel-box-shadow">
+                     <div class="opacity-div"></div>
+                     <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/22/mal1-thumb_sq.jpg" alt="" class="w-100 full-img"> 
+                     <div class="title-programs text-center">
+                        <div class="country-icon">  <img src="~/css/images/malta.svg" alt="Malta" width="48">  </div>
+                        <h3>Malta</h3>
+                        <div class="location-programs"> <img src="~/css/images/icons/icon-location-blue.svg" alt=""> <span>4 Şehir</span> </div>
+                        <div class="detail-country-right" > <a href="malta.html"> <img src="~/css/images/icons/icon-bg-white-right.svg" alt="Malta"> </a> </div>
+                     </div>
+                     <div class="bottom-opacity-div"></div>
+                  </div>
+               </div>
+               <div class="btn-div text-center"> <button class="btn-blue"><a href="ulkeler.html">Tüm Ülkeler</a></button> </div>
+            </div>
+         </div>
+      </section>
+      <section class="compaings-section">
+         <div class="mobil-div-top-grey"></div>
+         <div class="container">
+            <div class="detail-div">
+               <div class="detail-header-div">
+                  <div class="detail-header-text-div">
+                     <h4 class="section-sub-title">Kampanyalar</h4>
+                     <p class="container-text">Yurtdışı eğitim hayallerini bütçene uygun kampanyalarla desteklemek için biz buradayız! Özel indirimlerimiz seni bekliyor, fırsatları kaçırma.</p>
+                  </div>
+               </div>
+               <div class="card-div">
+                  <a href="campaign/dil-okulu.html" title="Dil Okullarının Erken Kayıt Fırsatı Seni Bekliyor!">
+                     <div class="compaings-detail">
+                        <img src="../d92mazmete5uc.cloudfront.net/public/uploads/campaign/1/lang.png" alt="Dil Okullarının Erken Kayıt Fırsatı Seni Bekliyor!" class="w-100">  
+                        <div class="absolute-div">
+                           <div class="percent-div green">
+                              <h3>%50</h3>
+                              <p>Varan İndirimler</p>
+                           </div>
+                           <h1>Dil Okullarının Erken Kayıt Fırsatı Seni Bekliyor!</h1>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="campaign/sertifika-diploma.html" title="Kanada’da Sertifika Programına Katıl!">
+                     <div class="compaings-detail">
+                        <img src="~/css/images/compaings-bg.png" alt="" class="w-100">  
+                        <div class="absolute-div">
+                           <div class="percent-div green">
+                              <h3>%50</h3>
+                              <p>İndirim</p>
+                           </div>
+                           <h1>Kanada’da Sertifika Programına Katıl!</h1>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="campaign/yazokulu.html" title="Erken kayıt indirimleriyle 2023 Yaz okulu kaydını tamamla!">
+                     <div class="compaings-detail">
+                        <img src="../d92mazmete5uc.cloudfront.net/public/uploads/campaign/tmp_6343ff44cd24d/lan2.png" alt="Erken kayıt indirimleriyle 2023 Yaz okulu kaydını tamamla!" class="w-100">  
+                        <div class="absolute-div">
+                           <div class="percent-div green">
+                              <h3>%25</h3>
+                              <p>Varan İndirim</p>
+                           </div>
+                           <h1>Erken kayıt indirimleriyle 2023 Yaz okulu kaydını tamamla!</h1>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <div class="modal modal-studentReview fade" id="studentReview3" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <div class="rectangle">
+                     <button type="button" class="btn-close" ref="closeButton" data-bs-dismiss="modal" aria-label="Close"></button> 
+                     <div class="title-mobile">Berkay Derman</div>
+                  </div>
+                  <div class="detail-content">
+                     <h2 class="title">Berkay Derman</h2>
+                     <p class="c2"><span class="c4">Endless Abroad ile tanışmam çok uzun yıllar öncesine dayanıyor. Daha doğrusu bireysel olarak Savaş abiyle tanışıklığımız... 2015-16 yılları arasında bir spor salonunda tanışmıştık Savaş abiyle. O zamanlar lisedeydim ve yurtdışında okuma gibi bir hayali ufaktan aklımın içinde beslemeye başlamıştım. Kendisi gerek ofis dışı, ofis içi hiçbir farklılık olmadan deneyimlerini ve bilgisini benimle her zaman sabırlı bir şekilde paylaştı. Lise dönemindeyken benim için sadece bir hayal de olsa, <strong>Kanada’da</strong> bir okulla beni iletişime geçirip %50 burs alma gibi bir şansla kendisi sayesinde tanışmıştım. O zamanlarda yurtdışı için adımımı atamamış olsam da, üstüne seneler geçmesine rağmen, aradaki zaman farkı dahil şu ana kadar Savaş abiyle her zaman iletişimde olduk. Liseden mezun olduktan sonra Kanada için kararımı kesin vermiştim. </span></p>
+                     <p class="c2"><span class="c4">Endless Abroad ve Savaş abinin yardımları sayesinde, şu anda yaklaşık 2 senedir Kanada’da eğitimime devam etmekteyim. Hiçbir zaman Savaş abinin desteği eksik olmadı, Kanada’nın bir hayal gibi olduğu zamandan, şu an burda yaşadığım günlere kadar bağımız hiç kopmadı. Gerek okul, vize ve en onemlisi manevi destegini kendileri hiç eksik etmedi. Eğer sizi düşünen, değer veren bir yurtdışı eğitim danışmanlığından destek almak istiyorsanız, Savaş Ayas ve Endless Abroad…</span></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal modal-studentReview fade" id="studentReview4" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <div class="rectangle">
+                     <button type="button" class="btn-close" ref="closeButton" data-bs-dismiss="modal" aria-label="Close"></button> 
+                     <div class="title-mobile">Caner Nejdet Alkap</div>
+                  </div>
+                  <div class="detail-content">
+                     <h2 class="title">Caner Nejdet Alkap</h2>
+                     <p>Daha öncesinde de birlikte çalıştığım ve memnum kaldığım Endless Abroad ile yeni bir macera için geçen yaz tekrardan bir araya geldim ve 2019 Eylül itibari ile Kanada’nın Toronto şehrine adım atmış bulundum. Gerek akademik, gerek profesyonel ve gerekse sosyal anlamda karşıma çıkan bütün problemlere karşı desteklerini hep hissettiren eğitim danışmanım Savaş Ayas ve Endless Abroad ailesine çok teşekkür ediyorum. Bu gibi büyük adımlar atmadan önce yeterli birikime ve bilgiye sahip olan profesyonellerin verdiği güvenin, sizlerin alacağınız aksiyonlarda daha optimal bir sonuca ulaşmanıza yardımcı olacağından emin olabilirsiniz. Destekleri için Endless Abroad ailesine tekrardan teşekkür ediyorum.</p>
+                     <p>&lt;</p>
+                     <p>Caner Nejdet Alkap - ILAC college Business adm. with co-op 92 weeks</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal modal-studentReview fade" id="studentReview5" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <div class="rectangle">
+                     <button type="button" class="btn-close" ref="closeButton" data-bs-dismiss="modal" aria-label="Close"></button> 
+                     <div class="title-mobile">Pınar Tok</div>
+                  </div>
+                  <div class="detail-content">
+                     <h2 class="title">Pınar Tok</h2>
+                     <p><span style="font-weight: 400;">Londra uzun zamandır hayal şehirdi benim için ve bu hayali bir hafta önce Endless Abroad ile gerçekleştirdim. Yalnız gelmek başta biraz korkutucuydu ama hic tanımadığınız bir şehirde özgür olduğunuzu bilmek çok güzel hissettiriyor. Şimdiden her şey çok keyifli. Endless Abroad ailesine yardımları ve buraya geldiğimde dahi bitmeyen ilgileri için çok teşekkür ederim.</span></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal modal-studentReview fade" id="studentReview6" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <div class="rectangle">
+                     <button type="button" class="btn-close" ref="closeButton" data-bs-dismiss="modal" aria-label="Close"></button> 
+                     <div class="title-mobile">Songül Topaloğlu</div>
+                  </div>
+                  <div class="detail-content">
+                     <h2 class="title">Songül Topaloğlu</h2>
+                     <div>Bir acentanın sunabileceği bütün hizmetleri kendilerinde bulabilirsiniz. Geniş ağları ve pek çok ülke ile olan farklı işbirlikleri sayesinde seçenekleriniz çok daha fazla olacak. Benim için bu en önemli kriterdi çünkü yurtdışı yolculuğumda yapmak istediğim şeyler hem çok farklı ülkeleri hem de farklı planlamaları gerektiriyor. Öncelikle <strong>İrlanda’da</strong> dil okulu ile başladım ve kararımdan memnunum. İrlanda sonrasında planladığım ülkeler arasında Kanada vardı ama orada ne yapmak istediğime henüz karar vermemiştim.</div>
+                     <div>Endless Abroad ile görüştüm, elimdeki imkanlar ve yapmak istediklerim üzerinden giderek Kanada'da özel indirim fırsatları da olan bir sertifika programında karar kıldık. Yönlendirme konusunda doğru seçim olduklarını düşünüyorum. Dil eğitimi sürecimde her konuda danışmanlıklarından yararlandım. Mesaj bölümümde her zaman en üstlerde danışmanım vardı. Kendisinden bireysel olarak da ayrıca memnunum.</div>
+                     <div> </div>
+                     <div>Irlanda / Work and Study</div>
+                     <p> </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal modal-studentReview fade" id="studentReview7" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <div class="rectangle">
+                     <button type="button" class="btn-close" ref="closeButton" data-bs-dismiss="modal" aria-label="Close"></button> 
+                     <div class="title-mobile">Hülya Ertaş</div>
+                  </div>
+                  <div class="detail-content">
+                     <h2 class="title">Hülya Ertaş</h2>
+                     <div>Haziran 2019 tarihinde tanıştım Endless Abroad ile, Şevval Şişman hanım tarafından bilgi aldım. İstanbul'da Avrupa yakasındaki birçok danışmanlık şirketi ile görüştüm. Hiç biri Endless Abroad kadar ilgili, şeffaf ve alakalı olmadılar. Şu an Malta’dayım ve kız kardeşim ABD’de, gerçekten sonsuz teşekkürlerimi sunuyorum. Uçaktan indiğim anda beni annemden önce kendileri aradı. İlk iş bulmamda dahi ilk aradığım kendileri oldu. Burada yaşadığım bütün deneyimleri bir arkadaşım ile paylaşır gibi rahat bir şekilde paylaşabiliyorum. İlgileri ve alakaları hiçbir zaman kesilmedi. Gerçekten sonsuz teşekkür ediyorum. Kesinlikle tavsiye ediyorum ve çok teşekkür ediyorum. Hala Malta'dayım ve hala irtibat halindeyim. Gelecek olan herkese şiddetle tavsiye ediyorum.<br /><br />Malta / Work and Study</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal modal-studentReview fade" id="studentReview8" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <div class="rectangle">
+                     <button type="button" class="btn-close" ref="closeButton" data-bs-dismiss="modal" aria-label="Close"></button> 
+                     <div class="title-mobile">Arda Batikan Durgut</div>
+                  </div>
+                  <div class="detail-content">
+                     <h2 class="title">Arda Batikan Durgut</h2>
+                     <p>Londra’da dil eğitimi almak ve Londra’yı gezmek en büyük isteklerimdendi ve bu yolculukta bütün sorularıma, günün her saatinde cevap veren ve her zaman yardımcı olan Alp Keskin Abi'me sonsuz teşekkürler. </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal modal-studentReview fade" id="studentReview9" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <div class="rectangle">
+                     <button type="button" class="btn-close" ref="closeButton" data-bs-dismiss="modal" aria-label="Close"></button> 
+                     <div class="title-mobile">Beste Helezür</div>
+                  </div>
+                  <div class="detail-content">
+                     <h2 class="title">Beste Helezür</h2>
+                     <p>Öncelikle şunu söylemeliyim ki Endless Abroad'tan aldığım danışmanlıktan çok memnunum, özellikle Alp bey ve Gizem hanım. Benimle o kadar ilgilendiler ki ben her gün/her saat bıktıracak kadar arayıp benimle yine aynı kibarlık ve aynı yardımseverlikle ilgilendikleri için kendilerine çok teşekkür ederim. <strong>Varşova</strong> benim çok istediğim bir yer değildi, hatta başka yerler bakarken Alp beyin bana önermesi ile, detaylıca araştırıp inceledikten sonra karar verdik ve şuan ki düşüncemi soracak olursanız iyi ki gelmişim. Öğrenci şehri bir kere, çok rahat adapte olabileceğiniz bir yer, eğer daha önce hiç böyle bir tecrübe yaşamadıysanız ilk deneyim için burası kesinlikle çok uygun. Geldiğimden beri çok iyi deneyimler yaşadım, insanlar çok kibar, bir sürü yabancı arkadaş edindim. Bu arada şunu kesinlikle söylemek istiyorum ki buraya gelmeyi düşünürseniz size burada çok türk olduğunu ve ingilizcenizi geliştiremeyeceğinizi söyleyecekler “bu tamamen sizle alakalı”, şöyle söyleyeyim sadece 3 tane türk arkadaşım var ve geri kalan bütün arkadaşlarım yabancı, çünkü ben buraya aynı zamanda dil öğrenmeye geldim. Eğer gelme düşünceniz eğitim ve dil ise bu tamamen sizin burayı nasıl kullandığınızla alakalı, aynı zamanda vakit geçirebileceğiniz yerler de çok fazla ve gittiğiniz de yine çok öğrenci var yabancılık çekmeyeceğiniz. İnsanların kibar davranışlarıyla ilgili bir anımı anlatmak istiyorum; daha ilk günler toplu taşıma konusunda çok zorluk çekiyordum ve de hiç çekinmeden insanlara gideceğim yere nasıl gitmeyelim diye soruyordum polonyalı bir kadın bana yolu göstermekle kalmayıp benimle otobüse binip, yurdumun önüne kadar götürüp geri döndü “ve kendisi şehir merkezinde oturuyordu” ingilizcesi çok iyiydi ve benim için hem güzel bir anı oldu, hem de bütün yol ingilizce sohbet ettik. Bunun gibi fazlasıyla yardımcı olan iyi insanlar var gerçekten. Sizin insanlara nasıl yaklaştığınıza bağlı. Veya bu şehre nasıl baktığınıza bağlı. Eğer sosyal ve bir amaç için buraya gelecekseniz burası kesinlikle tam sizin için. Kendi başınıza hayatı deneyimlemek ve bunu başarmak inanılmaz bir özgüven ve mutluluk veriyor. Tam anlamıyla önerebileceğim bir yer. Son olarak söyleyeceğim şey ise Endless Abroad danışmanlık ekibine tekrar teşekkür ederim.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal modal-studentReview fade" id="studentReview10" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <div class="rectangle">
+                     <button type="button" class="btn-close" ref="closeButton" data-bs-dismiss="modal" aria-label="Close"></button> 
+                     <div class="title-mobile">Büşra Yıldızhan</div>
+                  </div>
+                  <div class="detail-content">
+                     <h2 class="title">Büşra Yıldızhan</h2>
+                     <p>Şuan bu yazıyı sizinle İrlanda’dan paylaşıyorum. Sadece gitsem nasıl olur diye düşünerek başlayan bu maceranın bitmesine az kalması beni üzmüyor değil. İnanın herkesten öğrenebileceğiniz bir şeyler var. Dediğim gibi sadece düşünerek başlayan bu yolda bana en büyük desteği veren Alp Bey oldu. Her zaman her aradığımda sürekli bıkmadan bana ne yapmam gerektiğini söyleyerek ve yönlendirmeleriyle işlerimi , düşüncelerimi yarı yarıya indirdi. Buardan sana teşekkürlerimi tekrardan iletmek isterim. Çok farklı bir hayata başlamaya, hayata bakış açınızı değiştirmeye ,her milleti tanımayı, farklı lezzetler tatmayı ve unutmamak gerekir ki kendini geliştirmeyi istiyorsan; kesinlikle Alp Bey ve Endless Abroad ile tanışman gerekir diyebilirim.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal modal-studentReview fade" id="studentReview11" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <div class="rectangle">
+                     <button type="button" class="btn-close" ref="closeButton" data-bs-dismiss="modal" aria-label="Close"></button> 
+                     <div class="title-mobile">Can Emre Üstün</div>
+                  </div>
+                  <div class="detail-content">
+                     <h2 class="title">Can Emre Üstün</h2>
+                     <p>Okul secimimi Strafford house , konaklama olarak da NIDO house olarak belirledim ve ikisindende cok mumnun kaldim. Egitim surecim cok keyifli ve yararli gecti 6 hafta yetersiz olacak zannediyordum fakat aksine cok verimli gecti. Bunlarin hepsinin sebebi Alp Keskin’dir onun rehberliginde olmasaydi ben bu kadar guzel ve yararli olabilecegini dusunmezdim tekrar tekrar tesekkur ederim bana en dogru secimi yaptirdigi icin..</p>
+                     <p> </p>
+                     <p>Can Emre Üstün ve İdil Aytemiz</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal modal-studentReview fade" id="studentReview12" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <div class="rectangle">
+                     <button type="button" class="btn-close" ref="closeButton" data-bs-dismiss="modal" aria-label="Close"></button> 
+                     <div class="title-mobile">İlayda Horuzoğlu</div>
+                  </div>
+                  <div class="detail-content">
+                     <h2 class="title">İlayda Horuzoğlu</h2>
+                     <p>2 aylık bir eğitim için <strong>Bournemouth’a</strong> geldim. Öncelikle şehir dil eğitimi için çok doğru bir tercih. İnanılmaz tecrübeler edindim muhteşem arkadaşlıklar kazandım. Bu hafta son haftam ve burayı cok özleyeceğim. Herkesin kesinlikle hayatinda en az 1 kere yaşaması gerekiyor. Zaman geçtikçe konuşabildigini hissetmek insanı çok motive ediyor. Ayrıca Endless’e cok teşekkür ediyorum herkes çok içten ve samimi. </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal modal-studentReview fade" id="studentReview13" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <div class="rectangle">
+                     <button type="button" class="btn-close" ref="closeButton" data-bs-dismiss="modal" aria-label="Close"></button> 
+                     <div class="title-mobile">İpek Savucu</div>
+                  </div>
+                  <div class="detail-content">
+                     <h2 class="title">İpek Savucu</h2>
+                     <p>Merhaba, Ben İpek Savucu, Özel Büyük Kolej’de onuncu sınıfa giden bir lise öğrencisiyim. Okulda aldığım İngilizce eğitimimin üstüne bir şeyler koymak, kendimi daha iyi tanımak ve hiç bilmediğim bir yerde nasıl yaşayacağımı görmek için İngiltere’ye geldim. ALP KESKİN ile okulumdaki rehberlik servisinin yönlendirmesi üzerine iletişime geçtim. İlk gittiğimde yurt dışındaki dil okullarıyla ilgili hiçbir fikrim yoktu fakat Alp Bey’in ilgisi ve bilgisiyle gideceğim dil okuluna tereddütsüz bir şekilde kaydoldum. Kaplan International’da en çok hoşuma giden şeylerden biri görevli kişilerin ilgili, pozitif ve enerjik olmalarıydı. Verdikleri eğitime gelecek olursak, belirlemiş oldukları seviyeler ve farklı kültürleri öğrenmeye yönelik yapılan çalışmalar bireysel olarak kendimi geliştirmeme oldukça yardımcı oldu. Fakat gezilerle ilgili küçük bir eleştirim var o da; gittiğimiz yerlerin tarihi bilgisiyle ilgili pek fazla şey öğrenmediğimizi belirtmek isterim. Göstermiş olduğunuz ilgi için size teşekkür ederim.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal modal-studentReview fade" id="studentReview14" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <div class="rectangle">
+                     <button type="button" class="btn-close" ref="closeButton" data-bs-dismiss="modal" aria-label="Close"></button> 
+                     <div class="title-mobile">Kaan Karışmaz</div>
+                  </div>
+                  <div class="detail-content">
+                     <h2 class="title">Kaan Karışmaz</h2>
+                     <p>Öncelikle Endless ailesiyle bu yolculuğa çıktığım için gerçekten çok mutluyum. Emeği geçen herkese teşekkür ederim. Bu mutluluğun mimarı ise tanıştığımız ilk günden beri samimiyetini eksik etmeyen, işini severek ve özveri ile yapan en önemlisi aramızdaki durumu bir abi kardeş ilişkisine getirebilen Alp Keskin'dir. Vize sürecinde ilk etapta İngilitere vizesi için elinden geleni yapan, 2 defa başvuru yapıp red almamıza rağmen İrlanda konusunda da bu süreci yönetmekte profesyonel ve tecrübeli davranan Alp abime sonsuz teşekkür ederim.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal modal-studentReview fade" id="studentReview15" tabindex="-1" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <div class="rectangle">
+                     <button type="button" class="btn-close" ref="closeButton" data-bs-dismiss="modal" aria-label="Close"></button> 
+                     <div class="title-mobile">Kazım Oğuz</div>
+                  </div>
+                  <div class="detail-content">
+                     <h2 class="title">Kazım Oğuz</h2>
+                     <p>Malta’da 2015 yılında 24 hafta boyunca dil eğitimi aldım. Okulum ACE butik ve güzel bir okuldu. Hocaların ilgisi ve speaking sınıfının katkısıyla 24 haftada elemantary seviyesinden upper intermadiate seviyesine geldim. Şu an İngilizce gerektiren bir işte çalışıyorum. Mülakat süreçlerini ve işe alım sürecinde İngilizce bilmenin avantajlarını yaşadım. Tüm bu süreçte her an yanımda oldukları için  Endless Abroad çalışanlarına teşekkür ederim.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <section class="faq-section pt-100">
+         <div class="opacity-div"></div>
+         <div class="container">
+            <div class="faq-section-detail">
+               <div class="faq-section-detail-text">
+                  <div class="detail-header-div">
+                     <div class="detail-header-text-div">
+                        <h4 class="section-sub-title">Sıkça Sorulan Sorular</h4>
+                        <p class="container-text">Yurtdışı Eğitim Hakkında Sorularınızın Cevapları Burada!</p>
+                     </div>
+                  </div>
+                  <div class="detail-text">
+                     <div class="info-count">
+                        <div class="grid-counter">
+                           <span class="count-span-text">20+</span> 
+                           <p class="detail-text-dark-blue">Ülke</p>
+                        </div>
+                        <div class="grid-counter">
+                           <span class="count-span-text">750+</span> 
+                           <p class="detail-text-dark-blue">Global Partner</p>
+                        </div>
+                        <div class="grid-counter">
+                           <span class="count-span-text">24+</span> 
+                           <p class="detail-text-dark-blue">Şube</p>
+                        </div>
+                     </div>
+                     <div class="desc-div">
+                        <p class="container-text">Daha detaylı bilgi almak için Uzman Endless Abroad Danışman kadrosuyla iletişime geçin!</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="faq-section-detail-accordion">
+                  <div class="accordion accordion-div" id="myAccordion">
+                     <div class="accordion-item show">
+                        <h2 class="accordion-header" id="heading1"> <button type="button" class="accordion-button " data-toggle="collapse" data-target="#collapse1">Hangi ülkeye gitmeliyim? </button> </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" data-parent="#myAccordion">
+                           <div class="card-body">
+                              <p>Yurtdışı eğitimleri için profilinizi, maddi durumunuzu, eğitim hedeflerinizi göz önünde bulundurarak size uygun ülkeyi bulabilirsiniz. En doğru ülke tercihini yapabilmeniz için Endless Abroad yurtdışı <strong>eğitim danışman kadromuzdan ücretsiz danışmanlık hizmeti alabilirsiniz</strong></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item show">
+                        <h2 class="accordion-header" id="heading2"> <button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapse2">Üniversite seçimi yaparken nelere dikkat etmeliyim? </button> </h2>
+                        <div id="collapse2" class="accordion-collapse collapse " data-parent="#myAccordion">
+                           <div class="card-body">
+                              <p>Öğrencilerimiz üniversite tercihi yaparken aile bütçesini ve yurtdışında üniversite eğitimi sonrası iş imkanlarını göz önünde bulundurarak hareket etmelidirler. Bu imkanlar doğrultusunda ülkelerin sunmuş olduğu iş fırsatları, yıllık bölüm ücretleri ve eğitim sonrası sunulan çalışma imkanları da üniversite seçimi yaparken dikkat edilmesi gereken unsurlardır. Yurtdışında üniversite seçimi yaparken mutlaka uzman görüşüne ihtiyaç vardır. Öğrencilerimiz yurtdışında üniversite seçimi yapmak için kendilerine en yakın Endless Abroad yurtdışı eğitim danışmanlığı ofislerinden ve uzman kadromuzdan destek alabilirler</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item show">
+                        <h2 class="accordion-header" id="heading3"> <button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapse3">Dil eğitimim sona erdiğinde sertifika alacak mıyım? </button> </h2>
+                        <div id="collapse3" class="accordion-collapse collapse " data-parent="#myAccordion">
+                           <div class="card-body">
+                              <p>Öğrencilerimiz yurtdışında dil eğitimi programlarına katıldıkları takdirde eğitim aldıkları ülkelerin kurumlarından onaylı ve uluslararası geçerliliği olan başarı ve kurs bitirme sertifikalarına sahip olacaklardır.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item show">
+                        <h2 class="accordion-header" id="heading4"> <button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapse4">Dil okulu seçimi yaparken nelere dikkat etmeliyim? </button> </h2>
+                        <div id="collapse4" class="accordion-collapse collapse " data-parent="#myAccordion">
+                           <div class="card-body">
+                              <p>Yurtdışında dil okulu seçimi yaparken öğrencilerimiz eğitim almak istedikleri süreyi göz önünde bulundurarak ülke ve şehir tercihi yapmalıdır. Öğrencilerimiz yurtdışında hangi dil okuluna gideceklerine karar verirken aynı zamanda vize prosedürleri ve mali durumlarını göz önünden geçirmelidirler. Öğrencilerin yurtdışında dil okulu seçimi yaparken uzman bir eğitim danışmanından destek almasını tavsiye ederiz. Yurtdışında dil okulu seçimi yaparken öğrencilerimiz eğitim almak istedikleri süreyi göz önünde bulundurarak ülke ve şehir tercihi yapmalıdır. Öğrencilerimiz yurtdışında hangi dil okuluna gideceklerine karar verirken aynı zamanda vize prosedürleri ve mali durumlarını göz önünden geçirmelidirler. Öğrencilerin yurtdışında dil okulu seçimi yaparken uzman bir eğitim danışmanından destek almasını tavsiye ederiz. Yurtdışında dil okulu seçimi yaparken öğrencilerimiz eğitim almak istedikleri süreyi göz önünde bulundurarak ülke ve şehir tercihi yapmalıdır. Öğrencilerimiz yurtdışında hangi dil okuluna gideceklerine karar verirken aynı zamanda vize prosedürleri ve mali durumlarını göz önünden geçirmelidirler. Öğrencilerin yurtdışında dil okulu seçimi yaparken uzman bir eğitim danışmanından destek almasını tavsiye ederiz. Yurtdışında dil okulu seçimi yaparken öğrencilerimiz eğitim almak istedikleri süreyi göz önünde bulundurarak ülke ve şehir tercihi yapmalıdır. Öğrencilerimiz yurtdışında hangi dil okuluna gideceklerine karar verirken aynı zamanda vize prosedürleri ve mali durumlarını göz önünden geçirmelidirler. Öğrencilerin yurtdışında dil okulu seçimi yaparken uzman bir eğitim danışmanından destek almasını tavsiye ederiz.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item show">
+                        <h2 class="accordion-header" id="heading5"> <button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapse5">Yurtdışında hem çalışıp hem dil eğitimi alabileceğim bir program var mı? </button> </h2>
+                        <div id="collapse5" class="accordion-collapse collapse " data-parent="#myAccordion">
+                           <div class="card-body">
+                              <p>Öğrencilerimiz work and study programlarını tercih ederek yurtdışında dil eğitimi alırken aynı zamanda yasal çalışma iznine de sahip olurlar. Work and Study programı İrlanda, Malta, Dubai, Avustralya ve Yeni Zelanda’da geçerlidir. İrlanda’da minimum 25 hafta dil eğitimi alan öğrencilerimiz haftada 20 saat çalışabilecekleri bir yasal çalışma izni alabilecekleri gibi eğitimlerinin sonunda ülkede ekstra iki ay daha kalma ve full-time çalışma imkanına sahip olurlar. Malta'da 90 günün üzerinde dil eğitimi alan öğrencilerimiz, haftada 20 saat yasal çalışma izni alma hakkında sahip olurlar. Avustralya ve Yeni Zelanda da 90 gün üzerinde dil eğitimi alan öğrencilerimiz haftada 20 saat yasal çalışma izni alma hakkına sahip olurlar. Size en uygun ülke seçimini yapmak için Endless Abroad yurtdışı eğitim danışmanlığı hizmetinden ücretsiz destek alabilirsiniz.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item hidden">
+                        <h2 class="accordion-header" id="heading6"> <button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapse6">Dil okuluna katılabilmek için dil seviyem ne olmalı? </button> </h2>
+                        <div id="collapse6" class="accordion-collapse collapse " data-parent="#myAccordion">
+                           <div class="card-body">
+                              <p>Yurtdışında dil okulu programlarına katılabilmeniz için herhangi bir yabancı dil şartı aranmamaktadır.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item hidden">
+                        <h2 class="accordion-header" id="heading7"> <button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapse7">Yurtdışına gittikten sonra eğitim programımı uzatabilir miyim? </button> </h2>
+                        <div id="collapse7" class="accordion-collapse collapse " data-parent="#myAccordion">
+                           <div class="card-body">
+                              <p>Yurtdışında eğitim alan öğrencilerimizin gittikleri ülkelerde vize uzatma uygunlukları bulunuyorsa hâlihazırda eğitim aldıkları programlarını uzatabilir, farklı bir programa geçiş yapabilirler.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item hidden">
+                        <h2 class="accordion-header" id="heading8"> <button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapse8">Aile yanı konaklama mı, yurt konaklaması mı? </button> </h2>
+                        <div id="collapse8" class="accordion-collapse collapse " data-parent="#myAccordion">
+                           <div class="card-body">
+                              <p>Yurtdışında eğitim alırken aile yanında veya yurtlarda konaklama sağlayabilirsiniz. Öğrencilerimiz gittikleri ülkenin kendi kültürünü deneyimlemek istiyorlarsa aile yanı konaklamalarını öneririz. Yurtdışında eğitim alırken aile yanı konaklamaları tercih etmenin en büyük avantajı, gittiğiniz ülkelerde yerli insanlarla bir arada kalarak daha çok yabancı dil pratiği yapılmasıdır. Öğrencilerimiz dayanışma ve işbirliği içerisinde daha fazla sosyal olabilecekleri bir ortamda konaklamak istiyorlarsa öğrenci evlerinde konaklamayı da tercih edebilirler.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item hidden">
+                        <h2 class="accordion-header" id="heading9"> <button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapse9">Danışmanlık ücreti alıyor musunuz? </button> </h2>
+                        <div id="collapse9" class="accordion-collapse collapse " data-parent="#myAccordion">
+                           <div class="card-body">
+                              <p>Yurtdışı eğitim planlarınızı oluştururken tercih edeceğiniz dil eğitimi programları, work and study programları ve İngiltere, İrlanda, Kanada, Amerika gibi ülkelerde anlaşmalı eğitim kurumlarımızdan eğitim almaya karar verirken herhangi bir ekstra danışmanlık ücreti ödemezler ancak öğrencilerimiz Avrupa ve anlaşmamızın bulunmadığı üniversitelerde yüksek öğrenim hedefliyorlarsa tercih edecekleri ülkeye göre danışmanlık ücreti ödemek durumundadırlar.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="show-more-button" onclick="showAccordions(this)"> Daha Fazla </div>
+                     <div class="show-less-button hidden" onclick="lessAccordions(this)"> Daha Az </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="blog-section">
+         <div class="mobil-div-top-grey"></div>
+         <div class="container border-top-grey">
+            <div class="detail-div pt-100">
+               <div class="detail-header-div">
+                  <div class="detail-header-text-div">
+                     <h4 class="section-sub-title">Blog</h4>
+                     <p class="container-text">Yurtdışı eğitim programları, ülkeler, konaklama, kısacası yurtdışında öğrenci olmak ile ilgili tüm bilgiler için blog sayfamıza göz at.</p>
+                  </div>
+                  <div class="detail-header-btn-div"> <button class="btn-blue"><a href="blog.html">Tüm Yazılar</a></button> </div>
+               </div>
+               <div class="card-div">
+                  <div class="grid-div">
+                     <div class="img-div"> <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/3847/dsh-thumb_sq.jpg" class="img-div-orange wtd-100" alt=""> </div>
+                     <div class="text-div">
+                        <h4 class="green">Genel</h4>
+                        <a hreflang="tr" href="blog/dsh-sinavi-nedir.html"> <span class="description-text">DSH Sınavı Nedir?</span> </a> 
+                        <div class="flex-div-item"> <img src="~/css/images/icons/icon-calender.svg" alt=""> <span class="date-text">24 Haz 2021</span> </div>
+                     </div>
+                  </div>
+                  <div class="grid-div">
+                     <div class="img-div"> <img src="../d92mazmete5uc.cloudfront.net/public/uploads/post/31948/kanada-asgari-ucret-thumb_sq.jpg" class="img-div-orange wtd-100" alt=""> </div>
+                     <div class="text-div">
+                        <h4 class="green">Genel</h4>
+                        <a hreflang="tr" href="blog/kanadada-asgari-ucret.html"> <span class="description-text">Kanada’da Asgari Ücret Ne Kadar?</span> </a> 
+                        <div class="flex-div-item"> <img src="~/css/images/icons/icon-calender.svg" alt=""> <span class="date-text">23 Tem 2022</span> </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>

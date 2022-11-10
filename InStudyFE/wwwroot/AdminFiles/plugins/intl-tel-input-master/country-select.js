@@ -20,5 +20,5 @@
       // placeholderNumberType: "MOBILE",
       // preferredCountries: ['cn', 'jp'],
       // separateDialCode: true,
-      utilsScript: "../assets/plugins/intl-tel-input-master/utils.js",
+      utilsScript: "../~/plugins/intl-tel-input-master/utils.js",
     });

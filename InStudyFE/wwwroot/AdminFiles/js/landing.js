@@ -103,7 +103,7 @@
         .getElementById("style")
         .setAttribute(
           "href",
-          "../assets/plugins/bootstrap/css/bootstrap.rtl.min.css"
+          "../~/plugins/bootstrap/css/bootstrap.rtl.min.css"
         );
       var carousel = $(".owl-carousel");
       $.each(carousel, function (index, element) {
@@ -132,7 +132,7 @@
         .getElementById("style")
         .setAttribute(
           "href",
-          "../assets/plugins/bootstrap/css/bootstrap.min.css"
+          "../~/plugins/bootstrap/css/bootstrap.min.css"
         );
       var carousel = $(".owl-carousel");
       $.each(carousel, function (index, element) {
@@ -195,7 +195,7 @@
       .getElementById("style")
       .setAttribute(
         "href",
-        "../assets/plugins/bootstrap/css/bootstrap.rtl.min.css"
+        "../~/plugins/bootstrap/css/bootstrap.rtl.min.css"
       );
     var carousel = $(".owl-carousel");
     $.each(carousel, function (index, element) {
@@ -309,7 +309,7 @@ function resetData() {
     $("html[lang=en]").attr("dir", "ltr");
     $('body').removeClass('rtl');
     $("head link#style").attr("href", $(this));
-    (document.getElementById("style").setAttribute("href", "../assets/plugins/bootstrap/css/bootstrap.min.css"));
+    (document.getElementById("style").setAttribute("href", "../~/plugins/bootstrap/css/bootstrap.min.css"));
     var carousel = $('.owl-carousel');
     $.each(carousel, function (index, element) {
         // element == this
