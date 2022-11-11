@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace InStudyFE.Controllers
 {
+    [Authorize]
     public class BlogController : Controller
     {
         public IActionResult Index()

@@ -21,12 +21,15 @@ namespace InStudyFE.Controllers
             _session = httpContextAccessor.HttpContext.Session;
         }
 
-        public IActionResult Index()
+        public IActionResult Login()
+        {
+            return View();
+        }
+        public IActionResult Register()
         {
             return View();
         }
 
-       
 
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] LoginViewModel viewModel)

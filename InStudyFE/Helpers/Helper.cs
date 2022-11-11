@@ -18,7 +18,7 @@ namespace InStudyFE.Helpers
             //var identity = ss.User.Identity as ClaimsIdentity;
 
             var login = new LoginViewModel { UserName = email, Password = password };
-            var client = _httpClientFactory.CreateClient("Blog");
+            var client = _httpClientFactory.CreateClient("InStudy");
             var json = JsonConvert.SerializeObject(login);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
             var response = await client.PostAsync("api/Users/LogIn", data);
@@ -38,7 +38,7 @@ namespace InStudyFE.Helpers
             //var identity = ss.User.Identity as ClaimsIdentity;
 
             //var login = new LoginViewModel { UserName = email, Password = password };
-            var client = _httpClientFactory.CreateClient("Blog");
+            var client = _httpClientFactory.CreateClient("InStudy");
             var response = await client.PostAsync("api/Users/LogOut",null);
             var responseString = await response.Content.ReadAsStringAsync();
             var result = JsonConvert.DeserializeObject<ApiResponse>(responseString);
