@@ -94,7 +94,16 @@
                </div>
             </div>
             <div id="mobile-item-content" class="navbar-items-content">
-               <div class="buttons-content"> <button class="btn-blue" data-bs-toggle="modal" data-bs-target="#getAnOffer"> TEKLİF AL </button>  <button class="btn-grey-border"> <a href="login.html">GİRİŞ YAP</a> </button>  </div>
+               <div class="buttons-content"> <button class="btn-blue" data-bs-toggle="modal" data-bs-target="#getAnOffer"> TƏKLİF AL </button> 
+                   @if (User.Identity.IsAuthenticated)
+                                    {
+                                         <button id="logOut" class="btn-grey-b  order"> <a >Çıxış</a> </button>  
+                                    }
+                                    else{
+                                          <button class="btn-grey-border"> <a asp-action="Login" asp-controller="Account">Daxil ol</a> </button>  
+
+                                    }
+               </div>
                               
                <div class="dropdown-items">
                   <div class="item" onclick="openMobileMenuDetail(this,'language')" title="Language Programs"> Dil Programları <span> <img src="~/css/images/icons/icon-right-arrow-grey.svg" alt="arrow"> </span> </div>
@@ -182,7 +191,7 @@
                                     <div class="icon-text"> <img src="~/css/images/icons/icon-blog-grey.svg" alt=""> <a asp-action="Index" asp-controller="Blog" class="text-decoration-none"><span>Blog</span></a> </div>
                                  </div>
                                  <div class="">
-                                    <div class="icon-text"> <img src="~/css/images/icons/icon-contact-grey.svg" alt=""> <a asp-action="Index" asp-controller="Contact" class="text-decoration-none"><span>İletişim</span></a> </div>
+                                    <div class="icon-text"> <img src="~/css/images/icons/icon-contact-grey.svg" alt=""> <a asp-action="Index" asp-controller="Contact" class="text-decoration-none"><span>Əlaqə</span></a> </div>
                                  </div>
                               </div>
                               <div class="icon-div">
@@ -271,7 +280,7 @@
                                  </div>
                               </li>
                               <li class="nav-item dropdown">
-                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Ülkeler </a> 
+                                 <a class="nav-link" asp-action="Index"  asp-controller="Country"> Ölkələr </a> 
                                  <div class="dropdown-menu">
                                     <div class="content container">
                                        <div id="news-slider" class="owl-carousel-country">
@@ -344,7 +353,7 @@
                      </div>
                      <div class="auth-control">
                         <div class="searchBoxForm"> <button class="btnSearchOpen" type="button" onclick="searchBtnOpen(this)"> <img id="search-icon" class="search" src="~/css/images/icons/icon-search-darkblue.svg" alt=""> </button> </div>
-                        <button class="btn-blue" type="button" data-bs-toggle="modal" data-bs-target="#getAnOffer"> TEKLİF AL </button>
+                        <button class="btn-blue" type="button" data-bs-toggle="modal" data-bs-target="#getAnOffer"> TƏKLİF AL </button>
                         <!-- Button trigger modal -->
                           @if (User.Identity.IsAuthenticated)
                                     {

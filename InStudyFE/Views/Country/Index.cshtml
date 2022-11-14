@@ -15,7 +15,7 @@
             position: relative;
             width: 100%;
             height: 100%;
-            text-align: center;
+            /*text-align: center;*/
             transition: transform 0.8s;
             transform-style: preserve-3d;
         }
@@ -31,12 +31,12 @@
         }
 
         .flip-card-inner:focus {
-            outline: 5px solid #03c23c;
+            
             cursor: pointer;
         }
 
         .flip-card-inner:hover {
-            outline: 5px solid #0336c2;
+            
             cursor: pointer;
         }
 
@@ -64,9 +64,7 @@
                 color: white;
             }
 
-        .flip-card-front {
-            background-color: #18453b;
-        }
+        
 
         .flip-card-back {
             background-color: #008183;
@@ -83,10 +81,18 @@
                 <div class="flip-card">
                     <div class="flip-card-inner" tab-index="0">
                         <div class="flip-card-front">
-                            <h2>Card 2 Front</h2>
+                             <div class="card-body">
+                                <h2 class="card-title text-center font-weight-bold text-dark">United Kingdom</h2>
+                                <p class="card-text text-dark text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
                         </div>
-                        <div class="flip-card-back">
-                            <p>Card 2 Back</p>
+                        <div class="flip-card-back" style="background-image:url('https://s30876.pcdn.co/wp-content/uploads/london-e1634207674493-1170x630.jpg.optimal.jpg');">
+                            <div class="card-body">
+                                <h2 class="card-title text-left font-weight-bold">United Kingdom</h2>
+                                <p class="card-text text-left">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="/Country/Detail" class="btn btn-danger btn-lg">Learn More +</a>
+                            </div>
+       
                         </div>
                     </div>
                 </div>
@@ -95,7 +101,13 @@
                 <div class="flip-card">
               <div class="flip-card-inner" tab-index="0">
                 <div class="flip-card-front">
-                  <h2>Card 2 Front</h2>
+                   <div class="card">
+                          <img src="..." class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title font-weight-bold">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          </div>
+                        </div>
                 </div>
                 <div class="flip-card-back">
                   <p>Card 2 Back</p>
