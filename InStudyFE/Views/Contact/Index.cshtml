@@ -44,7 +44,7 @@
                                     <path id="Profile"
                                           d="M0,16.6C0,13.878,3.824,13.2,8.3,13.2c4.5,0,8.3.706,8.3,3.431s-3.824,3.407-8.3,3.407C3.8,20.035,0,19.329,0,16.6ZM2.808,5.3A5.38,5.38,0,0,1,8.3,0a5.379,5.379,0,0,1,5.493,5.3A5.38,5.38,0,0,1,8.3,10.6,5.381,5.381,0,0,1,2.808,5.3Z"></path>
                                 </svg>
-                                <input type="text" placeholder="Adınız Soyadınız" required="required" class="form-control" />
+                                <input type="text" placeholder="Adınız Soyadınız" id="contactName" required="required" class="form-control" />
                             </div>
                             <div class="input-container">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20.75" height="20.527" viewBox="0 0 22.807 20.527" class="icon-input">
@@ -55,7 +55,7 @@
                                               transform="translate(0 0)"></path>
                                     </g>
                                 </svg>
-                                <input type="email" placeholder="E-Posta Adresiniz" required="required" class="form-control" />
+                                <input type="email" placeholder="E-Posta Adresiniz" id="contactEmail" required="required" class="form-control" />
                             </div>
                             <div class="input-container d-flex">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20.75" height="20.75" viewBox="0 0 20.75 20.75" class="icon-input">
@@ -66,141 +66,27 @@
                                               transform="translate(0 0)"></path>
                                     </g>
                                 </svg>
-                                <input type="text" placeholder="+90" class="form-control" style="width: 105px; border-radius: 30px 0px 0px 30px;" />
-                                <input type="text" placeholder="Telefon Numaranız" required="required" class="form-control" style="border-radius: 0px 30px 30px 0px; padding-left: 20px;" />
+                                <input type="text" placeholder="+90" class="form-control" id="contactCode" style="width: 105px; border-radius: 30px 0px 0px 30px;" />
+                                <input type="text" placeholder="Telefon Numaranız" id="contactPhone" required="required" class="form-control" style="border-radius: 0px 30px 30px 0px; padding-left: 20px;" />
                             </div>
                             <div class="input-container">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20.75" height="20.75" viewBox="0 0 14.869 20.035" class="icon-input">
                                     <path id="Path_37765" data-name="Path 37765" d="M7.434,20.035l-6-8.215a7.434,7.434,0,1,1,12,0l-3,4.107Zm.079-10.018a2.5,2.5,0,1,0-2.5-2.5A2.5,2.5,0,0,0,7.513,10.018Z" fill-rule="evenodd"></path>
                                 </svg>
-                                <select class="form-control">
-                                    <option value="">Şehir Seçiniz</option>
-                                    <option value="ADANA">ADANA</option>
-                                    <option value="ADIYAMAN">ADIYAMAN</option>
-                                    <option value="AFYONKARAHİSAR">AFYONKARAHİSAR</option>
-                                    <option value="AĞRI">AĞRI</option>
-                                    <option value="AMASYA">AMASYA</option>
-                                    <option value="ANKARA">ANKARA</option>
-                                    <option value="ANTALYA">ANTALYA</option>
-                                    <option value="ARTVİN">ARTVİN</option>
-                                    <option value="AYDIN">AYDIN</option>
-                                    <option value="BALIKESİR">BALIKESİR</option>
-                                    <option value="BİLECİKK">BİLECİKK</option>
-                                    <option value="BİNGÖL">BİNGÖL</option>
-                                    <option value="BİTLİS">BİTLİS</option>
-                                    <option value="BOLU">BOLU</option>
-                                    <option value="BURDUR">BURDUR</option>
-                                    <option value="BURSA">BURSA</option>
-                                    <option value="ÇANAKKALE">ÇANAKKALE</option>
-                                    <option value="ÇANKIRI">ÇANKIRI</option>
-                                    <option value="ÇORUM">ÇORUM</option>
-                                    <option value="DENİZLİ">DENİZLİ</option>
-                                    <option value="DİYARBAKIR">DİYARBAKIR</option>
-                                    <option value="EDİRNE">EDİRNE</option>
-                                    <option value="ELAZIĞ">ELAZIĞ</option>
-                                    <option value="ERZİNCAN">ERZİNCAN</option>
-                                    <option value="ERZURUM">ERZURUM</option>
-                                    <option value="ESKİŞEHİR">ESKİŞEHİR</option>
-                                    <option value="GAZİANTEP">GAZİANTEP</option>
-                                    <option value="GİRESUN">GİRESUN</option>
-                                    <option value="GÜMÜŞHANE">GÜMÜŞHANE</option>
-                                    <option value="HAKKARİ">HAKKARİ</option>
-                                    <option value="HATAY">HATAY</option>
-                                    <option value="ISPARTA">ISPARTA</option>
-                                    <option value="MERSİN">MERSİN</option>
-                                    <option value="İSTANBUL">İSTANBUL</option>
-                                    <option value="İZMİR">İZMİR</option>
-                                    <option value="KARS">KARS</option>
-                                    <option value="KASTAMONU">KASTAMONU</option>
-                                    <option value="KAYSERİ">KAYSERİ</option>
-                                    <option value="KIRKLARELİ">KIRKLARELİ</option>
-                                    <option value="KIRŞEHİR">KIRŞEHİR</option>
-                                    <option value="KOCAELİ">KOCAELİ</option>
-                                    <option value="KONYA">KONYA</option>
-                                    <option value="KÜTAHYA">KÜTAHYA</option>
-                                    <option value="MALATYA">MALATYA</option>
-                                    <option value="MANİSA">MANİSA</option>
-                                    <option value="KAHRAMANMARAŞ">KAHRAMANMARAŞ</option>
-                                    <option value="MARDİN">MARDİN</option>
-                                    <option value="MUĞLA">MUĞLA</option>
-                                    <option value="MUŞ">MUŞ</option>
-                                    <option value="NEVŞEHİR">NEVŞEHİR</option>
-                                    <option value="NİĞDE">NİĞDE</option>
-                                    <option value="ORDU">ORDU</option>
-                                    <option value="RİZE">RİZE</option>
-                                    <option value="SAKARYA">SAKARYA</option>
-                                    <option value="SAMSUN">SAMSUN</option>
-                                    <option value="SİİRT">SİİRT</option>
-                                    <option value="SİNOP">SİNOP</option>
-                                    <option value="SİVAS">SİVAS</option>
-                                    <option value="TEKİRDAĞ">TEKİRDAĞ</option>
-                                    <option value="TOKAT">TOKAT</option>
-                                    <option value="TRABZON">TRABZON</option>
-                                    <option value="TUNCELİ">TUNCELİ</option>
-                                    <option value="ŞANLIURFA">ŞANLIURFA</option>
-                                    <option value="UŞAK">UŞAK</option>
-                                    <option value="VAN">VAN</option>
-                                    <option value="YOZGAT">YOZGAT</option>
-                                    <option value="ZONGULDAK">ZONGULDAK</option>
-                                    <option value="AKSARAY">AKSARAY</option>
-                                    <option value="BAYBURT">BAYBURT</option>
-                                    <option value="KARAMAN">KARAMAN</option>
-                                    <option value="KIRIKKALE">KIRIKKALE</option>
-                                    <option value="BATMAN">BATMAN</option>
-                                    <option value="ŞIRNAK">ŞIRNAK</option>
-                                    <option value="BARTIN">BARTIN</option>
-                                    <option value="ARDAHAN">ARDAHAN</option>
-                                    <option value="IĞDIR">IĞDIR</option>
-                                    <option value="YALOVA">YALOVA</option>
-                                    <option value="KARABüK">KARABüK</option>
-                                    <option value="KİLİS">KİLİS</option>
-                                    <option value="OSMANİYE">OSMANİYE</option>
-                                    <option value="DÜZCE">DÜZCE</option>
+                                <select id="contactType" class="form-control">
+                                    <option value="">Mesajınızın növü</option>
+                                    <option value="1">Təklif</option>
+                                    <option value="2">Şikayət</option>
+
+                             
                                 </select>
                             </div>
-                            <div class="input-container">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.406" height="17.406" viewBox="0 0 17.406 17.406" class="icon-input">
-                                    <defs>
-                                        <clipPath id="clip-path"><rect id="Rectangle_8144" data-name="Rectangle 8144" width="17.406" height="17.406"></rect></clipPath>
-                                    </defs>
-                                    <g id="Group_46723" data-name="Group 46723" clip-path="url(#clip-path)">
-                                        <path id="Path_36942"
-                                              data-name="Path 36942"
-                                              d="M17.406,6.382V4.145a2.371,2.371,0,0,0-2.331-2.4h-1.15V.58a.58.58,0,1,0-1.16,0v1.16H4.642V.58a.58.58,0,1,0-1.16,0v1.16H2.331A2.371,2.371,0,0,0,0,4.145V6.382Z"
-                                              transform="translate(0 0)"></path>
-                                        <path id="Path_36943" data-name="Path 36943" d="M0,227.5v7.459a2.371,2.371,0,0,0,2.331,2.4H15.075a2.371,2.371,0,0,0,2.331-2.4V227.5Z" transform="translate(0 -219.958)"></path>
-                                    </g>
-                                </svg>
-                                <select class="form-control"
-                                        style="background: 0% 0% no-repeat padding-box padding-box rgba(149, 179, 197, 0.05); height: 56px; border: 1px solid rgba(214, 221, 232, 0.6); border-radius: 30px; opacity: 1; padding-left: 57px;">
-                                    <option value="">Programınızı Seçiniz</option>
-                                    <optgroup label="Dil Okulları"><option value="Dil Okulu">Dil Okulu</option><option value="Yaz Okulu">Yaz Okulu</option><option value="Work &amp; Study">Work &amp; Study</option></optgroup>
-                                    <optgroup label="Akademik"><option value="Üniversite">Üniversite</option><option value="Lise">Lise</option><option value="Yüksek Lisans">Yüksek Lisans</option><option value="Sertifika">Sertifika</option></optgroup>
-                                </select>
-                            </div>
+                         
                             <div class="input-container"><textarea aria-label="With textarea" placeholder="Mesajınız" class="form-control"></textarea></div>
-                            <div class="form-check justify-content-center d-flex align-items-center gap-2">
-                                <input type="checkbox" value="" id="flexCheckChecked" checked="checked" class="form-check-input" />
-                                <label for="flexCheckChecked" class="form-check-label">
-                                    <span>
-                                        Endless Abroad indirimli kampanyalarından sms veya mail yolu ile bilgilendirilmek istiyorum. <a href="/kisisel-verilerin-islenmesi" target="_blank">KVKK Aydınlatma Metni</a> ni ve
-                                        <a href="/gizlilik-politikasi" target="_blank">Gizlilik Politikası</a> nı okudum, kabul ediyorum.
-                                    </span>
-                                </label>
-                            </div>
+              
                             <div>
                                 <div class="grecaptcha-badge" data-style="none" style="width: 256px; height: 60px; position: fixed; visibility: hidden;">
-                                    <div class="grecaptcha-logo">
-                                        <iframe title="reCAPTCHA"
-                                                src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcXIwYaAAAAAM-4Hu-fgEnl-EngERmV4F_ELLnD&amp;co=aHR0cHM6Ly93d3cuZW5kbGVzc2Ficm9hZC5jb20udHI6NDQz&amp;hl=en&amp;v=Ixi5IiChXmIG6rRkjUa1qXHT&amp;size=invisible&amp;cb=hgvmgh85qkwo"
-                                                width="256"
-                                                height="60"
-                                                role="presentation"
-                                                name="a-44oig9sv26mn"
-                                                frameborder="0"
-                                                scrolling="no"
-                                                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
-                                    </div>
+                                  
                                     <div class="grecaptcha-error"></div>
                                     <textarea id="g-recaptcha-response-1"
                                               name="g-recaptcha-response"
@@ -209,7 +95,7 @@
                                 </div>
                                 <iframe style="display: none;"></iframe>
                             </div>
-                            <div class="text-center pt-4"><button type="submit" class="btn-green w-100">GÖNDER</button></div>
+                            <div class="text-center pt-4"><button type="submit" id="contactSubmit" class="btn-green w-100">GÖNDER</button></div>
                         </form>
                         <section class="compare-modal-section">
                             <div id="modalSuccess" tabindex="-1" aria-hidden="true" class="modal-thanks modal fade">
@@ -239,4 +125,7 @@
             </section>
          </div>
       </main>
-     
+     @section Scripts{
+    <script src="~/js/contact.js" defer></script>
+
+     }

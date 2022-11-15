@@ -8,7 +8,9 @@ html {
     tab-size: 4;
     word-break: normal
 }
-
+.displayClass {
+    display: none;
+}
 *, :after, :before {
     background-repeat: no-repeat;
     box-sizing: inherit
@@ -23604,6 +23606,7 @@ header {
 .sidebar-item:hover {
     background-color: red;
 }
+                
 .footer-section {
     display: grid;
     grid-template-rows: 130px auto auto

@@ -60,6 +60,12 @@
       <!-- End Google Tag Manager -->
       <!-- Global site tag (gtag.js) - Google Ads: 864866751 -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=AW-864866751"></script>
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js" 
+                integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" 
+                crossorigin="anonymous">
+        </script>
+        <script src="~/js/jquery.ccpicker.js"></script>
+        <link rel="stylesheet" href="~/css/jquery.ccpicker.css">
       <script>
          window.dataLayer = window.dataLayer || [];
          function gtag(){dataLayer.push(arguments);}
@@ -67,6 +73,13 @@
          
          gtag('config', 'AW-864866751');
       </script>
+      @*<script>
+          $(document ).ready(function() {
+				 $("#phoneField").CcPicker({
+              "countryCode":"es"
+            });
+			});
+            </script>*@
      @RenderSection("Css",false)
        
     
@@ -499,7 +512,7 @@
                                                 ></path>
                                             </g>
                                         </svg>
-                                        <input type="text" name="phone_country_code" value="+994" class="form-control" style="width: 110px; border-radius: 30px 0px 0px 30px;" />
+                                        <input type="text" id="phoneField" name="phoneField"  class="form-control" style="width: 110px; border-radius: 30px 0px 0px 30px;" />
                                         <input type="numeric" placeholder="Telefon Nömrəniz" required="required" class="form-control" style="border-radius: 0px 30px 30px 0px; padding-left: 20px;" />
                                     </div>
                                     
@@ -668,7 +681,7 @@
                                        <div class="detail-check-btn">
                                           <div class="form-check form-check-inline">
 
-                                                <input type="checkbox" value="" id="consultasiy" style="width:20px; height:20px;" checked="checked" class="form-check-input" />
+                                                <input type="checkbox" value="" id="requestCon" style="width:20px; height:20px;"  class="form-check-input" />
                                                <label for="flexCheckChecked" class="form-check-label">
                                                     <span style=" font-size: 15px;">
                                                            Konsultasiya üçün vaxt təyin edin.
@@ -678,75 +691,45 @@
                                        
                                          </div>
                                     </div>
-                                     <div class="detail-form-control">
+                                    <div class="displayClass" id="inputBox">
+                                        <div class="detail-form-control">
                                    
                                     
                                     
-                                    <div class="input-container">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20.75" height="20.527" viewBox="0 0 22.807 20.527" class="icon-input">
-                                            <g id="Message">
-                                                <path
-                                                    id="Message-2"
-                                                    data-name="Message"
-                                                    d="M17.036,20.526H5.77A5.771,5.771,0,0,1,0,14.768V5.759A5.771,5.771,0,0,1,5.77,0H17.036a5.806,5.806,0,0,1,4.083,1.689,5.715,5.715,0,0,1,1.688,4.069v9.009A5.771,5.771,0,0,1,17.036,20.526ZM4.6,5.982a.836.836,0,0,0-.609.256.871.871,0,0,0-.081,1.14l.15.148,5.188,4.049a3.568,3.568,0,0,0,2.224.775,3.626,3.626,0,0,0,2.233-.775L18.85,7.458l.091-.091a.883.883,0,0,0-.013-1.14.948.948,0,0,0-.6-.3h-.048a.866.866,0,0,0-.592.229l-5.142,4.105a1.785,1.785,0,0,1-1.136.411,1.816,1.816,0,0,1-1.144-.411L5.132,6.158A.887.887,0,0,0,4.6,5.982Z"
-                                                    transform="translate(0 0)"
-                                                ></path>
-                                            </g>
-                                        </svg>
-                                        <input type="datetime-local" placeholder="" required="required" class="form-control" />
+                                                <div class="input-container">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20.75" height="20.527" viewBox="0 0 22.807 20.527" class="icon-input">
+                                                        <g id="Message">
+                                                            <path
+                                                                id="Message-2"
+                                                                data-name="Message"
+                                                                d="M17.036,20.526H5.77A5.771,5.771,0,0,1,0,14.768V5.759A5.771,5.771,0,0,1,5.77,0H17.036a5.806,5.806,0,0,1,4.083,1.689,5.715,5.715,0,0,1,1.688,4.069v9.009A5.771,5.771,0,0,1,17.036,20.526ZM4.6,5.982a.836.836,0,0,0-.609.256.871.871,0,0,0-.081,1.14l.15.148,5.188,4.049a3.568,3.568,0,0,0,2.224.775,3.626,3.626,0,0,0,2.233-.775L18.85,7.458l.091-.091a.883.883,0,0,0-.013-1.14.948.948,0,0,0-.6-.3h-.048a.866.866,0,0,0-.592.229l-5.142,4.105a1.785,1.785,0,0,1-1.136.411,1.816,1.816,0,0,1-1.144-.411L5.132,6.158A.887.887,0,0,0,4.6,5.982Z"
+                                                                transform="translate(0 0)"
+                                                            ></path>
+                                                        </g>
+                                                    </svg>
+                                                    <input type="datetime-local" min="2022-06-07T09:00" max="2030-06-14T18:00" placeholder="" required="required" class="form-control" />
 
+                                                        </div>
+                                    
+                                   
                                             </div>
-                                    
-                                   
-                                </div>
-                                        <div class="detail-check-btn">
-                                            <input type="checkbox" value="" id="consultasiy"  checked="checked" class="form-check-input" />
-                                            <label for="flexCheckChecked" class="form-check-label">
-                                                <span >
-                                                    Online
-                                                </span>
-                                            </label>
-                                        </div>
+                                            <div class="detail-check-btn">
+                                                <input type="checkbox" value="" id="consultasiy"  checked="checked" class="form-check-input" />
+                                                <label for="flexCheckChecked" class="form-check-label">
+                                                    <span >
+                                                        Online
+                                                    </span>
+                                                </label>
+                                            </div>
+
+
+                                    </div>
+                                     
 
                                         <div class="detail-check-btn">
-                                    <div class="form-check">
-                                        <input type="checkbox" value="" id="flexCheckChecked" checked="checked" class="form-check-input" />
-                                        <label for="flexCheckChecked" class="form-check-label">
-                                            <span>
-                                                Endless Abroad indirimli kampanyalarından sms veya mail yolu ile bilgilendirilmek istiyorum. <a href="/kisisel-verilerin-islenmesi" target="_blank">KVKK Aydınlatma Metni</a> ni ve
-                                                <a href="/gizlilik-politikasi" target="_blank">Gizlilik Politikası</a> nı okudum, kabul ediyorum.
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <div
-                                            class="grecaptcha-badge"
-                                            data-style="bottomright"
-                                            style="
-                                                width: 256px;
-                                                height: 60px;
-                                                display: block;
-                                                transition: right 0.3s ease 0s;
-                                                position: fixed;
-                                                bottom: 14px;
-                                                right: -186px;
-                                                box-shadow: gray 0px 0px 5px;
-                                                border-radius: 2px;
-                                                overflow: hidden;
-                                            "
-                                        >
-                                           
-                                            <div class="grecaptcha-error"></div>
-                                            <textarea
-                                                id="g-recaptcha-response"
-                                                name="g-recaptcha-response"
-                                                class="g-recaptcha-response"
-                                                style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"
-                                            ></textarea>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn-green">FİYAT TALEP FORMU GÖNDER</button>
-                                </div>
+                                   
+                                             <button type="submit" itemid="requestSubmit" class="btn-green">Müraciət Et</button>
+                                         </div>
                             </div>
                         </div>
                     </div>
@@ -953,24 +936,35 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
       <script>
-          
+         
           ﻿$(document).ready(function () {
-          $("#logOut").click(function () {
-        $.ajax({
-            type: "POST",
-            url: '/Account/Logout',
-            async: false,
-            dataType: "json",
-            contentType: "application/json; charset=utf-8",
-            complete: function (response) {
-                
-                    location.href = `/Home/Index`;
-               
-               
-            },
+               $(document).on("change", "#requestCon", function () {
+                if ($(this).prop("checked") == true) {
+                    $("#inputBox").css("display", "block");
+                }
+                else {
+                    $("#inputBox").css("display", "none");
+                   
+                }
+              })
+           
 
-        });
-    });
+          $("#logOut").click(function () {
+                    $.ajax({
+                        type: "POST",
+                        url: '/Account/Logout',
+                        async: false,
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        complete: function (response) {
+                
+                                location.href = `/Home/Index`;
+               
+               
+                        },
+
+                    });
+                });
       });
       </script>
       <!-- Google Tag Manager (noscript) -->
