@@ -6,11 +6,12 @@
         var $email = $('form input[name="email');
         var $name = $('form input[name="name');
         var $phone = $('form input[name="phone');
-
+        var $phoneCode = $('form input[name="phoneCode');
+        var $messageType = $('form input[name="messageType')
         var $subject = $('form input[name="subject');
         var $message = $('form textarea[name="message');
         var re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-
+        var 
         if ($email.val() == '' || !re.test($email.val())) {
             $('#email').parent().append('<span class="error">Please provide valid Email.</span>');
             $('#email').addClass('inputError');

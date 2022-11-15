@@ -20,31 +20,23 @@
                         var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
                         var yyyy = date.getFullYear();
                         var time = yyyy + "/" + mm + "/" + dd;
-                        var description = value.description.slice(0, 20);
-
-                        $blog.append(
-                            `
-                            <ol class="carousel-indicators">
-                                                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                                            <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
-                                                            <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
-                                                            <li data-target="#carouselExampleIndicators" data-slide-to="3" class=""></li>
-                               </ol>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
+                        var description = value.description.slice(0, 10);
+                        if (i <= 3) {
+                            $blogCarousel.append(
+                                `  <div class="carousel-item active">
                                     <div class="carousel-item-detail">
                                         <div class="carousel-item-detail-text">
-                                            <a href="blog/erasmus-hibesi-ne-kadar-gecinebilir-miyim.html"> <h1>Erasmus Hibesi Ne Kadar? Geçinebilir Miyim?</h1> </a>
+                                            <a> <h1>${value[0].Name}</h1> </a>
                                             <div class="d-flex"><img class="detail-icon" src="~/css/images/icons/icon-calender-grey.svg" alt="" /> <span class="calendar">08 Ekim 2022</span></div>
-                                            <p>Erasmus Öğrenci Değişim Hareketliliği ile yurtdışına çıkacak öğrencilerin aklı alacağı hibenin yetip yetmeyeceği konusunda karışık. Hangi ülke ne kadar hibe veriyor?</p>
-                                            <a href="blog/erasmus-hibesi-ne-kadar-gecinebilir-miyim.html">TÜMÜNÜ GÖR</a>
+                                            <p>${description}</p>
+                                            <a>TÜMÜNÜ GÖR</a>
                                         </div>
                                         <div class="carousel-item-detail-img">
-                                            <a href="blog/erasmus-hibesi-ne-kadar-gecinebilir-miyim.html">
+                                            <a >
                                                 <img
                                                     class="d-block w-100"
-                                                    src="../d92mazmete5uc.cloudfront.net/public/uploads/post/2124/o_1disrc0k0k7q1eqa1tpm10amft7-thumb_blog_list_small.jpg"
-                                                    alt="Erasmus Hibesi Ne Kadar? Geçinebilir Miyim?"
+                                                    src="${value[0].imagefiles.path}"
+                                                    alt="${value[0].Name}"
                                                 />
                                             </a>
                                         </div>
@@ -53,16 +45,16 @@
                                 <div class="carousel-item">
                                     <div class="carousel-item-detail">
                                         <div class="carousel-item-detail-text">
-                                            <a href="blog/stem-nedir-stem-egitiminin-onemi.html"> <h1>STEM Nedir? STEM Eğitiminin Önemi</h1> </a>
+                                            <a> <h1>${value[1].Name}</h1> </a>
                                             <div class="d-flex">
-                                                <span class="conditions">Yurtdışı Rehberi</span> <img class="detail-icon" src="~/css/images/icons/icon-calender-grey.svg" alt="" /> <span class="calendar">08 Ekim 2022</span>
+                                                 <img class="detail-icon" src="~/css/images/icons/icon-calender-grey.svg" alt="" /> <span class="calendar">${time}</span>
                                             </div>
-                                            <p>STEM eğitimi, 21. yüzyılın gündelik ve bilimsel ihtiyaçlarına multidispliner yaklaşıp bilimsel-teknolojik-mühendislik-matematik disiplinlerini bir araya getirmektedir.</p>
-                                            <a href="blog/stem-nedir-stem-egitiminin-onemi.html">TÜMÜNÜ GÖR</a>
+                                            <p>${description}</p>
+                                            <a>TÜMÜNÜ GÖR</a>
                                         </div>
                                         <div class="carousel-item-detail-img">
-                                            <a href="blog/stem-nedir-stem-egitiminin-onemi.html">
-                                                <img class="d-block w-100" src="../d92mazmete5uc.cloudfront.net/public/uploads/post/3701/stem-thumb_blog_list_small.jpg" alt="STEM Nedir? STEM Eğitiminin Önemi" />
+                                            <a>
+                                                <img class="d-block w-100" src="${value[1].filePath}" alt="${value[1].Name}" />
                                             </a>
                                         </div>
                                     </div>
@@ -70,14 +62,14 @@
                                 <div class="carousel-item">
                                     <div class="carousel-item-detail">
                                         <div class="carousel-item-detail-text">
-                                            <a href="blog/danimarka-is-ilanlari.html"> <h1>Danimarka İş İlanları ve İş Başvurusu 2022</h1> </a>
-                                            <div class="d-flex"><img class="detail-icon" src="~/css/images/icons/icon-calender-grey.svg" alt="" /> <span class="calendar">13 Eylül 2022</span></div>
-                                            <p>Danimarka İş İlanları ve İş Başvurusu Süreci hakkında tüm detaylar..</p>
-                                            <a href="blog/danimarka-is-ilanlari.html">TÜMÜNÜ GÖR</a>
+                                            <a href="blog/danimarka-is-ilanlari.html"> <h1>${value[2].name}</h1> </a>
+                                            <div class="d-flex"><img class="detail-icon" src="~/css/images/icons/icon-calender-grey.svg" alt="" /> <span class="calendar">${time}</span></div>
+                                            <p>${description}</p>
+                                            <a >TÜMÜNÜ GÖR</a>
                                         </div>
                                         <div class="carousel-item-detail-img">
-                                            <a href="blog/danimarka-is-ilanlari.html">
-                                                <img class="d-block w-100" src="../d92mazmete5uc.cloudfront.net/public/uploads/post/31986/danimarka-is-bulmak-thumb_blog_list_small.jpg" alt="Danimarka İş İlanları ve İş Başvurusu 2022" />
+                                            <a >
+                                                <img class="d-block w-100" src="${value[2]}" alt="Danimarka İş İlanları ve İş Başvurusu 2022" />
                                             </a>
                                         </div>
                                     </div>
@@ -85,24 +77,39 @@
                                 <div class="carousel-item">
                                     <div class="carousel-item-detail">
                                         <div class="carousel-item-detail-text">
-                                            <a href="blog/kanada-is-ilanlari.html"> <h1>Kanada İş İlanları ve İş Başvurusu 2022</h1> </a>
-                                            <div class="d-flex"><img class="detail-icon" src="~/css/images/icons/icon-calender-grey.svg" alt="" /> <span class="calendar">13 Eylül 2022</span></div>
-                                            <p>Kanada İş İlanları ve Kanada İş Başvurusu 2022 detaylar Endlessabroad.com.tr&#039;de.</p>
-                                            <a href="blog/kanada-is-ilanlari.html">TÜMÜNÜ GÖR</a>
+                                            <a > <h1>${value[3].name}</h1> </a>
+                                            <div class="d-flex"><img class="detail-icon" src="~/css/images/icons/icon-calender-grey.svg" alt="" /> <span class="calendar">${time}</span></div>
+                                            <p>${description}</p>
+                                            <a >TÜMÜNÜ GÖR</a>
                                         </div>
                                         <div class="carousel-item-detail-img">
                                             <a href="blog/kanada-is-ilanlari.html">
-                                                <img class="d-block w-100" src="../d92mazmete5uc.cloudfront.net/public/uploads/post/31987/kanada-is-ilanlari-thumb_blog_list_small.jpg" alt="Kanada İş İlanları ve İş Başvurusu 2022" />
+                                                <img class="d-block w-100" src="${value[3]}" alt="${value[0].name}" />
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                         
+                           
                               
                                `
 
+                            );
+                        }
+                        $blog.append(
+                            ` <div  class="blog-list-detail">
+                          <a value="${value.id}" id="learnMore"  >
+                             <div  class="img-div"><img src="${value}" title="${value}" alt="${value}" class="lazy w-100"></div>
+                          </a>
+                          <div  class="title-programs">
+                             <h3 ><a  href="${value}">${value} </a></h3>
+                             <div  class="location-programs d-flex">
+                                
+                                <div  class="d-flex"><img  src="assets/css/images/icons/icon-clock-grey.svg" alt=""> <span  class="time-text"> ${value}</span></div>
+                             </div>
+                          </div>
+                       </div>`
                         )
-
                     }
                 )
 

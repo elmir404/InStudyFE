@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
 
-    var $blog = $('#blog');
-    function getBlogs() {
+    var $country = $('#country');
+    function getCountry() {
         $.ajax({
             type: 'GET',
             headers: {
@@ -20,7 +20,7 @@
                         var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
                         var yyyy = date.getFullYear();
                         var time = yyyy + "/" + mm + "/" + dd;
-                        var description = value.description.slice(0, 20);
+                        var description = value.description.slice(0, 5);
                         $country.append(
                                                 `
                                                    <div class="col col-4">
@@ -28,15 +28,15 @@
                                         <div class="flip-card-inner" tab-index="0">
                                             <div class="flip-card-front">
                                                  <div class="card-body">
-                                                    <h2 class="card-title text-center font-weight-bold text-dark">United Kingdom</h2>
-                                                    <p class="card-text text-dark text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                    <h2 class="card-title text-center font-weight-bold text-dark">${value.}</h2>
+                                                    <p class="card-text text-dark text-center">${value}</p>
                                                 </div>
                                             </div>
-                                            <div class="flip-card-back" style="background-image:url('https://s30876.pcdn.co/wp-content/uploads/london-e1634207674493-1170x630.jpg.optimal.jpg');">
+                                            <div class="flip-card-back" style="background-image:url('${value}');">
                                                 <div class="card-body">
-                                                    <h2 class="card-title text-left font-weight-bold">United Kingdom</h2>
-                                                    <p class="card-text text-left">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                    <a href="/Country/Detail" value="id" id="learnMore" class="btn btn-danger btn-lg">Learn More +</a>
+                                                    <h2 class="card-title text-left font-weight-bold">${value.name}</h2>
+                                                    <p class="card-text text-left">${description}</p>
+                                                    <a value="id" id="learnMore" class="btn btn-danger btn-lg">Learn More +</a>
                                                 </div>
        
                                             </div>
