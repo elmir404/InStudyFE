@@ -25,7 +25,7 @@ builder.Services.AddAuthentication(options =>
 });
 builder.Services.AddHttpClient("InStudy", c =>
 {
-    c.BaseAddress = new Uri("https://localhost:7074/,https://localhost:44317/");
+    c.BaseAddress = new Uri("https://localhost:7074/");
 });
 var app = builder.Build();
 

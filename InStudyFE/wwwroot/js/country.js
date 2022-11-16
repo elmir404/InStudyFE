@@ -7,9 +7,9 @@
             headers: {
                 'Content-Type': 'application/json'
             },
-            url: `https://localhost:7223/api/Blogs/GetBlogs`,
+            url: `https://localhost:7074/api/Country/GetActiveCountries`,
 
-            success: function (data) {
+              success: function (data) {
                 $country.empty();
                 $.each(
                     data.data, function (i, value) {
@@ -61,5 +61,5 @@
 
 
     });
-    getBlogs();
+    getCountry();
 });
