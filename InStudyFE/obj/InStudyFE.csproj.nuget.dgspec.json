@@ -1,21 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\InStudyFE.csproj": {}
+    "C:\\Users\\TooGoo\\Desktop\\InStudyFE\\InStudyFE\\InStudyFE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\InStudyFE.csproj": {
+    "C:\\Users\\TooGoo\\Desktop\\InStudyFE\\InStudyFE\\InStudyFE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\InStudyFE.csproj",
+        "projectUniqueName": "C:\\Users\\TooGoo\\Desktop\\InStudyFE\\InStudyFE\\InStudyFE.csproj",
         "projectName": "InStudyFE",
-        "projectPath": "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\InStudyFE.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\obj\\",
+        "projectPath": "C:\\Users\\TooGoo\\Desktop\\InStudyFE\\InStudyFE\\InStudyFE.csproj",
+        "packagesPath": "C:\\Users\\TooGoo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TooGoo\\Desktop\\InStudyFE\\InStudyFE\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\TooGoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -55,8 +61,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -68,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
