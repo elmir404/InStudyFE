@@ -1,14 +1,19 @@
 ﻿$(document).ready(function () {
-	const countryId = localStorage.getItem('countryId');
-	
-    var $countryList = $('#countryList')
-	var $countryDetail = $('#countryDetail')
+    var pathname = window.location.pathname;
+    console.log(pathname);
+    const linkValues = pathname.split("/");
+    const $lang = localStorage.getItem('lang');
+
+    var $countryImage = $('#HeroImage');
+    var $countryHeader = $('#LinkTrail');
+    var $countryImg = $('#CountryHeader');
+    var $countryDetail = $('#StudyIn');
     $.ajax({
         type: 'GET',
         headers: {
             'Content-Type': 'application/json'
         },                                                            
-        url: `https://localhost:7074/api/Country/GetCountryWithId?id=${countryId}`,
+        url: `https://api.instudy.net/api/Country/GetCountryWithId?id=${linkValues[3]}`,
         success: function (data) {
             const date = new Date(data.data.regDate)
             console.log(data);
@@ -16,41 +21,42 @@
             var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
             var yyyy = date.getFullYear();                                                                                             
             var time = yyyy + "/" + mm + "/" + dd;
-            $countryDetail.empty();
-            $countryDetail.append(
-                `  <img class="card-img-top" src="https://s30876.pcdn.co/wp-content/uploads/london-e1634207674493-1170x630.jpg.optimal.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">${data.data.name}</h5>
-                    <p class="card-text">${data.data.description}</p>
+            if ($lang == 'AZ') {
+                var name1 = data.data.azName
+                var description = data.data?.azDescription;
 
-                        <div class="elementor-element elementor-element-68e9c220 elementor-widget elementor-widget-ct_showcase" data-id="68e9c220" data-element_type="widget" data-widget_type="ct_showcase.default">
-                            <div class="elementor-widget-container">
-                                <div class="ct-grid ct-showcase1">
-                                    <div class="ct-grid-inner ct-grid-masonry row animate-time" data-gutter="8" >
-                                        <div class="grid-sizer col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12"></div>
-                                        <div class="grid-item col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 " >
-                                            <div class="item--inner ">
-                                                <div class="ct-showcase-image ">
-                                                    <img width="272" height="249" src="https://thelimitlessgroup.az/wp-content/uploads/2021/09/MARSHALL-UNIVERSITY.png" class="no-lazyload attachment-full lazyloaded" alt="" data-ll-status="loaded"><noscript><img width="272" height="249" src="https://thelimitlessgroup.az/wp-content/uploads/2021/09/MARSHALL-UNIVERSITY.png" class="no-lazyload attachment-full" alt="" /></noscript>                                <div class="ct-showcase-overlay"></div>
-                                                    <div class="ct-showcase-button">
-                                                        <a href="https://thelimitlessgroup.az/marshall-university/" class="ct-showcase-link active">Read</a>
-                                                    </div>
-                                                </div>
+            }
+            else if ($lang == 'EN') {
+                var name1 = data.data.enName
+                var description = data.data?.enDescription;
 
-                                                <div class="ct-showcase-title">
-                                                    Marshall University
-                                                </div>
-                                            </div>
-                                          
-                                        </div>
-                                        
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                  
-                        `
-            )
+            } else {
+                var name1 = data.data.ruName;
+                var description = data.data?.ruDescription;
+
+            }
+            var image = `data:image/png;base64,${data.data?.countryFiles[0]?.bytes}`
+            $countryImage.append(
+                `
+                <span class="HeroImage js-heroImage" style="background-image:url('${image}');"></span>
+                <span class="HeroImage HeroImagePlaceholder js-heroImageLowResPlaceholder"></span> <span class="HeroOverlay" style="background-image:url('${image}');" ></span>
+                
+                `
+            );
+         
+            $countryHeader.append(` <ul class="LinkTrail">
+                                            <li> <a href="/Home/Index"
+                                                    title="Home">Home></a> </li>
+                                            <li> <a href="/Country/Index" title="Countries">Countries></a> </li>
+                                            <li>${name1} </li>
+                                        </ul>
+`);
+            $countryImg.empty();
+            $countryImg.append(`
+ <h1>${name1}</h1> 
+                                    
+`)
+            $countryDetail.append(` <div><p>${description}</p></div>`)
 
 
 

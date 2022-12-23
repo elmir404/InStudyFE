@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InStudyFE.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class CountryController : Controller
     {
         public IActionResult Index()

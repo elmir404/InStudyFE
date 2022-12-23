@@ -1,61 +1,1664 @@
-﻿  @section Css{
-      <style>
-                  .sidebar-item{
-                      outline:gray;
-                  }
-  .sidebar-item:hover {
-    background-color:red !important;
+﻿ @section Css{
+    <link rel="stylesheet" href="~/css/scss/style3.css" />
+    <style>
+        @@media(min-width: 1025px){
+    #HeroContainer .HeroContent {
+        background: #247ba0cc;
+    }
 }
+@@media(min-width: 769px){
+.mdc-layout-grid {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 24px;
+    padding: var(--mdc-layout-grid-margin-desktop,24px);
+}}
+#Recommendations, #recommendationsWrapper {
+    padding: 0;
+}
+.ScrollTemplate[data-v-71d9db58] {
+    display: flex;
+    flex-direction: row;
+}
+        .StudyCardGrid[data-v-60a22860] {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -1rem;
+            padding: 2rem 1rem 1rem 0;
+            overflow: hidden;
+            background: #edf3f6;
+        }
+        @@media (min-width: 1025px){
+.StudyCardGrid[data-v-60a22860] {
+    padding: 0;
+    margin: 0 0 0 -1rem;
+    overflow: visible;
+    background: #fff;
+}}
+.StudyCardGrid[data-v-60a22860] {
+    flex-direction: row;
+}
+.ContentCard {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px #3f5c6e26;
+    padding: 1rem;
+}
+.ContentCard[data-v-6e0e8e37] {
+    position: relative;
+    z-index: 0;
+    top: 0;
+    display: flex;
+    flex: 0 0 288px;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    margin: 0 0 1rem 1rem;
+    transition: box-shadow .2s,top .2s;
+    box-shadow: 0 2px 2px rgb(63 92 110 / 15%);
+    border-radius: 0.5rem;
+    background: #fff;
+    cursor: pointer;
+}
+@@media (min-width: 1025px){
+.ContentCard[data-v-6e0e8e37] {
+    flex: 0 0 calc(33.3% - 1rem);
+}}
+        .StudyCoverWrapper[data-v-78fa3586] {
+            min-height: 9.5rem;
+            max-height: 9.5rem;
+            margin: -1.5rem -1.5rem 1.5rem;
+            overflow: hidden;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+                .StudyCoverWrapper img[data-v-78fa3586] {
+            width: 100%!important;
+            object-fit: cover;
+        }
+        .ContentCard .BestfitWishlist[data-v-6e0e8e37] {
+    display: flex;
+    justify-content: flex-end;
+}
+.ButtonIconWidget[data-v-371986c4] {
+    display: inline-flex;
+    align-items: center;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 400;
+    color: #39a9db;
+    background-color: #f5f9fa;
+    border-radius: 15px;
+}
+        .ButtonIconWidget.BlueBackground[data-v-371986c4] {
+            background: #edf7fb;
+        }
+        .ButtonIconWidget .FitText[data-v-371986c4] {
+    padding: 0 0.5rem;
+}
+@@media (min-width: 1025px){
+.ButtonIconWidget .FitText[data-v-371986c4] {
+    padding: 0 0.5rem;
+}}
+.ButtonIconWidget .BestFitLogo[data-v-371986c4] {
+    position: relative;
+    z-index: 25;
+    height: 1rem;
+    width: 1rem;
+}
+@@media (min-width: 1025px){
+.ButtonIconWidget .BestFitLogo[data-v-371986c4] {
+    height: 1.5rem;
+    width: 1.5rem;
+}}
+.ButtonIconWidget .BestFitIcon[data-v-371986c4] {
+    font-size: 1rem;
+    background: #fff;
+    color: #3f5c6e;
+    border-radius: 50%;
+    overflow: hidden;
+}
+@@media (min-width: 1025px){
+.ButtonIconWidget .BestFitIcon[data-v-371986c4] {
+    font-size: 24px;
+}}
+.ButtonIconWidget .PlusIcon[data-v-371986c4] {
+    position: absolute;
+    right: -25%;
+    bottom: 0;
+    font-size: .5rem;
+    color: #39a9db;
+    background: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+@@media (min-width: 1025px){
+.ButtonIconWidget .PlusIcon[data-v-371986c4] {
+    font-size: .8rem;
+}}
+.WishlistButtonContainer[data-v-0d5610aa] {
+    margin: auto;
+    padding: 0 0 0 0.5rem;
+    pointer-events: auto;
+    text-align: right;
+}
+.ContentCard .WishlistButtonContainer[data-v-6e0e8e37] {
+    margin: 0 0 0 1rem;
+}
+        .ContentCard .OrganisationTitle[data-v-6e0e8e37] {
+            min-height: 3rem;
+            display: flex;
+            align-items: baseline;
+            overflow: hidden;
+            box-sizing: border-box;
+            margin-bottom: 0.5rem;
+            pointer-events: none;
+        }
+                .ContentCard .StudyTitle[data-v-6e0e8e37] {
+            margin: 0;
+            flex-grow: 1;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-weight: 700;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+        }
+                .ContentCard .OrganisationInformation[data-v-6e0e8e37] {
+            display: flex;
+            align-items: flex-end;
+            pointer-events: none;
+        }
+                .ContentCard .OrganisationInformation .SquareOrganisationLogo[data-v-6e0e8e37] {
+            width: 3rem;
+            height: 3rem;
+            min-width: 3rem;
+            margin-right: 0.5rem;
+        }
+        .ContentCard .OrganisationInformation .Name[data-v-6e0e8e37] {
+    word-break: break-word;
+    max-height: 2rem;
+    color: #05293c;
+}
+.ContentCard .OrganisationInformation .Location[data-v-6e0e8e37], .ContentCard .OrganisationInformation .Name[data-v-6e0e8e37] {
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    text-transform: none;
+    overflow: hidden;
+}
+.ContentCard .OrganisationInformation .Location[data-v-6e0e8e37], .ContentCard .OrganisationInformation .Name[data-v-6e0e8e37] {
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    text-transform: none;
+    overflow: hidden;
+}
+.ContentCard .OrganisationInformation .Location[data-v-6e0e8e37] {
+    letter-spacing: normal;
+    text-overflow: ellipsis;
+    color: #3f5c6e;
+}
+
+
     </style>
-  }
-<section class="container bg-light">
-    <div class="row">
-        <div class="col-lg-3">
-            <div class="card rounded-0" style="padding: 35px 34px 65px 34px;">
-                <div id="countryList" class="list-group">
-                   
-                    <a id="learnMore" value="" class="list-group-item sidebar-item font-weight-bold bg-light mt-3 list-group-item-action">United Kingdom</a>
-
-                </div>
-           </div>
-        </div>
-        <div class="col-lg-8">
-            <div id="countryDetail" class="card rounded-0 ">
-                <img class="card-img-top" src="https://s30876.pcdn.co/wp-content/uploads/london-e1634207674493-1170x630.jpg.optimal.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-
-                        <div class="elementor-element elementor-element-68e9c220 elementor-widget elementor-widget-ct_showcase" data-id="68e9c220" data-element_type="widget" data-widget_type="ct_showcase.default">
-                            <div class="elementor-widget-container">
-                                <div class="ct-grid ct-showcase1">
-                                    <div class="ct-grid-inner ct-grid-masonry row animate-time" data-gutter="8" >
-                                        <div class="grid-sizer col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12"></div>
-                                        <div class="grid-item col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 " >
-                                            <div class="item--inner ">
-                                                <div class="ct-showcase-image ">
-                                                    <img width="272" height="249" src="https://thelimitlessgroup.az/wp-content/uploads/2021/09/MARSHALL-UNIVERSITY.png" class="no-lazyload attachment-full lazyloaded" alt="" data-ll-status="loaded"><noscript><img width="272" height="249" src="https://thelimitlessgroup.az/wp-content/uploads/2021/09/MARSHALL-UNIVERSITY.png" class="no-lazyload attachment-full" alt="" /></noscript>                                <div class="ct-showcase-overlay"></div>
-                                                    <div class="ct-showcase-button">
-                                                        <a href="https://thelimitlessgroup.az/marshall-university/" class="ct-showcase-link active">Read</a>
-                                                    </div>
-                                                </div>
-
-                                                <div class="ct-showcase-title">
-                                                    Marshall University
-                                                </div>
-                                            </div>
-                                          
-                                        </div>
-                                        
+ }
+<section id="HeroContainer">
+        <div class="HeroContainerHelper" >
+            <div id="HeroImage">
+              
+            </div>
+            
+                <div class="HeroContentWrapper">
+                    <div data-module=""
+                        class="Module HeroContentModule StudyPortals_Shared_Modules_Country_HeaderBase_HeaderBase StudyPortals_DistanceLearning_Modules_Country_Header_Header">
+                        <section class="HeroBackground"></section>
+                        <section class="HeroContent">
+                            <div id="countryImage" class="HeroImageSources js-heroImageSources">
+                               
+                            </div>
+                            <div class="HeroTextContent">
+                            <div class="HeroTextContent">
+                                <section id="CountryHeader" data-level="master"> 
+                                   
+                                   </section> </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div id="BreadcrumbRow">
+                        <div class="col1 no-vertical-padding">
+                            <div class="no-vertical-margin"> </div>
+                        </div>
+                        <div class="col1 no-vertical-padding wrapped">
+                            <div class="BreadcrumbContainer colblock no-vertical-margin">
+                                <div data-module="" class="Module StudyPortals_Shared_Modules_LinkTrailRR_LinkTrailRR">
+                                    <nav id="LinkTrail">
+                                       
+                                    </nav>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
+        </section>
+        <div id="CountryHeaderContainer" class="WhiteBackgroundPane">
+            <div class="col1 wrapped">
+                <div class="colblock">
+                    @*<div data-module="" class="Module StudyPortals_Shared_Modules_Country_Facts_Facts">
+                        <section id="CountryFacts">
+                            <ul class="CountryFacts">
+                                <li class="QuickFact"> <i class="CountryQuickFactsLogos lnr-calendar-full"></i>
+                                    <div class="QFDetails"> <span class="QuickFactsData">Sep-Jul</span> <span
+                                            class="QuickFactsLabel">Academic Year</span> </div>
+                                </li>
+                                <li class="OpenTab QuickFact js-openTab" title="Listed Institutes"> <i
+                                        class="CountryQuickFactsLogos lnr-university"></i>
+                                    <div class="QFDetails"> <span id="InstitutesQuickFact"> <span
+                                                class="QuickFactsData">30</span> <span class="QuickFactsLabel">Listed
+                                                Institutes</span> </span> </div>
+                                </li>
+                                <li data-clickable="clickable" class="QuickFact"> <i
+                                        class="CountryQuickFactsLogos lnr-trophy2"></i>
+                                    <div class="QFDetails"> <a
+                                            href="https://www.mastersportal.com/ranking-country/1/netherlands.html"
+                                            title="Ranked Universities"> <span class="QuickFactsData">15</span> <span
+                                                class="QuickFactsLabel">Ranked Universities</span> </a> </div>
+                                </li>
+                                <li class="QuickFact HideQFMobile"> <i class="CountryQuickFactsLogos lnr-earth"></i>
+                                    <div class="QFDetails"> <span class="QuickFactsData">82000</span> <span
+                                            class="QuickFactsLabel">Int. Students</span> </div>
+                                </li>
+                                <li class="QuickFact HideQFMobile"> <i
+                                        class="CountryQuickFactsLogos lnr-graduation-hat"></i>
+                                    <div class="QFDetails"> <span class="QuickFactsData">656000</span> <span
+                                            class="QuickFactsLabel">Students</span> </div>
+                                </li>
+                                <li class="QuickFact HideQFMobile"> <i class="CountryQuickFactsLogos lnr-users2"></i>
+                                    <div class="QFDetails"> <span class="QuickFactsData">17032845</span> <span
+                                            class="QuickFactsLabel">Population</span> </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>*@
+                    <div data-module="" class="Module StudyPortals_Shared_Modules_Country_Conversion_Conversion"> </div>
+                </div>
+                <div class="colblock">
+                <div class="HeaderSearch" >
+                    <div data-module="" class="Module StudyPortals_Shared_Modules_HeaderSearch_HeaderSearch">
+                        <div id="HeaderSearch" style="max-width: 39rem;">
+                            <form method="get" action="https://www.mastersportal.com/search/master" class="Form" id="SearchForm">
+                                <div class="InputWrapper">
+                                    <input style="height:2.5rem;" id="What" type="text" value="" name="discipline" class="Keywords AutoCompleteInput" placeholder="Program" autocomplete="off" data-type="what" data-order="1">
+                                    <div class="AutoCompleteContainer Hidden" style="width: 197px;">
+                                        <ul class="AutoComplete"></ul>
+                                    </div>
+                                </div>
+                                <div class="InputWrapper">
+                                    <input id="Where" style="height:2.5rem;" type="text" value="" name="location" class="Keywords AutoCompleteInput" placeholder="Country" autocomplete="off" data-type="where" data-order="2">
+                                    <div class="AutoCompleteContainer Hidden" style="width: 197px;">
+                                        <ul class="AutoComplete"></ul>
+                                    </div>
+                                </div>
+                                <div class="InputWrapper">
+                                    <input id="Where" style="height:2.5rem;" type="text" value="" name="location" class="Keywords AutoCompleteInput" placeholder="Direction" autocomplete="off" data-type="where" data-order="2">
+                                    <div class="AutoCompleteContainer Hidden" style="width: 197px;">
+                                        <ul class="AutoComplete"></ul>
+                                    </div>
+                                </div>
+                                <button type="submit" style="height:2.5rem;" class="SearchButton"> <i class="lnr-magnifier SearchButtonIcon"></i> </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+               @* <div class="colblock">
+                    <div data-module="" class="Module StudyPortals_Shared_Modules_Country_CountryTest_CountryTest">
+                        <aside id="CountryTest" class="HideOnLogin"> <img class="Logo"
+                                src="https://monet-prtl-co.imgix.net/Shared/studyportals_icon_white.svg"
+                                alt="Studyportals">
+                            <p> Are you sure you can handle the weather in Netherlands? </p> <a
+                                href="../../country-test/country-test.html"
+                                data-ga-tracking='{"category":"Profile","action":"Register Incentive Click","label":"Country Test Click"}'
+                                title="Take a Free Country Test!" target="_blank" class="TakeTest"> Take the country
+                                test! </a>
+                        </aside>
+                    </div>
+                </div>*@
+            </div>
         </div>
+        <section class="col1 WrappedContent no-vertical-padding">
+            <div class="colblock">
+                <div data-module="" class="Module StudyPortals_Shared_Modules_Country_ContentSwitcher_ContentSwitcher">
+                    <div id="ContentSwitcherWrapper" class="ContentSwitcherWrapper">
+                        <div id="ContentSwitcher" class="ContentSwitcher"> 
+                                <button type="button"
+                            class="ContentButton js-contentButtons" onclick="swith('StudyIn')" data-id="study">
+                            Study
+                        </button>
+                                <button type="button"
+                            class="ContentButton js-contentButtons" onclick="swith('Living')" data-id="living">
+                            Living
+                        </button>
+
+                                <button
+                                type="button" class="ContentButton js-contentButtons" onclick="swith('About')" data-id="about"> About
+                                 </button>
+
+                        <button type="button" class="ContentButton js-contentButtons" onclick="swith('Universities')" data-id="institutes">
+                                Universities </button>
+
+                        <button type="button" onclick="swith('Visa')" class="ContentButton js-contentButtons"
+                                data-id="visa"> Student visa </button>
+
+                                <button type="button"
+                            class="ContentButton js-contentButtons" onclick="swith('Permit')" data-id="work_permit">
+                            Work permit
+                        </button>
+
+                        <button type="button" onclick="swith('Apply')" class="ContentButton js-contentButtons" data-id="how_to_apply">
+                                Apply Form </button> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="SwitchableContent" class="col1 WrappedContent no-vertical-padding">
+            <div id="menuChildren" class="colblock no-vertical-margin">
+            <div style="" id="StudyIn" data-module="Country:study_in" class="Module StudyPortals_Shared_Modules_Country_StudyIn_StudyIn">
+                    
+                </div>
+                 <div style="display:none;" id="Living" data-module="Country:living" class="Module StudyPortals_Shared_Modules_Country_Living_Living">
+                    <h2>Living in Netherlands</h2>
+                    <p>Let's take a closer look at the average tuition and living expenses in the Netherlands:
+                    <h3>Tuition fees in in the Netherlands</h3>
+                    <p>As part of the EU, <a
+                            href="https://www.mastersportal.com/articles/553/costs-of-studying-abroad-in-the-netherlands-tuition-housing-and-food.html"
+                            title="tuition fees in the Netherlands" target="_blank">the Netherlands practices different
+                            tuition fees</a> for EU/EEA students and non-EU/EEA students. Tuition fees for EU students
+                        are between 700 and 2,100 EUR/year, while for non-EU students they start at 6,000 and can reach
+                        20,000 EUR/year. Private universities are even more expensive.</p>
+                    <p>Still, you should be mindful that the cost of studies is influenced by the type of degree and by
+                        the subject area. For example, Master&rsquo;s programmes are typically more expensive than
+                        Bachelor&rsquo;s programmes, and can reach even 30,000 EUR/year.</p>
+                    <h3>Accommodation, housing, food and other expenses</h3>
+                    <p>The Netherlands is not the cheapest country in the EU, but the living costs here are not that
+                        high either. On average, you need a budget of 800&ndash;1,200 EUR/month. Here are some figures
+                        that will give you an overall idea about what you can expect in terms of Dutch living costs:</p>
+                    <ul>
+                        <li>Meal at an affordable restaurant: 15 EUR</li>
+                        <li>Beer: 4 EUR</li>
+                        <li>Monthly shopping cart (food and groceries): 150&ndash;180 EUR</li>
+                        <li>Monthly transportation pass: 85 EUR</li>
+                        <li>Monthly rent: 300&ndash;1,000 EUR (depending on the type of accommodation)</li>
+                        <li>Utilities: 100&ndash;230 EUR/month</li>
+                    </ul>
+                    </p>
+                </div>
+                <div data-module="Country:about" id="About" style="display:none;" class="Module StudyPortals_Shared_Modules_Country_About_About">
+                    <h2>About Netherlands</h2>
+                    <p><strong>Interesting facts about the Netherlands </strong></p>
+                    <p>Everybody knows that the Netherlands is the country of tulips and windmills. But did you know
+                        that Netherlands is not only big on tulips, but on all flower bulbs? About 80% of the
+                        world&rsquo;s flower bulbs come from the Netherlands. </p>
+                    <p>On a more serious note, Netherlands has a very rich cultural history, as it was the home of
+                        painters like Hieronymus Bosch, or Jan Steen, but also of the famous sixteen century scholar
+                        Erasmus of Rotterdam. </p>
+                    <p>For those of you who still call the Netherlands Holland, you&rsquo;re in for a surprise: Holland
+                        is actually a region of the Netherlands. This means that not all Dutch people come from Holland,
+                        but all Hollanders come from the Netherlands. </p>
+                    <p>The Netherlands is also a monarchy since&hellip; forever. Interestingly enough, today&rsquo;s
+                        ruling monarch, King Willem-Alexander, is the first male monarch the country has had in 123
+                        years. </p>
+                    <p>Some other interesting facts that might also influence your stay in the Netherlands that you
+                        should know about are:</p>
+                    <ul>
+                        <li>The Netherlands has the highest English-proficiency in the world, with about 94% of the
+                            Dutch people being fluent in English;</li>
+                        <li>The people to surface ratio here is the highest in Europe. To put it in figures, the density
+                            is about 500 people/square kilometre;</li>
+                        <li>There are more bikes than Dutch people in the Netherlands, so mind the bike traffic!</li>
+                        <li>Another eco-friendly aspect about the Netherlands is that the Dutch government wants to ban
+                            the sales of gas and diesel-powered cars by 2025;</li>
+                        <li>About 22% of the people in Netherlands are not Dutch, but foreign residents, so you&rsquo;re
+                            up for a very multicultural society;</li>
+                        <li>The Dutch are first in Europe when it comes to the most nutritious food offer, so the
+                            calories won&rsquo;t be an issue to worry about;</li>
+                        <li>Amsterdam has over 100 bridges, so you might need a map just to learn how to get around from
+                            bridge to bridge (to another bridge).&nbsp;</li>
+                    </ul>
+                </div>
+                 <div style="display:none;" id="Universities" data-module="Country:institutes"
+                    class="Module StudyPortals_Shared_Modules_Country_Institutes_Institutes">
+                    <div id="CountryStudies">
+                        <h2>Universities, colleges and schools in Netherlands</h2>
+                        <div class="City" data-city-name="'s-Hertogenbosch">
+                            <h3 class="Actuator"> 's-Hertogenbosch <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/223/has-green-academy.html"
+                                        title="HAS green academy"> <span>HAS green academy</span> </a> (2 Distance
+                                    Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Amsterdam">
+                            <h3 class="Actuator"> Amsterdam <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/21149/winc-academy.html"
+                                        title="Winc Academy"> <span>Winc Academy</span> </a> (7 Distance Learning
+                                    courses) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/39/university-of-amsterdam.html"
+                                        title="University of Amsterdam"> <span>University of Amsterdam</span> </a> (21
+                                    Distance Learning courses) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/19031/european-leadership-university.html"
+                                        title="European Leadership University"> <span>European Leadership
+                                            University</span> </a> (1 Distance Learning course) </li>
+                                <li> <a href="../../universities/81/vrije-universiteit-amsterdam.html"
+                                        title="Vrije Universiteit Amsterdam"> <span>Vrije Universiteit Amsterdam</span>
+                                    </a> (28 Distance Learning courses) </li>
+                                <li> <a href="../../universities/1184/royal-tropical-institute.html"
+                                        title="Royal Tropical Institute (KIT)"> <span>Royal Tropical Institute
+                                            (KIT)</span> </a> (3 Distance Learning courses) </li>
+                                <li> <a href="../../universities/9393/utrecht-summer-school.html"
+                                        title="Utrecht Summer School"> <span>Utrecht Summer School</span> </a> (3
+                                    Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Buren">
+                            <h3 class="Actuator"> Buren <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/512/business-school-netherlands.html"
+                                        title="Business School Netherlands"> <span>Business School Netherlands</span>
+                                    </a> (1 Distance Learning course) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Delft">
+                            <h3 class="Actuator"> Delft <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="../../universities/9612/delft-university-of-technology.html"
+                                        title="Delft University of Technology (TU Delft)"> <span>Delft University of
+                                            Technology (TU Delft)</span> </a> (93 Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Den Haag">
+                            <h3 class="Actuator"> Den Haag <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/94/the-hague-university-of-applied-sciences.html"
+                                        title="The Hague University of Applied Sciences"> <span>The Hague University of
+                                            Applied Sciences</span> </a> (3 Distance Learning courses) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/1861/the-international-arlt-foundation.html"
+                                        title="The International ARLT Foundation"> <span>The International ARLT
+                                            Foundation</span> </a> (1 Distance Learning course) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Eindhoven">
+                            <h3 class="Actuator"> Eindhoven <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="../../universities/12819/studyportals.html" title="Studyportals">
+                                        <span>Studyportals</span> </a> (1 Distance Learning course) </li>
+                                <li> <a href="../../universities/15754/estiem.html"
+                                        title="ESTIEM (European Students of Industrial Engineering and Management)">
+                                        <span>ESTIEM (European Students of Industrial Engineering and Management)</span>
+                                    </a> (1 Distance Learning course) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/20020/unxt.html"
+                                        title="U.NXT"> <span>U.NXT</span> </a> (1 Distance Learning course) </li>
+                                <li> <a href="../../universities/831/fontys-university-of-applied-sciences.html"
+                                        title="Fontys University of Applied Sciences"> <span>Fontys University of
+                                            Applied Sciences</span> </a> (3 Distance Learning courses) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/10516/imf-academy.html"
+                                        title="IMF Academy"> <span>IMF Academy</span> </a> (12 Distance Learning
+                                    courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Enschede">
+                            <h3 class="Actuator"> Enschede <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/20094/twente-pathway-college.html"
+                                        title="Twente Pathway College"> <span>Twente Pathway College</span> </a> (1
+                                    Distance Learning course) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/16/university-of-twente.html"
+                                        title="University of Twente (UT)"> <span>University of Twente (UT)</span> </a>
+                                    (2 Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Groningen">
+                            <h3 class="Actuator"> Groningen <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/37/university-of-groningen.html"
+                                        title="University of Groningen"> <span>University of Groningen</span> </a> (7
+                                    Distance Learning courses) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/1585/energy-delta-institute.html"
+                                        title="Energy Delta Institute"> <span>Energy Delta Institute</span> </a> (2
+                                    Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Leeuwarden">
+                            <h3 class="Actuator"> Leeuwarden <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/37/university-of-groningen.html"
+                                        title="University of Groningen"> <span>University of Groningen</span> </a> (7
+                                    Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Leiden">
+                            <h3 class="Actuator"> Leiden <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/56/leiden-university.html"
+                                        title="Leiden University"> <span>Leiden University</span> </a> (1 Distance
+                                    Learning course) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/956/webster-university-leiden.html"
+                                        title="Webster University Leiden"> <span>Webster University Leiden</span> </a>
+                                    (1 Distance Learning course) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Maastricht">
+                            <h3 class="Actuator"> Maastricht <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/85/maastricht-university.html"
+                                        title="Maastricht University"> <span>Maastricht University</span> </a> (5
+                                    Distance Learning courses) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/470/maastricht-school-of-management.html"
+                                        title="Maastricht  School of Management"> <span>Maastricht School of
+                                            Management</span> </a> (14 Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Nijmegen">
+                            <h3 class="Actuator"> Nijmegen <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="../../universities/11011/radboud-university-nijmegen-summer-school.html"
+                                        title="Radboud University Nijmegen - Summer School"> <span>Radboud University
+                                            Nijmegen - Summer School</span> </a> (1 Distance Learning course) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Rotterdam">
+                            <h3 class="Actuator"> Rotterdam <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/74/erasmus-university-rotterdam.html"
+                                        title="Erasmus University Rotterdam"> <span>Erasmus University Rotterdam</span>
+                                    </a> (2 Distance Learning courses) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/3260/erasmus-school-of-social-and-behavioural-sciences.html"
+                                        title="Erasmus School of Social and Behavioural Sciences"> <span>Erasmus School
+                                            of Social and Behavioural Sciences</span> </a> (1 Distance Learning course)
+                                </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/20510/the-bd-school.html"
+                                        title="The BD School"> <span>The BD School</span> </a> (1 Distance Learning
+                                    course) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Tilburg">
+                            <h3 class="Actuator"> Tilburg <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="../../universities/831/fontys-university-of-applied-sciences.html"
+                                        title="Fontys University of Applied Sciences"> <span>Fontys University of
+                                            Applied Sciences</span> </a> (3 Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Utrecht">
+                            <h3 class="Actuator"> Utrecht <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/33/utrecht-university.html"
+                                        title="Utrecht University"> <span>Utrecht University</span> </a> (33 Distance
+                                    Learning courses) </li>
+                                <li> <a href="../../universities/20326/elevate-academy.html" title="Elevate Academy">
+                                        <span>Elevate Academy</span> </a> (3 Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Wageningen">
+                            <h3 class="Actuator"> Wageningen <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/77/wageningen-university-and-research.html"
+                                        title="Wageningen University and Research"> <span>Wageningen University and
+                                            Research</span> </a> (43 Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                 <div style="display:none;" id="Visa" data-module="Country:institutes"
+                    class="Module StudyPortals_Shared_Modules_Country_Institutes_Institutes">
+                    <div id="CountryStudies">
+                        <h2>Universities, colleges and schools in Netherlands</h2>
+                        <div class="City" data-city-name="'s-Hertogenbosch">
+                            <h3 class="Actuator"> 's-Hertogenbosch <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/223/has-green-academy.html"
+                                        title="HAS green academy"> <span>HAS green academy</span> </a> (2 Distance
+                                    Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Amsterdam">
+                            <h3 class="Actuator"> Amsterdam <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/21149/winc-academy.html"
+                                        title="Winc Academy"> <span>Winc Academy</span> </a> (7 Distance Learning
+                                    courses) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/39/university-of-amsterdam.html"
+                                        title="University of Amsterdam"> <span>University of Amsterdam</span> </a> (21
+                                    Distance Learning courses) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/19031/european-leadership-university.html"
+                                        title="European Leadership University"> <span>European Leadership
+                                            University</span> </a> (1 Distance Learning course) </li>
+                                <li> <a href="../../universities/81/vrije-universiteit-amsterdam.html"
+                                        title="Vrije Universiteit Amsterdam"> <span>Vrije Universiteit Amsterdam</span>
+                                    </a> (28 Distance Learning courses) </li>
+                                <li> <a href="../../universities/1184/royal-tropical-institute.html"
+                                        title="Royal Tropical Institute (KIT)"> <span>Royal Tropical Institute
+                                            (KIT)</span> </a> (3 Distance Learning courses) </li>
+                                <li> <a href="../../universities/9393/utrecht-summer-school.html"
+                                        title="Utrecht Summer School"> <span>Utrecht Summer School</span> </a> (3
+                                    Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Buren">
+                            <h3 class="Actuator"> Buren <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/512/business-school-netherlands.html"
+                                        title="Business School Netherlands"> <span>Business School Netherlands</span>
+                                    </a> (1 Distance Learning course) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Delft">
+                            <h3 class="Actuator"> Delft <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="../../universities/9612/delft-university-of-technology.html"
+                                        title="Delft University of Technology (TU Delft)"> <span>Delft University of
+                                            Technology (TU Delft)</span> </a> (93 Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Den Haag">
+                            <h3 class="Actuator"> Den Haag <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/94/the-hague-university-of-applied-sciences.html"
+                                        title="The Hague University of Applied Sciences"> <span>The Hague University of
+                                            Applied Sciences</span> </a> (3 Distance Learning courses) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/1861/the-international-arlt-foundation.html"
+                                        title="The International ARLT Foundation"> <span>The International ARLT
+                                            Foundation</span> </a> (1 Distance Learning course) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Eindhoven">
+                            <h3 class="Actuator"> Eindhoven <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="../../universities/12819/studyportals.html" title="Studyportals">
+                                        <span>Studyportals</span> </a> (1 Distance Learning course) </li>
+                                <li> <a href="../../universities/15754/estiem.html"
+                                        title="ESTIEM (European Students of Industrial Engineering and Management)">
+                                        <span>ESTIEM (European Students of Industrial Engineering and Management)</span>
+                                    </a> (1 Distance Learning course) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/20020/unxt.html"
+                                        title="U.NXT"> <span>U.NXT</span> </a> (1 Distance Learning course) </li>
+                                <li> <a href="../../universities/831/fontys-university-of-applied-sciences.html"
+                                        title="Fontys University of Applied Sciences"> <span>Fontys University of
+                                            Applied Sciences</span> </a> (3 Distance Learning courses) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/10516/imf-academy.html"
+                                        title="IMF Academy"> <span>IMF Academy</span> </a> (12 Distance Learning
+                                    courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Enschede">
+                            <h3 class="Actuator"> Enschede <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/20094/twente-pathway-college.html"
+                                        title="Twente Pathway College"> <span>Twente Pathway College</span> </a> (1
+                                    Distance Learning course) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/16/university-of-twente.html"
+                                        title="University of Twente (UT)"> <span>University of Twente (UT)</span> </a>
+                                    (2 Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Groningen">
+                            <h3 class="Actuator"> Groningen <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/37/university-of-groningen.html"
+                                        title="University of Groningen"> <span>University of Groningen</span> </a> (7
+                                    Distance Learning courses) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/1585/energy-delta-institute.html"
+                                        title="Energy Delta Institute"> <span>Energy Delta Institute</span> </a> (2
+                                    Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Leeuwarden">
+                            <h3 class="Actuator"> Leeuwarden <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/37/university-of-groningen.html"
+                                        title="University of Groningen"> <span>University of Groningen</span> </a> (7
+                                    Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Leiden">
+                            <h3 class="Actuator"> Leiden <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/56/leiden-university.html"
+                                        title="Leiden University"> <span>Leiden University</span> </a> (1 Distance
+                                    Learning course) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/956/webster-university-leiden.html"
+                                        title="Webster University Leiden"> <span>Webster University Leiden</span> </a>
+                                    (1 Distance Learning course) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Maastricht">
+                            <h3 class="Actuator"> Maastricht <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/85/maastricht-university.html"
+                                        title="Maastricht University"> <span>Maastricht University</span> </a> (5
+                                    Distance Learning courses) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/470/maastricht-school-of-management.html"
+                                        title="Maastricht  School of Management"> <span>Maastricht School of
+                                            Management</span> </a> (14 Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Nijmegen">
+                            <h3 class="Actuator"> Nijmegen <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="../../universities/11011/radboud-university-nijmegen-summer-school.html"
+                                        title="Radboud University Nijmegen - Summer School"> <span>Radboud University
+                                            Nijmegen - Summer School</span> </a> (1 Distance Learning course) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Rotterdam">
+                            <h3 class="Actuator"> Rotterdam <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/74/erasmus-university-rotterdam.html"
+                                        title="Erasmus University Rotterdam"> <span>Erasmus University Rotterdam</span>
+                                    </a> (2 Distance Learning courses) </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/3260/erasmus-school-of-social-and-behavioural-sciences.html"
+                                        title="Erasmus School of Social and Behavioural Sciences"> <span>Erasmus School
+                                            of Social and Behavioural Sciences</span> </a> (1 Distance Learning course)
+                                </li>
+                                <li> <a href="https://www.distancelearningportal.com/universities/20510/the-bd-school.html"
+                                        title="The BD School"> <span>The BD School</span> </a> (1 Distance Learning
+                                    course) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Tilburg">
+                            <h3 class="Actuator"> Tilburg <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="../../universities/831/fontys-university-of-applied-sciences.html"
+                                        title="Fontys University of Applied Sciences"> <span>Fontys University of
+                                            Applied Sciences</span> </a> (3 Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Utrecht">
+                            <h3 class="Actuator"> Utrecht <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/33/utrecht-university.html"
+                                        title="Utrecht University"> <span>Utrecht University</span> </a> (33 Distance
+                                    Learning courses) </li>
+                                <li> <a href="../../universities/20326/elevate-academy.html" title="Elevate Academy">
+                                        <span>Elevate Academy</span> </a> (3 Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                        <div class="City" data-city-name="Wageningen">
+                            <h3 class="Actuator"> Wageningen <span class="InstituteCount"></span> <i
+                                    class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                    data-icon-retractable="lnr-chevron-up"></i> </h3>
+                            <ul class="Content">
+                                <li> <a href="https://www.distancelearningportal.com/universities/77/wageningen-university-and-research.html"
+                                        title="Wageningen University and Research"> <span>Wageningen University and
+                                            Research</span> </a> (43 Distance Learning courses) </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div style="display:none;" id="Permit" data-module="Country:institutes"
+             class="Module StudyPortals_Shared_Modules_Country_Institutes_Institutes">
+                <div id="CountryStudies">
+                    <h2>Universities, colleges and schools in Netherlands</h2>
+                    <div class="City" data-city-name="'s-Hertogenbosch">
+                        <h3 class="Actuator">
+                            's-Hertogenbosch <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                                 data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/223/has-green-academy.html"
+                               title="HAS green academy"> <span>HAS green academy</span> </a> (2 Distance
+                                Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Amsterdam">
+                        <h3 class="Actuator">
+                            Amsterdam <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                          data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/21149/winc-academy.html"
+                               title="Winc Academy"> <span>Winc Academy</span> </a> (7 Distance Learning
+                                courses)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/39/university-of-amsterdam.html"
+                               title="University of Amsterdam"> <span>University of Amsterdam</span> </a> (21
+                                Distance Learning courses)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/19031/european-leadership-university.html"
+                               title="European Leadership University">
+                                    <span>
+                                        European Leadership
+                                        University
+                                    </span>
+                                </a> (1 Distance Learning course)
+                            </li>
+                            <li>
+                                <a href="../../universities/81/vrije-universiteit-amsterdam.html"
+                               title="Vrije Universiteit Amsterdam">
+                                    <span>Vrije Universiteit Amsterdam</span>
+                                </a> (28 Distance Learning courses)
+                            </li>
+                            <li>
+                                <a href="../../universities/1184/royal-tropical-institute.html"
+                               title="Royal Tropical Institute (KIT)">
+                                    <span>
+                                        Royal Tropical Institute
+                                        (KIT)
+                                    </span>
+                                </a> (3 Distance Learning courses)
+                            </li>
+                            <li>
+                                <a href="../../universities/9393/utrecht-summer-school.html"
+                               title="Utrecht Summer School"> <span>Utrecht Summer School</span> </a> (3
+                                Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Buren">
+                        <h3 class="Actuator">
+                            Buren <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                      data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/512/business-school-netherlands.html"
+                               title="Business School Netherlands">
+                                    <span>Business School Netherlands</span>
+                                </a> (1 Distance Learning course)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Delft">
+                        <h3 class="Actuator">
+                            Delft <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                      data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="../../universities/9612/delft-university-of-technology.html"
+                               title="Delft University of Technology (TU Delft)">
+                                    <span>
+                                        Delft University of
+                                        Technology (TU Delft)
+                                    </span>
+                                </a> (93 Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Den Haag">
+                        <h3 class="Actuator">
+                            Den Haag <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                         data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/94/the-hague-university-of-applied-sciences.html"
+                               title="The Hague University of Applied Sciences">
+                                    <span>
+                                        The Hague University of
+                                        Applied Sciences
+                                    </span>
+                                </a> (3 Distance Learning courses)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/1861/the-international-arlt-foundation.html"
+                               title="The International ARLT Foundation">
+                                    <span>
+                                        The International ARLT
+                                        Foundation
+                                    </span>
+                                </a> (1 Distance Learning course)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Eindhoven">
+                        <h3 class="Actuator">
+                            Eindhoven <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                          data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="../../universities/12819/studyportals.html" title="Studyportals">
+                                    <span>Studyportals</span>
+                                </a> (1 Distance Learning course)
+                            </li>
+                            <li>
+                                <a href="../../universities/15754/estiem.html"
+                               title="ESTIEM (European Students of Industrial Engineering and Management)">
+                                    <span>ESTIEM (European Students of Industrial Engineering and Management)</span>
+                                </a> (1 Distance Learning course)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/20020/unxt.html"
+                               title="U.NXT"> <span>U.NXT</span> </a> (1 Distance Learning course)
+                            </li>
+                            <li>
+                                <a href="../../universities/831/fontys-university-of-applied-sciences.html"
+                               title="Fontys University of Applied Sciences">
+                                    <span>
+                                        Fontys University of
+                                        Applied Sciences
+                                    </span>
+                                </a> (3 Distance Learning courses)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/10516/imf-academy.html"
+                               title="IMF Academy"> <span>IMF Academy</span> </a> (12 Distance Learning
+                                courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Enschede">
+                        <h3 class="Actuator">
+                            Enschede <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                         data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/20094/twente-pathway-college.html"
+                               title="Twente Pathway College"> <span>Twente Pathway College</span> </a> (1
+                                Distance Learning course)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/16/university-of-twente.html"
+                               title="University of Twente (UT)"> <span>University of Twente (UT)</span> </a>
+                                (2 Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Groningen">
+                        <h3 class="Actuator">
+                            Groningen <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                          data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/37/university-of-groningen.html"
+                               title="University of Groningen"> <span>University of Groningen</span> </a> (7
+                                Distance Learning courses)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/1585/energy-delta-institute.html"
+                               title="Energy Delta Institute"> <span>Energy Delta Institute</span> </a> (2
+                                Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Leeuwarden">
+                        <h3 class="Actuator">
+                            Leeuwarden <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                           data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/37/university-of-groningen.html"
+                               title="University of Groningen"> <span>University of Groningen</span> </a> (7
+                                Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Leiden">
+                        <h3 class="Actuator">
+                            Leiden <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                       data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/56/leiden-university.html"
+                               title="Leiden University"> <span>Leiden University</span> </a> (1 Distance
+                                Learning course)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/956/webster-university-leiden.html"
+                               title="Webster University Leiden"> <span>Webster University Leiden</span> </a>
+                                (1 Distance Learning course)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Maastricht">
+                        <h3 class="Actuator">
+                            Maastricht <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                           data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/85/maastricht-university.html"
+                               title="Maastricht University"> <span>Maastricht University</span> </a> (5
+                                Distance Learning courses)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/470/maastricht-school-of-management.html"
+                               title="Maastricht  School of Management">
+                                    <span>
+                                        Maastricht School of
+                                        Management
+                                    </span>
+                                </a> (14 Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Nijmegen">
+                        <h3 class="Actuator">
+                            Nijmegen <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                         data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="../../universities/11011/radboud-university-nijmegen-summer-school.html"
+                               title="Radboud University Nijmegen - Summer School">
+                                    <span>
+                                        Radboud University
+                                        Nijmegen - Summer School
+                                    </span>
+                                </a> (1 Distance Learning course)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Rotterdam">
+                        <h3 class="Actuator">
+                            Rotterdam <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                          data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/74/erasmus-university-rotterdam.html"
+                               title="Erasmus University Rotterdam">
+                                    <span>Erasmus University Rotterdam</span>
+                                </a> (2 Distance Learning courses)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/3260/erasmus-school-of-social-and-behavioural-sciences.html"
+                               title="Erasmus School of Social and Behavioural Sciences">
+                                    <span>
+                                        Erasmus School
+                                        of Social and Behavioural Sciences
+                                    </span>
+                                </a> (1 Distance Learning course)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/20510/the-bd-school.html"
+                               title="The BD School"> <span>The BD School</span> </a> (1 Distance Learning
+                                course)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Tilburg">
+                        <h3 class="Actuator">
+                            Tilburg <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                        data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="../../universities/831/fontys-university-of-applied-sciences.html"
+                               title="Fontys University of Applied Sciences">
+                                    <span>
+                                        Fontys University of
+                                        Applied Sciences
+                                    </span>
+                                </a> (3 Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Utrecht">
+                        <h3 class="Actuator">
+                            Utrecht <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                        data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/33/utrecht-university.html"
+                               title="Utrecht University"> <span>Utrecht University</span> </a> (33 Distance
+                                Learning courses)
+                            </li>
+                            <li>
+                                <a href="../../universities/20326/elevate-academy.html" title="Elevate Academy">
+                                    <span>Elevate Academy</span>
+                                </a> (3 Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Wageningen">
+                        <h3 class="Actuator">
+                            Wageningen <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                           data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/77/wageningen-university-and-research.html"
+                               title="Wageningen University and Research">
+                                    <span>
+                                        Wageningen University and
+                                        Research
+                                    </span>
+                                </a> (43 Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="display:none;" id="Apply" data-module="Country:institutes"
+             class="Module StudyPortals_Shared_Modules_Country_Institutes_Institutes">
+                <div id="CountryStudies">
+                    <h2>Universities, colleges and schools in Netherlands</h2>
+                    <div class="City" data-city-name="'s-Hertogenbosch">
+                        <h3 class="Actuator">
+                            's-Hertogenbosch <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                                 data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/223/has-green-academy.html"
+                               title="HAS green academy"> <span>HAS green academy</span> </a> (2 Distance
+                                Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Amsterdam">
+                        <h3 class="Actuator">
+                            Amsterdam <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                          data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/21149/winc-academy.html"
+                               title="Winc Academy"> <span>Winc Academy</span> </a> (7 Distance Learning
+                                courses)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/39/university-of-amsterdam.html"
+                               title="University of Amsterdam"> <span>University of Amsterdam</span> </a> (21
+                                Distance Learning courses)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/19031/european-leadership-university.html"
+                               title="European Leadership University">
+                                    <span>
+                                        European Leadership
+                                        University
+                                    </span>
+                                </a> (1 Distance Learning course)
+                            </li>
+                            <li>
+                                <a href="../../universities/81/vrije-universiteit-amsterdam.html"
+                               title="Vrije Universiteit Amsterdam">
+                                    <span>Vrije Universiteit Amsterdam</span>
+                                </a> (28 Distance Learning courses)
+                            </li>
+                            <li>
+                                <a href="../../universities/1184/royal-tropical-institute.html"
+                               title="Royal Tropical Institute (KIT)">
+                                    <span>
+                                        Royal Tropical Institute
+                                        (KIT)
+                                    </span>
+                                </a> (3 Distance Learning courses)
+                            </li>
+                            <li>
+                                <a href="../../universities/9393/utrecht-summer-school.html"
+                               title="Utrecht Summer School"> <span>Utrecht Summer School</span> </a> (3
+                                Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Buren">
+                        <h3 class="Actuator">
+                            Buren <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                      data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/512/business-school-netherlands.html"
+                               title="Business School Netherlands">
+                                    <span>Business School Netherlands</span>
+                                </a> (1 Distance Learning course)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Delft">
+                        <h3 class="Actuator">
+                            Delft <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                      data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="../../universities/9612/delft-university-of-technology.html"
+                               title="Delft University of Technology (TU Delft)">
+                                    <span>
+                                        Delft University of
+                                        Technology (TU Delft)
+                                    </span>
+                                </a> (93 Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Den Haag">
+                        <h3 class="Actuator">
+                            Den Haag <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                         data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/94/the-hague-university-of-applied-sciences.html"
+                               title="The Hague University of Applied Sciences">
+                                    <span>
+                                        The Hague University of
+                                        Applied Sciences
+                                    </span>
+                                </a> (3 Distance Learning courses)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/1861/the-international-arlt-foundation.html"
+                               title="The International ARLT Foundation">
+                                    <span>
+                                        The International ARLT
+                                        Foundation
+                                    </span>
+                                </a> (1 Distance Learning course)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Eindhoven">
+                        <h3 class="Actuator">
+                            Eindhoven <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                          data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="../../universities/12819/studyportals.html" title="Studyportals">
+                                    <span>Studyportals</span>
+                                </a> (1 Distance Learning course)
+                            </li>
+                            <li>
+                                <a href="../../universities/15754/estiem.html"
+                               title="ESTIEM (European Students of Industrial Engineering and Management)">
+                                    <span>ESTIEM (European Students of Industrial Engineering and Management)</span>
+                                </a> (1 Distance Learning course)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/20020/unxt.html"
+                               title="U.NXT"> <span>U.NXT</span> </a> (1 Distance Learning course)
+                            </li>
+                            <li>
+                                <a href="../../universities/831/fontys-university-of-applied-sciences.html"
+                               title="Fontys University of Applied Sciences">
+                                    <span>
+                                        Fontys University of
+                                        Applied Sciences
+                                    </span>
+                                </a> (3 Distance Learning courses)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/10516/imf-academy.html"
+                               title="IMF Academy"> <span>IMF Academy</span> </a> (12 Distance Learning
+                                courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Enschede">
+                        <h3 class="Actuator">
+                            Enschede <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                         data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/20094/twente-pathway-college.html"
+                               title="Twente Pathway College"> <span>Twente Pathway College</span> </a> (1
+                                Distance Learning course)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/16/university-of-twente.html"
+                               title="University of Twente (UT)"> <span>University of Twente (UT)</span> </a>
+                                (2 Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Groningen">
+                        <h3 class="Actuator">
+                            Groningen <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                          data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/37/university-of-groningen.html"
+                               title="University of Groningen"> <span>University of Groningen</span> </a> (7
+                                Distance Learning courses)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/1585/energy-delta-institute.html"
+                               title="Energy Delta Institute"> <span>Energy Delta Institute</span> </a> (2
+                                Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Leeuwarden">
+                        <h3 class="Actuator">
+                            Leeuwarden <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                           data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/37/university-of-groningen.html"
+                               title="University of Groningen"> <span>University of Groningen</span> </a> (7
+                                Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Leiden">
+                        <h3 class="Actuator">
+                            Leiden <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                       data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/56/leiden-university.html"
+                               title="Leiden University"> <span>Leiden University</span> </a> (1 Distance
+                                Learning course)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/956/webster-university-leiden.html"
+                               title="Webster University Leiden"> <span>Webster University Leiden</span> </a>
+                                (1 Distance Learning course)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Maastricht">
+                        <h3 class="Actuator">
+                            Maastricht <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                           data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/85/maastricht-university.html"
+                               title="Maastricht University"> <span>Maastricht University</span> </a> (5
+                                Distance Learning courses)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/470/maastricht-school-of-management.html"
+                               title="Maastricht  School of Management">
+                                    <span>
+                                        Maastricht School of
+                                        Management
+                                    </span>
+                                </a> (14 Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Nijmegen">
+                        <h3 class="Actuator">
+                            Nijmegen <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                         data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="../../universities/11011/radboud-university-nijmegen-summer-school.html"
+                               title="Radboud University Nijmegen - Summer School">
+                                    <span>
+                                        Radboud University
+                                        Nijmegen - Summer School
+                                    </span>
+                                </a> (1 Distance Learning course)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Rotterdam">
+                        <h3 class="Actuator">
+                            Rotterdam <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                          data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/74/erasmus-university-rotterdam.html"
+                               title="Erasmus University Rotterdam">
+                                    <span>Erasmus University Rotterdam</span>
+                                </a> (2 Distance Learning courses)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/3260/erasmus-school-of-social-and-behavioural-sciences.html"
+                               title="Erasmus School of Social and Behavioural Sciences">
+                                    <span>
+                                        Erasmus School
+                                        of Social and Behavioural Sciences
+                                    </span>
+                                </a> (1 Distance Learning course)
+                            </li>
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/20510/the-bd-school.html"
+                               title="The BD School"> <span>The BD School</span> </a> (1 Distance Learning
+                                course)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Tilburg">
+                        <h3 class="Actuator">
+                            Tilburg <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                        data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="../../universities/831/fontys-university-of-applied-sciences.html"
+                               title="Fontys University of Applied Sciences">
+                                    <span>
+                                        Fontys University of
+                                        Applied Sciences
+                                    </span>
+                                </a> (3 Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Utrecht">
+                        <h3 class="Actuator">
+                            Utrecht <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                        data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/33/utrecht-university.html"
+                               title="Utrecht University"> <span>Utrecht University</span> </a> (33 Distance
+                                Learning courses)
+                            </li>
+                            <li>
+                                <a href="../../universities/20326/elevate-academy.html" title="Elevate Academy">
+                                    <span>Elevate Academy</span>
+                                </a> (3 Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="City" data-city-name="Wageningen">
+                        <h3 class="Actuator">
+                            Wageningen <span class="InstituteCount"></span> <i class="js-actuator AccordionIcon" data-icon-expendable="lnr-chevron-down"
+                                                                           data-icon-retractable="lnr-chevron-up"></i>
+                        </h3>
+                        <ul class="Content">
+                            <li>
+                                <a href="https://www.distancelearningportal.com/universities/77/wageningen-university-and-research.html"
+                               title="Wageningen University and Research">
+                                    <span>
+                                        Wageningen University and
+                                        Research
+                                    </span>
+                                </a> (43 Distance Learning courses)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+       
+        <section class="col1 WrappedContent no-vertical-padding">
+            <div class="colblock no-vertical-margin">
+                <div data-module=""
+                    class="Module StudyPortals_Shared_Modules_Country_StudyRecommendations_StudyRecommendations">
+                    <div id="StudyRecommendations">
+                        <h3 class="Title">Universites </h3>
+                    <div id="Recommendations" class="mdc-layout-grid">
+                            <div>
+    <div data-v-71d9db58="" class="ScrollTemplate" identifier="account-page-programmes-recommendations">
+       <div data-v-60a22860="" class="js-StudyProgrammes" data-v-71d9db58="">
+          <div data-v-60a22860="" class="StudyCardGrid js-StudyCards">
+             <!----> 
+             <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="https://www.mastersportal.com/studies/319857/strategic-events-management.html?ref=recommendations&amp;page=account&amp;type=scroll&amp;position=1&amp;score=0.0094838" target="_blank" class="ContentCard js-studyCard">
+                <div data-v-78fa3586="" data-v-6e0e8e37="">
+                   <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="//storage-prtl-co.imgix.net/endor/organisations/237/covers/1545223486_Campus%20Horizon%20buiten%20herfstfoto%20-%20Cover%20cut.jpg?w=288&amp;h=152&amp;fit=crop&amp;crop=faces&amp;auto=format,compress" loading="lazy" width="288" height="152"></div>
+                </div>
+                <div data-v-6e0e8e37="">
+                   <div data-v-6e0e8e37="" class="BestfitWishlist">
+                     
+                      
+                   </div>
+                   <div data-v-6e0e8e37="" class="OrganisationTitle">
+                      <h3 data-v-6e0e8e37="" class="StudyTitle">Strategic Events Management</h3>
+                   </div>
+                </div>
+                <div data-v-6e0e8e37="" class="OrganisationInformation">
+                   <span data-v-6e0e8e37="" class="SquareOrganisationLogo"><img data-v-6e0e8e37="" src="//storage-prtl-co.imgix.net/mp/5de0e7fc5fbe.png" alt="Breda University of Applied Sciences (BUAS)" loading="lazy" width="48" height="48" class="Logo"></span> 
+                   <div data-v-6e0e8e37="" class="NameLocation">
+                      <div data-v-6e0e8e37="" class="Name">Breda University of Applied Sciences (BUAS)</div>
+                      <div data-v-6e0e8e37="" class="Location">Breda, Netherlands</div>
+                   </div>
+                </div>
+             </a>
+             <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="219729" data-organisation-id="10769" title="Managing Festivals and Events" href="https://www.mastersportal.com/studies/219729/managing-festivals-and-events.html?ref=recommendations&amp;page=account&amp;type=scroll&amp;position=2&amp;score=0.0044263" target="_blank" class="ContentCard js-studyCard">
+                <div data-v-78fa3586="" data-v-6e0e8e37="">
+                   <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="//storage-prtl-co.imgix.net/endor/organisations/10769/covers/1520637705_Cover.jpg?w=288&amp;h=152&amp;fit=crop&amp;crop=faces&amp;auto=format,compress" loading="lazy" width="288" height="152"></div>
+                </div>
+                <div data-v-6e0e8e37="">
+                   <div data-v-6e0e8e37="" class="BestfitWishlist">
+                     
+                   </div>
+                   <div data-v-6e0e8e37="" class="OrganisationTitle">
+                      <h3 data-v-6e0e8e37="" class="StudyTitle">Managing Festivals and Events</h3>
+                   </div>
+                </div>
+                <div data-v-6e0e8e37="" class="OrganisationInformation">
+                   <span data-v-6e0e8e37="" class="SquareOrganisationLogo"><img data-v-6e0e8e37="" src="//storage-prtl-co.imgix.net/mp/5de0e5ae72f1.png" alt="Thompson Rivers University" loading="lazy" width="48" height="48" class="Logo"></span> 
+                   <div data-v-6e0e8e37="" class="NameLocation">
+                      <div data-v-6e0e8e37="" class="Name">Thompson Rivers University</div>
+                      <div data-v-6e0e8e37="" class="Location">Kamloops, Canada</div>
+                   </div>
+                </div>
+             </a>
+             <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="50128" data-organisation-id="423" title="MSc in International Hospitality Management" href="https://www.mastersportal.com/studies/50128/msc-in-international-hospitality-management.html?ref=recommendations&amp;page=account&amp;type=scroll&amp;position=3&amp;score=0.003044" target="_blank" class="ContentCard js-studyCard">
+                <div data-v-78fa3586="" data-v-6e0e8e37="">
+                   <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="//storage-prtl-co.imgix.net/endor/organisations/423/covers/1608283777_banniere-studyportals_3072x1024_3.jpg?w=288&amp;h=152&amp;fit=crop&amp;crop=faces&amp;auto=format,compress" loading="lazy" width="288" height="152"></div>
+                </div>
+                <div data-v-6e0e8e37="">
+                   <div data-v-6e0e8e37="" class="BestfitWishlist">
+                      
+                   </div>
+                   <div data-v-6e0e8e37="" class="OrganisationTitle">
+                      <h3 data-v-6e0e8e37="" class="StudyTitle">MSc in International Hospitality Management</h3>
+                   </div>
+                </div>
+                <div data-v-6e0e8e37="" class="OrganisationInformation">
+                   <span data-v-6e0e8e37="" class="SquareOrganisationLogo"><img data-v-6e0e8e37="" src="//storage-prtl-co.imgix.net/endor/organisations/423/images/1637752196_emlyon-business-school-logo-512x512.png" alt="emlyon business school" loading="lazy" width="48" height="48" class="Logo"></span> 
+                   <div data-v-6e0e8e37="" class="NameLocation">
+                      <div data-v-6e0e8e37="" class="Name">emlyon business school</div>
+                      <div data-v-6e0e8e37="" class="Location">Lyon, France</div>
+                   </div>
+                </div>
+             </a>
+             
+          </div>
+       </div>
+       <!----> <!---->
     </div>
-    
-</section>
-@section Scripts{
-    <script src="~/js/country-detail.js"></script>
-}
+    <!---->
+ </div>
+                        </div>
+                        <div class="Recommendations" data-identifier="carousel-recommendations"
+                            data-recommendation-type="programmes" data-template="carousel" data-filter-countries="1"
+                            data-page="country">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+    @section Scripts{
+        <script src="~/js/country-detail.js"></script>
+        <script>
+        function swith(id){
+            console.log(id);
+            const collection = document.getElementById("menuChildren").children;
+                            for (let i = 0; i < collection.length; i++) {
+                  collection[i].style.display = "none";
+                }
+            document.getElementById(id).style.removeProperty("display");
+        }
+        </script>
+    }    
+        

@@ -20,12 +20,12 @@ builder.Services.AddAuthentication(options =>
     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 }).AddCookie(options =>
 {
-    options.LoginPath = "/Account/Login";
+    options.LoginPath = "/Account/ComingSoon";
     options.LogoutPath = "/auth/Logout";
 });
 builder.Services.AddHttpClient("InStudy", c =>
 {
-    c.BaseAddress = new Uri("https://localhost:7074/");
+    c.BaseAddress = new Uri("https://api.instudy.net/");
 });
 var app = builder.Build();
 

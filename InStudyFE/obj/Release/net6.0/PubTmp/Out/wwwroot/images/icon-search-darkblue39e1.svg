@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.769" height="16.487" viewBox="0 0 15.769 16.487">
+  <g id="Search" transform="translate(0.248 0.25)">
+    <g id="Search_Icon" data-name="Search Icon" transform="translate(0.002 0)">
+      <path id="Path_3" data-name="Path 3" d="M32.517,33.963a.8.8,0,0,1-.571-.248L29.1,30.788a.784.784,0,0,1,.018-1.118.794.794,0,0,1,1.124.018l2.842,2.944a.784.784,0,0,1-.018,1.118A.8.8,0,0,1,32.517,33.963Z" transform="translate(-18.044 -17.976)" fill="#044a75" stroke="#044a75" stroke-miterlimit="10" stroke-width="0.5"/>
+      <path id="Path_4" data-name="Path 4" d="M8.748,14.751A7.21,7.21,0,0,1,1.488,7.6,7.2,7.2,0,0,1,8.748.449,7.21,7.21,0,0,1,16.009,7.6,7.222,7.222,0,0,1,8.748,14.751Zm0-12.723A5.639,5.639,0,0,0,3.058,7.6a5.639,5.639,0,0,0,5.69,5.572A5.635,5.635,0,0,0,14.421,7.6,5.635,5.635,0,0,0,8.748,2.028Z" transform="translate(-1.488 -0.449)" fill="#044a75" stroke="#044a75" stroke-miterlimit="10" stroke-width="0.5"/>
+    </g>
+  </g>
+</svg>
