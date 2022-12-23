@@ -3578,3 +3578,61 @@ label {
     padding: 1rem 0;
     text-decoration: none;
 }
+.AsideDesktopContainer {
+    overflow-y: scroll;
+    height: calc(100vh - 110px);
+}
+
+
+.FilterContainer {
+    background-color: #fff;
+    margin: 1rem 0 0;
+    padding: 0 0 3rem;
+}
+@media (min-width: 1025px) {
+    .FilterContainer {
+        padding: 1rem;
+    }
+}
+
+.FilterContainer ul:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.FilterContainer ul li {
+    color: #05293c;
+    display: block;
+    float: left;
+    margin: 0.25rem 0;
+    width: 100%;
+}
+body .Hidden {
+    display: none !important;
+}
+.DisciplineFilterWrapper .ShowMainDisciplines[data-v-e4cd2be6] {
+    background: transparent;
+    border: 0;
+    color: #1e8558;
+    cursor: pointer;
+    margin: 0 1rem;
+    padding: 0;
+}
+.TuitionFeeFilterWrapper .RefineContentOptionsList.ChangeCurrency[data-v-f6dfdbf8] {
+    background: none;
+    border: none;
+    color: #1e8558;
+    cursor: pointer;
+    font: inherit;
+    margin: 0 0 1rem;
+    padding: 0;
+}
+
+.Facet[data-v-035f772d] {
+    color: #b8c6ce;
+    float: right;
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: 1rem;
+    margin: 0.25rem 0 0;
+}
