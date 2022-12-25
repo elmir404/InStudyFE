@@ -37,7 +37,7 @@
       <div class="mdc-layout-grid GridInContainer">
          <main class="SwitchableContentContainer mdc-layout-grid__inner">
             <div id="SwitchableContent" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-8-desktop">
-               <div class="SwitchableGroup js-content-key_facts" data-id="key_facts">
+               <div class="SwitchableGroup js-content-key_facts key_facts" id="key_facts">
                   <button class="ToggleButton js-contentButtons js-content-key_facts mdc-layout-grid" data-id="key_facts">
                      <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Key information</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
                   </button>
@@ -149,7 +149,7 @@
                      </div>
                   </article>
                </div>
-               <div class="SwitchableGroup js-content-description" data-id="description">
+               <div class="SwitchableGroup js-content-description description" id="description">
                   <button class="ToggleButton js-contentButtons js-content-description mdc-layout-grid" data-id="description">
                      <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Overview</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
                   </button>
@@ -166,7 +166,7 @@
                      </div>
                   </article>
                </div>
-               <div class="SwitchableGroup js-content-contents is-visible" data-id="contents">
+               <div class="SwitchableGroup js-content-contents contents is-visible" id="contents">
                   <button class="ToggleButton js-contentButtons js-content-contents mdc-layout-grid" data-id="contents">
                      <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Programme structure</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
                   </button>
@@ -190,7 +190,7 @@
                      </div>
                   </article>
                </div>
-               <div class="SwitchableGroup js-content-requirement" data-id="requirement">
+               <div class="SwitchableGroup js-content-requirement requirement"  id="requirement">
                   <button class="ToggleButton js-contentButtons js-content-requirement mdc-layout-grid" data-id="requirement">
                      <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Admission requirements</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
                   </button>
@@ -276,108 +276,7 @@
                      </div>
                   </article>
                </div>
-               <div class="SwitchableGroup js-content-fees_and_funding" data-id="fees_and_funding">
-                  <button class="ToggleButton js-contentButtons js-content-fees_and_funding mdc-layout-grid" data-id="fees_and_funding">
-                     <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Fees and funding</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
-                  </button>
-                  <article class="ModulesContainer">
-                     <div data-module="Study:tuition_fee" class="Module StudyPortals_Shared_Modules_Study_TuitionFee_TuitionFeeContainer">
-                        <section id="TuitionFeeContainer" class="js-tuitionFact">
-                           <h2>Tuition Fee</h2>
-                           <div class="NationalitySelect">Below are the tuition fees for students from <button class="HelperButton js-showLocalizationPreferences">Azerbaijan</button> </div>
-                           <ul class="TuitionFees js-LocalizedContent" data-country-id="1">
-                              <li class="ItemContainer" data-target="international">
-                                 <h3 class="FeeType">
-                                    International 
-                                    <i class="InfoIcon lnr-info" data-tooltip-text=" The international tuition fee is applicable to students from outside the European Economic Area who want to study within the EEA, or to students who want to study outside the EEA but are not nationals of that country. " style="position: relative;">
-                                       <div class="Tooltip" style="display: none;">
-                                          <div class="TooltipInner">
-                                             The international tuition fee is applicable to students from outside the European Economic Area who want to study within the EEA, or to students who want to study outside the EEA but are not nationals of that country. 
-                                          </div>
-                                          <div class="TooltipArrow"></div>
-                                       </div>
-                                    </i>
-                                 </h3>
-                                 <div class="Item">
-                                    <i class="TuitionFeesIcon lnr-bag-coins"></i> 
-                                    <div class="FeeDetails">
-                                       <div class="Amount"> <span class="js-currencyAmount" data-discount="" data-original-amount="18300" data-duration="18" data-period="months" data-currency="EUR" data-amount="12200" data-currency-rewrite="true" data-currency-symbol="no" data-original_html=" 12200 " data-converted_amount="12200" title="Converted from  12200 ">12,200</span> <span class="CurrencyType" data-currency-text="EUR" data-institution-currency="EUR">EUR</span><span class="CurrencyType">/year</span> </div>
-                                       <div class="Label">Tuition Fee</div>
-                                    </div>
-                                 </div>
-                                 <div class="BasedOn js-basedOn" data-original-unit="full" data-unit="year" data-original-amount="18300"> Based on the tuition of <span class="BaseOnBoldText"> <span class="js-localeNumber">18,300</span> EUR </span> for the full programme <span class="js-durationText"> during <span class="js-duration BaseOnBoldText" data-rewrite="true" data-period="months" data-duration="18" data-days-single="day" data-days-multiple="days" data-weeks-single="week" data-weeks-multiple="weeks" data-months-single="month" data-months-multiple="months" data-years-single="year" data-years-multiple="years">1½ years</span></span>. </div>
-                              </li>
-                              <li class="ItemContainer Hidden" data-target="eea">
-                                 <h3 class="FeeType">
-                                    EU/EEA 
-                                    <i class="InfoIcon lnr-info" data-tooltip-text=" European Economic Area tuition fee is applicable to the students from EU countries, Iceland, Liechtenstein, Norway and Switzerland. " style="position: relative;">
-                                       <div class="Tooltip" style="display: none;">
-                                          <div class="TooltipInner">
-                                             European Economic Area tuition fee is applicable to the students from EU countries, Iceland, Liechtenstein, Norway and Switzerland. 
-                                          </div>
-                                          <div class="TooltipArrow"></div>
-                                       </div>
-                                    </i>
-                                 </h3>
-                                 <div class="Item">
-                                    <i class="TuitionFeesIcon lnr-bag-coins"></i> 
-                                    <div class="FeeDetails">
-                                       <div class="Amount"> <span class="js-currencyAmount" data-discount="" data-original-amount="18300" data-duration="18" data-period="months" data-currency="EUR" data-amount="12200" data-currency-rewrite="true" data-currency-symbol="no" data-original_html=" 12200 " data-converted_amount="12200" title="Converted from  12200 ">12,200</span> <span class="CurrencyType" data-currency-text="EUR" data-institution-currency="EUR">EUR</span><span class="CurrencyType">/year</span> </div>
-                                       <div class="Label">Tuition Fee</div>
-                                    </div>
-                                 </div>
-                                 <div class="BasedOn js-basedOn" data-original-unit="full" data-unit="year" data-original-amount="18300"> Based on the tuition of <span class="BaseOnBoldText"> <span class="js-localeNumber">18,300</span> EUR </span> for the full programme <span class="js-durationText"> during <span class="js-duration BaseOnBoldText" data-rewrite="true" data-period="months" data-duration="18" data-days-single="day" data-days-multiple="days" data-weeks-single="week" data-weeks-multiple="weeks" data-months-single="month" data-months-multiple="months" data-years-single="year" data-years-multiple="years">1½ years</span></span>. </div>
-                              </li>
-                              <div class="js-notAvailable Hidden">
-                                 <div class="js-notAvailableText"></div>
-                              </div>
-                           </ul>
-                        </section>
-                     </div>
-                     <div data-module="Study:cost_of_living" class="Module StudyPortals_Shared_Modules_Study_CostOfLiving_CostOfLiving">
-                        <section id="CostOfLivingContainer">
-                           <h2>Living costs for Apeldoorn</h2>
-                           <div class="CostsOfLiving">
-                              <i class="TuitionFeesIcon lnr-bag-coins"></i> 
-                              <div class="FeeDetails">
-                                 <div class="Costs"> <span class="Amount"> <span data-currency="EUR" data-amount="815" data-original_html="815" data-currency-rewrite="" data-currency-symbol="no" data-converted_amount="815" title="Converted from 815">815</span>-<span data-currency="EUR" data-amount="1040" data-original_html="1040" data-currency-rewrite="" data-currency-symbol="no" data-converted_amount="1040" title="Converted from 1040">1,040</span> </span> <span class="CurrencyDetails"> <span data-currency-text="EUR" data-institution-currency="EUR" class="Currency CurrencyType">EUR</span>/month </span> </div>
-                                 <div class="Label">Living costs</div>
-                              </div>
-                           </div>
-                           <p class="Explanation"> The <a href="https://www.mastersportal.com/articles/2569/how-we-calculate-the-monthly-living-costs-for-studying-abroad.html" title="How we calculate the monthly living costs for studying abroad."> living costs</a> include the total expenses per month, covering accommodation, public transportation, utilities (electricity, internet), books and groceries. </p>
-                        </section>
-                     </div>
-                     <div data-module="Study:best_fit_incentive_budget" class="Module StudyPortals_Shared_Modules_BestFitIncentive_IncentiveBudget">
-                        <div data-v-1c1e9538="" class="ButtonContentSwitcherWidget">
-                           <div data-v-1c1e9538="" class="IconWrapper">
-                              <div data-v-1c1e9538="" class="BestfitIcon"><i data-v-1c1e9538="" class="Percentage lnr-bestfit-logo"></i> <i data-v-1c1e9538="" class="PlusIcon lnr-plus-inverted"></i></div>
-                           </div>
-                           <span data-v-1c1e9538="" class="ButtonText">
-                           Check your budget match with this programme
-                           </span>
-                        </div>
-                     </div>
-                     <div data-module="Study:funding" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_Funding_Funding">
-                        <section id="FundingContainer">
-                           <h2>Funding</h2>
-                        </section>
-                     </div>
-                     <div data-module="SPScholarships" class="Module StudyPortals_Shared_Modules_SPScholarships_SPScholarships StudyPortals_Shared_Modules_SPScholarships_SPScholarshipsFeesAndFunding">
-                        <a href="https://scholarship.mastersportal.com/international-distinction-awards/" rel="noopener" target="_blank" title="Studyportals Scholarship" id="SPScholarshipsFeesAndFunding" data-ga-tracking="{&quot;category&quot;:&quot;SPScholarship&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;study-page-fees-and-funding&quot;}" data-ga-parsed="true">
-                           <div class="SPScholarshipsBorder"></div>
-                           <figure class="ImageContainer"> <img loading="lazy" src="//monet-prtl-co.imgix.net/Shared/studyportals_logo_no_text.svg?auto=format,compress" alt="Studyportals scholarships"> </figure>
-                           <div class="SPScholarshipsContent">
-                              <strong class="SPScholarshipsTitle">Studyportals Scholarship</strong> <span class="SPScholarshipsDeadline js-scholarshipsDeadline Hidden">Deadline: <strong>30 June 2020</strong></span> 
-                              <p class="SPScholarshipsDescription">Apply and win up to €<span class="LocaleNumber">10,000</span> to cover your tuition fees.</p>
-                           </div>
-                        </a>
-                     </div>
-                     <div data-module="Study:scholarshipsportal_tip" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_ScholarshipsPortalTip_ScholarshipsPortalTip">
-                        <p id="ScholarshipsPortalTip"> <strong>Studyportals Tip:</strong> Students can <a href="http://www.scholarshipportal.com/" class="TextLink" target="_blank" rel="noopener" title="Search online for independent or external scholarships that can help fund their studies.">search online for independent or external scholarships</a> that can help fund their studies. Check the scholarships to see whether you are eligible to apply. Many scholarships are either merit-based or needs-based. </p>
-                     </div>
-                  </article>
-               </div>
-               <div class="SwitchableGroup js-content-work_permit" data-id="work_permit">
+                    <div class="SwitchableGroup js-content-work_permit work_permit" id="work_permit">
                   <button class="ToggleButton js-contentButtons js-content-work_permit mdc-layout-grid" data-id="work_permit">
                      <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Work permit</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
                   </button>
@@ -394,79 +293,33 @@
                      </div>
                   </article>
                </div>
-               <div data-module="Study:ExclusiveAccess" class="Module StudyPortals_Shared_Modules_Study_ExclusiveAccess_ExclusiveAccess">
-                  <aside class="mdc-layout-grid ExclusiveAccessWrapper js-exclusiveAccessInnerWrapper">
-                     <div class="SoftWallBlock js-softWallWrapper">
-                        <div class="SoftWallInnerBlock">
-                           <div class="SoftWallText"> <strong>You've viewed <span class="js-exclusiveAccessPageCount"></span> programmes.</strong> Without an account you can only view 2 programmes per day. </div>
-                           <div class="SoftWallCloseButton js-softWallCloseButton"> <i class="lnr-cross"></i> </div>
-                        </div>
-                     </div>
-                     <div class="ExclusiveAccessWall">
-                        <div class="MembershipContentWrapper">
-                           <div class="MembershipTitle"> Create a <strong>free account</strong> to unlock <strong>full content</strong>! </div>
-                           <div class="MembershipVisualWrapper"> <img src="https://monet-prtl-co.imgix.net/Shared/ExclusiveAccess/membership_benefits.svg" alt="Studyportals account benefits" loading="lazy"> </div>
-                           <div class="MembershipActionsWrapper">
-                              <div class="AuthServiceWrapper">
-                                 <div class="AuthPlaceholder" data-layout="ExclusiveAccess" data-referrer="ExclusiveAccessV2" data-portal-type="master">
-                                    <div class="PreLoaderWrapper">
-                                       <div class="PreLoader">
-                                          <div class="Dot"></div>
-                                          <div class="Dot"></div>
-                                          <div class="Dot"></div>
-                                       </div>
-                                       <div class="Text"> Loading </div>
-                                    </div>
-                                 </div>
-                                 <div class="AuthPlaceholder" data-layout="Main" data-popup="true" data-referrer="ExclusiveAccessV2Header" data-portal-type="master"> </div>
-                                 <div class="AuthPlaceholder" data-layout="Main" data-popup="true" data-referrer="EBPLockedButton" data-portal-type="master"> </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </aside>
-               </div>
-               <div data-module="ContentFeedbackTool:ContentFeedbackToolCenter" class="Module StudyPortals_Shared_Modules_ContentFeedbackTool_ContentFeedbackTool StudyPortals_Shared_Modules_ContentFeedbackTool_ContentFeedbackToolCenter">
-                  <script> var feedbackUrl = 'https://lqrkhl7hna.execute-api.eu-west-1.amazonaws.com/live/feedback/new/'; var placeholderContent = [ { 'Missing': 'e.g. duration is not specified.', 'Wrong': 'e.g. tuition fees are different on the university website.', 'Other': 'e.g. there is a typo under "Details" section.' }, { 'Missing': 'e.g. research facilities are missing.', 'Wrong': 'e.g. university description is outdated.', 'Other': 'e.g. there is a typo under "Student Life" section.' } ] </script> 
-                  <section id="ContentFeedbackTool">
-                     <button type="button" class="LaunchPopupBtn HelperButton js-OpenCFT"> <span>Improve page content</span> </button> 
-                     <div id="FeedbackPlaceholderContainer" class="Hidden PopupContent">
-                        <span class="FeedbackTitle">Improve page content</span> 
-                        <form class="FeedbackForm">
-                           <div class="FeedbackContent">
-                              <div id="CenteredContent">
-                                 <div class="Screen">
-                                    <ul>
-                                       <li data-explanationtitle="What was <span>missing or incomplete</span>?"> <input id="Missing" name="FeedbackCategory" type="radio"> <label for="Missing">Missing or incomplete content</label> </li>
-                                       <li data-explanationtitle="What was <span>wrong or outdated</span>?"> <input id="Wrong" name="FeedbackCategory" type="radio"> <label for="Wrong">Wrong or outdated content</label> </li>
-                                       <li data-explanationtitle="Please specify"> <input id="Other" name="FeedbackCategory" type="radio"> <label for="Other">Other</label> </li>
-                                    </ul>
-                                 </div>
-                                 <div class="Screen"> <label id="ExplanationTitle" for="Explanation">Detailed Explanation</label> <textarea id="Explanation" name="Explanation" rows="4"></textarea> </div>
-                                 <div class="Screen"> <i class="lnr-thumbs-up ThankYou"></i> </div>
-                              </div>
-                           </div>
-                           <div class="FeedbackFooter"> <button data-page="2" class="ChampionButton FeedbackSubmit Invisible" type="submit">Send Feedback</button> <span data-page="3" class="ThumbsUpText Invisible">A big thumbs up for your feedback!</span> </div>
-                        </form>
-                     </div>
-                  </section>
-               </div>
             </div>
             <div id="SwitchableContentButtons" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
                <div id="ContentSwitcherWrapper" class="ContentSwitcherWrapper">
                   <nav id="ContentSwitcher" class="ContentSwitcher"> 
-                  <button type="button" class="ContentButton js-contentButtons" data-id="key_facts"> Key information </button> 
-                  <button type="button" class="ContentButton js-contentButtons" data-id="description"> Overview </button> 
-                  <button type="button" class="ContentButton js-contentButtons is-active" data-id="contents"> Programme structure </button>
-                  <button type="button" class="ContentButton js-contentButtons" data-id="requirement"> Admission requirements </button> 
-                  <button type="button" class="ContentButton js-contentButtons" data-id="fees_and_funding"> Fees and funding </button> 
-                  <button type="button" class="ContentButton js-contentButtons" data-id="work_permit"> Work permit </button> </nav>
+                            <button type="button" class="ContentButton js-contentButtons key_facts" onclick="switch('key_facts')"> Key information </button>
+                            <button type="button" class="ContentButton js-contentButtons description " onclick="switch('description')" > Overview </button>
+                            <button type="button" class="ContentButton js-contentButtons contents is-active" onclick="switch('contents')"> Programme structure </button>
+                            <button type="button" class="ContentButton js-contentButtons requirement" onclick="switch('requirement')"> Admission requirements </button>
+                            <button type="button" class="ContentButton js-contentButtons fees_and_funding" onclick="switch('fees_and_funding')"> Fees and funding </button>
+                            <button type="button" class="ContentButton js-contentButtons work_permit" onclick="switch('work_permit')"> Work permit </button>
+                        </nav>
                </div>
             </div>
          </main>
       </div>
    </div>
-   
-  
+   @section Scripts{
+       <script>
+        function switch(id) {
+            console.log(`${id}`);
+            const collection = document.getElementById("SwitchableContent").children;
+            for (let i = 0; i < collection.length; i++) {
+                collection[i].classList.remove = "is-visible";
+            }
+        }
 
-</div>
+       </script>
+       
+   }
+  

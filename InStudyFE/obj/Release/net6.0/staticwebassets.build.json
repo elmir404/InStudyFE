@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iWJH3EVfVkm6otq7CgsbTNqgC15zGD05bgRBOhXj6CA=",
+  "Hash": "nidujr721nlrTEFQAnO7Sqj4NC+N7Enmkui1CYtEJDw=",
   "Source": "InStudyFE",
   "BasePath": "_content/InStudyFE",
   "Mode": "Default",
@@ -14788,6 +14788,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\scss\\slick\\slick-theme.scss"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\wwwroot\\css\\scss\\slick\\university.css",
+      "SourceId": "InStudyFE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\wwwroot\\",
+      "BasePath": "_content/InStudyFE",
+      "RelativePath": "css/scss/slick/university.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\scss\\slick\\university.css"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\wwwroot\\css\\scss\\style.css",

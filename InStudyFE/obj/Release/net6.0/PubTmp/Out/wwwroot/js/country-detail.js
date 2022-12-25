@@ -56,7 +56,7 @@
  <h1>${name1}</h1> 
                                     
 `)
-            $countryDetail.append(`<p>${description}</p>`)
+            $countryDetail.append(` <div><p>${description}</p></div>`)
 
 
 
