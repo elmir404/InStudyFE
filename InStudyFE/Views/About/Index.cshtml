@@ -37,7 +37,7 @@
       <div class="mdc-layout-grid GridInContainer">
          <main class="SwitchableContentContainer mdc-layout-grid__inner">
             <div id="SwitchableContent" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-8-desktop">
-               <div class="SwitchableGroup js-content-key_facts key_facts" id="key_facts">
+               <div class="SwitchableGroup js-content-key_facts key_facts" id="key_facts_content">
                   <button class="ToggleButton js-contentButtons js-content-key_facts mdc-layout-grid" data-id="key_facts">
                      <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Key information</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
                   </button>
@@ -149,7 +149,7 @@
                      </div>
                   </article>
                </div>
-               <div class="SwitchableGroup js-content-description description" id="description">
+               <div class="SwitchableGroup js-content-description description" id="description_content">
                   <button class="ToggleButton js-contentButtons js-content-description mdc-layout-grid" data-id="description">
                      <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Overview</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
                   </button>
@@ -166,7 +166,7 @@
                      </div>
                   </article>
                </div>
-               <div class="SwitchableGroup js-content-contents contents is-visible" id="contents">
+               <div class="SwitchableGroup js-content-contents contents is-visible" id="contents_content">
                   <button class="ToggleButton js-contentButtons js-content-contents mdc-layout-grid" data-id="contents">
                      <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Programme structure</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
                   </button>
@@ -190,7 +190,7 @@
                      </div>
                   </article>
                </div>
-               <div class="SwitchableGroup js-content-requirement requirement"  id="requirement">
+               <div class="SwitchableGroup js-content-requirement requirement"  id="requirement_content">
                   <button class="ToggleButton js-contentButtons js-content-requirement mdc-layout-grid" data-id="requirement">
                      <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Admission requirements</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
                   </button>
@@ -276,7 +276,7 @@
                      </div>
                   </article>
                </div>
-                    <div class="SwitchableGroup js-content-work_permit work_permit" id="work_permit">
+                <div class="SwitchableGroup js-content-work_permit work_permit" id="work_permit_content">
                   <button class="ToggleButton js-contentButtons js-content-work_permit mdc-layout-grid" data-id="work_permit">
                      <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Work permit</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
                   </button>
@@ -297,12 +297,11 @@
             <div id="SwitchableContentButtons" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
                <div id="ContentSwitcherWrapper" class="ContentSwitcherWrapper">
                   <nav id="ContentSwitcher" class="ContentSwitcher"> 
-                            <button type="button" class="ContentButton js-contentButtons key_facts" onclick="switch('key_facts')"> Key information </button>
-                            <button type="button" class="ContentButton js-contentButtons description " onclick="switch('description')" > Overview </button>
-                            <button type="button" class="ContentButton js-contentButtons contents is-active" onclick="switch('contents')"> Programme structure </button>
-                            <button type="button" class="ContentButton js-contentButtons requirement" onclick="switch('requirement')"> Admission requirements </button>
-                            <button type="button" class="ContentButton js-contentButtons fees_and_funding" onclick="switch('fees_and_funding')"> Fees and funding </button>
-                            <button type="button" class="ContentButton js-contentButtons work_permit" onclick="switch('work_permit')"> Work permit </button>
+                            <button type="button" class="ContentButton js-contentButtons key_facts" id="key_facts" onclick="swith('key_facts')"> Key information </button>
+                            <button type="button" class="ContentButton js-contentButtons description " id="description" onclick="swith('description')"> Overview </button>
+                            <button type="button" class="ContentButton js-contentButtons contents is-active" id="contents" onclick="swith('contents')"> Programme structure </button>
+                            <button type="button" class="ContentButton js-contentButtons requirement" id="requirement" onclick="swith('requirement')"> Admission requirements </button>
+                            <button type="button" class="ContentButton js-contentButtons work_permit" id="work_permit" onclick="swith('work_permit')"> Work permit </button>
                         </nav>
                </div>
             </div>
@@ -311,12 +310,21 @@
    </div>
    @section Scripts{
        <script>
-        function switch(id) {
+        function swith(id) {
             console.log(`${id}`);
             const collection = document.getElementById("SwitchableContent").children;
+            const buttons = document.getElementById("ContentSwitcher").children;
             for (let i = 0; i < collection.length; i++) {
-                collection[i].classList.remove = "is-visible";
+                collection[i].classList.remove("is-visible");
+                buttons[i].classList.remove("is-active")
+                console.log(collection[i]);
             }
+
+            const menuItem=document.getElementById(id);
+            const menuContent=document.getElementById(id+"_content");
+            menuItem.classList.add("is-active");
+            menuContent.classList.add("is-visible");
+            
         }
 
        </script>
