@@ -5,7 +5,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -27,71 +27,75 @@
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
-													<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+													<input type="text" class="form-control" name="name" id="requestName" placeholder="Name">
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
-													<input type="text" class="form-control" name="name" id="name" placeholder="Surname">
+													<input type="text" class="form-control" name="name" id="lastName" placeholder="Surname">
 												</div>
 											</div>
 											<div class="col-md-12"> 
 												<div class="form-group">
-													<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+													<input type="email" class="form-control" name="email" id="requestEmail" placeholder="Email">
 												</div>
 											</div>
 											<div class=" col-md-6">
 						<label for="phone">Phone</label>
-						<input type="tel" class="form-control" id="phone" placeholder="123456789">
+						<input type="tel" class="form-control" id="requestPhone" placeholder="123456789">
 					</div>
 					<div class=" col-md-6">
 						<label for="Wp">Have Whatsapp</label>
-						<div class="form-control btn-group" data-toggle="buttons">
+						<div class="form-control btn-group" id="requestWhatsapp" data-toggle="buttons">
 							<label class="btn btn-default">
-								<input type="radio" name="wp" autocomplete="off" checked>Yes
+								<input type="radio" name="wp" autocomplete="off" />Yes
 							</label>
 							<label class="btn btn-default">
-								<input type="radio" name="wp" autocomplete="off">No
+								<input type="radio" name="wp" autocomplete="off" />No
 							</label>
 
 						</div>
 					</div>
-					<div class="form-group col-sm-6">
+					<div class="form-group col-md-6">
+						<label for="IsOnline">IsOnline</label>
+						<div class="form-control btn-group" id="requestType" data-toggle="buttons">
+							<label class="btn btn-default">
+								<input type="radio" name="IsOnline" autocomplete="off" />Yes
+							</label>
+							<label class="btn btn-default">
+								<input type="radio" name="IsOnline" autocomplete="off" />No
+							</label>
+					</div>
+					</div>
+					<div class="form-group col-md-6">
+						<label for="consulted">Consulted</label>
+						<div class="form-control btn-group" data-toggle="buttons">
+							<label class="btn btn-default">
+								<input type="radio" id="show" name="example"  value="show" autocomplete="off" />Yes
+							</label>
+							<label class="btn btn-default">
+								<input type="radio" id="hide" name="example"  value="hide" autocomplete="off" />No
+							</label>
+					</div>
+					</div>
+					<div id="box" class="row">
+						<div class="form-group col-md-6" id="requestDate">
 						<label for="birthdaytime">Date (date and time):</label>
 						<input type="datetime-local" id="birthdaytime" name="birthdaytime">
 
 					</div>
-					<div class="form-group col-sm-6">
+					<div class="form-group col-md-6" id="requestMessage">
 						<label for="comment">Description:</label>
 						<textarea class="form-control overflow-auto" rows="3" id="comment"></textarea>
 					</div>
 
-					<div class="form-group col-sm-6">
-						<label for="IsOnline">IsOnline</label>
-						<div class="form-control btn-group" data-toggle="buttons">
-							<label class="btn btn-default">
-								<input type="radio" name="IsOnline" autocomplete="off" checked>Yes
-							</label>
-							<label class="btn btn-default">
-								<input type="radio" name="IsOnline" autocomplete="off">No
-							</label>
-					</div>
-					</div>
-						<div class="form-group col-sm-6">
-						<label for="IsActive">IsActive</label>
-						<div class="form-control btn-group" data-toggle="buttons">
-							<label class="btn btn-default">
-								<input type="radio" name="IsActive" autocomplete="off" checked>Yes
-							</label>
-							<label class="btn btn-default">
-								<input type="radio" name="IsActive" autocomplete="off">No
-							</label>
 
-						</div>
 					</div>
+					
+						
 					<div class="form-group col-sm-4">
-						<label for="yourcontry">Your Country</label>
-						<select class="form-control" id="yourcontry">
+						<label for="yourcontry"> Student Country</label>
+						<select class="form-control" id="requestStudentCountry">
 						<option value="" selected disabled> Country</option>
 							<option value="AF">Afghanistan</option>
 							<option value="AL">Albania</option>
@@ -111,8 +115,8 @@
 							</select>
 							</div>
 							<div class="form-group col-sm-4">
-						<label for="yourcontry">Your Country</label>
-						<select class="form-control" id="yourcontry">
+						<label for="yourcontry"> Country</label>
+						<select class="form-control" id="requestCountry">
 							<option value="" selected disabled> Country</option>
 							<option value="AF">Afghanistan</option>
 							<option value="AL">Albania</option>
@@ -133,7 +137,7 @@
 							</div>
 							<div class="form-group col-sm-4">
 						<label for="direction">Direction</label>
-						<select class="form-control" id="direction">
+						<select class="form-control" id="requestDirection">
 							<option value="" selected disabled>Ixtisas secin</option>
 							<option value="">Mexanika-riyaziyyat fakültəsi</option>
 							<option value="">Tətbiqi riyaziyyat və kibernetika fakültəsi</option>
@@ -155,7 +159,11 @@
 					</div>
 				</div>
 			</div>
-	<div class="col-md-12 col-ms d-flex align-items-stretch">
+			<div  class="map-responsive">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12157.832442250336!2d49.7983683!3d40.37653835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1672127289874!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>
+	<div class=" col-md-12 col-ms d-flex align-items-stretch">
 								<div class="info-wrap bg-primary w-100 p-lg-5 p-8">
 									<h3 class="mb-8 mt-md-8">Contact us</h3>
 				        	<div class="dbox w-100 d-flex align-items-start">
@@ -191,6 +199,37 @@
 					          </div>
 				          </div>
 			          </div>
-							</div>
-		</div>
+
+					 
+	</div>
+
+	
+		
+
+
+</div>
+
+
+
+
+	
+	
 	</section>
+
+	@*<script>
+
+		 const box = document.getElementById('box');
+
+         function handleRadioClick() {
+         if (document.getElementById('show').checked) {
+         box.style.display = 'inline-block';
+       } else {
+         box.style.display = 'none';
+       }
+       }
+
+         const radioButtons = document.querySelectorAll('input[name="example"]');
+         radioButtons.forEach(radio => {
+         radio.addEventListener('click', handleRadioClick);
+         });
+    </script>*@
