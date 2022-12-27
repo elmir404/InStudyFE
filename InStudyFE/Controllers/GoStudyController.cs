@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace InStudyFE.Controllers
 {
     [Authorize]
-    public class AboutController : Controller
+    public class GoStudyController : Controller
     {
         public IActionResult Index()
         {

@@ -1,5 +1,8 @@
 ﻿ @section Css{
      <style>
+         *, ::after, ::before {
+    box-sizing:unset;
+}
                  .acc-container {
           max-width: 700px;
           width: 100%;
@@ -86,20 +89,17 @@
                         <ul class="OnboardingList">
                            <li class="OnboardingItem Explore">
                               <div class="OnboardingBullet"><i class="OnboardingIcon lnr-compass2"></i></div>
-                              <div class="OnboardingText">
-                                 <p> <span class="ItemHeader">Explore</span> You can browse more than 30.000 online programmes from universities all over the world. </p>
+                              <div id="header1" class="OnboardingText">
                               </div>
                            </li>
                            <li class="OnboardingItem Compare">
                               <div class="OnboardingBullet"><i class="OnboardingIcon lnr-compare"></i></div>
-                              <div class="OnboardingText">
-                                 <p> <span class="ItemHeader">Compare</span> Make a wishlist of your favourite programmes, check your fit with them, and read what other students are saying. </p>
+                              <div id="header2" class="OnboardingText">
                               </div>
                            </li>
                            <li class="OnboardingItem Decide">
                               <div class="OnboardingBullet"><i class="OnboardingIcon lnr-archery"></i></div>
-                              <div class="OnboardingText">
-                                 <p> <span class="ItemHeader">Decide</span> Now that you have your top programmes shortlisted, you can pick the ones that fit you the best. </p>
+                              <div id="header3" class="OnboardingText">
                               </div>
                            </li>
                            <li class="OnboardingItem Apply">
@@ -119,8 +119,7 @@
                                     </svg>
                                  </i>
                               </div>
-                              <div class="OnboardingText">
-                                 <p> <span class="ItemHeader">Apply</span> When you feel confident about your online programme choice, you can apply directly via Studyportals. <a class="ApplyTextLink">Find out how.</a>. </p>
+                              <div id="header4" class="OnboardingText">
                               </div>
                            </li>
                            <li class="OnboardingItem Apply">
@@ -129,8 +128,7 @@
                                    <i class="lnr-bubble UnibuddyIcon"></i>
                                  </i>
                               </div>
-                              <div class="OnboardingText">
-                                 <p> <span class="ItemHeader">Contact</span> When you feel confident about your online programme choice, you can apply directly via Studyportals. <a class="ApplyTextLink">Find out how.</a>. </p>
+                              <div id="header5" class="OnboardingText">
                               </div>
                            </li>
                         </ul>
@@ -183,49 +181,8 @@
                <div class="colblock">
                   <div data-module="" class="Module StudyPortals_Shared_Modules_FavouriteQuotes_FavouriteQuotes">
                      <aside id="FavouriteQuotes">
-                        <h2 class="FavouriteQuotesTitle">Us in students' words</h2>
-                        <ul class="Quotes">
-                           <li class="Quote">
-                              <div class="Author">
-                                 <img class="AuthorImage" src="https://monet-prtl-co.imgix.net/Academic/reviewer-Luna.jpg?h=80&amp;auto=format,compress&amp;q=40" alt="Luna" width="80" height="80" loading="lazy"> 
-                                 <div class="AuthorDetails"> <span class="AuthorName">Luna</span> <span class="AuthorCountry">Brazil</span> </div>
-                              </div>
-                              <blockquote>I have used it to find my programme and I know how much it can help students in making the right decision.
-                                 Even now that I am already registered, I still use Studyportals to find summer programmes and I am
-                                 constantly recommending it to friends that are going through the same struggle that I went through when
-                                 I had to choose a study.
-                              </blockquote>
-                           </li>
-                           <li class="Quote">
-                              <div class="Author">
-                                 <img class="AuthorImage" src="https://monet-prtl-co.imgix.net/Academic/reviewer-Carolin.jpg?h=80&amp;auto=format,compress&amp;q=40" alt="Carolin" width="80" height="80" loading="lazy"> 
-                                 <div class="AuthorDetails"> <span class="AuthorName">Carolin</span> <span class="AuthorCountry">Belize</span> </div>
-                              </div>
-                              <blockquote>I was looking for universities for roughly over a year through Studyportals and I finally found my
-                                 university through them. Moving from home might have some doubts but it is worth it to experience
-                                 the world and get a taste of what is truly out there.
-                              </blockquote>
-                           </li>
-                           <li class="Quote">
-                              <div class="Author">
-                                 <img class="AuthorImage" src="https://monet-prtl-co.imgix.net/Academic/reviewer-Angelica.jpg?h=80&amp;auto=format,compress&amp;q=40" alt="Angelica" width="80" height="80" loading="lazy"> 
-                                 <div class="AuthorDetails"> <span class="AuthorName">Angelica</span> <span class="AuthorCountry">Canada</span> </div>
-                              </div>
-                              <blockquote>Studyportals helped me find my dream program in Bioarchaeological and Forensic Anthropology.
-                                 If you have the opportunity, take the leap! There are no words to describe how much it's worth it.
-                              </blockquote>
-                           </li>
-                           <li class="Quote">
-                              <div class="Author">
-                                 <img class="AuthorImage" src="https://monet-prtl-co.imgix.net/Academic/reviewer-Hurmet.jpg?h=80&amp;auto=format,compress&amp;q=40" alt="Hurmet" width="80" height="80" loading="lazy"> 
-                                 <div class="AuthorDetails"> <span class="AuthorName">Hurmet</span> <span class="AuthorCountry">Albania</span> </div>
-                              </div>
-                              <blockquote>Studyportals is the main factor that I am here. It was my best decision of my life. Now I am living my
-                                 dream, to study, work and live abroad. I got to know amazing people from all around the world, learned
-                                 some German, and I love the University programme, is intense, involving and helps students to grow in
-                                 the personal and professional aspect.
-                              </blockquote>
-                           </li>
+                        <h2 id="quateHeader" class="FavouriteQuotesTitle"></h2>
+                        <ul id="quotes" class="Quotes">
                         </ul>
                      </aside>
                   </div>

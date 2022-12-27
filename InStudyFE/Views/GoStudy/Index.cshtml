@@ -1,0 +1,73 @@
+﻿@section Css{
+ <link rel="stylesheet" href="~/css/scss/slick/university.css"/>
+}
+<div id="LayoutWrapper" class="js-exclusiveAccessOuterWrapper">
+   <div id="LayoutHero">
+      <div data-module="" class="Module StudyPortals_Shared_Modules_Study_Hero_Hero">
+         <div id="Hero" class="js-Hero">
+            <div class="HeroImageContainer"> <span class="HeroImage"> <span class="HeroImageDefaultWrapper"> <img fetchpriority="high" rel="preconnect" src="//monet-prtl-co.imgix.net/Shared/StudyPage/CoverImageBasicDesktop.svg" alt="Studyportals"> </span> </span> </div>
+              
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="LayoutContentCards">
+      <div class="mdc-layout-grid GridInContainer">
+         <div class="mdc-layout-grid__inner">
+            <nav class="DesktopOnlyBlock mdc-layout-grid__cell--span-12">
+               <ul class="BreadcrumbsListOnStudyPage">
+                  <li class="BreadCrumbsItem DesktopOnlyBlock"> <a href="https://www.mastersportal.com/search/master" class="BreadCrumbLink" title="All studies">All studies</a> </li>
+                  <li class="BreadCrumbsItem DisciplineListItem"> <a href="https://www.mastersportal.com/search/master/event-management" class="BreadCrumbLink" title="Event Management">Event Management</a> </li>
+                  <li class="BreadCrumbsItem DesktopOnlyBlock"> <a href="https://www.mastersportal.com/search/master/event-management/europe" class="BreadCrumbLink" title="Europe">Europe</a> </li>
+                  <li class="BreadCrumbsItem"> <a href="https://www.mastersportal.com/search/master/event-management/netherlands" class="BreadCrumbLink" title="Netherlands">Netherlands</a> </li>
+                  <li class="BreadCrumbsItem DesktopOnlyBlock"> <a href="https://www.mastersportal.com/universities/1019/wittenborg-university-of-applied-sciences.html" class="BreadCrumbLink" title="Wittenborg University of Applied Sciences">Wittenborg University of Applied Sciences</a> </li>
+                  <li class="BreadCrumbsItem DesktopOnlyBlock"> Business Management - Event Management </li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+   </div>
+   <div id="LayoutGlobalAccessInitiativeBanner">
+      <div class="mdc-layout-grid GridInContainer">
+         <div class="mdc-layout-grid__inner"> </div>
+      </div>
+   </div>
+   
+   <div id="LayoutDetailedInformation">
+      <div class="mdc-layout-grid GridInContainer">
+         <main class="SwitchableContentContainer mdc-layout-grid__inner">
+            <div id="SwitchableContent" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-8-desktop">
+            </div>
+            <div id="SwitchableContentButtons" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
+               <div id="ContentSwitcherWrapper" class="ContentSwitcherWrapper">
+                  <nav id="ContentSwitcher" class="ContentSwitcher"> 
+                        </nav>
+               </div>
+            </div>
+         </main>
+      </div>
+   </div>
+   @section Scripts{
+       <script>
+        function swith(id) {
+            console.log(`${id}`);
+            const collection = document.getElementById("SwitchableContent").children;
+            const buttons = document.getElementById("ContentSwitcher").children;
+            for (let i = 0; i < collection.length; i++) {
+                collection[i].classList.remove("is-visible");
+                buttons[i].classList.remove("is-active")
+                console.log(collection[i]);
+            }
+
+            const menuItem=document.getElementById(id);
+            const menuContent=document.getElementById(id+"_content");
+            menuItem.classList.add("is-active");
+            menuContent.classList.add("is-visible");
+            
+        }
+
+       </script>
+       <script src="~/js/about.js"></script>
+       
+   }
+  

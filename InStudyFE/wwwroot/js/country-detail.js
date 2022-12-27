@@ -7,7 +7,6 @@
     var $countryImage = $('#HeroImage');
     var $countryHeader = $('#LinkTrail');
     var $countryImg = $('#CountryHeader');
-    var $countryDetail = $('#StudyIn');
     var $universities = $('#universities');
     var $StudyUniversity = $('#StudyUniversity');
     if ($lang == 'AZ') {
@@ -58,7 +57,7 @@
                 
                 `
             );
-         
+              
             $countryHeader.append(` <ul class="LinkTrail">
                                             <li> <a href="/Home/Index"
                                                     title="Home">Home></a> </li>
@@ -71,7 +70,23 @@
  <h1>${name1}</h1> 
                                     
 `)
-            $countryDetail.append(` <div><p>${description}</p></div>`)
+            
+            $('#StudyIn').append(`
+${data?.data?.study}
+`);
+            $('#About').append(`
+${description}
+`);
+            $('#Living').append(`
+${data?.data?.living}
+`);
+            $('#Visa').append(`
+${data?.data?.studentVisa}
+`);
+  $('#Permit').append(`
+${data?.data?.workPermit}
+`);
+
 
 
 
@@ -88,7 +103,7 @@
             $universities.empty();
             $.each(
                 data.data, function (i, value) {
-                    console.log(value);
+                    console.log("ssadsa",value);
                     const date = new Date(value.regDate)
 
                     var dd = String(date.getDate()).padStart(2, '0');
@@ -112,7 +127,7 @@
                     var image = `data:image/png;base64,${value?.universityFiles[0]?.bytes}`
                     $universities.append(
                         `
-                             <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail/${value.Id}" target="_blank" class="ContentCard js-studyCard">
+                             <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail/${value.id}" target="_blank" class="ContentCard js-studyCard">
                                 <div data-v-78fa3586="" data-v-6e0e8e37="">
                                    <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="${image}" loading="lazy" width="288" height="152"></div>
                                 </div>
@@ -128,7 +143,7 @@
                                 <div data-v-6e0e8e37="" class="OrganisationInformation">
                                    <div data-v-6e0e8e37="" class="NameLocation">
                                       <div data-v-6e0e8e37="" class="Name"></div>
-                                      <div data-v-6e0e8e37="" class="Location">Breda, Netherlands</div>
+                                      <div data-v-6e0e8e37="" class="Location">${value?.country?.enName}</div>
                                    </div>
                                 </div>
                              </a>
