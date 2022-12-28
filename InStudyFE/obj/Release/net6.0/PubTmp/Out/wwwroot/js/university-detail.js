@@ -5,9 +5,9 @@
     const $lang = localStorage.getItem('lang');
 
     var $uniImage = $('#HeroContainer');
-    var $uniHeader = $('#LinkTrail');
-    var $uniDetail = $('#StudyIn');
-    var $shortDetail = $('#ShortDescription');
+    var $headerName = $('#HeaderName');
+    var $shortDetail = $('#StudySummary');
+    var $quickFacts = $('#QuickFacts');
     var $map = $('#mapAddress');
     $.ajax({
         type: 'GET',
@@ -23,58 +23,96 @@
             var yyyy = date.getFullYear();
             var time = yyyy + "/" + mm + "/" + dd;
             if ($lang == 'AZ') {
-                var name1 = data.data.azName
+                var name1 = data.data?.azName
                 var description = data.data?.azDescription;
+                var title = "Haqqında";
 
             }
             else if ($lang == 'EN') {
-                var name1 = data.data.enName
+                var name1 = data.data?.enName
                 var description = data.data?.enDescription;
+                var title = "About";
+
 
             } else {
-                var name1 = data.data.ruName;
+                var name1 = data.data?.ruName;
                 var description = data.data?.ruDescription;
+                var title = "O нас";
+
 
             }
             var image = `data:image/png;base64,${data.data?.universityFiles[0]?.bytes}`;
-            $map.empty()
-            $map.append(`
-            <a href="${data.data.mapAdrress}" title="Linköping">${data.data.address}</a>
-`)
+            
             $uniImage.empty();
             $uniImage.append(
                 `      <span class="HeroImage js-heroImage" style="background-image:url('${image}');">
 
         </span> <span class="HeroImagePlaceholder HeroImage js-heroImageLowResPlaceholder" style="background-image:url('${image}');">
 
-        </span> <span class="HeroOverlay"></span>
-        <div class="HeroContentWrapper HideHeroContent">
-            <div class="HeroContentModule ">
-                <section class="HeroBackground"></section>
-                <section class="HeroContent">
-                    <div class="HeroImageSources js-heroImageSources"> </div>
-                    <div class="HeroTextContent">
-                        <section id="OrganisationCoverImage" data-premium="" data-organisation_id="9">
-                            <article>
-                                <header>
-                                    <h1><span class="OrganisationTitle">${name1} </span></h1>
-                                </header>
-                            </article>
-                        </section>
-                    </div>
-                </section>
-            </div>
-        </div>
-                  
+        </span> <span class="HeroOverlay"></span>   
                         `
             );
-            $uniHeader.append(`<ul class="LinkTrail">
-                                            <li> <a href="/Home/Index"
-                                                    title="Home">Home></a> </li>
-                                            <li>${name1} </li>
-                                        </ul>
+            $quickFacts.append(`
+<div class="mdc-layout-grid__inner">
+                  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-3-desktop">
+                     <div class="QuickFact">
+                        <div class="Icon"> <i class="lnr-clock3"></i> </div>
+                        <div class="LabelContainer">
+                           <div class="Title"> <span class="js-duration" data-rewrite="true" data-period="months" data-duration="18" data-days-single="day" data-days-multiple="days" data-weeks-single="week" data-weeks-multiple="weeks" data-months-single="month" data-months-multiple="months" data-years-single="year" data-years-multiple="years">1½ years</span> </div>
+                           <div class="Label"> Duration </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-3-desktop">
+                     <div class="QuickFact">
+                        <div class="Icon"> <i class="lnr-bag-coins"></i> </div>
+                        <div class="LabelContainer">
+                           <div class="Title">
+                              <div class="js-LocalizedContent" data-country-id="1">
+                                 <div class="TuitionFeeContainer" data-target="international"> <span data-currency-rewrite="" data-discount="0" data-currency="EUR" data-duration="18" data-period="months" data-original_html="12200&nbsp;EUR" data-amount="12200" data-original-amount="18300" data-currency-symbol="no" class="Title" data-converted_amount="12200" title="Converted from 12200&nbsp;EUR">12,200</span> <span class="CurrencyContainer"> <span class="CurrencyType Fact" data-currency-text="EUR" data-institution-currency="EUR">EUR</span>/year </span> </div>
+                                 <div class="TuitionFeeContainer Hidden" data-target="eea"> <span data-currency-rewrite="" data-discount="0" data-currency="EUR" data-duration="18" data-period="months" data-original_html="12200&nbsp;EUR" data-amount="12200" data-original-amount="18300" data-currency-symbol="no" class="Title" data-converted_amount="12200" title="Converted from 12200&nbsp;EUR">12,200</span> <span class="CurrencyContainer"> <span class="CurrencyType Fact" data-currency-text="EUR" data-institution-currency="EUR">EUR</span>/year </span> </div>
+                                 <div class="TuitionFeeContainer js-notAvailable Unknown Hidden">Unknown</div>
+                              </div>
+                           </div>
+                           <div class="Label"> Tuition fee </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-3-desktop">
+                     <div class="QuickFact">
+                        <div class="Icon"> <i class="lnr-paper-plane"></i> </div>
+                        <div class="LabelContainer">
+                           <div class="Title">
+                              <div class="js-LocalizedContent" data-country-id="1">
+                                 <div class="TimingContainer" data-target="general"> Anytime </div>
+                                 <div class="TimingContainer js-notAvailable Unknown Hidden">Unknown</div>
+                              </div>
+                           </div>
+                           <div class="Label"> Apply date </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-3-desktop">
+                     <div class="QuickFact">
+                        <div class="Icon"> <i class="lnr-calendar-full"></i> </div>
+                        <div class="LabelContainer">
+                           <div class="Title">
+                              <div class="js-LocalizedContent">
+                                 <div class="TimingContainer" data-target="general"> <time datetime="2023-08-22" data-format="MMM YYYY">Aug 2023</time> </div>
+                                 <div class="TimingContainer js-notAvailable Unknown Hidden">Unknown</div>
+                              </div>
+                           </div>
+                           <div class="Label"> Start date </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
 `);
-            $shortDetail.html(`${description}`)
+            $headerName.append(` <h1 class="StudyTitle">${name1}</h1>`);
+            $shortDetail.html(`
+        <h2>${title}</h2>
+               <p>${description}</p>
+            `);
 
 
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Uf7ThMmn8PYOVlNxrcDDp73pMm5y0Sa199qwzJGJgZg=",
+  "Hash": "sDvbutEOh7guueyi4oj4U3r0FnSNFywS93M+H8z3tJY=",
   "Source": "InStudyFE",
   "BasePath": "_content/InStudyFE",
   "Mode": "Default",
@@ -12580,6 +12580,23 @@
       "OriginalItemSpec": "wwwroot\\ComingSoon\\scss\\style.scss"
     },
     {
+      "Identity": "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\wwwroot\\css\\contact.css",
+      "SourceId": "InStudyFE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\wwwroot\\",
+      "BasePath": "_content/InStudyFE",
+      "RelativePath": "css/contact.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\contact.css"
+    },
+    {
       "Identity": "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\wwwroot\\css\\images\\australia.svg",
       "SourceId": "InStudyFE",
       "SourceType": "Discovered",
@@ -14535,6 +14552,23 @@
       "OriginalItemSpec": "wwwroot\\css\\scss\\responsive1.css"
     },
     {
+      "Identity": "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\wwwroot\\css\\scss\\search.css",
+      "SourceId": "InStudyFE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\wwwroot\\",
+      "BasePath": "_content/InStudyFE",
+      "RelativePath": "css/scss/search.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\scss\\search.css"
+    },
+    {
       "Identity": "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\wwwroot\\css\\scss\\shared.css",
       "SourceId": "InStudyFE",
       "SourceType": "Discovered",
@@ -14873,6 +14907,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\scss\\style3.css"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\wwwroot\\css\\scss\\university1.css",
+      "SourceId": "InStudyFE",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\wwwroot\\",
+      "BasePath": "_content/InStudyFE",
+      "RelativePath": "css/scss/university1.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\scss\\university1.css"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\InStudyFE\\InStudyFE\\wwwroot\\css\\site.css",

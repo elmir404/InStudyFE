@@ -48,26 +48,42 @@
       </div>
    </div>
    @section Scripts{
+    <script src="~/js/about.js"></script>
+
        <script>
+             var pathname = window.location.pathname;
+             const linkValues = pathname.split("/");
+        console.log(linkValues[3]);
+        const menuItem = document.getElementById(linkValues[3]);
+        console.log(menuItem);
+        const menuContent = document.getElementById(linkValues[3] + "_content");
+       
+        menuItem.classList.add("is-active");
+        menuContent.classList.add("is-visible");
         function swith(id) {
-            console.log(`${id}`);
+            console.log(`asdsd ${id}`);
             const collection = document.getElementById("SwitchableContent").children;
+            console.log(collection);
             const buttons = document.getElementById("ContentSwitcher").children;
+            console.log(buttons);
+
             for (let i = 0; i < collection.length; i++) {
                 collection[i].classList.remove("is-visible");
                 buttons[i].classList.remove("is-active")
-                console.log(collection[i]);
+                console.log("sadasda");
             }
 
             const menuItem=document.getElementById(id);
+            console.log(menuItem)
             const menuContent=document.getElementById(id+"_content");
+            console.log(menuContent)
             menuItem.classList.add("is-active");
             menuContent.classList.add("is-visible");
             
         }
+         
 
        </script>
-       <script src="~/js/about.js"></script>
        
    }
   

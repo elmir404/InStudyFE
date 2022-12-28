@@ -352,6 +352,50 @@ ${value.description};
         }
 
     });
+
+    $.ajax({
+        type: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        url: `https://api.instudy.net/api/About/GetAbouts`,
+
+        success: function (data) {
+
+            $.each(
+                data.data, function (i, value) {
+
+                    if ($lang == 'AZ') {
+                        var name1 = value.azHeader
+                        var description = value?.azDescription;
+
+                    }
+                    else if ($lang == 'EN') {
+                        var name1 = value.enHeader
+                        var description = value?.enDescription;
+
+                    } else {
+                        var name1 = value.ruHeader;
+                        var description = value?.ruDescription;
+
+                    }
+
+
+
+
+
+                    $(`#goStudys`).append(`
+                                                <li class="SubSectionContentItem"> <a class="ContentItemLink js-ContentItemLink" href="/GoStudy/Index/value${value.id}" title="${name1}">${name1} </a> </li>
+                                 
+
+`
+                    );
+                }
+            )
+
+        }
+
+    });
     $.ajax({
         type: 'GET',
         headers: {
@@ -484,17 +528,17 @@ ${value.description};
                         //var yyyy = date.getFullYear();
                         //var time = yyyy + "/" + mm + "/" + dd;
                         if ($lang == 'AZ') {
-                            var header = data.data?.azHeader
-                            var body = data.data?.azBody;
+                            var header = data?.data?.azHeader
+                            var body = data?.data?.azBody;
 
                         }
                         else if ($lang == 'EN') {
-                            var header = data.data?.enHeader
-                            var body = data.data?.enBody;
+                            var header = data?.data?.enHeader
+                            var body = data?.data?.enBody;
 
                         } else {
-                            var header = data.data?.ruHeader
-                            var body = data.data?.ruBody;
+                            var header = data?.data?.ruHeader
+                            var body = data?.data?.ruBody;
 
                         }
                       
@@ -518,7 +562,7 @@ ${value.description};
                                          `
                 );
                 $.each(
-                    data.data.questions, function (i, value) {
+                    data?.data?.questions, function (i, value) {
                         //console.log(value.regDate);
                         //const date = new Date(value.regDate)
 
@@ -544,12 +588,12 @@ ${value.description};
                        
                             $questions.append(
                                 `   <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading${value.id}">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${value.id}" aria-expanded="true" aria-controls="collapse${value.id}">
+                        <h2 class="accordion-header" id="heading${value?.id}">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${value?.id}" aria-expanded="true" aria-controls="collapse${value?.id}">
                                 ${title}
                             </button>
                         </h2>
-                        <div id="collapse${value.id}" class="accordion-collapse collapse " aria-labelledby="heading${value.id}" data-bs-parent="#accordionExample">
+                        <div id="collapse${value?.id}" class="accordion-collapse collapse " aria-labelledby="heading${value?.id}" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 ${answer}
                             </div>
