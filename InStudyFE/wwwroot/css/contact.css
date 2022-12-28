@@ -11656,14 +11656,16 @@ textarea.form-control {
         position: absolute;
     }
 
-@media (max-width: 480px){
+@media (max-width: 769px){
     body h3 {
         font-size: 15px;
         font-weight: 600;
         line-height: 29px;
         margin-left: 10px;
     }
-
+    .ftco-section {
+        padding: 0em 0;
+    }
     .info-wrap .dbox {
         margin-bottom: 14px;
     }
