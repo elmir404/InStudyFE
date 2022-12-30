@@ -126,7 +126,11 @@
                                          `
                             )
                         }
+                        $(`#country`).append(`
+                                                 <li class="Suggestion Link" data-position="0" onclick="searchCountry('${name}','${value.id}')" data-param-value="351" data-param-name="discipline_ids">${name}</li>
 
+
+`);
 
                     }
                 )
@@ -135,6 +139,41 @@
 
         });
     }
+    $.ajax({
+        type: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        url: `https://api.instudy.net/api/Program/GetPrograms`,
+
+        success: function (data) {
+            $country.empty();
+            $.each(
+                data.data, function (i, value) {
+                    if ($lang == 'AZ') {
+                        var name = value.azName
+
+                    }
+                    else if ($lang == 'EN') {
+                        var name = value.enName
+
+                    } else {
+                        var name = value.ruName;
+                       
+
+                    }  
+                    $(`#program`).append(`
+                                                 <li class="Suggestion Link" onclick="searchProgram('${name}','${value.id}')"  data-param-name="discipline_ids">${name}</li>
+
+
+`);
+
+                }
+            )
+
+        }
+
+    });
     function getHeader() {
         $.ajax({
             type: 'GET',
@@ -282,7 +321,10 @@
                            <li data-clickable="clickable"> <a href="/Discipline/Detail/${value.id}" title="Agriculture &amp; Forestry"> <i class="lnr-tree DisciplineIcons"></i> ${name} </a> </li>
 
 `);
+                        $("#direction").append(`
+                                                 <li class="Suggestion Link" data-position="0" onclick="searchDirection('${name}','${value.id}')" data-param-value="351" data-param-name="discipline_ids">${name}</li>
 
+`);
                         //var description = value.description.slice(0, 5);
                         //$country.append(
                         //    ` <figure data-clickable="clickable">

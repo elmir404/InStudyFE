@@ -1,6 +1,6 @@
-﻿*, ::after, ::before {
+﻿/**, ::after, ::before {
     box-sizing: unset !important;
-}
+}*/
 #OffCanvasFilterMenu {
     background-color: #fff;
     max-width: 480px;
@@ -3635,4 +3635,7 @@ body .Hidden {
     font-weight: 400;
     line-height: 1rem;
     margin: 0.25rem 0 0;
+}
+.FilterContainer .is-collapsed .RefineContentOptionsList {
+    display: none;
 }

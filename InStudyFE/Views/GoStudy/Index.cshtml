@@ -49,18 +49,11 @@
       </div>
    </div>
    @section Scripts{
-    <script src="~/js/about.js"></script>
-
+   
+    <script async src="~/js/about.js"></script>
+    
        <script>
-             var pathname = window.location.pathname;
-             const linkValues = pathname.split("/");
-        console.log(linkValues[3]);
-        const menuItem = document.getElementById(linkValues[3]);
-        console.log(menuItem);
-        const menuContent = document.getElementById(linkValues[3] + "_content");
-       
-        menuItem.classList.add("is-active");
-        menuContent.classList.add("is-visible");
+          
         function swith(id) {
             console.log(`asdsd ${id}`);
             const collection = document.getElementById("SwitchableContent").children;

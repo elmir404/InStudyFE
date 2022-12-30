@@ -1547,4 +1547,8 @@ body #StudyHeaderContainer .col2-left{
 iframe[name=google_conversion_frame]{
     display:none
 }
+.Suggestion:hover {
+    background-color: #522EBD !important;
+    color: #fff !important;
+}
 /*# sourceMappingURL=shared.6ec21bf4cac8394260fd.css.map*/

@@ -1,6 +1,8 @@
 ﻿$(document).ready(function () {
     const $lang = localStorage.getItem('lang');
-
+    var pathname = window.location.pathname;
+    const linkValues = pathname.split("/");
+    console.log(linkValues[3]);
 $.ajax({
     type: 'GET',
     headers: {
@@ -32,12 +34,46 @@ $.ajax({
                     var description = value?.ruDescription;
 
                 }
-                $(`#ContentSwitcher`).append(
-                    `
+                if (linkValues[3] ==`value${value.id}`) {
+                    $(`#ContentSwitcher`).append(
+                        `
+                            <button type="button" class="ContentButton js-contentButtons key_facts is-active" id="value${value.id}" onclick="swith('value${value.id}')"> ${name1} </button>
+                          `
+                    );
+                } else {
+                    $(`#ContentSwitcher`).append(
+                        `
                             <button type="button" class="ContentButton js-contentButtons key_facts" id="value${value.id}" onclick="swith('value${value.id}')"> ${name1} </button>
                           `
-                )
-                $(`#SwitchableContent`).append(`
+                    );
+                }
+                if (linkValues[3] == `value${value.id}`) {
+
+
+                    $(`#SwitchableContent`).append(`
+<div class="SwitchableGroup js-content-key_facts key_facts is-visible" id="value${value.id}_content">
+                  <button class="ToggleButton js-contentButtons js-content-key_facts mdc-layout-grid" data-id="key_facts">
+                     <div class="ToggleButtonInner"><span class="ToggleButtonTitle">${name1}</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
+                  </button>
+                  <article class="ModulesContainer">
+                     <div data-module="Study:study_key_facts" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_KeyFacts_KeyFacts">
+                        <section>
+                           <div id="StudyKeyFacts">
+                              <h2 class="KeyFactsTitle">${name1}</h2>
+                              <article class="FactItem">
+                                   <div>
+${description}
+</div>
+                              </article>
+                              
+                           </div>
+                        </section>
+                     </div>
+                  </article>
+               </div>
+`)
+                } else {
+                    $(`#SwitchableContent`).append(`
 <div class="SwitchableGroup js-content-key_facts key_facts" id="value${value.id}_content">
                   <button class="ToggleButton js-contentButtons js-content-key_facts mdc-layout-grid" data-id="key_facts">
                      <div class="ToggleButtonInner"><span class="ToggleButtonTitle">${name1}</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
@@ -59,6 +95,7 @@ ${description}
                   </article>
                </div>
 `)
+                }
 
             }
         )

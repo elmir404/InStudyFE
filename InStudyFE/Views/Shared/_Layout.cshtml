@@ -78,16 +78,16 @@
                            </div>
                            <div data-module="" class="Module StudyPortals_Shared_Modules_HeaderMainMenu_HeaderMainMenu">
                               <nav id="HeaderMainMenu">
-                                 <a onclick="closeMenu()" class="MainMenuHideButton js-hideMainMenuButton"> <i class="lnr-cross MainMenuIcon HeaderIcon"></i> </a> 
-                                 <ul class="MainMenuSections SectionsNavigation">
-                                    <li class="SectionNavigationItem " onclick="selectMenu('explore')" id="explore"> <a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-compass2"></i> <span class="SectionNavigationLabel">Explore</span> </a> </li>
-                                    <li class="SectionNavigationItem "> <a class="SectionNavigationLink js-SectionNavigationLink"><i class="SectionNavigationIcon lnr-paper-plane"></i>  <span class="SectionNavigationLabel">Apply</span> </a> </li>
-                                    <li class="SectionNavigationItem" onclick="selectMenu('goStudy')" id="goStudy"> <a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-archery"></i> <span class="SectionNavigationLabel"> Go Study</span> </a> </li>
+                                <a onclick="closeMenu()" style="display:hidden;" class="MainMenuHideButton js-hideMainMenuButton"> <i class="lnr-cross MainMenuIcon HeaderIcon"></i> </a>
+                                <ul class="MainMenuSections SectionsNavigation">
+                                    <li class="SectionNavigationItem explore " onclick="selectMenu('explore')" id="explore"> </li>
+                                    <li class="SectionNavigationItem apply" id="apply">  </li>
+                                    <li class="SectionNavigationItem goStudy" onclick="selectMenu('goStudy')" id="goStudy">  </li>
                                  </ul>
                                  <ul class="MainMenuSections SectionsContent" id="SectionsContent">
                                     <li class="SectionNavigationItem "  id="exploreContent" style="left: 24px;">
-                                       <a class="SectionNavigationLink js-SectionNavigationLink" onclick="selectMenu('explore')" id="explore"> <i class="SectionNavigationIcon lnr-compass2"></i> <span class="SectionNavigationLabel">Explore</span> </a> 
-                                       <div class="SectionContent" data-menu-section="explore" style="left: 0px">
+                                        <a class="SectionNavigationLink js-SectionNavigationLink explore " onclick="selectMenu('explore')" id="explore"> </a>
+                                        <div class="SectionContent" data-menu-section="explore" style="left: 0px">
                                           <section class="SectionContentColumn SectionContentColumnLeft">
                                              <div id="disciplinesHeader" class="SubSectionContentTitle">   </div>
                                              <ul id="disciplinesMenu" class="SubSectionContentList SubSectionContentListPrimary">
@@ -106,7 +106,7 @@
                                              <ul id="universityMenu" class="SubSectionContentList">
                                                
                                              </ul>
-                                             <a class="SubSectionViewAllLink" href="/university/index" id="uniMore" title="View all countries"> View all universities </a> 
+                                             
                                           </section>
                                        </div>
                                     </li>
@@ -133,10 +133,10 @@
                                        </div>
                               </li>            
                                     <li class="SectionNavigationItem " id="goStudyContent" style="left: 237px;">
-                                       <a class="SectionNavigationLink js-SectionNavigationLink" onclick="selectMenu('goStudy')" id="goStudy"> <i class="SectionNavigationIcon lnr-archery"></i> <span class="SectionNavigationLabel">Go Study</span> </a> 
+                                       <a class="SectionNavigationLink js-SectionNavigationLink" style="display:hidden;" onclick="selectMenu('goStudy')" id="goStudy"> <i class="SectionNavigationIcon lnr-archery"></i> <span class="SectionNavigationLabel">Go Study</span> </a> 
                                        <div class="SectionContent SectionContentColumnFullWidth" data-menu-section="apply" style="left: -171px">
                                           <section class="SubSectionContent SubSectionContentSecondary">
-                                             <div class="SubSectionContentTitle">Tips to apply</div>
+                                             <div id="goStudyHeader" class="SubSectionContentTitle"></div>
                                              <ul id="goStudys" class="SubSectionContentList">
                                              </ul>
                                           </section>
@@ -149,26 +149,29 @@
                            <div class="HeaderSearch">
                               <div data-module="" class="Module StudyPortals_Shared_Modules_HeaderSearch_HeaderSearch">
                                  <div id="HeaderSearch">
-                                    <form method="get" action="https://www.mastersportal.com/search/master" class="Form" id="SearchForm">
+                                    <form class="Form" id="SearchForm">
                                        <div class="InputWrapper">
-                                          <input id="What" type="text" value="" name="discipline" class="Keywords AutoCompleteInput" placeholder="Program" autocomplete="off" data-type="what" data-order="1"> 
-                                          <div class="AutoCompleteContainer Hidden" style="width: 197px;">
-                                             <ul class="AutoComplete"></ul>
+                                          <input id="programInput" type="text" value="" name="discipline" class="Keywords AutoCompleteInput" autocomplete="off" data-type="what" data-order="1"> 
+                                          <div id="program_div" class="AutoCompleteContainer Hidden " style="width: 197px;">
+                                             <ul id="program" class="AutoComplete">
+                                             </ul>
                                           </div>
                                        </div>
                                        <div class="InputWrapper">
-                                          <input id="Where" type="text" value="" name="location" class="Keywords AutoCompleteInput" placeholder="Country" autocomplete="off" data-type="where" data-order="2"> 
-                                          <div class="AutoCompleteContainer Hidden" style="width: 197px;">
-                                             <ul class="AutoComplete"></ul>
+                                          <input id="countryInput" type="text" value="" name="location" class="Keywords AutoCompleteInput" autocomplete="off" data-type="where" data-order="2">
+                                            <div id="country_div" class="AutoCompleteContainer Hidden " style="width: 197px;">
+                                             <ul id="country" class="AutoComplete">
+                                             </ul>
                                           </div>
                                        </div>
                                        <div class="InputWrapper">
-                                          <input id="Where" type="text" value="" name="location" class="Keywords AutoCompleteInput" placeholder="Direction" autocomplete="off" data-type="where" data-order="2"> 
-                                          <div class="AutoCompleteContainer Hidden" style="width: 197px;">
-                                             <ul class="AutoComplete"></ul>
+                                          <input id="directionInput" type="text" value="" name="location" class="Keywords AutoCompleteInput" autocomplete="off" data-type="where" data-order="2">
+                                            <div id="direction_div" class="AutoCompleteContainer Hidden " style="width: 197px;">
+                                                <ul id="direction" class="AutoComplete">
+                                             </ul>
                                           </div>
                                        </div>
-                                       <button type="submit" class="SearchButton"> <i class="lnr-magnifier SearchButtonIcon"></i> </button> 
+                                       <button type="button" class="SearchButton"> <i class="lnr-magnifier SearchButtonIcon"></i> </button> 
                                     </form>
                                  </div>
                               </div>
@@ -177,8 +180,8 @@
                               <div data-module="" class="Module StudyPortals_Shared_Modules_Login_HeaderLogin">
                                  <div id="HeaderLogin" class="Hidden">    <a title="Wishlisted studies" class="HeaderWishlistContainer js-wishlistButton"> <i class="lnr-heart WishlistIcon HeaderIcon"></i> <span class="HeaderWishlistText">Wishlist</span> </a> <a title="Chat with students" class="HeaderUnibuddyLinkContainer Textlink" href="https://www.mastersportal.com/chat-with-students/"> <i class="lnr-bubble UnibuddyIcon"></i> <span class="HeaderUnibuddyText">Chat</span> </a> <button id="LoginButton" class="InUpButton AccountClickable Textlink" data-ga-tracking="{&quot;category&quot;:&quot;Profile&quot;,&quot;action&quot;:&quot;Register Incentive Click&quot;,&quot;label&quot;:&quot;Header:Login&quot;,&quot;event&quot;:&quot;click&quot;}" data-ga-parsed="true"> <i class="lnr-user UserIcon"></i> <span class="LoggedInUserText">Sign in</span> </button> </div>
                                  <div id="HeaderLoggedIn" class="">
-                                    <a title="Chat with students" class="HeaderUnibuddyLinkContainer DesktopOnlyBlock Textlink" href="https://www.mastersportal.com/chat-with-students/">
-                                           <i class="lnr-bubbles UnibuddyIcon "></i> <span class="HeaderUnibuddyText">Contact</span> </a> 
+                                    <a title="Chat with students" class="HeaderUnibuddyLinkContainer DesktopOnlyBlock Textlink" href="/Contact">
+                                           <i class="lnr-bubbles UnibuddyIcon "></i> <span id="contactHeder" class="HeaderUnibuddyText">Contact</span> </a> 
                                            <a title="Chat with students" style="cursor: pointer;" class="HeaderUnibuddyLinkContainer DesktopOnlyBlock Textlink" onclick="changeLang()">
                                            <h3 style="color:#579AB6" id="curLang" class="h1"></h3> </a> 
                                         
@@ -391,6 +394,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.5/umd/popper.min.js" integrity="sha512-8cU710tp3iH9RniUh6fq5zJsGnjLzOWLWdZqBMLtqaoZUA6AWIE34lwMB3ipUNiTBP5jEZKY95SfbNnQ8cCKvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="~/js/functionality.js" async crossorigin="anonymous"></script>
         <script src="~/js/homepage.js" async crossorigin="anonymous"></script>
+        <script src="~/js/layout.js" async crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
         <script src="https://code.jquery.com/jquery-migrate-3.4.0.min.js"></script>
         <script src="~/css/scss/slick/slick.js" type="text/javascript" charset="utf-8"></script>
@@ -573,6 +577,19 @@
                 li1.style.left = "0px";
                 li2.style.left = "87px";
                 li3.style.left = "171px";
+            }
+
+            function searchProgram(name,id) {
+              
+               document.getElementById('programInput').value = name;
+            }  
+            function searchDirection(name,id) {
+              
+               document.getElementById('directionInput').value = name;
+            }
+            function searchCountry(name,id) {
+              
+               document.getElementById('countryInput').value = name;
             }
         </script>
         @RenderSection("Scripts",false)
