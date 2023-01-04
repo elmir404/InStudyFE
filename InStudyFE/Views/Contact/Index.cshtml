@@ -56,17 +56,10 @@
 
 						</div>
 					</div>
-					<div class="form-group col-md-6">
-						<label for="IsOnline">IsOnline</label>
-						<div class="form-control btn-group" id="requestType" data-toggle="buttons">
-							<label class="btn btn-default">
-								<input type="radio" name="IsOnline" autocomplete="off" />Yes
-							</label>
-							<label class="btn btn-default">
-								<input type="radio" name="IsOnline" autocomplete="off" />No
-							</label>
-					</div>
-					</div>
+										<div class="form-group col-md-6" id="requestMessage">
+											<label for="comment">Description:</label>
+											<textarea class="form-control overflow-auto" rows="3" id="comment"></textarea>
+										</div>
 					<div class="form-group col-md-6">
 						<label for="consulted">Consulted</label>
 						<div class="form-control btn-group" data-toggle="buttons">
@@ -84,11 +77,18 @@
 						<input type="datetime-local" id="birthdaytime" name="birthdaytime">
 
 					</div>
-					<div class="form-group col-md-6" id="requestMessage">
-						<label for="comment">Description:</label>
-						<textarea class="form-control overflow-auto" rows="3" id="comment"></textarea>
-					</div>
-
+					
+											<div class="form-group col-md-6">
+												<label for="IsOnline">IsOnline</label>
+												<div class="form-control btn-group" id="requestType" data-toggle="buttons">
+													<label class="btn btn-default">
+														<input type="radio" name="IsOnline" autocomplete="off" />Yes
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="IsOnline" autocomplete="off" />No
+													</label>
+												</div>
+											</div>
 
 					</div>
 					
@@ -216,13 +216,13 @@
 	
 	</section>
 
-	@*<script>
+	<script>
 
 		 const box = document.getElementById('box');
 
          function handleRadioClick() {
          if (document.getElementById('show').checked) {
-         box.style.display = 'inline-block';
+         box.style.display = 'flex ';
        } else {
          box.style.display = 'none';
        }
@@ -232,4 +232,4 @@
          radioButtons.forEach(radio => {
          radio.addEventListener('click', handleRadioClick);
          });
-    </script>*@
+    </script>
