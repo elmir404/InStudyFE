@@ -69,7 +69,7 @@
                 $country.empty();
                 $.each(
                     data.data, function (i, value) {
-                        
+
                         const date = new Date(value.regDate)
 
                         var dd = String(date.getDate()).padStart(2, '0');
@@ -91,19 +91,19 @@
 
                         }
                         var image = `data:image/png;base64,${value?.countryFiles[0]?.bytes}`
-                       
+
                         if (i < 10) {
                             $countryMenu.append(`
                                                 <li class="SubSectionContentItem"> <a class="ContentItemLink js-ContentItemLink" href="/Country/Detail/${value.id}" title="${name}">${name}</a> </li>
 
-`              
+`
                             )
                         }
                         //var description = value.description.slice(0, 5);
                         if (i < 1) {
 
-                        $country.append(
-                            ` <figure data-clickable="clickable">
+                            $country.append(
+                                ` <figure data-clickable="clickable">
                               <a href="/Country/Detail/${value.id}" title="Netherlands">
                                  <span class="Picture" data-file-url="" data-title="Netherlands">
                                     <picture>
@@ -127,8 +127,7 @@
                             )
                         }
                         $(`#country`).append(`
-                                                 <li class="Suggestion Link" data-position="0" onclick="searchCountry('${name}','${value.id}')" data-param-value="351" data-param-name="discipline_ids">${name}</li>
-
+                                                 <li class="Suggestion Link" data-position="0" onclick='searchCountry("${name}")' data-param-value="351" data-param-name="discipline_ids">${name}</li>
 
 `);
 
@@ -163,7 +162,7 @@
 
                     }  
                     $(`#program`).append(`
-                                                 <li class="Suggestion Link" onclick="searchProgram('${name}','${value.id}')"  data-param-name="discipline_ids">${name}</li>
+                                                 <li class="Suggestion Link" onclick='searchProgram("${name}")'  data-param-name="discipline_ids">${name}</li>
 
 
 `);
@@ -322,7 +321,7 @@
 
 `);
                         $("#direction").append(`
-                                                 <li class="Suggestion Link" data-position="0" onclick="searchDirection('${name}','${value.id}')" data-param-value="351" data-param-name="discipline_ids">${name}</li>
+                                                 <li class="Suggestion Link" data-position="0" onclick='searchDirection("${name}")' data-param-value="351" data-param-name="discipline_ids">${name}</li>
 
 `);
                         //var description = value.description.slice(0, 5);
@@ -787,4 +786,11 @@ ${value.description};
         });
     });
     getCountry();
+    $(document).on('click', '#searchButton', async function () {
+        console.log("adsadsad");
+        localStorage.setItem('program', $(`#programInput`).val());
+        localStorage.setItem('country', $(`#directionInput`).val());
+        localStorage.setItem('direction', $(`#countryInput`).val());
+        location.href = "/Search";
+    });
 });

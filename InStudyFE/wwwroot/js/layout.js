@@ -1,23 +1,29 @@
 ﻿$(document).ready(function () {
     const $lang = localStorage.getItem('lang');
     if ($lang == 'AZ') {
-        $(`.explore`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-compass2"></i> <span class="SectionNavigationLabel">Araşdırın</span> </a>`);
+        $(`.explore`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-compass2"></i> <span class="SectionNavigationLabel">Araşdır</span> </a>`);
         $(`.apply`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"><i class="SectionNavigationIcon lnr-paper-plane"></i>  <span class="SectionNavigationLabel">Müraciət</span> </a>`);
         $(`.goStudy`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-archery"></i> <span class="SectionNavigationLabel">Tehsil al</span> </a>`);
         $(`#goStudyHeader`).html(`Müraciət üçün məsləhətlər`);
         $(`#programInput`).attr(`placeholder`,`Proqram`);
         $(`#countryInput`).attr(`placeholder`, `Ölkə`);
         $(`#directionInput`).attr(`placeholder`, `İstiqamət`);
+        $(`#exploreHeader`).html(`Araşdırın`);
+        $(`#decideContent`).html(`Müraciət`);
+        $(`#goStudyHeader`).html(`Tehsil al`);
     }
     else if ($lang == 'EN') {
 
         $(`.explore`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-compass2"></i> <span class="SectionNavigationLabel">Explore</span> </a>`);
         $(`.apply`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"><i class="SectionNavigationIcon lnr-paper-plane"></i>  <span class="SectionNavigationLabel">Apply</span> </a>`);
-        $(`.goStudy`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-archery"></i> <span class="SectionNavigationLabel"> Go Study</span> </a>`);
+        $(`.goStudy`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-archery"></i> <span class="SectionNavigationLabel">Go Study</span> </a>`);
         $(`#goStudyHeader`).html(`Tips to apply`);
         $(`#programInput`).attr(`placeholder`, `Program`);
         $(`#countryInput`).attr(`placeholder`,`Сountry`);
-        $(`#directionInput`).attr(`placeholder`,`Direction`);
+        $(`#directionInput`).attr(`placeholder`, `Direction`);
+        $(`#exploreHeader`).html(`Explore`);
+        //$(`#decideContent`).html(`Apply`);
+        $(`#goStudyHeader`).html(`Go Study`);
 
     }
     else {
@@ -28,7 +34,9 @@
         $(`#programInput`).attr(`placeholder`,`Программа`);
         $(`#countryInput`).attr(`placeholder`,`Страна`);
         $(`#directionInput`).attr(`placeholder`,`Направление`);
-
+        $(`#exploreHeader`).html(`Исследовать`);
+        //$(`#decideContent`).html(`Применять`);
+        $(`#goStudyHeader`).html(`Иди учись`);
 
 
     }

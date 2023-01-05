@@ -19,8 +19,7 @@
       <link rel="manifest" href="manifest.json">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-      <link rel="preconnect" href="https://d1azc1qln24ryf.cloudfront.net" crossorigin>  
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">  
       <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/26905/Studyportalslineariconset/style-cf.css?dnl644">
       <title>InStudy | Xaricdə Təhsil </title>
       <link rel="stylesheet" href="~/css/scss/shared.css" />
@@ -80,13 +79,13 @@
                               <nav id="HeaderMainMenu">
                                 <a onclick="closeMenu()" style="display:hidden;" class="MainMenuHideButton js-hideMainMenuButton"> <i class="lnr-cross MainMenuIcon HeaderIcon"></i> </a>
                                 <ul class="MainMenuSections SectionsNavigation">
-                                    <li class="SectionNavigationItem explore " onclick="selectMenu('explore')" id="explore"> </li>
-                                    <li class="SectionNavigationItem apply" id="apply">  </li>
-                                    <li class="SectionNavigationItem goStudy" onclick="selectMenu('goStudy')" id="goStudy">  </li>
+                                    <li class="SectionNavigationItem explore " style="width:115px;" onclick="selectMenu('explore')" id="explore"> </li>
+                                    <li class="SectionNavigationItem apply" style="width:115px;" id="apply">  </li>
+                                    <li class="SectionNavigationItem goStudy" style="width:115px;" onclick="selectMenu('goStudy')" id="goStudy">  </li>
                                  </ul>
                                  <ul class="MainMenuSections SectionsContent" id="SectionsContent">
-                                    <li class="SectionNavigationItem "  id="exploreContent" style="left: 24px;">
-                                        <a class="SectionNavigationLink js-SectionNavigationLink explore " onclick="selectMenu('explore')" id="explore"> </a>
+                                    <li class="SectionNavigationItem "  id="exploreContent" style="left:24px;">
+                                        <a class="SectionNavigationLink js-SectionNavigationLink  " onclick="selectMenu('explore')" id="explore"><i class="SectionNavigationIcon lnr-compass2"></i> <span id="exploreHeader" class="SectionNavigationLabel"></span> </a>
                                         <div class="SectionContent" data-menu-section="explore" style="left: 0px">
                                           <section class="SectionContentColumn SectionContentColumnLeft">
                                              <div id="disciplinesHeader" class="SubSectionContentTitle">   </div>
@@ -110,8 +109,8 @@
                                           </section>
                                        </div>
                                     </li>
-                                    <li class="SectionNavigationItem"  id="decideContent" style="left: 132px;">
-                                       <a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-archery"></i> <span class="SectionNavigationLabel">Decide</span> </a> 
+                                    <li class="SectionNavigationItem"  id="decideContent" style="left:132px;" >
+                                       <a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-archery"></i> <span id="decideContent" class="SectionNavigationLabel"></span> </a> 
                                        <div class="SectionContent SectionContentDecide" data-menu-section="decide" style="left: 0px">
                                           <div class="SectionContentColumn SectionContentColumnFullWidth">
                                              <div class="SubSectionContentTitle">Tools to help you decide</div>
@@ -132,9 +131,9 @@
                                           </section>
                                        </div>
                               </li>            
-                                    <li class="SectionNavigationItem " id="goStudyContent" style="left: 237px;">
-                                       <a class="SectionNavigationLink js-SectionNavigationLink" style="display:hidden;" onclick="selectMenu('goStudy')" id="goStudy"> <i class="SectionNavigationIcon lnr-archery"></i> <span class="SectionNavigationLabel">Go Study</span> </a> 
-                                       <div class="SectionContent SectionContentColumnFullWidth" data-menu-section="apply" style="left: -171px">
+                                    <li class="SectionNavigationItem " id="goStudyContent" style="left:237px;">
+                                       <a class="SectionNavigationLink js-SectionNavigationLink" onclick="selectMenu('goStudy')" id="goStudy"> <i class="SectionNavigationIcon lnr-archery"></i> <span id="goStudyHeader" class="SectionNavigationLabel"></span> </a> 
+                                       <div class="SectionContent SectionContentColumnFullWidth" data-menu-section="apply" style="left:0px">
                                           <section class="SubSectionContent SubSectionContentSecondary">
                                              <div id="goStudyHeader" class="SubSectionContentTitle"></div>
                                              <ul id="goStudys" class="SubSectionContentList">
@@ -153,7 +152,7 @@
                                        <div class="InputWrapper">
                                           <input id="programInput" type="text" value="" name="discipline" class="Keywords AutoCompleteInput" autocomplete="off" data-type="what" data-order="1"> 
                                           <div id="program_div" class="AutoCompleteContainer Hidden " style="width: 197px;">
-                                             <ul id="program" class="AutoComplete">
+                                             <ul id="program" class="AutoComplete"> 
                                              </ul>
                                           </div>
                                        </div>
@@ -171,7 +170,7 @@
                                              </ul>
                                           </div>
                                        </div>
-                                       <button type="button" class="SearchButton"> <i class="lnr-magnifier SearchButtonIcon"></i> </button> 
+                                       <button type="button" id="searchButton" class="SearchButton"> <i class="lnr-magnifier SearchButtonIcon"></i> </button> 
                                     </form>
                                  </div>
                               </div>
@@ -187,11 +186,9 @@
                                         
                                     <div id="LoggedInDropDown"  class="AccountDropDown">
                                        <ul class="Content">
-                                          <li> <a title="My account page" onclick="setLang('AZ')" class="MenuItem">
-                                             
-                                             AZ </a> </li>
-                                              <li> <a title="Interesting for you" onclick="setLang('EN')" class="MenuItem" > EN </a> </li>
-                                          <li> <a title="My settings page" onclick="setLang('RU')" class="MenuItem" > RU </a> </li>
+                                          <li> <a title="My account page" onclick="setLang('AZ')" class="MenuItem">AZ</a> </li>
+                                              <li> <a title="Interesting for you" onclick="setLang('EN')" class="MenuItem">EN</a> </li>
+                                          <li> <a title="My settings page" onclick="setLang('RU')" class="MenuItem">RU</a></li>
                                        </ul>
                                     </div>
                                  </div>
@@ -579,15 +576,15 @@
                 li3.style.left = "171px";
             }
 
-            function searchProgram(name,id) {
+            function searchProgram(name) {
               
                document.getElementById('programInput').value = name;
             }  
-            function searchDirection(name,id) {
+            function searchDirection(name) {
               
                document.getElementById('directionInput').value = name;
             }
-            function searchCountry(name,id) {
+            function searchCountry(name) {
               
                document.getElementById('countryInput').value = name;
             }
