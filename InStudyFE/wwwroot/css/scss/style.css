@@ -98,6 +98,7 @@
 }
 .faq-section .faq-section-detail-text {
     width: calc(100% - 20px);
+    margin-left: 70px;
 }
 .faq-section .faq-section-detail-text .detail-text {
     display: flex;

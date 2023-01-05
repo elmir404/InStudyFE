@@ -276,7 +276,8 @@
     flex-flow:row wrap;
     list-style-type:none;
     margin:0;
-    padding:.25em 0 0
+    padding:.25em 0 0;
+  
 }
 #DisciplineSpotlight ul.is-Expanded li:nth-child(n+5){
     display:block
