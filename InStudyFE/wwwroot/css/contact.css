@@ -2189,7 +2189,7 @@ pre {
     justify-content: center;
     align-items: stretch;
     flex-direction: row;*/
-    flex-direction: row;
+   
     display: none;
 }
 
