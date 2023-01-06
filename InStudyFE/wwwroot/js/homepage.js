@@ -789,8 +789,8 @@ ${value.description};
     $(document).on('click', '#searchButton', async function () {
         console.log("adsadsad");
         localStorage.setItem('program', $(`#programInput`).val());
-        localStorage.setItem('country', $(`#directionInput`).val());
-        localStorage.setItem('direction', $(`#countryInput`).val());
+        localStorage.setItem('country', $(`#countryInput`).val());
+        localStorage.setItem('direction', $(`#directionInput`).val());
         location.href = "/Search";
     });
 });

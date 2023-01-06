@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#blog-datatable').DataTable({
         ajax: {
-            url: 'https://fainablogapi.herokuapp.com/api/Blogs/GetBlogs',
+            url: 'https://api.instudy.net/api/Blogs/GetBlogs',
             dataSrc: 'data'
         },
         columns: [
@@ -9,7 +9,7 @@
                 data: 'files', render: function (data, type, row, meta) {
                     console.log("dsds",data);
                     return `
-                                                        <td><img alt="${data[0].fileName}" w-100 class="text-center img-responsive" src="${data[0].path}"></td>
+                                                        <td><img alt="${data[0]?.fileName}" w-100 class="text-center img-responsive" src="${data[0]?.path}"></td>
 
                         `;
 
@@ -18,14 +18,19 @@
                 }
             },
             {
-                data: 'title',
+                data: 'azTitle',
             },
-            { data: 'description' },
+            {
+                data: 'ruTitle',
+            },
+            {
+                data: 'enTitle',
+            },
             {
                 data: 'id', render: function (data, type, row, meta) {
                     return ` <div class="btn-list">
                 <button onclick=Edit(${JSON.stringify(data)}) type="button" class="btn btn-sm btn-primary">
-                    <i class="fe fe-eye"></i>
+                    <i class="fe fe-edit"></i>
                 </button>
                 <button onclick=Delete(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-danger">
                     <span class="fe fe-trash-2"> </span>
@@ -48,9 +53,12 @@
         console.log("sadsadsa");
         var files = $("#files").get(0).files;
         var formData = new FormData();
-        formData.append('Title', $("#title").val());
-        formData.append('Description', $("#description").val());
-        formData.append('CategoryId', 1);
+        formData.append('AzTitle', $("#azHeader").val());
+        formData.append('RuTite', $("#ruHeader").val());
+        formData.append('EnHeader', $("#enHeader").val());
+        formData.append('AzDescription', $("#azDescription").val());
+        formData.append('EnDescription', $("#enDescription").val());
+        formData.append('RuDescription', $("#ruDescription").val());
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);
         }
@@ -58,7 +66,7 @@
 
         $.ajax({
             type: "POST",
-            url: 'https://fainablogapi.herokuapp.com/api/Blogs/CreateBlog',
+            url: 'https://api.instudy.net/api/Blogs/CreateBlog',
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
@@ -78,18 +86,18 @@
 });
 function Edit(blog) {
 
-    localStorage.setItem('blogDetail', blog);
-    location.href = `/FainaAdmin/Blog/BlogDetail`;
+    localStorage.setItem('blogId', blog);
+    location.href = `/Admin/Blog/UpdateBlog`;
 
 }
 function Delete(blog) {
 
     $.ajax({
         type: "DELETE",
-        url: `https://fainablogapi.herokuapp.com/api/Blogs/DeleteBlog?blogId=${blog}`, 
+        url: `https://api.instudy.net/api/Blogs/DeleteBlog?blogId=${blog}`, 
         success: function (result) {
             if (result.success == true) {
-                location.href = `/FainaAdmin/Blog/List`;
+                location.href = `/Admin/Blog/List`;
             }
             else {
                 alert(result.message)
