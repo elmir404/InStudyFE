@@ -214,7 +214,6 @@ p.container-text {
 .faq-section .faq-section-detail-accordion .accordion-div .accordion-item {
     background: #fff 0 0 no-repeat padding-box;
     border: 1px solid #e6eaf1;
-    border-radius: 14px;
     box-shadow: 0 4px 24px rgb(139 147 168 / 20%);
     margin-bottom: 20px;
 }

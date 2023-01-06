@@ -35,13 +35,13 @@
 
 @media(min-width:769px)and (max-width:1024px) {
     body #galactus #SwitchableContent div.Module:not(.Hidden):not(.EmptyModule):not([data-module="Banner:banner_adunit_country-pages-mobile"]):not([data-module="Banner:banner_adunit_country-pages-desktop"]) {
-        padding: 3rem 4rem
+        padding: 0rem 0rem
     }
 }
 
 @media(min-width:1025px) {
     body #galactus #SwitchableContent div.Module:not(.Hidden):not(.EmptyModule):not([data-module="Banner:banner_adunit_country-pages-mobile"]):not([data-module="Banner:banner_adunit_country-pages-desktop"]) {
-        padding: 3rem 4rem
+        padding: 0rem 0rem
     }
 }
 

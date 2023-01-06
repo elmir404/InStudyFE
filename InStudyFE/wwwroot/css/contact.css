@@ -2182,11 +2182,16 @@ pre {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
-/*
+
 #box {
-   
+    /* display: flex;
+    align-content: stretch;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;*/
+    flex-direction: row;
     display: none;
-}*/
+}
 
 
 

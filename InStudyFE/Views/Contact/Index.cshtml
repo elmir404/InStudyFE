@@ -3,9 +3,21 @@
 <link rel="stylesheet"
 		href="https://fonts.googleapis.com/css?family=PT+Sans|Rubik|Roboto+Condensed&amp;subset=cyrillic&amp;sort=popularity" />
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+	  rel="stylesheet" />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+	  rel="stylesheet" />
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+	  rel="stylesheet" />
+<!-- MDB -->
+<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+@*	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>*@
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -73,8 +85,23 @@
 					</div>
 					<div id="box" class="row">
 						<div class="form-group col-md-6" id="requestDate">
-						<label for="birthdaytime">Date (date and time):</label>
-						<input type="datetime-local" id="birthdaytime" name="birthdaytime">
+						<div class="row">
+												<div class="col-md-6">
+														<form>
+															<label for="appt-time">Choose an appointment time: </label>
+															<input id="appt-time" type="time" name="appt-time" />
+														</form>
+														</div>
+														<div class="col-md-6">
+															<form>
+																<label for="appt-time">Choose an appointment time: </label>
+																<input id="appt-time" type="time" name="appt-time" />
+															</form>
+							
+
+												</div>
+
+						</div>
 
 					</div>
 					
@@ -177,7 +204,7 @@
 	@section Scripts{
 		<script src="~/js/contact.js"></script>
 	}
-	@*<script>
+	<script>
 
 		 const box = document.getElementById('box');
 
@@ -193,4 +220,7 @@
          radioButtons.forEach(radio => {
          radio.addEventListener('click', handleRadioClick);
          });
-    </script>*@
+
+	const pickerInline = document.querySelector('.timepicker-inline-24');
+	const timepickerMaxMin = new mdb.Timepicker(pickerInline, { format24: true, inline: true });
+    </script>
