@@ -1,18 +1,17 @@
 ﻿$(document).ready(function () {
     $('#message-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/Contact/GetContact',
+            url: 'https://api.instudy.net/api/StudentRequest/GetStudentRequests',
             dataSrc: 'data'
         },
         columns: [
             {
-                data: 'fullName',
+                data: 'name',
             },
             { data: 'email' },
             { data: 'phone' },
-            
-            { data: 'subject' },
-            { data: 'message' },
+
+            { data: 'description' },
             {
                 data: 'id', render: function (data, type, row, meta) {
                     return `<div class="btn-list">
@@ -52,10 +51,10 @@
 
     //                                                         <tr>
 
-                                                        
+
     //                                                            <td>${value.name} ${value.surName}</td>
-                                                                
-                                                         
+
+
     //                                                            <td>${value.phone}</td>
     //                                                            <td>${value.email}</td>
     //                                                              <td>${value.subject}</td>

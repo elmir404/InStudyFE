@@ -1,0 +1,105 @@
+﻿<!--app-content open-->
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">Data Table</h1>
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Tables</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data Table</li>
+                    </ol>
+                </div>
+
+            </div>
+
+
+            <!-- Row -->
+            <div class="row row-sm">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Todo List</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <a class="btn btn-primary mb-4 data-table-btn" asp-area="Admin" asp-action="AddSpeciality" asp-controller="Speciality">
+                                    Add Speciality
+                                </a>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Add Meeting</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="md-form mb-5">
+                                                    <label data-error="wrong" data-success="right" for="form34">Meeting Name</label>
+                                                    <input type="text" id="form34" class="form-control validate">
+                                                </div>
+                                                <div class="md-form mb-5">
+                                                    <label data-error="wrong" data-success="right" for="form34">Company Name</label>
+                                                    <input type="text" id="form34" class="form-control validate">
+                                                </div>
+                                                <div class="md-form mb-5">
+                                                    <label data-error="wrong" data-success="right" for="form34">Start Date</label>
+                                                    <input type="datetime-local" class="">
+                                                </div>
+                                                <div class="md-form mb-5">
+                                                    <label data-error="wrong" data-success="right" for="form34">End Date</label>
+                                                    <input type="datetime-local" class="">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                @*<button id="button" class="btn btn-primary mb-4 data-table-btn">Add Task</button>*@
+                                <table id="speciality-datatable" class="table table-bordered text-nowrap border-bottom">
+                                    <thead>
+                                        <tr>
+
+                                            <th class="border-bottom-0">Az Name</th>
+                                            <th class="border-bottom-0">Ru Name</th>
+                                            <th class="border-bottom-0">En Name</th>
+                                            <th class="border-bottom-0">Az Description</th>
+                                            <th class="border-bottom-0">Ru Description</th>
+                                            <th class="border-bottom-0">En Description</th>
+                                            <th class="border-bottom-0">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Row -->
+            <!-- Row -->
+
+
+        </div>
+        <!-- CONTAINER CLOSED -->
+
+    </div>
+</div>
+<!--app-content closed-->
+        </div>
+
+<!-- Sidebar-right -->
+@section Scripts {
+    <script src="~/AdminFiles/js/speciality.js"></script>
+        }
+

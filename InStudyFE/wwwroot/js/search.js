@@ -4,69 +4,102 @@
     var direction = localStorage.getItem('direction');
     const $lang = localStorage.getItem('lang');
     if ($lang == 'AZ') {
-        
+        var $notFount="Axtarışa uyğun univeristet tapılmadı!"
     }
     else if ($lang == 'EN') {
-       
-
+        var $notFount = "No university matching your search was found!";
 
     }
     else {
-        
+        var $notFount = "Университет, соответствующий вашему запросу, не найден!"
 
 
     }
-    console.log(program, country,direction);
+    $.ajax({
+        type: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        url: `https://api.instudy.net/api/Speciality/GetSpecialities`,
+
+        success: function (data) {
+            $country.empty();
+            $.each(
+                data.data, function (i, value) {
+                    console.log(value);
+                    //const date = new Date(value.regDate)
+
+                    //var dd = String(date.getDate()).padStart(2, '0');
+                    //var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
+                    //var yyyy = date.getFullYear();
+                    //var time = yyyy + "/" + mm + "/" + dd;
+
+                    if ($lang == 'AZ') {
+                        var name = value.azName
+                        var description = value?.azDescription;
+
+                    }
+                    else if ($lang == 'EN') {
+                        var name = value.enName
+                        var description = value?.enDescription;
+
+                    } else {
+                        var name = value.ruName;
+                        var description = value?.ruDescription;
+
+                    }
+
+                    $(`#disciplines`).append(
+                        `
+                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" class="CheckboxInput" data-filter="ci" value="30" data-v-01633eac=""><span data-v-01633eac="">United Kingdom</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac="">18626</span><div class="AreaSwitcher" data-v-01633eac=""><i class="ToggleIcon lnr-chevron-down" data-v-01633eac=""></i></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--></ul></li>
+                                         
+                                         `
+                    )
+
+                }
+            )
+
+        }
+
+    });
+    console.log(program, country, direction);
+    var formData = new FormData();
+    formData.append('CountryName',country);
+    formData.append('ProgramName',program);
+    formData.append('DirectionName',direction);
     $.ajax({
         type: "POST",
         url: `https://api.instudy.net/api/University/SearchUniversity?currentPage=1&pageSize=10`,
-        data: JSON.stringify({
-
-            SpecialityRuName: '',
-            DirectionAzName: '',
-            CountryRuName: '',
-
-            ProgramAzName:'',
-            SpecialityEnName:'',
-            Attendance: '',
-            CountryEnName:'',
-            DirectionRuName: '',
-            ProgramRuName: '',
-            DirectionEnName:'',
-            Duration: '',
-            Address:'',
-            ProgramEnName:'',
-            SpecialityAzName:'',
-            CountryAzName: ''
-
-
-
-        }),
-        contentType: 'application/json',
+        processData: false,
+        contentType: false,
+        cache: false,
+        data: formData,
+        enctype: 'multipart/form-data',
     })
         .done(function (response) {
             // Make sure that the formMessages div has the 'success' class.
             if (response.success == true) {
                 $('#searchContent').empty();
-                $.each(
-                    response?.data.value, function (i, value) {
-                        console.log("assa",value);
-                        
-                        if ($lang == 'AZ') {
-                            var name = value.azName
-                            var description = value?.azDescription;
+                if (response.data.dataCount > 0) {
+                    $.each(
+                        response?.data.value, function (i, value) {
+                            console.log("assa", value);
 
-                        }
-                        else if ($lang == 'EN') {
-                            var name = value.enName
-                            var description = value?.enDescription;
+                            if ($lang == 'AZ') {
+                                var name = value.azName
+                                var description = value?.azDescription;
 
-                        } else {
-                            var name = value.ruName   ;
-                            var description = value?.ruDescription;
+                            }
+                            else if ($lang == 'EN') {
+                                var name = value.enName
+                                var description = value?.enDescription;
 
-                        }
-                       /* var image = `data:image/png;base64,${value?.universityFiles[0]?.bytes}`*/
+                            } else {
+                                var name = value.ruName;
+                                var description = value?.ruDescription;
+
+                            }
+                            /* var image = `data:image/png;base64,${value?.universityFiles[0]?.bytes}`*/
 
 
                             $('#searchContent').append(`
@@ -109,12 +142,16 @@
 
 `
                             );
-                        
 
 
 
-                    }
-                )
+
+                        }
+                    );
+                }
+                else {
+                    $('#searchContent').append(`<div style="height:500px;"><h2>${$notFount}</h2></div>`);
+                }
             }
 
 

@@ -1,35 +1,28 @@
 ﻿$(document).ready(function () {
-    $('#about-datatable').DataTable({
+    $('#program-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/About/GetAbouts',
+            url: 'https://api.instudy.net/api/Program/GetProgram',
             dataSrc: 'data'
         },
         columns: [
             {
-                data: 'files', render: function (data, type, row, meta) {
-                    console.log("dsds", data);
-                    return `
-                      <td><img alt="${data[0]?.fileName}" style="width:200px !important;" class="text-center img-responsive" src="${data[0]?.path}"></td>
-
-                        `;
-                            
-
-
-                }
+                data: 'azName',
             },
             {
-                data: 'azHeader',
+                data: 'ruName',
             },
             {
-                data: 'ruHeader',
+                data: 'enName',
             },
             {
-                data: 'enHeader',
+                data: 'description',
             },
-            { data: 'instagramLink' },
-            { data: 'facebookLink' },
-            { data: 'twitterLink' },
-           
+            {
+                data: 'ruDescription',
+            },
+            {
+                data: 'enDescription',
+            },
             {
                 data: 'id', render: function (data, type, row, meta) {
                     return `
@@ -95,34 +88,27 @@
         ]
     });
 
-    $("#addAbout").click(function () {
+    $("#addProgram").click(function () {
 
-        var files = $("#files").get(0).files;
         var formData = new FormData();
-        formData.append('AzHeader', $("#azHeader").val());
-        formData.append('RuHeader', $("#ruHeader").val());
-        formData.append('EnHeader', $("#enHeader").val());
+        formData.append('AzName', $("#azHeader").val());
+        formData.append('RuName', $("#ruHeader").val());
+        formData.append('EnName', $("#enHeader").val());
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
-        formData.append('InstagramLink', $("#instaLink").val());
-        formData.append('FacebookLink', $("#faceLink").val());
-        formData.append('TwitterLink', $("#twitLink").val());
-        formData.append('YoutubeLink', $("#youtubeLink").val());
-        for (var i = 0; i < files.length; i++) {
-            formData.append('Files', files[i]);
-        }
+      
         console.log(formData);
 
         $.ajax({
             type: "POST",
-            url: 'https://api.instudy.net/api/About/AddAbouts',
+            url: 'https://fainablogapi.herokuapp.com/api/About/AddAbouts',
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/About/AboutList"
+                    location.href = "/FainaAdmin/About/AboutList"
                 }
                 else {
                     alert("error")
@@ -133,22 +119,22 @@
 
 
     });
-      
+
 });
-function Edit(about) {
+function Edit(id) {
 
-    localStorage.setItem('aboutId', about);
-    location.href = `/Admin/About/UpdateAbout`;
+    localStorage.setItem('programId', id);
+    location.href = `/Admin/Program/UpdateProgram`;
 
-}  
-function Delete(about) {
+}
+function Delete(program) {
 
     $.ajax({
         type: "DELETE",
-        url: `https://api.instudy.net/api/About/DeleteAbout?aboutId=${about}`,
+        url: `https://api.instudy.net/api/Program/DeleteProgram?programId=${program}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/Admin/About/AboutList`;
+                location.href = `/Admin/Program/ProgramList`;
             }
             else {
                 alert(result.message)
@@ -158,4 +144,3 @@ function Delete(about) {
 
 
 }
-
