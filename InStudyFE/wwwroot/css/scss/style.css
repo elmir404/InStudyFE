@@ -109,13 +109,12 @@
 .faq-section .faq-section-detail-accordion {
     width: calc(100% - 20px);
 }
-h4.section-sub-title {
-    color: #4090f7 !important;
+h2.section-sub-title {
+   
+    font-size: 2.25rem;
     font-weight: 700;
-    letter-spacing: .3px;
-    margin-bottom: 11px;
-    text-align: left;
-    text-transform: uppercase;
+    line-height: 3rem;
+    margin: 2rem 0;
 }
 #ArticleOverview .ArticleSection {
     column-count: 1;
@@ -177,9 +176,11 @@ h4 {
     letter-spacing: .3px !important;
 }
 p.container-text {
-    color: var(--unnamed-color-01165b);
-    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) 34px/56px var(--unnamed-font-family-poppins);
-    text-align: left;
+    color: #05293c;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
 }
 p {
     letter-spacing: var(--unnamed-character-spacing-0);
@@ -193,11 +194,7 @@ p {
 p {
     letter-spacing: var(--unnamed-character-spacing-0);
 }
-p.container-text {
-    color: var(--unnamed-color-01165b);
-    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) 34px/56px var(--unnamed-font-family-poppins);
-    text-align: left;
-}
+
 .faq-section .faq-section-detail-text .detail-text .desc-div p {
     color: #044a75;
     font: normal normal 300 16px/32px Poppins,sans-serif;
@@ -2404,8 +2401,8 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu{
     text-indent:-999px
 }
 #HeaderSearch form button {
-    background: #522ebd;
-    border: 1px solid #522ebd;
+    background: #a2eacb;
+    border: 1px solid #a2eacb;
     border-radius: 0 3px 3px 0;
     color: #fff;
     flex: 0 0 40px

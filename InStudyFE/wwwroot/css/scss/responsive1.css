@@ -494,17 +494,17 @@
         width:100%
     }
 }
-#OnboardingBar .OnboardingBullet .OnboardingIcon{
-    background:#fff;
-    border:1px solid #f95c39;
-    border-radius:50%;
-    display:block;
-    font-size:1.5rem;
-    height:3rem;
-    line-height:3rem;
-    position:relative;
-    text-align:center;
-    width:3rem
+#OnboardingBar .OnboardingBullet .OnboardingIcon {
+    background: #fff;
+    border: 1px solid #522EBD;
+    border-radius: 50%;
+    display: block;
+    font-size: 1.5rem;
+    height: 3rem;
+    line-height: 3rem;
+    position: relative;
+    text-align: center;
+    width: 3rem
 }
 @media (min-width:481px)and (max-width:768px){
     #OnboardingBar .OnboardingBullet .OnboardingIcon{

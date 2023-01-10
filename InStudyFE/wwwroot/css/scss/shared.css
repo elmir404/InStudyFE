@@ -546,10 +546,10 @@ button,input,option,select,textarea{
     flex:1 0 12.5%;
     transform-origin:bottom left
 }
-#Footer .BgBars .BgBarD{
-    background:#247ba0;
-    flex:1 0 7.5%;
-    transform-origin:bottom left
+#Footer .BgBars .BgBarD {
+    background: #A2EACB;
+    flex: 1 0 7.5%;
+    transform-origin: bottom left
 }
 #Footer #FooterMainInnerSearchPage{
     background:hsla(0,0%,100%,.9);

@@ -127,7 +127,7 @@
                             )
                         }
                         $(`#country`).append(`
-                                                 <li class="Suggestion Link" data-position="0" onclick='searchCountry("${name}")' data-param-value="351" data-param-name="discipline_ids">${name}</li>
+                                                 <li class="Suggestion Link" data-position="0" onclick='searchCountry(this)' data-param-value="351" data-param-name="discipline_ids">${name}</li>
 
 `);
 
@@ -321,7 +321,7 @@
 
 `);
                         $("#direction").append(`
-                                                 <li class="Suggestion Link" data-position="0" onclick='searchDirection("${name}")' data-param-value="351" data-param-name="discipline_ids">${name}</li>
+                                                 <li class="Suggestion Link" data-position="0" onclick='searchDirection(this)' data-param-value="351" data-param-name="discipline_ids">${name}</li>
 
 `);
                         //var description = value.description.slice(0, 5);
@@ -588,7 +588,7 @@ ${value.description};
                 $questionHeader.append(
                     `  <div class="detail-header-div">
                      <div class="detail-header-text-div">
-                        <h4 class="section-sub-title">${header}</h4>
+                        <h2 class="section-sub-title">${header}</h2>
                         <p class="container-text">${body}</p>
                      </div>
                   </div>
