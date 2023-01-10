@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
+
     <style>
         @@media(min-width: 1025px){
     #HeroContainer .HeroContent {
@@ -339,42 +341,7 @@
         <div id="CountryHeaderContainer" class="WhiteBackgroundPane">
             <div class="col1 wrapped">
                 <div class="colblock">
-                    @*<div data-module="" class="Module StudyPortals_Shared_Modules_Country_Facts_Facts">
-                        <section id="CountryFacts">
-                            <ul class="CountryFacts">
-                                <li class="QuickFact"> <i class="CountryQuickFactsLogos lnr-calendar-full"></i>
-                                    <div class="QFDetails"> <span class="QuickFactsData">Sep-Jul</span> <span
-                                            class="QuickFactsLabel">Academic Year</span> </div>
-                                </li>
-                                <li class="OpenTab QuickFact js-openTab" title="Listed Institutes"> <i
-                                        class="CountryQuickFactsLogos lnr-university"></i>
-                                    <div class="QFDetails"> <span id="InstitutesQuickFact"> <span
-                                                class="QuickFactsData">30</span> <span class="QuickFactsLabel">Listed
-                                                Institutes</span> </span> </div>
-                                </li>
-                                <li data-clickable="clickable" class="QuickFact"> <i
-                                        class="CountryQuickFactsLogos lnr-trophy2"></i>
-                                    <div class="QFDetails"> <a
-                                            href="https://www.mastersportal.com/ranking-country/1/netherlands.html"
-                                            title="Ranked Universities"> <span class="QuickFactsData">15</span> <span
-                                                class="QuickFactsLabel">Ranked Universities</span> </a> </div>
-                                </li>
-                                <li class="QuickFact HideQFMobile"> <i class="CountryQuickFactsLogos lnr-earth"></i>
-                                    <div class="QFDetails"> <span class="QuickFactsData">82000</span> <span
-                                            class="QuickFactsLabel">Int. Students</span> </div>
-                                </li>
-                                <li class="QuickFact HideQFMobile"> <i
-                                        class="CountryQuickFactsLogos lnr-graduation-hat"></i>
-                                    <div class="QFDetails"> <span class="QuickFactsData">656000</span> <span
-                                            class="QuickFactsLabel">Students</span> </div>
-                                </li>
-                                <li class="QuickFact HideQFMobile"> <i class="CountryQuickFactsLogos lnr-users2"></i>
-                                    <div class="QFDetails"> <span class="QuickFactsData">17032845</span> <span
-                                            class="QuickFactsLabel">Population</span> </div>
-                                </li>
-                            </ul>
-                        </section>
-                    </div>*@
+                    
                     <div data-module="" class="Module StudyPortals_Shared_Modules_Country_Conversion_Conversion"> </div>
                 </div>
                 <div class="colblock">
@@ -383,36 +350,24 @@
                         <div id="HeaderSearch" style="max-width: 39rem;">
                             <form method="get" action="https://www.mastersportal.com/search/master" class="Form" id="SearchForm">
                                 <div class="InputWrapper">
-                                    <input style="height:2.5rem;" id="What" type="text" value="" name="discipline" class="Keywords AutoCompleteInput" placeholder="Program" autocomplete="off" data-type="what" data-order="1">
+                                    <input style="height:2.5rem;" id="programInput" type="text" value="" name="discipline" class="Keywords AutoCompleteInput" placeholder="Program" autocomplete="off" data-type="what" data-order="1">
                                     <div class="AutoCompleteContainer Hidden" style="width: 197px;">
-                                        <ul class="AutoComplete"></ul>
+                                        <ul id="program" class="AutoComplete"></ul>
                                     </div>
                                 </div>
                                 <div class="InputWrapper">
-                                    <input id="Where" style="height:2.5rem;" type="text" value="" name="location" class="Keywords AutoCompleteInput" placeholder="Direction" autocomplete="off" data-type="where" data-order="2">
+                                    <input id="directionInput"   style="height:2.5rem;" type="text" value="" name="location" class="Keywords AutoCompleteInput" placeholder="Direction" autocomplete="off" data-type="where" data-order="2">
                                     <div class="AutoCompleteContainer Hidden" style="width: 197px;">
-                                        <ul class="AutoComplete"></ul>
+                                        <ul id="direction" class="AutoComplete"></ul>
                                     </div>
                                 </div>
-                                <button type="submit" style="height:2.5rem;" class="SearchButton"> <i class="lnr-magnifier SearchButtonIcon"></i> </button>
+                                <button type="submit" id="searchButton" style="height:2.5rem;" class="SearchButton"> <i class="lnr-magnifier SearchButtonIcon"></i> </button>
                             </form>
                         </div>
                     </div>
                 </div>
                 </div>
-               @* <div class="colblock">
-                    <div data-module="" class="Module StudyPortals_Shared_Modules_Country_CountryTest_CountryTest">
-                        <aside id="CountryTest" class="HideOnLogin"> <img class="Logo"
-                                src="https://monet-prtl-co.imgix.net/Shared/studyportals_icon_white.svg"
-                                alt="Studyportals">
-                            <p> Are you sure you can handle the weather in Netherlands? </p> <a
-                                href="../../country-test/country-test.html"
-                                data-ga-tracking='{"category":"Profile","action":"Register Incentive Click","label":"Country Test Click"}'
-                                title="Take a Free Country Test!" target="_blank" class="TakeTest"> Take the country
-                                test! </a>
-                        </aside>
-                    </div>
-                </div>*@
+              
             </div>
         </div>
         <section class="col1 WrappedContent no-vertical-padding">
@@ -481,7 +436,8 @@
         </div>
         <div data-module="Country:institutes" id="Universities" class="Module StudyPortals_Shared_Modules_Country_Institutes_Institutes js-contentSwitchable js-content-institutes Hidden">
             <div id="CountryStudies">
-                
+                <ul id="universityList" class="Content">
+                </ul>
             </div>
         </div>
         <div class="ToggleButton js-contentButtons" data-id="visa"><span class="ToggleButtonTitle">Student visa</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
@@ -521,135 +477,99 @@
                                                 <div id="form-message-success" class="mb-4">
                                                     Your message was sent, thank you!
                                                 </div>
-                                                <form id="contact_form">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <input type="text" class="form-control" name="name" id="requestName" placeholder="Name">
+                                                    <form id="contact_form">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" name="name" id="requestName" placeholder="Name">
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <input type="text" class="form-control" name="name" id="lastName" placeholder="Surname">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" name="name" id="lastName" placeholder="Surname">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <input type="email" class="form-control" name="email" id="requestEmail" placeholder="Email">
+                                                                </div>
+                                                            </div>
+                                                            <div class=" col-md-6">
+                                                                <label for="phone">Phone</label>
+                                                                <input type="tel" class="form-control" id="requestPhone" placeholder="123456789">
+                                                            </div>
+                                                            <div class=" col-md-6">
+                                                                <label for="Wp">Have Whatsapp</label>
+                                                                <div class="form-control btn-group" id="requestWhatsapp" data-toggle="buttons">
+                                                                    <label class="btn btn-default">
+                                                                        <input type="radio" name="wp" autocomplete="off" />Yes
+                                                                    </label>
+                                                                    <label class="btn btn-default">
+                                                                        <input type="radio" name="wp" autocomplete="off" />No
+                                                                    </label>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group col-md-6" id="">
+                                                                <label for="comment">Description:</label>
+                                                                <textarea class="form-control overflow-auto" rows="3" id="requestMessage"></textarea>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="consulted">Consulted</label>
+                                                                <div class="form-control btn-group" data-toggle="buttons">
+                                                                    <label class="btn btn-default">
+                                                                        <input type="radio" id="show" name="example" value="show" autocomplete="off" />Yes
+                                                                    </label>
+                                                                    <label class="btn btn-default">
+                                                                        <input type="radio" id="hide" name="example" value="hide" autocomplete="off" />No
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div id="box" class="row">
+                                                                <div class="form-group col-md-6" id="requestDate">
+                                                                    <label for="birthdaytime">Date (date and time):</label>
+                                                                    <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+
+                                                                </div>
+
+                                                                <div class="form-group col-md-6">
+                                                                    <label for="IsOnline">IsOnline</label>
+                                                                    <div class="form-control btn-group" id="requestType" data-toggle="buttons">
+                                                                        <label class="btn btn-default">
+                                                                            <input type="radio" name="IsOnline" autocomplete="off" />Yes
+                                                                        </label>
+                                                                        <label class="btn btn-default">
+                                                                            <input type="radio" name="IsOnline" autocomplete="off" />No
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+
+                                                            <div class="form-group col-sm-4">
+                                                                <label for="yourcontry"> Student Country</label>
+                                                                <select class="" id="requestStudentCountry">
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group col-sm-4">
+                                                                <label for="yourcontry"> Country</label>
+                                                                <select multiple="multiple" class="" id="requestCountry">
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group col-sm-4">
+                                                                <label for="direction">Direction</label>
+                                                                <select class="" multiple="multiple" id="requestDirection">
+                                                                </select>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-12">
                                                             <div class="form-group">
-                                                                <input type="email" class="form-control" name="email" id="requestEmail" placeholder="Email">
+                                                                <input type="button" id="requestSubmit" value="Send Message" class="btn btn-primary">
+                                                                <div class="submitting"></div>
                                                             </div>
                                                         </div>
-                                                        <div class=" col-md-6">
-                                                            <label for="phone">Phone</label>
-                                                            <input type="tel" class="form-control" id="requestPhone" placeholder="123456789">
-                                                        </div>
-                                                        <div class=" col-md-6">
-                                                            <label for="Wp">Have Whatsapp</label>
-                                                            <div class="form-control btn-group" id="requestWhatsapp" data-toggle="buttons">
-                                                                <label class="btn btn-default">
-                                                                    <input type="radio" name="wp" autocomplete="off" />Yes
-                                                                </label>
-                                                                <label class="btn btn-default">
-                                                                    <input type="radio" name="wp" autocomplete="off" />No
-                                                                </label>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group col-md-6" id="requestMessage">
-                                                            <label for="comment">Description:</label>
-                                                            <textarea class="form-control overflow-auto" rows="3" id="comment"></textarea>
-                                                        </div>
-                                                        <div class="form-group col-md-6">
-                                                            <label for="consulted">Consulted</label>
-                                                            <div class="form-control btn-group" data-toggle="buttons">
-                                                                <label class="btn btn-default">
-                                                                    <input type="radio" id="show" name="example" value="show" autocomplete="off" />Yes
-                                                                </label>
-                                                                <label class="btn btn-default">
-                                                                    <input type="radio" id="hide" name="example" value="hide" autocomplete="off" />No
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div id="box" class="row">
-                                                            <div class="form-group col-md-6" id="requestDate">
-                                                                <label for="birthdaytime">Date (date and time):</label>
-                                                                <input type="datetime-local" id="birthdaytime" name="birthdaytime">
-
-                                                            </div>
-
-                                                            <div class="form-group col-md-6">
-                                                                <label for="IsOnline">IsOnline</label>
-                                                                <div class="form-control btn-group" id="requestType" data-toggle="buttons">
-                                                                    <label class="btn btn-default">
-                                                                        <input type="radio" name="IsOnline" autocomplete="off" />Yes
-                                                                    </label>
-                                                                    <label class="btn btn-default">
-                                                                        <input type="radio" name="IsOnline" autocomplete="off" />No
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-
-
-                                                        <div class="form-group col-sm-4">
-                                                            <label for="yourcontry"> Student Country</label>
-                                                            <select class="form-control" id="requestStudentCountry">
-                                                                <option value="" selected disabled> Country</option>
-                                                                <option value="AF">Afghanistan</option>
-                                                                <option value="AL">Albania</option>
-                                                                <option value="DZ">Algeria</option>
-                                                                <option value="AS">American Samoa</option>
-                                                                <option value="AD">Andorra</option>
-                                                                <option value="AO">Angola</option>
-                                                                <option value="AI">Anguilla</option>
-                                                                <option value="AQ">Antarctica</option>
-                                                                <option value="AG">Antigua and Barbuda</option>
-                                                                <option value="AR">Argentina</option>
-                                                                <option value="AM">Armenia</option>
-                                                                <option value="AW">Aruba</option>
-                                                                <option value="AU">Australia</option>
-                                                                <option value="AT">Austria</option>
-                                                                <option value="AZ">Azerbaijan</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group col-sm-4">
-                                                            <label for="yourcontry"> Country</label>
-                                                            <select class="form-control" id="requestCountry">
-                                                                <option value="" selected disabled> Country</option>
-                                                                <option value="AF">Afghanistan</option>
-                                                                <option value="AL">Albania</option>
-                                                                <option value="DZ">Algeria</option>
-                                                                <option value="AS">American Samoa</option>
-                                                                <option value="AD">Andorra</option>
-                                                                <option value="AO">Angola</option>
-                                                                <option value="AI">Anguilla</option>
-                                                                <option value="AQ">Antarctica</option>
-                                                                <option value="AG">Antigua and Barbuda</option>
-                                                                <option value="AR">Argentina</option>
-                                                                <option value="AM">Armenia</option>
-                                                                <option value="AW">Aruba</option>
-                                                                <option value="AU">Australia</option>
-                                                                <option value="AT">Austria</option>
-                                                                <option value="AZ">Azerbaijan</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group col-sm-4">
-                                                            <label for="direction">Direction</label>
-                                                            <select class="form-control" id="requestDirection">
-                                                                <option value="" selected disabled>Ixtisas secin</option>
-                                                                <option value="">Mexanika-riyaziyyat fakültəsi</option>
-                                                                <option value="">Tətbiqi riyaziyyat və kibernetika fakültəsi</option>
-                                                                <option value="">Sosial elmlər və psixologiya fakültəsi</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <div class="form-group">
-                                                            <input type="submit" value="Send Message" class="btn btn-primary">
-                                                            <div class="submitting"></div>
-                                                        </div>
-                                                    </div>
-                                                </form>
+                                                    </form>
                                             </div>
                                         </div>
 
@@ -958,6 +878,7 @@
        
     @section Scripts{
         <script src="~/js/country-detail.js"></script>
+        <script src="~/js/layout.js"></script>
         <script>
             function swith(id){
                 console.log(id);
@@ -1001,5 +922,89 @@
         });
 
         </script>
+        <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
+	<script>
+		
+		$.ajax({
+			type: 'GET',
+			headers: {
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*',
+
+			},
+			url: `https://api.instudy.net/api/Program/GetPrograms`,
+
+			success: function (data) {
+				var html = [];
+				$.each(
+					data.data, function (i, value) {
+						html.push(
+							`
+																	<option value="${value.id}">${value.enName}</option>
+
+																 `
+						)
+
+					}
+				)
+				$('#program').html(html.join('')).multipleSelect();
+			}
+
+		});
+		$.ajax({
+			type: 'GET',
+			headers: {
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*',
+
+			},
+			url: `https://api.instudy.net/api/Country/GetActiveCountries`,
+
+			success: function (data) {
+				var html = [];
+				$.each(
+					data.data, function (i, value) {
+						html.push(
+							`
+																			<option value="${value.id}">${value.enName}</option>
+
+																		 `
+						);
+
+						$('#requestStudentCountry').append(`<option value="${value.id}">${value.enName}</option>`);
+					}
+				)
+				$('#requestCountry').html(html.join('')).multipleSelect();
+			}
+
+		});
+
+		$.ajax({
+			type: 'GET',
+			headers: {
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*',
+
+			},
+			url: `https://api.instudy.net/api/Direction`,
+
+			success: function (data) {
+				var html = [];
+				$.each(
+					data.data, function (i, value) {
+						html.push(
+							`
+																	<option value="${value.id}">${value.ruName}</option>
+
+																 `
+						)
+
+					}
+				)
+				$('#requestDirection').html(html.join('')).multipleSelect();
+			}
+
+		});
+	</script>
     }    
         

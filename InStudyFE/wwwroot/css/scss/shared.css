@@ -109,6 +109,12 @@ button,input,option,select,textarea{
         width:calc(100% - 2rem)
     }
 }
+.toastr-warning {
+    background-color: #f89406 !important;
+    /* color: #73510d; */
+    border-color: #f89406 !important;
+}
+
 @media (min-width:481px)and (max-width:768px){
     #galactus .col1>.colblock{
         float:left;
@@ -1550,5 +1556,13 @@ iframe[name=google_conversion_frame]{
 .Suggestion:hover {
     background-color: #522EBD !important;
     color: #fff !important;
+}
+@media (min-width: 1025px) {
+    .ArticlesSpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 3rem;
+        margin: 2rem 0;
+    }
 }
 /*# sourceMappingURL=shared.6ec21bf4cac8394260fd.css.map*/

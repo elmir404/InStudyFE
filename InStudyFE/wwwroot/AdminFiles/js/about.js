@@ -5,18 +5,7 @@
             dataSrc: 'data'
         },
         columns: [
-            {
-                data: 'files', render: function (data, type, row, meta) {
-                    console.log("dsds", data);
-                    return `
-                      <td><img alt="${data[0]?.fileName}" style="width:200px !important;" class="text-center img-responsive" src="${data[0]?.path}"></td>
-
-                        `;
-                            
-
-
-                }
-            },
+           
             {
                 data: 'azHeader',
             },
@@ -26,10 +15,6 @@
             {
                 data: 'enHeader',
             },
-            { data: 'instagramLink' },
-            { data: 'facebookLink' },
-            { data: 'twitterLink' },
-           
             {
                 data: 'id', render: function (data, type, row, meta) {
                     return `
@@ -55,45 +40,45 @@
 
         ]
     });
-    $('#personal-datatable').DataTable({
-        ajax: {
-            url: 'https://localhost:7223/api/PersonalAbout/GetAbouts',
-            dataSrc: 'data'
-        },
-        columns: [
-            {
-                data: 'phone1',
-            },
-            { data: 'email' },
-            { data: 'city' },
-            { data: 'street' },
-            { data: 'instagramLink' },
-            { data: 'facebookLink' },
-            {
-                data: 'id', render: function (data, type, row, meta) {
-                    return `
-                        <div class="btn-list">
-                            <button onclick=Delete(${JSON.stringify(data)}) type="button" class="btn btn-sm btn-danger">
-                                <span class="fe fe-trash-2"> </span>
+    //$('#personal-datatable').DataTable({
+    //    ajax: {
+    //        url: 'https://localhost:7223/api/PersonalAbout/GetAbouts',
+    //        dataSrc: 'data'
+    //    },
+    //    columns: [
+    //        {
+    //            data: 'phone1',
+    //        },
+    //        { data: 'email' },
+    //        { data: 'city' },
+    //        { data: 'street' },
+    //        { data: 'instagramLink' },
+    //        { data: 'facebookLink' },
+    //        {
+    //            data: 'id', render: function (data, type, row, meta) {
+    //                return `
+    //                    <div class="btn-list">
+    //                        <button onclick=Delete(${JSON.stringify(data)}) type="button" class="btn btn-sm btn-danger">
+    //                            <span class="fe fe-trash-2"> </span>
 
-                            </button>
-                            <button onclick=Edit(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-success">
-                                <i class="fe fe-eye"></i>
-                            </button>
-                        </div>
+    //                        </button>
+    //                        <button onclick=Edit(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-success">
+    //                            <i class="fe fe-eye"></i>
+    //                        </button>
+    //                    </div>
 
-                        `;
-
-
-
-                }
-            },
+    //                    `;
 
 
 
+    //            }
+    //        },
 
-        ]
-    });
+
+
+
+    //    ]
+    //});
 
     $("#addAbout").click(function () {
 

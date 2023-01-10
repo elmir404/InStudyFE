@@ -6,8 +6,8 @@
       <meta name="google" content="nopagereadaloud" />
       <meta name="referrer" content="unsafe-url">
       <link rel="preconnect" href="https://cdn.jsdelivr.net">
-      <link rel="icon" type="image/png" href="https://monet-prtl-co.imgix.net/Shared/Favicons/favicon-32x32.png" sizes="32x32">
-      <link rel="icon" type="image/png" href="https://monet-prtl-co.imgix.net/Shared/Favicons/favicon-16x16.png" sizes="16x16">
+      <link rel="icon" type="image/png" href="~/images/favicon.png" sizes="32x32">
+      <link rel="icon" type="image/png" href="~/images/favicon.png" sizes="16x16">
       <link href="https://monet-prtl-co.imgix.net/Shared/TouchIcons/apple-touch-icon.png" rel="apple-touch-icon" />
       <link href="https://monet-prtl-co.imgix.net/Shared/TouchIcons/apple-touch-icon-76x76.png" rel="apple-touch-icon" />
       <link href="https://monet-prtl-co.imgix.net/Shared/TouchIcons/apple-touch-icon-120x120.png" rel="apple-touch-icon" />
@@ -27,6 +27,8 @@
       <link rel="stylesheet" href="~/css/scss/responsive1.css" />
       <link rel="stylesheet" type="text/css" href="~/css/scss/slick/slick.css">
       <link rel="stylesheet" type="text/css" href="~/css/scss/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
      @* <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@studyportals/tooltip-dll@2.0.0/dist/tooltip.min.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@studyportals/modal-dll@2.2.0/dist/modal.min.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@studyportals/modal-dll@1.1.10/dist/modal.min.css">
@@ -46,7 +48,7 @@
                      <div id="SearchRowWrapper" class="col1 no-vertical-padding wrapped" style="padding-right: 0px;">
                         <div class="SearchRowBackground"></div>
                         <div id="SearchRowColBlock" class="colblock no-vertical-margin DisplayFlex">
-                           <div class="Brand"> <a asp-action="Index" asp-controller="Home" title="InStudy"> <img src="~/images/instudy-footer.png" alt="InStudy" id="PortalLogo" width="150" height="30"> </a> </div>
+                           <div class="Brand"> <a asp-action="Index" asp-controller="Home" title="InStudy"> <img src="~/images/logo (2).png" alt="InStudy" id="PortalLogo" width="150" height="30"> </a> </div>
                            <div class="HeaderToggle">
                               <div data-module="" class="Module StudyPortals_Shared_Modules_HeaderToggle_HeaderToggle">
                                  <section id="HeaderToggle">
@@ -78,7 +80,7 @@
                                 <a onclick="closeMenu()" style="display:hidden;" class="MainMenuHideButton js-hideMainMenuButton"> <i class="lnr-cross MainMenuIcon HeaderIcon"></i> </a>
                                 <ul class="MainMenuSections SectionsNavigation">
                                     <li class="SectionNavigationItem explore " style="width:115px;" onclick="selectMenu('explore')" id="explore"> </li>
-                                    <li class="SectionNavigationItem apply" style="width:115px;" id="apply">  </li>
+                                    <li class="SectionNavigationItem apply" style="width:115px;" id="apply"> </li>
                                     <li class="SectionNavigationItem goStudy" style="width:115px;" onclick="selectMenu('goStudy')" id="goStudy">  </li>
                                  </ul>
                                  <ul class="MainMenuSections SectionsContent" id="SectionsContent">
@@ -148,9 +150,9 @@
                                  <div id="HeaderSearch">
                                     <form class="Form" id="SearchForm">
                                        <div class="InputWrapper">
-                                          <input id="programInput" type="text" value="" name="discipline" class="Keywords AutoCompleteInput" autocomplete="off" data-type="what" data-order="1"> 
+                                          <input id="programInput1" type="text" value="" name="discipline" class="Keywords AutoCompleteInput" autocomplete="off" data-type="what" data-order="1"> 
                                           <div id="program_div" class="AutoCompleteContainer Hidden " style="width: 197px;">
-                                             <ul id="program" class="AutoComplete"> 
+                                             <ul id="program1" class="AutoComplete"> 
                                              </ul>
                                           </div>
                                        </div>
@@ -288,7 +290,7 @@
                 <div class="col1 no-vertical-padding wrapped">
                     <div class="colblock FlexBranding">
                         <div class="FooterLogo">
-                            <div data-module="" class="Module StudyPortals_Shared_Modules_Footer_FooterLogo_FooterLogo"> <img src="~/images/instudy-footer.png" class="SPLogo" alt="Studyportals" width="350" height="160" loading="lazy"> </div>
+                            <div data-module="" class="Module StudyPortals_Shared_Modules_Footer_FooterLogo_FooterLogo"> <img src="~/images/logo (2).png" class="SPLogo" alt="Studyportals" width="350" height="160" loading="lazy"> </div>
                         </div>
                         <div class="FooterDisclaimer">
                             <div data-module="" class="Module StudyPortals_Shared_Modules_Footer_FooterDisclaimer_FooterDisclaimer">
@@ -393,6 +395,25 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
         <script src="https://code.jquery.com/jquery-migrate-3.4.0.min.js"></script>
         <script src="~/css/scss/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script>
+        toastr.options = {
+            "closeButton": true,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "500",
+            "hideDuration": "10000",
+            "timeOut": "50000",
+            "extendedTimeOut": "10000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+    </script>
         <script type="text/javascript">
             $(document).on('ready', function () {
                 $(".vertical-center-4").slick({
@@ -575,16 +596,17 @@
             }
 
             function searchProgram(name) {
+               var  txtValue = name.textContent || name.innerText;
               
-               document.getElementById('programInput').value = name;
+               document.getElementById('programInput1').value = txtValue;
             }  
             function searchDirection(name) {
-              
-               document.getElementById('directionInput').value = name;
+              var  txtValue = name.textContent || name.innerText;
+               document.getElementById('directionInput').value = txtValue;
             }
             function searchCountry(name) {
-              
-               document.getElementById('countryInput').value = name;
+              var  txtValue = name.textContent || name.innerText;
+               document.getElementById('countryInput').value = txtValue;
             }
         </script>
         @RenderSection("Scripts",false)

@@ -38,6 +38,7 @@
             if ($lang == 'AZ') {
                 var name1 = data.data.azName
                 var description = data.data?.azDescription;
+                
 
             }
             else if ($lang == 'EN') {
@@ -49,11 +50,12 @@
                 var description = data.data?.ruDescription;
 
             }
+            localStorage.setItem('country', name1);
             var image = `data:image/png;base64,${data.data?.countryFiles[0]?.bytes}`
             $countryImage.append(
                 `
-                <span class="HeroImage js-heroImage" style="background-image:url('${image}');"></span>
-                <span class="HeroImage HeroImagePlaceholder js-heroImageLowResPlaceholder"></span> <span class="HeroOverlay" style="background-image:url('${image}');" ></span>
+                <span class="HeroImage js-heroImage" style="background-image:url('${image}');background-repeat: no-repeat;background-size: auto;"></span>
+                <span class="HeroImage HeroImagePlaceholder js-heroImageLowResPlaceholder"></span> <span class="HeroOverlay" style="background-image:url('${image}');background-repeat: no-repeat;background-size: auto;" ></span>
                 
                 `
             );
@@ -86,7 +88,20 @@ ${data?.data?.studentVisa}
   $('#Permit').append(`
 ${data?.data?.workPermit}
 `);
+           
+            $.each(
+                data?.data?.universities, function (i, value) {
+                    console.log("sasa", value);
+                    $("#universityList").append(
+                        `
+			                <li> <a href="/University/Detail/${value.id}" title=""> <span>${value.enName}</span> </a> (${value.studentCount} Students) </li>
 
+
+														`
+                    )
+
+                }
+            );
 
 
 

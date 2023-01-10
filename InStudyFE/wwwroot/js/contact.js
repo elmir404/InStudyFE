@@ -101,10 +101,10 @@ $(document).on('click', '#requestSubmit', async function () {
                 Email: $email.val(),
 
                 Description: $message.val(),
-                HaveWhatsApp: $reqWhatsapp[0].checked,
+                HaveWhatsApp: $('input[name="wp"]:checked').val(),
                 Phone: fullPhone,
                 ConsultationDate: $reqDate.val(),
-                IsOnline: $reqOnline[0].checked,
+                IsOnline: $('input[name="IsOnline"]:checked').val(),
                 YourContryId: $reqStudentCountry.val(),
                 CountryIds: $reqCountry.val(),
                 DirectionIds: $reqDirect.val()

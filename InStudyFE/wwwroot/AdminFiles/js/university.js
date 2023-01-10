@@ -9,7 +9,7 @@
                 data: 'universityFiles', render: function (data, type, row, meta) {
                     console.log("dsds", data);
                     return `
-                      <td><img alt="${data[0]?.fileName}" style="width:200px !important;" class="text-center img-responsive" src="${data[0]?.path}"></td>
+                      <td><img alt="data:image/png;base64,${data[0]?.bytes}" style="width:200px !important;" class="text-center img-responsive" src="data:image/png;base64,${data[0]?.bytes}"></td>
 
                         `;
 

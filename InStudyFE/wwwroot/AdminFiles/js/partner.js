@@ -1,13 +1,13 @@
 ﻿$(document).ready(function () {
-    $('#blog-datatable').DataTable({
+    $('#partner-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/Blogs/GetBlogs',
+            url: 'https://api.instudy.net/api/Partner/GetPartners',
             dataSrc: 'data'
         },
         columns: [
             {
-                data: 'files', render: function (data, type, row, meta) {
-                    console.log("dsds",data);
+                data: 'partnerFiles', render: function (data, type, row, meta) {
+                    console.log("dsds", data);
                     return `
                          <td><img alt="${data[0]?.fileName}" w-100 class="text-center img-responsive" src="data:image/png;base64,${data[0]?.bytes}"></td>
                         `;
@@ -17,14 +17,17 @@
                 }
             },
             {
-                data: 'azTitle',
+                data: 'azName',
             },
             {
-                data: 'ruTitle',
+                data: 'ruName',
             },
             {
-                data: 'enTitle',
+                data: 'enName',
             },
+            {
+                data: 'link',
+            },   
             {
                 data: 'id', render: function (data, type, row, meta) {
                     return ` <div class="btn-list">
@@ -48,13 +51,15 @@
 
         ]
     });
-    $("#addBlog").click(function () {
+    $("#addPartner").click(function () {
         console.log("sadsadsa");
         var files = $("#files").get(0).files;
         var formData = new FormData();
-        formData.append('AzTitle', $("#azHeader").val());
-        formData.append('RuTite', $("#ruHeader").val());
-        formData.append('EnHeader', $("#enHeader").val());
+        formData.append('AzName', $("#azHeader").val());
+        formData.append('RuName', $("#ruHeader").val());
+        formData.append('EnName', $("#enHeader").val());
+        formData.append('Link', $("#partnerLink").val());
+
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
@@ -65,13 +70,13 @@
 
         $.ajax({
             type: "POST",
-            url: 'https://api.instudy.net/api/Blogs/CreateBlog',
+            url: 'https://api.instudy.net/api/Partner/AddPartner',
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    //location.href = "/FainaAdmin/Blog/List"
+                    location.href = "/Admin/Partner/List"
                 }
                 else {
                     alert("error")
@@ -83,26 +88,26 @@
 
     });
 });
-function Edit(blog) {
+function Edit(id) {
 
-    localStorage.setItem('blogId', blog);
-    location.href = `/Admin/Blog/UpdateBlog`;
+    localStorage.setItem('partnerId', id);
+    location.href = `/Admin/Partner/UpdatePartner`;
 
 }
-function Delete(blog) {
+function Delete(id) {
 
     $.ajax({
         type: "DELETE",
-        url: `https://api.instudy.net/api/Blogs/DeleteBlog?blogId=${blog}`, 
+        url: `https://api.instudy.net/api/Partner/DeletePartner?id=${id}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/Admin/Blog/List`;
+                location.href = `/Admin/Partner/List`;
             }
             else {
                 alert(result.message)
             }
         }
     });
-    
+
 
 }
