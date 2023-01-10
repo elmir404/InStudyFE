@@ -559,6 +559,7 @@
                 localStorage.setItem('lang', lang);
                 location.reload();
             }
+
             function openMenu(){
 
                 const content = document.getElementById('SectionsContent');
@@ -575,8 +576,10 @@
                 li1.style.left = "0px";
                 li2.style.left = "87px";
                 li3.style.left = "171px";
-
+        
             }
+
+        
             function closeMenu(){
                 const content = document.getElementById('SectionsContent');
                 var body = document.body;
@@ -594,6 +597,20 @@
                 li2.style.left = "87px";
                 li3.style.left = "171px";
             }
+        $("#MainMenuBackground").click(function () {
+            const content = document.getElementById('SectionsContent');
+             var body = document.body;
+            content.classList.remove("is-open");
+            body.classList.remove("js-HeaderMainMenuOpened");
+            var link = document.getElementById('explore');
+            link.classList.remove("is-open");
+            var link = document.getElementById('goStudy');
+            link.classList.remove("is-open");
+          
+        });
+
+    
+        function searchProgram(name) {
 
             function searchProgram(name) {
                var  txtValue = name.textContent || name.innerText;
