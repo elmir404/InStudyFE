@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
+@*	<link rel="stylesheet" href="~/PhoneInput/css/demo.css">
+*@	<link rel="stylesheet" href="~/PhoneInput/css/intlTelInput.min.css">
 }
 
 <section class="ftco-section">
@@ -29,37 +31,45 @@
 				      		</div>
 									<form id="contact_form">
 										<div class="row">
-											<div class="col-md-6">
+											<div class="col-md-6 mb-2">
 												<div class="form-group">
 													<input type="text" class="form-control" name="name" id="requestName" placeholder="Name">
 												</div>
 											</div>
-											<div class="col-md-6">
+										<div class="col-md-6 mb-2">
 												<div class="form-group">
 													<input type="text" class="form-control" name="name" id="lastName" placeholder="Surname">
 												</div>
 											</div>
-											<div class="col-md-12"> 
-												<div class="form-group">
+										<div class="col-md-12 mb-2">
+											<div class="form-group">
 													<input type="email" class="form-control" name="email" id="requestEmail" placeholder="Email">
 												</div>
 											</div>
-											<div class=" col-md-6">
-						<label for="phone">Phone</label>
-						<input type="tel" class="form-control" id="requestPhone" placeholder="123456789">
-					</div>
-					<div class=" col-md-6">
+										<div class=" col-md-6 mb-2">
+						                    <label for="phone">Phone</label>
+											<input type="tel" class="form-control" id="phone" placeholder="Phone number">
+											
+												<div id="wpphone">
+												<label for="phone">Phone</label>
+												<input type="tel" class="form-control" id="phone" placeholder="Phone number">
+												</div>
+
+										</div>
+										<div class=" col-md-6 mb-2">
 						<label for="Wp">Have Whatsapp</label>
 						<div class="form-control btn-group" id="requestWhatsapp" data-toggle="buttons">
 							<label class="btn btn-default">
-								<input type="radio" name="wp" autocomplete="off" />Yes
+								<input type="radio" id="show2"name="wp" autocomplete="off" />Yes
 							</label>
 							<label class="btn btn-default">
-								<input type="radio" name="wp" autocomplete="off" />No
+								<input type="radio" id="hide2" name="wp" autocomplete="off" />No
 							</label>
 
 						</div>
 					</div>
+									
+									
 										<div class="form-group col-md-6" id="">
 											<label for="comment">Description:</label>
 												<textarea class="form-control overflow-auto" rows="3" id="requestMessage"></textarea>
@@ -145,6 +155,11 @@
 	
 	</section>
 	@section Scripts{
+		<script src="~/PhoneInput/js/intlTelInput.js"></script>
+    <script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {})
+    </script>
 		<script src="~/js/contact.js"></script>
 	<script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
 	<script>
@@ -246,6 +261,23 @@
 		radioButtons.forEach(radio => {
 			radio.addEventListener('click', handleRadioClick);
 		});
+
+
+
+		//const box2 = document.getElementById('wpphone');
+
+		//function handleRadioClick2() {
+		//	if (document.getElementById('show2').checked) {
+		//		box2.style.display = 'flex ';
+		//	} else {
+		//		box2.style.display = 'none';
+		//	}
+		//}
+
+		//const radioButtons = document.querySelectorAll('input[name="wp"]');
+		//radioButtons.forEach(radio => {
+		//	radio.addEventListener('click', handleRadioClick2);
+		//});
 	</script>
 	}
 	

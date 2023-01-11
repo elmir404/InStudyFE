@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
-
+    <link rel="stylesheet" href="~/PhoneInput/css/intlTelInput.min.css">
     <style>
         @@media(min-width: 1025px){
     #HeroContainer .HeroContent {
@@ -495,8 +495,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class=" col-md-6">
-                                                                <label for="phone">Phone</label>
-                                                                <input type="tel" class="form-control" id="requestPhone" placeholder="123456789">
+                                                            <label for="phone">Phone</label>
+                                                            <input type="tel" class="form-control" id="phone" placeholder="Phone number">
                                                             </div>
                                                             <div class=" col-md-6">
                                                                 <label for="Wp">Have Whatsapp</label>
@@ -877,6 +877,13 @@
         </section>
        
     @section Scripts{
+
+    <script src="~/PhoneInput/js/intlTelInput.js"></script>
+    <script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {})
+    </script>
+
         <script src="~/js/country-detail.js"></script>
         <script src="~/js/layout.js"></script>
         <script>
