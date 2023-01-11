@@ -149,6 +149,9 @@ sub {
 sup {
     top: -.5em;
 }
+#wpphone{
+    display:none;
+}
 
 a {
     color: #007bff;
@@ -220,7 +223,7 @@ th {
 }
 
 label {
-    display: inline-block;
+    display: block;
     margin-bottom: 0.5rem;
 }
 
