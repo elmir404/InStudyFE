@@ -335,8 +335,8 @@
     font-size:2.5em;
     padding:.5em
 }
-#DisciplineSpotlight ul li:hover{
-    background-color:#247ba0
+#DisciplineSpotlight ul li:hover {
+    background-color: #A2EACB
 }
 #DisciplineSpotlight ul li:hover a{
     color:#edf3f6;

@@ -2418,7 +2418,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu{
     }
 }
 #HeaderSearch form button:focus, #HeaderSearch form button:hover {
-    background: #522ebd;
+    background: #a2eacb;
     cursor: pointer
 }
 #HeaderSearch form button:before{

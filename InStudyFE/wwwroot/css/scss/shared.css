@@ -495,9 +495,9 @@ button,input,option,select,textarea{
     }
 }
 @media (min-width:1025px){
-    #Footer #FooterMain{
-        background:#f95c39;
-        padding:6rem 0
+    #Footer #FooterMain {
+        background: #6C39C5;
+        padding: 6rem 0
     }
 }
 #Footer #FooterMain .FooterMainCol1{
@@ -531,10 +531,10 @@ button,input,option,select,textarea{
     height:100%;
     transform:skewX(-45deg)
 }
-#Footer .BgBars .BgBarA{
-    background:#cc4c2f;
-    flex:1 0 40%;
-    transform-origin:top left
+#Footer .BgBars .BgBarA {
+    background: #3a157f;
+    flex: 1 0 40%;
+    transform-origin: top left
 }
 #Footer .BgBars .BgBarB{
     background:transparent;
