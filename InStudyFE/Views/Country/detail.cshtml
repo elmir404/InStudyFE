@@ -578,7 +578,46 @@
                             </div>
                         </div>
 
+                        <div id="contactDetail">
 
+                            <div id="map-responsive" class="map-responsive">
+                                <iframe src="rtgsf" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                            </div>
+                            <div class=" col-md-12 col-ms d-flex align-items-stretch" style="padding-top: 10px;">
+                                <div class="info-wrap bg-primary w-100 p-lg-5 p-8">
+                                    <h3 class="mb-8 mt-md-8" id="headerr">Bizimlə əlaqə</h3>
+                                    <div class="dbox w-100 d-flex align-items-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-map-marker"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>Ünvan:</span>rhsgfb</p>
+                                        </div>
+                                    </div>
+                                    <div class="dbox w-100 d-flex align-items-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-phone"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>Telefon:</span> <a href="tel:hesgrbdf">hesgrbdf</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="dbox w-100 d-flex align-items-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-paper-plane"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>E-poçt:</span> <a href="rhgbf">rhgbf</a></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
 
 
 
@@ -710,20 +749,29 @@
                                                                             </div>
                                                                             <div class=" col-md-6">
                                                                                 <label for="phone">Phone</label>
-                                                                                <input type="tel" class="form-control" id="requestPhone" placeholder="123456789">
+                                                                                <input type="tel" class="form-control" id="phone" placeholder="Phone number">
                                                                             </div>
-                                                                            <div class=" col-md-6">
-                                                                                <label for="Wp">Have Whatsapp</label>
-                                                                                <div class="form-control btn-group" id="requestWhatsapp" data-toggle="buttons">
-                                                                                    <label class="btn btn-default">
-                                                                                        <input type="radio" name="wp" autocomplete="off" />Yes
-                                                                                    </label>
-                                                                                    <label class="btn btn-default">
-                                                                                        <input type="radio" name="wp" autocomplete="off" />No
-                                                                                    </label>
+                                                                           <div class=" col-md-6 mb-2">
+											<label for="Wp">Have Whatsapp</label>
+											<div class="form-control btn-group" id="requestWhatsapp" data-toggle="buttons">
+												<label class="btn btn-default">
+													<input type="radio"  name="wp" value="hide" autocomplete="off" />Yes
+												</label>
+												<label class="btn btn-default">
+													<input type="radio" id="show2" name="wp" value="show" autocomplete="off" />No
+												</label>
 
-                                                                                </div>
+											</div>
+										</div>
+
+
+
+                                                                            <div class=" col-md-6 " id="wpphone">
+                                                                                <label for="phone">Phone</label>
+                                                                                <input type="tel" class="form-control" id="phone" placeholder="Phone number">
                                                                             </div>
+
+                                                                         
                                                                             <div class="form-group col-md-6" id="requestMessage">
                                                                                 <label for="comment">Description:</label>
                                                                                 <textarea class="form-control overflow-auto" rows="3" id="comment"></textarea>
@@ -819,7 +867,7 @@
                                                                                 <div class="submitting"></div>
                                                                             </div>
                                                                         </div>
-                                                                    </form>
+                                                   </form>
                                                                 </div>
                                                             </div>
 
@@ -926,6 +974,22 @@
         const radioButtons = document.querySelectorAll('input[name="example"]');
         radioButtons.forEach(radio => {
             radio.addEventListener('click', handleRadioClick);
+        });
+
+
+        const box2 = document.getElementById('wpphone');
+
+        function handleradioclick2() {
+            if (document.getElementById('show2').checked) {
+                box2.style.display = 'inline-block ';
+            } else {
+                box2.style.display = 'none';
+            }
+        }
+
+        const radiobuttons2 = document.querySelectorAll('input[name="wp"]');
+        radiobuttons2.forEach(radio => {
+            radio.addEventListener('click', handleradioclick2);
         });
 
         </script>

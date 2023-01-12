@@ -78,8 +78,9 @@
     margin-right: 6px; }
 .iti--allow-dropdown input, .iti--allow-dropdown input[type=text], .iti--allow-dropdown input[type=tel], .iti--separate-dial-code input, .iti--separate-dial-code input[type=text], .iti--separate-dial-code input[type=tel] {
     padding-right: 257px;
-    padding-left: 65px;
-    margin-left: 0px;
+    padding-left: 44px;
+    margin-left: 0;
+  
 }
   .iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container {
     right: auto;
