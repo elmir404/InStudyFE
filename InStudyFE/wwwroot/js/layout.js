@@ -49,7 +49,7 @@
         const menuItem = document.getElementById('program_div');
         setTimeout(function delay() {
             menuItem.classList.add("Hidden");
-        }, 500);
+        }, 200);
        
        
     });
@@ -62,7 +62,7 @@
         const menuItem = document.getElementById('country_div');
         setTimeout(function delay() {
             menuItem.classList.add("Hidden");
-        }, 500);
+        }, 200);
 
 
     });
@@ -75,7 +75,7 @@
         const menuItem = document.getElementById('direction_div');
         setTimeout(function delay() {
             menuItem.classList.add("Hidden");
-        }, 500);
+        }, 200);
 
 
     });
@@ -103,7 +103,7 @@
         const menuItem = document.getElementById('country_div');
         setTimeout(function delay() {
             menuItem.classList.add("Hidden");
-        }, 500);
+        }, 200);
     });
 
     $("#directionInput").keyup(function () {
@@ -129,7 +129,7 @@
         const menuItem = document.getElementById('direction_div');
         setTimeout(function delay() {
             menuItem.classList.add("Hidden");
-        }, 500);
+        }, 200);
     });
 
 });

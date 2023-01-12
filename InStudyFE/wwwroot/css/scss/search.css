@@ -1875,7 +1875,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
 }
 
 #HeaderSearch form button, #HeaderSearch form input {
-    font-size: 1rem;
+    font-size: 0.8rem;
     height: 2rem
 }
 
@@ -1945,8 +1945,8 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
     }
 
 #HeaderSearch form button {
-    background: #f95c39;
-    border: 1px solid #f95c39;
+    background: #a2eacb;
+    border: 1px solid #a2eacb;
     border-radius: 0 3px 3px 0;
     color: #fff;
     flex: 0 0 40px
@@ -1965,7 +1965,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
 }
 
 #HeaderSearch form button:focus, #HeaderSearch form button:hover {
-    background: #f95c39cc;
+    background: #a2eacb;
     cursor: pointer
 }
 
@@ -2470,14 +2470,14 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
 
 @media(min-width:769px)and (max-width:1024px) {
     #FooterScrollToTop .FooterScrollToTopButton {
-        border-color: #f95c39;
+        border-color: #6C39C5;
         box-shadow: 0 2px 2px #3f5c6e26
     }
 }
 
 @media(min-width:1025px) {
     #FooterScrollToTop .FooterScrollToTopButton {
-        border-color: #f95c39;
+        border-color: #6C39C5;
         box-shadow: 0 2px 2px #3f5c6e26
     }
 }
@@ -3118,7 +3118,7 @@ body a {
 a:-webkit-any-link {
     color: -webkit-link;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
 }
 @media (min-width: 1025px) {
     .SearchResultsList .SearchResultItem {

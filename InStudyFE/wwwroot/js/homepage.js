@@ -19,6 +19,7 @@
     var $homeHeader = $('#homeHeader');
     var $quateHeader = $('#quateHeader');
     var $quate = $('#quotes');
+    var $arcticles = $('#MoreArticles');
     
     const $lang = localStorage.getItem('lang');
     if ($lang == 'AZ') {
@@ -32,6 +33,7 @@
         $partnersHeader.html(`Tərəfdaşlar`);
         $arcticlesHeader.html(`Maraqlı Məqalələr`);
         $quateHeader.html(`Tələbələrin sözləri ilə biz`);
+        $arcticles.html(`Daha çox məqalə`)
 
     }
     else if ($lang == 'EN') {
@@ -45,6 +47,7 @@
         $quateHeader.html(`Us in students' words`);
         $countryMore.html(`View all countries`);
         $uniMore.html(`View all universities`);
+        $arcticles.html("More arcticles");
     } else {
         $countryHeader.html(`Популярные страны`);
         $universityHeader.html(`Популярные университеты`); 
@@ -56,6 +59,7 @@
         $countryMore.html(`Просмотреть все страны`);
         $quateHeader.html(`Мы словами студентов`);
         $uniMore.html(`Просмотреть все университеты`);
+        $arcticles.html("Еще статьи");
     }
     function getCountry() {
         $.ajax({
@@ -111,7 +115,7 @@
                                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset=${image}">
                                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="${image}">
                                        <source media="all and (min-width: 80.063em)" srcset="${image}">
-                                       <img src="${image}" alt="data:image/png;base64, Netherlands" loading="lazy" width="143" height="95">
+                                       <img src="${image}" alt="data:image/png;base64, Netherlands" loading="lazy" style="height: 13rem;">
                                     </picture>
                                  </span>
                               <figcaption>
@@ -509,7 +513,7 @@ ${value.description};
                 $partners.empty();
                 $.each(
                     data.data, function (i, value) {
-                      
+
                         var image = `data:image/png;base64,${value?.partnerFiles[0]?.bytes}`
                         //const date = new Date(value.regDate)
 
@@ -535,14 +539,22 @@ ${value.description};
 
                         //var description = value.description.slice(0, 5);
                         $partners.append(
-                            `  <div >
-                                  <img  src="${image}">
-                                 </div>
+                            `  <div>
+                                  <img style="width:13rem;height:13rem;"  src="${image}">
+                                   </div>
+                                
                                          `
                         )
 
                     }
+                );
+                $partners.append(
+                    `     <div class="next_button"></div>
+                         <div class="prev_button"></div>
+                                
+                                         `
                 )
+             
 
             }
 
@@ -761,7 +773,7 @@ ${value.description};
                                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset=${image}">
                                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="${image}">
                                        <source media="all and (min-width: 80.063em)" srcset="${image}">
-                                       <img src="${image}" alt="data:image/png;base64, Netherlands" loading="lazy" width="143" height="95">
+                                       <img src="${image}" alt="data:image/png;base64, Netherlands" loading="lazy" width="143" style="height: 13rem;" height="95">
                                     </picture>
                                  </span>
                               <figcaption>
