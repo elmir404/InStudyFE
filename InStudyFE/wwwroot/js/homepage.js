@@ -20,6 +20,12 @@
     var $quateHeader = $('#quateHeader');
     var $quate = $('#quotes');
     var $arcticles = $('#MoreArticles');
+    var $contact = $('#contactHeder');
+    var $topscroll = $('.FooterScrollToTopText');
+    var $footerabout = $('.footerabout');
+    var $footerarticles = $('.footerarticles');
+    var $footercountries = $('.footercountries');
+    var $footercontact = $('.footercontact');
     
     const $lang = localStorage.getItem('lang');
     if ($lang == 'AZ') {
@@ -33,8 +39,13 @@
         $partnersHeader.html(`Tərəfdaşlar`);
         $arcticlesHeader.html(`Maraqlı Məqalələr`);
         $quateHeader.html(`Tələbələrin sözləri ilə biz`);
-        $arcticles.html(`Daha çox məqalə`)
-
+        $arcticles.html(`Daha çox məqalə`);
+        $contact.html(`Əlaqə`);
+        $topscroll.html(`Yuxarı`);
+        $footerabout.html('Haqqında');
+        $footerarticles.html('Məqalə');
+        $footercountries.html('Ölkələr');
+        $footercontact.html('Əlaqə');
     }
     else if ($lang == 'EN') {
         $countryHeader.html(`Popular countries`);
@@ -48,6 +59,12 @@
         $countryMore.html(`View all countries`);
         $uniMore.html(`View all universities`);
         $arcticles.html("More arcticles");
+        $contact.html(`Contact`);
+        $topscroll.html(`Top`);
+        $footerabout.html('About');
+        $footerarticles.html('Articles');
+        $footercountries.html('Countries');
+        $footercontact.html('contact');
     } else {
         $countryHeader.html(`Популярные страны`);
         $universityHeader.html(`Популярные университеты`); 
@@ -60,6 +77,12 @@
         $quateHeader.html(`Мы словами студентов`);
         $uniMore.html(`Просмотреть все университеты`);
         $arcticles.html("Еще статьи");
+        $contact.html(`Контакт`);
+        $topscroll.html(`Bверх`)
+        $footerabout.html('O');
+        $footerarticles.html('Cтатьи');
+        $footercountries.html('Cтраны');
+        $footercontact.html('Связь');
     }
     function getCountry() {
         $.ajax({
