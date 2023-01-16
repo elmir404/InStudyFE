@@ -1,0 +1,78 @@
+﻿<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">Update Comments</h1>
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Update Comments</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- PAGE-HEADER END -->
+            <!-- ROW-1 OPEN -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Update Comments</div>
+                        </div>
+                        <div id="commentForm" class="card-body">
+
+                            <!--End Row-->
+                        </div>
+                        <div class="card-footer">
+                            <!--Row-->
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-9">
+                                    <a href="javascript:void(0)" id="updateComments" class="btn btn-primary">Update Comment</a>
+                                </div>
+                            </div>
+                            <!--End Row-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /ROW-1 CLOSED -->
+        </div>
+        <!-- CONTAINER CLOSED -->
+    </div>
+</div>
+@section Scripts {
+    <script src="~/AdminFiles/js/update-blog.js"></script>
+    <script>
+        $.ajax({
+            type: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+
+            },
+            url: `https://api.instudy.net/api/Country/GetActiveCountries`,
+
+            success: function (data) {
+                var html = [];
+                $.each(
+                    data.data, function (i, value) {
+                        $("#country").append(
+                            `
+                                                                                    <option value="${value.id}">${value.azName}</option>
+
+                                                                                 `
+                        )
+
+                    }
+                )
+
+            }
+
+        });
+
+    </script>
+        }

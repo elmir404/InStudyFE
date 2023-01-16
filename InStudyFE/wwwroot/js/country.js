@@ -1,48 +1,47 @@
 ﻿$(document).ready(function () {
 
-    var $country = $('#country');
+    var $country = $('#countryList');
+    const $lang = localStorage.getItem('lang');
     function getCountry() {
         $.ajax({
             type: 'GET',
             headers: {
                 'Content-Type': 'application/json'
             },
-            url: `https://localhost:7223/api/Blogs/GetBlogs`,
+            url: `https://api.instudy.net/api/Country/GetActiveCountries`,
 
-            success: function (data) {
+              success: function (data) {
                 $country.empty();
                 $.each(
                     data.data, function (i, value) {
-                        console.log(value.regDate);
-                        const date = new Date(value.regDate)
+                        console.log(value);
+                        //const date = new Date(value.regDate)
 
-                        var dd = String(date.getDate()).padStart(2, '0');
-                        var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-                        var yyyy = date.getFullYear();
-                        var time = yyyy + "/" + mm + "/" + dd;
-                        var description = value.description.slice(0, 5);
+                        //var dd = String(date.getDate()).padStart(2, '0');
+                        //var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
+                        //var yyyy = date.getFullYear();
+                        //var time = yyyy + "/" + mm + "/" + dd;
+                        
+                        if ($lang == 'AZ') {
+                            var name = value.azName
+                            var description = value?.azDescription;
+
+                        }
+                        else if ($lang == 'EN') {
+                            var name = value.enName
+                            var description = value?.enDescription;
+
+                        } else {
+                            var name = value.ruName;
+                            var description = value?.ruDescription;
+
+                        }
+                        
                         $country.append(
                                                 `
-                                                   <div class="col col-4">
-                                    <div class="flip-card">
-                                        <div class="flip-card-inner" tab-index="0">
-                                            <div class="flip-card-front">
-                                                 <div class="card-body">
-                                                    <h2 class="card-title text-center font-weight-bold text-dark">${value.}</h2>
-                                                    <p class="card-text text-dark text-center">${value}</p>
-                                                </div>
-                                            </div>
-                                            <div class="flip-card-back" style="background-image:url('${value}');">
-                                                <div class="card-body">
-                                                    <h2 class="card-title text-left font-weight-bold">${value.name}</h2>
-                                                    <p class="card-text text-left">${description}</p>
-                                                    <a value="id" id="learnMore" class="btn btn-danger btn-lg">Learn More +</a>
-                                                </div>
-       
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                              <li data-name="Albania" data-studies="3"> <a
+                                    href="/Country/Detail/${value.id}"
+                                    title="Albania"> ${name} </a> </li>
                                          `
                         )
 
@@ -61,5 +60,5 @@
 
 
     });
-    getBlogs();
+    getCountry();
 });

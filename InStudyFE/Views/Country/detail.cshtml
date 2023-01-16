@@ -1,72 +1,1087 @@
-﻿  @section Css{
-      <style>
-                  .sidebar-item{
-                      outline:gray;
-                  }
-  .sidebar-item:hover {
-    background-color:red !important;
+﻿ @section Css{
+    <link rel="stylesheet" href="~/css/scss/style3.css" />
+    <link rel="stylesheet" href="~/css/contact.css" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=PT+Sans|Rubik|Roboto+Condensed&amp;subset=cyrillic&amp;sort=popularity" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
+    <link rel="stylesheet" href="~/PhoneInput/css/intlTelInput.min.css">
+    <style>
+        @@media(min-width: 1025px){
+    #HeroContainer .HeroContent {
+        background: #247ba0cc;
+    }
 }
+@@media(min-width: 769px){
+.mdc-layout-grid {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 24px;
+    padding: var(--mdc-layout-grid-margin-desktop,24px);
+}}
+#Recommendations, #recommendationsWrapper {
+    padding: 0;
+}
+     
+        .ftco-section{
+            padding:0;
+        }
+        .ScrollTemplate[data-v-71d9db58] {
+    display: flex;
+    flex-direction: row;
+}
+        .StudyCardGrid[data-v-60a22860] {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 2rem;
+            padding: 2rem 1rem 1rem 0;
+            overflow: hidden;
+           
+        }
+        @@media (min-width: 1025px){
+.StudyCardGrid[data-v-60a22860] {
+    padding: 0;
+    margin: 0 0 0 -1rem;
+    overflow: visible;
+    background: #fff;
+}}
+.StudyCardGrid[data-v-60a22860] {
+    flex-direction: row;
+}
+.ContentCard {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px #3f5c6e26;
+    padding: 1rem;
+}
+.ContentCard[data-v-6e0e8e37] {
+    position: relative;
+    z-index: 0;
+    top: 0;
+    display: flex;
+    flex: 0 0 288px;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    margin: 0 0 1rem 1rem;
+    transition: box-shadow .2s,top .2s;
+    box-shadow: 0 2px 2px rgb(63 92 110 / 15%);
+    border-radius: 0.5rem;
+    background: #fff;
+    cursor: pointer;
+}
+@@media (min-width: 1025px){
+.ContentCard[data-v-6e0e8e37] {
+    flex: 0 0 calc(33.3% - 1rem);
+}}
+        .StudyCoverWrapper[data-v-78fa3586] {
+            min-height: 9.5rem;
+            max-height: 9.5rem;
+            margin: -1.5rem -1.5rem 1.5rem;
+            overflow: hidden;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+                .StudyCoverWrapper img[data-v-78fa3586] {
+            width: 100%!important;
+            object-fit: cover;
+        }
+        .ContentCard .BestfitWishlist[data-v-6e0e8e37] {
+    display: flex;
+    justify-content: flex-end;
+}
+.ButtonIconWidget[data-v-371986c4] {
+    display: inline-flex;
+    align-items: center;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 400;
+    color: #39a9db;
+    background-color: #f5f9fa;
+    border-radius: 15px;
+}
+        .ButtonIconWidget.BlueBackground[data-v-371986c4] {
+            background: #edf7fb;
+        }
+        .ButtonIconWidget .FitText[data-v-371986c4] {
+    padding: 0 0.5rem;
+}
+@@media (min-width: 1025px){
+.ButtonIconWidget .FitText[data-v-371986c4] {
+    padding: 0 0.5rem;
+}}
+.ButtonIconWidget .BestFitLogo[data-v-371986c4] {
+    position: relative;
+    z-index: 25;
+    height: 1rem;
+    width: 1rem;
+}
+@@media (min-width: 1025px){
+.ButtonIconWidget .BestFitLogo[data-v-371986c4] {
+    height: 1.5rem;
+    width: 1.5rem;
+}}
+.ButtonIconWidget .BestFitIcon[data-v-371986c4] {
+    font-size: 1rem;
+    background: #fff;
+    color: #3f5c6e;
+    border-radius: 50%;
+    overflow: hidden;
+}
+@@media (min-width: 1025px){
+.ButtonIconWidget .BestFitIcon[data-v-371986c4] {
+    font-size: 24px;
+}}
+.ButtonIconWidget .PlusIcon[data-v-371986c4] {
+    position: absolute;
+    right: -25%;
+    bottom: 0;
+    font-size: .5rem;
+    color: #39a9db;
+    background: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+@@media (min-width: 1025px){
+.ButtonIconWidget .PlusIcon[data-v-371986c4] {
+    font-size: .8rem;
+}}
+.WishlistButtonContainer[data-v-0d5610aa] {
+    margin: auto;
+    padding: 0 0 0 0.5rem;
+    pointer-events: auto;
+    text-align: right;
+}
+.ContentCard .WishlistButtonContainer[data-v-6e0e8e37] {
+    margin: 0 0 0 1rem;
+}
+        .ContentCard .OrganisationTitle[data-v-6e0e8e37] {
+            min-height: 3rem;
+            display: flex;
+            align-items: baseline;
+            overflow: hidden;
+            box-sizing: border-box;
+            margin-bottom: 0.5rem;
+            pointer-events: none;
+        }
+                .ContentCard .StudyTitle[data-v-6e0e8e37] {
+            margin: 0;
+            flex-grow: 1;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-weight: 700;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+        }
+                .ContentCard .OrganisationInformation[data-v-6e0e8e37] {
+            display: flex;
+            align-items: flex-end;
+            pointer-events: none;
+        }
+                .ContentCard .OrganisationInformation .SquareOrganisationLogo[data-v-6e0e8e37] {
+            width: 3rem;
+            height: 3rem;
+            min-width: 3rem;
+            margin-right: 0.5rem;
+        }
+        .ContentCard .OrganisationInformation .Name[data-v-6e0e8e37] {
+    word-break: break-word;
+    max-height: 2rem;
+    color: #05293c;
+}
+.ContentCard .OrganisationInformation .Location[data-v-6e0e8e37], .ContentCard .OrganisationInformation .Name[data-v-6e0e8e37] {
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    text-transform: none;
+    overflow: hidden;
+}
+.ContentCard .OrganisationInformation .Location[data-v-6e0e8e37], .ContentCard .OrganisationInformation .Name[data-v-6e0e8e37] {
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    text-transform: none;
+    overflow: hidden;
+}
+.ContentCard .OrganisationInformation .Location[data-v-6e0e8e37] {
+    letter-spacing: normal;
+    text-overflow: ellipsis;
+    color: #3f5c6e;
+}
+
+        @@media (min-width: 1025px){
+            .faq-section{
+                display: none;
+            }
+        }
+
+        .acc {
+            margin-bottom: 10px;
+        }
+
+        .acc-head {
+            /* background-color: rgb(155, 154, 87);*/
+            padding: 15px 10px;
+            font-size: 22px;
+            position: relative;
+            cursor: pointer;
+        }
+
+            .acc-head::before,
+            .acc-head::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                background-color: #4090F7;
+                transition: all .3s;
+            }
+
+            .acc-head::before {
+                right: 30px;
+                width: 3px;
+                height: 20px;
+                margin-top: -10px;
+            }
+
+            .acc-head::after {
+                right: 21px;
+                width: 20px;
+                height: 3px;
+                margin-top: -2px;
+            }
+
+            .acc-head p {
+                color: #fff;
+                font-weight: bold;
+            }
+
+        .acc-content {
+            padding: 15px 10px;
+            display: none;
+        }
+
+        .acc-head.active::before {
+            transform: rotate(90deg);
+        }
+
+        .accordion-button::after {
+            transform: none !important;
+            transition: none !important;
+            width: 0;
+            color: blue;
+        }
+        
+        @@media (max-width: 480px) {
+            .faq-section {
+                display: flex;
+            }
+            #SwitchableContent{
+                display:none;
+            }
+            .acc-head {
+                padding: 19px 95px;
+                font-size: 19px;
+            }
+
+            .accordion-item h2 {
+                font-weight: 500;
+            }
+
+            .faq-section .faq-section-detail {
+                gap: 94px;
+                display: flex;
+                flex-direction: column;
+               
+            }
+
+
+
+            .faq-section .faq-section-detail-text {
+                width: 100%;
+                margin-left: 10px;
+            }
+        }
+
     </style>
-  }
-<section class="container bg-light">
-    <div class="row">
-        <div class="col-lg-3">
-            <div class="card rounded-0" style="padding: 35px 34px 65px 34px;">
-                <div class="list-group">
+ }
+<section id="HeroContainer">
+        <div class="HeroContainerHelper" >
+            <div id="HeroImage">
+              
+            </div>
+            
+                <div class="HeroContentWrapper">
+                    <div data-module=""
+                        class="Module HeroContentModule StudyPortals_Shared_Modules_Country_HeaderBase_HeaderBase StudyPortals_DistanceLearning_Modules_Country_Header_Header">
+                        <section class="HeroBackground"></section>
+                        <section class="HeroContent">
+                            <div id="countryImage" class="HeroImageSources js-heroImageSources">
+                               
+                            </div>
+                            <div class="">
+                            <div class="HeroTextContent">
+                                <section id="CountryHeader" data-level="master"> 
+                                   
+                                   </section> </div>
+                            </div>
+                        </section>
+                    </div>
                    
-                    <a href="#" class="list-group-item sidebar-item font-weight-bold bg-light mt-3 list-group-item-action">United Kingdom</a>
-
                 </div>
-           </div>
-        </div>
-        <div class="col-lg-8">
-            <div id="countryDetail" class="card rounded-0 ">
-                <img class="card-img-top" src="https://s30876.pcdn.co/wp-content/uploads/london-e1634207674493-1170x630.jpg.optimal.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-
-                        <div class="row">
-                            <div class="col rounded-0 col-3">
-                                <div class="card ">
-                                    <img class="card-img-top" src="https://s30876.pcdn.co/wp-content/uploads/london-e1634207674493-1170x630.jpg.optimal.jpg" alt="Card image cap">
-                                    <div class="card-body bg-transparent">
-                                        <h5 class="card-title font-weight-bold">Card title</h5>
+            </div>
+        </section>
+        <div id="CountryHeaderContainer" class="WhiteBackgroundPane">
+            <div class="col1 wrapped">
+                <div class="colblock">
+                    
+                    <div data-module="" class="Module StudyPortals_Shared_Modules_Country_Conversion_Conversion"> </div>
+                </div>
+                <div class="colblock">
+                <div class="HeaderSearch" >
+                    <div data-module="" class="Module StudyPortals_Shared_Modules_HeaderSearch_HeaderSearch">
+                        <div id="HeaderSearch" style="max-width: 39rem;">
+                            <form class="Form" id="HomeSearchForm">
+                                <div class="InputWrapper">
+                                    <input style="height:2.5rem;" id="programInputCon" type="text" value="" name="discipline" class="Keywords AutoCompleteInput" placeholder="Program" autocomplete="off" data-type="what" data-order="1">
+                                    <div id="program_div_con" class="AutoCompleteContainer " style="width: 197px;z-index:200">
+                                        <ul id="programCon" class="AutoComplete"></ul>
                                     </div>
                                 </div>
-                              
-                            </div>
-                            <div class="col col-3">
-                                <div class="card rounded-0">
+                                <div class="InputWrapper">
+                                    <input id="directionInput"   style="height:2.5rem;" type="text" value="" name="location" class="Keywords AutoCompleteInput" placeholder="Direction" autocomplete="off" data-type="where" data-order="2">
+                                    <div class="AutoCompleteContainer " style="width: 197px;">
+                                        <ul id="direction" class="AutoComplete" style="z-index:101;">
+                                            <li>sdasdsad</li>
+                                            <li>sadsad</li>
+                                            <li>asdsad</li>
+                                            <li>asdasd</li>
+                                            <li>asdasdsad</li>
+                                        </ul>
+                                    </div>
                                 </div>
+                                <button type="submit" id="searchButton" style="height:2.5rem;" class="SearchButton"> <i class="lnr-magnifier SearchButtonIcon"></i> </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+              
+            </div>
+        </div>
+        <section class="col1 WrappedContent no-vertical-padding">
+            <div class="colblock">
+                <div data-module="" class="Module StudyPortals_Shared_Modules_Country_ContentSwitcher_ContentSwitcher">
+                    <div id="ContentSwitcherWrapper" class="ContentSwitcherWrapper">
+                        <div id="ContentSwitcher" class="ContentSwitcher"> 
+                                <button type="button"
+                            class="ContentButton js-contentButtons" onclick="swith('StudyIn')" data-id="study">
+                            Study
+                        </button>
+                                <button type="button"
+                            class="ContentButton js-contentButtons" onclick="swith('Living')" data-id="living">
+                            Living
+                        </button>
 
-                            </div>
-                            <div class="col col-3">
-                                <div class="card rounded-0">
-                                   
-                                </div>
-                              
-                            </div>
-                            <div class="col col-3">
-                                <div class="card rounded-0">
-                                </div>
+                                <button
+                                type="button" class="ContentButton js-contentButtons" onclick="swith('About')" data-id="about"> About
+                                 </button>
 
-                            </div>
-                            <div class="col col-3">
-                                <div class="card rounded-0">
-                                </div>
+                        <button type="button" class="ContentButton js-contentButtons" onclick="swith('Universities')" data-id="institutes">
+                                Universities </button>
 
-                            </div>
-                            <div class="col col-3">
-                                <div class="card rounded-0">
-                                   
-                                </div>
-                              
+                        <button type="button" onclick="swith('Visa')" class="ContentButton js-contentButtons"
+                                data-id="visa"> Student visa </button>
+
+                                <button type="button"
+                            class="ContentButton js-contentButtons" onclick="swith('Permit')" data-id="work_permit">
+                            Work permit
+                        </button>
+
+                        <button type="button" onclick="swith('Apply')" class="ContentButton js-contentButtons" data-id="how_to_apply">
+                                Apply Form </button> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section id="SwitchableContent" class="col1 WrappedContent no-vertical-padding">
+    <div id="menuChildren" class="colblock no-vertical-margin">
+        <div class="ToggleButton js-contentButtons" data-id="study"><span class="ToggleButtonTitle">Study</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
+        <div class="LineWrapper js-content-study">
+            <hr>
+        </div>
+        
+        <div data-module="Country:study_in" id="StudyIn" class="Module StudyPortals_Shared_Modules_Country_StudyIn_StudyIn js-contentSwitchable js-content-study">
+            <div id="StudyIn">
+            </div>
+        </div>
+        <div class="ToggleButton js-contentButtons"  data-id="living"><span class="ToggleButtonTitle">Living</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
+        <div class="LineWrapper js-content-living">
+            <hr>
+        </div>
+        <div data-module="Country:living" id="Living" class="Module StudyPortals_Shared_Modules_Country_Living_Living js-contentSwitchable js-content-living Hidden">
+          
+        </div>
+        <div class="ToggleButton js-contentButtons"  data-id="about"><span class="ToggleButtonTitle">About</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
+        <div class="LineWrapper js-content-about">
+            <hr>
+        </div>
+        <div data-module="Country:about" id="About" class="Module StudyPortals_Shared_Modules_Country_About_About js-contentSwitchable js-content-about Hidden">
+            <div id="About">  </div>
+        </div>
+        <div class="ToggleButton js-contentButtons" data-id="institutes"><span class="ToggleButtonTitle">Universities</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
+        <div class="LineWrapper js-content-institutes">
+            <hr>
+        </div>
+        <div data-module="Country:institutes" id="Universities" class="Module StudyPortals_Shared_Modules_Country_Institutes_Institutes js-contentSwitchable js-content-institutes Hidden">
+            <div id="CountryStudies">
+                <ul id="universityList" class="Content">
+                </ul>
+            </div>
+        </div>
+        <div class="ToggleButton js-contentButtons" data-id="visa"><span class="ToggleButtonTitle">Student visa</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
+        <div class="LineWrapper js-content-visa">
+            <hr>
+        </div>
+        <div data-module="Country:visa" id="Visa" class="Module StudyPortals_Shared_Modules_Country_Visa_Visa js-contentSwitchable js-content-visa Hidden">
+            <article id="CountryVisa"></article>
+        </div>
+        <div class="ToggleButton js-contentButtons" data-id="work_permit"><span class="ToggleButtonTitle">Work permit</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
+        <div class="LineWrapper js-content-work_permit">
+            <hr>
+        </div>
+        <div data-module="Country:WorkPermitContent" id="Permit" class="Module StudyPortals_Shared_Modules_Country_WorkPermitContent_WorkPermitContent js-contentSwitchable js-content-work_permit Hidden">
+            <section id="WorkPermitContent"></section>
+        </div>
+        <div class="ToggleButton js-contentButtons" data-id="how_to_apply"><span class="ToggleButtonTitle">How to Apply<i class="lnricon lnr-sp-logo"></i></span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
+        <div class="LineWrapper js-content-how_to_apply">
+            <hr>
+        </div>
+        <div data-module="Country:how_to_apply_content" id="Apply" class="Module StudyPortals_Shared_Modules_Country_HowToApply_HowToApply js-contentSwitchable js-content-how_to_apply Hidden">
+            <section id="HowToApplyContent">
+                <section class="ftco-section">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12 text-center mb-5">
                             </div>
                         </div>
+                        <div class="contact-form row rounded-0 justify-content-center">
+                            <div class="col-lg-10 col-md-12">
+                                <div class="wrapper">
+                                    <div class="row no-gutters">
+                                        <div class="border-radius col-md-12 d-flex align-items-stretch">
+                                            <div class="contact-wrap w-100 p-md-5 p-4">
+                                                <h3 class="mb-4">Contact</h3>
+                                                <div id="form-message-warning" class="mb-4"></div>
+                                                <div id="form-message-success" class="mb-4">
+                                                    Your message was sent, thank you!
+                                                </div>
+                                                <form id="contact_form" onsubmit="return call_locker();">
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-2">
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" name="name" id="requestName" placeholder="Name" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mb-2">
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" name="name" id="lastName" placeholder="Surname" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 mb-2">
+                                                            <div class="form-group">
+                                                                <input type="email" class="form-control" name="email" id="requestEmail" placeholder="Email" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" col-md-6 mb-2">
+                                                            <label for="phone">Phone</label>
+                                                            <input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
+
+
+
+                                                        </div>
+                                                        <div class=" col-md-6 mb-2">
+                                                            <label for="Wp">Have Whatsapp</label>
+                                                            <div class="form-control btn-group" id="requestWhatsapp" data-toggle="buttons">
+                                                                <label class="btn btn-default">
+                                                                    <input type="radio" name="wp" value="hide" autocomplete="off" required />Yes
+                                                                </label>
+                                                                <label class="btn btn-default">
+                                                                    <input type="radio" id="show2" name="wp" value="show" autocomplete="off" />No
+                                                                </label>
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class=" col-md-6 " id="wpphone">
+                                                            <label for="phone">Phone</label>
+                                                            <input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
+                                                        </div>
+
+
+                                                        <div class="form-group col-md-6" id="">
+                                                            <label for="comment">Description:</label>
+                                                            <textarea class="form-control overflow-auto" rows="3" id="requestMessage" required></textarea>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="consulted">Consulted</label>
+                                                            <div class="form-control btn-group" data-toggle="buttons">
+                                                                <label class="btn btn-default">
+                                                                    <input type="radio" id="show" name="example" value="show" autocomplete="off" required />Yes
+                                                                </label>
+                                                                <label class="btn btn-default">
+                                                                    <input type="radio" id="hide" name="example" value="hide" autocomplete="off" />No
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div id="box" class="row">
+                                                            <div class="form-group col-md-6" id="requestDate">
+                                                                <label for="birthdaytime">Date (date and time):</label>
+                                                                <input type="datetime-local" id="birthdaytime" name="birthdaytime" required>
+
+                                                            </div>
+
+                                                            <div class="form-group col-md-6">
+                                                                <label for="IsOnline">IsOnline</label>
+                                                                <div class="form-control btn-group" id="requestType" data-toggle="buttons">
+                                                                    <label class="btn btn-default">
+                                                                        <input type="radio" name="IsOnline" autocomplete="off" required />Yes
+                                                                    </label>
+                                                                    <label class="btn btn-default">
+                                                                        <input type="radio" name="IsOnline" autocomplete="off" />No
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="yourcontry"> Student Country</label>
+                                                            <select class="" id="requestStudentCountry" required>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="yourcontry"> Country</label>
+                                                            <select multiple="multiple" class="" id="requestCountry" required>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group col-sm-4">
+                                                            <label for="direction">Direction</label>
+                                                            <select class="" multiple="multiple" id="requestDirection" required>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <input type="submit" id="requestSubmit" value="Send Message" class="btn btn-primary" required>
+                                                            <div class="submitting"></div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="contactDetail">
+
+                           @* <div id="map-responsive" class="map-responsive">
+                                <iframe src="rtgsf" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                            </div>*@
+                            <div class=" col-md-12 col-ms d-flex align-items-stretch" style="padding-top: 10px;">
+                                <div class="info-wrap bg-primary w-100 p-lg-5 p-8">
+                                    <h3 class="mb-8 mt-md-8" id="headerr">Bizimlə əlaqə</h3>
+                                    <div class="dbox w-100 d-flex align-items-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-map-marker"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>Ünvan:</span>rhsgfb</p>
+                                        </div>
+                                    </div>
+                                    <div class="dbox w-100 d-flex align-items-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-phone"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>Telefon:</span> <a href="tel:hesgrbdf">hesgrbdf</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="dbox w-100 d-flex align-items-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-paper-plane"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>E-poçt:</span> <a href="rhgbf">rhgbf</a></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+                </section>
+
+            </section>
+        </div>
+        <div data-module="" class="Module StudyPortals_Shared_Modules_Country_Conversion_Conversion EmptyModule"> </div>
+    </div>
+</section>
+
+<section class="faq-section pt-100">
+    <div class="opacity-div"></div>
+    <div class="container">
+        <div class="faq-section-detail">
+           
+            <div class="faq-section-detail-accordion">
+                <div class="accordion accordion-div" id="accordionExample1">
+                    <div class="accordion-item show">
+                        <h2 class="accordion-header acc-head">
+                            Study
+                        </h2>
+                        <div id="collaps" class="accordion-collapse collapse acc-content show">
+                            <div id="StudyIn" class="accordion-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item show">
+                        <h2 class="accordion-header acc-head" id="headingTw">
+                            Living
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse acc-content collapse">
+                            <div id="Living" class="accordion-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item show">
+                        <h2 class="accordion-header acc-head" id="headingThree">
+
+                            About
+
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse acc-content collapse">
+                            <div id="About" class="accordion-body"> </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item show">
+                        <h2 class="accordion-header acc-head" id="headingThree">
+
+                            Universities
+
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse acc-content collapse">
+                            <div id="CountryStudies" class="accordion-body">
+                            </div>
+                        </div>
+                    </div>
+                     <div class="accordion-item show">
+                        <h2 class="accordion-header acc-head" id="headingThree">
+
+                            Student visa
+
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse acc-content collapse">
+                            <div  id="CountryVisa" class="accordion-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item show">
+                        <h2 class="accordion-header acc-head" id="headingThree">
+
+                            Work permit
+
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse acc-content collapse">
+                            <div id="WorkPermitContent" class="accordion-body">
+                            </div>
+                        </div>
+                    </div>
+                     <div class="accordion-item show">
+                        <h2 class="accordion-header acc-head" id="headingThree">
+
+                            Apply Form
+
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse acc-content collapse">
+                            <div id="HowToApplyContent" class="accordion-body">
+                                <section id="HowToApplyContent">
+                                    <section class="ftco-section">
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-12 text-center mb-5">
+                                                </div>
+                                            </div>
+                                            <div class="contact-form row rounded-0 justify-content-center">
+                                                <div class="col-lg-10 col-md-12">
+                                                    <div class="wrapper">
+                                                        <div class="row no-gutters">
+                                                            <div class="border-radius col-md-12 d-flex align-items-stretch">
+                                                                <div class="contact-wrap w-100 p-md-5 p-4">
+                                                                    <h3 class="mb-4">Contact</h3>
+                                                                    <div id="form-message-warning" class="mb-4"></div>
+                                                                    <div id="form-message-success" class="mb-4">
+                                                                        Your message was sent, thank you!
+                                                                    </div>
+                                                                    <form id="contact_form" onsubmit="return call_locker();">
+                                                                        <div class="row">
+                                                                            <div class="col-md-6 mb-2">
+                                                                                <div class="form-group">
+                                                                                    <input type="text" class="form-control" name="name" id="requestName" placeholder="Name" required>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6 mb-2">
+                                                                                <div class="form-group">
+                                                                                    <input type="text" class="form-control" name="name" id="lastName" placeholder="Surname" required>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-12 mb-2">
+                                                                                <div class="form-group">
+                                                                                    <input type="email" class="form-control" name="email" id="requestEmail" placeholder="Email" required>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class=" col-md-6 mb-2">
+                                                                                <label for="phone">Phone</label>
+                                                                                <input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
+
+
+
+                                                                            </div>
+                                                                            <div class=" col-md-6 mb-2">
+                                                                                <label for="Wp">Have Whatsapp</label>
+                                                                                <div class="form-control btn-group" id="requestWhatsapp" data-toggle="buttons">
+                                                                                    <label class="btn btn-default">
+                                                                                        <input type="radio" name="wp" value="hide" autocomplete="off" required />Yes
+                                                                                    </label>
+                                                                                    <label class="btn btn-default">
+                                                                                        <input type="radio" id="show2" name="wp" value="show" autocomplete="off" />No
+                                                                                    </label>
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class=" col-md-6 " id="wpphone">
+                                                                                <label for="phone">Phone</label>
+                                                                                <input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
+                                                                            </div>
+
+
+                                                                            <div class="form-group col-md-6" id="">
+                                                                                <label for="comment">Description:</label>
+                                                                                <textarea class="form-control overflow-auto" rows="3" id="requestMessage" required></textarea>
+                                                                            </div>
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="consulted">Consulted</label>
+                                                                                <div class="form-control btn-group" data-toggle="buttons">
+                                                                                    <label class="btn btn-default">
+                                                                                        <input type="radio" id="show" name="example" value="show" autocomplete="off" required />Yes
+                                                                                    </label>
+                                                                                    <label class="btn btn-default">
+                                                                                        <input type="radio" id="hide" name="example" value="hide" autocomplete="off" />No
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div id="box" class="row">
+                                                                                <div class="form-group col-md-6" id="requestDate">
+                                                                                    <label for="birthdaytime">Date (date and time):</label>
+                                                                                    <input type="datetime-local" id="birthdaytime" name="birthdaytime" required>
+
+                                                                                </div>
+
+                                                                                <div class="form-group col-md-6">
+                                                                                    <label for="IsOnline">IsOnline</label>
+                                                                                    <div class="form-control btn-group" id="requestType" data-toggle="buttons">
+                                                                                        <label class="btn btn-default">
+                                                                                            <input type="radio" name="IsOnline" autocomplete="off" required />Yes
+                                                                                        </label>
+                                                                                        <label class="btn btn-default">
+                                                                                            <input type="radio" name="IsOnline" autocomplete="off" />No
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+
+
+                                                                            <div class="form-group col-sm-4">
+                                                                                <label for="yourcontry"> Student Country</label>
+                                                                                <select class="" id="requestStudentCountry" required>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="form-group col-sm-4">
+                                                                                <label for="yourcontry"> Country</label>
+                                                                                <select multiple="multiple" class="" id="requestCountry" required>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="form-group col-sm-4">
+                                                                                <label for="direction">Direction</label>
+                                                                                <select class="" multiple="multiple" id="requestDirection" required>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group">
+                                                                                <input type="submit" id="requestSubmit" value="Send Message" class="btn btn-primary" required>
+                                                                                <div class="submitting"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+                                        </div>
+
+
+
+
+
+
+                                    </section>
+
+                                </section>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
 </section>
+        <section class="col1 WrappedContent no-vertical-padding">
+            <div class="colblock no-vertical-margin">
+                <div data-module=""
+                    class="Module StudyPortals_Shared_Modules_Country_StudyRecommendations_StudyRecommendations">
+                    <div >
+                        <h3 id="StudyUniversity" class="Title"> </h3>
+                    <div id="Recommendations" class="mdc-layout-grid">
+                            <div>
+    <div data-v-71d9db58="" class="" identifier="account-page-programmes-recommendations">
+       <div data-v-60a22860="" class="js-StudyProgrammes" data-v-71d9db58="">
+          <div data-v-60a22860="" id="universities" class="StudyCardGrid js-StudyCards">
+             
+          </div>
+       </div>
+    </div>
+ </div>
+                        </div>
+                        <div class="Recommendations" data-identifier="carousel-recommendations"
+                            data-recommendation-type="programmes" data-template="carousel" data-filter-countries="1"
+                            data-page="country">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+    @section Scripts{
+
+    <script src="~/PhoneInput/js/intlTelInput.js"></script>
+    <script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {})
+    </script>
+
+        <script src="~/js/country-detail.js"></script>
+        <script src="~/js/layout.js"></script>
+        <script>
+        $(document).ready(function () {
+
+
+
+            $("#contact_form").validate({
+                messages: {
+
+
+                    requestName: { required: "Please enter a name", },
+                    lastName: { required: "Please enter a surname", },
+                    requestEmail: { required: "Please enter a valid email address", },
+                    phone: { required: "Please enter a valid phone number", },
+                    requestWhatsapp: { required: "Please enter a valid Whatsapp", },
+                    requestMessage: { required: "Please enter a valid description", },
+
+
+                },
+                rules: {
+                    usernfidtxt: "required",
+                    first_name: "required",
+                    last_name: "required",
+
+                    email: {// compound rule
+                        required: true,
+                        email: true,
+                    },
+
+                    phone: {
+                        required: true,
+                        pattern: "^[0-9-+s()]*$",
+                    },
+
+                },
+
+            });
+
+
+
+
+        });
+
+            function swith(id){
+                console.log(id);
+                const collection = document.getElementById("menuChildren").children;
+                                for (let i = 0; i < collection.length; i++) {
+                      collection[i].classList.add("Hidden");
+                    }
+                document.getElementById(id).classList.remove("Hidden");
+            }
+
+        $(document).ready(function () {
+            $('.acc-container .acc:nth-child(1) .acc-head').addClass('active');
+            $('.acc-container .acc:nth-child(1) .acc-content').slideDown();
+            $('.acc-head').on('click', function () {
+                if ($(this).hasClass('active')) {
+                    $(this).siblings('.acc-content').slideUp();
+                    $(this).removeClass('active');
+                }
+                else {
+                    $('.acc-content').slideUp();
+                    $('.acc-head').removeClass('active');
+                    $(this).siblings('.acc-content').slideToggle();
+                    $(this).toggleClass('active');
+                }
+            });
+        });
+
+        const box = document.getElementById('box');
+
+        function handleRadioClick() {
+            if (document.getElementById('show').checked) {
+                box.style.display = 'flex ';
+            } else {
+                box.style.display = 'none';
+            }
+        }
+
+        const radioButtons = document.querySelectorAll('input[name="example"]');
+        radioButtons.forEach(radio => {
+            radio.addEventListener('click', handleRadioClick);
+        });
+
+        </script>
+        <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
+	<script>
+		
+		$.ajax({
+			type: 'GET',
+			headers: {
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*',
+
+			},
+			url: `https://api.instudy.net/api/Program/GetPrograms`,
+
+			success: function (data) {
+				var html = [];
+				$.each(
+					data.data, function (i, value) {
+						html.push(
+							`
+																	<option value="${value.id}">${value.enName}</option>
+
+																 `
+						)
+
+					}
+				)
+				$('#program').html(html.join('')).multipleSelect();
+			}
+
+		});
+		$.ajax({
+			type: 'GET',
+			headers: {
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*',
+
+			},
+			url: `https://api.instudy.net/api/Country/GetActiveCountries`,
+
+			success: function (data) {
+				var html = [];
+				$.each(
+					data.data, function (i, value) {
+						html.push(
+							`
+																			<option value="${value.id}">${value.enName}</option>
+
+																		 `
+						);
+
+						$('#requestStudentCountry').append(`<option value="${value.id}">${value.enName}</option>`);
+					}
+				)
+				$('#requestCountry').html(html.join('')).multipleSelect();
+			}
+
+		});
+
+		$.ajax({
+			type: 'GET',
+			headers: {
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*',
+
+			},
+			url: `https://api.instudy.net/api/Direction`,
+
+			success: function (data) {
+				var html = [];
+				$.each(
+					data.data, function (i, value) {
+						html.push(
+							`
+																	<option value="${value.id}">${value.ruName}</option>
+
+																 `
+						)
+
+					}
+				)
+				$('#requestDirection').html(html.join('')).multipleSelect();
+			}
+
+		});
+	</script>
+    }    
+        

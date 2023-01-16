@@ -4,6 +4,8 @@ using System.Diagnostics;
 
 namespace InStudyFE.Controllers
 {
+
+
     [Authorize]
     public class HomeController : Controller
     {

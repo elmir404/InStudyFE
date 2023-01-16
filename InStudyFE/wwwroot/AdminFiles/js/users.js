@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#user-datatable').DataTable({
         ajax: {
-            url: 'https://fainablogapi.herokuapp.com/api/Users/GetUsers',
+            url: 'https://api.instudy.net/api/Users/GetUsers',
             dataSrc: 'data'
         },
         columns: [

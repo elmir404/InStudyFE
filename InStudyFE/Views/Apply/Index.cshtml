@@ -1,0 +1,326 @@
+﻿@section Css{
+	<link rel="stylesheet" href="~/css/contact.css">
+	<link rel="stylesheet"
+	  href="https://fonts.googleapis.com/css?family=PT+Sans|Rubik|Roboto+Condensed&amp;subset=cyrillic&amp;sort=popularity" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
+					@*	<link rel="stylesheet" href="~/PhoneInput/css/demo.css">
+*@
+	<link rel="stylesheet" href="~/PhoneInput/css/intlTelInput.min.css">
+}
+<script>
+	call_locker = () => { console.log('called locker'); return false; }
+</script>
+
+<section class="ftco-section">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-12 text-center mb-5">
+			</div>
+		</div>
+		<div class="contact-form row rounded-0 justify-content-center">
+			<div class="col-lg-10 col-md-12">
+				<div class="wrapper">
+					<div class="row no-gutters">
+						<div class="border-radius col-md-12 d-flex align-items-stretch">
+							<div class="contact-wrap w-100 p-md-5 p-4">
+								<h3 class="mb-4">Contact</h3>
+								<div id="form-message-warning" class="mb-4"></div>
+								<div id="form-message-success" class="mb-4">
+									Your message was sent, thank you!
+								</div>
+								<form id="contact_form" onsubmit="return call_locker();">
+									<div class="row">
+										<div class="col-md-6 mb-2">
+											<div class="form-group">
+												<input type="text" class="form-control" name="name" id="requestName" placeholder="Name" required>
+											</div>
+										</div>
+										<div class="col-md-6 mb-2">
+											<div class="form-group">
+												<input type="text" class="form-control" name="name" id="lastName" placeholder="Surname" required>
+											</div>
+										</div>
+										<div class="col-md-12 mb-2">
+											<div class="form-group">
+												<input type="email" class="form-control" name="email" id="requestEmail" placeholder="Email" required>
+											</div>
+										</div>
+										<div class=" col-md-6 mb-2">
+											<label for="phone">Phone</label>
+											<input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
+
+
+
+										</div>
+										<div class=" col-md-6 mb-2">
+											<label for="Wp">Have Whatsapp</label>
+											<div class="form-control btn-group" id="requestWhatsapp" data-toggle="buttons">
+												<label class="btn btn-default">
+													<input type="radio" name="wp" value="hide" autocomplete="off" required />Yes
+												</label>
+												<label class="btn btn-default">
+													<input type="radio" id="show2" name="wp" value="show" autocomplete="off" />No
+												</label>
+
+											</div>
+										</div>
+
+										<div class=" col-md-6 " id="wpphone">
+											<label for="phone">Phone</label>
+											<input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
+										</div>
+
+
+										<div class="form-group col-md-6" id="">
+											<label for="comment">Description:</label>
+											<textarea class="form-control overflow-auto" rows="3" id="requestMessage" required></textarea>
+										</div>
+										<div class="form-group col-md-6">
+											<label for="consulted">Consulted</label>
+											<div class="form-control btn-group" data-toggle="buttons">
+												<label class="btn btn-default">
+													<input type="radio" id="show" name="example" value="show" autocomplete="off" required />Yes
+												</label>
+												<label class="btn btn-default">
+													<input type="radio" id="hide" name="example" value="hide" autocomplete="off" />No
+												</label>
+											</div>
+										</div>
+										<div id="box" class="row">
+											<div class="form-group col-md-6" id="requestDate">
+												<label for="birthdaytime">Date (date and time):</label>
+												<input type="datetime-local" id="birthdaytime" name="birthdaytime" required>
+
+											</div>
+
+											<div class="form-group col-md-6">
+												<label for="IsOnline">IsOnline</label>
+												<div class="form-control btn-group" id="requestType" data-toggle="buttons">
+													<label class="btn btn-default">
+														<input type="radio" name="IsOnline" autocomplete="off" required />Yes
+													</label>
+													<label class="btn btn-default">
+														<input type="radio" name="IsOnline" autocomplete="off" />No
+													</label>
+												</div>
+											</div>
+
+										</div>
+
+
+										<div class="form-group col-sm-4">
+											<label for="yourcontry"> Student Country</label>
+											<select class="" id="requestStudentCountry" required>
+											</select>
+										</div>
+										<div class="form-group col-sm-4">
+											<label for="yourcontry"> Country</label>
+											<select multiple="multiple" class="" id="requestCountry" required>
+											</select>
+										</div>
+										<div class="form-group col-sm-4">
+											<label for="direction">Direction</label>
+											<select class="" multiple="multiple" id="requestDirection" required>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<input type="submit" id="requestSubmit" value="Send Message" class="btn btn-primary" required>
+											<div class="submitting"></div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="contactDetail">
+		</div>
+
+
+
+
+	</div>
+
+
+
+
+
+
+</section>
+@section Scripts{
+	<script src="~/PhoneInput/js/intlTelInput.js"></script>
+	<script>
+		var input = document.querySelector("#phone");
+		window.intlTelInput(input, {})
+	</script>
+	<script src="~/js/contact.js"></script>
+	<script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
+	<script>
+
+
+		$(document).ready(function () {
+
+
+
+			$("#contact_form").validate({
+				messages: {
+
+
+					requestName: { required: "Please enter a name", },
+					lastName: { required: "Please enter a surname", },
+					requestEmail: { required: "Please enter a valid email address", },
+					phone: { required: "Please enter a valid phone number", },
+					requestWhatsapp: { required: "Please enter a valid Whatsapp", },
+					requestMessage: { required: "Please enter a valid description", },
+
+
+				},
+				rules: {
+					usernfidtxt: "required",
+					first_name: "required",
+					last_name: "required",
+
+					email: {// compound rule
+						required: true,
+						email: true,
+					},
+
+					phone: {
+						required: true,
+						pattern: "^[0-9-+s()]*$",
+					},
+
+				},
+
+			});
+
+
+
+
+		});
+
+		$.ajax({
+			type: 'GET',
+			headers: {
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*',
+
+			},
+			url: `https://api.instudy.net/api/Program/GetPrograms`,
+
+			success: function (data) {
+				var html = [];
+				$.each(
+					data.data, function (i, value) {
+						html.push(
+							`
+																			<option value="${value.id}">${value.enName}</option>
+
+																		 `
+						)
+
+					}
+				)
+				$('#program').html(html.join('')).multipleSelect();
+			}
+
+		});
+		$.ajax({
+			type: 'GET',
+			headers: {
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*',
+
+			},
+			url: `https://api.instudy.net/api/Country/GetActiveCountries`,
+
+			success: function (data) {
+				var html = [];
+				$.each(
+					data.data, function (i, value) {
+						html.push(
+							`
+																					<option value="${value.id}">${value.enName}</option>
+
+																				 `
+						);
+
+						$('#requestStudentCountry').append(`<option value="${value.id}">${value.enName}</option>`);
+					}
+				)
+				$('#requestCountry').html(html.join('')).multipleSelect();
+			}
+
+		});
+
+		$.ajax({
+			type: 'GET',
+			headers: {
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*',
+
+			},
+			url: `https://api.instudy.net/api/Direction`,
+
+			success: function (data) {
+				var html = [];
+				$.each(
+					data.data, function (i, value) {
+						html.push(
+							`
+																			<option value="${value.id}">${value.ruName}</option>
+
+																		 `
+						)
+
+					}
+				)
+				$('#requestDirection').html(html.join('')).multipleSelect();
+			}
+
+		});
+	</script>
+	<script>
+
+		const box = document.getElementById('box');
+
+		function handleRadioClick() {
+			if (document.getElementById('show').checked) {
+				box.style.display = 'flex ';
+			} else {
+				box.style.display = 'none';
+			}
+		}
+
+		const radioButtons = document.querySelectorAll('input[name="example"]');
+		radioButtons.forEach(radio => {
+			radio.addEventListener('click', handleRadioClick);
+		});
+
+
+		const box2 = document.getElementById('wpphone');
+
+		function handleradioclick2() {
+			if (document.getElementById('show2').checked) {
+				box2.style.display = 'inline-block ';
+			} else {
+				box2.style.display = 'none';
+			}
+		}
+
+		const radiobuttons2 = document.querySelectorAll('input[name="wp"]');
+		radiobuttons2.forEach(radio => {
+			radio.addEventListener('click', handleradioclick2);
+		});
+	</script>
+	}

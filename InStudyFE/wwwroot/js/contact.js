@@ -1,88 +1,198 @@
-﻿$(function () {
-    $('form#contact_form').submit(function (e) {
-        e.preventDefault();
-        $('form#contact_form .error').remove();
-        var hasError = false;
-        var $email = $('form input[name="email');
-        var $name = $('form input[name="name');
-        var $phone = $('form input[name="phone');
-        var $phoneCode = $('form input[name="phoneCode');
-        var $messageType = $('form input[name="messageType')
-        var $subject = $('form input[name="subject');
-        var $message = $('form textarea[name="message');
-        var re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-        var 
-        if ($email.val() == '' || !re.test($email.val())) {
-            $('#email').parent().append('<span class="error">Please provide valid Email.</span>');
-            $('#email').addClass('inputError');
-            hasError = true;
-        }
+﻿$(document).ready(function () {
+    const $lang = localStorage.getItem('lang');
+    if ($lang == 'AZ') {
+        var $header = "Bizimlə əlaqə"
+        var adr="Ünvan"
+        var phone="Telefon"
+        var email ="E-poçt"
+    }
+    else if ($lang == 'EN') {
 
-        if ($name.val() == '') {
-            $('#name').parent().append('<span class="error">Please provide Your name.</span>');
-            $('#name').addClass('inputError');
-            hasError = true;
-        }
+        var $header = "Contact us"
+        var adr = "Address"
+        var email = "Email"
+        var phone = "Phone"
 
-        if ($message.val() == '') {
-            $('#message').parent().append('<span class="error">Please enter details.</span>');
-            $('#message').addClass('inputError');
-            hasError = true;
-        }
-        if ($phone.val() == '') {
-            $('#name').parent().append('<span class="error">Please provide Your phone number.</span>');
-            $('#name').addClass('inputError');
-            hasError = true;
-        }
-        if ($subject.val() == '') {
-            $('#name').parent().append('<span class="error">Please provide subject.</span>');
-            $('#name').addClass('inputError');
-            hasError = true;
-        }
+    }
+    else {
+        var $header = "Связаться с нами"
+        var adr = "Адрес"
+        var email = "Эл. почт"
+        var phone = "Телефон"
 
-        if (!hasError) {
-            var url = "https://fainablogapi.herokuapp.com/api/Contact/AddContact";
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: JSON.stringify({
 
-                    name: $name.val(),
-                    email: $email.val(),
-                    subject: $subject.val(),
-                    message: $message.val(),
-                    phone: $phone.val(),
-                    surName: ""
-                }),
-                contentType: 'application/json',
+
+    }
+$(document).on('click', '#requestSubmit', async function () {
+
+    $('form#contact_form .error').remove();
+    debugger;
+    var hasError = false;
+    var $email = $('#requestEmail');
+    var $name = $('#requestName');
+    var $lastname = $('#lastName');
+    var $phone = $('#requestPhone');
+    var $phoneCode = $('#phoneField');
+    var $reqCountry = $('#requestCountry')
+    var $reqStudentCountry = $('#requestStudentCountry')
+    var $reqDirect = $('#requestDirection')
+    var $reqWhatsapp = $('#requestWhatsapp')
+    var $reqDate = $('#requestDate')
+    var $reqOnline = $('#requestType')
+    var $message = $('#requestMessage');
+    var re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    var fullPhone = $phoneCode.val() + " " + $phone.val();
+    console.log(fullPhone, $reqOnline.val().toString(), $reqWhatsapp.val().toString());
+    if ($email.val() == '' || !re.test($email.val())) {
+        toastr.warning("Please provide valid Email!");
+
+        hasError = true;
+    }
+
+    if ($name.val() == '') {
+        toastr.warning("Please provide Your name!");
+
+        hasError = true;
+    }
+    if ($lastname.val() == '') {
+        toastr.warning("Please provide Your name!");
+
+        hasError = true;
+    }
+
+    if ($message.val() == '') {
+        toastr.warning("Please provide message!");
+
+
+        hasError = true;
+    }
+    if ($phone.val() == '') {
+        toastr.warning("Please provide a phone number!");
+
+        hasError = true;
+    }
+    if ($reqCountry.val() == '') {
+        toastr.warning("Please provide country!");
+
+        hasError = true;
+    }
+    if ($reqStudentCountry.val() == '') {
+        toastr.warning("Please provide country!");
+
+        hasError = true;
+    }
+    if ($reqDirect.val() == '') {
+        toastr.warning("Please provide direction!");
+
+        hasError = true;
+    }
+    if ($reqWhatsapp.val() == '') {
+
+    }
+    if (!hasError) {
+        var url = "https://api.instudy.net/api/StudentRequest/AddStudentRequest";
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: JSON.stringify({
+
+                Name: $name.val(),
+                Surname: $lastname.val(),
+                Email: $email.val(),
+
+                Description: $message.val(),
+                HaveWhatsApp: $('input[name="wp"]:checked').val(),
+                Phone: fullPhone,
+                ConsultationDate: $reqDate.val(),
+                IsOnline: $('input[name="IsOnline"]:checked').val(),
+                YourContryId: $reqStudentCountry.val(),
+                CountryIds: $reqCountry.val(),
+                DirectionIds: $reqDirect.val()
+
+
+
+            }),
+            contentType: 'application/json',
+        })
+            .done(function (response) {
+                // Make sure that the formMessages div has the 'success' class.
+                if (response.success == true) {
+                    toastr.success("Message send successfully!");
+                    setTimeout(() => {
+                        location.reload();
+                    }, 5000)
+                }
+
+
             })
-                .done(function (response) {
-                    // Make sure that the formMessages div has the 'success' class.
-                    $('form#contact_form').removeClass('error');
-                    $('form#contact_form').addClass('success');
+            .fail(function (data) {
+                // Make sure that the formMessages div has the 'error' class.
+                toastr.warning("An error ocured!");
+            });
+    }
+    return false;
+});
+    $.ajax({
+        type: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        url: `https://api.instudy.net/api/AboutCompany/GetAboutCompanies`,
+        success: function (data) {
+            
+            $.each(
+                data.data, function (i, value) {
+                    $(`#contactDetail`).empty();
+                    $(`#contactDetail`).append(
+                        ` 
 
-                    // Set the message text.
-                    $('#contact_modal').slideUp(300);
-                    $('.modal-backdrop').hide();
-                    var successMessage = $('form#contact_form').prepend('<span class="success">Thank you. Your email was sent successfully.</span>');
-                    setTimeout(successMessage, 2000);
+<div id="map-responsive"  class="map-responsive">
+<iframe src="${value.mapAdress}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-                    // Clear the form.
-                    $('form input[name="email"], form input[name="name"], form textarea[name="message"]').val('');
-                })
-                .fail(function (data) {
-                    // Make sure that the formMessages div has the 'error' class.
-                    $('form#contact_form').removeClass('success');
-                    $('form#contact_form').addClass('error');
+</div>
+			<div class=" col-md-12 col-ms d-flex align-items-stretch"  style="padding-top: 10px;">
+							<div class="info-wrap bg-primary w-100 p-lg-5 p-8">
+							<h3 class="mb-8 mt-md-8" id="headerr">${$header}</h3>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-map-marker"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>${adr}:</span>${value.adress}</p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-phone"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>${phone}:</span> <a href="tel:${value.phone}">${value.phone}</a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-paper-plane"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>${email}:</span> <a href="${value.email}">${value.email}</a></p>
+					          </div>
+				          </div>
+				        	
+			          </div>
 
-                    // Set the message text.
-                    if (data.responseText !== '') {
-                        $('form#contact_form').text(data.responseText);
-                    } else {
-                        $('form#contact_form').prepend('<span class="error">Oops! An error occured and your message could not be sent.</span>');
-                    }
-                });
+					 
+	</div>
+
+`
+                    )
+
+                }
+            )
+
+
+
+
         }
-        return false;
     });
+
 });

@@ -1,17 +1,18 @@
 ﻿$(document).ready(function () {
     $('#message-datatable').DataTable({
         ajax: {
-            url: 'https://fainablogapi.herokuapp.com/api/Contact/GetContact',
+            url: 'https://api.instudy.net/api/Contact/GetContact',
             dataSrc: 'data'
         },
         columns: [
             {
-                data: 'name',
+                data: 'fullName',
             },
             { data: 'email' },
             { data: 'phone' },
             
             { data: 'subject' },
+            { data: 'message' },
             {
                 data: 'id', render: function (data, type, row, meta) {
                     return `<div class="btn-list">
@@ -91,7 +92,7 @@ function Delete(message) {
 
     $.ajax({
         type: "DELETE",
-        url: `https://fainablogapi.herokuapp.com/api/Contact/DeleteMessage?messageId=${message}`,
+        url: `https://api.instudy.net/api/Contact/DeleteMessage?messageId?messageId=${message}`,
         success: function (result) {
             if (result.success == true) {
                 location.href = `/FainaAdmin/Contact/MessageList`;

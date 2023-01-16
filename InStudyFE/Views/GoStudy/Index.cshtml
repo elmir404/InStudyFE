@@ -1,0 +1,242 @@
+﻿@section Css{
+ <link rel="stylesheet" href="~/css/scss/slick/university.css"/>
+
+    <style>
+        @@media (min-width: 1025px) {
+            .faq-section {
+                display: none;
+            }
+        }
+
+        .acc {
+            margin-bottom: 10px;
+        }
+
+        .acc-head {
+            /* background-color: rgb(155, 154, 87);*/
+            padding: 15px 10px;
+            font-size: 22px;
+            position: relative;
+            cursor: pointer;
+        }
+
+            .acc-head::before,
+            .acc-head::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                background-color: #4090F7;
+                transition: all .3s;
+            }
+
+            .acc-head::before {
+                right: 30px;
+                width: 3px;
+                height: 20px;
+                margin-top: -10px;
+            }
+
+            .acc-head::after {
+                right: 21px;
+                width: 20px;
+                height: 3px;
+                margin-top: -2px;
+            }
+
+            .acc-head p {
+                color: #fff;
+                font-weight: bold;
+            }
+
+        .acc-content {
+            padding: 15px 10px;
+            display: none;
+        }
+
+        .acc-head.active::before {
+            transform: rotate(90deg);
+        }
+
+        .accordion-button::after {
+            transform: none !important;
+            transition: none !important;
+            width: 0;
+            color: blue;
+        }
+
+        @@media (max-width: 480px) {
+            .faq-section {
+                display: flex;
+            }
+
+            #LayoutDetailedInformation {
+                display: none;
+            }
+
+            .acc-head {
+                padding: 19px 95px;
+                font-size: 19px;
+            }
+
+            .accordion-item h2 {
+                font-weight: 500;
+            }
+
+            .faq-section .faq-section-detail {
+                gap: 94px;
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+            .faq-section .faq-section-detail-text {
+                width: 100%;
+                margin-left: 10px;
+            }
+        }
+
+        
+    </style>
+
+}
+<div id="LayoutWrapper" class="js-exclusiveAccessOuterWrapper">
+   <div id="LayoutHero">
+      <div data-module="" class="Module StudyPortals_Shared_Modules_Study_Hero_Hero">
+         <div id="Hero" class="js-Hero">
+            <div class="HeroImageContainer"> <span class="HeroImage"> <span class="HeroImageDefaultWrapper"> <img fetchpriority="high" rel="preconnect" src="//monet-prtl-co.imgix.net/Shared/StudyPage/CoverImageBasicDesktop.svg" alt="Studyportals"> </span> </span> </div>
+              
+            </div>
+
+         </div>
+      </div>
+   </div>
+   <div id="LayoutContentCards">
+      <div class="mdc-layout-grid GridInContainer">
+         <div class="mdc-layout-grid__inner">
+            <nav class="DesktopOnlyBlock mdc-layout-grid__cell--span-12">
+               <ul class="BreadcrumbsListOnStudyPage">
+                  <li class="BreadCrumbsItem DesktopOnlyBlock"> <a href="https://www.mastersportal.com/search/master" class="BreadCrumbLink" title="All studies">All studies</a> </li>
+                  <li class="BreadCrumbsItem DisciplineListItem"> <a href="https://www.mastersportal.com/search/master/event-management" class="BreadCrumbLink" title="Event Management">Event Management</a> </li>
+                  <li class="BreadCrumbsItem DesktopOnlyBlock"> <a href="https://www.mastersportal.com/search/master/event-management/europe" class="BreadCrumbLink" title="Europe">Europe</a> </li>
+                  <li class="BreadCrumbsItem"> <a href="https://www.mastersportal.com/search/master/event-management/netherlands" class="BreadCrumbLink" title="Netherlands">Netherlands</a> </li>
+                  <li class="BreadCrumbsItem DesktopOnlyBlock"> <a href="https://www.mastersportal.com/universities/1019/wittenborg-university-of-applied-sciences.html" class="BreadCrumbLink" title="Wittenborg University of Applied Sciences">Wittenborg University of Applied Sciences</a> </li>
+                  <li class="BreadCrumbsItem DesktopOnlyBlock"> Business Management - Event Management </li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+   </div>
+   <div id="LayoutGlobalAccessInitiativeBanner">
+      <div class="mdc-layout-grid GridInContainer">
+         <div class="mdc-layout-grid__inner"> </div>
+      </div>
+   </div>
+   
+   <div id="LayoutDetailedInformation">
+      <div class="mdc-layout-grid GridInContainer">
+         <main class="SwitchableContentContainer mdc-layout-grid__inner">
+            <div id="SwitchableContent" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-8-desktop">
+            </div>
+            <div id="SwitchableContentButtons" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
+               <div id="ContentSwitcherWrapper" class="ContentSwitcherWrapper">
+                  <nav id="ContentSwitcher" class="ContentSwitcher"> 
+                        </nav>
+               </div>
+            </div>
+         </main>
+      </div>
+   </div>
+
+<section class="faq-section pt-100">
+    <div class="opacity-div"></div>
+    <div class="container">
+        <div class="faq-section-detail">
+
+            <div class="faq-section-detail-accordion">
+                <div class="accordion accordion-div" id="accordionExample1">
+                    <div class="accordion-item show">
+                        <h2 class="accordion-header acc-head">
+                           Niye?
+                        </h2>
+                        <div id="collaps" class="accordion-collapse collapse acc-content show">
+                            <div id="StudyIn" class="accordion-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item show">
+                        <h2 class="accordion-header acc-head" id="headingTw">
+                         Harda?
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse acc-content collapse">
+                            <div id="Living" class="accordion-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item show">
+                        <h2 class="accordion-header acc-head" id="headingThree">
+
+                         Nece?
+
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse acc-content collapse">
+                            <div id="About" class="accordion-body"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+   @section Scripts{
+   
+    <script async src="~/js/about.js"></script>
+    
+       <script>
+          
+        function swith(id) {
+            console.log(`asdsd ${id}`);
+            const collection = document.getElementById("SwitchableContent").children;
+            console.log(collection);
+            const buttons = document.getElementById("ContentSwitcher").children;
+            console.log(buttons);
+
+            for (let i = 0; i < collection.length; i++) {
+                collection[i].classList.remove("is-visible");
+                buttons[i].classList.remove("is-active")
+                console.log("sadasda");
+            }
+
+            const menuItem=document.getElementById(id);
+            console.log(menuItem)
+            const menuContent=document.getElementById(id+"_content");
+            console.log(menuContent)
+            menuItem.classList.add("is-active");
+            menuContent.classList.add("is-visible");
+            
+        }
+         
+
+       </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.acc-container .acc:nth-child(1) .acc-head').addClass('active');
+            $('.acc-container .acc:nth-child(1) .acc-content').slideDown();
+            $('.acc-head').on('click', function () {
+                if ($(this).hasClass('active')) {
+                    $(this).siblings('.acc-content').slideUp();
+                    $(this).removeClass('active');
+                }
+                else {
+                    $('.acc-content').slideUp();
+                    $('.acc-head').removeClass('active');
+                    $(this).siblings('.acc-content').slideToggle();
+                    $(this).toggleClass('active');
+                }
+            });
+        });
+    </script>
+       
+   }
+  

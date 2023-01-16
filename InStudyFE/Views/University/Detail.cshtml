@@ -1,0 +1,374 @@
+﻿@section Css{
+ <link rel="stylesheet" href="~/css/scss/slick/university.css"/>
+ <style>
+        @@media (min-width: 1025px) {
+            .faq-section {
+                display: none;
+            }
+        }
+
+        .acc {
+            margin-bottom: 10px;
+        }
+
+        .acc-head {
+            /* background-color: rgb(155, 154, 87);*/
+            padding: 15px 10px;
+            font-size: 22px;
+            position: relative;
+            cursor: pointer;
+        }
+
+            .acc-head::before,
+            .acc-head::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                background-color: #4090F7;
+                transition: all .3s;
+            }
+
+            .acc-head::before {
+                right: 30px;
+                width: 3px;
+                height: 20px;
+                margin-top: -10px;
+            }
+
+            .acc-head::after {
+                right: 21px;
+                width: 20px;
+                height: 3px;
+                margin-top: -2px;
+            }
+
+            .acc-head p {
+                color: #fff;
+                font-weight: bold;
+            }
+
+        .acc-content {
+            padding: 15px 10px;
+            display: none;
+        }
+
+        .acc-head.active::before {
+            transform: rotate(90deg);
+        }
+
+        .accordion-button::after {
+            transform: none !important;
+            transition: none !important;
+            width: 0;
+            color: blue;
+        }
+
+        @@media (max-width: 480px) {
+            .faq-section {
+                display: flex;
+            }
+
+            #LayoutDetailedInformation {
+                display: none;
+            }
+
+            .acc-head {
+                padding: 19px 95px;
+                font-size: 19px;
+            }
+
+            .accordion-item h2 {
+                font-weight: 500;
+            }
+
+            .faq-section .faq-section-detail {
+                gap: 94px;
+                display: flex;
+                flex-direction: column;
+               
+            }
+
+
+
+            .faq-section .faq-section-detail-text {
+                width: 100%;
+                margin-left: 10px;
+            }
+        }
+
+    </style>
+ 
+}
+<div id="LayoutWrapper" class="js-exclusiveAccessOuterWrapper">
+   <div id="LayoutHero">
+      <div data-module="" class="Module StudyPortals_Shared_Modules_Study_Hero_Hero">
+         <div id="Hero" class="js-Hero">
+                    <div id="HeroContainer" class="HeroImageContainer">
+                        
+                    </div>
+            <div class="EssentialInformationWrapper mdc-layout-grid GridInContainer">
+              
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="LayoutContentCards">
+      <div class="mdc-layout-grid GridInContainer">
+         <div class="mdc-layout-grid__inner">
+            <section id="QuickFacts" class="ContentCard QuickFactsContent mdc-layout-grid__cell--span-12">
+               
+            </section>
+            <nav class="DesktopOnlyBlock mdc-layout-grid__cell--span-12">
+               <ul class="BreadcrumbsListOnStudyPage">
+                  <li class="BreadCrumbsItem DesktopOnlyBlock"> <a href="https://www.mastersportal.com/search/master" class="BreadCrumbLink" title="All studies">All studies</a> </li>
+                  <li class="BreadCrumbsItem DisciplineListItem"> <a href="https://www.mastersportal.com/search/master/event-management" class="BreadCrumbLink" title="Event Management">Event Management</a> </li>
+                  <li class="BreadCrumbsItem DesktopOnlyBlock"> <a href="https://www.mastersportal.com/search/master/event-management/europe" class="BreadCrumbLink" title="Europe">Europe</a> </li>
+                  <li class="BreadCrumbsItem"> <a href="https://www.mastersportal.com/search/master/event-management/netherlands" class="BreadCrumbLink" title="Netherlands">Netherlands</a> </li>
+                  <li class="BreadCrumbsItem DesktopOnlyBlock"> <a href="https://www.mastersportal.com/universities/1019/wittenborg-university-of-applied-sciences.html" class="BreadCrumbLink" title="Wittenborg University of Applied Sciences">Wittenborg University of Applied Sciences</a> </li>
+                  <li class="BreadCrumbsItem DesktopOnlyBlock"> Business Management - Event Management </li>
+               </ul>
+            </nav>
+            <section id="StudySummary" class="ContentCard mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-7-desktop">
+            </section>
+         </div>
+      </div>
+   </div>
+   <div id="LayoutGlobalAccessInitiativeBanner">
+      <div class="mdc-layout-grid GridInContainer">
+         <div class="mdc-layout-grid__inner"> </div>
+      </div>
+   </div>
+   
+   <div id="LayoutDetailedInformation">
+      <div class="mdc-layout-grid GridInContainer">
+         <main class="SwitchableContentContainer mdc-layout-grid__inner">
+            <div id="SwitchableContent" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-8-desktop">
+
+                        <div class="SwitchableGroup js-content-contents contents " id="overview_content">
+                        <button class="ToggleButton js-contentButtons js-content-contents mdc-layout-grid" id="overview_content" onclick="swith('overview_content')">
+                                <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Programme structure</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
+                            </button>
+                            <article class="ModulesContainer ">
+                                <div data-module="Study:study_contents" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_Contents_Contents">
+                                    <article id="StudyContents">
+                                        <h2>Programme Structure</h2>
+                                        <p><strong>Modules:&nbsp;</strong></p>
+                                        <ul>
+                                            <li>Marketing Management</li>
+                                            <li>Globalisation, Society &amp; Culture</li>
+                                            <li>The World Economy</li>
+                                            <li>Critical Perspectives in Event Management</li>
+                                            <li>New Media, Marketing and Analytics</li>
+                                            <li>Micro Economics - Global Perspectives</li>
+                                            <li>Strategic Management</li>
+                                            <li>Event Design &amp; Management</li>
+                                            <li>Event Theory &amp; Practice</li>
+                                        </ul>
+                                    </article>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="SwitchableGroup js-content-requirement requirement" id="bachelor_content">
+                        <button class="ToggleButton js-contentButtons js-content-requirement mdc-layout-grid" data-id="requirement" id="bachelor_content" onclick="swith('bachelor_content')">
+                                <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Admission requirements</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
+                            </button>
+                            <article class="ModulesContainer">
+                                <div data-module="Study:best_fit_incentive_academic" class="Module StudyPortals_Shared_Modules_BestFitIncentive_IncentiveAcademic">
+                                    <div data-v-1c1e9538="" class="ButtonContentSwitcherWidget">
+                                        <div data-v-1c1e9538="" class="IconWrapper">
+                                            <div data-v-1c1e9538="" class="BestfitIcon"><i data-v-1c1e9538="" class="Percentage lnr-bestfit-logo"></i> <i data-v-1c1e9538="" class="PlusIcon lnr-plus-inverted"></i></div>
+                                        </div>
+                                        <span data-v-1c1e9538="" class="ButtonText">
+                                            Check your academic match with this programme
+                                        </span>
+                                    </div>
+                                </div>
+                                <div data-module="Study:study_admission_requirements" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_AdmissionRequirements_AdmissionRequirements">
+                                    <section id="AdmissionRequirements">
+                                        <article id="AcademicRequirements">
+                                            <h2>Academic requirements</h2>
+                                            <div class="NoRequirements">
+                                                <p class="NoRequirementsInfo">We are not aware of any academic requirements for this programme.</p>
+                                            </div>
+                                        </article>
+                                        <article id="EnglishRequirements">
+                                            <h2>English requirements</h2>
+                                            <section class="EnglishRequirementsCards">
+                                                <div class="CardContents EnglishCardContents IELTSCard js-CardIELTS">
+                                                    <div class="MainContent">
+                                                        <div class="ScoreLabelContainer">
+                                                            <i class="Icon"> <img src="//monet-prtl-co.imgix.net/Masters/BNW/Icons/Language.svg" alt="IELTS admission requirements" loading="lazy" width="40" height="40"> </i> <span class="Text"> <span class="Heading"> IELTS </span> </span>
+                                                            <i class="InfoIcon lnr-info" data-tooltip-text="The International English Language Test System (IELTS) tests your English-language proficiency on a scale of 1 – 9. The score refers to the combined average score of 4 subjects (writing, listening, speaking, and reading)." style="position: relative;">
+                                                                <div class="Tooltip" style="display: none;">
+                                                                    <div class="TooltipInner">
+                                                                        The International English Language Test System (IELTS) tests your English-language proficiency on a scale of 1 – 9. The score refers to the combined average score of 4 subjects (writing, listening, speaking, and reading).
+                                                                    </div>
+                                                                    <div class="TooltipArrow"></div>
+                                                                </div>
+                                                            </i>
+                                                        </div>
+                                                        <div class="ScoreInformationContainer">
+                                                            <div class="ScoreContainer">
+                                                                <div class="Score"> <span>6.5</span> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ButtonContainer"> <a class="IELTSButton NavigatorButton js-showIeltsCTA" rel="nofollow noopener" target="_blank" data-ga-tracking="{&quot;category&quot;:&quot;Banners&quot;, &quot;action&quot;:&quot;Text banner click&quot;,&quot;label&quot;:&quot;IMPACT_LEARNING_study_language_requirements_button&quot;,&quot;event&quot;:&quot;click&quot;}" href="https://link.studyportals.com/ielts_prep_promo" data-ga-parsed="true"> Start preparing for IELTS today! </a>  </div>
+                                                </div>
+                                                <div class="CardContents EnglishCardContents TOEFLCard js-CardTOEFL">
+                                                    <div class="MainContent">
+                                                        <div class="ScoreLabelContainer">
+                                                            <i class="Icon"> <img src="//monet-prtl-co.imgix.net/Masters/BNW/Icons/Language.svg" alt="TOEFL admission requirements" loading="lazy" width="40" height="40"> </i> <span class="Text"> <span class="Heading"> TOEFL<sup>®</sup> </span> <span class="SubHeading">IBT</span> </span>
+                                                            <i class="InfoIcon lnr-info" data-tooltip-text="The TOEFL iBT® is given online through the internet at designated testing site. The test measures your English-language abilities in an academic setting. The score refers to the total score of 4 subjects (writing, listening, speaking, and reading), each subject has a range of 0 - 30." style="position: relative;">
+                                                                <div class="Tooltip" style="display: none;">
+                                                                    <div class="TooltipInner">
+                                                                        The TOEFL iBT® is given online through the internet at designated testing site. The test measures your English-language abilities in an academic setting. The score refers to the total score of 4 subjects (writing, listening, speaking, and reading), each subject has a range of 0 - 30.
+                                                                    </div>
+                                                                    <div class="TooltipArrow"></div>
+                                                                </div>
+                                                            </i>
+                                                        </div>
+                                                        <div class="ScoreInformationContainer">
+                                                            <div class="ScoreContainer">
+                                                                <div class="Score"> <span>90</span> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </article>
+                                        <article id="OtherRequirements">
+                                            <h2>Other requirements</h2>
+                                            <div class="OtherRequirementsContent">
+                                                <div>
+                                                    <h3>General requirements</h3>
+                                                    <ul>
+                                                        <li>A bachelor's degree or equivalent recognised qualification.</li>
+                                                        <li>​Applicants are requested to provide an academic reference from their previous education institute.</li>
+                                                        <li>It is necessary to have obtained a bachelor's degree from the domains of business, management, economics or trade. In their bachelor's degree applicants must have completed an academic piece of work (final project or dissertation) that demonstrates a degree of academic writing and research experience.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </section>
+                                </div>
+                            </article>
+                        </div>
+
+                    <div class="SwitchableGroup js-content-work_permit work_permit " id="master_content" onclick="swith('master_content')">
+                            <button class="ToggleButton js-contentButtons js-content-work_permit mdc-layout-grid" data-id="work_permit">
+                                <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Work permit</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
+                            </button>
+                            <article class="ModulesContainer">
+                                <div data-module="Study:venues_switcher" class="Module StudyPortals_Shared_Modules_Study_VenuesSwitcher_VenuesSwitcher">
+                                    <section class="VenuesSwitcher">
+                                        <h2 id="VenuesSwitcherTitle"></h2>
+                                    </section>
+                                </div>
+                                <div data-module="Study:WorkPermitContent" class="Module StudyPortals_Shared_Modules_Study_WorkPermitContent_WorkPermitContent">
+                                    <script>const workPermitDestinationCountry = '1'; const workPermitServiceUrl = 'https://8ofylmmtn1.execute-api.eu-west-1.amazonaws.com/prd/';</script>
+                                    <section id="WorkPermitContent"> </section>
+                                    <div class="WebsiteLinkTabs"> </div>
+                                </div>
+                            </article>
+                        </div>
+            </div>
+            <div id="SwitchableContentButtons" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
+               <div id="ContentSwitcherWrapper" class="ContentSwitcherWrapper">
+                  <nav id="ContentSwitcher" class="ContentSwitcher">
+                                <button type="button" class="ContentButton js-contentButtons description " id="overview" onclick="swith('overview')"> Overview </button>
+                                <button type="button" class="ContentButton js-contentButtons contents" id="bachelor" onclick="swith('bachelor')"> Bachelor </button>
+                                <button type="button" class="ContentButton js-contentButtons requirement" id="master" onclick="swith('master')"> Master </button>
+                  </nav>
+               </div>
+            </div>
+         </main>
+      </div>
+   </div>
+
+
+    <section class="faq-section pt-100">
+        <div class="opacity-div"></div>
+        <div class="container">
+            <div class="faq-section-detail">
+
+                <div class="faq-section-detail-accordion">
+                    <div class="accordion accordion-div" id="accordionExample1">
+                        <div class="accordion-item show">
+                            <h2 class="accordion-header acc-head">
+                                Overview
+                            </h2>
+                            <div id="collaps" class="accordion-collapse collapse acc-content show">
+                                <div id="StudyIn" class="accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item show">
+                            <h2 class="accordion-header acc-head" id="headingTw">
+                                Bachelor
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse acc-content collapse">
+                                <div id="Living" class="accordion-body">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item show">
+                            <h2 class="accordion-header acc-head" id="headingThree">
+
+                                Master
+
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse acc-content collapse">
+                                <div id="About" class="accordion-body"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+</div>
+
+@section Scripts{
+    <script src="~/js/university-detail.js"></script>
+    <script>
+        function swith(id) {
+                console.log(`${id}`);
+                const collection = document.getElementById("SwitchableContent").children;
+                const buttons = document.getElementById("ContentSwitcher").children;
+                for (let i = 0; i < collection.length; i++) {
+                buttons[i].classList.remove("is-active");
+                collection[i].classList.remove("is-visible");
+                console.log(collection[i]);
+              
+            }
+
+            const menuItem=document.getElementById(id);
+            const menuContent=document.getElementById(id+"_content");
+            menuItem.classList.add("is-active");
+            menuContent.classList.add("is-visible");
+
+        }
+        $(document).ready(function () {
+            $('.acc-container .acc:nth-child(1) .acc-head').addClass('active');
+            $('.acc-container .acc:nth-child(1) .acc-content').slideDown();
+            $('.acc-head').on('click', function () {
+                if ($(this).hasClass('active')) {
+                    $(this).siblings('.acc-content').slideUp();
+                    $(this).removeClass('active');
+                }
+                else {
+                    $('.acc-content').slideUp();
+                    $('.acc-head').removeClass('active');
+                    $(this).siblings('.acc-content').slideToggle();
+                    $(this).toggleClass('active');
+                }
+            });
+        });
+
+       
+    </script>
+}

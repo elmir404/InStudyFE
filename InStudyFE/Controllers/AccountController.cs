@@ -94,6 +94,9 @@ namespace InStudyFE.Controllers
         public IActionResult SendEmail()
         {
             return View();
+        }public IActionResult ComingSoon()
+        {
+            return View();
         }
         public async Task<IActionResult> Logout()
         {

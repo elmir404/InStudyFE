@@ -1,94 +1,31 @@
-﻿  @section Css{
-	  <style>
-        .flip-card, .flip-card-click {
-            display: inline-block;
-            background-color: transparent;
-            width: 300px;
-            height: 300px;
-            margin-right: 12px;
-            margin-bottom: 12px;
-            border: 1px solid #f1f1f1;
-            perspective: 1000px;
-        }
-
-        .flip-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            /*text-align: center;*/
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
-
-        .flip-card:hover .flip-card-inner,
-        .flip-card:focus .flip-card-inner,
-        .flip-card:focus-within .flip-card-inner,
-        .flip-card:active .flip-card-inner,
-        .flip-card-click:focus .flip-card-inner,
-        .flip-card-click:active .flip-card-inner,
-        .flip-card-click.flipped .flip-card-inner {
-            transform: rotateY(180deg);
-        }
-
-        .flip-card-inner:focus {
-            
-            cursor: pointer;
-        }
-
-        .flip-card-inner:hover {
-            
-            cursor: pointer;
-        }
-
-        .flip-card-front, .flip-card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            -webkit-backface-visibility: hidden; /* Safari */
-            backface-visibility: hidden;
-        }
-
-            .flip-card-front h2 {
-                color: white;
-                font-size: 16pt;
-                font-weight: 500;
-                padding: 10px;
-            }
-
-            .flip-card-front p, .flip-card-back p {
-                padding: 10px;
-                font-size: 16pt;
-                color: white;
-            }
-
-        
-
-        .flip-card-back {
-            background-color: #008183;
-            transform: rotateY(180deg);
-        }
-</style>
-
-  }
-<section class="event-search container pt-120">
-       
-
-        <div id="country" class="row g-3 justify-content-center">
-            
-       
+﻿
+<section id="HeroContainer">
+            <div class="HeroContainerHelper"> <span class="HeroImage js-heroImage"></span> <span
+                    class="HeroImage HeroImagePlaceholder js-heroImageLowResPlaceholder"></span> <span
+                    class="HeroOverlay"></span>
+                <div class="HeroContentWrapper">
+                  
+                </div>
+            </div>
+        </section>
+        <div id="DetailsInformation" class="col1 WrappedContent">
+            <div class="colblock">
+                <div data-module=""
+                    class="Module StudyPortals_Shared_Modules_Country_OverviewBase_CountryOverviewBase StudyPortals_DistanceLearning_Modules_Country_Overview_CountryOverviewDistanceLearning">
+                    <article id="CountryOverview">
+                        <h1> Browse Distance Learning Programmes Worldwide </h1>
+                       
+                        <ul id="countryList">
+                           
+                           
+                        </ul>
+                    </article>
+                </div>
+                <div id="GlobalStudyAwards"> </div>
+            </div>
         </div>
+     
+        @section Scripts{
+        <script src="~/js/country.js" async crossorigin="anonymous"></script>
 
-    </section>
-  @section Scripts{
-      <script src="~/js/country.js"></script>
-      <script>
-        const card = document.querySelector(".card__inner");
-
-        card.addEventListener("click", function (e) {
-            card.classList.toggle('is-flipped');
-        });
-      </script>
-  }
+        }

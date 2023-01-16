@@ -1,0 +1,237 @@
+﻿@section Css{
+    <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
+}
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">Add University</h1>
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Add University</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- PAGE-HEADER END -->
+            <!-- ROW-1 OPEN -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Add University</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row mb-4">
+                                <label class="col-md-3 form-label">Az Title :</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="azHeader" class="form-control" placeholder="Title Name">
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <label class="col-md-3 form-label">Ru Title :</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="ruHeader" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <label class="col-md-3 form-label">En Title :</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="enHeader" class="form-control">
+                                </div>
+                            </div>
+
+                            <!-- Row -->
+                            <div class="row">
+                                <label class="col-md-3 form-label mb-4">Az Description :</label>
+                                <div class="col-md-9 mb-4">
+                                    <textarea class="content" id="azDescription" name="example"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-md-3 form-label mb-4">Ru Description :</label>
+                                <div class="col-md-9 mb-4">
+                                    <textarea class="content" id="ruDescription" name="example"></textarea>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <label class="col-md-3 form-label mb-4">En Description :</label>
+                                <div class="col-md-9 mb-4">
+                                    <textarea class="content" id="enDescription" name="example"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-md-3 form-label mb-4">Speciality</label>
+                                <div class="col-md-9 mb-4">
+                                    <select multiple="multiple" id="speciality" >
+                                        
+                                    </select>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <label class="col-md-3 form-label mb-4">Program</label>
+                                <div class="col-md-9 mb-4">
+                                    <select multiple="multiple" id="program" >
+                                        
+                                        
+                                    </select>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <label class="col-md-3 form-label mb-4">Direction</label>
+                                <div class="col-md-9 mb-4">
+                                    <select multiple="multiple" id="direction" >
+                                       
+                                       
+                                    </select>
+                                </div>
+                            </div>
+                                <div class="row">
+                                    <label class="col-md-3 form-label mb-4">Country</label>
+                                    <div class="col-md-9 mb-4">
+                                        <select  id="country">
+                                        </select>
+                                    </div>
+                                </div>
+                            <!--End Row-->
+                            <!--Row-->
+                            <div class="row">
+                                <label class="col-md-3 form-label mb-4">Country File Upload :</label>
+                                <div class="col-md-9">
+                                    <input id="files" type="file" name="files" accept=".jpg, .png, image/jpeg, image/png" multiple>
+                                </div>
+                            </div>
+                            <!--End Row-->
+                        </div>
+                        <div class="card-footer">
+                            <!--Row-->
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-9">
+                                        <a href="javascript:void(0)" id="addUniversty" class="btn btn-primary">Add University</a>
+                                </div>
+                            </div>
+                            <!--End Row-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /ROW-1 CLOSED -->
+        </div>
+        <!-- CONTAINER CLOSED -->
+    </div>
+</div>
+@section Scripts{
+    <script src="~/AdminFiles/js/university.js"></script>
+    <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
+    <script>
+        $.ajax({
+            type: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+
+            },
+            url: `https://api.instudy.net/api/Speciality/GetSpecialities`,
+
+            success: function (data) {
+                var html =[];
+                $.each(
+                    data.data, function (i, value) {
+                        html.push(
+                            `
+                                                    <option value="${value.id}">${value.ruName}</option>
+
+                                                 `
+                        )
+
+                    }
+                )
+                $('#speciality').html(html.join('')).multipleSelect();
+            }
+
+        });
+        $.ajax({
+            type: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+
+            },
+            url: `https://api.instudy.net/api/Program/GetPrograms`,
+
+            success: function (data) {
+                var html = [];
+                $.each(
+                    data.data, function (i, value) {
+                        html.push(
+                            `
+                                                            <option value="${value.id}">${value.ruName}</option>
+
+                                                         `
+                        )
+
+                    }
+                )
+                $('#program').html(html.join('')).multipleSelect();
+            }
+
+        });
+        $.ajax({
+            type: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+
+            },
+            url: `https://api.instudy.net/api/Country/GetActiveCountries`,
+
+            success: function (data) {
+                var html = [];
+                $.each(
+                    data.data, function (i, value) {
+                        html.push(
+                            `
+                                                                    <option value="${value.id}">${value.ruName}</option>
+
+                                                                 `
+                        )
+
+                    }
+                )
+                $('#country').html(html.join(''));
+            }
+
+        });
+        $.ajax({
+            type: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+
+            },
+            url: `https://api.instudy.net/api/Direction`,
+
+            success: function (data) {
+                var html = [];
+                $.each(
+                    data.data, function (i, value) {
+                        html.push(
+                            `
+                                                            <option value="${value.id}">${value.ruName}</option>
+
+                                                         `
+                        )
+
+                    }
+                )
+                $('#direction').html(html.join('')).multipleSelect();
+            }
+
+        });
+    </script>
+}

@@ -1,0 +1,99 @@
+﻿  <div class="main-content app-content mt-0">
+                <div class="side-app">
+
+                    <!-- CONTAINER -->
+                    <div class="main-container container-fluid">
+
+                        <!-- PAGE-HEADER -->
+                        <div class="page-header">
+                <h1 class="page-title">Add Student Comment</h1>
+                            <div>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Add Student Comment</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <!-- PAGE-HEADER END -->
+
+                        <!-- ROW-1 OPEN -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-header">
+                            <div class="card-title">Add Student Comment</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row mb-4">
+                                            <label class="col-md-3 form-label">Az Title :</label>
+                                            <div class="col-md-9">
+                                                <input type="text" id="azHeader" class="form-control" placeholder="Title Name">
+                                            </div>
+                                        </div>
+                                        <!-- Row -->
+                                        <div class="row">
+                                            <label class="col-md-3 form-label mb-4">Az Description :</label>
+                                            <div class="col-md-9 mb-4">
+                                                <textarea class="content" id="azDescription" name="example"></textarea>
+                                            </div>
+                                        </div>
+                            <div class="row">
+                                <label class="col-md-3 form-label mb-4">Country</label>
+                                <div class="col-md-9 mb-4">
+                                    <select id="country">
+                                    </select>
+                                </div>
+                            </div>
+                            <!--End Row-->
+                                    </div>
+                                    <div class="card-footer">
+                                        <!--Row-->
+                                        <div class="row">
+                                            <div class="col-md-3"></div>
+                                            <div class="col-md-9">
+                                                <a href="javascript:void(0)" id="addWords" class="btn btn-primary">Add Words</a>
+                                            </div>
+                                        </div>
+                                        <!--End Row-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /ROW-1 CLOSED -->
+                    </div>
+                    <!-- CONTAINER CLOSED -->
+                </div>
+            </div>
+                  @section Scripts {
+      <script src="~/AdminFiles/js/studentwords.js"></script>
+      <script>
+        $.ajax({
+            type: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+
+            },
+            url: `https://api.instudy.net/api/Country/GetActiveCountries`,
+
+            success: function (data) {
+                var html = [];
+                $.each(
+                    data.data, function (i, value) {
+                        $("#country").append(
+                            `
+                                                                            <option value="${value.id}">${value.azName}</option>
+
+                                                                         `
+                        )
+
+                    }
+                )
+               
+            }
+
+        });
+
+      </script>
+        }
+

@@ -20,7 +20,7 @@
 							if (i == 0) {
 								$blogImage.append(
 									`
-												<div class="carousel-item active"><img src="${files.path}" alt="img" class="img-fluid mx-auto d-block">
+												<div class="carousel-item active"><img src="data:image/png;base64,${files.bytes}" alt="img" class="img-fluid mx-auto d-block">
                                                                         <div class="text-center mt-5 mb-5 btn-list">
                                                                         </div>
                                                                     </div>
@@ -29,7 +29,7 @@
 								)
 								$blogSlideDetail.append(
 									`
-                                      <li data-bs-target="#Slider" data-bs-slide-to="${i}" class="thumb active m-2"><img src="${files.path}" alt="img"></li>
+                                      <li data-bs-target="#Slider" data-bs-slide-to="${i}" class="thumb active m-2"><img src="data:image/png;base64,${files.bytes}" alt="img"></li>
                                  `
 								)
 							}
@@ -40,7 +40,7 @@
 
 
 									`
-												<div class="carousel-item"><img src="${files.path}" alt="img" class="img-fluid mx-auto d-block">
+												<div class="carousel-item"><img src="data:image/png;base64,${files.bytes}" alt="img" class="img-fluid mx-auto d-block">
                                                                         <div class="text-center mt-5 mb-5 btn-list">
                                                                         </div>
                                                                     </div>
@@ -49,7 +49,7 @@
 								)
 								$blogSlideDetail.append(
 									`
-                                                                                                           <li data-bs-target="#Slider" data-bs-slide-to="${i}" class="thumb m-2"><img src="${files.path}" alt="img"></li>
+                                                                                                           <li data-bs-target="#Slider" data-bs-slide-to="${i}" class="thumb m-2"><img src="data:image/png;base64,${files.bytes}" alt="img"></li>
                                  `
 								)
 							}

@@ -1,56 +1,447 @@
-﻿
-        <main class="mainWrapper">
-            <section class="blog-section">
-                <div class="opacity-div"></div>
-                <section class="blog-content pt-100">
-                    <div class="container">
-                        <div class="title-blog-div text-center">
-                            <h4 class="title">Blog</h4>
-                            <h1 class="description">Yurtdışında eğitim ve yaşam ile ilgili güncel haberleri Endless Abroad Blog&#039;da okuyabilirsiniz.</h1>
-                        </div>
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                               <ol class="carousel-indicators">
-                                                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                                            <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
-                                                            <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
-                                                            <li data-target="#carouselExampleIndicators" data-slide-to="3" class=""></li>
-                               </ol>
-                                <div id="blogCarousel" class="carousel-inner">
-                               
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="blog-list">
-                    <div class="container">
-   <div class="search pt-50">
-      <div class="vue-app vue-app-7">
-         <div data-v-66be1deb="">
-            
-            <div  class="card-div">
+﻿@section Css{
+    <style>
+        #galactus{
+            background-color:#EDF3F6;
+        }
+    </style>
+}
+<section class="col2-left wrapped">
+   <div class="colblock">
+      <div data-module="" class="Module StudyPortals_Shared_Modules_Article_Overview_Overview">
+         <article id="ArticleOverview" data-url="/Blog/Index" data-tags="mastersportal" data-type="General" data-topics="1|Start studying abroad||2|Where to study||3|Decide what to study||4|Choose a university||6|After you get accepted||7|Costs and funding||9|Student experiences||10|How to apply to a university">
+            <h1 id="ArticleOverviewTitle"></h1>
+            <h2 id="FeaturedArticlesHeader"></h2>
+            <div id="FeaturedArticles" class="ArticleSection">
+               
               
-         
             </div>
-            <div  class="event-btn-div text-center pt-100">
-              @* <button data-v-66be1deb="" class="btn-border-blue page">
-                  <!---->
-                  Daha Fazla
-               </button>*@
-            </div>
-         </div>
+            @*<h2 id="RecentArticlesHeader">Recent Articles</h2>
+            <div id="RecentArticles" class="ArticleSection">
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/6391b661d10cb?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/6391b661d10cb?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/6391b661d10cb?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/6391b661d10cb?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/6391b661d10cb?h=320&amp;w=213" alt="Best Medical Schools in the World"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/2744/best-medical-schools-in-the-world.html" title="Best Medical Schools in the World"> Best Medical Schools in the World </a> </figcaption>
+                     <div class="ShortDescription">Let’s look at the top universities in the medical school world rankings and see what these leading institutions have to offer. North America and Europe have the best med schools in the world, according to Times Higher Education rankings.&amp;nbsp;</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/63908c2259d39?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/63908c2259d39?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/63908c2259d39?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/63908c2259d39?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/63908c2259d39?h=320&amp;w=213" alt="5 Fun Facts about Ivy League Schools"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3122/5-fun-facts-about-ivy-league-schools.html" title="5 Fun Facts about Ivy League Schools"> 5 Fun Facts about Ivy League Schools </a> </figcaption>
+                     <div class="ShortDescription">Colleges and universities as old and prestigious as the Ivy League will, inevitably, be surrounded by stories — and some myths. Here are a few fun and, we think, interesting facts about Ivy League Universities.</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/63908900038b0?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/63908900038b0?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/63908900038b0?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/63908900038b0?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/63908900038b0?h=320&amp;w=213" alt="American Universities That Are as Good, or Better, than Ivy League Colleges"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3121/american-universities-that-are-as-good-or-better-than-ivy-league-colleges.html" title="American Universities That Are as Good, or Better, than Ivy League Colleges"> American Universities That Are as Good, or Better, than Ivy League Colleges </a> </figcaption>
+                     <div class="ShortDescription">The reputation of the Ivy League is&amp;nbsp;such that many are shocked when they discover that it doesn’t include all America’s best universities. Universities such as MIT, University of Chicago or Stanford are such examples.&amp;nbsp;Let’s have a look at some of America’s best universities outside of the Ivy League, and what do terms such as Public Ivies, Hidden Ivies or Ivy Plus mean.</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/6390863742982?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/6390863742982?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/6390863742982?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/6390863742982?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/6390863742982?h=320&amp;w=213" alt="6 Tips on How to Apply to an Ivy League University"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3120/6-tips-on-how-to-apply-to-an-ivy-league-university.html" title="6 Tips on How to Apply to an Ivy League University"> 6 Tips on How to Apply to an Ivy League University </a> </figcaption>
+                     <div class="ShortDescription">For every one student heading to Brown, Columbia, Cornell, Dartmouth, Harvard, Pennsylvania, Princeton, or Yale, there are plenty of disappointed applicants. Rates vary, but even the least competitive courses have over ten applications for each place.&amp;nbsp;With so much competition, you need a near perfect application, even the smallest thing can mean the difference between success and failure.</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/639082eb359d3?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/639082eb359d3?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/639082eb359d3?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/639082eb359d3?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/639082eb359d3?h=320&amp;w=213" alt="7 Essential Things to Know (Long) Before You Apply to an Ivy League College"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3119/7-essential-things-to-know-before-you-apply-to-an-ivy-league-college.html" title="7 Essential Things to Know (Long) Before You Apply to an Ivy League College"> 7 Essential Things to Know (Long) Before You Apply to an Ivy League College </a> </figcaption>
+                     <div class="ShortDescription">As eight of the best universities in America, and the world, they attract thousands&amp;nbsp;of applications each year. So, if you want an Ivy League education, what is essential to know while preparing for your application?</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/6384a7612a382?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/6384a7612a382?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/6384a7612a382?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/6384a7612a382?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/6384a7612a382?h=320&amp;w=213" alt="What to Study if You Want to Work in the Gaming Industry"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3116/what-to-study-if-you-want-to-work-in-the-gaming-industry.html" title="What to Study if You Want to Work in the Gaming Industry"> What to Study if You Want to Work in the Gaming Industry </a> </figcaption>
+                     <div class="ShortDescription">Let’s explore what to study to successfully get a job in the gaming industry, whether you are technically oriented or you have a strong artistic side. Computer Science, Art, or Animation, are the top three disciplines to get you into the gaming industry, and access popular career paths such as Game Designer, Programmer, Artist, Animator, or Writer.&amp;nbsp;</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/63760d30edeea?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/63760d30edeea?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/63760d30edeea?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/63760d30edeea?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/63760d30edeea?h=320&amp;w=213" alt="Best Schools in the World to Study Innovative Design"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3114/best-schools-in-the-world-to-study-innovative-design.html" title="Best Schools in the World to Study Innovative Design"> Best Schools in the World to Study Innovative Design </a> </figcaption>
+                     <div class="ShortDescription">The best Master’s in Design are often multidisciplinary, bringing together Art, Technology, and Business to design solutions for the trickiest and most complex issues we have today.</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/637618cff1c9c?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/637618cff1c9c?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/637618cff1c9c?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/637618cff1c9c?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/637618cff1c9c?h=320&amp;w=213" alt="A Guide on How to Write the Best Personal Statement for Your University Application"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3110/a-guide-on-how-to-write-the-best-personal-statement-for-your-university-application.html" title="A Guide on How to Write the Best Personal Statement for Your University Application"> A Guide on How to Write the Best Personal Statement for Your University Application </a> </figcaption>
+                     <div class="ShortDescription">Writing a Personal Statement can feel daunting and overwhelming. You know it can make the difference between acceptance and rejection, but you don’t know where to start. In this guide, we are breaking the process into 6 steps so that you know what to do one thing at a time.</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/621393960de15?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/621393960de15?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/621393960de15?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/621393960de15?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/621393960de15?h=320&amp;w=213" alt="How to Apply to a University in Cyprus in 2023"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3021/how-to-apply-to-a-university-in-cyprus-in-2023.html" title="How to Apply to a University in Cyprus in 2023"> How to Apply to a University in Cyprus in 2023 </a> </figcaption>
+                     <div class="ShortDescription">Steps to apply at a university in Cyprus. Admission requirements you need to meet as an international student. English language tests and application deadlines.</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/61f265b7bb842?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/61f265b7bb842?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/61f265b7bb842?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/61f265b7bb842?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/61f265b7bb842?h=320&amp;w=213" alt="Affordable Universities in Denmark in 2023"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3018/affordable-universities-in-denmark-in-2023.html" title="Affordable Universities in Denmark in 2023"> Affordable Universities in Denmark in 2023 </a> </figcaption>
+                     <div class="ShortDescription">Universities in Denmark with the lowest tuition fees for non-EU/EEA students. Difference between EU/EEA and non-EU/EEA citizens. Scholarships and financial support.</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/61f154a8963db?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/61f154a8963db?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/61f154a8963db?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/61f154a8963db?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/61f154a8963db?h=320&amp;w=213" alt="Affordable Universities in Spain in 2023"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3017/affordable-universities-in-spain-in-2023.html" title="Affordable Universities in Spain in 2023"> Affordable Universities in Spain in 2023 </a> </figcaption>
+                     <div class="ShortDescription">Affordable universities in Spain. Find cheap English-taught Bachelors and Masters at Spanish universities. Scholarship and grant opportunities for international students.&amp;nbsp;</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/61f114fa00f7a?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/61f114fa00f7a?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/61f114fa00f7a?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/61f114fa00f7a?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/61f114fa00f7a?h=320&amp;w=213" alt="Affordable Universities in the Netherlands in 2023"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3016/affordable-universities-in-the-netherlands-in-2023.html" title="Affordable Universities in the Netherlands in 2023"> Affordable Universities in the Netherlands in 2023 </a> </figcaption>
+                     <div class="ShortDescription">Affordable universities in the Netherlands. Find cheap Bachelor's and Master's degrees at Dutch universities. Scholarship and grant opportunities.</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/61b73fa3e62aa?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/61b73fa3e62aa?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/61b73fa3e62aa?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/61b73fa3e62aa?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/61b73fa3e62aa?h=320&amp;w=213" alt="Computer Science Degree Requirements – How to Get Admitted in 2023"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3009/computer-science-degree-requirements-how-to-get-admitted-in-2023.html" title="Computer Science Degree Requirements – How to Get Admitted in 2023"> Computer Science Degree Requirements – How to Get Admitted in 2023 </a> </figcaption>
+                     <div class="ShortDescription">Common application requirements for a Computer Science degree. Learn more about the documents, diplomas, and language tests required by computer science schools.</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/61962d2477ecd?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/61962d2477ecd?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/61962d2477ecd?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/61962d2477ecd?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/61962d2477ecd?h=320&amp;w=213" alt="How to Apply to a University in Saudi Arabia in 2023"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3005/how-to-apply-to-a-university-in-saudi-arabia-in-2023.html" title="How to Apply to a University in Saudi Arabia in 2023"> How to Apply to a University in Saudi Arabia in 2023 </a> </figcaption>
+                     <div class="ShortDescription">Step-by-step guide: apply to a Saudi Arabian university. Admission requirements, English language tests, and application deadlines for international students.</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/6193c8e3890c8?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/6193c8e3890c8?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/6193c8e3890c8?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/6193c8e3890c8?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/6193c8e3890c8?h=320&amp;w=213" alt="Cheap Universities in France in 2023"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3004/cheap-universities-in-france-in-2023.html" title="Cheap Universities in France in 2023"> Cheap Universities in France in 2023 </a> </figcaption>
+                     <div class="ShortDescription">Which are the cheapest universities from France where you can study a Bachelor's or Master's degree as an international student?</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/6193af52d0777?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/6193af52d0777?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/6193af52d0777?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/6193af52d0777?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/6193af52d0777?h=320&amp;w=213" alt="How to Apply to a University in Thailand in 2023"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3003/how-to-apply-to-a-university-in-thailand-in-2023.html" title="How to Apply to a University in Thailand in 2023"> How to Apply to a University in Thailand in 2023 </a> </figcaption>
+                     <div class="ShortDescription">Step-by-step guide: apply to Thai universities. Admission requirements and English language tests for international students. Application deadlines and scholarships.</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/6192719b4b9e4?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/6192719b4b9e4?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/6192719b4b9e4?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/6192719b4b9e4?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/6192719b4b9e4?h=320&amp;w=213" alt="How to Apply to a University in Latvia in 2023"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3002/how-to-apply-to-a-university-in-latvia-in-2023.html" title="How to Apply to a University in Latvia in 2023"> How to Apply to a University in Latvia in 2023 </a> </figcaption>
+                     <div class="ShortDescription">Steps to apply at a Latvian university. Application requirements, admission deadlines and English language tests for international students.</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/6190e215797d7?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/6190e215797d7?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/6190e215797d7?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/6190e215797d7?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/6190e215797d7?h=320&amp;w=213" alt="How to Apply to a University in Israel in 2023"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/3001/how-to-apply-to-a-university-in-israel-in-2023.html" title="How to Apply to a University in Israel in 2023"> How to Apply to a University in Israel in 2023 </a> </figcaption>
+                     <div class="ShortDescription">Application process at universities in Israel. Admission requirements for international students. English language tests and application deadlines.</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/618b804770ff3?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/618b804770ff3?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/618b804770ff3?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/618b804770ff3?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/618b804770ff3?h=320&amp;w=213" alt="How to Apply to a University in South Korea in 2023"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/2999/how-to-apply-to-a-university-in-south-korea-in-2023.html" title="How to Apply to a University in South Korea in 2023"> How to Apply to a University in South Korea in 2023 </a> </figcaption>
+                     <div class="ShortDescription">University application guide in South Korea. Admission requirements and language tests. Application deadlines and what to do after receiving the university acceptance letter.</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/618a42f1b3cee?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/618a42f1b3cee?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/618a42f1b3cee?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/618a42f1b3cee?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/618a42f1b3cee?h=320&amp;w=213" alt="How to Apply to a University in Hong Kong in 2023"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/2998/how-to-apply-to-a-university-in-hong-kong-in-2023.html" title="How to Apply to a University in Hong Kong in 2023"> How to Apply to a University in Hong Kong in 2023 </a> </figcaption>
+                     <div class="ShortDescription">University application guide in Hong Kong SAR. Admission requirements and English language tests. Learn about application deadlines and what to do after being accepted.</div>
+                  </figure>
+               </div>
+               <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="//studyportals-cdn2.imgix.net/618926e560246?h=460&amp;w=307&amp;q=40">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="//studyportals-cdn2.imgix.net/618926e560246?h=355&amp;w=237&amp;q=40">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="//studyportals-cdn2.imgix.net/618926e560246?h=385&amp;w=257&amp;q=40">
+                        <source media="all and (min-width: 80.063em)" srcset="//studyportals-cdn2.imgix.net/618926e560246?h=310&amp;w=207&amp;q=40">
+                        <img src="//studyportals-cdn2.imgix.net/618926e560246?h=320&amp;w=213" alt="How to Apply to a University in Slovenia in 2023"> 
+                     </picture>
+                     <figcaption> <a href="https://www.mastersportal.com/articles/2997/how-to-apply-to-a-university-in-slovenia-in-2023.html" title="How to Apply to a University in Slovenia in 2023"> How to Apply to a University in Slovenia in 2023 </a> </figcaption>
+                     <div class="ShortDescription">Step-by-step university application guide in Slovenia. Learn about admission requirements, English language tests and application deadlines.</div>
+                  </figure>
+               </div>
+            </div>*@
+           @* <h2 id="ArchivedArticlesHeader">More Articles</h2>
+            <div id="ArchivedArticles">
+               <ul>
+                  <li> <a href="https://www.mastersportal.com/articles/2853/what-is-a-micromasters-should-i-study-one-in-2023.html" title="What Is a MicroMaster's®? Should I Study One in 2023?">What Is a MicroMaster's®? Should I Study One in 2023?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2918/how-can-i-get-into-engineering-management.html" title="How Can I Get into Engineering Management?">How Can I Get into Engineering Management?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/3096/student-success-story-scholarship-winner-jaykob-wood-is-set-on-becoming-a-unesco-field-investigator.html" title="Student Success Story: Scholarship Winner Jaykob Wood Is Set on Becoming a UNESCO Field Investigator">Student Success Story: Scholarship Winner Jaykob Wood Is Set on Becoming a UNESCO Field Investigator</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2140/university-of-roskilde-denmark-study-experience-of-phoebe.html" title="University of Roskilde, Denmark: Study Experience of Phoebe">University of Roskilde, Denmark: Study Experience of Phoebe</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/3000/study-with-an-australian-college-or-university-in-2023-get-your-dream-job.html" title="Study with an Australian College or University in 2023, Get Your Dream Job">Study with an Australian College or University in 2023, Get Your Dream Job</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2630/6-reasons-to-study-at-one-of-malaysias-top-universities.html" title="6 Reasons to Study at One of Malaysia’s Top Universities">6 Reasons to Study at One of Malaysia’s Top Universities</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2869/how-coursera-plus-can-help-you-get-a-better-job-in-2023.html" title="How Coursera Plus Can Help You Get a Better Job in 2023">How Coursera Plus Can Help You Get a Better Job in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2206/welcome-to-estonia-international-student-scholarships-for-every-dream.html" title="Welcome to Estonia: International Student Scholarships for Every Dream">Welcome to Estonia: International Student Scholarships for Every Dream</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2715/7-reasons-to-study-a-stem-degree-in-melbourne-australia.html" title="7 Reasons to Study a STEM Degree in Melbourne, Australia">7 Reasons to Study a STEM Degree in Melbourne, Australia</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/3011/the-pros-and-cons-of-earning-your-masters-online.html" title="The Pros and Cons of Earning Your Master’s Online">The Pros and Cons of Earning Your Master’s Online</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/3031/support-database-for-students-displaced-by-the-war-in-ukraine.html" title="Support Database for Students Displaced by the War in Ukraine">Support Database for Students Displaced by the War in Ukraine</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2410/share-house-vs-living-on-campus-in-australia-whats-the-better-accommodation-during-your-masters.html" title="Share House vs Living on Campus in Australia - What's the Better Accommodation during Your Master's?">Share House vs Living on Campus in Australia - What's the Better Accommodation during Your Master's?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2852/what-is-a-nanodegree-should-i-study-one-in-2023.html" title="What Is a Nanodegree? Should I Study One in 2023?">What Is a Nanodegree? Should I Study One in 2023?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/1522/uk-government-confirms-new-requirements-for-secure-english-language-testing-for-visa-immigration-purposes.html" title="UK Government Confirms New Requirements for Secure English Language Testing for Visa &amp; Immigration Purposes">UK Government Confirms New Requirements for Secure English Language Testing for Visa &amp; Immigration Purposes</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/388/all-you-need-to-know-about-the-european-credit-system-ects.html" title="All You Need to Know about the European Credit System ECTS">All You Need to Know about the European Credit System ECTS</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2065/study-in-estonia-a-tech-savvy-international-destination-where-digital-nomads-feel-at-home.html" title="Study in Estonia - A Tech-Savvy International Destination Where Digital Nomads Feel at Home">Study in Estonia - A Tech-Savvy International Destination Where Digital Nomads Feel at Home</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2877/what-can-i-do-with-a-masters-in-marketing.html" title="What Can I Do with a Master’s in Marketing?">What Can I Do with a Master’s in Marketing?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2191/study-abroad-in-hungary-with-stipendium-hungaricum-scholarship.html" title="Study Abroad in Hungary with Stipendium Hungaricum Scholarship!">Study Abroad in Hungary with Stipendium Hungaricum Scholarship!</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2693/how-more-women-are-taking-stem-degree-studies-in-recent-years.html" title="How More Women Are Taking STEM Degree Studies in Recent Years">How More Women Are Taking STEM Degree Studies in Recent Years</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2602/study-abroad-in-st-petersburg-english-taught-degrees-to-get-excited-about-in-2023.html" title="Study Abroad in St. Petersburg: English-taught Degrees to Get Excited About in 2023">Study Abroad in St. Petersburg: English-taught Degrees to Get Excited About in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2213/4-online-ielts-training-platforms-get-your-top-english-test-scores-for-university-admission.html" title="4 Online IELTS Training Platforms Get Your Top English Test Scores for University Admission">4 Online IELTS Training Platforms Get Your Top English Test Scores for University Admission</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/1471/the-cems-master-in-management-top-business-studies-abroad.html" title="The CEMS Master in Management - Top Business Studies Abroad">The CEMS Master in Management - Top Business Studies Abroad</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/1473/the-essential-toefl-exam-guide-for-future-international-students.html" title="The Essential TOEFL Exam Guide for Future International Students">The Essential TOEFL Exam Guide for Future International Students</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2947/msc-vs-mba-for-engineering-managers.html" title="MSc vs MBA for Engineering Managers">MSc vs MBA for Engineering Managers</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2251/top-5-reasons-to-study-a-masters-in-medicine-in-2023.html" title="Top 5 Reasons to Study a Master's in Medicine in 2023">Top 5 Reasons to Study a Master's in Medicine in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2155/university-of-roskilde-denmark-study-experience-of-stella.html" title="University of Roskilde, Denmark: Study Experience of Stella">University of Roskilde, Denmark: Study Experience of Stella</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2997/how-to-apply-to-a-university-in-slovenia-in-2023.html" title="How to Apply to a University in Slovenia in 2023">How to Apply to a University in Slovenia in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2994/best-english-taught-universities-in-denmark-in-2023.html" title="Best English-Taught Universities in Denmark in 2023">Best English-Taught Universities in Denmark in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2993/best-english-taught-universities-in-finland-in-2023.html" title="Best English-Taught Universities in Finland in 2023">Best English-Taught Universities in Finland in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2992/best-english-taught-universities-in-italy-in-2023.html" title="Best English-Taught Universities in Italy in 2023">Best English-Taught Universities in Italy in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2991/best-english-taught-universities-in-germany-in-2023.html" title="Best English-Taught Universities in Germany in 2023">Best English-Taught Universities in Germany in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2989/best-english-taught-universities-in-poland-in-2023.html" title="Best English-Taught Universities in Poland in 2023">Best English-Taught Universities in Poland in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2988/best-english-taught-universities-in-spain-in-2023.html" title="Best English-Taught Universities in Spain in 2023">Best English-Taught Universities in Spain in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2987/best-english-taught-universities-in-belgium-in-2023.html" title="Best English-Taught Universities in Belgium in 2023">Best English-Taught Universities in Belgium in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2986/best-english-taught-universities-in-norway-in-2023.html" title="Best English-Taught Universities in Norway in 2023">Best English-Taught Universities in Norway in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2985/best-english-taught-universities-in-switzerland-in-2023.html" title="Best English-Taught Universities in Switzerland in 2023">Best English-Taught Universities in Switzerland in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2984/best-english-taught-universities-in-austria-in-2023.html" title="Best English-Taught Universities in Austria in 2023">Best English-Taught Universities in Austria in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2983/best-english-taught-universities-in-the-netherlands-in-2023.html" title="Best English-Taught Universities in the Netherlands in 2023">Best English-Taught Universities in the Netherlands in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2982/best-english-taught-medical-schools-in-denmark-in-2023.html" title="Best English-Taught Medical Schools in Denmark in 2023">Best English-Taught Medical Schools in Denmark in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2981/best-english-taught-engineering-schools-in-france-in-2023.html" title="Best English-Taught Engineering Schools in France in 2023">Best English-Taught Engineering Schools in France in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2973/what-is-the-sat-and-how-to-apply-for-an-sat-test-in-2023.html" title="What Is the SAT and How to Apply for an SAT Test in 2023?">What Is the SAT and How to Apply for an SAT Test in 2023?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2972/where-to-study-in-2023-the-usa-vs-australia.html" title="Where to Study in 2023: The USA vs Australia">Where to Study in 2023: The USA vs Australia</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2971/5-top-english-taught-masters-in-computer-science-to-study-in-the-netherlands-in-2023.html" title="5 Top English-Taught Masters in Computer Science to Study in the Netherlands in 2023">5 Top English-Taught Masters in Computer Science to Study in the Netherlands in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2964/top-8-reasons-to-study-a-masters-in-data-science-in-germany-in-2023.html" title="Top 8 Reasons to Study a Master's in Data Science in Germany in 2023">Top 8 Reasons to Study a Master's in Data Science in Germany in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2961/best-english-taught-business-schools-in-germany-in-2023.html" title="Best English-Taught Business Schools in Germany in 2023">Best English-Taught Business Schools in Germany in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2960/best-english-taught-law-schools-in-germany-in-2023.html" title="Best English-Taught Law Schools in Germany in 2023">Best English-Taught Law Schools in Germany in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2959/cheap-universities-in-finland-in-2023.html" title="Cheap Universities in Finland in 2023">Cheap Universities in Finland in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2958/cheap-universities-in-the-uk-in-2023-after-brexit.html" title="Cheap Universities in the UK in 2023 After Brexit">Cheap Universities in the UK in 2023 After Brexit</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2957/cheap-universities-in-australia-in-2023.html" title="Cheap Universities in Australia in 2023">Cheap Universities in Australia in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2955/top-5-countries-in-the-middle-east-perfect-for-studying-abroad-in-2023.html" title="Top 5 Countries in the Middle East Perfect for Studying Abroad in 2023">Top 5 Countries in the Middle East Perfect for Studying Abroad in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2954/how-much-does-it-cost-to-study-an-mba-in-2023.html" title="How Much Does It Cost to Study an MBA in 2023?">How Much Does It Cost to Study an MBA in 2023?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2953/where-to-study-medicine-in-english-in-2023.html" title="Where to Study Medicine in English in 2023">Where to Study Medicine in English in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2952/university-reviews-the-importance-of-student-voices-in-2023.html" title="University Reviews: The Importance of Student Voices in 2023">University Reviews: The Importance of Student Voices in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2949/best-english-taught-law-schools-in-europe-in-2023.html" title="Best English-Taught Law Schools in Europe in 2023">Best English-Taught Law Schools in Europe in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2948/best-english-taught-universities-in-france-where-you-can-study-in-2023.html" title="Best English-Taught Universities in France Where You Can Study in 2023">Best English-Taught Universities in France Where You Can Study in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2946/best-english-taught-architecture-universities-in-italy-2023.html" title="Best English-Taught Architecture Universities in Italy | 2023">Best English-Taught Architecture Universities in Italy | 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2945/what-is-a-double-masters-should-i-study-one-in-2023.html" title="What Is a Double Master’s? Should I Study One in 2023?">What Is a Double Master’s? Should I Study One in 2023?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2944/best-english-taught-medical-schools-in-germany-in-2023.html" title="Best English-Taught Medical Schools in Germany in 2023">Best English-Taught Medical Schools in Germany in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2943/why-study-a-criminology-degree-in-2023-top-5-reasons-to-consider.html" title="Why Study a Criminology Degree in 2023? Top 5 Reasons to Consider">Why Study a Criminology Degree in 2023? Top 5 Reasons to Consider</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2942/top-6-reasons-to-study-an-anthropology-degree-in-2023.html" title="Top 6 Reasons to Study an Anthropology Degree in 2023">Top 6 Reasons to Study an Anthropology Degree in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2940/top-7-reasons-to-study-a-geography-degree-in-2023.html" title="Top 7 Reasons to Study a Geography Degree in 2023">Top 7 Reasons to Study a Geography Degree in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2939/top-7-reasons-to-study-a-biology-degree-in-2023.html" title="Top 7 Reasons to Study a Biology Degree in 2023">Top 7 Reasons to Study a Biology Degree in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2938/best-universities-in-wales-where-you-can-study-in-2023.html" title="Best Universities in Wales Where You Can Study in 2023">Best Universities in Wales Where You Can Study in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2937/best-universities-in-scotland-where-you-can-study-in-2023.html" title="Best Universities in Scotland Where You Can Study in 2023">Best Universities in Scotland Where You Can Study in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2936/top-6-reasons-to-study-a-sociology-degree-in-2023.html" title="Top 6 Reasons to Study a Sociology Degree in 2023">Top 6 Reasons to Study a Sociology Degree in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2935/top-6-reasons-to-study-an-agriculture-degree-in-2023.html" title="Top 6 Reasons to Study an Agriculture Degree in 2023">Top 6 Reasons to Study an Agriculture Degree in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2932/cheap-universities-in-the-united-states-in-2023.html" title="Cheap Universities in the United States in 2023">Cheap Universities in the United States in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2931/affordable-universities-in-china-in-2023.html" title="Affordable Universities in China in 2023">Affordable Universities in China in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2930/top-8-reasons-to-study-an-architecture-degree-in-2023.html" title="Top 8 Reasons to Study an Architecture Degree in 2023">Top 8 Reasons to Study an Architecture Degree in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2929/leadership-vs-management-which-degree-should-you-study-in-2023.html" title="Leadership vs Management. Which Degree Should You Study in 2023?">Leadership vs Management. Which Degree Should You Study in 2023?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2928/cheap-universities-in-italy-in-2023.html" title="Cheap Universities in Italy in 2023">Cheap Universities in Italy in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2927/what-is-computer-engineering-should-i-study-it-in-2023.html" title="What Is Computer Engineering? Should I Study It in 2023?">What Is Computer Engineering? Should I Study It in 2023?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2926/how-to-study-abroad-in-2023-a-step-by-step-guide.html" title="How to Study Abroad in 2023: A Step-by-Step Guide">How to Study Abroad in 2023: A Step-by-Step Guide</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2924/humanities-vs-social-science-which-degree-to-study-in-2023.html" title="Humanities vs Social Science. Which Degree to Study in 2023?">Humanities vs Social Science. Which Degree to Study in 2023?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2923/why-study-veterinary-medicine-in-2023.html" title="Why Study Veterinary Medicine in 2023?">Why Study Veterinary Medicine in 2023?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2922/finance-vs-economics-which-degree-to-study-in-2023.html" title="Finance vs Economics: Which Degree to Study in 2023?">Finance vs Economics: Which Degree to Study in 2023?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2915/civil-engineering-vs-architecture-which-degree-to-study-in-2023.html" title="Civil Engineering vs Architecture. Which Degree to Study in 2023?">Civil Engineering vs Architecture. Which Degree to Study in 2023?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2914/top-8-reasons-to-study-a-marketing-degree-in-2023.html" title="Top 8 Reasons to Study a Marketing Degree in 2023">Top 8 Reasons to Study a Marketing Degree in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2912/best-countries-to-study-finance-in-2023.html" title="Best Countries to Study Finance in 2023">Best Countries to Study Finance in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2908/tuition-fees-and-living-costs-in-the-czech-republic-in-2023.html" title="Tuition Fees and Living Costs in the Czech Republic in 2023">Tuition Fees and Living Costs in the Czech Republic in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2907/tuition-fees-and-living-costs-in-lithuania-in-2023.html" title="Tuition Fees and Living Costs in Lithuania in 2023">Tuition Fees and Living Costs in Lithuania in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2906/tuition-fees-and-living-costs-in-the-uk-in-2023.html" title="Tuition Fees and Living Costs in the UK in 2023">Tuition Fees and Living Costs in the UK in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2905/best-1-year-online-masters-programmes-you-can-study-in-2023.html" title="Best 1-Year Online Master’s Programmes You Can Study in 2023">Best 1-Year Online Master’s Programmes You Can Study in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2904/tuition-fees-and-living-costs-in-greece-in-2023.html" title="Tuition Fees and Living Costs in Greece in 2023">Tuition Fees and Living Costs in Greece in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2900/where-to-study-an-online-llm-in-2023-and-how-much-does-it-cost.html" title="Where to Study an Online LL.M. in 2023 and How Much Does It Cost?">Where to Study an Online LL.M. in 2023 and How Much Does It Cost?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2899/tuition-fees-and-living-costs-in-taiwan-in-2023.html" title="Tuition Fees and Living Costs in Taiwan in 2023">Tuition Fees and Living Costs in Taiwan in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2898/should-i-study-an-online-ms-in-computer-science-in-2023.html" title="Should I Study an Online M.S. in Computer Science in 2023?">Should I Study an Online M.S. in Computer Science in 2023?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2895/top-8-reasons-to-study-an-online-masters-in-computer-science-in-2023.html" title="Top 8 Reasons to Study an Online Master's in Computer Science in 2023">Top 8 Reasons to Study an Online Master's in Computer Science in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2894/information-technology-vs-computer-science-which-degree-to-study-in-2023.html" title="Information Technology vs Computer Science: Which Degree to Study in 2023?">Information Technology vs Computer Science: Which Degree to Study in 2023?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2893/how-to-apply-to-a-university-in-south-africa-in-2023.html" title="How to Apply to a University in South Africa in 2023">How to Apply to a University in South Africa in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2892/best-online-business-schools-in-the-world-in-2023.html" title="Best Online Business Schools in the World in 2023">Best Online Business Schools in the World in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2891/nursing-school-requirements-in-2023-how-to-get-admitted.html" title="Nursing School Requirements in 2023. How to Get Admitted">Nursing School Requirements in 2023. How to Get Admitted</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2890/how-to-apply-to-a-university-in-malaysia-in-2023.html" title="How to Apply to a University in Malaysia in 2023">How to Apply to a University in Malaysia in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2889/how-to-apply-to-a-university-in-new-zealand-in-2023.html" title="How to Apply to a University in New Zealand in 2023">How to Apply to a University in New Zealand in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2888/how-to-apply-to-a-university-in-taiwan-in-2023.html" title="How to Apply to a University in Taiwan in 2023">How to Apply to a University in Taiwan in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2886/how-to-apply-to-a-university-in-japan-in-2023.html" title="How to Apply to a University in Japan in 2023">How to Apply to a University in Japan in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2885/how-to-apply-to-a-university-in-the-united-arab-emirates-in-2023.html" title="How to Apply to a University in the United Arab Emirates (UAE) in 2023">How to Apply to a University in the United Arab Emirates (UAE) in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2883/tuition-fees-and-living-costs-in-thailand-in-2023.html" title="Tuition Fees and Living Costs in Thailand in 2023">Tuition Fees and Living Costs in Thailand in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2882/tuition-fees-and-living-costs-in-south-africa-in-2023.html" title="Tuition Fees and Living Costs in South Africa in 2023">Tuition Fees and Living Costs in South Africa in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2881/tuition-fees-and-living-costs-in-malaysia-in-2023.html" title="Tuition Fees and Living Costs in Malaysia in 2023">Tuition Fees and Living Costs in Malaysia in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2880/tuition-fees-and-living-costs-in-luxembourg-in-2023.html" title="Tuition Fees and Living Costs in Luxembourg in 2023">Tuition Fees and Living Costs in Luxembourg in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2879/tuition-fees-and-living-costs-in-the-united-arab-emirates-in-2023.html" title="Tuition Fees and Living Costs in the United Arab Emirates (UAE) in 2023">Tuition Fees and Living Costs in the United Arab Emirates (UAE) in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2878/tuition-fees-and-living-costs-in-israel-in-2023.html" title="Tuition Fees and Living Costs in Israel in 2023">Tuition Fees and Living Costs in Israel in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2876/psychology-degree-requirements-in-2023-how-to-get-admitted-to-studies.html" title="Psychology Degree Requirements in 2023.  How to Get Admitted to Studies">Psychology Degree Requirements in 2023. How to Get Admitted to Studies</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2875/tuition-fees-and-living-costs-in-slovenia-in-2023.html" title="Tuition Fees and Living Costs in Slovenia in 2023">Tuition Fees and Living Costs in Slovenia in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2871/tuition-fees-and-living-costs-in-hungary-in-2023.html" title="Tuition Fees and Living Costs in Hungary in 2023">Tuition Fees and Living Costs in Hungary in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2868/tuition-fees-and-living-costs-in-estonia-in-2023.html" title="Tuition Fees and Living Costs in Estonia in 2023">Tuition Fees and Living Costs in Estonia in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2867/tuition-fees-and-living-costs-in-new-zealand-in-2023.html" title="Tuition Fees and Living Costs in New Zealand in 2023">Tuition Fees and Living Costs in New Zealand in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2866/top-10-reasons-to-study-a-psychology-degree-in-2023.html" title="Top 10 Reasons to Study a Psychology Degree in 2023">Top 10 Reasons to Study a Psychology Degree in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2865/tuition-fees-and-living-costs-in-turkey-in-2023.html" title="Tuition Fees and Living Costs in Turkey in 2023">Tuition Fees and Living Costs in Turkey in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2864/10-reasons-why-you-should-study-a-philosophy-degree-in-2023.html" title="10 Reasons Why You Should Study a Philosophy Degree in 2023">10 Reasons Why You Should Study a Philosophy Degree in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2863/why-study-pharmacy-in-2023-top-7-reasons-to-consider.html" title="Why Study Pharmacy in 2023? Top 7 Reasons to Consider">Why Study Pharmacy in 2023? Top 7 Reasons to Consider</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2862/why-study-finance-in-2023-top-7-reasons-to-consider.html" title="Why Study Finance in 2023? Top 7 Reasons to Consider">Why Study Finance in 2023? Top 7 Reasons to Consider</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2856/top-8-reasons-why-you-should-study-a-nursing-degree-in-2023.html" title="Top 8 Reasons Why You Should Study a Nursing Degree in 2023">Top 8 Reasons Why You Should Study a Nursing Degree in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2855/7-reasons-why-you-should-study-a-history-degree-in-2023.html" title="7 Reasons Why You Should Study a History Degree in 2023">7 Reasons Why You Should Study a History Degree in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2854/top-7-reasons-to-study-a-law-degree-in-2023.html" title="Top 7 Reasons to Study a Law Degree in 2023">Top 7 Reasons to Study a Law Degree in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2851/cheap-universities-in-canada-in-2023.html" title="Cheap Universities in Canada in 2023">Cheap Universities in Canada in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2850/how-to-get-a-scholarship-to-study-abroad-in-2023.html" title="How to Get a Scholarship to Study Abroad in 2023">How to Get a Scholarship to Study Abroad in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2843/uk-tuition-fees-for-eueea-students-in-2023-changes-after-brexit.html" title="UK Tuition Fees for EU/EEA Students in 2023. Changes after Brexit">UK Tuition Fees for EU/EEA Students in 2023. Changes after Brexit</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2825/best-nursing-schools-in-europe-university-rankings-2023.html" title="Best Nursing Schools in Europe. University Rankings 2023">Best Nursing Schools in Europe. University Rankings 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2806/data-science-vs-data-analytics-which-degree-to-study-in-2023.html" title="Data Science vs Data Analytics: Which Degree to Study in 2023?">Data Science vs Data Analytics: Which Degree to Study in 2023?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2803/business-administration-vs-management-which-degree-to-study-in-2023.html" title="Business Administration vs Management: Which Degree to Study in 2023?">Business Administration vs Management: Which Degree to Study in 2023?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2801/marketing-vs-advertising-which-degree-to-study-in-2023.html" title="Marketing vs Advertising: Which Degree to Study in 2023?">Marketing vs Advertising: Which Degree to Study in 2023?</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2799/best-fashion-design-schools-in-europe-in-2023.html" title="Best Fashion Design Schools in Europe in 2023">Best Fashion Design Schools in Europe in 2023</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2797/computer-science-vs-computer-engineering-how-to-choose-between-them.html" title="Computer Science vs Computer Engineering: How to Choose Between Them.">Computer Science vs Computer Engineering: How to Choose Between Them.</a> </li>
+                  <li> <a href="https://www.mastersportal.com/articles/2788/top-9-countries-for-studying-an-mba-mba-costs-in-2023.html" title="Top 9 Countries for Studying an MBA - MBA Costs in 2023">Top 9 Countries for Studying an MBA - MBA Costs in 2023</a> </li>
+               </ul>
+            </div>*@
+         </article>
       </div>
+      
    </div>
-</div>
-                      
-                </section>
-
-
-
-
-
-
-            </section>
-        </main>
+   <div class="colblock ModuleDivider">
+      <div data-module="" class="Module StudyPortals_Shared_Modules_Article_Topics_Topics">
+         <aside id="ArticleTopics">
+            <h3>Article Topics</h3>
+            <ul id="topics">
+               
+            </ul>
+         </aside>
+      </div>
+      <div data-module="" class="Module StudyPortals_Shared_Modules_RelatedEntities_RelatedEntities EmptyModule"> </div>
+     
+     
+     
+     
+   </div>
+</section>
   @section Scripts{
     <script src="~/js/blog.js" defer></script>
 

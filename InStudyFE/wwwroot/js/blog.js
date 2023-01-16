@@ -1,94 +1,56 @@
 ﻿$(document).ready(function () {
 
-    var $blog = $('#blog');
+    var $blog = $('#FeaturedArticles');
+    var $blogHeader = $('#FeaturedArticlesHeader');
+    var $topic = $('#topics');
+    const $lang = localStorage.getItem('lang');
     function getBlogs() {
         $.ajax({
             type: 'GET',
             headers: {
                 'Content-Type': 'application/json'
             },
-            url: `https://localhost:7074/api/Blogs/GetBlogs`,
+            url: `https://api.instudy.net/api/Blogs/GetBlogs`,
 
             success: function (data) {
+                if ($lang == 'AZ') {
+                    var name = "Basliq"
+
+                }
+                else if ($lang == 'EN') {
+                    var name = "Basliq en"
+                    
+
+                } else {
+                    var name = "Basliq ru";
+
+                }
+                $blogHeader.html(`${name}`);
                 $blog.empty();
+
                 $.each(
                     data.data, function (i, value) {
-                        console.log(value.regDate);
-                        const date = new Date(value.regDate)
+                       
+                        if ($lang == 'AZ') {
+                            var name1 = value.azTitle
+                            var description = value?.azDescription;
 
-                        var dd = String(date.getDate()).padStart(2, '0');
-                        var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-                        var yyyy = date.getFullYear();
-                        var time = yyyy + "/" + mm + "/" + dd;
-                        var description = value.description.slice(0, 10);
+                        }
+                        else if ($lang == 'EN') {
+                            var name1 = value.enTitle
+                            var description = value?.enDescription;
+
+                        } else {
+                            var name1 = value.ruTitle;
+                            var description = value?.ruDescription;
+
+                        }
+                        var image = `data:image/png;base64,${value?.files[0]?.bytes}`
+                        console.log(image); 
                         if (i <= 3) {
-                            $blogCarousel.append(
-                                `  <div class="carousel-item active">
-                                    <div class="carousel-item-detail">
-                                        <div class="carousel-item-detail-text">
-                                            <a> <h1>${value[0].Name}</h1> </a>
-                                            <div class="d-flex"><img class="detail-icon" src="~/css/images/icons/icon-calender-grey.svg" alt="" /> <span class="calendar">08 Ekim 2022</span></div>
-                                            <p>${description}</p>
-                                            <a>TÜMÜNÜ GÖR</a>
-                                        </div>
-                                        <div class="carousel-item-detail-img">
-                                            <a >
-                                                <img
-                                                    class="d-block w-100"
-                                                    src="${value[0].imagefiles.path}"
-                                                    alt="${value[0].Name}"
-                                                />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="carousel-item-detail">
-                                        <div class="carousel-item-detail-text">
-                                            <a> <h1>${value[1].Name}</h1> </a>
-                                            <div class="d-flex">
-                                                 <img class="detail-icon" src="~/css/images/icons/icon-calender-grey.svg" alt="" /> <span class="calendar">${time}</span>
-                                            </div>
-                                            <p>${description}</p>
-                                            <a>TÜMÜNÜ GÖR</a>
-                                        </div>
-                                        <div class="carousel-item-detail-img">
-                                            <a>
-                                                <img class="d-block w-100" src="${value[1].filePath}" alt="${value[1].Name}" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="carousel-item-detail">
-                                        <div class="carousel-item-detail-text">
-                                            <a href="blog/danimarka-is-ilanlari.html"> <h1>${value[2].name}</h1> </a>
-                                            <div class="d-flex"><img class="detail-icon" src="~/css/images/icons/icon-calender-grey.svg" alt="" /> <span class="calendar">${time}</span></div>
-                                            <p>${description}</p>
-                                            <a >TÜMÜNÜ GÖR</a>
-                                        </div>
-                                        <div class="carousel-item-detail-img">
-                                            <a >
-                                                <img class="d-block w-100" src="${value[2]}" alt="Danimarka İş İlanları ve İş Başvurusu 2022" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="carousel-item-detail">
-                                        <div class="carousel-item-detail-text">
-                                            <a > <h1>${value[3].name}</h1> </a>
-                                            <div class="d-flex"><img class="detail-icon" src="~/css/images/icons/icon-calender-grey.svg" alt="" /> <span class="calendar">${time}</span></div>
-                                            <p>${description}</p>
-                                            <a >TÜMÜNÜ GÖR</a>
-                                        </div>
-                                        <div class="carousel-item-detail-img">
-                                            <a href="blog/kanada-is-ilanlari.html">
-                                                <img class="d-block w-100" src="${value[3]}" alt="${value[0].name}" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                            $topic.append(
+                                `                <li> <a id="topic-1" title="Start studying abroad" href="/Blog/Detail/${value.id}">${name1}</a> </li>
+
                          
                            
                               
@@ -97,18 +59,19 @@
                             );
                         }
                         $blog.append(
-                            ` <div  class="blog-list-detail">
-                          <a value="${value.id}" id="learnMore"  >
-                             <div  class="img-div"><img src="${value}" title="${value}" alt="${value}" class="lazy w-100"></div>
-                          </a>
-                          <div  class="title-programs">
-                             <h3 ><a  href="${value}">${value} </a></h3>
-                             <div  class="location-programs d-flex">
-                                
-                                <div  class="d-flex"><img  src="assets/css/images/icons/icon-clock-grey.svg" alt=""> <span  class="time-text"> ${value}</span></div>
-                             </div>
-                          </div>
-                       </div>`
+                            ` <div class="Article">
+                  <figure data-clickable="clickable">
+                     <picture>
+                        <source media="all and (max-width: 30em)" srcset="${image}">
+                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="${image}">
+                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="${image}">
+                        <source media="all and (min-width: 80.063em)" srcset="${image}">
+                        <img src="${image}" height="320" width="213" alt="st to Apply for a"> 
+                     </picture>
+                     <figcaption> <a href="/Blog/Detail/${value.id}" title="Test to Apply"> ${name1} </a> </figcaption>
+                     <div class="ShortDescription">${description}</div>
+                  </figure>
+               </div>`
                         )
                     }
                 )
@@ -117,13 +80,6 @@
 
         });
     }
-    $(document).on('click', '#learnMore', async function () {
-        let Id = $(this).attr('value');
-        console.log(Id);
-        localStorage.setItem('blogId', Id);
-        location.href = `/blog/detail`;
-
-
-    });
+  
     getBlogs();
 });
