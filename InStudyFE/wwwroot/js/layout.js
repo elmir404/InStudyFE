@@ -1,4 +1,4 @@
-﻿$(document).ready(function () {
+﻿    $(document).ready(function () {
     const $lang = localStorage.getItem('lang');
     if ($lang == 'AZ') {
         $(`.explore`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-compass2"></i> <span class="SectionNavigationLabel">Araşdır</span> </a>`);

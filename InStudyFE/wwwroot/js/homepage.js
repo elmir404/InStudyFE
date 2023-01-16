@@ -94,7 +94,7 @@
                             var description = value?.ruDescription;
 
                         }
-                        var image = `data:image/png;base64,${value?.countryFiles[0]?.bytes}`
+                        var image = `https://api.instudy.net/${value?.countryFiles[0]?.path}`
 
                         if (i < 10) {
                             $countryMenu.append(`
@@ -102,7 +102,7 @@
 
 `
                             )
-                        }
+                        }   
                         //var description = value.description.slice(0, 5);
                         if (i < 1) {
 
@@ -115,7 +115,7 @@
                                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset=${image}">
                                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="${image}">
                                        <source media="all and (min-width: 80.063em)" srcset="${image}">
-                                       <img src="${image}" alt="data:image/png;base64, Netherlands" loading="lazy" style="height: 13rem;">
+                                       <img src="${image}" style="height: 13rem;">
                                     </picture>
                                  </span>
                               <figcaption>
@@ -167,6 +167,11 @@
                     }  
                     $(`#program1`).append(`
                                                  <li class="Suggestion Link" onclick='searchProgram(this)'  data-param-name="discipline_ids">${name}</li>
+
+
+`);
+                    $(`#programCon`).append(`
+                                                 <li class="Suggestion Link" onclick='searchProgramCon(this)'  data-param-name="discipline_ids">${name}</li>
 
 
 `);
@@ -257,7 +262,7 @@
                             var description = value?.ruDescription;
 
                         }
-                        var image = `data:image/png;base64,${value?.universityFiles[0]?.bytes}`
+                        var image = `https://api.instudy.net/${value?.universityFiles[0]?.bytes}`
                         
                         if (i < 10) {
 
@@ -328,6 +333,10 @@
                                                  <li class="Suggestion Link" data-position="0" onclick='searchDirection(this)' data-param-value="351" data-param-name="discipline_ids">${name}</li>
 
 `);
+                        $("#directionCon").append(`
+                                                 <li class="Suggestion Link" data-position="0" onclick='searchDirectionCon(this)' data-param-value="351" data-param-name="discipline_ids">${name}</li>
+
+`);
                         //var description = value.description.slice(0, 5);
                         //$country.append(
                         //    ` <figure data-clickable="clickable">
@@ -372,7 +381,7 @@
                 data.data, function (i, value) {
 
                     
-                    var image = `data:image/png;base64,${value?.studentFiles[0]?.bytes}`
+                    var image = `https://api.instudy.net/${value?.studentFiles[0]?.bytes}`
 
                     
 
@@ -500,65 +509,39 @@ ${value.description};
         }
 
     });
+ 
     getUniversities();
     function getPartners() {
-        $.ajax({
-            type: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            url: `https://api.instudy.net/api/Partner/GetPartners`,
+        //$.ajax({
+        //    type: 'GET',
+        //    headers: {
+        //        'Content-Type': 'application/json'
+        //    },
+        //    url: `https://api.instudy.net/api/Partner/GetPartners11`,
 
-            success: function (data) {
-                $partners.empty();
-                $.each(
-                    data.data, function (i, value) {
+        //    success: function (data) {
+        //        $partners.empty();
+        //        $.each(
+        //            data.data, function (i, value) {
 
-                        var image = `data:image/png;base64,${value?.partnerFiles[0]?.bytes}`
-                        //const date = new Date(value.regDate)
+        //                var image = `data:image/png;base64,${value?.partnerFiles[0]?.bytes}`
+        //                $partners.append(
+        //                    `<div style="width: 235px; margin-right: 10px;"> <a href="${value.link}"><img src="${image}" /></a></div>
 
-                        //var dd = String(date.getDate()).padStart(2, '0');
-                        //var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-                        //var yyyy = date.getFullYear();
-                        //var time = yyyy + "/" + mm + "/" + dd;
-                        //if ($lang == 'AZ') {
-                        //    var name = value.azName
-                        //    var description = value?.azDescription;
+        //                                 `
+        //                );
+                       
 
-                        //}
-                        //else if ($lang == 'EN') {
-                        //    var name = value.enName
-                        //    var description = value?.enDescription;
+        //            }
+        //        );
 
-                        //} else {
-                        //    var name = value.ruName;
-                        //    var description = value?.ruDescription;
-
-                        //}
-                        //console.log(description);
-
-                        //var description = value.description.slice(0, 5);
-                        $partners.append(
-                            `  <div>
-                                  <img style="width:13rem;height:13rem;"  src="${image}">
-                                   </div>
-                                
-                                         `
-                        )
-
-                    }
-                );
-                $partners.append(
-                    `     <div class="next_button"></div>
-                         <div class="prev_button"></div>
-                                
-                                         `
-                )
+                
+                
              
 
-            }
+        //    }
 
-        });
+        //});
     }
     function getQuestions() {
         $.ajax({
@@ -571,15 +554,6 @@ ${value.description};
             success: function (data) {
                 $questionHeader.empty();
                 $questions.empty();
-
-               
-                        
-                        //const date = new Date(value.regDate)
-
-                        //var dd = String(date.getDate()).padStart(2, '0');
-                        //var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-                        //var yyyy = date.getFullYear();
-                        //var time = yyyy + "/" + mm + "/" + dd;
                         if ($lang == 'AZ') {
                             var header = data?.data?.azHeader
                             var body = data?.data?.azBody;
@@ -639,7 +613,7 @@ ${value.description};
 
                         }
                        
-                            $questions.append(
+                        $("accordionExample1").append(
                                 `   <div class="accordion-item">
                         <h2 class="accordion-header" id="heading${value?.id}">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${value?.id}" aria-expanded="true" aria-controls="collapse${value?.id}">
@@ -760,7 +734,7 @@ ${value.description};
                             var description = value?.ruDescription;
 
                         }
-                        var image = `data:image/png;base64,${value?.countryFiles[0]?.bytes}`
+                        var image = `https://api.instudy.net/${value?.countryFiles[0]?.path}`
                         //var description = value.description.slice(0, 5);
                         if (i < 3) {
 

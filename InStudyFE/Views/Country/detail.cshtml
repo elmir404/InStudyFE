@@ -25,7 +25,7 @@
 #Recommendations, #recommendationsWrapper {
     padding: 0;
 }
-
+     
         .ftco-section{
             padding:0;
         }
@@ -348,17 +348,17 @@
                 <div class="HeaderSearch" >
                     <div data-module="" class="Module StudyPortals_Shared_Modules_HeaderSearch_HeaderSearch">
                         <div id="HeaderSearch" style="max-width: 39rem;">
-                            <form method="get" action="https://www.mastersportal.com/search/master" class="Form" id="SearchForm">
+                            <form class="Form" id="HomeSearchForm">
                                 <div class="InputWrapper">
-                                    <input style="height:2.5rem;" id="programInput" type="text" value="" name="discipline" class="Keywords AutoCompleteInput" placeholder="Program" autocomplete="off" data-type="what" data-order="1">
-                                    <div class="AutoCompleteContainer Hidden" style="width: 197px;">
-                                        <ul id="program" class="AutoComplete"></ul>
+                                    <input style="height:2.5rem;" id="programInputCon" type="text" value="" name="discipline" class="Keywords AutoCompleteInput" placeholder="Program" autocomplete="off" data-type="what" data-order="1">
+                                    <div id="program_div_con" class="AutoCompleteContainer " style="width: 197px;z-index:200">
+                                        <ul id="programCon" class="AutoComplete"></ul>
                                     </div>
                                 </div>
                                 <div class="InputWrapper">
-                                    <input id="directionInput"   style="height:2.5rem;" type="text" value="" name="location" class="Keywords AutoCompleteInput" placeholder="Direction" autocomplete="off" data-type="where" data-order="2">
-                                    <div class="AutoCompleteContainer Hidden" style="width: 197px;">
-                                        <ul id="direction" class="AutoComplete"></ul>
+                                    <input id="directionInputCon"   style="height:2.5rem;" type="text" value="" name="location" class="Keywords AutoCompleteInput" placeholder="Direction" autocomplete="off" data-type="where" data-order="2">
+                                    <div id="direction_div_con" class="AutoCompleteContainer " style="width: 197px; z-index:200">
+                                        <ul id="directionCon" class="AutoComplete"></ul>
                                     </div>
                                 </div>
                                 <button type="submit" id="searchButton" style="height:2.5rem;" class="SearchButton"> <i class="lnr-magnifier SearchButtonIcon"></i> </button>
@@ -927,7 +927,15 @@
         radioButtons.forEach(radio => {
             radio.addEventListener('click', handleRadioClick);
         });
-
+        
+            function searchDirectionCon(name) {
+              var  txtValue = name.textContent || name.innerText;
+               document.getElementById('directionInput').value = txtValue;
+            }
+            function searchCountryCon(name) {
+              var  txtValue = name.textContent || name.innerText;
+               document.getElementById('countryInput').value = txtValue;
+            }
         </script>
         <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
 	<script>

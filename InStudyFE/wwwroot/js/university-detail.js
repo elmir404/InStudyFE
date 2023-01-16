@@ -52,7 +52,7 @@
 
 
             }
-            var image = `data:image/png;base64,${data.data?.universityFiles[0]?.bytes}`;
+            var image = `https://api.instudy.net/${data.data?.universityFiles[0]?.path}`;
             
             $uniImage.empty();
             $uniImage.append(

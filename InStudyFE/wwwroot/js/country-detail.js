@@ -11,17 +11,22 @@
     var $StudyUniversity = $('#StudyUniversity');
     if ($lang == 'AZ') {
         $StudyUniversity.html(`Universitetlər`);
+        $(`#programInputCon`).attr(`placeholder`, `Proqram`);
+        $(`#directionInputCon`).attr(`placeholder`, `İstiqamət`);
     }
     else if ($lang == 'EN') {
-        $StudyUniversity.html(`University`);
-       
+        $StudyUniversity.html(`Universities`);
+        $(`#programInputCon`).attr(`placeholder`, `Program`);
+        $(`#directionInputCon`).attr(`placeholder`, `Direction`);
 
     }
     else {
-        $StudyUniversity.html(`Universiteta`);
-       
+        $StudyUniversity.html(`Университеты`);
+        $(`#programInputCon`).attr(`placeholder`, `Программа`);
+        $(`#directionInputCon`).attr(`placeholder`, `Направление`);
 
     }
+
     $.ajax({
         type: 'GET',
         headers: {
@@ -51,11 +56,11 @@
 
             }
             localStorage.setItem('country', name1);
-            var image = `data:image/png;base64,${data.data?.countryFiles[0]?.bytes}`
+            var image = `https://api.instudy.net/${data.data?.countryFiles[0]?.path}`
             $countryImage.append(
                 `
-                <span class="HeroImage js-heroImage" style="background-image:url('${image}');background-repeat: no-repeat;background-size: auto;"></span>
-                <span class="HeroImage HeroImagePlaceholder js-heroImageLowResPlaceholder"></span> <span class="HeroOverlay" style="background-image:url('${image}');background-repeat: no-repeat;background-size: auto;" ></span>
+                <span class="HeroImage js-heroImage" style="background-image:url(${image});background-repeat: no-repeat;background-size: auto;"></span>
+                <span class="HeroImage HeroImagePlaceholder js-heroImageLowResPlaceholder"></span> <span class="HeroOverlay" style="background-image:url(${image});background-repeat: no-repeat;background-size: auto;" ></span>
                 
                 `
             );
@@ -139,7 +144,7 @@ ${data?.data?.workPermit}
                         var description = value?.ruDescription;
 
                     }
-                    var image = `data:image/png;base64,${value?.universityFiles[0]?.bytes}`
+                    var image = `https://api.instudy.net/${value?.universityFiles[0]?.path}`
                     $universities.append(
                         `
                              <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail/${value.id}" target="_blank" class="ContentCard js-studyCard">
@@ -173,6 +178,58 @@ ${data?.data?.workPermit}
 
 
         }
+    });
+
+    $("#programInputCon").focusin(function () {
+        const menuItem = document.getElementById('program_div_con');
+        menuItem.classList.remove("Hidden");
+
+    });
+    $("#programInputCon").focusout(function () {
+        const menuItem = document.getElementById('program_div_con');
+        setTimeout(function delay() {
+            menuItem.classList.add("Hidden");
+        }, 200);
+
+
+    });
+    $("#directionInputCon").focusin(function () {
+        const menuItem = document.getElementById('direction_div_con');
+        menuItem.classList.remove("Hidden");
+
+    });
+    $("#directionInputCon").focusout(function () {
+        const menuItem = document.getElementById('direction_div_con');
+        setTimeout(function delay() {
+            //menuItem.classList.add("Hidden");
+        }, 200);
+
+
+    });
+    $("#directionInputCon").keyup(function () {
+        const menuItem = document.getElementById('direction_div_con');
+        menuItem.classList.remove("Hidden");
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('directionInputCon');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("directionCon");
+        li = ul.getElementsByTagName('li');
+        for (i = 0; i < li.length; i++) {
+
+            txtValue = li[i].textContent || li[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    });
+
+    $("#directionInputCon").focusout(function () {
+        const menuItem = document.getElementById('direction_div');
+        setTimeout(function delay() {
+            menuItem.classList.add("Hidden");
+        }, 200);
     });
   
 });

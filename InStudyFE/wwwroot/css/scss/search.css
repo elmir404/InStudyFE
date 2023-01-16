@@ -1349,9 +1349,7 @@ body[data-wishlist-drawer] {
     }
 }
 
-#HeaderMainMenu .SectionsContent .SectionNavigationItem.is-open {
-    display: block
-}
+
 
 #HeaderMainMenu .SectionsContent .SectionNavigationItem .SectionNavigationLink {
     background-color: #fff;
@@ -3638,4 +3636,7 @@ body .Hidden {
 }
 .FilterContainer .is-collapsed .RefineContentOptionsList {
     display: none;
+}
+.placeholder{
+    cursor:pointer !important;
 }
