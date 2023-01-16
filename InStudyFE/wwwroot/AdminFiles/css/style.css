@@ -44625,17 +44625,17 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .iti--allow-dropdown input {
-    padding-right: 6px;
-    padding-left: 52px;
+    padding-right: 257px;
+    padding-left: 44px;
     margin-left: 0;
 }
 
-.iti--allow-dropdown input[type=text],
-.iti--allow-dropdown input[type=tel] {
-    padding-right: 6px;
-    padding-left: 52px;
-    margin-left: 0;
-}
+    .iti--allow-dropdown input[type=text],
+    .iti--allow-dropdown input[type=tel] {
+        padding-right: 257px;
+        padding-left: 44px;
+        margin-left: 0;
+    }
 
 .iti--separate-dial-code input {
     padding-right: 6px;
