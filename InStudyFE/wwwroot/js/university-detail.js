@@ -30,6 +30,9 @@
                 var attendence = "Nov";
                 var apply = "Vaxt";
                 var start = "Vaxt";
+                $(`#overview`).html("Ümumi")
+                $(`#bachelor`).html("Bakalavr")
+                $(`#master`).html("Magistr")
             }
             else if ($lang == 'EN') {
                 var name1 = data.data?.enName
@@ -39,7 +42,9 @@
                 var attendence = "Nov";
                 var apply = "Vaxt";
                 var start = "Vaxt";
-
+                $(`#overview`).html("Overview")
+                $(`#bachelor`).html("Bachelor")
+                $(`#master`).html("Master")
 
             } else {
                 var name1 = data.data?.ruName;
@@ -49,7 +54,9 @@
                 var attendence = "Nov";
                 var apply = "Vaxt";
                 var start = "Vaxt";
-
+                $(`#overview`).html("Обзор")
+                $(`#bachelor`).html("Холостяк")
+                $(`#master`).html("Владелец")
 
             }
             var image = `https://api.instudy.net/${data.data?.universityFiles[0]?.path}`;

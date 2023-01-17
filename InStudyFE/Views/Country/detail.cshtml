@@ -356,7 +356,7 @@
                                     </div>
                                 </div>
                                 <div class="InputWrapper">
-                                    <input id="directionInput"   style="height:2.5rem;" type="text" value="" name="location" class="Keywords AutoCompleteInput" placeholder="Direction" autocomplete="off" data-type="where" data-order="2">
+                                    <input id="directionInput"  style="height:2.5rem;" type="text" value="" name="location" class="Keywords directionInput AutoCompleteInput" placeholder="Direction" autocomplete="off" data-type="where" data-order="2">
                                     <div class="AutoCompleteContainer " style="width: 197px;">
                                         <ul id="direction" class="AutoComplete" style="z-index:101;">
                                             <li>sdasdsad</li>
@@ -382,30 +382,30 @@
                     <div id="ContentSwitcherWrapper" class="ContentSwitcherWrapper">
                         <div id="ContentSwitcher" class="ContentSwitcher"> 
                                 <button type="button"
-                            class="ContentButton js-contentButtons" onclick="swith('StudyIn')" data-id="study">
+                            class="ContentButton study js-contentButtons" onclick="swith('StudyIn')" data-id="study">
                             Study
                         </button>
                                 <button type="button"
-                            class="ContentButton js-contentButtons" onclick="swith('Living')" data-id="living">
+                            class="ContentButton living js-contentButtons" onclick="swith('Living')" data-id="living">
                             Living
                         </button>
 
                                 <button
-                                type="button" class="ContentButton js-contentButtons" onclick="swith('About')" data-id="about"> About
+                                type="button" class="ContentButton about js-contentButtons" onclick="swith('About')" data-id="about"> About
                                  </button>
 
-                        <button type="button" class="ContentButton js-contentButtons" onclick="swith('Universities')" data-id="institutes">
+                        <button type="button" class="ContentButton university js-contentButtons" onclick="swith('Universities')" data-id="institutes">
                                 Universities </button>
 
-                        <button type="button" onclick="swith('Visa')" class="ContentButton js-contentButtons"
+                        <button type="button" onclick="swith('Visa')" class="ContentButton student-visa js-contentButtons"
                                 data-id="visa"> Student visa </button>
 
                                 <button type="button"
-                            class="ContentButton js-contentButtons" onclick="swith('Permit')" data-id="work_permit">
+                            class="ContentButton work-permit js-contentButtons" onclick="swith('Permit')" data-id="work_permit">
                             Work permit
                         </button>
 
-                        <button type="button" onclick="swith('Apply')" class="ContentButton js-contentButtons" data-id="how_to_apply">
+                        <button type="button" onclick="swith('Apply')" class="ContentButton how-to-apply js-contentButtons" data-id="how_to_apply">
                                 Apply Form </button> </div>
                     </div>
                 </div>
@@ -478,7 +478,7 @@
                                     <div class="row no-gutters">
                                         <div class="border-radius col-md-12 d-flex align-items-stretch">
                                             <div class="contact-wrap w-100 p-md-5 p-4">
-                                                <h3 class="mb-4">Contact</h3>
+                                                <h3 class="mb-4" id="contactheader">Contact</h3>
                                                 <div id="form-message-warning" class="mb-4"></div>
                                                 <div id="form-message-success" class="mb-4">
                                                     Your message was sent, thank you!
@@ -487,28 +487,31 @@
                                                     <div class="row">
                                                         <div class="col-md-6 mb-2">
                                                             <div class="form-group">
+                                                                <label id="labelname" for="phone">Name</label>
                                                                 <input type="text" class="form-control" name="name" id="requestName" placeholder="Name" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6 mb-2">
                                                             <div class="form-group">
-                                                                <input type="text" class="form-control" name="name" id="lastName" placeholder="Surname" required>
+                                                                <label id="labellast" for="phone">Surname</label>
+                                                                <input type="text" class="form-control" name="name" id="lastName" placeholder="Lastname" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-12 mb-2">
                                                             <div class="form-group">
+                                                                <label id="labelEmail" for="phone">Email</label>
                                                                 <input type="email" class="form-control" name="email" id="requestEmail" placeholder="Email" required>
                                                             </div>
                                                         </div>
-                                                        <div class=" col-md-6 mb-2">
-                                                            <label for="phone">Phone</label>
+                                                        <div col-md-6 mb-2">
+                                                            <label id="labelphone" for="phone">Phone</label>
                                                             <input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
 
 
 
                                                         </div>
                                                         <div class=" col-md-6 mb-2">
-                                                            <label for="Wp">Have Whatsapp</label>
+                                                            <label id="havewp" for="Wp">Have Whatsapp</label>
                                                             <div class="form-control btn-group" id="requestWhatsapp" data-toggle="buttons">
                                                                 <label class="btn btn-default">
                                                                     <input type="radio" name="wp" value="hide" autocomplete="off" required />Yes
@@ -521,17 +524,17 @@
                                                         </div>
 
                                                         <div class=" col-md-6 " id="wpphone">
-                                                            <label for="phone">Phone</label>
-                                                            <input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
+                                                            <label id="labelphone2" for="phone">Phone</label>
+                                                            <input type="tel" class="form-control" id="phone2" placeholder="Phone number" required>
                                                         </div>
 
 
                                                         <div class="form-group col-md-6" id="">
-                                                            <label for="comment">Description:</label>
+                                                            <label id="labeldescription" for="comment">Description:</label>
                                                             <textarea class="form-control overflow-auto" rows="3" id="requestMessage" required></textarea>
                                                         </div>
                                                         <div class="form-group col-md-6">
-                                                            <label for="consulted">Consulted</label>
+                                                            <label id="labelconsulted" for="consulted">Consulted</label>
                                                             <div class="form-control btn-group" data-toggle="buttons">
                                                                 <label class="btn btn-default">
                                                                     <input type="radio" id="show" name="example" value="show" autocomplete="off" required />Yes
@@ -543,13 +546,13 @@
                                                         </div>
                                                         <div id="box" class="row">
                                                             <div class="form-group col-md-6" id="requestDate">
-                                                                <label for="birthdaytime">Date (date and time):</label>
+                                                                <label id="labeltime" for="birthdaytime">Date (date and time):</label>
                                                                 <input type="datetime-local" id="birthdaytime" name="birthdaytime" required>
 
                                                             </div>
 
                                                             <div class="form-group col-md-6">
-                                                                <label for="IsOnline">IsOnline</label>
+                                                                <label id="labelonline" for="IsOnline">IsOnline</label>
                                                                 <div class="form-control btn-group" id="requestType" data-toggle="buttons">
                                                                     <label class="btn btn-default">
                                                                         <input type="radio" name="IsOnline" autocomplete="off" required />Yes
@@ -564,24 +567,24 @@
 
 
                                                         <div class="form-group col-sm-4">
-                                                            <label for="yourcontry"> Student Country</label>
+                                                            <label id="labelstcont" for="yourcontry"> Student Country</label>
                                                             <select class="" id="requestStudentCountry" required>
                                                             </select>
                                                         </div>
                                                         <div class="form-group col-sm-4">
-                                                            <label for="yourcontry"> Country</label>
+                                                            <label id="labelcont" for="yourcontry"> Country</label>
                                                             <select multiple="multiple" class="" id="requestCountry" required>
                                                             </select>
                                                         </div>
                                                         <div class="form-group col-sm-4">
-                                                            <label for="direction">Direction</label>
+                                                            <label id="labeldirection" for="direction">Direction</label>
                                                             <select class="" multiple="multiple" id="requestDirection" required>
                                                             </select>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input type="submit" id="requestSubmit" value="Send Message" class="btn btn-primary" required>
+                                                            <input type="submit" id="requestSubmit" value="Send" class="btn btn-primary" required>
                                                             <div class="submitting"></div>
                                                         </div>
                                                     </div>
@@ -739,120 +742,122 @@
                                                 <div class="col-lg-10 col-md-12">
                                                     <div class="wrapper">
                                                         <div class="row no-gutters">
-                                                            <div class="border-radius col-md-12 d-flex align-items-stretch">
-                                                                <div class="contact-wrap w-100 p-md-5 p-4">
-                                                                    <h3 class="mb-4">Contact</h3>
-                                                                    <div id="form-message-warning" class="mb-4"></div>
-                                                                    <div id="form-message-success" class="mb-4">
-                                                                        Your message was sent, thank you!
-                                                                    </div>
-                                                                    <form id="contact_form" onsubmit="return call_locker();">
-                                                                        <div class="row">
-                                                                            <div class="col-md-6 mb-2">
-                                                                                <div class="form-group">
-                                                                                    <input type="text" class="form-control" name="name" id="requestName" placeholder="Name" required>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-6 mb-2">
-                                                                                <div class="form-group">
-                                                                                    <input type="text" class="form-control" name="name" id="lastName" placeholder="Surname" required>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-12 mb-2">
-                                                                                <div class="form-group">
-                                                                                    <input type="email" class="form-control" name="email" id="requestEmail" placeholder="Email" required>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class=" col-md-6 mb-2">
-                                                                                <label for="phone">Phone</label>
-                                                                                <input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
-
-
-
-                                                                            </div>
-                                                                            <div class=" col-md-6 mb-2">
-                                                                                <label for="Wp">Have Whatsapp</label>
-                                                                                <div class="form-control btn-group" id="requestWhatsapp" data-toggle="buttons">
-                                                                                    <label class="btn btn-default">
-                                                                                        <input type="radio" name="wp" value="hide" autocomplete="off" required />Yes
-                                                                                    </label>
-                                                                                    <label class="btn btn-default">
-                                                                                        <input type="radio" id="show2" name="wp" value="show" autocomplete="off" />No
-                                                                                    </label>
-
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div class=" col-md-6 " id="wpphone">
-                                                                                <label for="phone">Phone</label>
-                                                                                <input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
-                                                                            </div>
-
-
-                                                                            <div class="form-group col-md-6" id="">
-                                                                                <label for="comment">Description:</label>
-                                                                                <textarea class="form-control overflow-auto" rows="3" id="requestMessage" required></textarea>
-                                                                            </div>
-                                                                            <div class="form-group col-md-6">
-                                                                                <label for="consulted">Consulted</label>
-                                                                                <div class="form-control btn-group" data-toggle="buttons">
-                                                                                    <label class="btn btn-default">
-                                                                                        <input type="radio" id="show" name="example" value="show" autocomplete="off" required />Yes
-                                                                                    </label>
-                                                                                    <label class="btn btn-default">
-                                                                                        <input type="radio" id="hide" name="example" value="hide" autocomplete="off" />No
-                                                                                    </label>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div id="box" class="row">
-                                                                                <div class="form-group col-md-6" id="requestDate">
-                                                                                    <label for="birthdaytime">Date (date and time):</label>
-                                                                                    <input type="datetime-local" id="birthdaytime" name="birthdaytime" required>
-
-                                                                                </div>
-
-                                                                                <div class="form-group col-md-6">
-                                                                                    <label for="IsOnline">IsOnline</label>
-                                                                                    <div class="form-control btn-group" id="requestType" data-toggle="buttons">
-                                                                                        <label class="btn btn-default">
-                                                                                            <input type="radio" name="IsOnline" autocomplete="off" required />Yes
-                                                                                        </label>
-                                                                                        <label class="btn btn-default">
-                                                                                            <input type="radio" name="IsOnline" autocomplete="off" />No
-                                                                                        </label>
-                                                                                    </div>
-                                                                                </div>
-
-                                                                            </div>
-
-
-                                                                            <div class="form-group col-sm-4">
-                                                                                <label for="yourcontry"> Student Country</label>
-                                                                                <select class="" id="requestStudentCountry" required>
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="form-group col-sm-4">
-                                                                                <label for="yourcontry"> Country</label>
-                                                                                <select multiple="multiple" class="" id="requestCountry" required>
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="form-group col-sm-4">
-                                                                                <label for="direction">Direction</label>
-                                                                                <select class="" multiple="multiple" id="requestDirection" required>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-12">
-                                                                            <div class="form-group">
-                                                                                <input type="submit" id="requestSubmit" value="Send Message" class="btn btn-primary" required>
-                                                                                <div class="submitting"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </form>
+                                                            <div class="contact-wrap w-100 p-md-5 p-4">
+                                                                <h3 class="mb-4" id="contactheader">Contact</h3>
+                                                                <div id="form-message-warning" class="mb-4"></div>
+                                                                <div id="form-message-success" class="mb-4">
+                                                                    Your message was sent, thank you!
                                                                 </div>
-                                                            </div>
+                                                                <form id="contact_form" onsubmit="return call_locker();">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6 mb-2">
+                                                                            <div class="form-group">
+                                                                                <label id="labelname" for="phone">Name</label>
+                                                                                <input type="text" class="form-control" name="name" id="requestName" placeholder="Name" required>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6 mb-2">
+                                                                            <div class="form-group">
+                                                                                <label id="labellast" for="phone">Surname</label>
+                                                                                <input type="text" class="form-control" name="name" id="lastName" placeholder="Lastname" required>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12 mb-2">
+                                                                            <div class="form-group">
+                                                                                <label id="labelEmail" for="phone">Email</label>
+                                                                                <input type="email" class="form-control" name="email" id="requestEmail" placeholder="Email" required>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div col-md-6 mb-2">
+                                                                            <label id="labelphone" for="phone">Phone</label>
+                                                                            <input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
 
+
+
+                                                                        </div>
+                                                                        <div class=" col-md-6 mb-2">
+                                                                            <label id="havewp" for="Wp">Have Whatsapp</label>
+                                                                            <div class="form-control btn-group" id="requestWhatsapp" data-toggle="buttons">
+                                                                                <label class="btn btn-default">
+                                                                                    <input type="radio" name="wp" value="hide" autocomplete="off" required />Yes
+                                                                                </label>
+                                                                                <label class="btn btn-default">
+                                                                                    <input type="radio" id="show2" name="wp" value="show" autocomplete="off" />No
+                                                                                </label>
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class=" col-md-6 " id="wpphone">
+                                                                            <label id="labelphone2" for="phone">Phone</label>
+                                                                            <input type="tel" class="form-control" id="phone2" placeholder="Phone number" required>
+                                                                        </div>
+
+
+                                                                        <div class="form-group col-md-6" id="">
+                                                                            <label id="labeldescription" for="comment">Description:</label>
+                                                                            <textarea class="form-control overflow-auto" rows="3" id="requestMessage" required></textarea>
+                                                                        </div>
+                                                                        <div class="form-group col-md-6">
+                                                                            <label id="labelconsulted" for="consulted">Consulted</label>
+                                                                            <div class="form-control btn-group" data-toggle="buttons">
+                                                                                <label class="btn btn-default">
+                                                                                    <input type="radio" id="show" name="example" value="show" autocomplete="off" required />Yes
+                                                                                </label>
+                                                                                <label class="btn btn-default">
+                                                                                    <input type="radio" id="hide" name="example" value="hide" autocomplete="off" />No
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div id="box" class="row">
+                                                                            <div class="form-group col-md-6" id="requestDate">
+                                                                                <label id="labeltime" for="birthdaytime">Date (date and time):</label>
+                                                                                <input type="datetime-local" id="birthdaytime" name="birthdaytime" required>
+
+                                                                            </div>
+
+                                                                            <div class="form-group col-md-6">
+                                                                                <label id="labelonline" for="IsOnline">IsOnline</label>
+                                                                                <div class="form-control btn-group" id="requestType" data-toggle="buttons">
+                                                                                    <label class="btn btn-default">
+                                                                                        <input type="radio" name="IsOnline" autocomplete="off" required />Yes
+                                                                                    </label>
+                                                                                    <label class="btn btn-default">
+                                                                                        <input type="radio" name="IsOnline" autocomplete="off" />No
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+
+
+                                                                        <div class="form-group col-sm-4">
+                                                                            <label id="labelstcont" for="yourcontry"> Student Country</label>
+                                                                            <select class="" id="requestStudentCountry" required>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-4">
+                                                                            <label id="labelcont" for="yourcontry"> Country</label>
+                                                                            <select multiple="multiple" class="" id="requestCountry" required>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="form-group col-sm-4">
+                                                                            <label id="labeldirection" for="direction">Direction</label>
+                                                                            <select class="" multiple="multiple" id="requestDirection" required>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-group">
+                                                                            <input type="submit" id="requestSubmit" value="Send" class="btn btn-primary" required>
+                                                                            <div class="submitting"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
                                                         </div>
+
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -915,6 +920,7 @@
 
         <script src="~/js/country-detail.js"></script>
         <script src="~/js/layout.js"></script>
+    <script src="~/js/contact.js"></script>
         <script>
         $(document).ready(function () {
 

@@ -4,7 +4,28 @@
         var $header = "Bizimlə əlaqə"
         var adr="Ünvan"
         var phone="Telefon"
-        var email ="E-poçt"
+        var email = "E-poçt"
+        $(`#contactheader`).html(`Əlaqə`);
+        $(`#labellast`).html("Soyad");
+        $(`#lastName`).attr(`placeholder`, `Soyad`);
+        $(`#labelEmail`).html("Email");
+        $(`#requestEmail`).attr(`placeholder`, `Email`);
+        $(`#labelname`).html("Ad");
+        $(`#requestName`).attr(`placeholder`, `Ad`);
+        $(`#labelphone`).html("Telefon");
+        $(`#phone`).attr(`placeholder`, `Əlaqə nömrəsi`);
+        $(`#labelphone2`).html("Telefon");
+        $(`#phone2`).attr(`placeholder`, `Əlaqə nömrəsi`);
+        $(`#labeldescription`).html("Açıqlama");
+        $(`#labeldate`).html('Tarix');
+        $(`#labelwp`).html('WhatsApp?');
+        $(`#labelonline`).html('Onlayn?');
+        $(`#labelconsulted`).html('Konsultasiya');
+        $(`#labelstcont`).html('Yaşadığınız ölkə');
+        $(`#labelcont`).html('Ölkə');
+        $(`#labeldirection`).html('Istiqamət');
+        $(`#requestSubmit`).html('Göndər');
+
     }
     else if ($lang == 'EN') {
 
@@ -12,15 +33,55 @@
         var adr = "Address"
         var email = "Email"
         var phone = "Phone"
-
+        $(`#contactheader`).html(`Contact`);
+        $(`#labellast`).html("Lastname");
+        $(`#lastName`).attr(`placeholder`, `Lastname`);
+        $(`#labelEmail`).html("Email");
+        $(`#requestEmail`).attr(`placeholder`, `Email`);
+        $(`#Labelname`).html("Ad");
+        $(`#requestName`).attr(`placeholder`, `Name`);
+        $(`#labelphone`).html("Phone");
+        $(`#phone`).attr(`placeholder`, `Contact number`);
+        $(`#labelphone2`).html("Phone");
+        $(`#phone2`).attr(`placeholder`, `Contact number`);
+        $(`#labeldescription`).html("Description");
+        $(`#labeldate`).html('Date');
+        $(`#labelwp`).html('WhatsApp?');
+        $(`#labelonline`).html('Online?');
+        $(`#labelconsulted`).html('Consulted');
+        $(`#labelstcont`).html('Living country');
+        $(`#labelcont`).html('Country');
+        $(`#labeldirection`).html('Direction');
+        $(`#requestSubmit`).html('Send message');
+        
     }
     else {
         var $header = "Связаться с нами"
         var adr = "Адрес"
         var email = "Эл. почт"
         var phone = "Телефон"
-
-
+        $(`#contactheader`).html(`Контакт`);
+        $(`#labellast`).html("Фамилия");
+        $(`#lastName`).attr(`placeholder`, `Фамилия`);
+        $(`#labelEmail`).html("Электронная почта");
+        $(`#requestEmail`).attr(`placeholder`, `Электронная почта`);
+        $(`#Labelname`).html("Имя");
+        $(`#requestName`).attr(`placeholder`, `Имя`);
+        $(`#labelphone`).html("Телефон");
+        $(`#phone`).attr(`placeholder`, `Контактный номер`);
+        $(`#labelphone2`).html("Телефон");
+        $(`#phone2`).attr(`placeholder`, `Контактный номер`);
+        $(`#labeldescription`).html("Oписание");
+        $(`#labeltime`).html('Дата');
+        $(`#labelwp`).html('WhatsApp?');
+        $(`#labelonline`).html('Онлайн?');
+        $(`#labelconsulted`).html('Kонсультируемый');
+        $(`#labelstcont`).html('Живая страна');
+        $(`#labelcont`).html('Cтрана');
+        $(`#labeldirection`).html('Направление');
+        $(`#requestSubmit`).html('Послать');
+       
+      
 
     }
 $(document).on('click', '#requestSubmit', async function () {

@@ -71,7 +71,7 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    //location.href = "/FainaAdmin/Blog/List"
+                    location.href = "/Admin/Blog/List"
                 }
                 else {
                     alert("error")

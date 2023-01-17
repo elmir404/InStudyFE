@@ -135,6 +135,18 @@
                         <div class="slide-left disabled" id="slide-left"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"/></svg></div>
                         <ul class="side-menu">
                             <li class="sub-category">
+                                <h3>GoStudy</h3>
+                            </li>
+                            <li class="slide">
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">GoStudy</span><i class="angle fe fe-chevron-right"></i></a>
+                                <ul class="slide-menu">
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="List" asp-controller="GoStudy">GoStudy List</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddGoStudy" asp-controller="About">Add GoStudy</a></li>
+                                     
+                                     
+                                </ul>
+                            </li> 
+                            <li class="sub-category">
                                 <h3>About</h3>
                             </li>
                             <li class="slide">
@@ -142,9 +154,6 @@
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AboutList" asp-controller="About">About List</a></li>
                                      <li class="slide-item"><a asp-area="Admin" asp-action="AddAbout" asp-controller="About">Add About</a></li>
-                                      <li class="slide-item"><a asp-area="Admin" asp-action="Personal" asp-controller="About">Personal İnfo.</a></li>
-                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddPersonal" asp-controller="About">Add Personal Info. </a></li>
-                                      <li class="slide-item"><a href="/About/Index">About Page</a></li>
                                 </ul>
                             </li>
                             <li class="sub-category">
@@ -203,7 +212,7 @@
                             <li class="slide">
                                 <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Comments</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="List" asp-controller="StudentWords">Partner List</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="List" asp-controller="StudentWords">Comment List</a></li>
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddStudentWords" asp-controller="StudentWords">Add Comment</a></li>
                                 </ul>
                             </li> 
