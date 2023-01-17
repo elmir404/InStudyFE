@@ -46,12 +46,54 @@
                             <div class="row">
                                 <label class="col-md-3 form-label mb-4">Ru Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="content" id="ruDescription"  name="example">${data.data.ruDescription}</textarea>
+                                    <textarea class="content7" id="ruDescription"  name="example">${data.data.ruDescription}</textarea>
                                 </div>
                             </div> <div class="row">
                                 <label class="col-md-3 form-label mb-4">En Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="content" id="enDescription"  name="example">${data.data.enDescription}</textarea>
+                                    <textarea class="content2" id="enDescription"  name="example">${data.data.enDescription}</textarea>
+                                </div>
+                            </div>
+<div class="row mb-4">
+                                <label class="col-md-3 form-label">Students Count:</label>
+                                <div class="col-md-9">
+                                    <input type="text" value="${data.data.currentStudents}" id="CurrentStudents" class="form-control">
+                                </div>
+                            </div> 
+                            <div class="row mb-4">
+                                <label class="col-md-3 form-label">Population:</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="Population" value="${data.data.population}" class="form-control">
+                                </div>
+                            </div> 
+                             <div class="row">
+                                <label class="col-md-3 form-label mb-4">Work Permit:</label>
+                                <div class="col-md-9 mb-4">
+                                    <textarea class="content3" id="WorkPermit" name="WorkPermit">${data.data.workPermit}</textarea>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <label class="col-md-3 form-label mb-4">Study:</label>
+                                <div class="col-md-9 mb-4">
+                                    <textarea class="content4" id="Study" name="Study">${data.data.study}</textarea>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <label class="col-md-3 form-label mb-4">Living:</label>
+                                <div class="col-md-9 mb-4">
+                                    <textarea class="content5" id="Living" name="Living">${data.data.living}</textarea>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <label class="col-md-3 form-label mb-4">About:</label>
+                                <div class="col-md-9 mb-4">
+                                    <textarea class="content6" id="About" name="About">${data.data.about}</textarea>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <label class="col-md-3 form-label mb-4">Student Visa:</label>
+                                <div class="col-md-9 mb-4">
+                                    <textarea class="content7" id="StudentVisa" name="StudentVisa">${data.data.studentVisa}</textarea>
                                 </div>
                             </div>
                             <!--Row-->
@@ -64,7 +106,17 @@
                         
                         `
             )
-
+            $('.content').richText();
+            $('.content1').richText();
+            $('.content2').richText();
+            $('.content3').richText();
+            $('.content4').richText();
+            $('.content5').richText();
+            $('.content6').richText();
+            $('.content7').richText();
+            $('.content8').richText();
+            $('.content9').richText();
+            $('.content10').richText();
 
 
         }
@@ -79,6 +131,14 @@
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
+        formData.append('CurrentStudents', $("#CurrentStudents").val());
+        formData.append('Population', $("#Population").val());
+        formData.append('WorkPermit', $("#WorkPermit").val());
+        formData.append('Study', $("#Study").val());
+        formData.append('Living', $("#Living").val());
+        formData.append('About', $("#About").val());
+        formData.append('StudentVisa', $("#StudentVisa").val());
+        formData.append('Living', $("#Living").val());
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);
         }

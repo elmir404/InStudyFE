@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#country-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/Country/GetAllCountries',
+            url: 'https://api.instudy.net/api/Country/GetActiveCountries',
             dataSrc: 'data'
         },
         columns: [
@@ -9,7 +9,7 @@
                 data: 'countryFiles', render: function (data, type, row, meta) {
                     console.log("dsds", data);
                     return `
-                      <td><img alt="data:image/png;base64,${data[0]?.bytes}" style="width:200px !important;" class="text-center img-responsive" src="data:image/png;base64,${data[0]?.bytes}"></td>
+                      <td><img alt="https://api.instudy.net/${data[0]?.path}" style="width:200px !important;" class="text-center img-responsive" src="https://api.instudy.net/${data[0]?.path}"></td>
 
                         `;
 
@@ -101,6 +101,15 @@
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
+        formData.append('CurrentStudents', $("#CurrentStudents").val());
+        formData.append('Population', $("#Population").val());
+        formData.append('WorkPermit', $("#WorkPermit").val());
+        formData.append('Study', $("#Study").val());
+        formData.append('Living', $("#Living").val());
+        formData.append('About', $("#About").val());
+        formData.append('StudentVisa', $("#StudentVisa").val());
+        formData.append('Living', $("#Living").val());
+        formData.append('isActive','True');
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);
         }
@@ -136,7 +145,7 @@ function Edit(country) {
 function Delete(id) {
 
     $.ajax({
-        type: "DELETE",
+        type: "PUT",
         url: `https://api.instudy.net/api/Country/DeleteCountry?id=${id}`,
         success: function (result) {
             if (result.success == true) {

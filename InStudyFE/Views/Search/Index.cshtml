@@ -10,7 +10,7 @@
          <div class="mdc-layout-grid__inner">
             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                <div class="ContainerWrapper">
-                  <aside class="AsideDesktopContainer" style="overflow-y: scroll
+                  <aside class="AsideDesktopContainer" style="overflow-y: auto
 ; height: calc(100vh - 110px);">
                      <div>
                         <div class="FilterContainer">
@@ -30,12 +30,10 @@
                                  <!--v-if--><!--v-if--><i class="ToggleIcon lnr-chevron-down" data-v-7ddaecb1=""></i>
                               </header>
                               <div class="RefineContentOptionsList" data-v-7ddaecb1="">
-                                 <div class="LocationSwitcher" data-v-7ddaecb1=""><button type="button" class="CountrySwitcher is-active" data-v-7ddaecb1=""> Country </button><i class="lnr-arrows-switch SwitcherIcon" data-v-7ddaecb1=""></i><button type="button" class="ContinentSwitcher" data-v-7ddaecb1=""> Continent </button></div>
                                  <div class="CountryFilterWrapper" data-v-a8327806="" data-v-7ddaecb1="">
                                     <ul id="locationSearch" class="RefineContentOptionsList" data-v-a8327806="">
                                       
                                     </ul>
-                                    <button type="button" class="AddCountry" data-v-a8327806=""><i class="lnr-plus" data-v-a8327806=""></i> Add </button><!--v-if-->
                                  </div>
                               </div>
                            </section>
@@ -253,7 +251,6 @@
                                                    <!--v-if-->
                                                 </li>
                                              </ul>
-                                             <button type="button" class="AddCountry" data-v-a8327806=""><i class="lnr-plus" data-v-a8327806=""></i> Add </button><!--v-if-->
                                           </div>
                                        </div>
                                     </section>
@@ -491,5 +488,20 @@
            
 
         }
+        
+    </script>
+    <script>
+        
+        $(document).ready(function () {
+
+                    $("input:checkbox[name^='location']").click(function () {
+                        $("input:checkbox[name^='location']").each(function () {
+                        if ($(this).is(":checked")) {
+                            alert($(this).val());
+                        }
+                    });
+                });
+
+              });
     </script>
 }

@@ -203,20 +203,20 @@
 					(new r).init()
 				}))
 			},
-			9601: function() {
-				! function() {
-					"use strict";
-					const e = document.getElementById("CountrySpotlight");
-					if (e) {
-						let t = e.querySelectorAll("#CountrySpotlightContainer>figure");
-						t = Array.from(t).sort((() => Math.random() - .5));
-						for (let e = 0; e < t.length; e++) {
-							let i = t[e];
-							e < 5 ? document.getElementById("CountrySpotlightContainer").insertBefore(i, null) : i.remove()
-						}
-					}
-				}()
-			},
+			//9601: function() {
+			//	! function() {
+			//		"use strict";
+			//		const e = document.getElementById("CountrySpotlight");
+			//		if (e) {
+			//			let t = e.querySelectorAll("#CountrySpotlightContainer>figure");
+			//			t = Array.from(t).sort((() => Math.random() - .5));
+			//			for (let e = 0; e < t.length; e++) {
+			//				let i = t[e];
+			//				e < 5 ? document.getElementById("CountrySpotlightContainer").insertBefore(i, null) : i.remove()
+			//			}
+			//		}
+			//	}()
+			//},
 			1454: function(e, t, i) {
 				"use strict";
 				var n = i(8328);
