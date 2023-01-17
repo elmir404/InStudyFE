@@ -40,6 +40,7 @@
         formData.append('Name', $("#azHeader").val());
         formData.append('Description', $("#azDescription").val());
         formData.append('CountryId', $("#country").val());
+        formData.append('IsActive', 'True');
        
         console.log(formData);
 
@@ -51,7 +52,7 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    //location.href = "/FainaAdmin/Blog/List"
+                    location.href = "/Admin/StudentWords/List"
                 }
                 else {
                     alert("error")
@@ -66,7 +67,7 @@
 function Edit(id) {
 
     localStorage.setItem('commentId', id);
-    location.href = `/Admin/StudentWords/UpdateComments`;
+    location.href = `/Admin/StudentWords/UpdateStudentWords`;
 
 }
 function Delete(id) {

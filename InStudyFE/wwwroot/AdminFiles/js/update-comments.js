@@ -18,9 +18,9 @@
                         <input type="hidden" id="commentId" value="${data.data.id}" class="form-control">
 
                      <div class="row mb-4">
-                                <label class="col-md-3 form-label">Az Title :</label>
+                                <label class="col-md-3 form-label">Student Name :</label>
                                 <div class="col-md-9">
-                                    <input type="text" id="azHeader" value="${data.data.azTitle}" class="form-control" placeholder="Title Name">
+                                    <input type="text" id="azHeader" value="${data.data.name}" class="form-control" placeholder="Title Name">
                                 </div>
                             </div>
                            
@@ -29,7 +29,7 @@
                             <div class="row">
                                 <label class="col-md-3 form-label mb-4">Az Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="content" id="azDescription"  name="example">${data.data.azDescription}</textarea>
+                                    <textarea class="content" id="azDescription"  name="example">${data.data.description}</textarea>
                                 </div>
                             </div>
                         <div class="row">
@@ -44,7 +44,7 @@
                         `
             )
 
-
+            $('.content').richText();
 
         }
     })

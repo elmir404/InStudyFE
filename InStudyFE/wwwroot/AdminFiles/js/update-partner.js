@@ -52,12 +52,12 @@
                             <div class="row">
                                 <label class="col-md-3 form-label mb-4">Ru Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="content" id="ruDescription"  name="example">${data.data.ruDescription}</textarea>
+                                    <textarea class="content2" id="ruDescription"  name="example">${data.data.ruDescription}</textarea>
                                 </div>
                             </div> <div class="row">
                                 <label class="col-md-3 form-label mb-4">En Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="content" id="enDescription"  name="example">${data.data.enDescription}</textarea>
+                                    <textarea class="content3" id="enDescription"  name="example">${data.data.enDescription}</textarea>
                                 </div>
                             </div>
                             <!--Row-->
@@ -70,7 +70,14 @@
                         
                         `
             )
-
+            $('.content').richText();
+            $('.content2').richText();
+            $('.content3').richText();
+            $('.content4').richText();
+            $('.content5').richText();
+            $('.content6').richText();
+            $('.content7').richText();
+            $('.content8').richText();
 
 
         }

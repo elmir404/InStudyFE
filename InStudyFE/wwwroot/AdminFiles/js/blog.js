@@ -9,7 +9,7 @@
                 data: 'files', render: function (data, type, row, meta) {
                     console.log("dsds",data);
                     return `
-                         <td><img alt="${data[0]?.fileName}" w-100 class="text-center img-responsive" src="data:image/png;base64,${data[0]?.bytes}"></td>
+                         <td><img alt="${data[0]?.fileName}" w-100 class="text-center img-responsive" src=""></td>
                         `;
 
 
@@ -71,7 +71,7 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    //location.href = "/FainaAdmin/Blog/List"
+                    location.href = "/Admin/Blog/List"
                 }
                 else {
                     alert("error")
