@@ -6,11 +6,11 @@
 
             <!-- PAGE-HEADER -->
             <div class="page-header">
-                <h1 class="page-title">Update Comments</h1>
+                <h1 class="page-title">Update About</h1>
                 <div>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Update Comments</li>
+                        <li class="breadcrumb-item active" aria-current="page">Update About</li>
                     </ol>
                 </div>
             </div>
@@ -20,10 +20,10 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <div class="card-title">Update Comments</div>
+                            <div class="card-title">Update GoStudy</div>
                         </div>
-                        <div id="commentForm" class="card-body">
-
+                        <div id="goStudyForm" class="card-body">
+                           
                             <!--End Row-->
                         </div>
                         <div class="card-footer">
@@ -31,7 +31,7 @@
                             <div class="row">
                                 <div class="col-md-3"></div>
                                 <div class="col-md-9">
-                                    <a href="javascript:void(0)" id="updateComments" class="btn btn-primary">Update Comment</a>
+                                    <a href="javascript:void(0)" id="updategoStudy" class="btn btn-primary">Update GoStudy</a>
                                 </div>
                             </div>
                             <!--End Row-->
@@ -44,35 +44,6 @@
         <!-- CONTAINER CLOSED -->
     </div>
 </div>
-@section Scripts {
-    <script src="~/AdminFiles/js/update-comments.js"></script>
-    <script>
-        $.ajax({
-            type: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-
-            },
-            url: `https://api.instudy.net/api/Country/GetActiveCountries`,
-
-            success: function (data) {
-                var html = [];
-                $.each(
-                    data.data, function (i, value) {
-                        $("#country").append(
-                            `
-                                                                                    <option value="${value.id}">${value.azName}</option>
-
-                                                                                 `
-                        )
-
-                    }
-                )
-
-            }
-
-        });
-
-    </script>
-        }
+@section Scripts{
+    <script src="~/AdminFiles/js/update-gostudy.js"></script>
+}

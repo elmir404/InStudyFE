@@ -94,7 +94,7 @@ function Delete(message) {
         url: `https://api.instudy.net/api/Contact/DeleteMessage?messageId?messageId=${message}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/FainaAdmin/Contact/MessageList`;
+                location.href = `/Admin/Request/RequestList`;
             }
             else {
                 alert(result.message)

@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $('#about-datatable').DataTable({
+    $('#gostudy-datatable').DataTable({
         ajax: {
             url: 'https://api.instudy.net/api/About/GetAbouts',
             dataSrc: 'data'
@@ -82,7 +82,7 @@
 
     $("#addAbout").click(function () {
 
-        var files = $("#files").get(0).files;
+      
         var formData = new FormData();
         formData.append('AzHeader', $("#azHeader").val());
         formData.append('RuHeader', $("#ruHeader").val());
@@ -90,15 +90,6 @@
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
-        formData.append('InstagramLink', $("#instaLink").val());
-        formData.append('FacebookLink', $("#faceLink").val());
-        formData.append('TwitterLink', $("#twitLink").val());
-        formData.append('YoutubeLink', $("#youtubeLink").val());
-        for (var i = 0; i < files.length; i++) {
-            formData.append('Files', files[i]);
-        }
-        console.log(formData);
-
         $.ajax({
             type: "POST",
             url: 'https://api.instudy.net/api/About/AddAbouts',
@@ -107,7 +98,7 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/About/AboutList"
+                    location.href = "/Admin/GoStudy/List"
                 }
                 else {
                     alert("error")
@@ -122,8 +113,8 @@
 });
 function Edit(about) {
 
-    localStorage.setItem('aboutId', about);
-    location.href = `/Admin/About/UpdateAbout`;
+    localStorage.setItem('goStudyId', about);
+    location.href = `/Admin/GoStudy/UpdateGoStudy`;
 
 }  
 function Delete(about) {
@@ -133,7 +124,7 @@ function Delete(about) {
         url: `https://api.instudy.net/api/About/DeleteAbout?aboutId=${about}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/Admin/About/AboutList`;
+                location.href = `/Admin/GoStudy/List`;
             }
             else {
                 alert(result.message)
