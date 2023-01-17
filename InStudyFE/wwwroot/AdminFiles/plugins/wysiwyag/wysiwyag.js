@@ -11,4 +11,13 @@ $(function (e) {
 	$('.content8').richText();
 	$('.content9').richText();
 	$('.content10').richText();
+	$('.content11').richText();
+	$('.content12').richText();
+	$('.content13').richText();
+	$('.content14').richText();
+	$('.content15').richText();
+	$('.content16').richText();
+	$('.content17').richText();
+	$('.content18').richText();
+	$('.content19').richText();
 });
