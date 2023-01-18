@@ -52,32 +52,38 @@
 													<input type="email" class="form-control" name="email" id="requestEmail" placeholder="Email" required>
 												</div>
 											</div>
-										<div  col-md-6 mb-2">
-											<label id="labelphone" for="phone">Phone</label>
-											<input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
-											
-												
+							
+										
+												<div class="col-md-6 mb-2">
+												<label id="labelphone" for="phone">Phone</label>
+												<input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
 
-										</div>
+											</div>
+											
+										
 										<div class=" col-md-6 mb-2">
 											<label id="havewp" for="Wp">Have Whatsapp</label>
 											<div class="form-control btn-group" id="requestWhatsapp" data-toggle="buttons" >
 												<label class="btn btn-default">
-													<input type="radio" name="wp" value="hide" autocomplete="off" required />Yes
+													<input type="radio" name="wp" value="hide" autocomplete="off" required />
+													<span class="yes">Yes</span>
 												</label>
 												<label class="btn btn-default">
-													<input type="radio" id="show2" name="wp" value="show" autocomplete="off" />No
+													<input type="radio" id="show2" name="wp" value="show" autocomplete="off" />
+													<span class="no">No</span>
 												</label>
 
 											</div>
 										</div>
 
-										<div class=" col-md-6 " id="wpphone">
+										<div class=" col-md-12 " id="wpphone">
 											<label id="labelphone2" for="phone">Phone</label>
 											<input type="tel" class="form-control" id="phone2" placeholder="Phone number" required>
 										</div>
-									
-									
+
+
+
+
 										<div class="form-group col-md-6" id="">
 											<label id="labeldescription" for="comment">Description:</label>
 												<textarea class="form-control overflow-auto" rows="3" id="requestMessage" required></textarea  >
@@ -86,10 +92,12 @@
 						<label id="labelconsulted" for="consulted">Consulted</label>
 						<div class="form-control btn-group" data-toggle="buttons">
 							<label class="btn btn-default">
-								<input type="radio" id="show" name="example"  value="show" autocomplete="off" required/>Yes
+								<input type="radio" id="show" name="example"  value="show" autocomplete="off" required/>
+								<span class="yes">Yes</span>
 							</label>
 							<label class="btn btn-default">
-								<input type="radio" id="hide" name="example"  value="hide" autocomplete="off" />No
+								<input type="radio" id="hide" name="example"  value="hide" autocomplete="off" />
+								<span class="no">No</span>
 							</label>
 					</div>
 					</div>
@@ -104,10 +112,12 @@
 												<label id="labelonline" for="IsOnline">IsOnline</label>
 												<div class="form-control btn-group" id="requestType" data-toggle="buttons" >
 													<label class="btn btn-default">
-														<input type="radio" name="IsOnline" autocomplete="off" required />Yes
+														<input type="radio" name="IsOnline" autocomplete="off" required />
+														<span class="yes">Yes</span>
 													</label>
 													<label class="btn btn-default">
-														<input type="radio" name="IsOnline" autocomplete="off" />No
+														<input type="radio" name="IsOnline" autocomplete="off" />
+														<span class="no">No</span>
 													</label>
 												</div>
 											</div>
@@ -168,8 +178,20 @@
         var input = document.querySelector("#phone");
         window.intlTelInput(input, {})
     </script>
+
+	<script src="~/PhoneInput2/js/intlTelInput.js"></script>
+
+	   <script>
+        var input = document.querySelector("#phone2");
+        window.intlTelInput(input, {})
+    </script>
 		<script src="~/js/contact.js"></script>
 	<script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
+	
+
+
+
+
 	<script>
 
 

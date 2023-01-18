@@ -27,20 +27,19 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <a class="btn btn-primary mb-4 data-table-btn" asp-area="Admin" asp-action="AddDirection" asp-controller="Direction">
-                                    Add Direction
+                                <a class="btn btn-primary mb-4 data-table-btn" asp-area="Admin" asp-action="AddDuration" asp-controller="Partner">
+                                    Add Duration
                                 </a>
                                 <!-- Modal -->
-
                                 @*<button id="button" class="btn btn-primary mb-4 data-table-btn">Add Task</button>*@
-                                <table id="direction-datatable" class="table table-bordered text-nowrap border-bottom">
+                                <table id="duration-datatable" class="table table-bordered text-nowrap border-bottom">
                                     <thead>
                                         <tr>
-
-                                            <th class="border-bottom-0">Az Name</th>
-                                            <th class="border-bottom-0">Ru Name</th>
-                                            <th class="border-bottom-0">En Name</th>
-                                           
+                                            <th class="border-bottom-0">Image</th>
+                                            <th class="border-bottom-0">AzName</th>
+                                            <th class="border-bottom-0">RuName</th>
+                                            <th class="border-bottom-0">EnName</th>
+                                            <th class="border-bottom-0">Link</th>
                                             <th class="border-bottom-0">Action</th>
                                         </tr>
                                     </thead>
@@ -62,10 +61,10 @@
     </div>
 </div>
 <!--app-content closed-->
-        
+        </div>
 
 <!-- Sidebar-right -->
 @section Scripts {
-    <script src="~/AdminFiles/js/direction.js"></script>
+    <script src="~/AdminFiles/js/duration.js"></script>
         }
 
