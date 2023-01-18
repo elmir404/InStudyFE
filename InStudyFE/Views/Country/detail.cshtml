@@ -776,7 +776,7 @@
 
                                                                         </div>
                                                                         <div class=" col-md-6 mb-2">
-                                                                            <label id="havewp" for="Wp">Have Whatsapp</label>
+                                                                            <label id="havewp" for="Wp">Have Whatsapp?</label>
                                                                             <div class="form-control btn-group" id="requestWhatsapp" data-toggle="buttons">
                                                                                 <label class="btn btn-default">
                                                                                     <input type="radio" name="wp" value="hide" autocomplete="off" required />Yes
@@ -917,7 +917,12 @@
         var input = document.querySelector("#phone");
         window.intlTelInput(input, {})
     </script>
+    <script src="~/PhoneInput2/js/intlTelInput.js"></script>
 
+    <script>
+        var input = document.querySelector("#phone2");
+        window.intlTelInput(input, {})
+    </script>
         <script src="~/js/country-detail.js"></script>
         <script src="~/js/layout.js"></script>
     <script src="~/js/contact.js"></script>
