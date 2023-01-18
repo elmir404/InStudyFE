@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#program-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/Program/GetProgram',
+            url: 'https://api.instudy.net/api/Program/GetPrograms',
             dataSrc: 'data'
         },
         columns: [
@@ -15,13 +15,7 @@
                 data: 'enName',
             },
             {
-                data: 'description',
-            },
-            {
-                data: 'ruDescription',
-            },
-            {
-                data: 'enDescription',
+                data: 'azDescription',
             },
             {
                 data: 'id', render: function (data, type, row, meta) {
@@ -102,13 +96,13 @@
 
         $.ajax({
             type: "POST",
-            url: 'https://fainablogapi.herokuapp.com/api/About/AddAbouts',
+            url: 'https://api.instudy.net/api/Program/AddPorgram',
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/FainaAdmin/About/AboutList"
+                    location.href = "/Admin/About/AboutList"
                 }
                 else {
                     alert("error")
@@ -130,7 +124,7 @@ function Edit(id) {
 function Delete(program) {
 
     $.ajax({
-        type: "DELETE",
+        type: "PUT",
         url: `https://api.instudy.net/api/Program/DeleteProgram?programId=${program}`,
         success: function (result) {
             if (result.success == true) {

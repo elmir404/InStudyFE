@@ -21,16 +21,16 @@
     overflow:visible
 }
 #galactus #HomeSearchBackground{
-    background-image:url(//monet-prtl-co.imgix.net/DistanceLearning/DLPHeroStudent.png?blend64=MTcxRTIz&bm=normal&balph=10&q=45&auto=format,compress&w=768)
+    /*background-image:url(//monet-prtl-co.imgix.net/DistanceLearning/DLPHeroStudent.png?blend64=MTcxRTIz&bm=normal&balph=10&q=45&auto=format,compress&w=768)*/
 }
 @media (min-width:1025px){
     #galactus #HomeSearchBackground{
-        background-image:url(//monet-prtl-co.imgix.net/DistanceLearning/DLPHeroStudent.png?blend64=MTcxRTIz&bm=normal&balph=10&q=45&auto=format,compress&w=1280)
+        /*background-image:url(//monet-prtl-co.imgix.net/DistanceLearning/DLPHeroStudent.png?blend64=MTcxRTIz&bm=normal&balph=10&q=45&auto=format,compress&w=1280)*/
     }
 }
 @media (min-width:769px)and (max-width:1024px){
     #galactus #HomeSearchBackground{
-        background-image:url(//monet-prtl-co.imgix.net/DistanceLearning/DLPHeroStudent.png?blend64=MTcxRTIz&bm=normal&balph=10&q=45&auto=format,compress&w=1280)
+        /*background-image:url(//monet-prtl-co.imgix.net/DistanceLearning/DLPHeroStudent.png?blend64=MTcxRTIz&bm=normal&balph=10&q=45&auto=format,compress&w=1280)*/
     }
 }
 #ArticleSpotlight{

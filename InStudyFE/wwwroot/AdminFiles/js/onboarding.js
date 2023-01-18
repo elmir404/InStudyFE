@@ -1,19 +1,19 @@
 ﻿$(document).ready(function () {
-    $('#about-datatable').DataTable({
+    $('#onboarding-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/AboutCompany/GetAboutCompanies',
+            url: 'https://api.instudy.net/api/Header/GetHeaders',
             dataSrc: 'data'
         },
         columns: [
 
             {
-                data: 'phone',
+                data: 'azTitle',
             },
             {
-                data: 'email',
+                data: 'enTitle',
             },
             {
-                data: 'address',
+                data: 'ruTitle',
             },
             {
                 data: 'id', render: function (data, type, row, meta) {
@@ -80,30 +80,26 @@
     //    ]
     //});
 
-    $("#addAbout").click(function () {
+    $("#addOnbarding").click(function () {
 
 
         var formData = new FormData();
-        formData.append('Adress', $("#address").val());
-        formData.append('Phone', $("#phone").val());
-        formData.append('Email', $("#email").val());
-        formData.append('MapAdress', $("#mapAddress").val());
-        formData.append('InstagramLink', $("#instaLink").val());
-        formData.append('FacebookLink', $("#faceLink").val());
-        formData.append('YoutubeLink', $("#youtubeLink").val());
-        formData.append('TwitterLink', $("#twitLink").val());
-        formData.append('LinkedinLink', $("#linkedLink").val());
-        formData.append('TelegramLink', $("#telLink").val());
+        formData.append('AzName', $("#azHeader").val());
+        formData.append('RuName', $("#ruHeader").val());
+        formData.append('EnName', $("#enHeader").val());
+        formData.append('AzDescription', $("#azDescription").val());
+        formData.append('EnDescription', $("#enDescription").val());
+        formData.append('RuDescription', $("#ruDescription").val());
         formData.append('isActive', 'True');
         $.ajax({
             type: "POST",
-            url: 'https://api.instudy.net/api/AboutCompany/AddAboutCompany',
+            url: 'https://api.instudy.net/api/Header/AddHeader',
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/About/List"
+                    location.href = "/Admin/Content/OnboardingList"
                 }
                 else {
                     alert("error")
@@ -116,20 +112,20 @@
     });
 
 });
-function Edit(about) {
+function Edit(id) {
 
-    localStorage.setItem('aboutId', about);
-    location.href = `/Admin/About/UpdateAbout`;
+    localStorage.setItem('onboardingId', id);
+    location.href = `/Admin/Content/UpdateOnboarding`;
 
 }
-function Delete(about) {
+function Delete(id) {
 
     $.ajax({
         type: "PUT",
-        url: `https://api.instudy.net/api/AboutCompany/DeleteAboutCompany?id=${about}`,
+        url: `https://api.instudy.net/api/Header/DeleteHeader?id=${id}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/Admin/About/AboutList`;
+                location.href = `/Admin/Content/OnboardingList`;
             }
             else {
                 alert(result.message)

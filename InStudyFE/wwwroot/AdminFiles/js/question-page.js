@@ -36,40 +36,40 @@
         ]
     });
 
-    //$("#addCountry").click(function () {
+    $("#addShowedQuestion").click(function () {
 
-    //    var files = $("#files").get(0).files;
-    //    var formData = new FormData();
-    //    formData.append('AzName', $("#azHeader").val());
-    //    formData.append('RuName', $("#ruHeader").val());
-    //    formData.append('EnName', $("#enHeader").val());
-    //    formData.append('AzDescription', $("#azDescription").val());
-    //    formData.append('EnDescription', $("#enDescription").val());
-    //    formData.append('RuDescription', $("#ruDescription").val());
-    //    for (var i = 0; i < files.length; i++) {
-    //        formData.append('Files', files[i]);
-    //    }
-    //    console.log(formData);
+        var questions = $("#questions").val();
+        var formdata = new formdata();
+        formdata.append('AzHeader', $("#azheader").val());
+        formdata.append('RuHeader', $("#ruheader").val());
+        formdata.append('EnHeader', $("#enheader").val());
+        formdata.append('AzBody', $("#azdescription").val());
+        formdata.append('EnBody', $("#endescription").val());
+        formdata.append('RuBody', $("#rudescription").val());
+        for (var i = 0; i < questions.length; i++) {
+            formData.append('questionIds', questions[i]);
+        }
+        console.log(formdata);
 
-    //    $.ajax({
-    //        type: "POST",
-    //        url: 'https://api.instudy.net/api/Country/AddCountry',
-    //        data: formData,
-    //        processData: false,  // tell jQuery not to process the data
-    //        contentType: false,
-    //        complete: function (response) {
-    //            if (response.status == 200) {
-    //                location.href = "/Admin/Country/CountryList"
-    //            }
-    //            else {
-    //                alert("error")
-    //            }
+        $.ajax({
+            type: "post",
+            url: 'https://api.instudy.net/api/AboutQuestion/AddAboutQuestion',
+            data: formdata,
+            processdata: false,  // tell jquery not to process the data
+            contenttype: false,
+            complete: function (response) {
+                if (response.status == 200) {
+                    location.href = "/admin/Content/PageQuestion"
+                }
+                else {
+                    alert("error")
+                }
 
-    //        },
-    //    });
+            },
+        });
 
 
-    //});
+    });
 
 });
 function Edit(content) {
@@ -85,7 +85,7 @@ function Delete(id) {
         url: `https://api.instudy.net/api/AboutQuestion/DeleteAboutQuestion?id=${id}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/Admin/Country/CountryList`;
+                location.href = `/admin/Content/PageQuestion`;
             }
             else {
                 alert(result.message)

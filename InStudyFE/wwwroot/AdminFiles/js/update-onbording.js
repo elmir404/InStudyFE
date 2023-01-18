@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    const programId = localStorage.getItem('programId');
+    const programId = localStorage.getItem('onboardingId');
 
     var $form = $('#form')
     $.ajax({
@@ -7,7 +7,7 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Program/GetProgram/id?programId=${programId}`,
+        url: `https://api.instudy.net/api/Header/GetHeader?id=${programId}`,
         success: function (data) {
 
             console.log(data);
@@ -20,19 +20,19 @@
                      <div class="row mb-4">
                                 <label class="col-md-3 form-label">Az Title :</label>
                                 <div class="col-md-9">
-                                    <input type="text" id="azHeader" value="${data.data.azName}" class="form-control" placeholder="Title Name">
+                                    <input type="text" id="azHeader" value="${data.data.azTitle}" class="form-control" placeholder="Title Name">
                                 </div>
                             </div>
                             <div class="row mb-4">
                                 <label class="col-md-3 form-label">Ru Title :</label>
                                 <div class="col-md-9">
-                                    <input type="text" id="ruHeader" value="${data.data.ruName}" class="form-control">
+                                    <input type="text" id="ruHeader" value="${data.data.ruTitle}" class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-4">
                                 <label class="col-md-3 form-label">En Title :</label>
                                 <div class="col-md-9">
-                                    <input type="text" id="enHeader" value="${data.data.enName}" class="form-control">
+                                    <input type="text" id="enHeader" value="${data.data.enTitle}" class="form-control">
                                 </div>
                             </div>
 
@@ -55,27 +55,19 @@
                                 </div>
                             </div>
                             <!--Row-->
-                            <div class="row">
-                                <label class="col-md-3 form-label mb-4">About Upload :</label>
-                                <div class="col-md-9">
-                                    <input id="files" type="file" name="files" accept=".jpg, .png, image/jpeg, image/png" multiple>
-                                </div>
-                            </div>
+                            
                         
                         `
             )
-            $('.content').richText();
-            $('.content2').richText();
-            $('.content3').richText();
-            $('.content4').richText();
+            
 
 
 
         }
     })
-    $("#updateProgram").click(function () {
+    $("#updateOnboarding").click(function () {
         var programId = $("#programId").val();
-        var files = $("#files").get(0).files;
+        
         var formData = new FormData();
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
@@ -83,14 +75,12 @@
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
-        for (var i = 0; i < files.length; i++) {
-            formData.append('Files', files[i]);
-        }
-        console.log(formData);
+        
+        
 
         $.ajax({
             type: "PUT",
-            url: `https://api.instudy.net/api/Program/UpdateProgram?id=${programId}`,
+            url: `https://api.instudy.net/api/Header/UpdateHeader?id=${programId}`,
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,

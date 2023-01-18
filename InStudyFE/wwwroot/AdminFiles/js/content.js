@@ -47,45 +47,45 @@
         ]
     });
         
-    //$("#addCountry").click(function () {
+    $("#addHeader").click(function () {
 
-    //    var files = $("#files").get(0).files;
-    //    var formData = new FormData();
-    //    formData.append('AzName', $("#azHeader").val());
-    //    formData.append('RuName', $("#ruHeader").val());
-    //    formData.append('EnName', $("#enHeader").val());
-    //    formData.append('AzDescription', $("#azDescription").val());
-    //    formData.append('EnDescription', $("#enDescription").val());
-    //    formData.append('RuDescription', $("#ruDescription").val());
-    //    for (var i = 0; i < files.length; i++) {
-    //        formData.append('Files', files[i]);
-    //    }
-    //    console.log(formData);
+        var files = $("#files").get(0).files;
+        var formData = new FormData();
+        formData.append('AzHeder', $("#azHeader").val());
+        formData.append('RuHeader', $("#ruHeader").val());
+        formData.append('EnHeader', $("#enHeader").val());
+        formData.append('AzBody', $("#azDescription").val());
+        formData.append('EnBody', $("#enDescription").val());
+        formData.append('RuBody', $("#ruDescription").val());
+        for (var i = 0; i < files.length; i++) {
+            formData.append('Files', files[i]);
+        }
+        console.log(formData);
 
-    //    $.ajax({
-    //        type: "POST",
-    //        url: 'https://api.instudy.net/api/Country/AddCountry',
-    //        data: formData,
-    //        processData: false,  // tell jQuery not to process the data
-    //        contentType: false,
-    //        complete: function (response) {
-    //            if (response.status == 200) {
-    //                location.href = "/Admin/Country/CountryList"
-    //            }
-    //            else {
-    //                alert("error")
-    //            }
+        $.ajax({
+            type: "POST",
+            url: 'https://api.instudy.net/api/Content/AddContent',
+            data: formData,
+            processData: false,  // tell jQuery not to process the data
+            contentType: false,
+            complete: function (response) {
+                if (response.status == 200) {
+                    location.href = "/Admin/Content/HeaderList"
+                }
+                else {
+                    alert("error")
+                }
 
-    //        },
-    //    });
+            },
+        });
 
 
-    //});
+    });
 
 });
-function Edit(content) {
+function Edit(id) {
 
-    localStorage.setItem('contentId', content);
+    localStorage.setItem('contentId', id);
     location.href = `/Admin/Content/UpdateContent`;
 
 }
@@ -96,7 +96,7 @@ function Delete(id) {
         url: `https://api.instudy.net/api/Content/DeleteContent?id=${id}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/Admin/Country/CountryList`;
+                location.href = `/Admin/Content/HeaderList`;
             }
             else {
                 alert(result.message)

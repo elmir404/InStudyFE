@@ -11699,3 +11699,6 @@ textarea.form-control {
             font-size: 13px;
         }
 }
+.ms-choice > span.placeholder {
+    color: transparent !important;
+}

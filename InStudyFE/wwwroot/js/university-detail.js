@@ -63,9 +63,11 @@
             
             $uniImage.empty();
             $uniImage.append(
-                `      <span class="HeroImage js-heroImage" style="background-image:url('${image}');height:400px;">
+                `      <span class="HeroImage js-heroImage" style="background-image:url('${image}'); background-repeat: repeat;
+  background-size: auto;">
 
-        </span> <span class="HeroImagePlaceholder HeroImage js-heroImageLowResPlaceholder" style="background-image:url('${image}');height:400px;">
+        </span> <span class="HeroImagePlaceholder HeroImage js-heroImageLowResPlaceholder" style="background-image:url('${image}'); background-repeat: repeat;
+  background-size: auto;">
 
         </span> <span class="HeroOverlay"></span>   
                         `

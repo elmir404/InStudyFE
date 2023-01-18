@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#direction-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/Direction',
+            url: 'https://api.instudy.net/api/Direction/GetDirections',
             dataSrc: 'data'
         },
         columns: [
@@ -14,15 +14,7 @@
             {
                 data: 'enName',
             },
-            {
-                data: 'description',
-            },
-            {
-                data: 'ruDescription',
-            },
-            {
-                data: 'enDescription',
-            },
+            
             {
                 data: 'id', render: function (data, type, row, meta) {
                     return `
@@ -90,7 +82,6 @@
 
     $("#addDirection").click(function () {
 
-        var files = $("#files").get(0).files;
         var formData = new FormData();
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
@@ -98,11 +89,6 @@
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
-        for (var i = 0; i < files.length; i++) {
-            formData.append('Files', files[i]);
-        }
-        console.log(formData);
-
         $.ajax({
             type: "POST",
             url: 'https://api.instudy.net/api/Direction',
@@ -111,7 +97,7 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/FainaAdmin/About/AboutList"
+                    location.href = "/Admin/Direction/DirectionList"
                 }
                 else {
                     alert("error")
@@ -133,11 +119,11 @@ function Edit(id) {
 function Delete(id) {
 
     $.ajax({
-        type: "DELETE",
+        type: "PUT",
         url: `https://api.instudy.net/api/Direction?id=${id}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/FainaAdmin/About/AboutList`;
+                location.href = `/Admin/Direction/DirectionList`;
             }
             else {
                 alert(result.message)

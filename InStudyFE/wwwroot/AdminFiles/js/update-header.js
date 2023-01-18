@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    const programId = localStorage.getItem('programId');
+    const Id = localStorage.getItem('contentId');
 
     var $form = $('#form')
     $.ajax({
@@ -7,10 +7,10 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Program/GetProgram/id?programId=${programId}`,
+        url: `https://api.instudy.net/api/Content/GetContent?id=${Id}`,
         success: function (data) {
 
-            console.log(data);
+            
             $form.empty()
 
             $form.append(
@@ -64,25 +64,22 @@
                         
                         `
             )
-            $('.content').richText();
-            $('.content2').richText();
-            $('.content3').richText();
-            $('.content4').richText();
+           
 
 
 
         }
     })
-    $("#updateProgram").click(function () {
+    $("#updateHeader").click(function () {
         var programId = $("#programId").val();
         var files = $("#files").get(0).files;
         var formData = new FormData();
-        formData.append('AzName', $("#azHeader").val());
-        formData.append('RuName', $("#ruHeader").val());
-        formData.append('EnName', $("#enHeader").val());
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
+        formData.append('AzHeder', $("#azHeader").val());
+        formData.append('RuHeader', $("#ruHeader").val());
+        formData.append('EnHeader', $("#enHeader").val());
+        formData.append('AzBody', $("#azDescription").val());
+        formData.append('EnBody', $("#enDescription").val());
+        formData.append('RuBody', $("#ruDescription").val());
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);
         }
@@ -90,13 +87,13 @@
 
         $.ajax({
             type: "PUT",
-            url: `https://api.instudy.net/api/Program/UpdateProgram?id=${programId}`,
+            url: `https://api.instudy.net/api/Content/UpdateContent?id=${programId}`,
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/Program/ProgramList"
+                    location.href = "/Admin/Content/ContentList"
                 }
                 else {
                     alert("error")

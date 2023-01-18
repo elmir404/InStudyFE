@@ -6,11 +6,11 @@
 
             <!-- PAGE-HEADER -->
             <div class="page-header">
-                <h1 class="page-title">Add Program</h1>
+                <h1 class="page-title">Add Onbarding</h1>
                 <div>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Add Program</li>
+                        <li class="breadcrumb-item active" aria-current="page">Add Onbarding</li>
                     </ol>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <div class="card-title">Add Program</div>
+                            <div class="card-title">Add Onbarding</div>
                         </div>
                         <div class="card-body">
                             <div class="row mb-4">
@@ -60,20 +60,16 @@
                                     <textarea class="content" id="enDescription" name="example"></textarea>
                                 </div>
                             </div>
-                            <div class="row">
-                                <label class="col-md-3 form-label mb-4">Questions</label>
-                                <div class="col-md-9 mb-4">
-                                    <select multiple="multiple" id="questions">
-                                    </select>
-                                </div>
-                            </div>
+                            <!--End Row-->
+                            <!--Row-->
+                            <!--End Row-->
                         </div>
                         <div class="card-footer">
                             <!--Row-->
                             <div class="row">
                                 <div class="col-md-3"></div>
                                 <div class="col-md-9">
-                                    <a href="javascript:void(0)" id="addShowedQuestion" class="btn btn-primary">Create</a>
+                                    <a href="javascript:void(0)" id="addOnbarding" class="btn btn-primary">Create</a>
                                 </div>
                             </div>
                             <!--End Row-->
@@ -87,33 +83,5 @@
     </div>
 </div>
 @section Scripts{
-    <script src="~/AdminFiles/js/update-question.js"></script>
-    <script>
-        $.ajax({
-            type: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-
-            },
-            url: `https://api.instudy.net/api/Question/GetQuestions`,
-
-            success: function (data) {
-                var html = [];
-                $.each(
-                    data.data, function (i, value) {
-                        html.push(
-                            `
-                                                                            <option value="${value.id}">${value.azQuestionTitle}</option>
-
-                                                                 `
-                        )
-
-                    }
-                )
-                $('#questions').html(html.join('')).multipleSelect();
-            }
-
-        });
-    </script>
+    <script src="~/AdminFiles/js/onboarding.js"></script>
 }

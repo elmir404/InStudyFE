@@ -2,6 +2,8 @@
     var $program = localStorage.getItem('program');
     var $country = localStorage.getItem('country');
     var $direction = localStorage.getItem('direction');
+    
+   
     const $lang = localStorage.getItem('lang');
     if ($lang == 'AZ') {
         var $notFount="Axtarışa uyğun univeristet tapılmadı!"
@@ -98,7 +100,7 @@
 
                     $(`#locationSearch`).append(
                         `
-                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="location[]" class="CheckboxInput" data-filter="ci" value="${name}" data-v-01633eac=""><span data-v-01633eac="">${name}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--></ul></li>
+                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="location" class="CheckboxInput" data-filter="ci" value="${name}" data-v-01633eac=""><span data-v-01633eac="">${name}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--></ul></li>
                                          
                                          `
                     )
@@ -109,7 +111,7 @@
         }
 
     });
-   
+      
     $.ajax({
         type: 'GET',
         headers: {
@@ -162,39 +164,76 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Program/GetPrograms1`,
+        url: `https://api.instudy.net/api/Duration/GetDurationes`,
 
         success: function (data) {
 
             $.each(
                 data.data, function (i, value) {
                     console.log(value);
-                    //const date = new Date(value.regDate)
+                    
 
-                    //var dd = String(date.getDate()).padStart(2, '0');
-                    //var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-                    //var yyyy = date.getFullYear();
-                    //var time = yyyy + "/" + mm + "/" + dd;
+                    //if ($lang == 'AZ') {
+                    //    var name = value.azName
+                    //    var description = value?.azDescription;
 
-                    if ($lang == 'AZ') {
-                        var name = value.azName
-                        var description = value?.azDescription;
+                    //}
+                    //else if ($lang == 'EN') {
+                    //    var name = value.enName
+                    //    var description = value?.enDescription;
 
-                    }
-                    else if ($lang == 'EN') {
-                        var name = value.enName
-                        var description = value?.enDescription;
+                    //} else {
+                    //    var name = value.ruName;
+                    //    var description = value?.ruDescription;
 
-                    } else {
-                        var name = value.ruName;
-                        var description = value?.ruDescription;
+                    //}
 
-                    }
-
-                    $(`#searchProgram`).append(
+                    $(`#durationSearch`).append(
                         `
-                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="location" class="CheckboxInput" data-filter="ci" value="${name}" data-v-01633eac=""><span data-v-01633eac="">${name}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--></ul></li>
-                                         
+                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="durations" class="CheckboxInput" data-filter="ci" value="${value.durationDate}" data-v-01633eac=""><span data-v-01633eac="">${value.durationDate}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""></ul></li>
+  
+                                         `
+                    )
+
+                }
+            )
+
+        }
+
+    });
+    $.ajax({
+        type: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        url: `https://api.instudy.net/api/AttendamceType/GetAttendanceTypes`,
+
+        success: function (data) {
+
+            $.each(
+                data.data, function (i, value) {
+                    console.log(value);
+
+
+                    //if ($lang == 'AZ') {
+                    //    var name = value.azName
+                    //    var description = value?.azDescription;
+
+                    //}
+                    //else if ($lang == 'EN') {
+                    //    var name = value.enName
+                    //    var description = value?.enDescription;
+
+                    //} else {
+                    //    var name = value.ruName;
+                    //    var description = value?.ruDescription;
+
+                    //}
+
+                    $(`#attendenceSearch`).append(
+                        `
+                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="attendence" class="CheckboxInput" data-filter="ci" value="${value.title}" data-v-01633eac=""><span data-v-01633eac="">${value.title}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""></ul></li>
+  
                                          `
                     )
 
@@ -205,11 +244,37 @@
 
     });
     function searchUniversity() {
-        console.log($program, $country, $direction);
+        var $disciplinesSearch = JSON.parse(localStorage.getItem("disciplinesSearch"));
+
+        var $locations = JSON.parse(localStorage.getItem("locationSearch"));
+        var $programSearch = JSON.parse(localStorage.getItem("programSearch"));
+        var $durationSearch = JSON.parse(localStorage.getItem("durationSearch"));
+        var $attendenceSearch = JSON.parse(localStorage.getItem("attendenceSearch"));
+        console.log($programSearch);
         var formData = new FormData();
         formData.append('CountryName', $country);
         formData.append('ProgramName', $program);
         formData.append('DirectionName', $direction);
+        if ($disciplinesSearch != null)
+        for (var i = 0; i < $disciplinesSearch.length; i++) {
+            formData.append('DirectionNames', $disciplinesSearch[i]);
+            }
+        if ($programSearch != null)
+        for (var i = 0; i < $programSearch.length; i++) {
+            formData.append('ProgramNames', $programSearch[i]);
+            }
+        if ($locations != null)
+        for (var i = 0; i < $locations.length; i++) {
+            formData.append('Addresses', $locations[i]);
+            }
+        if ($durationSearch != null)
+        for (var i = 0; i < $durationSearch.length; i++) {
+            formData.append('Durations', $durationSearch[i]);
+            }
+        if ($attendenceSearch != null)
+        for (var i = 0; i < $attendenceSearch.length; i++) {
+            formData.append('Attendances', $attendenceSearch[i]);
+        }
         $.ajax({
             type: "POST",
             url: `https://api.instudy.net/api/University/SearchUniversity?currentPage=1&pageSize=100`,
@@ -226,24 +291,34 @@
                     if (response.data.dataCount > 0) {
                         $.each(
                             response?.data.value, function (i, value) {
-                                console.log("assa", value);
+                                console.log(value);
 
                                 if ($lang == 'AZ') {
                                     var name = value.azName
-                                    var description = value?.azDescription;
+                                    var decription = value.azDescription?.slice(0,20);
+                                    console.log(decription);
 
+                                    var countryName = value.country?.azName;
                                 }
                                 else if ($lang == 'EN') {
                                     var name = value.enName
-                                    var description = value?.enDescription;
+                                    var decription = value.enDescription?.slice(0,10);
+                                    console.log(decription);
+
+                                    var countryName = value.country?.enName;
+
 
                                 } else {
                                     var name = value.ruName;
-                                    var description = value?.ruDescription;
+                                    var decription = value.ruDescription?.slice(0,10);
+                                    console.log(decription);
+
+                                    var countryName = value.country?.ruName;
+
 
                                 }
                                 /* var image = `data:image/png;base64,${value?.universityFiles[0]?.bytes}`*/
-
+                                //var image = `https://api.instudy.net/${value.country.countryFiles[0].path}`
 
                                 $('#searchContent').append(`
   <li class="HoverEffect SearchResultItem">
@@ -256,17 +331,15 @@
                                     <div class="StudyInfo" data-v-0363ab3a="">
                           
                                        <div class="SummaryContainer is-collapsed" data-v-0363ab3a="">
-                                          <p class="Summary is-collapsed" data-v-0363ab3a="">${description}</p>
-                                          <button type="button" class="ToggleDescription is-collapsed" data-v-0363ab3a=""><i class="ToggleIcon lnr-chevron-down" data-v-0363ab3a=""></i></button>
+                                          <p class="Summary is-collapsed"style="font-size:16px;" data-v-0363ab3a=""></p>
                                        </div>
                                     </div>
-                                    <span class="SecondaryFacts DesktopOnlyBlock" data-v-0363ab3a="">M.Sc. <span class="Divider" data-v-0363ab3a="">/</span> Full-time <span class="Divider" data-v-0363ab3a="">/</span> On Campus</span>
                                     <div class="OrganisationInfo" data-v-0363ab3a="">
-                                       <img class="OrganisationLogo" src="" alt="KU Leuven" width="48" height="48" loading="lazy" data-v-0363ab3a="">
-                                       <div class="NameLocation" data-v-0363ab3a=""><strong class="OrganisationName" data-v-0363ab3a="">KU Leuven</strong><strong class="OrganisationLocation" data-v-0363ab3a="">Leuven, Belgium</strong></div>
+                                      
+                                       <div class="NameLocation" data-v-0363ab3a=""><strong class="OrganisationName" data-v-0363ab3a="">${countryName}</strong></div>
                                        <div class="Promoted" data-v-0363ab3a="">
                                           <div class="Featured" data-study-id="63138" data-v-0363ab3a="" style="position: relative;">
-                                             Featured <i class="DesktopOnlyBlock lnr-info FeaturedIcon" data-v-0363ab3a=""></i>
+                                            
                                              <div class="Tooltip Bottom" style="display: none;">
                                                 <div class="TooltipInner">
                                                    The university partners with us for this programme to reach students like you.
@@ -277,7 +350,6 @@
                                        </div>
                                     </div>
                                  </article>
-                                 <div class="TrackingEvent TrackingRetrigger" data-action="impr" data-type="study" data-id="63138" data-description="Psychology - Theory and Research" data-label="premium" data-v-2c69491c="" data-v-0363ab3a=""></div>
                               </a>
                            </li>
 
@@ -306,10 +378,91 @@
     }
 
     searchUniversity();
-    $('#save_value').click(function () {
-        var val = [];
-        $(':checkbox:checked').each(function (i) {
-            val[i] = $(this).val();
-        });
+    var locArr = [];
+    $(document).on("change", "input[name='location']", function () {
+       
+       
+        if (this.checked) {
+            localStorage.setItem('locationSearch', "");
+            locArr.push($(this).val());
+            localStorage.setItem('locationSearch', JSON.stringify(locArr));
+        } else {
+            localStorage.setItem('locationSearch', "");
+
+            locArr.splice($.inArray($(this).val(), locArr), 1);
+            localStorage.setItem('locationSearch', JSON.stringify(locArr));
+        }
+       
+        searchUniversity();
     });
+    var descArr = [];
+    $(document).on("change", "input[name='disciplines']", function () {
+        
+       
+        if (this.checked) {
+            localStorage.setItem('disciplinesSearch', "");
+            descArr.push($(this).val());           
+            localStorage.setItem('disciplinesSearch', JSON.stringify(descArr));
+        } else {
+            localStorage.setItem('disciplinesSearch', "");
+           descArr.splice($.inArray($(this).val(), descArr), 1);            
+            localStorage.setItem('disciplinesSearch', JSON.stringify(descArr));
+
+        }
+
+        searchUniversity();
+    });
+    var durArr = [];
+    $(document).on("change", "input[name='durations']", function () {
+        
+       
+        if (this.checked) {
+            localStorage.setItem('durationsSearch', "");
+            durArr.push($(this).val());
+            localStorage.setItem('durationsSearch', JSON.stringify(durArr));
+
+        } else {
+            localStorage.setItem('durationsSearch', "");
+            durArr.splice($.inArray($(this).val(), durArr), 1);
+            localStorage.setItem('durationsSearch', JSON.stringify(durArr));
+
+        }
+        searchUniversity();
+    });
+    var attArr = [];
+    $(document).on("change", "input[name='attendence']", function () {
+        
+       
+        if (this.checked) {
+            localStorage.setItem('attendenceSearch', "");
+            attArr.push($(this).val());
+            localStorage.setItem('attendenceSearch', JSON.stringify(attArr));
+        } else {
+            localStorage.setItem('attendenceSearch', "");
+
+            attArr.splice($.inArray($(this).val(), attArr), 1);
+            localStorage.setItem('attendenceSearch', JSON.stringify(attArr));
+
+        }
+        localStorage.setItem('attendenceSearch', JSON.stringify(attArr));
+        searchUniversity();
+    });
+    var degreArr = [];
+    $(document).on("change", "input[name='program']", function () {
+        
+       
+        if (this.checked) {
+            localStorage.setItem('programSearch',"");
+            degreArr.push($(this).val());
+            localStorage.setItem('programSearch', JSON.stringify(degreArr));
+        } else {
+            localStorage.setItem('programSearch', "");
+            degreArr.splice($.inArray($(this).val(), degreArr), 1);
+            localStorage.setItem('programSearch', JSON.stringify(degreArr));
+
+        }
+       
+        searchUniversity();
+    });
+
 });

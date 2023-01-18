@@ -231,15 +231,15 @@
                             var description = data.data?.ruBody;
 
                         }
-                        //var image = `data:image/png;base64,${data.data?.countryFiles[0]?.bytes}`
+                            var image = `https://api.instudy.net/${data?.data?.files[0]?.path}`
 
-                        
-                $homeHeader.append(`
-                                                <h1 class="DegreeType"> ${description} </h1>
-                              <h2 class="HeadingMainTitle"> ${name} </h2>
+                        $("#HomeSearchBackground").css("background-image", "url(" + image + ")");
+                        $homeHeader.append(`
+                                                        <h1 class="DegreeType"> ${description} </h1>
+                                      <h2 class="HeadingMainTitle"> ${name} </h2>
 
-`
-                            )
+        `
+                                    )
                         
                         //var description = value.description.slice(0, 5);
                        
@@ -404,7 +404,7 @@
                 data.data, function (i, value) {
 
                     
-                    var image = `https://api.instudy.net/${value?.studentFiles[0]?.bytes}`
+                    var image = `https://api.instudy.net/${value?.studentFiles[0]?.path}`
 
                     
 
@@ -417,7 +417,7 @@
                                  <div class="AuthorDetails"> <span class="AuthorName">${value.name}</span> <span class="AuthorCountry">${value?.country?.enName}</span> </div>
                               </div>
                               <blockquote>
-${value.description};
+${value.description.slice(0,20)};
                               </blockquote>
                            </li>         
 
@@ -484,33 +484,45 @@ ${value.description};
 
             $.each(
                 data.data, function (i, value) {
-                    console.log(value);
-                    console.log(i);
+                    if ($lang == 'AZ') {
+                        var title = value.azTitle
+                        var description = value?.azDescription;
+
+                    }
+                    else if ($lang == 'EN') {
+                        var title = value.enTitle
+                        var description = value?.enDescription;
+
+                    } else {
+                        var title = value.ruTitle
+                        var description = value?.ruDescription;
+
+                    }
 
                     if (i == 0) {
                         $('#header1').append(`
-                                 <p> <span class="ItemHeader">${value?.title}</span> ${value?.description} </p>
+                                 <p> <span class="ItemHeader">${title}</span> ${description} </p>
 
 `)
 
                     }
                     if (i == 1) {
                         $('#header2').append(`
-                                 <p> <span class="ItemHeader">${value?.title}</span> ${value?.description} </p>
+                                <p> <span class="ItemHeader">${title}</span> ${description} </p>
 
 `)
 
                     }
                     if (i == 2) {
                         $('#header3').append(`
-                                 <p> <span class="ItemHeader">${value.title}</span> ${value?.description} </p>
+                                  <p> <span class="ItemHeader">${title}</span> ${description} </p>
 
 `)
 
                     }
                     if (i == 3) {
                         $('#header4').append(`
-                                 <p> <span class="ItemHeader">${value?.title}</span> ${value?.description} </p>
+                                 <p> <span class="ItemHeader">${title}</span> ${description} </p>
 
 
 `)
@@ -518,7 +530,7 @@ ${value.description};
                     }
                     if (i == 4) {
                         $('#header5').append(`
-                                 <p> <span class="ItemHeader">${value?.title}</span> ${value?.description} </p>
+                                 <p> <span class="ItemHeader">${title}</span> ${description} </p>
 
 
 `)
@@ -797,6 +809,12 @@ ${value.description};
         localStorage.setItem('program', $(`#programInput1`).val());
         localStorage.setItem('country', $(`#countryInput`).val());
         localStorage.setItem('direction', $(`#directionInput`).val());
+        var empty = [];
+        localStorage.setItem('locationSearch', JSON.stringify(empty));
+        localStorage.setItem('disciplinesSearch', JSON.stringify(empty));
+        localStorage.setItem('durationsSearch', JSON.stringify(empty));
+        localStorage.setItem('attendenceSearch', JSON.stringify(empty));
+        localStorage.setItem('programSearch', JSON.stringify(empty));
         location.href = "/Search";
     });
 });

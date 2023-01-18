@@ -42,5 +42,18 @@ namespace InStudyFE.Areas.Admin.Controllers
         {
             return View();
         }
+       
+        public IActionResult OnboardingList()
+        {
+            return View();
+        } 
+        public IActionResult AddOnboarding()
+        {
+            return View();
+        } 
+        public IActionResult UpdateOnboarding()
+        {
+            return View();
+        }
     }
 }

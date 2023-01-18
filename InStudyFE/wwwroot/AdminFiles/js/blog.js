@@ -1,4 +1,4 @@
-﻿$(document).ready(function () {
+﻿    $(document).ready(function () {
     $('#blog-datatable').DataTable({
         ajax: {
             url: 'https://api.instudy.net/api/Blogs/GetBlogs',
@@ -6,7 +6,7 @@
         },
         columns: [
             {
-                data: 'files', render: function (data, type, row, meta) {
+                data: 'blogFiles', render: function (data, type, row, meta) {
                     console.log("dsds",data);
                     return `
                          <td><img alt="${data[0]?.fileName}" w-100 class="text-center img-responsive" src="https://api.instudy.net/${data[0]?.path}"></td>
