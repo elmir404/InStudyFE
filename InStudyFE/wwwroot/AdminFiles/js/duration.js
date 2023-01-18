@@ -1,28 +1,15 @@
 ﻿$(document).ready(function () {
-    $('#speciality-datatable').DataTable({
+    $('#about-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/Speciality/GetSpecialities',
+            url: 'https://api.instudy.net/api/Duration/GetDurationes',
             dataSrc: 'data'
         },
         columns: [
+
             {
-                data: 'azName',
+                data: 'phone',
             },
-            {
-                data: 'ruName',
-            },
-            {
-                data: 'enName',
-            },
-            {
-                data: 'azDescription',
-            },
-            {
-                data: 'ruDescription',
-            },
-            {
-                data: 'enDescription',
-            },
+           
             {
                 data: 'id', render: function (data, type, row, meta) {
                     return `
@@ -48,29 +35,26 @@
 
         ]
     });
-   
+  
+    $("#addduration").click(function () {
 
-    $("#addSpeciality").click(function () {
 
         var formData = new FormData();
-        formData.append('AzName', $("#azHeader").val());
-        formData.append('RuName', $("#ruHeader").val());
-        formData.append('EnName', $("#enHeader").val());
+        formData.append('AzHeader', $("#azHeader").val());
+        formData.append('RuHeader', $("#ruHeader").val());
+        formData.append('EnHeader', $("#enHeader").val());
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
-   
-        console.log(formData);
-
         $.ajax({
             type: "POST",
-            url: 'https://api.instudy.net/api/Speciality/AddSpeciality',
+            url: 'https://api.instudy.net/api/Duration/AddDuration',
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/Speciality/SpecilityList"
+                    location.href = "/Admin/GoStudy/List"
                 }
                 else {
                     alert("error")
@@ -83,20 +67,20 @@
     });
 
 });
-function Edit(id) {
+function Edit(about) {
 
-    localStorage.setItem('specialityId', id);
-    location.href = `/Admin/Speciality/UpdateSpeciality`;
+    localStorage.setItem('aboutId', about);
+    location.href = `/Admin/About/UpdateAbout`;
 
 }
-function Delete(speciality) {
+function Delete(about) {
 
     $.ajax({
-        type: "DELETE",
-        url: `https://api.instudy.net/api/Speciality/DeleteSpeciality?id=${speciality}`,
+        type: "PUT",
+        url: `https://api.instudy.net/api/AboutCompany/DeleteAboutCompany?id=${about}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/Admin/Speciality/SpecialityList`;
+                location.href = `/Admin/About/AboutList`;
             }
             else {
                 alert(result.message)
@@ -106,3 +90,4 @@ function Delete(speciality) {
 
 
 }
+

@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $('#direction-datatable').DataTable({
+    $('#duration-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/Direction',
+            url: 'https://api.instudy.net/api/Duration',
             dataSrc: 'data'
         },
         columns: [
@@ -15,7 +15,7 @@
                 data: 'enName',
             },
             {
-                data: 'description',
+                data: 'azdescription',
             },
             {
                 data: 'ruDescription',
@@ -111,7 +111,7 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/FainaAdmin/About/AboutList"
+                    location.href = "/Admin/Direction/DirectionList"
                 }
                 else {
                     alert("error")
@@ -137,7 +137,7 @@ function Delete(id) {
         url: `https://api.instudy.net/api/Direction?id=${id}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/FainaAdmin/About/AboutList`;
+                location.href = `//Admin/Direction/DirectionList`;
             }
             else {
                 alert(result.message)
