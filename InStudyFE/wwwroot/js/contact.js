@@ -20,7 +20,7 @@
         $(`#labeldate`).html('Tarix');
         $(`#havewp`).html('WhatsApp?');
         $(`#labelonline`).html('Onlayn?');
-        $(`#labelconsulted`).html('Konsultasiya');
+        $(`#labelconsulted`).html('Konsultasiya?');
         $(`#labelstcont`).html('Yaşadığınız ölkə');
         $(`#labelcont`).html('Ölkə');
         $(`#labeldirection`).html('Istiqamət');
@@ -50,7 +50,7 @@
         $(`#labeldate`).html('Date');
         $(`#havewp`).html('WhatsApp?');
         $(`#labelonline`).html('Online?');
-        $(`#labelconsulted`).html('Consulted');
+        $(`#labelconsulted`).html('Consulted?');
         $(`#labelstcont`).html('Living country');
         $(`#labelcont`).html('Country');
         $(`#labeldirection`).html('Direction');
@@ -78,7 +78,7 @@
         $(`#labeltime`).html('Дата');
         $(`#havewp`).html('WhatsApp?');
         $(`#labelonline`).html('Онлайн?');
-        $(`#labelconsulted`).html('Kонсультируемый');
+        $(`#labelconsulted`).html('Kонсультируемый?');
         $(`#labelstcont`).html('Живая страна');
         $(`#labelcont`).html('Cтрана');
         $(`#labeldirection`).html('Направление');

@@ -61,7 +61,6 @@
     $("#addUniversty").click(function () {
 
         var files = $("#files").get(0).files;
-        var speciality = $("#speciality").val();
         var program = $("#program").val();
         var direction = $("#direction").val();
         var formData = new FormData();
@@ -74,9 +73,6 @@
         formData.append('countryId', $("#country").val());
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);
-        }
-        for (var i = 0; i < speciality.length; i++) {
-            formData.append('SpecialityIds', speciality[i]);
         }
         for (var i = 0; i < program.length; i++) {
             formData.append('programIds', program[i]);

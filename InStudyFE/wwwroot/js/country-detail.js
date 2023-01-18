@@ -66,16 +66,26 @@
             if ($lang == 'AZ') {
                 var name1 = data.data.azName
                 var description = data.data?.azDescription;
-                
-
+                var study = data.data?.azstudy;
+                var workPermit = data.data?.AzWorkPermit;
+                var studentVisa = data.data?.AzStudentVisa;
+                var living = data.data ?.AzLiving;
             }
             else if ($lang == 'EN') {
                 var name1 = data.data.enName
                 var description = data.data?.enDescription;
+                var study = data.data?.enstudy;
+                var workPermit = data.data?.enWorkPermit;
+                var studentVisa = data.data?.enStudentVisa;
+                var living = data.data?.enLiving;
 
             } else {
                 var name1 = data.data.ruName;
                 var description = data.data?.ruDescription;
+                var study = data.data?.rustudy;
+                var workPermit = data.data?.ruWorkPermit;
+                var studentVisa = data.data?.ruStudentVisa;
+                var living = data.data?.ruLiving;
 
             }
             localStorage.setItem('country', name1);
@@ -102,19 +112,19 @@
 `)
             
             $('#StudyIn').append(`
-${data?.data?.study}
+${study}
 `);
             $('#About').append(`
 ${description}
 `);
             $('#Living').append(`
-${data?.data?.living}
+${living}
 `);
             $('#Visa').append(`
-${data?.data?.studentVisa}
+${studentVisa}
 `);
   $('#Permit').append(`
-${data?.data?.workPermit}
+${workPermit}
 `);
            
             $.each(
