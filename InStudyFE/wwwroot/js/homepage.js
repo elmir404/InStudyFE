@@ -84,7 +84,7 @@
         $footercountries.html('Cтраны');
         $footercontact.html('Связь');
     }
-    function getCountry() {
+   
         $.ajax({
             type: 'GET',
             headers: {
@@ -93,7 +93,7 @@
             url: `https://api.instudy.net/api/Country/GetActiveCountries`,
 
             success: function (data) {
-                $country.empty();
+               /* $country.empty();*/
                 $.each(
                     data.data, function (i, value) {
 
@@ -127,10 +127,11 @@
                             )
                         }   
                         //var description = value.description.slice(0, 5);
-                        if (i < 1) {
+                        if (i < 4) {
 
                             $country.append(
-                                ` <figure data-clickable="clickable">
+                                ` 
+                                <figure data-clickable="clickable">
                               <a href="/Country/Detail/${value.id}" title="Netherlands">
                                  <span class="Picture" data-file-url="" data-title="Netherlands">
                                     <picture>
@@ -148,11 +149,10 @@
                                  </div>
                               </figcaption>
                               </a>
-
-                           </figure>
+                             </figure>
                                          `
                             )
-                        }
+                        }   
                         $(`#country`).append(`
                                                  <li class="Suggestion Link" data-position="0" onclick='searchCountry(this)' data-param-value="351" data-param-name="discipline_ids">${name}</li>
 
@@ -164,7 +164,7 @@
             }
 
         });
-    }
+    
     $.ajax({
         type: 'GET',
         headers: {
@@ -173,7 +173,7 @@
         url: `https://api.instudy.net/api/Program/GetPrograms`,
 
         success: function (data) {
-            $country.empty();
+            /*$country.empty();*/
             $.each(
                 data.data, function (i, value) {
                     if ($lang == 'AZ') {
@@ -214,7 +214,7 @@
             url: `https://api.instudy.net/api/Content/GetLastContent`,
 
             success: function (data) {
-                $country.empty();
+                /*$country.empty();*/
              
                     
                         if ($lang == 'AZ') {
@@ -636,19 +636,16 @@ ${value.description};
 
                         }
                        
-                        $("accordionExample1").append(
-                                `   <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading${value?.id}">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${value?.id}" aria-expanded="true" aria-controls="collapse${value?.id}">
-                                ${title}
-                            </button>
-                        </h2>
-                        <div id="collapse${value?.id}" class="accordion-collapse collapse " aria-labelledby="heading${value?.id}" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                ${answer}
-                            </div>
-                        </div>
-                    </div>
+                        $("#accordionExample1").append(
+                                `   <div class="accordion-item show">
+                                        <h2 class="accordion-header acc-head" >
+                                            ${title}
+                                    </h2>
+                                        <div id="collaps" class="accordion-collapse collapse acc-content show">
+                                            <div class="accordion-body">
+                                                <strong>${answer}</strong>
+                                        </div>
+                                    </div>
                                `
 
                             );
@@ -733,7 +730,7 @@ ${value.description};
             url: `https://api.instudy.net/api/Country/GetActiveCountries`,
 
             success: function (data) {
-                $country.empty();
+              $country.empty();
                 $.each(
                     data.data, function (i, value) {
                         
@@ -759,7 +756,7 @@ ${value.description};
                         }
                         var image = `https://api.instudy.net/${value?.countryFiles[0]?.path}`
                         //var description = value.description.slice(0, 5);
-                        if (i < 3) {
+                        if (i <10  ) {
 
                             $country.append(
                                 ` <figure data-clickable="clickable">
@@ -794,7 +791,7 @@ ${value.description};
 
         });
     });
-    getCountry();
+    
     $(document).on('click', '#searchButton', async function () {
         console.log("adsadsad");
         localStorage.setItem('program', $(`#programInput1`).val());

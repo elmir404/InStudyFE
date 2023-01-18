@@ -9,7 +9,7 @@
                 data: 'files', render: function (data, type, row, meta) {
                     console.log("dsds",data);
                     return `
-                         <td><img alt="${data[0]?.fileName}" w-100 class="text-center img-responsive" src=""></td>
+                         <td><img alt="${data[0]?.fileName}" w-100 class="text-center img-responsive" src="https://api.instudy.net/${data[0]?.path}"></td>
                         `;
 
 

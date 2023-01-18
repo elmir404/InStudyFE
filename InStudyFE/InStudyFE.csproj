@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\AdminFiles\js\about.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\AdminFiles\js\about.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="Areas\Admin\Views\GoStudy\AboutDetail.cshtml" />
     <None Include="Areas\Admin\Views\GoStudy\List.cshtml" />
     <None Include="Areas\Admin\Views\GoStudy\AddGoStudy.cshtml" />
@@ -58,6 +66,7 @@
     <None Include="wwwroot\AdminFiles\iconfonts\weathericons\fonts\weathericons-regular-webfont.woff2" />
     <None Include="wwwroot\AdminFiles\images\loader.svg" />
     <None Include="wwwroot\AdminFiles\js\about-detail.js" />
+    <None Include="wwwroot\AdminFiles\js\about.js" />
     <None Include="wwwroot\AdminFiles\js\gostudy.js" />
     <None Include="wwwroot\AdminFiles\js\advancedform.js" />
     <None Include="wwwroot\AdminFiles\js\apexcharts.js" />
