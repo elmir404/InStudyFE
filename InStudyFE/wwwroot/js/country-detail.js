@@ -66,15 +66,15 @@
             if ($lang == 'AZ') {
                 var name1 = data.data.azName
                 var description = data.data?.azDescription;
-                var study = data.data?.azstudy;
-                var workPermit = data.data?.AzWorkPermit;
-                var studentVisa = data.data?.AzStudentVisa;
-                var living = data.data ?.AzLiving;
+                var study = data.data?.azStudy;
+                var workPermit = data.data?.azWorkPermit;
+                var studentVisa = data.data?.azStudentVisa;
+                var living = data.data?.azLiving;
             }
             else if ($lang == 'EN') {
                 var name1 = data.data.enName
                 var description = data.data?.enDescription;
-                var study = data.data?.enstudy;
+                var study = data.data?.enStudy;
                 var workPermit = data.data?.enWorkPermit;
                 var studentVisa = data.data?.enStudentVisa;
                 var living = data.data?.enLiving;
@@ -82,7 +82,7 @@
             } else {
                 var name1 = data.data.ruName;
                 var description = data.data?.ruDescription;
-                var study = data.data?.rustudy;
+                var study = data.data?.ruStudy;
                 var workPermit = data.data?.ruWorkPermit;
                 var studentVisa = data.data?.ruStudentVisa;
                 var living = data.data?.ruLiving;
@@ -92,7 +92,7 @@
             var image = `https://api.instudy.net/${data.data?.countryFiles[0]?.path}`
             $countryImage.append(
                 `
-                <span class="HeroImage js-heroImage" style="background-image:url(${image});background-repeat: no-repeat;background-size: auto;"></span>
+                <span class="HeroImage js-heroImage" style="background-image:url(${image});background-repeat: no-repeat;background-size:cover;"></span>
                 <span class="HeroImage HeroImagePlaceholder js-heroImageLowResPlaceholder"></span> <span class="HeroOverlay" style="background-image:url(${image});background-repeat: no-repeat;background-size: auto;" ></span>
                 
                 `
