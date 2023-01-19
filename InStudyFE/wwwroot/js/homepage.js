@@ -3,7 +3,7 @@
     var $country = $('#CountrySpotlightContainer');
     var $partners = $('#partners');
     var $questionHeader = $('#questionHeader');
-    var $questions = $('#accordionExample');
+    
     var $countryMenu = $('#countryMenu');
     var $countryHeader = $('#countryHeader');
     var $universityMenu = $('#universityMenu');
@@ -745,21 +745,7 @@
 
         });
     }
-    $('.acc-container .acc:nth-child(1) .acc-head').addClass('active');
-    $('.acc-container .acc:nth-child(1) .acc-content').slideDown();
-    $('.acc-head').on('click', function () {
-        console.log("AsASAsaSAsaSAsaSasASAsAS");
-        if ($(this).hasClass('active')) {
-            $(this).siblings('.acc-content').slideUp();
-            $(this).removeClass('active');
-        }
-        else {
-            $('.acc-content').slideUp();
-            $('.acc-head').removeClass('active');
-            $(this).siblings('.acc-content').slideToggle();
-            $(this).toggleClass('active');
-        }
-    });     
+  
     getPartners();
       
     getQuestions();
