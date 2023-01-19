@@ -7,7 +7,7 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Direction/id?id=${directionId}`,
+        url: `https://api.instudy.net/api/Direction/GetDirection?id=${directionId}`,
         success: function (data) {
 
             console.log(data);
@@ -86,7 +86,7 @@
 
         $.ajax({
             type: "PUT",
-            url: `https://api.instudy.net/api/Direction?id=${directionId}`,
+            url: `https://api.instudy.net/api/Direction/GetDirection?id=${directionId}`,
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,

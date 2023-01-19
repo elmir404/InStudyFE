@@ -109,45 +109,45 @@ $(document).on('click', '#requestSubmit', async function () {
     var fullPhone = $phoneCode.val() + " " + $phone.val();
     console.log(fullPhone, $reqOnline.val().toString(), $reqWhatsapp.val().toString());
     if ($email.val() == '' || !re.test($email.val())) {
-        toastr.warning("Please provide valid Email!");
+        /*toastr.warning("Please provide valid Email!");*/
 
         hasError = true;
     }
 
     if ($name.val() == '') {
-        toastr.warning("Please provide Your name!");
+        //toastr.warning("Please provide Your name!");
 
         hasError = true;
     }
     if ($lastname.val() == '') {
-        toastr.warning("Please provide Your name!");
+        //toastr.warning("Please provide Your name!");
 
         hasError = true;
     }
 
     if ($message.val() == '') {
-        toastr.warning("Please provide message!");
+        //toastr.warning("Please provide message!");
 
 
         hasError = true;
     }
     if ($phone.val() == '') {
-        toastr.warning("Please provide a phone number!");
+        //toastr.warning("Please provide a phone number!");
 
         hasError = true;
     }
     if ($reqCountry.val() == '') {
-        toastr.warning("Please provide country!");
+        //toastr.warning("Please provide country!");
 
         hasError = true;
     }
     if ($reqStudentCountry.val() == '') {
-        toastr.warning("Please provide country!");
+        //toastr.warning("Please provide country!");
 
         hasError = true;
     }
     if ($reqDirect.val() == '') {
-        toastr.warning("Please provide direction!");
+        //toastr.warning("Please provide direction!");
 
         hasError = true;
     }
@@ -156,28 +156,36 @@ $(document).on('click', '#requestSubmit', async function () {
     }
     if (!hasError) {
         var url = "https://api.instudy.net/api/StudentRequest/AddStudentRequest";
+        var reqContries = $reqCountry.val();
+        var reqDirect = $reqDirect.val();
+        var formData = new FormData();
+        formData.append('Name', $name.val());
+        formData.append('SurName', $lastname.val());
+        formData.append('Email', $email.val());
+        formData.append('Description', $message.val());
+        formData.append('HaveWhatsApp', $('input[name="wp"]:checked').val());
+        formData.append('Phone', fullPhone);
+        formData.append('ConsultationDate', $reqDate.val());
+        formData.append('IsOnline', $('input[name="IsOnline"]:checked').val());
+        formData.append('YourContryId', $reqStudentCountry.val());
+        for (int i = 0; i < reqContries.length;i++){
+            formData.append('CountryIds', reqContries[i]);
+           }
+
+            for (int i = 0; i <reqDirect.length; i++){
+                 formData.append('DirectionIds', reqDirect[i]);
+             }
+    
         $.ajax({
             type: "POST",
             url: url,
-            data: JSON.stringify({
-
-                Name: $name.val(),
-                Surname: $lastname.val(),
-                Email: $email.val(),
-
-                Description: $message.val(),
-                HaveWhatsApp: $('input[name="wp"]:checked').val(),
-                Phone: fullPhone,
-                ConsultationDate: $reqDate.val(),
-                IsOnline: $('input[name="IsOnline"]:checked').val(),
-                YourContryId: $reqStudentCountry.val(),
-                CountryIds: $reqCountry.val(),
-                DirectionIds: $reqDirect.val()
-
-
-
-            }),
-            contentType: 'application/json',
+            type: "POST",
+            url: 'https://api.instudy.net/api/Question/AddQuestion',
+            data: formData,
+            processData: false,  // tell jQuery not to process the data
+            contentType: false,
+           
+            
         })
             .done(function (response) {
                 // Make sure that the formMessages div has the 'success' class.
@@ -202,17 +210,16 @@ $(document).on('click', '#requestSubmit', async function () {
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/AboutCompany/GetAboutCompanies`,
+        url: `https://api.instudy.net/api/AboutCompany/GetLastAboutCompany`,
         success: function (data) {
             
-            $.each(
-                data.data, function (i, value) {
+           
                     $(`#contactDetail`).empty();
-                    $(`#contactDetail`).append(
-                        ` 
+            $(`#contactDetail`).append(
+                ` 
 
 <div id="map-responsive"  class="map-responsive">
-<iframe src="${value.mapAdress}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="${data?.data.mapAdress}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </div>
 			<div class=" col-md-12 col-ms d-flex align-items-stretch"  style="padding-top: 10px;">
@@ -223,7 +230,7 @@ $(document).on('click', '#requestSubmit', async function () {
 				        			<span class="fa fa-map-marker"></span>
 				        		</div>
 				        		<div class="text pl-3">
-					            <p><span>${adr}:</span>${value.adress}</p>
+					            <p><span>${adr}:</span>${data?.data.adress}</p>
 					          </div>
 				          </div>
 				        	<div class="dbox w-100 d-flex align-items-center">
@@ -231,7 +238,7 @@ $(document).on('click', '#requestSubmit', async function () {
 				        			<span class="fa fa-phone"></span>
 				        		</div>
 				        		<div class="text pl-3">
-					            <p><span>${phone}:</span> <a href="tel:${value.phone}">${value.phone}</a></p>
+					            <p><span>${phone}:</span> <a href="tel:${data?.data.phone}">${data?.data.phone}</a></p>
 					          </div>
 				          </div>
 				        	<div class="dbox w-100 d-flex align-items-center">
@@ -239,7 +246,7 @@ $(document).on('click', '#requestSubmit', async function () {
 				        			<span class="fa fa-paper-plane"></span>
 				        		</div>
 				        		<div class="text pl-3">
-					            <p><span>${email}:</span> <a href="${value.email}">${value.email}</a></p>
+					            <p><span>${email}:</span> <a href="${data?.data.email}">${data?.data.email}</a></p>
 					          </div>
 				          </div>
 				        	
@@ -249,10 +256,9 @@ $(document).on('click', '#requestSubmit', async function () {
 	</div>
 
 `
-                    )
+            );
 
-                }
-            )
+             
 
 
 

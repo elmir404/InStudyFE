@@ -39,27 +39,26 @@
     $("#addShowedQuestion").click(function () {
 
         var questions = $("#questions").val();
-        var formdata = new FormData();
-        formdata.append('AzHeader', $("#azheader").val());
-        formdata.append('RuHeader', $("#ruheader").val());
-        formdata.append('EnHeader', $("#enheader").val());
-        formdata.append('AzBody', $("#azdescription").val());
-        formdata.append('EnBody', $("#endescription").val());
-        formdata.append('RuBody', $("#rudescription").val());
+        var formData = new FormData();
+        formData.append('AzHeader', $("#azheader").val());
+        formData.append('RuHeader', $("#ruheader").val());
+        formData.append('EnHeader', $("#enheader").val());
+        formData.append('AzBody', $("#azdescription").val());
+        formData.append('EnBody', $("#endescription").val());
+        formData.append('RuBody', $("#rudescription").val());
         for (var i = 0; i < questions.length; i++) {
-            formdata.append('questionIds', questions[i]);
+            formData.append('questionIds', questions[i]);
         }
-        console.log(formdata);
 
         $.ajax({
             type: "POST",
-            url: 'https://api.instudy.net/api/AboutQuestion/AddAboutQuestion',
-            data: formdata,
-            processdata: false,  // tell jquery not to process the data
-            contenttype: false,
+            url: 'https://api.instudy.net/api/Question/AddQuestion',
+            data: formData,
+            processData: false,  // tell jQuery not to process the data
+            contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/admin/Content/PageQuestion"
+                    location.href = "/Admin/Content/QuestionList"
                 }
                 else {
                     alert("error")

@@ -45,7 +45,7 @@
                             var description = value?.ruDescription;
 
                         }
-                        var image = `data:image/png;base64,${value?.files[0]?.bytes}`
+                        var image = `https://api.instudy.net/${value.blogFiles[0].path}`
                         console.log(image); 
                         if (i <= 3) {
                             $topic.append(

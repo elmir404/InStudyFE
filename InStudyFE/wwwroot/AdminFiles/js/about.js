@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $('#about-datatable').DataTable({
+    $('#aboutcomp-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/AboutCompany/GetAboutCompanies',
+            url: 'https://api.instudy.net/api/AboutCompany/GetActiveAboutCompanies',
             dataSrc: 'data'
         },
         columns: [

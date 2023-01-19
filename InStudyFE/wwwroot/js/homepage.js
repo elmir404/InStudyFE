@@ -3,7 +3,7 @@
     var $country = $('#CountrySpotlightContainer');
     var $partners = $('#partners');
     var $questionHeader = $('#questionHeader');
-    var $questions = $('#accordionExample');
+    
     var $countryMenu = $('#countryMenu');
     var $countryHeader = $('#countryHeader');
     var $universityMenu = $('#universityMenu');
@@ -382,7 +382,7 @@
             headers: {
                 'Content-Type': 'application/json'
             },
-            url: `https://api.instudy.net/api/Direction/GetDirections`,
+            url: `https://api.instudy.net/api/Direction/GetActiveDirections`,
 
             success: function (data) {
                
@@ -418,7 +418,9 @@
 `
                         )
                         $("#disciplines").append(`
-                           <li data-clickable="clickable"> <a href="/Discipline/Detail/${value.id}" title="Agriculture &amp; Forestry"><i class="fa-solid fa-comment"></i> ${value.icon} ${name} </a> </li>
+                           <li data-clickable="clickable"> <a href="/Discipline/Detail/${value.id}" title="Agriculture &amp; Forestry">
+                            ${value.icon}
+<span style="display:block;">${name}</span> </a> </li>
 
 `);
                         $("#direction").append(`
@@ -716,17 +718,19 @@
                             var answer = value?.ruQuestionAnswer;
 
                         }
-                       
-                        $("#accordionExample1").append(
-                                `   <div class="accordion-item show">
-                                        <h2 class="accordion-header acc-head" >
-                                            ${title}
-                                    </h2>
-                                        <div id="collaps" class="accordion-collapse collapse acc-content show">
-                                            <div class="accordion-body">
-                                                <strong>${answer}</strong>
+                        /*$("#questionAcc").empty()*/
+                        $("#questionAcc").append(
+                                `
+                                 <div class="accordion-item show">
+                                        <h2 class="accordion-header acc-head" onclick="openAcordion(this)" id="headingTw">
+                                                ${title}
+                                         </h2>
+                                    <div id="collapseTwo" class="accordion-collapse acc-content collapse" >
+                                        <div class="accordion-body">
+                                            ${answer}
                                         </div>
                                     </div>
+                                </div>
                                `
 
                             );
@@ -741,6 +745,7 @@
 
         });
     }
+  
     getPartners();
       
     getQuestions();

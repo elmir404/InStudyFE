@@ -261,7 +261,7 @@
 
         var $locations = JSON.parse(localStorage.getItem("locationSearch"));
         var $programSearch = JSON.parse(localStorage.getItem("programSearch"));
-        var $durationSearch = JSON.parse(localStorage.getItem("durationSearch"));
+        var $durationSearch = JSON.parse(localStorage.getItem("durationsSearch"));
         var $attendenceSearch = JSON.parse(localStorage.getItem("attendenceSearch"));
         console.log($programSearch);
         var formData = new FormData();
@@ -427,7 +427,7 @@
     });
     var durArr = [];
     $(document).on("change", "input[name='durations']", function () {
-        
+        console.log("sadsadasd")
        
         if (this.checked) {
             localStorage.setItem('durationsSearch', "");

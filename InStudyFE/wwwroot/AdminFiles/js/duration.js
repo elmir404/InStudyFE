@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $('#about-datatable').DataTable({
+    $('#duration-datatable').DataTable({
         ajax: {
             url: 'https://api.instudy.net/api/Duration/GetDurationes',
             dataSrc: 'data'
