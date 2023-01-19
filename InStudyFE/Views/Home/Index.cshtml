@@ -252,9 +252,9 @@
                  
                </div>
                <div class="faq-section-detail-accordion">
-                <div class="accordion accordion-div" id="accordionExample1">
+                <div class="accordion accordion-div" id="questionAcc">
                    
-                    <div class="accordion-item show">
+                    @*<div class="accordion-item show">
                             <h2 class="accordion-header acc-head" id="headingTw">
                                 Accordion Item #2
                         </h2>
@@ -275,7 +275,7 @@
                                 <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                             </div>
                         </div>
-                    </div>
+                    </div>*@
                 </div>
                </div>
             </div>
@@ -283,22 +283,24 @@
       </section>
       @section Scripts{
           <script>
-              $(document).ready(function() {
+             
                 $('.acc-container .acc:nth-child(1) .acc-head').addClass('active');
                 $('.acc-container .acc:nth-child(1) .acc-content').slideDown();
-                $('.acc-head').on('click', function() {
-                    if($(this).hasClass('active')) {
-                      $(this).siblings('.acc-content').slideUp();
-                      $(this).removeClass('active');
+               function openAcordion(element) {
+                 console.log("AsASAsaSAsaSAsaSasASAsAS");
+
+            if ($(element).hasClass('active')) {
+                        $(element).siblings('.acc-content').slideUp();
+                        $(element).removeClass('active');
+                            }
+                            else {
+                              $('.acc-content').slideUp();
+                              $('.acc-head').removeClass('active');
+                              $(element).siblings('.acc-content').slideToggle();
+                        $(element).toggleClass('active');
                     }
-                    else {
-                      $('.acc-content').slideUp();
-                      $('.acc-head').removeClass('active');
-                      $(this).siblings('.acc-content').slideToggle();
-                      $(this).toggleClass('active');
-                    }
-                });     
-                });
+                };     
+                
           </script>
    
       }

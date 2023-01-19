@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#direction-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/Direction/GetDirections',
+            url: 'https://api.instudy.net/api/Direction/GetActiveDirections',
             dataSrc: 'data'
         },
         columns: [
@@ -89,9 +89,10 @@
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
+        formData.append('Icon', $("#iconSvg").val());
         $.ajax({
             type: "POST",
-            url: 'https://api.instudy.net/api/Direction',
+            url: 'https://api.instudy.net/api/Direction/CreateDirection',
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
@@ -120,7 +121,7 @@ function Delete(id) {
 
     $.ajax({
         type: "PUT",
-        url: `https://api.instudy.net/api/Direction?id=${id}`,
+        url: `https://api.instudy.net/api/Direction/GetDirection?id=${id}`,
         success: function (result) {
             if (result.success == true) {
                 location.href = `/Admin/Direction/DirectionList`;

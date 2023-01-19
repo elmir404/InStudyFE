@@ -83,12 +83,12 @@
 
     });
     $("#directionInput").focusin(function () {
-        const menuItem = document.getElementById('direction_div');
+        const menuItem = document.getElementById('direction_div1');
         menuItem.classList.remove("Hidden");
 
     });
     $("#directionInput").focusout(function () {
-        const menuItem = document.getElementById('direction_div');
+        const menuItem = document.getElementById('direction_div1');
         setTimeout(function delay() {
             menuItem.classList.add("Hidden");
         }, 200);

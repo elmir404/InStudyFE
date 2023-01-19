@@ -135,107 +135,41 @@
          <main class="SwitchableContentContainer mdc-layout-grid__inner">
             <div id="SwitchableContent" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-8-desktop">
 
-                        <div class="SwitchableGroup js-content-contents contents " id="overview_content">
-                        <button class="ToggleButton js-contentButtons js-content-contents mdc-layout-grid" id="overview_content" onclick="swith('overview_content')">
-                                <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Programme structure</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
-                            </button>
+                        <div class="SwitchableGroup js-content-contents contents is-visible " id="overview_content">
                             <article class="ModulesContainer ">
                                 <div data-module="Study:study_contents" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_Contents_Contents">
-                                    <article id="StudyContents">
+                                    <article class="overView" id="StudyContents">
                                        
                                     </article>
                                 </div>
                             </article>
                         </div>
                         <div class="SwitchableGroup js-content-requirement requirement" id="bachelor_content">
-                        <button class="ToggleButton js-contentButtons js-content-requirement mdc-layout-grid" data-id="requirement" id="bachelor_content" onclick="swith('bachelor_content')">
-                                <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Admission requirements</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
-                            </button>
+                       
                             <article class="ModulesContainer">
                                 <div data-module="Study:study_admission_requirements" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_AdmissionRequirements_AdmissionRequirements">
-                                    <section id="AdmissionRequirements">
-                                        <article id="AcademicRequirements">
-                                            <h2>Academic requirements</h2>
-                                            <div class="NoRequirements">
-                                                <p class="NoRequirementsInfo">We are not aware of any academic requirements for this programme.</p>
-                                            </div>
-                                        </article>
-                                        <article id="EnglishRequirements">
-                                            <h2>English requirements</h2>
-                                            <section class="EnglishRequirementsCards">
-                                                <div class="CardContents EnglishCardContents IELTSCard js-CardIELTS">
-                                                    <div class="MainContent">
-                                                        <div class="ScoreLabelContainer">
-                                                            <i class="Icon"> <img src="//monet-prtl-co.imgix.net/Masters/BNW/Icons/Language.svg" alt="IELTS admission requirements" loading="lazy" width="40" height="40"> </i> <span class="Text"> <span class="Heading"> IELTS </span> </span>
-                                                            <i class="InfoIcon lnr-info" data-tooltip-text="The International English Language Test System (IELTS) tests your English-language proficiency on a scale of 1 – 9. The score refers to the combined average score of 4 subjects (writing, listening, speaking, and reading)." style="position: relative;">
-                                                                <div class="Tooltip" style="display: none;">
-                                                                    <div class="TooltipInner">
-                                                                        The International English Language Test System (IELTS) tests your English-language proficiency on a scale of 1 – 9. The score refers to the combined average score of 4 subjects (writing, listening, speaking, and reading).
-                                                                    </div>
-                                                                    <div class="TooltipArrow"></div>
-                                                                </div>
-                                                            </i>
-                                                        </div>
-                                                        <div class="ScoreInformationContainer">
-                                                            <div class="ScoreContainer">
-                                                                <div class="Score"> <span>6.5</span> </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ButtonContainer"> <a class="IELTSButton NavigatorButton js-showIeltsCTA" rel="nofollow noopener" target="_blank" data-ga-tracking="{&quot;category&quot;:&quot;Banners&quot;, &quot;action&quot;:&quot;Text banner click&quot;,&quot;label&quot;:&quot;IMPACT_LEARNING_study_language_requirements_button&quot;,&quot;event&quot;:&quot;click&quot;}" href="https://link.studyportals.com/ielts_prep_promo" data-ga-parsed="true"> Start preparing for IELTS today! </a>  </div>
-                                                </div>
-                                                <div class="CardContents EnglishCardContents TOEFLCard js-CardTOEFL">
-                                                    <div class="MainContent">
-                                                        <div class="ScoreLabelContainer">
-                                                            <i class="Icon"> <img src="//monet-prtl-co.imgix.net/Masters/BNW/Icons/Language.svg" alt="TOEFL admission requirements" loading="lazy" width="40" height="40"> </i> <span class="Text"> <span class="Heading"> TOEFL<sup>®</sup> </span> <span class="SubHeading">IBT</span> </span>
-                                                            <i class="InfoIcon lnr-info" data-tooltip-text="The TOEFL iBT® is given online through the internet at designated testing site. The test measures your English-language abilities in an academic setting. The score refers to the total score of 4 subjects (writing, listening, speaking, and reading), each subject has a range of 0 - 30." style="position: relative;">
-                                                                <div class="Tooltip" style="display: none;">
-                                                                    <div class="TooltipInner">
-                                                                        The TOEFL iBT® is given online through the internet at designated testing site. The test measures your English-language abilities in an academic setting. The score refers to the total score of 4 subjects (writing, listening, speaking, and reading), each subject has a range of 0 - 30.
-                                                                    </div>
-                                                                    <div class="TooltipArrow"></div>
-                                                                </div>
-                                                            </i>
-                                                        </div>
-                                                        <div class="ScoreInformationContainer">
-                                                            <div class="ScoreContainer">
-                                                                <div class="Score"> <span>90</span> </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                        </article>
-                                        <article id="OtherRequirements">
+                                    <section  id="AdmissionRequirements">
+                                        <article class="bachelor" id="AcademicRequirements">
                                             
                                         </article>
+                                       
+                                        
                                     </section>
                                 </div>
                             </article>
                         </div>
 
                     <div class="SwitchableGroup js-content-work_permit work_permit " id="master_content" onclick="swith('master_content')">
-                            <button class="ToggleButton js-contentButtons js-content-work_permit mdc-layout-grid" data-id="work_permit">
-                                <div class="ToggleButtonInner"><span class="ToggleButtonTitle">Work permit</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
-                            </button>
-                            <article class="ModulesContainer">
-                                <div data-module="Study:venues_switcher" class="Module StudyPortals_Shared_Modules_Study_VenuesSwitcher_VenuesSwitcher">
-                                    <section class="VenuesSwitcher">
-                                        <h2 id="VenuesSwitcherTitle"></h2>
-                                    </section>
-                                </div>
-                                <div data-module="Study:WorkPermitContent" class="Module StudyPortals_Shared_Modules_Study_WorkPermitContent_WorkPermitContent">
-                                    <script>const workPermitDestinationCountry = '1'; const workPermitServiceUrl = 'https://8ofylmmtn1.execute-api.eu-west-1.amazonaws.com/prd/';</script>
-                                    <section id="WorkPermitContent"> </section>
-                                    <div class="WebsiteLinkTabs"> </div>
-                                </div>
+                           
+                            <article  class="ModulesContainer master">
+                               
                             </article>
                         </div>
             </div>
             <div id="SwitchableContentButtons" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
                <div id="ContentSwitcherWrapper" class="ContentSwitcherWrapper">
                   <nav id="ContentSwitcher" class="ContentSwitcher">
-                                <button type="button" class="ContentButton js-contentButtons description " id="overview" onclick="swith('overview')"> Overview </button>
+                                <button type="button" class="ContentButton js-contentButtons description is-active " id="overview" onclick="swith('overview')"> Overview </button>
                                 <button type="button" class="ContentButton js-contentButtons contents" id="bachelor" onclick="swith('bachelor')"> Bachelor </button>
                                 <button type="button" class="ContentButton js-contentButtons requirement" id="master" onclick="swith('master')"> Master </button>
                   </nav>
@@ -258,7 +192,7 @@
                                 Overview
                             </h2>
                             <div id="collaps" class="accordion-collapse collapse acc-content show">
-                                <div id="StudyIn" class="accordion-body">
+                                    <div id="StudyIn" class="accordion-body overView">
                                 </div>
                             </div>
                         </div>
@@ -267,7 +201,7 @@
                                 Bachelor
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse acc-content collapse">
-                                <div id="Living" class="accordion-body">
+                                    <div id="Living" class="accordion-body bachelor">
                                 </div>
                             </div>
                         </div>
@@ -278,7 +212,7 @@
 
                             </h2>
                             <div id="collapseThree" class="accordion-collapse acc-content collapse">
-                                <div id="About" class="accordion-body"> </div>
+                                <div id="About" class="accordion-body master"> </div>
                             </div>
                         </div>
                     </div>

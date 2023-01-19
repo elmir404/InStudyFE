@@ -10,7 +10,7 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Direction/id?id=${linkValues[3]}`,
+        url: `https://api.instudy.net/api/Direction/GetDirection?id=${linkValues[3]}`,
         success: function (data) {
            
             if ($lang == 'AZ') {
