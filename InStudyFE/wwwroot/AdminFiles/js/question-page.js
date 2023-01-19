@@ -39,7 +39,7 @@
     $("#addShowedQuestion").click(function () {
 
         var questions = $("#questions").val();
-        var formdata = new formdata();
+        var formdata = new FormData();
         formdata.append('AzHeader', $("#azheader").val());
         formdata.append('RuHeader', $("#ruheader").val());
         formdata.append('EnHeader', $("#enheader").val());
@@ -47,12 +47,12 @@
         formdata.append('EnBody', $("#endescription").val());
         formdata.append('RuBody', $("#rudescription").val());
         for (var i = 0; i < questions.length; i++) {
-            formData.append('questionIds', questions[i]);
+            formdata.append('questionIds', questions[i]);
         }
         console.log(formdata);
 
         $.ajax({
-            type: "post",
+            type: "POST",
             url: 'https://api.instudy.net/api/AboutQuestion/AddAboutQuestion',
             data: formdata,
             processdata: false,  // tell jquery not to process the data

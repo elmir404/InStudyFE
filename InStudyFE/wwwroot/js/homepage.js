@@ -382,7 +382,7 @@
             headers: {
                 'Content-Type': 'application/json'
             },
-            url: `https://api.instudy.net/api/Direction`,
+            url: `https://api.instudy.net/api/Direction/GetDirections`,
 
             success: function (data) {
                
@@ -418,7 +418,7 @@
 `
                         )
                         $("#disciplines").append(`
-                           <li data-clickable="clickable"> <a href="/Discipline/Detail/${value.id}" title="Agriculture &amp; Forestry"> <i class="lnr-tree DisciplineIcons"></i> ${name} </a> </li>
+                           <li data-clickable="clickable"> <a href="/Discipline/Detail/${value.id}" title="Agriculture &amp; Forestry"><i class="fa-solid fa-comment"></i> ${value.icon} ${name} </a> </li>
 
 `);
                         $("#direction").append(`
@@ -486,7 +486,7 @@
                                  <div class="AuthorDetails"> <span class="AuthorName">${value.name}</span> <span class="AuthorCountry">${value?.country?.enName}</span> </div>
                               </div>
                               <blockquote>
-${value.description.slice(0,20)};
+                                ${value.description.slice(0,20)};
                               </blockquote>
                            </li>         
 

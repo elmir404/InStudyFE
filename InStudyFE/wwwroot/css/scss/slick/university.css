@@ -9795,13 +9795,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
         text-indent: -999px
     }
 
-#HeaderSearch form button {
-    background: #f95c39;
-    border: 1px solid #f95c39;
-    border-radius: 0 3px 3px 0;
-    color: #fff;
-    flex: 0 0 40px
-}
+
 
 @media(min-width:769px)and (max-width:1024px) {
     #HeaderSearch form button {
@@ -10268,7 +10262,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
         width: calc(6rem - 2px)
     }
 
-    #FooterScrollToTop .FooterScrollToTopButton {
+   /* #FooterScrollToTop .FooterScrollToTopButton {
         background-color: #fff;
         border: 2px solid #f5f9fa;
         border-radius: 50%;
@@ -10281,21 +10275,21 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
         position: relative;
         text-align: center;
         width: 6rem
-    }
+    }*/
 
-@media(min-width:769px)and (max-width:1024px) {
+/*@media(min-width:769px)and (max-width:1024px) {
     #FooterScrollToTop .FooterScrollToTopButton {
         border-color: #f95c39;
         box-shadow: 0 2px 2px #3f5c6e26
     }
-}
+}*/
 
-@media(min-width:1025px) {
+/*@media(min-width:1025px) {
     #FooterScrollToTop .FooterScrollToTopButton {
         border-color: #f95c39;
         box-shadow: 0 2px 2px #3f5c6e26
     }
-}
+}*/
 
 #FooterScrollToTop .FooterScrollToTopButton .FooterScrollToTopRocket {
     display: block;
