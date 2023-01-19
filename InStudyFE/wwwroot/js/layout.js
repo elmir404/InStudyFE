@@ -11,6 +11,11 @@
         $(`#exploreHeader`).html(`Araşdırın`);
         $(`#decideContent`).html(`Müraciət`);
         $(`#goStudyHeader`).html(`Tehsil al`);
+        $(`.aboutlang`).html(`Haqqında`);
+        $(`.articleslang`).html(`Məqalə`);
+        $(`.countrieslang`).html(`Ölkələr`);
+        $(`.contactlang`).html(`Bizimlə əlaqə`);
+        $(`.followlang`).html(`Bizi izləyin`);
     }
     else if ($lang == 'EN') {
 
@@ -24,6 +29,12 @@
         $(`#exploreHeader`).html(`Explore`);
         //$(`#decideContent`).html(`Apply`);
         $(`#goStudyHeader`).html(`Go Study`);
+        $(`.aboutlang`).html(`About`);
+        $(`.articleslang`).html(`Articles`);
+        $(`.countrieslang`).html(`Countries`);
+        $(`.contactlang`).html(`Contact us`);
+        $(`.followlang`).html(`Follow us`);
+
 
     }
     else {
@@ -37,6 +48,11 @@
         $(`#exploreHeader`).html(`Исследовать`);
         //$(`#decideContent`).html(`Применять`);
         $(`#goStudyHeader`).html(`Иди учись`);
+        $(`.aboutlang`).html(`O`);
+        $(`.articleslang`).html(`Статьи`);
+        $(`.countrieslang`).html(`Страны`);
+        $(`.contactlang`).html(`Свяжитесь с нами`);
+        $(`.followlang`).html(`Подписывайтесь на нас`);
 
 
     }
