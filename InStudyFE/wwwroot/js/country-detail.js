@@ -111,26 +111,26 @@
                                     
 `)
             
-            $('#StudyIn').append(`
+            $('.StudyIn').append(`
 ${study}
 `);
-            $('#About').append(`
+            $('.About').append(`
 ${description}
 `);
-            $('#Living').append(`
+            $('.Living').append(`
 ${living}
 `);
-            $('#Visa').append(`
+            $('.Visa').append(`
 ${studentVisa}
 `);
-  $('#Permit').append(`
+            $('.WorkPermitContent').append(`
 ${workPermit}
 `);
            
             $.each(
                 data?.data?.universities, function (i, value) {
                     console.log("sasa", value);
-                    $("#universityList").append(
+                    $(".universityList").append(
                         `
 			                <li> <a href="/University/Detail/${value.id}" title=""> <span>${value.enName}</span> </a> (${value.studentCount} Students) </li>
 

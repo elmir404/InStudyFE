@@ -1005,20 +1005,20 @@ body #galactus h4 {
         }
 }
 
-#StudyIn #WhyStudyWithUs {
+.StudyIn #WhyStudyWithUs {
     clear: left
 }
 
-    #StudyIn #WhyStudyWithUs h2 {
+    .StudyIn #WhyStudyWithUs h2 {
         margin-top: 1.5rem
     }
 
-    #StudyIn #WhyStudyWithUs ol, #StudyIn #WhyStudyWithUs ul {
+    .StudyIn #WhyStudyWithUs ol, .StudyIn #WhyStudyWithUs ul {
         margin: 1rem 0 1rem .5rem;
         padding: 0
     }
 
-        #StudyIn #WhyStudyWithUs ol li, #StudyIn #WhyStudyWithUs ul li {
+        .StudyIn #WhyStudyWithUs ol li, .StudyIn #WhyStudyWithUs ul li {
             list-style: none;
             margin: 1rem 0 0;
             min-height: 2rem;
@@ -1026,12 +1026,12 @@ body #galactus h4 {
             position: relative
         }
 
-            #StudyIn #WhyStudyWithUs ol li strong:first-child, #StudyIn #WhyStudyWithUs ul li strong:first-child {
+            .StudyIn #WhyStudyWithUs ol li strong:first-child, .StudyIn #WhyStudyWithUs ul li strong:first-child {
                 display: block;
                 font-size: 1rem
             }
 
-            #StudyIn #WhyStudyWithUs ol li .CheckmarksIcons, #StudyIn #WhyStudyWithUs ul li .CheckmarksIcons {
+           .StudyIn #WhyStudyWithUs ol li .CheckmarksIcons,.StudyIn #WhyStudyWithUs ul li .CheckmarksIcons {
                 font-size: 1.6rem;
                 left: 0;
                 position: absolute;
@@ -1039,13 +1039,13 @@ body #galactus h4 {
                 vertical-align: text-top
             }
 
-#StudyIn .BannerWrapper {
+.StudyIn .BannerWrapper {
     display: block;
     float: right;
     margin: .75em 0 .75em 1.75em
 }
 
-    #StudyIn .BannerWrapper span {
+    .StudyIn .BannerWrapper span {
         color: #3f5c6e;
         display: block;
         font-size: .75rem;
@@ -1055,12 +1055,12 @@ body #galactus h4 {
         text-align: center
     }
 
-#StudyIn [data-module="Banner:banner_adunit_country-pages-desktop"] > div {
+.StudyIn [data-module="Banner:banner_adunit_country-pages-desktop"] > div {
     display: none
 }
 
 @media(min-width:481px)and (max-width:768px) {
-    #StudyIn [data-module="Banner:banner_adunit_country-pages-desktop"] > div {
+    .StudyIn [data-module="Banner:banner_adunit_country-pages-desktop"] > div {
         display: inline-block;
         float: right;
         margin-left: 1em;
@@ -1069,7 +1069,7 @@ body #galactus h4 {
 }
 
 @media(min-width:769px)and (max-width:1024px) {
-    #StudyIn [data-module="Banner:banner_adunit_country-pages-desktop"] > div {
+    .StudyIn [data-module="Banner:banner_adunit_country-pages-desktop"] > div {
         display: inline-block;
         float: right;
         margin-left: 1em;
@@ -1078,7 +1078,7 @@ body #galactus h4 {
 }
 
 @media(min-width:1025px) {
-    #StudyIn [data-module="Banner:banner_adunit_country-pages-desktop"] > div {
+    .StudyIn [data-module="Banner:banner_adunit_country-pages-desktop"] > div {
         display: inline-block;
         float: right;
         margin-left: 1em;
@@ -1086,7 +1086,7 @@ body #galactus h4 {
     }
 }
 
-#StudyIn [data-module="Banner:banner_adunit_country-pages-desktop"] > div:after {
+.StudyIn [data-module="Banner:banner_adunit_country-pages-desktop"] > div:after {
     color: #3f5c6e;
     content: "Advertisement";
     display: block;
