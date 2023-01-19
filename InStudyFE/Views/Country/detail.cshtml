@@ -450,7 +450,7 @@
         <div  class="LineWrapper js-content-visa">
             <hr>
         </div>
-        <div data-module="Country:visa" id="Visa" style="padding: 20px;" class="Module StudyPortals_Shared_Modules_Country_Visa_Visa js-contentSwitchable js-content-visa Hidden">
+        <div data-module="Country:visa" id="Visa" style="padding: 20px;"class="Module StudyPortals_Shared_Modules_Country_Visa_Visa js-contentSwitchable js-content-visa Hidden">
             <article id="CountryVisa"></article>
         </div>
         <div class="ToggleButton js-contentButtons" style="padding: 20px;" data-id="work_permit"><span class="ToggleButtonTitle">Work permit</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
@@ -933,46 +933,46 @@
         <script src="~/js/layout.js"></script>
     <script src="~/js/contact.js"></script>
         <script>
-        $(document).ready(function () {
+        //$(document).ready(function () {
 
 
 
-            $("#contact_form").validate({
-                messages: {
+        //    $("#contact_form").validate({
+        //        messages: {
 
 
-                    requestName: { required: "Please enter a name", },
-                    lastName: { required: "Please enter a surname", },
-                    requestEmail: { required: "Please enter a valid email address", },
-                    phone: { required: "Please enter a valid phone number", },
-                    requestWhatsapp: { required: "Please enter a valid Whatsapp", },
-                    requestMessage: { required: "Please enter a valid description", },
+        //            requestName: { required: "Please enter a name", },
+        //            lastName: { required: "Please enter a surname", },
+        //            requestEmail: { required: "Please enter a valid email address", },
+        //            phone: { required: "Please enter a valid phone number", },
+        //            requestWhatsapp: { required: "Please enter a valid Whatsapp", },
+        //            requestMessage: { required: "Please enter a valid description", },
 
 
-                },
-                rules: {
-                    usernfidtxt: "required",
-                    first_name: "required",
-                    last_name: "required",
+        //        },
+        //        rules: {
+        //            usernfidtxt: "required",
+        //            first_name: "required",
+        //            last_name: "required",
 
-                    email: {// compound rule
-                        required: true,
-                        email: true,
-                    },
+        //            email: {// compound rule
+        //                required: true,
+        //                email: true,
+        //            },
 
-                    phone: {
-                        required: true,
-                        pattern: "^[0-9-+s()]*$",
-                    },
+        //            phone: {
+        //                required: true,
+        //                pattern: "^[0-9-+s()]*$",
+        //            },
 
-                },
+        //        },
 
-            });
-
-
+        //    });
 
 
-        });
+
+
+        //});
 
             function swith(id){
                 console.log(id);
