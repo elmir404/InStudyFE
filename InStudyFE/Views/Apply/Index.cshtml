@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="~/PhoneInput/css/intlTelInput.min.css">
 }
 <script>
-	call_locker = () => { console.log('called locker'); return false; }
+	call_locker = () => { console.log('#phone.value'); return false; }
 </script>
 
 <section class="ftco-section">
@@ -77,7 +77,7 @@
 
 										<div class=" col-md-12 " id="wpphone">
 											<label id="labelphone2" for="phone">Phone</label>
-											<input type="tel" class="form-control" id="phone2" placeholder="Phone number" required>
+											<input type="tel" class="form-control" id="phone2" placeholder="Phone number" />
 										</div>
 
 
@@ -101,7 +101,7 @@
 										<div id="box" class="row">
 											<div class="form-group col-md-6" id="requestDate">
 												<label id="labeltime" for="birthdaytime">Date (date and time):</label>
-												<input type="datetime-local" id="birthdaytime" name="birthdaytime" required>
+												<input type="datetime-local" id="birthdaytime" name="name">
 
 											</div>
 
@@ -109,7 +109,7 @@
 												<label id="labelonline" for="IsOnline">IsOnline</label>
 												<div class="form-control btn-group" id="requestType" data-toggle="buttons">
 													<label class="btn btn-default">
-														<input type="radio" name="IsOnline" autocomplete="off" required />
+														<input type="radio" name="IsOnline" autocomplete="off"  />
 														<span class="yes">Yes</span>
 													</label>
 													<label class="btn btn-default">
@@ -140,7 +140,7 @@
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
-											<input type="submit" id="requestSubmit" value="Send" class="btn btn-primary" required>
+											<input type="button" id="requestSubmit" value="Send" class="btn btn-primary" required>
 											<div class="submitting"></div>
 										</div>
 									</div>
@@ -168,18 +168,31 @@
 </section>
 @section Scripts{
 	<script src="~/PhoneInput/js/intlTelInput.js"></script>
-	<script>
-		var input = document.querySelector("#phone");
-		window.intlTelInput(input, {})
-	</script>
-
+	
 
 	<script src="~/PhoneInput2/js/intlTelInput.js"></script>
 
-	<script>
-		var input = document.querySelector("#phone2");
-		window.intlTelInput(input, {})
+	
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			$("#requestSubmit").on("click", function () {
+
+				if ($("#contact_form")[0].checkValidity()) {
+					var title = $("#contact_form [name='name']").val();
+
+
+					// ajax here
+				} else {
+					$("#contact_form")[0].reportValidity();
+				}
+
+
+			});
+		})
 	</script>
+
 	<script src="~/js/contact.js"></script>
 	<script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
 	<script>
