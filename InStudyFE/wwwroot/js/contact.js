@@ -226,7 +226,7 @@
     var re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         //var fullPhone = "+" + phone_number.selectedCountryData.dialCode + " " + $phone.val();
         //var fullWhatsapp = "+" + wp_number.selectedCountryData.dialCode + " " + $phone2.val();
-        console.log(full_number, whatsapp, full_number, whatsapp_res );
+        console.log(full_number, whatsapp, full_number_res, whatsapp_res );
     if ($email.val() == '' || !re.test($email.val())) {
         /*toastr.warning("Please provide valid Email!");*/
 
