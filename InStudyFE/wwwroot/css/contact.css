@@ -155,7 +155,7 @@ sup {
     margin-top:20px;
     margin-bottom:20px;
 }
-#wpphone2{
+#reswp{
     display: none;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -2195,15 +2195,10 @@ pre {
 }
 
 #box {
-    /* display: flex;
-    align-content: stretch;
-    justify-content: center;
-    align-items: stretch;
-    flex-direction: row;*/
    
     display: none;
 }
-#box2{
+#resbox{
     display:none;
 }
 

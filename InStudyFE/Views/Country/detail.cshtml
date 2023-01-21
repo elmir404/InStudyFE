@@ -302,7 +302,14 @@
                
             }
 
+            #resbox{
+                display:none;
+            }
+            #reswp{
+                display:none;
+                flex-wrap: wrap;
 
+            }
 
             .faq-section .faq-section-detail-text {
                 width: 100%;
@@ -747,18 +754,18 @@
                                                                             <label class="havewp" for="Wp">Have Whatsapp?</label>
                                                                             <div class="form-control btn-group requestWhatsapp" data-toggle="buttons">
                                                                                 <label class="btn btn-default">
-                                                                                    <input type="radio" name="wp" value="hide" autocomplete="off" required />
+                                                                                    <input type="radio" name="reswp" value="hide" autocomplete="off" required />
                                                                                       <span class="yes">Yes</span>
                                                                                 </label>
                                                                                 <label class="btn btn-default">
-                                                                                    <input type="radio" id="show2" name="wp" value="show" autocomplete="off" />
+                                                                                    <input type="radio" id="wpshow" name="reswp" value="show" autocomplete="off" />
                                                                                     <span class="no">No</span>
                                                                                 </label>
 
                                                                             </div>
                                                                         </div>
 
-                                                                        <div class=" col-md-6 " id="wpphone">
+                                                                        <div class=" col-md-12 " id="reswp">
                                                                             <label class="labelphone2" for="phone">Phone</label>
                                                                             <input type="tel" class="form-control phone2" id="wpphoneres"  placeholder="Phone number" required>
                                                                         </div>
@@ -772,18 +779,18 @@
                                                                             <label id="labelconsulted" for="consulted">Consulted</label>
                                                                             <div class="form-control btn-group" data-toggle="buttons">
                                                                                 <label class="btn btn-default">
-                                                                                    <input type="radio" id="show" name="example" value="show" autocomplete="off" required />
+                                                                                    <input type="radio" id="boxshow" name="resexample" value="show" autocomplete="off" required />
                                                                                     <span class="yes">Yes</span>
 
                                                                                 </label>
                                                                                 <label class="btn btn-default">
-                                                                                    <input type="radio" id="hide" name="example" value="hide" autocomplete="off" />
+                                                                                    <input type="radio" id="hide" name="resexample" value="hide" autocomplete="off" />
                                                                                     <span class="no">No</span>
 
                                                                                 </label>
                                                                             </div>
                                                                         </div>
-                                                                        <div id="box" class="row">
+                                                                        <div id="resbox" class="row">
                                                                             <div class="form-group col-md-6 requestDate" >
                                                                                 <label class="labeltime" for="birthdaytime">Date (date and time):</label>
                                                                                 <input type="datetime-local" class="birthdaytime" name="name" required>
@@ -827,7 +834,7 @@
                                                                     </div>
                                                                     <div class="col-md-12">
                                                                         <div class="form-group">
-                                                                            <input type="button"  value="Send" class="requestSubmit btn btn-primary" required>
+                                                                            <input type="button" id="requestSubmit" value="Send" class="requestSubmit btn btn-primary" required>
                                                                             <div class="submitting"></div>
                                                                         </div>
                                                                     </div>
@@ -957,6 +964,51 @@
         const radiobuttons2 = document.querySelectorAll('input[name="wp"]');
         radiobuttons2.forEach(radio => {
             radio.addEventListener('click', handleradioclick2);
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+        const resbox = document.getElementById('resbox');
+
+        function reshandleRadioClick() {
+           
+            if (document.getElementById('boxshow').checked) {
+                resbox.style.display = 'flex ';
+            } else {
+                resbox.style.display = 'none';
+            }
+        }
+
+        const resboxradio = document.querySelectorAll('input[name="resexample"]');
+        resboxradio.forEach(radio => {
+            radio.addEventListener('click', reshandleRadioClick);
+        });
+
+
+
+        const reswp = document.getElementById('reswp');
+
+        function reswphandleradioclick() {
+            
+            if (document.getElementById('wpshow').checked) {
+                reswp.style.display = 'flex ';
+            } else {
+                reswp.style.display = 'none';
+            }
+        }
+
+        const reswpradio = document.querySelectorAll('input[name="reswp"]');
+        reswpradio.forEach(radio => {
+            radio.addEventListener('click', reswphandleradioclick);
         });
 
 

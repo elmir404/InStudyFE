@@ -14,7 +14,7 @@
         $(`#requestName`).attr(`placeholder`, `Ad`);
         $(`#labelphone`).html("Telefon");
         $(`#phone`).attr(`placeholder`, `Əlaqə nömrəsi`);
-        $(`#labelphone2`).html("Telefon");
+        $(`#labelphone2`).html("WhatsApp nömrə");
         $(`#phone2`).attr(`placeholder`, `Əlaqə nömrəsi`);
         $(`#labeldescription`).html("Açıqlama");
         $(`#labeldate`).html('Tarix');
@@ -37,7 +37,7 @@
         $(`.requestName`).attr(`placeholder`, `Ad`);
         $(`.labelphone`).html("Telefon");
         $(`.phone`).attr(`placeholder`, `Əlaqə nömrəsi`);
-        $(`.labelphone2`).html("Telefon");
+        $(`.labelphone2`).html("WhatsApp nömrə");
         $(`.phone2`).attr(`placeholder`, `Əlaqə nömrəsi`);
         $(`.labeldescription`).html("Açıqlama");
         $(`.labeldate`).html('Tarix');
@@ -64,7 +64,7 @@
         $(`#requestName`).attr(`placeholder`, `Name`);
         $(`#labelphone`).html("Phone");
         $(`#phone`).attr(`placeholder`, `Contact number`);
-        $(`#labelphone2`).html("Phone");
+        $(`#labelphone2`).html("WhatsApp number");
         $(`#phone2`).attr(`placeholder`, `Contact number`);
         $(`#labeldescription`).html("Description");
         $(`#labeldate`).html('Date');
@@ -87,7 +87,7 @@
         $(`.requestName`).attr(`placeholder`, `Name`);
         $(`.labelphone`).html("Phone");
         $(`.phone`).attr(`placeholder`, `Contact number`);
-        $(`.labelphone2`).html("Phone");
+        $(`.labelphone2`).html("WhatsApp number");
         $(`.phone2`).attr(`placeholder`, `Contact number`);
         $(`.labeldescription`).html("Description");
         $(`.labeldate`).html('Date');
@@ -113,7 +113,7 @@
         $(`#requestName`).attr(`placeholder`, `Имя`);
         $(`#labelphone`).html("Телефон");
         $(`#phone`).attr(`placeholder`, `Контактный номер`);
-        $(`#labelphone2`).html("Телефон");
+        $(`#labelphone2`).html("Номер WhatsApp");
         $(`#phone2`).attr(`placeholder`, `Контактный номер`);
         $(`#labeldescription`).html("Oписание");
         $(`#labeltime`).html('Дата');
@@ -136,7 +136,7 @@
         $(`.requestName`).attr(`placeholder`, `Имя`);
         $(`.labelphone`).html("Телефон");
         $(`.phone`).attr(`placeholder`, `Контактный номер`);
-        $(`.labelphone2`).html("Телефон");
+        $(`.labelphone2`).html("Номер WhatsApp");
         $(`.phone2`).attr(`placeholder`, `Контактный номер`);
         $(`.labeldescription`).html("Oписание");
         $(`.labeltime`).html('Дата');
@@ -151,6 +151,30 @@
       
 
     }
+    var input = document.querySelector("#phone");
+    var phone_number = window.intlTelInput(input, {
+        separateDialCode: true,
+        preferredCountries: ["in"],
+        hiddenInput: "full",
+        utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+    })
+    var input = document.querySelector("#phone2");
+    var wp_number = window.intlTelInput(input, {
+        separateDialCode: true,
+        preferredCountries: ["in"],
+        hiddenInput: "full",
+        utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+    })
+
+
+
+
+
+
+
+
+
+
     var input = document.querySelector("#phoneres");
     var phonenumber= window.intlTelInput(input, {
         separateDialCode: true,
@@ -167,20 +191,7 @@
     })
 
 
-    var input = document.querySelector("#phone");
-    var phone_number = window.intlTelInput(input, {
-        separateDialCode: true,
-        preferredCountries: ["in"],
-        hiddenInput: "full",
-        utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
-    })
-    var input = document.querySelector("#phone2");
-    var wp_number = window.intlTelInput(input, {
-        separateDialCode: true,
-        preferredCountries: ["in"],
-        hiddenInput: "full",
-        utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
-    })
+   
     $(document).on('click', '#requestSubmit', async function () {
 
     $('form#contact_form .error').remove();
