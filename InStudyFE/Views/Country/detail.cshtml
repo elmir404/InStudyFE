@@ -264,7 +264,7 @@
             }
 
         .acc-content {
-            padding: 15px 10px;
+           
             display: none;
         }
 
@@ -418,31 +418,31 @@
             <hr>
         </div>
         
-        <div data-module="Country:study_in" id="StudyIn" style="padding: 20px;" class="Module StudyPortals_Shared_Modules_Country_StudyIn_StudyIn js-contentSwitchable js-content-study">
-            <div id="StudyIn">
+        <div data-module="Country:study_in" id="StudyIn" style="padding: 20px;" class="StudyIn Module StudyPortals_Shared_Modules_Country_StudyIn_StudyIn js-contentSwitchable js-content-study">
+            <div  class="StudyIn">
             </div>
         </div>
         <div class="ToggleButton js-contentButtons"  data-id="living"><span class="ToggleButtonTitle">Living</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
         <div class="LineWrapper js-content-living">
             <hr>
         </div>
-        <div data-module="Country:living" id="Living"  style="padding: 20px;" class="Module StudyPortals_Shared_Modules_Country_Living_Living js-contentSwitchable js-content-living Hidden">
+        <div data-module="Country:living" id="Living" style="padding: 20px;" class="Living Module StudyPortals_Shared_Modules_Country_Living_Living js-contentSwitchable js-content-living Hidden">
           
         </div>
         <div class="ToggleButton js-contentButtons"  data-id="about"><span class="ToggleButtonTitle">About</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
         <div class="LineWrapper js-content-about">
             <hr>
         </div>
-        <div data-module="Country:about" style="padding: 20px;" id="About" class="Module StudyPortals_Shared_Modules_Country_About_About js-contentSwitchable js-content-about Hidden">
-            <div id="About">  </div>
+        <div data-module="Country:about" id="About" style="padding: 20px;" class="About Module StudyPortals_Shared_Modules_Country_About_About js-contentSwitchable js-content-about Hidden">
+            <div class="About">  </div>
         </div>
         <div class="ToggleButton js-contentButtons" style="padding: 20px;" data-id="institutes"><span class="ToggleButtonTitle">Universities</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
         <div class="LineWrapper js-content-institutes">
             <hr>
         </div>
-        <div data-module="Country:institutes" style="padding: 20px;" id="Universities" class="Module StudyPortals_Shared_Modules_Country_Institutes_Institutes js-contentSwitchable js-content-institutes Hidden">
-            <div  id="CountryStudies">
-                <ul id="universityList" class="Content">
+        <div data-module="Country:institutes" id="Universities" style="padding: 20px;" class="Universities Module StudyPortals_Shared_Modules_Country_Institutes_Institutes js-contentSwitchable js-content-institutes Hidden">
+            <div  class="CountryStudies">
+                <ul  class="universityList Content">
                 </ul>
             </div>
         </div>
@@ -450,22 +450,22 @@
         <div  class="LineWrapper js-content-visa">
             <hr>
         </div>
-        <div data-module="Country:visa" id="Visa" style="padding: 20px;"class="Module StudyPortals_Shared_Modules_Country_Visa_Visa js-contentSwitchable js-content-visa Hidden">
-            <article id="CountryVisa"></article>
+        <div data-module="Country:visa" id="Visa" style="padding: 20px;" class="Visa Module StudyPortals_Shared_Modules_Country_Visa_Visa js-contentSwitchable js-content-visa Hidden">
+            <article class="Visa"></article>
         </div>
         <div class="ToggleButton js-contentButtons" style="padding: 20px;" data-id="work_permit"><span class="ToggleButtonTitle">Work permit</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
         <div  class="LineWrapper js-content-work_permit">
             <hr>
         </div>
-        <div data-module="Country:WorkPermitContent" id="Permit" style="padding: 20px;" class="Module StudyPortals_Shared_Modules_Country_WorkPermitContent_WorkPermitContent js-contentSwitchable js-content-work_permit Hidden">
-            <section  id="WorkPermitContent"></section>
+        <div data-module="Country:WorkPermitContent" id="Permit" style="padding: 20px;" class="Permit Module StudyPortals_Shared_Modules_Country_WorkPermitContent_WorkPermitContent js-contentSwitchable js-content-work_permit Hidden">
+            <section id="WorkPermitContent" class="WorkPermitContent"></section>
         </div>
         <div class="ToggleButton js-contentButtons" data-id="how_to_apply"><span class="ToggleButtonTitle">How to Apply<i class="lnricon lnr-sp-logo"></i></span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
         <div class="LineWrapper js-content-how_to_apply">
             <hr>
         </div>
-        <div data-module="Country:how_to_apply_content" style="padding: 0px;" id="Apply" class="Module StudyPortals_Shared_Modules_Country_HowToApply_HowToApply js-contentSwitchable js-content-how_to_apply Hidden">
-            <section id="HowToApplyContent">
+        <div data-module="Country:how_to_apply_content" id="Apply" style="padding: 0px;" class="Apply Module StudyPortals_Shared_Modules_Country_HowToApply_HowToApply js-contentSwitchable js-content-how_to_apply Hidden">
+            <section id="HowToApplyContent" class="HowToApplyContent">
                 <section class="ftco-section">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -483,36 +483,36 @@
                                                 <div id="form-message-success" class="mb-4">
                                                     Your message was sent, thank you!
                                                 </div>
-                                                <form id="contact_form" onsubmit="return call_locker();">
+                                                <form  onsubmit="return call_locker();">
                                                     <div class="row">
                                                         <div class="col-md-6 mb-2">
                                                             <div class="form-group">
                                                                 <label id="labelname" for="phone">Name</label>
-                                                                <input type="text" class="form-control" name="name" id="requestName" placeholder="Name" required>
+                                                                <input type="text" class="form-control requestName" name="name" id="requestName" placeholder="Name" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6 mb-2">
                                                             <div class="form-group">
                                                                 <label id="labellast" for="phone">Surname</label>
-                                                                <input type="text" class="form-control" name="name" id="lastName" placeholder="Lastname" required>
+                                                                <input type="text" class="form-control lastName" name="name" id="lastName" placeholder="Lastname" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-12 mb-2">
                                                             <div class="form-group">
                                                                 <label id="labelEmail" for="phone">Email</label>
-                                                                <input type="email" class="form-control" name="email" id="requestEmail" placeholder="Email" required>
+                                                                <input type="email" class="form-control requestEmail" name="email" id="requestEmail" placeholder="Email" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6 mb-2">
                                                             <label id="labelphone" for="phone">Phone</label>
-                                                            <input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
+                                                            <input type="tel" class="form-control phone" id="phone" placeholder="Phone number" required>
 
 
 
                                                         </div>
                                                         <div class=" col-md-6 mb-2">
                                                             <label id="havewp" for="Wp">Have Whatsapp</label>
-                                                            <div class="form-control btn-group" id="requestWhatsapp" data-toggle="buttons">
+                                                            <div class="form-control btn-group requestWhatsapp" id="requestWhatsapp" data-toggle="buttons">
                                                                 <label class="btn btn-default">
                                                                     <input type="radio" name="wp" value="hide" autocomplete="off" required />
                                                                     <span class="yes">Yes</span>
@@ -527,13 +527,13 @@
 
                                                         <div class=" col-md-12 " id="wpphone">
                                                             <label id="labelphone2" for="phone">Phone</label>
-                                                            <input type="tel" class="form-control" id="phone2" placeholder="Phone number" required>
+                                                            <input type="tel" class="form-control phone2" id="phone2" placeholder="Phone number" required>
                                                         </div>
 
 
                                                         <div class="form-group col-md-6" id="">
                                                             <label id="labeldescription" for="comment">Description:</label>
-                                                            <textarea class="form-control overflow-auto" rows="3" id="requestMessage" required></textarea>
+                                                            <textarea class="form-control overflow-auto requestMessage" rows="3" id="requestMessage" required></textarea>
                                                         </div>
                                                        <div class="form-group col-md-6">
 						<label id="labelconsulted" for="consulted">Consulted</label>
@@ -549,7 +549,7 @@
 					</div>
 					</div>
                                                         <div id="box" class="row">
-                                                            <div class="form-group col-md-6" id="requestDate">
+                                                            <div class="form-group col-md-6 requestDate" id="requestDate">
                                                                 <label id="labeltime" for="birthdaytime">Date (date and time):</label>
                                                                 <input type="datetime-local" id="birthdaytime" name="birthdaytime" required>
 
@@ -557,7 +557,7 @@
 
                                                             <div class="form-group col-md-6">
                                                                 <label id="labelonline" for="IsOnline">IsOnline</label>
-                                                                <div class="form-control btn-group" id="requestType" data-toggle="buttons">
+                                                                <div class="form-control btn-group requestType" id="requestType" data-toggle="buttons">
                                                                     <label class="btn btn-default">
                                                                         <input type="radio" name="IsOnline" autocomplete="off" required />
                                                                         <span class="yes">Yes</span>
@@ -574,23 +574,23 @@
 
                                                         <div class="form-group col-sm-4">
                                                             <label id="labelstcont" for="yourcontry"> Student Country</label>
-                                                            <select class="" id="requestStudentCountry" required>
+                                                            <select class="requestStudentCountry" id="requestStudentCountry" required>
                                                             </select>
                                                         </div>
                                                         <div class="form-group col-sm-4">
                                                             <label id="labelcont" for="yourcontry"> Country</label>
-                                                            <select multiple="multiple" class="" id="requestCountry" required>
+                                                            <select multiple="multiple" class="requestCountry" id="requestCountry" required>
                                                             </select>
                                                         </div>
                                                         <div class="form-group col-sm-4">
                                                             <label id="labeldirection" for="direction">Direction</label>
-                                                            <select class="" multiple="multiple" id="requestDirection" required>
+                                                            <select class="requestDirection" multiple="multiple" id="requestDirection" required>
                                                             </select>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input type="submit" id="requestSubmit" value="Send" class="btn btn-primary" required>
+                                                            <input type="button" id="requestSubmit" value="Send" class="requestSubmit btn btn-primary" required>
                                                             <div class="submitting"></div>
                                                         </div>
                                                     </div>
@@ -603,46 +603,7 @@
                             </div>
                         </div>
 
-                        <div id="contactDetail">
-
-                           @* <div id="map-responsive" class="map-responsive">
-                                <iframe src="rtgsf" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                            </div>*@
-                            <div class=" col-md-12 col-ms d-flex align-items-stretch" style="padding-top: 10px;">
-                                <div class="info-wrap bg-primary w-100 p-lg-5 p-8">
-                                    <h3 class="mb-8 mt-md-8" id="headerr">Bizimlə əlaqə</h3>
-                                    <div class="dbox w-100 d-flex align-items-center">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-map-marker"></span>
-                                        </div>
-                                        <div class="text pl-3">
-                                            <p><span>Ünvan:</span>rhsgfb</p>
-                                        </div>
-                                    </div>
-                                    <div class="dbox w-100 d-flex align-items-center">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-phone"></span>
-                                        </div>
-                                        <div class="text pl-3">
-                                            <p><span>Telefon:</span> <a href="tel:hesgrbdf">hesgrbdf</a></p>
-                                        </div>
-                                    </div>
-                                    <div class="dbox w-100 d-flex align-items-center">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-paper-plane"></span>
-                                        </div>
-                                        <div class="text pl-3">
-                                            <p><span>E-poçt:</span> <a href="rhgbf">rhgbf</a></p>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-                            </div>
-
-                        </div>
+                       
 
 
 
@@ -673,7 +634,7 @@
                             Study
                         </h2>
                         <div id="collaps" class="accordion-collapse collapse acc-content show">
-                            <div id="StudyIn" class="accordion-body">
+                            <div class="StudyIn accordion-body">
                             </div>
                         </div>
                     </div>
@@ -682,7 +643,7 @@
                             Living
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse acc-content collapse">
-                            <div id="Living" class="accordion-body">
+                            <div  class="Living accordion-body">
                             </div>
                         </div>
                     </div>
@@ -693,7 +654,7 @@
 
                         </h2>
                         <div id="collapseThree" class="accordion-collapse acc-content collapse">
-                            <div id="About" class="accordion-body"> </div>
+                            <div  class="About accordion-body"> </div>
                         </div>
                     </div>
                     <div class="accordion-item show">
@@ -703,7 +664,7 @@
 
                         </h2>
                         <div id="collapseThree" class="accordion-collapse acc-content collapse">
-                            <div id="CountryStudies" class="accordion-body">
+                            <div  class="CountryStudies accordion-body">
                             </div>
                         </div>
                     </div>
@@ -714,7 +675,7 @@
 
                         </h2>
                         <div id="collapseThree" class="accordion-collapse acc-content collapse">
-                            <div  id="CountryVisa" class="accordion-body">
+                            <div   class="Visa accordion-body">
                             </div>
                         </div>
                     </div>
@@ -725,7 +686,7 @@
 
                         </h2>
                         <div id="collapseThree" class="accordion-collapse acc-content collapse">
-                            <div id="WorkPermitContent" class="accordion-body">
+                            <div class="WorkPermitContent accordion-body">
                             </div>
                         </div>
                     </div>
@@ -741,7 +702,7 @@
                                     <section class="ftco-section">
                                         <div class="container">
                                             <div class="row justify-content-center">
-                                                <div class="col-md-12 text-center mb-5">
+                                                <div class="col-md-12 text-center ">
                                                 </div>
                                             </div>
                                             <div class="contact-form row rounded-0 justify-content-center">
@@ -749,7 +710,7 @@
                                                     <div class="wrapper">
                                                         <div class="row no-gutters">
                                                             <div class="contact-wrap w-100 p-md-5 p-4">
-                                                                <h3 class="mb-4" id="contactheader">Contact</h3>
+                                                                <h3 class="mb-4 contactheader" id="contactheader">Contact</h3>
                                                                 <div id="form-message-warning" class="mb-4"></div>
                                                                 <div id="form-message-success" class="mb-4">
                                                                     Your message was sent, thank you!
@@ -758,78 +719,88 @@
                                                                     <div class="row">
                                                                         <div class="col-md-6 mb-2">
                                                                             <div class="form-group">
-                                                                                <label id="labelname" for="phone">Name</label>
-                                                                                <input type="text" class="form-control" name="name" id="requestName" placeholder="Name" required>
+                                                                                <label class="labelname" for="phone">Name</label>
+                                                                                <input type="text" class="requestName form-control" name="name" placeholder="Name" required>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-md-6 mb-2">
                                                                             <div class="form-group">
-                                                                                <label id="labellast" for="phone">Surname</label>
-                                                                                <input type="text" class="form-control" name="name" id="lastName" placeholder="Lastname" required>
+                                                                                <label class="labellast" for="phone">Surname</label>
+                                                                                <input type="text" class="form-control lastName" name="name"  placeholder="Lastname" required>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-md-12 mb-2">
                                                                             <div class="form-group">
-                                                                                <label id="labelEmail" for="phone">Email</label>
-                                                                                <input type="email" class="form-control" name="email" id="requestEmail" placeholder="Email" required>
+                                                                                <label class="labelEmail" for="phone">Email</label>
+                                                                                <input type="email" class="form-control requestEmail" name="email"  placeholder="Email" required>
                                                                             </div>
                                                                         </div>
                                                                         <div col-md-6 mb-2">
-                                                                            <label id="labelphone" for="phone">Phone</label>
-                                                                            <input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
+                                                                            <label class="labelphone" for="phone">Phone</label>
+                                                                            <input type="tel" class="form-control phone" id="phoneres" placeholder="Phone number" required>
 
 
 
                                                                         </div>
                                                                         <div class=" col-md-6 mb-2">
-                                                                            <label id="havewp" for="Wp">Have Whatsapp?</label>
-                                                                            <div class="form-control btn-group" id="requestWhatsapp" data-toggle="buttons">
+                                                                            <label class="havewp" for="Wp">Have Whatsapp?</label>
+                                                                            <div class="form-control btn-group requestWhatsapp" data-toggle="buttons">
                                                                                 <label class="btn btn-default">
-                                                                                    <input type="radio" name="wp" value="hide" autocomplete="off" required />Yes
+                                                                                    <input type="radio" name="wp" value="hide" autocomplete="off" required />
+                                                                                      <span class="yes">Yes</span>
                                                                                 </label>
                                                                                 <label class="btn btn-default">
-                                                                                    <input type="radio" id="show2" name="wp" value="show" autocomplete="off" />No
+                                                                                    <input type="radio" id="show2" name="wp" value="show" autocomplete="off" />
+                                                                                    <span class="no">No</span>
                                                                                 </label>
 
                                                                             </div>
                                                                         </div>
 
                                                                         <div class=" col-md-6 " id="wpphone">
-                                                                            <label id="labelphone2" for="phone">Phone</label>
-                                                                            <input type="tel" class="form-control" id="phone2" placeholder="Phone number" required>
+                                                                            <label class="labelphone2" for="phone">Phone</label>
+                                                                            <input type="tel" class="form-control phone2" id="wpphoneres"  placeholder="Phone number" required>
                                                                         </div>
 
 
                                                                         <div class="form-group col-md-6" id="">
-                                                                            <label id="labeldescription" for="comment">Description:</label>
-                                                                            <textarea class="form-control overflow-auto" rows="3" id="requestMessage" required></textarea>
+                                                                            <label class="labeldescription" for="comment">Description:</label>
+                                                                            <textarea class="form-control overflow-auto requestMessage" rows="3"  required></textarea>
                                                                         </div>
                                                                         <div class="form-group col-md-6">
                                                                             <label id="labelconsulted" for="consulted">Consulted</label>
                                                                             <div class="form-control btn-group" data-toggle="buttons">
                                                                                 <label class="btn btn-default">
-                                                                                    <input type="radio" id="show" name="example" value="show" autocomplete="off" required />Yes
+                                                                                    <input type="radio" id="show" name="example" value="show" autocomplete="off" required />
+                                                                                    <span class="yes">Yes</span>
+
                                                                                 </label>
                                                                                 <label class="btn btn-default">
-                                                                                    <input type="radio" id="hide" name="example" value="hide" autocomplete="off" />No
+                                                                                    <input type="radio" id="hide" name="example" value="hide" autocomplete="off" />
+                                                                                    <span class="no">No</span>
+
                                                                                 </label>
                                                                             </div>
                                                                         </div>
                                                                         <div id="box" class="row">
-                                                                            <div class="form-group col-md-6" id="requestDate">
-                                                                                <label id="labeltime" for="birthdaytime">Date (date and time):</label>
-                                                                                <input type="datetime-local" id="birthdaytime" name="birthdaytime" required>
+                                                                            <div class="form-group col-md-6 requestDate" >
+                                                                                <label class="labeltime" for="birthdaytime">Date (date and time):</label>
+                                                                                <input type="datetime-local" class="birthdaytime" name="name" required>
 
                                                                             </div>
 
                                                                             <div class="form-group col-md-6">
-                                                                                <label id="labelonline" for="IsOnline">IsOnline</label>
-                                                                                <div class="form-control btn-group" id="requestType" data-toggle="buttons">
+                                                                                <label class="labelonline" for="IsOnline">IsOnline</label>
+                                                                                <div class="form-control btn-group requestType"  data-toggle="buttons">
                                                                                     <label class="btn btn-default">
-                                                                                        <input type="radio" name="IsOnline" autocomplete="off" required />Yes
+                                                                                        <input type="radio" name="IsOnline" autocomplete="off" required />
+                                                                                        <span class="yes">Yes</span>
+
                                                                                     </label>
                                                                                     <label class="btn btn-default">
-                                                                                        <input type="radio" name="IsOnline" autocomplete="off" />No
+                                                                                        <input type="radio" name="IsOnline" autocomplete="off" />
+                                                                                        <span class="no">No</span>
+
                                                                                     </label>
                                                                                 </div>
                                                                             </div>
@@ -838,24 +809,24 @@
 
 
                                                                         <div class="form-group col-sm-4">
-                                                                            <label id="labelstcont" for="yourcontry"> Student Country</label>
-                                                                            <select class="" id="requestStudentCountry" required>
+                                                                            <label class="labelstcont" for="yourcontry"> Student Country</label>
+                                                                            <select class="requestStudentCountry"  required>
                                                                             </select>
                                                                         </div>
                                                                         <div class="form-group col-sm-4">
-                                                                            <label id="labelcont" for="yourcontry"> Country</label>
-                                                                            <select multiple="multiple" class="" id="requestCountry" required>
+                                                                            <label class="labelcont" for="yourcontry"> Country</label>
+                                                                            <select multiple="multiple" class="requestCountry"  required>
                                                                             </select>
                                                                         </div>
                                                                         <div class="form-group col-sm-4">
-                                                                            <label id="labeldirection" for="direction">Direction</label>
-                                                                            <select class="" multiple="multiple" id="requestDirection" required>
+                                                                            <label class="labeldirection" for="direction">Direction</label>
+                                                                            <select class="requestDirection" multiple="multiple"  required>
                                                                             </select>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-12">
                                                                         <div class="form-group">
-                                                                            <input type="submit" id="requestSubmit" value="Send" class="btn btn-primary" required>
+                                                                            <input type="button"  value="Send" class="requestSubmit btn btn-primary" required>
                                                                             <div class="submitting"></div>
                                                                         </div>
                                                                     </div>
@@ -919,60 +890,15 @@
     @section Scripts{
 
     <script src="~/PhoneInput/js/intlTelInput.js"></script>
-    <script>
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {})
-    </script>
+   
     <script src="~/PhoneInput2/js/intlTelInput.js"></script>
 
-    <script>
-        var input = document.querySelector("#phone2");
-        window.intlTelInput(input, {})
-    </script>
+   
         <script src="~/js/country-detail.js"></script>
         <script src="~/js/layout.js"></script>
     <script src="~/js/contact.js"></script>
         <script>
-        //$(document).ready(function () {
-
-
-
-        //    $("#contact_form").validate({
-        //        messages: {
-
-
-        //            requestName: { required: "Please enter a name", },
-        //            lastName: { required: "Please enter a surname", },
-        //            requestEmail: { required: "Please enter a valid email address", },
-        //            phone: { required: "Please enter a valid phone number", },
-        //            requestWhatsapp: { required: "Please enter a valid Whatsapp", },
-        //            requestMessage: { required: "Please enter a valid description", },
-
-
-        //        },
-        //        rules: {
-        //            usernfidtxt: "required",
-        //            first_name: "required",
-        //            last_name: "required",
-
-        //            email: {// compound rule
-        //                required: true,
-        //                email: true,
-        //            },
-
-        //            phone: {
-        //                required: true,
-        //                pattern: "^[0-9-+s()]*$",
-        //            },
-
-        //        },
-
-        //    });
-
-
-
-
-        //});
+        
 
             function swith(id){
                 console.log(id);
@@ -1031,6 +957,10 @@
         radiobuttons2.forEach(radio => {
             radio.addEventListener('click', handleradioclick2);
         });
+
+
+
+
         </script>
         <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
 	<script>
@@ -1096,7 +1026,7 @@
 				'Access-Control-Allow-Origin': '*',
 
 			},
-			url: `https://api.instudy.net/api/Direction/GetActiveDirections`,
+            url: `https://api.instudy.net/api/Direction/GetActiveDirections`,
 
 			success: function (data) {
 				var html = [];

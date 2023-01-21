@@ -155,6 +155,11 @@ sup {
     margin-top:20px;
     margin-bottom:20px;
 }
+#wpphone2{
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 a {
     color: #007bff;
@@ -2198,7 +2203,9 @@ pre {
    
     display: none;
 }
-
+#box2{
+    display:none;
+}
 
 
 @media (prefers-reduced-motion: reduce) {

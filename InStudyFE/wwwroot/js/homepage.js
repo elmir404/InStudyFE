@@ -262,7 +262,7 @@
         success: function (data) {
             
             
-                    if (data?.data.facebookLink != null) {
+                    if (data?.data?.facebookLink != null) {
                         $("#faceIcon").append(
                             `
                                                 <a href="${data?.data?.facebookLink}" class="Link" target="_blank" rel="noopener" title="Like us on Facebook"> <i class="lnr-facebook SocialIcon"></i> </a> 
@@ -272,7 +272,7 @@
                             )
                     }
 
-            if (data?.data.facebookLink != null) {
+            if (data?.data?.linkedinLink != null) {
                 $("#linkIcon").append(
                     `
                                                 <a href="${data?.data?.linkedinLink}" class="Link" target="_blank" rel="noopener" title="Like us on Linkedin"> <i class="lnr-linkedin SocialIcon"></i> </a> 
@@ -282,7 +282,7 @@
                 )
             }
 
-            if (data?.data.facebookLink != null) {
+            if (data?.data?.instagramLink != null) {
                 $("#instaIcon").append(
                     `
                                                 <a href="${data?.data?.instagramLink}" class="Link" target="_blank" rel="noopener" title="Like us on Instagram"> <i class="lnr-instagram SocialIcon"></i> </a> 
@@ -292,7 +292,7 @@
                 )
             }
 
-            if (data?.data.facebookLink != null) {
+            if (data?.data?.youtubeLink != null) {
                 $("#ytbIcon").append(
                     `
                                                 <a href="${data?.data?.youtubeLink}" class="Link" target="_blank" rel="noopener" title="Like us on YouTube"> <i class="lnr-youtube SocialIcon"></i> </a> 
@@ -302,7 +302,7 @@
                 )
             }
 
-            if (data?.data.facebookLink != null) {
+            if (data?.data?.twitterLink != null) {
                 $("#twtrIcon").append(
                     `
                                                 <a href="${data?.data?.twitterLink}" class="Link" target="_blank" rel="noopener" title="Like us on Twitter"> <i class="lnr-twitter SocialIcon"></i> </a> 
