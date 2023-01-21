@@ -1,15 +1,15 @@
 ﻿$(document).ready(function () {
-    $('#duration-datatable').DataTable({
+    $('#attendecetype-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/Duration/GetDurationes',
+            url: 'https://api.instudy.net/api/AttendamceType/GetActiveAttendanceTypes',
             dataSrc: 'data'
         },
         columns: [
 
             {
-                data: 'date',
+                data: 'Title',
             },
-           
+
             {
                 data: 'id', render: function (data, type, row, meta) {
                     return `
@@ -18,9 +18,7 @@
                                 <span class="fe fe-trash-2"> </span>
 
                             </button>
-                            <button onclick=Edit(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-success">
-                                <i class="fe fe-edit"></i>
-                            </button>
+                           
                         </div>
 
                         `;
@@ -35,26 +33,22 @@
 
         ]
     });
-  
-    $("#addduration").click(function () {
+
+    $("#addAttendenceType").click(function () {
 
 
         var formData = new FormData();
-        formData.append('AzHeader', $("#azHeader").val());
-        formData.append('RuHeader', $("#ruHeader").val());
-        formData.append('EnHeader', $("#enHeader").val());
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
+        formData.append('Title', $("#attendeceType").val());
+    
         $.ajax({
             type: "POST",
-            url: 'https://api.instudy.net/api/Duration/AddDuration',
+            url: 'https://api.instudy.net/api/AttendamceType/AddAttendanceType',
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/GoStudy/List"
+                    location.href = "/Admin/Attendence/AttendenceTypeList"
                 }
                 else {
                     alert("error")
@@ -67,20 +61,20 @@
     });
 
 });
-function Edit(about) {
+//function Edit(about) {
 
-    localStorage.setItem('aboutId', about);
-    location.href = `/Admin/About/UpdateAbout`;
+//    localStorage.setItem('aboutId', about);
+//    location.href = `/Admin/About/UpdateAbout`;
 
-}
-function Delete(about) {
+//}
+function Delete(id) {
 
     $.ajax({
         type: "PUT",
-        url: `https://api.instudy.net/api/AboutCompany/DeleteAboutCompany?id=${about}`,
+        url: `https://api.instudy.net/api/AttendamceType/DeleteAttendanceType?Id=${id}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/Admin/About/AboutList`;
+                location.href = `/Admin/Attendence/AttendenceTypeList`;
             }
             else {
                 alert(result.message)
