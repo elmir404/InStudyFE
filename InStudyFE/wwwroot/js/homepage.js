@@ -3,7 +3,7 @@
     var $country = $('#CountrySpotlightContainer');
     var $partners = $('#partners');
     var $questionHeader = $('#questionHeader');
-    
+    $questions = $('#questionAcc');
     var $countryMenu = $('#countryMenu');
     var $countryHeader = $('#countryHeader');
     var $universityMenu = $('#universityMenu');
@@ -328,7 +328,7 @@
             headers: {
                 'Content-Type': 'application/json'
             },
-            url: `https://api.instudy.net/api/University/GetAllUniversities`,
+            url: `https://api.instudy.net/api/University/GetActiveUniversities`,
 
             success: function (data) {
                 $.each(

@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#gostudy-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/About/GetAbouts',
+            url: 'https://api.instudy.net/api/About/GetActiveAbouts',
             dataSrc: 'data'
         },
         columns: [

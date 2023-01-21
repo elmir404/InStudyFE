@@ -8,7 +8,7 @@ namespace InStudyFE.Areas.Admin.Controllers
         public IActionResult List()
         {
             return View();
-        } 
+        }  
         public IActionResult AddAttendence()
         {
             return View();
@@ -29,5 +29,6 @@ namespace InStudyFE.Areas.Admin.Controllers
         {
             return View();
         }
+        
     }
 }

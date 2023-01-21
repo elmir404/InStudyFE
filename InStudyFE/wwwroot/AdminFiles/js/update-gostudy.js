@@ -67,7 +67,7 @@
     })
     $("#updategoStudy").click(function () {
         var aboutId = $("#aboutId").val();
-       
+        var formData = new FormData();
         formData.append('AzHeader', $("#azHeader").val());
         formData.append('RuHeader', $("#ruHeader").val());
         formData.append('EnHeader', $("#enHeader").val());
