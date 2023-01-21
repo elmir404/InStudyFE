@@ -141,7 +141,7 @@
                                 <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">GoStudy</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="List" asp-controller="GoStudy">GoStudy List</a></li>
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddGoStudy" asp-controller="About">Add GoStudy</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddGoStudy" asp-controller="GoStudy">Add GoStudy</a></li>
                                      
                                      
                                 </ul>
@@ -237,15 +237,30 @@
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddBlog" asp-controller="Blog">Add Articles</a></li>
 
                                 </ul>
+                            </li>  
+                            <li class="sub-category">
+                                <h3>Attendence</h3>
+                            </li>
+                            <li class="slide">
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Attendence</span><i class="angle fe fe-chevron-right"></i></a>
+                                <ul class="slide-menu">
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="List" asp-controller="Attendence">Attendence List</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddAttendence" asp-controller="Attendence">Add Attendence</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="TypeList" asp-controller="Attendence">Attendence Type List</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddAttendenceType" asp-controller="Attendence">Add Attendence Type</a></li>
+
+                                </ul>
                             </li> 
                             <li class="sub-category">
                                 <h3>Duration</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Articles</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Duration</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="List" asp-controller="Blog">Articles List</a></li>
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddBlog" asp-controller="Blog">Add Articles</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="List" asp-controller="Duration">Duration List</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddDuration" asp-controller="Duration">Add Duration</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="DurationTypeList" asp-controller="Duration">Duration Type List</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddDurationType" asp-controller="Duration">Add Duration Type</a></li>
 
                                 </ul>
                             </li>

@@ -344,21 +344,21 @@
                     
                     <div data-module="" class="Module StudyPortals_Shared_Modules_Country_Conversion_Conversion"> </div>
                 </div>
-                <div class="colblock">
+                <div style="overflow: unset;" class="colblock">
                 <div class="HeaderSearch" >
                     <div data-module="" class="Module StudyPortals_Shared_Modules_HeaderSearch_HeaderSearch">
                         <div id="HeaderSearch" style="max-width: 39rem;">
                             <form class="Form" id="HomeSearchForm">
                                 <div class="InputWrapper">
                                     <input style="height:2.5rem;" id="programInputCon" type="text" value="" name="discipline" class="Keywords AutoCompleteInput" placeholder="Program" autocomplete="off" data-type="what" data-order="1">
-                                    <div id="program_div_con" class="AutoCompleteContainer " style="width: 197px;z-index:200">
+                                    <div id="program_div_con" class="AutoCompleteContainer Hidden " style="width: 197px;z-index:200">
                                         <ul id="programCon" class="AutoComplete"></ul>
                                     </div>
                                 </div>
                                 <div class="InputWrapper">
-                                    <input id="directionInput"  style="height:2.5rem;" type="text" value="" name="location" class="Keywords directionInput AutoCompleteInput" placeholder="Direction" autocomplete="off" data-type="where" data-order="2">
-                                    <div class="AutoCompleteContainer" style="width: 197px;">
-                                        <ul id="direction" class="AutoComplete" style="z-index:101;">
+                                    <input id="directionInputCon"  style="height:2.5rem;" type="text" value="" name="location" class="Keywords directionInput AutoCompleteInput" placeholder="Direction" autocomplete="off" data-type="where" data-order="2">
+                                    <div class="AutoCompleteContainer Hidden" id="direction_div_con" style="width: 197px;">
+                                        <ul id="directionCon" class="AutoComplete" style="z-index:101;">
                                             <li>sdasdsad</li>
                                             <li>sadsad</li>
                                             <li>asdsad</li>
@@ -367,7 +367,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <button type="submit" id="searchButton" style="height:2.5rem;" class="SearchButton"> <i class="lnr-magnifier SearchButtonIcon"></i> </button>
+                                <button type="submit" id="searchButtonCon" style="height:2.5rem;" class="SearchButton"> <i class="lnr-magnifier SearchButtonIcon"></i> </button>
                             </form>
                         </div>
                     </div>
@@ -394,7 +394,7 @@
                                 type="button" class="ContentButton about js-contentButtons" onclick="swith('About')" data-id="about"> About
                                  </button>
 
-                        <button type="button" class="ContentButton university js-contentButtons" onclick="swith('Universities')" data-id="institutes">
+                        <button type="button" class="ContentButton university js-contentButtons" onclick="swith('Universities')" data-id="institutes">           
                                 Universities </button>
 
                         <button type="button" onclick="swith('Visa')" class="ContentButton student-visa js-contentButtons"

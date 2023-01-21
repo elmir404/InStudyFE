@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#message-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/StudentRequest/GetStudentRequests',
+            url: 'https://api.instudy.net/api/StudentRequest/GetActiveStudentRequests',
             dataSrc: 'data'
         },
         columns: [

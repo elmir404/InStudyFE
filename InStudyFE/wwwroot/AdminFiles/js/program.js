@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#program-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/Program/GetPrograms',
+            url: 'https://api.instudy.net/api/Program/GetActivePrograms',
             dataSrc: 'data'
         },
         columns: [

@@ -83,12 +83,12 @@
 
     });
     $("#directionInput").focusin(function () {
-        const menuItem = document.getElementById('direction_div1');
+        const menuItem = document.getElementById('direction_div');
         menuItem.classList.remove("Hidden");
 
     });
     $("#directionInput").focusout(function () {
-        const menuItem = document.getElementById('direction_div1');
+        const menuItem = document.getElementById('direction_div');
         setTimeout(function delay() {
             menuItem.classList.add("Hidden");
         }, 200);
@@ -141,12 +141,7 @@
         }
     });
 
-    $("#directionInput").focusout(function () {
-        const menuItem = document.getElementById('direction_div');
-        setTimeout(function delay() {
-            menuItem.classList.add("Hidden");
-        }, 200);
-    });
+   
 
       
 });

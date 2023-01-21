@@ -312,10 +312,17 @@
 
 					}
 				)
-				$('#requestDirection').html(html.join('')).multipleSelect();
+				$('#requestDirection').html(html.join('')).multipleSelect({position: 'top'});
 			}
 
 		});
+	</script>
+	<script>
+		
+		$(document).ready(function () {
+			  var scrollTop = window.pageYOffset
+			  console.log("Position",scrollTop);
+			});
 	</script>
 	<script>
 

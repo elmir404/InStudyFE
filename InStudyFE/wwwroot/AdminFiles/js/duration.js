@@ -18,9 +18,7 @@
                                 <span class="fe fe-trash-2"> </span>
 
                             </button>
-                            <button onclick=Edit(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-success">
-                                <i class="fe fe-edit"></i>
-                            </button>
+                            
                         </div>
 
                         `;
@@ -35,17 +33,134 @@
 
         ]
     });
-  
+    $.ajax({
+        type: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        url: `https://api.instudy.net/api/University/GetActiveUniversities`,
+
+        success: function (data) {
+            $.each(
+                data.data, function (i, value) {
+
+                   
+
+                    
+
+                        $("#University").append(`
+                                                 <option value="${value.id}">${value.azName}</option>
+
+`
+                        );
+                  
+
+
+
+                }
+            )
+
+        }
+
+    });
+    $.ajax({
+        type: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        url: `https://api.instudy.net/api/Program/GetActivePrograms`,
+
+        success: function (data) {
+            $.each(
+                data.data, function (i, value) {
+
+                   
+
+                    
+
+                    $("#EducationProgram").append(`
+                                                 <option value="${value.id}">${value.azName}</option>
+
+`
+                        );
+                  
+
+
+
+                }
+            )
+
+        }
+
+    });
+    $.ajax({
+        type: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        url: `https://api.instudy.net/api/Speciality/GetActiveSpecialities`,
+
+        success: function (data) {
+            $.each(
+                data.data, function (i, value) {
+
+                   
+
+                    
+
+                    $("#Speciality").append(`
+                                                 <option value="${value.id}">${value.azName}</option>
+
+`
+                        );
+                  
+
+
+
+                }
+            )
+
+        }
+
+    });
+    $.ajax({
+        type: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        url: `https://api.instudy.net/api/DurationDate/GetActiveDurationDates`,
+
+        success: function (data) {
+            $.each(
+                data.data, function (i, value) {
+
+                   
+
+                    
+
+                    $("#DurationDate").append(`
+                                                 <option value="${value.id}">${value.Date}</option>
+
+`
+                        );
+                  
+
+
+
+                }
+            )
+
+        }
+
+    });
     $("#addduration").click(function () {
 
 
         var formData = new FormData();
-        formData.append('AzHeader', $("#azHeader").val());
-        formData.append('RuHeader', $("#ruHeader").val());
-        formData.append('EnHeader', $("#enHeader").val());
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
+        formData.append('UniversityId', $("#University").val());
+        formData.append('EducationProgramId', $("#EducationProgram").val());
+        formData.append('SpecialityId', $("#Speciality").val());
+        formData.append('DurationDateId', $("#DurationDate").val());
         $.ajax({
             type: "POST",
             url: 'https://api.instudy.net/api/Duration/AddDuration',
@@ -54,7 +169,7 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/GoStudy/List"
+                    location.href = "/Admin/Duration/List"
                 }
                 else {
                     alert("error")
@@ -66,21 +181,22 @@
 
     });
 
-});
-function Edit(about) {
 
-    localStorage.setItem('aboutId', about);
-    location.href = `/Admin/About/UpdateAbout`;
+});
+function Edit(id) {
+
+    localStorage.setItem('aboutId', id);
+    location.href = `/Admin/Duration/UpdateDuration`;
 
 }
-function Delete(about) {
+function Delete(id) {
 
     $.ajax({
         type: "PUT",
-        url: `https://api.instudy.net/api/AboutCompany/DeleteAboutCompany?id=${about}`,
+        url: `https://api.instudy.net/api/AboutCompany/DeleteAboutCompany?id=${id}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/Admin/About/AboutList`;
+                location.href = `/Admin/Duration/List`;
             }
             else {
                 alert(result.message)

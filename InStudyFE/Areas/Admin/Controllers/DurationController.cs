@@ -16,6 +16,18 @@ namespace InStudyFE.Areas.Admin.Controllers
 		public IActionResult UpdateDuration()
 		{
 			return View();
+		}	
+		public IActionResult DurationTypeList()
+		{
+			return View();
+		}
+		public IActionResult AddDurationType()
+		{
+			return View();
+		}
+		public IActionResult UpdateDurationType()
+		{
+			return View();
 		}
 	}
 }

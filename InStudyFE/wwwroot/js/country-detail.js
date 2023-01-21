@@ -145,7 +145,15 @@ ${workPermit}
 
         }
     });
-   
+    function searchProgramCon(name) {
+        var txtValue = name.textContent || name.innerText;
+
+        document.getElementById('programInputCon').value = txtValue;
+    }
+    function searchDirectionCon(name) {
+        var txtValue = name.textContent || name.innerText;
+        document.getElementById('directionInputCon').value = txtValue;
+    }
     $.ajax({
         type: 'GET',
         headers: {
@@ -234,7 +242,7 @@ ${workPermit}
     $("#directionInputCon").focusout(function () {
         const menuItem = document.getElementById('direction_div_con');
         setTimeout(function delay() {
-            //menuItem.classList.add("Hidden");
+            menuItem.classList.add("Hidden");
         }, 200);
 
 
@@ -252,17 +260,24 @@ ${workPermit}
             txtValue = li[i].textContent || li[i].innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
                 li[i].style.display = "";
-            } else {
+            }
+            else {
                 li[i].style.display = "none";
             }
         }
     });
 
-    $("#directionInputCon").focusout(function () {
-        const menuItem = document.getElementById('direction_div');
-        setTimeout(function delay() {
-            menuItem.classList.add("Hidden");
-        }, 200);
+    $(document).on('click', '#searchButtonCon', async function () {
+        console.log("adsadsad");
+        localStorage.setItem('program', $(`#programInputCon`).val());
+        localStorage.setItem('direction', $(`#directionInputCon`).val());
+        var empty = [];
+        localStorage.setItem('locationSearch', JSON.stringify(empty));
+        localStorage.setItem('disciplinesSearch', JSON.stringify(empty));
+        localStorage.setItem('durationsSearch', JSON.stringify(empty));
+        localStorage.setItem('attendenceSearch', JSON.stringify(empty));
+        localStorage.setItem('programSearch', JSON.stringify(empty));
+        location.href = "/Search";
     });
   
 });

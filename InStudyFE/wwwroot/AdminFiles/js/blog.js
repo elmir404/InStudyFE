@@ -1,7 +1,7 @@
 ﻿    $(document).ready(function () {
     $('#blog-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/Blogs/GetBlogs',
+            url: 'https://api.instudy.net/api/Blogs/GetActiveBlogs',
             dataSrc: 'data'
         },
         columns: [

@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#speciality-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/Speciality/GetSpecialities',
+            url: 'https://api.instudy.net/api/Speciality/GetActiveSpecialities',
             dataSrc: 'data'
         },
         columns: [
@@ -51,7 +51,6 @@
    
 
     $("#addSpeciality").click(function () {
-
         var formData = new FormData();
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
@@ -59,7 +58,8 @@
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
-   
+        formData.append('DirectionId', $("#directionid").val());
+         
         console.log(formData);
 
         $.ajax({
@@ -92,7 +92,7 @@ function Edit(id) {
 function Delete(speciality) {
 
     $.ajax({
-        type: "DELETE",
+        type: "PUT",
         url: `https://api.instudy.net/api/Speciality/DeleteSpeciality?id=${speciality}`,
         success: function (result) {
             if (result.success == true) {
