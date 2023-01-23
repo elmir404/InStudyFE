@@ -715,7 +715,7 @@
                                                                 <div id="form-message-success" class="mb-4">
                                                                     Your message was sent, thank you!
                                                                 </div>
-                                                                <form id="contact_form" onsubmit="return call_locker();">
+                                                                <form id="contact_formMob">
                                                                     <div class="row">
                                                                         <div class="col-md-6 mb-2">
                                                                             <div class="form-group">
@@ -810,23 +810,23 @@
 
                                                                         <div class="form-group col-sm-4">
                                                                             <label class="labelstcont" for="yourcontry"> Student Country</label>
-                                                                            <select class="requestStudentCountry"  required>
+                                                                            <select class="requestStudentCountry" id="requestStudentCountry"  required>
                                                                             </select>
                                                                         </div>
                                                                         <div class="form-group col-sm-4">
                                                                             <label class="labelcont" for="yourcontry"> Country</label>
-                                                                            <select multiple="multiple" class="requestCountry"  required>
+                                                                            <select multiple="multiple" id="requestCountryMob" class="requestCountry"  required>
                                                                             </select>
                                                                         </div>
                                                                         <div class="form-group col-sm-4">
                                                                             <label class="labeldirection" for="direction">Direction</label>
-                                                                            <select class="requestDirection" multiple="multiple"  required>
+                                                                            <select class="requestDirection" id="requestDirectionMob" multiple="multiple"  required>
                                                                             </select>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-12">
                                                                         <div class="form-group">
-                                                                            <input type="button"  value="Send" class="requestSubmit btn btn-primary" required>
+                                                                                <input type="button" value="Send" id="requestSubmitMob" class="requestSubmit btn btn-primary" required>
                                                                             <div class="submitting"></div>
                                                                         </div>
                                                                     </div>
@@ -987,7 +987,7 @@
 
 					}
 				)
-				$('#program').html(html.join('')).multipleSelect();
+				$('.program').html(html.join('')).multipleSelect();
 			}
 
 		});
@@ -1011,10 +1011,10 @@
 																		 `
 						);
 
-						$('#requestStudentCountry').append(`<option value="${value.id}">${value.enName}</option>`);
+						$('.requestStudentCountry').append(`<option value="${value.id}">${value.enName}</option>`);
 					}
 				)
-				$('#requestCountry').html(html.join('')).multipleSelect();
+				$('.requestCountry').html(html.join('')).multipleSelect();
 			}
 
 		});
@@ -1041,7 +1041,7 @@
 
 					}
 				)
-				$('#requestDirection').html(html.join('')).multipleSelect();
+				$('.requestDirection').html(html.join('')).multipleSelect();
 			}
 
 		});
