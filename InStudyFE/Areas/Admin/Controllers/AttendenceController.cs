@@ -2,13 +2,30 @@
 
 namespace InStudyFE.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class AttendenceController : Controller
     {
         public IActionResult List()
         {
             return View();
         }  
-        public IActionResult List()
+        public IActionResult AddAttendence()
+        {
+            return View();
+        } 
+        public IActionResult UpdateAttendence()
+        {
+            return View();
+        } 
+        public IActionResult AttendenceTypeList()
+        {
+            return View();
+        } 
+        public IActionResult AddAttendenceType()
+        {
+            return View();
+        } 
+        public IActionResult UpdateAttendenceType()
         {
             return View();
         }
