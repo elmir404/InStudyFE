@@ -20,7 +20,7 @@ $.ajax({
                 var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
                 var yyyy = date.getFullYear();
                 var time = yyyy + "/" + mm + "/" + dd;
-                if ($lang == 'AZ') {
+                    if ($lang == 'AZ') {
                     var name1 = value.azHeader
                     var description = value?.azDescription;
 

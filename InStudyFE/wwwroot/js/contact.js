@@ -151,6 +151,7 @@
       
 
     }
+
     var input = document.querySelector("#phone");
     var phone_number = window.intlTelInput(input, {
         separateDialCode: true,
