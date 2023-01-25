@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#onboarding-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/Header/GetHeaders',
+            url: 'https://api.instudy.net/api/Header/GetActiveHeaders',
             dataSrc: 'data'
         },
         columns: [
@@ -84,9 +84,9 @@
 
 
         var formData = new FormData();
-        formData.append('AzName', $("#azHeader").val());
-        formData.append('RuName', $("#ruHeader").val());
-        formData.append('EnName', $("#enHeader").val());
+        formData.append('AzTitle', $("#azHeader").val());
+        formData.append('EnTitle', $("#ruHeader").val());
+        formData.append('RuTitle', $("#enHeader").val());
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());

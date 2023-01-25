@@ -14,15 +14,7 @@
             {
                 data: 'ruQuestionTitle',
             },
-            {
-                data: 'azQuestionAnswer',
-            },
-            {
-                data: 'enQuestionAnswer',
-            },
-            {
-                data: 'ruQuestionAnswer',
-            },
+           
             {
                 data: 'id', render: function (data, type, row, meta) {
                     return `
@@ -90,7 +82,7 @@ function Delete(id) {
 
     $.ajax({
         type: "DELETE",
-        url: `https://api.instudy.net/api/Content/DeleteContent?id=${id}`,
+        url: `https://api.instudy.net/api/Question/DeleteQuestion?id=${id}`,
         success: function (result) {
             if (result.success == true) {
                 location.href = `/Admin/Content/QuestionList`;

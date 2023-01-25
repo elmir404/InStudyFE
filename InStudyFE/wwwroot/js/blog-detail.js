@@ -13,7 +13,7 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Blogs/GetBlogWithId?blogId=${linkValues[3]}`,
+        url: `https://api.instudy.net/api/Blogs/GetBlog?blogId=${linkValues[3]}`,
         success: function (data) {
             const date = new Date(data.data.regDate)
             console.log(data);

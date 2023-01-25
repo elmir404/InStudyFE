@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $('#attendecetype-datatable').DataTable({
+    $('#attendencetype-datatable').DataTable({
         ajax: {
             url: 'https://api.instudy.net/api/AttendamceType/GetActiveAttendanceTypes',
             dataSrc: 'data'
@@ -7,7 +7,7 @@
         columns: [
 
             {
-                data: 'Title',
+                data: 'title',
             },
 
             {
@@ -34,7 +34,7 @@
         ]
     });
 
-    $("#addAttendenceType").click(function () {
+    $("#addAttendeceType").click(function () {
 
 
         var formData = new FormData();

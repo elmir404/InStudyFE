@@ -366,15 +366,11 @@
                                     <input id="directionInputCon"  style="height:2.5rem;" type="text" value="" name="location" class="Keywords directionInput AutoCompleteInput" placeholder="Direction" autocomplete="off" data-type="where" data-order="2">
                                     <div class="AutoCompleteContainer Hidden" id="direction_div_con" style="width: 197px;">
                                         <ul id="directionCon" class="AutoComplete" style="z-index:101;">
-                                            <li>sdasdsad</li>
-                                            <li>sadsad</li>
-                                            <li>asdsad</li>
-                                            <li>asdasd</li>
-                                            <li>asdasdsad</li>
+                                           
                                         </ul>
                                     </div>
                                 </div>
-                                <button type="submit" id="searchButtonCon" style="height:2.5rem;" class="SearchButton"> <i class="lnr-magnifier SearchButtonIcon"></i> </button>
+                                <button type="button" id="searchButtonCon" style="height:2.5rem;" class="SearchButton"> <i class="lnr-magnifier SearchButtonIcon"></i> </button>
                             </form>
                         </div>
                     </div>
@@ -1098,5 +1094,16 @@
 
 		});
 	</script>
+    <script>
+         function searchProgramCon(name) {
+        var txtValue = name.textContent || name.innerText;
+
+        document.getElementById('programInputCon').value = txtValue;
+    }
+    function searchDirectionCon(name) {
+        var txtValue = name.textContent || name.innerText;
+        document.getElementById('directionInputCon').value = txtValue;
+    }
+    </script>
     }    
         

@@ -74,7 +74,7 @@
                         var description = value?.ruDescription;
 
                     }
-                    var image = `data:image/png;base64,${value?.universityFiles[0]?.bytes}`
+                    var image = `https://api.instudy.net/${value?.universityFiles[0]?.path}`
                     $(`#universities`).append(
                         `
                              <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail/${value.id}" target="_blank" class="ContentCard js-studyCard">

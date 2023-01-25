@@ -20,9 +20,6 @@
                 data: 'azHeader',
             },
             {
-                data: 'azBody',
-            },
-            {
                 data: 'id', render: function (data, type, row, meta) {
                     return `
                             <div class="btn-list">
@@ -86,7 +83,7 @@
 function Edit(id) {
 
     localStorage.setItem('contentId', id);
-    location.href = `/Admin/Content/UpdateContent`;
+    location.href = `/Admin/Content/UpdateHeader`;
 
 }
 function Delete(id) {

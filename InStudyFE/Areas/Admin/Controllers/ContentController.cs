@@ -38,6 +38,10 @@ namespace InStudyFE.Areas.Admin.Controllers
         {
             return View();
         }
+        public IActionResult ShowedQuestionList()
+        {
+            return View();
+        }
         public IActionResult UpdateShowedQuestions()
         {
             return View();

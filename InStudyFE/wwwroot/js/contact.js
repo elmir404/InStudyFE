@@ -175,25 +175,25 @@
 
 
 
-    var input = document.querySelector("#phoneres");
-    var phonenumber= window.intlTelInput(input, {
-        separateDialCode: true,
-        preferredCountries: ["in"],
-        hiddenInput: "full",
-        utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
-    })
-    var input = document.querySelector("#wpphoneres");
-    var wpnumber = window.intlTelInput(input, {
-        separateDialCode: true,
-        preferredCountries: ["in"],
-        hiddenInput: "full",
-        utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
-    })
+    //var input = document.querySelector("#phoneres");
+    //var phonenumber= window.intlTelInput(input, {
+    //    separateDialCode: true,
+    //    preferredCountries: ["in"],
+    //    hiddenInput: "full",
+    //    utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+    //})
+    //var input = document.querySelector("#wpphoneres");
+    //var wpnumber = window.intlTelInput(input, {
+    //    separateDialCode: true,
+    //    preferredCountries: ["in"],
+    //    hiddenInput: "full",
+    //    utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+    //})
 
 
    
     $(document).on('click', '#requestSubmit', async function () {
-
+        console.log("sdasdsdsad sdasdsadsa sadsadsadsa sadsadsad");
     $('form#contact_form .error').remove();
         debugger;
        
@@ -202,8 +202,8 @@
 
         var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
         var whatsapp = wp_number.getNumber(intlTelInputUtils.numberFormat.E164);
-        var full_number_res = phonenumber.getNumber(intlTelInputUtils.numberFormat.E164);
-        var whatsapp_res = wpnumber.getNumber(intlTelInputUtils.numberFormat.E164);
+        //var full_number_res = phonenumber.getNumber(intlTelInputUtils.numberFormat.E164);
+        //var whatsapp_res = wpnumber.getNumber(intlTelInputUtils.numberFormat.E164);
             
            
 
@@ -226,53 +226,51 @@
     var re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         //var fullPhone = "+" + phone_number.selectedCountryData.dialCode + " " + $phone.val();
         //var fullWhatsapp = "+" + wp_number.selectedCountryData.dialCode + " " + $phone2.val();
-        console.log(full_number, whatsapp, full_number_res, whatsapp_res );
+        console.log(full_number, whatsapp );
     if ($email.val() == '' || !re.test($email.val())) {
         /*toastr.warning("Please provide valid Email!");*/
-
+        $('#emailNameValidation').show();
         hasError = true;
     }
 
     if ($name.val() == '') {
         //toastr.warning("Please provide Your name!");
-
+        $('#nameValidation').show();
         hasError = true;
     }
     if ($lastname.val() == '') {
         //toastr.warning("Please provide Your name!");
-
+        $('#lastNameValidation').show();
         hasError = true;
     }
 
     if ($message.val() == '') {
         //toastr.warning("Please provide message!");
 
-
+        $('#messageValidation').show();
         hasError = true;
     }
     if ($phone.val() == '') {
         //toastr.warning("Please provide a phone number!");
-
+        $('#phnoneValidation').show();
         hasError = true;
     }
     if ($reqCountry.val() == '') {
         //toastr.warning("Please provide country!");
-
+        $('#cValidation').show();
         hasError = true;
     }
     if ($reqStudentCountry.val() == '') {
         //toastr.warning("Please provide country!");
-
+        $('#scValidation').show();
         hasError = true;
     }
-    if ($reqDirect.val() == '') {
-        //toastr.warning("Please provide direction!");
-
-        hasError = true;
-    }
-    if ($reqWhatsapp.val() == '') {
-
-    }
+    //if ($reqDirect.val() == '') {
+    //    //toastr.warning("Please provide direction!");
+    //    $('#rdValidation').show();
+    //    hasError = true;
+    //}
+   
     console.log($name.val());
     if (!hasError) {
         var url = "https://api.instudy.net/api/StudentRequest/AddStudentRequest";
@@ -286,8 +284,7 @@
         formData.append('HaveWhatsApp', $('input[name="wp"]:checked').val());
         formData.append('Phone', full_number);
         formData.append('WhatsAppPhone', whatsapp);
-        formData.append('Phone', full_number_res);
-        formData.append('WhatsAppPhone', whatsapp_res);
+       
         formData.append('ConsultationDate', $reqDate.val());
         formData.append('IsOnline', $('input[name="IsOnline"]:checked').val());
         formData.append('YourContryId', $reqStudentCountry.val());

@@ -73,7 +73,7 @@
 });
 function Edit(content) {
 
-    localStorage.setItem('contentId', content);
+    localStorage.setItem('questionId', content);
     location.href = `/Admin/Content/UpdateShowedQuestions`;
 
 }
@@ -81,7 +81,7 @@ function Delete(id) {
 
     $.ajax({
         type: "DELETE",
-        url: `https://api.instudy.net/api/AboutQuestion/DeleteAboutQuestion?id=${id}`,
+        url: `https://api.instudy.net/api/AboutQuestion/DeleteAboutQuestion?id?id=${id}`,
         success: function (result) {
             if (result.success == true) {
                 location.href = `/admin/Content/PageQuestion`;

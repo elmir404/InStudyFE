@@ -9810,7 +9810,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
 }
 
 #HeaderSearch form button:focus, #HeaderSearch form button:hover {
-    background: #f95c39cc;
+    background: #a2eacb;
     cursor: pointer
 }
 

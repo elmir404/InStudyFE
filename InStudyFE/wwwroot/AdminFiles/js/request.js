@@ -11,12 +11,15 @@
             { data: 'email' },
             { data: 'phone' },
 
-            { data: 'description' },
+            
             {
                 data: 'id', render: function (data, type, row, meta) {
                     return `<div class="btn-list">
                             <button onclick=Delete(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-danger">
                                 <span class="fe fe-trash-2"> </span>
+                            </button>
+ <button onclick=Edit(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-success">
+                                <i class="fe fe-edit"></i>
                             </button>
                         </div>
                         `;

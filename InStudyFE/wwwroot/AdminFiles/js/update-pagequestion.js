@@ -71,7 +71,7 @@
         formData.append('AzQuestionAnswer', $("#azDescription").val());
         formData.append('EnQuestionAnswer', $("#enDescription").val());
         formData.append('RuQuestionAnswer', $("#ruDescription").val());
-     
+
         console.log(formData);
 
         $.ajax({

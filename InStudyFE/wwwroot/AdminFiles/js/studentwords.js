@@ -38,10 +38,13 @@
     $("#addWords").click(function () {
         var formData = new FormData();
         formData.append('Name', $("#azHeader").val());
+        var files = $("#files").get(0).files;
         formData.append('Description', $("#azDescription").val());
         formData.append('CountryId', $("#country").val());
         formData.append('IsActive', 'True');
-       
+        for (var i = 0; i < files.length; i++) {
+            formData.append('Files', files[i]);
+        }
         console.log(formData);
 
         $.ajax({

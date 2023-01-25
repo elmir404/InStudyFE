@@ -92,7 +92,7 @@
         formData.append('RuDescription', $("#ruDescription").val());
         $.ajax({
             type: "POST",
-            url: 'https://api.instudy.net/api/About/AddAbouts',
+            url: 'https://api.instudy.net/api/About/AddAbout',
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
@@ -120,7 +120,7 @@ function Edit(about) {
 function Delete(about) {
 
     $.ajax({
-        type: "DELETE",
+        type: "PUT",
         url: `https://api.instudy.net/api/About/DeleteAbout?aboutId=${about}`,
         success: function (result) {
             if (result.success == true) {

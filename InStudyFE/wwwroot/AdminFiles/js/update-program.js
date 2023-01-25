@@ -7,7 +7,7 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Program/GetProgram/id?programId=${programId}`,
+        url: `https://api.instudy.net/api/Program/GetProgram?programId=${programId}`,
         success: function (data) {
 
             console.log(data);

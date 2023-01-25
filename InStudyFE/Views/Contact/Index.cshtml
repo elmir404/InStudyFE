@@ -32,24 +32,33 @@
 				      		<div id="form-message-success" class="mb-4">
 				            Your message was sent, thank you!
 				      		</div>
-								<form id="contact_form" onsubmit="return call_locker();">
+								<form id="contact_form">
 										<div class="row">
 											<div class="col-md-6 mb-2">
 												<div class="form-group">
 												<label id="labelname"for="phone">Name</label>
 													<input type="text" class="form-control" name="name" id="requestName" placeholder="Name" required>
+													<div id="nameValidation" class="invalid-feedback">
+														Please type name.
+													</div>
 												</div>
 											</div>
 										<div class="col-md-6 mb-2">
 												<div class="form-group">
 												<label id="labellast" for="phone">Surname</label>
 													<input type="text" class="form-control" name="lastname" id="lastName" placeholder="Lastname" required>
+													<div id="lastNameValidation" class="invalid-feedback">
+        Please type a last name.
+      </div>
 												</div>
 											</div>
 										<div class="col-md-12 mb-2">
 											<div class="form-group">
 												<label id="labelEmail" for="phone">Email</label>
 													<input type="email" class="form-control" name="email" id="requestEmail" placeholder="Email" required>
+													<div id="emailNameValidation" class="invalid-feedback">
+														Please choose a email.
+													</div>
 												</div>
 											</div>
 							
@@ -57,6 +66,9 @@
 												<div class="col-md-6 mb-2">
 												<label id="labelphone" for="phone">Phone</label>
 												<input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
+												<div id="phnoneValidation" class="invalid-feedback">
+        Please choose a phone number.
+      </div>
 
 											</div>
 											
@@ -74,11 +86,18 @@
 												</label>
 
 											</div>
+												<div id="whtspValidation" class="invalid-feedback">
+													Please choose a username.
+												</div>
+
 										</div>
 
 										<div class=" col-md-12 " id="wpphone">
 											<label id="labelphone2" for="phone">WhatsApp</label>
 											<input type="tel" class="form-control" id="phone2" placeholder="Phone number" >
+												<div id="wpValidation" class="invalid-feedback">
+													Please choose a WhatsApp number.
+												</div>
 										</div>
 
 
@@ -87,6 +106,9 @@
 										<div class="form-group col-md-6" id="">
 											<label id="labeldescription" for="comment">Description:</label>
 												<textarea class="form-control overflow-auto" name="name" rows="3" id="requestMessage" required></textarea  >
+												<div id="messageValidation" class="invalid-feedback">
+													Please type a message.
+												</div>
 										</div>
 					<div class="form-group col-md-6">
 						<label id="labelconsulted" for="consulted">Consulted</label>
@@ -100,12 +122,15 @@
 								<span class="no">No</span>
 							</label>
 					</div>
+												
 					</div>
 					<div id="box" class="row">
 						<div class="form-group col-md-6" id="requestDate">
 						<label id="labeltime" for="birthdaytime">Date (date and time):</label>
 						<input type="datetime-local" id="birthdaytime" name="birthdaytime" >
-
+					<div class="invalid-feedback">
+						Please choose a username.
+					  </div>
 					</div>
 					
 											<div class="form-group col-md-6">
@@ -129,23 +154,32 @@
 						<label id="labelstcont"for="yourcontry"> Student Country</label>
 											<select class="" id="requestStudentCountry" required>
 							</select>
+												<div id="scValidation" class="invalid-feedback">
+													Please choose a country.
+												</div>
 							</div>
 							<div class="form-group col-sm-4">
 						<label id="labelcont" for="yourcontry"> Country</label>
 												<select multiple="multiple" class="" id="requestCountry" required>
 							
 							</select>
+								<div id="cValidation" class="invalid-feedback">
+        Please choose country.
+      </div>
 							</div>
 							<div class="form-group col-sm-4">
 						<label id="labeldirection" for="direction">Direction</label>
 												<select class="" multiple="multiple" id="requestDirection" required>
 							
 						</select>
+												<div id="rdValidation" class="invalid-feedback">
+													Please choose direction.
+												</div>
 					</div>
 										</div>
 										<div class="col-md-12">
 												<div class="form-group">
-												<input type="button" id="requestSubmit" value="Send" class="btn btn-primary" required>
+												<button type="button" id="requestSubmit"  class="btn btn-primary" required></button>
 													<div class="submitting"></div>
 												</div>
 											</div>
@@ -180,11 +214,11 @@
 	<script src="~/PhoneInput2/js/intlTelInput.js"></script>
 
 	  
-		<script src="~/js/contact.js"></script>
+		<script src="~/js/contact.js"></script>	
 	<script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
 
 
-	<script type="text/javascript">
+	@*<script type="text/javascript">
 		$(document).ready(function () {
 
 			$("#requestSubmit").on("click", function () {
@@ -201,7 +235,7 @@
 
 			});
 		})
-	</script>
+	</script>*@
 
 
 	<script>

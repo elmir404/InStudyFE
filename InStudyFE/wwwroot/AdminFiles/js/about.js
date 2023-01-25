@@ -103,7 +103,7 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/About/List"
+                    location.href = "/Admin/About/AboutList"
                 }
                 else {
                     alert("error")

@@ -145,15 +145,7 @@ ${workPermit}
 
         }
     });
-    function searchProgramCon(name) {
-        var txtValue = name.textContent || name.innerText;
-
-        document.getElementById('programInputCon').value = txtValue;
-    }
-    function searchDirectionCon(name) {
-        var txtValue = name.textContent || name.innerText;
-        document.getElementById('directionInputCon').value = txtValue;
-    }
+   
     $.ajax({
         type: 'GET',
         headers: {
