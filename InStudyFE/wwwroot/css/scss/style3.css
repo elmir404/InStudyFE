@@ -3105,7 +3105,7 @@ form#SingleBottomSearch.Form .SearchButton .SearchIcon, form#SingleSearch.Form .
 }
 
 #HeaderLoggedIn .HeaderUnibuddyLinkContainer, #HeaderLogin .HeaderUnibuddyLinkContainer {
-    color: #247ba0;
+    color: #000;
     text-decoration: none
 }
 

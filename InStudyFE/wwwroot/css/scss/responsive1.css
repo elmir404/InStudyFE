@@ -1965,9 +1965,9 @@ body[data-wishlist-drawer]{
     font-size:1.55rem;
     vertical-align:top
 }
-#HeaderLoggedIn .HeaderUnibuddyLinkContainer,#HeaderLogin .HeaderUnibuddyLinkContainer{
-    color:#247ba0;
-    text-decoration:none
+#HeaderLoggedIn .HeaderUnibuddyLinkContainer, #HeaderLogin .HeaderUnibuddyLinkContainer {
+    color: #247ba0;
+    text-decoration: none
 }
 @media (min-width:769px)and (max-width:1024px){
     #HeaderLoggedIn .HeaderUnibuddyLinkContainer,#HeaderLogin .HeaderUnibuddyLinkContainer{
@@ -2962,15 +2962,51 @@ body[data-wishlist-drawer]{
     color:#fff
 }
 @media (min-width:769px)and (max-width:1024px){
-    #FooterSocialMediaIcons .ListItem .Link:hover{
-        background:#fff;
-        color:#f95c39
+    #FooterSocialMediaIcons .ListItem .faceicon:hover {
+        background: #fff;
+        color: #3b5998
+    }
+}
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .linkicon:hover {
+        background: #fff;
+        color: #0077b5
+    }
+}
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .instaicon:hover {
+        background: #fff;
+        color: #f95c39
+    }
+}
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .youicon:hover {
+        background: #fff;
+        color: #cd201f
     }
 }
 @media (min-width:1025px){
-    #FooterSocialMediaIcons .ListItem .Link:hover{
-        background:#fff;
-        color:#f95c39
+    #FooterSocialMediaIcons .ListItem .faceicon:hover {
+        background: #fff;
+        color: #3b5998
+    }
+}
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .instaicon:hover {
+        background: #fff;
+        color: #f95c39
+    }
+}
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .youicon:hover {
+        background: #fff;
+        color: #cd201f
+    }
+}
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .linkicon:hover {
+        background: #fff;
+        color: #0077b5
     }
 }
 #FooterAddToHomescreen .Link{

@@ -473,7 +473,7 @@ button,input,option,select,textarea{
 }
 @media (min-width:1025px){
     #Footer #FooterScrollToTopWrapper{
-        top:-9rem
+        top:-6rem
     }
 }
 #Footer #FooterMain{
@@ -497,7 +497,7 @@ button,input,option,select,textarea{
 @media (min-width:1025px){
     #Footer #FooterMain {
         background: #6C39C5;
-        padding: 6rem 0
+        padding: 3rem 0
     }
 }
 #Footer #FooterMain .FooterMainCol1{
@@ -532,7 +532,7 @@ button,input,option,select,textarea{
     transform:skewX(-45deg)
 }
 #Footer .BgBars .BgBarA {
-    background: #3a157f;
+    background: #6C39C5;
     flex: 1 0 40%;
     transform-origin: top left
 }

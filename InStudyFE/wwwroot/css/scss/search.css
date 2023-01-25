@@ -819,7 +819,7 @@ body[data-wishlist-drawer] {
 }
 
 #HeaderLoggedIn .HeaderUnibuddyLinkContainer, #HeaderLogin .HeaderUnibuddyLinkContainer {
-    color: #247ba0;
+    color: #000;
     text-decoration: none
 }
 
@@ -1246,7 +1246,7 @@ body[data-wishlist-drawer] {
 
     #HeaderMainMenu .SectionNavigationItem .SectionNavigationLink {
         align-items: center;
-        color: #247ba0;
+        color: #000;
         cursor: pointer;
         display: flex;
         flex-direction: row;
