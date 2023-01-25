@@ -121,7 +121,7 @@ function Delete(id) {
 
     $.ajax({
         type: "PUT",
-        url: `https://api.instudy.net/api/Direction/GetDirection?id=${id}`,
+        url: `https://api.instudy.net/api/Direction/DeleteDirection?id=${id}`,
         success: function (result) {
             if (result.success == true) {
                 location.href = `/Admin/Direction/DirectionList`;

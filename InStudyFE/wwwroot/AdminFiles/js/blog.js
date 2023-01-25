@@ -92,7 +92,7 @@ function Edit(blog) {
 function Delete(blog) {
 
     $.ajax({
-        type: "DELETE",
+        type: "PUT",
         url: `https://api.instudy.net/api/Blogs/DeleteBlog?blogId=${blog}`, 
         success: function (result) {
             if (result.success == true) {

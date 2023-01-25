@@ -97,7 +97,7 @@ function Edit(id) {
 function Delete(id) {
 
     $.ajax({
-        type: "DELETE",
+        type: "PUT",
         url: `https://api.instudy.net/api/Partner/DeletePartner?id=${id}`,
         success: function (result) {
             if (result.success == true) {

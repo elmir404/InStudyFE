@@ -1,4 +1,4 @@
-﻿
+﻿<!--app-content open-->
 <div class="main-content app-content mt-0">
     <div class="side-app">
 
@@ -27,15 +27,18 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <a class="btn btn-primary mb-4 data-table-btn" asp-area="Admin" asp-action="AddAttendenceType" asp-controller="Attendence">
-                                    Add Attendence Type
+                                <a class="btn btn-primary mb-4 data-table-btn" asp-area="Admin" asp-action="AddPageQuestion" asp-controller="Content">
+                                    Add Page Question
                                 </a>
-                                <!-- Modal -->
+
                                 @*<button id="button" class="btn btn-primary mb-4 data-table-btn">Add Task</button>*@
-                                <table id="attendencetype-datatable" class="table table-bordered text-nowrap border-bottom">
+                                <table id="question-datatable" class="table table-bordered text-nowrap border-bottom">
                                     <thead>
                                         <tr>
-                                            <th class="border-bottom-0">Title</th>
+                                            <th class="border-bottom-0">Question Title(Az)</th>
+                                            <th class="border-bottom-0">Question Title(En) </th>
+                                            <th class="border-bottom-0">Question Title(Ru)</th>
+
                                             <th class="border-bottom-0">Action</th>
                                         </tr>
                                     </thead>
@@ -56,11 +59,6 @@
 
     </div>
 </div>
-<!--app-content closed-->
-        
-
-<!-- Sidebar-right -->
 @section Scripts {
-    <script src="~/AdminFiles/js/attendence-type.js"></script>
+    <script src="~/AdminFiles/js/question.js"></script>
         }
-

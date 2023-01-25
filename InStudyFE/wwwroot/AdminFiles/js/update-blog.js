@@ -7,7 +7,7 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Blogs/GetBlogWithId?blogId=${blogId}`,
+        url: `https://api.instudy.net/api/Blogs/GetBlog?blogId=${blogId}`,
         success: function (data) {
 
             console.log(data);

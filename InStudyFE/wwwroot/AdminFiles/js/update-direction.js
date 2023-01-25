@@ -54,17 +54,16 @@
                                     <textarea class="content" id="enDescription"  name="example">${data.data.enDescription}</textarea>
                                 </div>
                             </div>
-                            <!--Row-->
                             <div class="row">
-                                <label class="col-md-3 form-label mb-4">About Upload :</label>
-                                <div class="col-md-9">
-                                    <input id="files" type="file" name="files" accept=".jpg, .png, image/jpeg, image/png" multiple>
-                                </div>
+                            <label class="col-md-3 form-label mb-4">Icon Svg :</label>
+                            <div class="col-md-9 mb-4">
+                                <textarea class="content" id="icon" name="example"></textarea>
                             </div>
+                        </div>
                         
                         `
             )
-
+            $('.content').richText();
 
 
         }

@@ -302,14 +302,7 @@
                
             }
 
-            #resbox{
-                display:none;
-            }
-            #reswp{
-                display:none;
-                flex-wrap: wrap;
 
-            }
 
             .faq-section .faq-section-detail-text {
                 width: 100%;
@@ -366,15 +359,11 @@
                                     <input id="directionInputCon"  style="height:2.5rem;" type="text" value="" name="location" class="Keywords directionInput AutoCompleteInput" placeholder="Direction" autocomplete="off" data-type="where" data-order="2">
                                     <div class="AutoCompleteContainer Hidden" id="direction_div_con" style="width: 197px;">
                                         <ul id="directionCon" class="AutoComplete" style="z-index:101;">
-                                            <li>sdasdsad</li>
-                                            <li>sadsad</li>
-                                            <li>asdsad</li>
-                                            <li>asdasd</li>
-                                            <li>asdasdsad</li>
+                                           
                                         </ul>
                                     </div>
                                 </div>
-                                <button type="submit" id="searchButtonCon" style="height:2.5rem;" class="SearchButton"> <i class="lnr-magnifier SearchButtonIcon"></i> </button>
+                                <button type="button" id="searchButtonCon" style="height:2.5rem;" class="SearchButton"> <i class="lnr-magnifier SearchButtonIcon"></i> </button>
                             </form>
                         </div>
                     </div>
@@ -722,7 +711,7 @@
                                                                 <div id="form-message-success" class="mb-4">
                                                                     Your message was sent, thank you!
                                                                 </div>
-                                                                <form id="contact_form" onsubmit="return call_locker();">
+                                                                <form id="contact_formMob">
                                                                     <div class="row">
                                                                         <div class="col-md-6 mb-2">
                                                                             <div class="form-group">
@@ -753,18 +742,18 @@
                                                                             <label class="havewp" for="Wp">Have Whatsapp?</label>
                                                                             <div class="form-control btn-group requestWhatsapp" data-toggle="buttons">
                                                                                 <label class="btn btn-default">
-                                                                                    <input type="radio" name="reswp" value="hide" autocomplete="off" required />
+                                                                                    <input type="radio" name="wp" value="hide" autocomplete="off" required />
                                                                                       <span class="yes">Yes</span>
                                                                                 </label>
                                                                                 <label class="btn btn-default">
-                                                                                    <input type="radio" id="wpshow" name="reswp" value="show" autocomplete="off" />
+                                                                                    <input type="radio" id="show2" name="wp" value="show" autocomplete="off" />
                                                                                     <span class="no">No</span>
                                                                                 </label>
 
                                                                             </div>
                                                                         </div>
 
-                                                                        <div class=" col-md-12 " id="reswp">
+                                                                        <div class=" col-md-6 " id="wpphone">
                                                                             <label class="labelphone2" for="phone">Phone</label>
                                                                             <input type="tel" class="form-control phone2" id="wpphoneres"  placeholder="Phone number" required>
                                                                         </div>
@@ -778,18 +767,18 @@
                                                                             <label id="labelconsulted" for="consulted">Consulted</label>
                                                                             <div class="form-control btn-group" data-toggle="buttons">
                                                                                 <label class="btn btn-default">
-                                                                                    <input type="radio" id="boxshow" name="resexample" value="show" autocomplete="off" required />
+                                                                                    <input type="radio" id="show" name="example" value="show" autocomplete="off" required />
                                                                                     <span class="yes">Yes</span>
 
                                                                                 </label>
                                                                                 <label class="btn btn-default">
-                                                                                    <input type="radio" id="hide" name="resexample" value="hide" autocomplete="off" />
+                                                                                    <input type="radio" id="hide" name="example" value="hide" autocomplete="off" />
                                                                                     <span class="no">No</span>
 
                                                                                 </label>
                                                                             </div>
                                                                         </div>
-                                                                        <div id="resbox" class="row">
+                                                                        <div id="box" class="row">
                                                                             <div class="form-group col-md-6 requestDate" >
                                                                                 <label class="labeltime" for="birthdaytime">Date (date and time):</label>
                                                                                 <input type="datetime-local" class="birthdaytime" name="name" required>
@@ -817,23 +806,23 @@
 
                                                                         <div class="form-group col-sm-4">
                                                                             <label class="labelstcont" for="yourcontry"> Student Country</label>
-                                                                            <select class="requestStudentCountry"  required>
+                                                                            <select class="requestStudentCountry" id="requestStudentCountry"  required>
                                                                             </select>
                                                                         </div>
                                                                         <div class="form-group col-sm-4">
                                                                             <label class="labelcont" for="yourcontry"> Country</label>
-                                                                            <select multiple="multiple" class="requestCountry"  required>
+                                                                            <select multiple="multiple" id="requestCountryMob" class="requestCountry"  required>
                                                                             </select>
                                                                         </div>
                                                                         <div class="form-group col-sm-4">
                                                                             <label class="labeldirection" for="direction">Direction</label>
-                                                                            <select class="requestDirection" multiple="multiple"  required>
+                                                                            <select class="requestDirection" id="requestDirectionMob" multiple="multiple"  required>
                                                                             </select>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-12">
                                                                         <div class="form-group">
-                                                                            <input type="button" id="requestSubmit" value="Send" class="requestSubmit btn btn-primary" required>
+                                                                                <input type="button" value="Send" id="requestSubmitMob" class="requestSubmit btn btn-primary" required>
                                                                             <div class="submitting"></div>
                                                                         </div>
                                                                     </div>
@@ -968,51 +957,6 @@
 
 
 
-
-
-
-
-
-
-
-
-        const resbox = document.getElementById('resbox');
-
-        function reshandleRadioClick() {
-           
-            if (document.getElementById('boxshow').checked) {
-                resbox.style.display = 'flex ';
-            } else {
-                resbox.style.display = 'none';
-            }
-        }
-
-        const resboxradio = document.querySelectorAll('input[name="resexample"]');
-        resboxradio.forEach(radio => {
-            radio.addEventListener('click', reshandleRadioClick);
-        });
-
-
-
-        const reswp = document.getElementById('reswp');
-
-        function reswphandleradioclick() {
-            
-            if (document.getElementById('wpshow').checked) {
-                reswp.style.display = 'flex ';
-            } else {
-                reswp.style.display = 'none';
-            }
-        }
-
-        const reswpradio = document.querySelectorAll('input[name="reswp"]');
-        reswpradio.forEach(radio => {
-            radio.addEventListener('click', reswphandleradioclick);
-        });
-
-
-
-
         </script>
         <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
 	<script>
@@ -1039,7 +983,7 @@
 
 					}
 				)
-				$('#program').html(html.join('')).multipleSelect();
+				$('.program').html(html.join('')).multipleSelect();
 			}
 
 		});
@@ -1063,10 +1007,10 @@
 																		 `
 						);
 
-						$('#requestStudentCountry').append(`<option value="${value.id}">${value.enName}</option>`);
+						$('.requestStudentCountry').append(`<option value="${value.id}">${value.enName}</option>`);
 					}
 				)
-				$('#requestCountry').html(html.join('')).multipleSelect();
+				$('.requestCountry').html(html.join('')).multipleSelect();
 			}
 
 		});
@@ -1093,10 +1037,21 @@
 
 					}
 				)
-				$('#requestDirection').html(html.join('')).multipleSelect();
+				$('.requestDirection').html(html.join('')).multipleSelect();
 			}
 
 		});
 	</script>
+    <script>
+         function searchProgramCon(name) {
+        var txtValue = name.textContent || name.innerText;
+
+        document.getElementById('programInputCon').value = txtValue;
+    }
+    function searchDirectionCon(name) {
+        var txtValue = name.textContent || name.innerText;
+        document.getElementById('directionInputCon').value = txtValue;
+    }
+    </script>
     }    
         

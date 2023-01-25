@@ -1,15 +1,15 @@
 ﻿$(document).ready(function () {
-    $('#duration-datatable').DataTable({
+    $('#attendence-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/Duration/GetActiveDurationes',
+            url: 'https://api.instudy.net/api/Attendance/GetActiveAttendances',
             dataSrc: 'data'
         },
         columns: [
 
             {
-                data: 'title',
+                data: 'date',
             },
-           
+
             {
                 data: 'id', render: function (data, type, row, meta) {
                     return `
@@ -44,16 +44,16 @@
             $.each(
                 data.data, function (i, value) {
 
-                   
 
-                    
 
-                        $("#University").append(`
+
+
+                    $("#University").append(`
                                                  <option value="${value.id}">${value.azName}</option>
 
 `
-                        );
-                  
+                    );
+
 
 
 
@@ -74,16 +74,16 @@
             $.each(
                 data.data, function (i, value) {
 
-                   
 
-                    
+
+
 
                     $("#EducationProgram").append(`
                                                  <option value="${value.id}">${value.azName}</option>
 
 `
-                        );
-                  
+                    );
+
 
 
 
@@ -104,16 +104,16 @@
             $.each(
                 data.data, function (i, value) {
 
-                   
 
-                    
+
+
 
                     $("#Speciality").append(`
                                                  <option value="${value.id}">${value.azName}</option>
 
 `
-                        );
-                  
+                    );
+
 
 
 
@@ -128,22 +128,22 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/DurationDate/GetActiveDurationDates`,
+        url: `https://api.instudy.net/api/AttendamceType/GetActiveAttendanceTypes`,
 
         success: function (data) {
             $.each(
                 data.data, function (i, value) {
 
-                   
 
-                    
 
-                    $("#DurationDate").append(`
+
+
+                    $("#Type").append(`
                                                  <option value="${value.id}">${value.title}</option>
 
 `
-                        );
-                  
+                    );
+
 
 
 
@@ -153,23 +153,23 @@
         }
 
     });
-    $("#addDuration").click(function () {
+    $("#addAttendence").click(function () {
 
 
         var formData = new FormData();
         formData.append('UniversityId', $("#University").val());
         formData.append('EducationProgramId', $("#EducationProgram").val());
         formData.append('SpecialityId', $("#Speciality").val());
-        formData.append('DurationDateId', $("#DurationDate").val());
+        formData.append('AttendanceTypeId', $("#Type").val());
         $.ajax({
             type: "POST",
-            url: 'https://api.instudy.net/api/Duration/AddDuration',
+            url: 'https://api.instudy.net/api/Attendance/AddAttendance',
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/Duration/List"
+                    location.href = "/Admin/Attendence/List"
                 }
                 else {
                     alert("error")
@@ -193,10 +193,10 @@ function Delete(id) {
 
     $.ajax({
         type: "PUT",
-        url: `https://api.instudy.net/api/AboutCompany/DeleteAboutCompany?id=${id}`,
+        url: `https://api.instudy.net/api/Attendance/DeleteAttendance?id=${id}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/Admin/Duration/List`;
+                location.href = `/Admin/Attendence/List`;
             }
             else {
                 alert(result.message)

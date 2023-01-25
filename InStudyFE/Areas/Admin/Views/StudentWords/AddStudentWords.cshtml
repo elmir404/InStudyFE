@@ -44,6 +44,12 @@
                                                 </select>
                                             </div>
                                         </div>
+                            <div class="row">
+                                <label class="col-md-3 form-label mb-4">File Upload :</label>
+                                <div class="col-md-9">
+                                    <input id="files" type="file" name="files" accept=".jpg, .png, image/jpeg, image/png" multiple>
+                                </div>
+                            </div>
                             <!--End Row-->
                                     </div>
                                     <div class="card-footer">
@@ -77,7 +83,7 @@
             url: `https://api.instudy.net/api/Country/GetActiveCountries`,
 
             success: function (data) {
-                var html = [];
+               
                 $.each(
                     data.data, function (i, value) {
                         $("#country").append(

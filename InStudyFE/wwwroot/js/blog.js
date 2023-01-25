@@ -10,7 +10,7 @@
             headers: {
                 'Content-Type': 'application/json'
             },
-            url: `https://api.instudy.net/api/Blogs/GetBlogs`,
+            url: `https://api.instudy.net/api/Blogs/GetActiveBlogs`,
 
             success: function (data) {
                 if ($lang == 'AZ') {

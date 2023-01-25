@@ -90,7 +90,7 @@
     })
     $("#updateAbout").click(function () {
         var aboutId = $("#aboutId").val();
-
+        var formData = new FormData();
         formData.append('Adress', $("#address").val());
         formData.append('Phone', $("#phone").val());
         formData.append('Email', $("#email").val());
@@ -113,7 +113,7 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/GoStudy/List"
+                    location.href = "/Admin/About/AboutList"
                 }
                 else {
                     alert("error")

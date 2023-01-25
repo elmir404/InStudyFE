@@ -7,7 +7,7 @@
 		headers: {
 			'Content-Type': 'application/json'
 		},
-        url: `https://api.instudy.net/api/About/GetAboutWithId?id=${aboutId}`,
+        url: `https://api.instudy.net/api/About/GetAbout?id=${aboutId}`,
 		success: function (data) {
 
 			console.log(data);
