@@ -2661,7 +2661,63 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
     color: #fff
 }
 
-@media(min-width:769px)and (max-width:1024px) {
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .faceicon:hover {
+        background: #fff;
+        color: #3b5998
+    }
+}
+
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .linkicon:hover {
+        background: #fff;
+        color: #0077b5
+    }
+}
+
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .instaicon:hover {
+        background: #fff;
+        color: #f95c39
+    }
+}
+
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .youicon:hover {
+        background: #fff;
+        color: #cd201f
+    }
+}
+
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .faceicon:hover {
+        background: #fff;
+        color: #3b5998
+    }
+}
+
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .instaicon:hover {
+        background: #fff;
+        color: #f95c39
+    }
+}
+
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .youicon:hover {
+        background: #fff;
+        color: #cd201f
+    }
+}
+
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .linkicon:hover {
+        background: #fff;
+        color: #0077b5
+    }
+}
+
+/*@media(min-width:769px)and (max-width:1024px) {
     #FooterSocialMediaIcons .ListItem .Link:hover {
         background: #fff;
         color: #f95c39
@@ -2673,7 +2729,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
         background: #fff;
         color: #f95c39
     }
-}
+}*/
 
 #FooterAddToHomescreen .Link {
     background-color: #0000;
