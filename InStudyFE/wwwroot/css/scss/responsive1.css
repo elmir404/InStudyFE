@@ -36,68 +36,68 @@
 #ArticleSpotlight{
     overflow:hidden
 }
-#ArticleSpotlight .ArticlesSpotlightTitle{
-    font-size:2.25rem;
-    font-weight:400;
-    line-height:3rem;
-    margin:1rem 0
-}
+    #ArticleSpotlight .ArticlesSpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 3rem;
+        margin: 1rem 0;
+    }
 @media (max-width:480px){
-    #ArticleSpotlight .ArticlesSpotlightTitle{
-        font-size:1.5rem;
-        font-weight:700;
-        line-height:2rem
+    #ArticleSpotlight .ArticlesSpotlightTitle {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2rem;
     }
 }
 @media (min-width:481px)and (max-width:768px){
-    #ArticleSpotlight .ArticlesSpotlightTitle{
-        font-size:1.5rem;
-        font-weight:700;
-        line-height:2rem
+    #ArticleSpotlight .ArticlesSpotlightTitle {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2rem;
     }
 }
 @media (min-width:769px)and (max-width:1024px){
-    #ArticleSpotlight .ArticlesSpotlightTitle{
-        font-size:2.25rem;
-        font-weight:700;
-        line-height:3rem;
-        margin:2rem 0
+    #ArticleSpotlight .ArticlesSpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 3rem;
+        margin: 2rem 0;
     }
 }
 @media (min-width:769px)and (max-width:1024px)and (max-width:480px){
-    #ArticleSpotlight .ArticlesSpotlightTitle{
-        font-size:2.25rem;
-        font-weight:400;
-        line-height:3rem
+    #ArticleSpotlight .ArticlesSpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 3rem;
     }
 }
 @media (min-width:769px)and (max-width:1024px)and (min-width:481px)and (max-width:768px){
-    #ArticleSpotlight .ArticlesSpotlightTitle{
-        font-size:2.25rem;
-        font-weight:400;
-        line-height:3rem
+    #ArticleSpotlight .ArticlesSpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 3rem;
     }
 }
 @media (min-width:1025px){
-    #ArticleSpotlight .ArticlesSpotlightTitle{
-        font-size:2.25rem;
-        font-weight:700;
-        line-height:3rem;
-        margin:2rem 0
+    #ArticleSpotlight .ArticlesSpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 3rem;
+        margin: 2rem 0;
     }
 }
 @media (min-width:1025px)and (max-width:480px){
-    #ArticleSpotlight .ArticlesSpotlightTitle{
-        font-size:2.25rem;
-        font-weight:400;
-        line-height:3rem
+    #ArticleSpotlight .ArticlesSpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 3rem;
     }
 }
 @media (min-width:1025px)and (min-width:481px)and (max-width:768px){
     #ArticleSpotlight .ArticlesSpotlightTitle{
         font-size:2.25rem;
         font-weight:400;
-        line-height:3rem
+        line-height:3rem;
     }
 }
 #ArticleSpotlight #ArticleSpotlightContainer{
@@ -202,21 +202,24 @@
         padding-top:0
     }
 }
-#ArticleSpotlight #MoreArticles{
-    float:right;
-    margin:.5em 0 0
+#ArticleSpotlight #MoreArticles {
+    float: right;
+    margin: 0.5em 0 0;
+    text-decoration: none;
+    color: #6610f2;
 }
-#DisciplineSpotlight .DisciplineSpotlightTitle{
-    font-size:2.25rem;
-    font-weight:400;
-    line-height:3rem;
-    margin:1rem 0
+   
+#DisciplineSpotlight .DisciplineSpotlightTitle {
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 3rem;
+    margin: 1rem 0 ;
 }
 @media (max-width:480px){
-    #DisciplineSpotlight .DisciplineSpotlightTitle{
-        font-size:1.5rem;
-        font-weight:700;
-        line-height:2rem
+    #DisciplineSpotlight .DisciplineSpotlightTitle {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2rem;
     }
 }
 @media (min-width:481px)and (max-width:768px){
@@ -227,47 +230,47 @@
     }
 }
 @media (min-width:769px)and (max-width:1024px){
-    #DisciplineSpotlight .DisciplineSpotlightTitle{
-        font-size:2.25rem;
-        font-weight:700;
-        line-height:3rem;
-        margin:2rem 0
+    #DisciplineSpotlight .DisciplineSpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 3rem;
+        margin: 2rem 0;
     }
 }
 @media (min-width:769px)and (max-width:1024px)and (max-width:480px){
-    #DisciplineSpotlight .DisciplineSpotlightTitle{
-        font-size:2.25rem;
-        font-weight:400;
-        line-height:3rem
+    #DisciplineSpotlight .DisciplineSpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 3rem;
     }
 }
 @media (min-width:769px)and (max-width:1024px)and (min-width:481px)and (max-width:768px){
-    #DisciplineSpotlight .DisciplineSpotlightTitle{
-        font-size:2.25rem;
-        font-weight:400;
-        line-height:3rem
+    #DisciplineSpotlight .DisciplineSpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 3rem;
     }
 }
 @media (min-width:1025px){
-    #DisciplineSpotlight .DisciplineSpotlightTitle{
-        font-size:2.25rem;
-        font-weight:700;
-        line-height:3rem;
-        margin:2rem 0
+    #DisciplineSpotlight .DisciplineSpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 3rem;
+        margin: 2rem 0;
     }
 }
 @media (min-width:1025px)and (max-width:480px){
-    #DisciplineSpotlight .DisciplineSpotlightTitle{
-        font-size:2.25rem;
-        font-weight:400;
-        line-height:3rem
+    #DisciplineSpotlight .DisciplineSpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 3rem;
     }
 }
 @media (min-width:1025px)and (min-width:481px)and (max-width:768px){
-    #DisciplineSpotlight .DisciplineSpotlightTitle{
-        font-size:2.25rem;
-        font-weight:400;
-        line-height:3rem
+    #DisciplineSpotlight .DisciplineSpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 3rem;
     }
 }
 #DisciplineSpotlight ul{
@@ -688,68 +691,68 @@
         line-height:1.5rem
     }
 }
-#FavouriteQuotes .FavouriteQuotesTitle{
-    font-size:2.25rem;
-    font-weight:400;
-    line-height:3rem;
-    margin:1rem 0
+#FavouriteQuotes .FavouriteQuotesTitle {
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 3rem;
+    margin: 1rem 0;
 }
 @media (max-width:480px){
-    #FavouriteQuotes .FavouriteQuotesTitle{
-        font-size:1.5rem;
-        font-weight:700;
-        line-height:2rem
+    #FavouriteQuotes .FavouriteQuotesTitle {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2rem;
     }
 }
 @media (min-width:481px)and (max-width:768px){
-    #FavouriteQuotes .FavouriteQuotesTitle{
-        font-size:1.5rem;
-        font-weight:700;
-        line-height:2rem
+    #FavouriteQuotes .FavouriteQuotesTitle {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2rem;
     }
 }
 @media (min-width:769px)and (max-width:1024px){
-    #FavouriteQuotes .FavouriteQuotesTitle{
-        font-size:2.25rem;
-        font-weight:700;
-        line-height:3rem;
-        margin:2rem 0
+    #FavouriteQuotes .FavouriteQuotesTitle {
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 3rem;
+        margin: 2rem 0;
     }
 }
 @media (min-width:769px)and (max-width:1024px)and (max-width:480px){
-    #FavouriteQuotes .FavouriteQuotesTitle{
-        font-size:2.25rem;
-        font-weight:400;
-        line-height:3rem
+    #FavouriteQuotes .FavouriteQuotesTitle {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 3rem;
     }
 }
 @media (min-width:769px)and (max-width:1024px)and (min-width:481px)and (max-width:768px){
-    #FavouriteQuotes .FavouriteQuotesTitle{
-        font-size:2.25rem;
-        font-weight:400;
-        line-height:3rem
+    #FavouriteQuotes .FavouriteQuotesTitle {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 3rem;
     }
 }
 @media (min-width:1025px){
-    #FavouriteQuotes .FavouriteQuotesTitle{
-        font-size:2.25rem;
-        font-weight:700;
-        line-height:3rem;
-        margin:2rem 0
+    #FavouriteQuotes .FavouriteQuotesTitle {
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 3rem;
+        margin: 2rem 0;
     }
 }
 @media (min-width:1025px)and (max-width:480px){
-    #FavouriteQuotes .FavouriteQuotesTitle{
-        font-size:2.25rem;
-        font-weight:400;
-        line-height:3rem
+    #FavouriteQuotes .FavouriteQuotesTitle {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 3rem;
     }
 }
 @media (min-width:1025px)and (min-width:481px)and (max-width:768px){
-    #FavouriteQuotes .FavouriteQuotesTitle{
-        font-size:2.25rem;
-        font-weight:400;
-        line-height:3rem
+    #FavouriteQuotes .FavouriteQuotesTitle {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 3rem;
     }
 }
 #FavouriteQuotes .Quotes{
@@ -1166,74 +1169,78 @@
 #PersonalityTest .TakeTest{
     margin-left:auto
 }
-#CountrySpotlight .CountrySpotlightTitle{
-    font-size:2.25rem;
-    font-weight:400;
-    line-height:3rem;
-    margin:1rem 0
+#CountrySpotlight .CountrySpotlightTitle {
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 3rem;
+    margin: 1rem 0;
 }
 @media (max-width:480px){
-    #CountrySpotlight .CountrySpotlightTitle{
-        font-size:1.5rem;
-        font-weight:700;
-        line-height:2rem
+    #CountrySpotlight .CountrySpotlightTitle {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2rem;
     }
 }
 @media (min-width:481px)and (max-width:768px){
-    #CountrySpotlight .CountrySpotlightTitle{
-        font-size:1.5rem;
-        font-weight:700;
-        line-height:2rem
+    #CountrySpotlight .CountrySpotlightTitle {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2rem;
     }
 }
 @media (min-width:769px)and (max-width:1024px){
-    #CountrySpotlight .CountrySpotlightTitle{
-        font-size:2.25rem;
-        font-weight:700;
-        line-height:3rem;
-        margin:2rem 0
+    #CountrySpotlight .CountrySpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 3rem;
+        margin: 2rem 0;
     }
 }
 @media (min-width:769px)and (max-width:1024px)and (max-width:480px){
-    #CountrySpotlight .CountrySpotlightTitle{
-        font-size:2.25rem;
-        font-weight:400;
-        line-height:3rem
+    #CountrySpotlight .CountrySpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 3rem;
     }
 }
 @media (min-width:769px)and (max-width:1024px)and (min-width:481px)and (max-width:768px){
-    #CountrySpotlight .CountrySpotlightTitle{
-        font-size:2.25rem;
-        font-weight:400;
-        line-height:3rem
+    #CountrySpotlight .CountrySpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 3rem;
     }
 }
 @media (min-width:1025px){
-    #CountrySpotlight .CountrySpotlightTitle{
-        font-size:2.25rem;
-        font-weight:700;
-        line-height:3rem;
-        margin:2rem 0
+    #CountrySpotlight .CountrySpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 3rem;
+        margin: 2rem 0;
     }
 }
 @media (min-width:1025px)and (max-width:480px){
-    #CountrySpotlight .CountrySpotlightTitle{
-        font-size:2.25rem;
-        font-weight:400;
-        line-height:3rem
+    #CountrySpotlight .CountrySpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 3rem;
     }
 }
 @media (min-width:1025px)and (min-width:481px)and (max-width:768px){
-    #CountrySpotlight .CountrySpotlightTitle{
-        font-size:2.25rem;
-        font-weight:400;
-        line-height:3rem
+    #CountrySpotlight .CountrySpotlightTitle {
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 3rem;
     }
 }
-#CountrySpotlight .ViewAll{
-    padding:1em 0 0;
-    text-align:center
+#CountrySpotlight .ViewAll {
+    padding: 1em 0 0;
+    text-align: center;
+
 }
+    #CountrySpotlight .ViewAll a {
+        color: #6610f2;
+    }
 #CountrySpotlight #CountrySpotlightContainer{
     box-sizing:border-box;
     display:flex;
@@ -1966,7 +1973,7 @@ body[data-wishlist-drawer]{
     vertical-align:top
 }
 #HeaderLoggedIn .HeaderUnibuddyLinkContainer, #HeaderLogin .HeaderUnibuddyLinkContainer {
-    color: #247ba0;
+    color: #000;
     text-decoration: none
 }
 @media (min-width:769px)and (max-width:1024px){
@@ -2013,7 +2020,6 @@ body[data-wishlist-drawer]{
     line-height:1rem
 }
 #HeaderLoggedIn .HeaderUnibuddyLinkContainer .HeaderUnibuddyText:hover,#HeaderLogin .HeaderUnibuddyLinkContainer .HeaderUnibuddyText:hover{
-    color:#247ba0;
     opacity:.8
 }
 #HeaderLoggedIn .AccountClickable,#HeaderLogin .AccountClickable{
@@ -2888,15 +2894,17 @@ body[data-wishlist-drawer]{
         transform:scale(1.1,1.3)
     }
 }
-#FooterSocialMediaIcons{
-    margin-bottom:2rem
+#FooterSocialMediaIcons {
+    margin-bottom: 2rem;
+    margin-left: 201px;
 }
-#FooterSocialMediaIcons .Header{
-    color:#05293c;
-    font-size:1rem;
-    font-weight:700;
-    line-height:1.5rem
-}
+    #FooterSocialMediaIcons .Header {
+        margin-left: -72px;
+        color: #05293c;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+    }
 @media (min-width:769px)and (max-width:1024px){
     #FooterSocialMediaIcons .Header{
         color:#fff
@@ -2907,12 +2915,13 @@ body[data-wishlist-drawer]{
         color:#fff
     }
 }
-#FooterSocialMediaIcons .List{
-    box-sizing:border-box;
-    display:flex;
-    list-style-type:none;
-    margin:1rem 0 0;
-    padding:0
+#FooterSocialMediaIcons .List {
+    box-sizing: border-box;
+    display: flex;
+    list-style-type: none;
+    margin: 1rem 0 0;
+    padding: 0;
+    margin-left: -74px;
 }
 @media (max-width:480px){
     #FooterSocialMediaIcons .List{

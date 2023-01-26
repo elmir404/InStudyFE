@@ -468,12 +468,12 @@ button,input,option,select,textarea{
 }
 @media (min-width:769px)and (max-width:1024px){
     #Footer #FooterScrollToTopWrapper{
-        top:-9rem
+        top:-3rem
     }
 }
 @media (min-width:1025px){
     #Footer #FooterScrollToTopWrapper{
-        top:-6rem
+        top:-3rem
     }
 }
 #Footer #FooterMain{
@@ -491,13 +491,13 @@ button,input,option,select,textarea{
 @media (min-width:769px)and (max-width:1024px){
     #Footer #FooterMain {
         background: #6C39C5;
-        padding: 6rem 0
+        padding: 0rem 0
     }
 }
 @media (min-width:1025px){
     #Footer #FooterMain {
         background: #6C39C5;
-        padding: 3rem 0
+        padding: 0rem 0
     }
 }
 #Footer #FooterMain .FooterMainCol1{

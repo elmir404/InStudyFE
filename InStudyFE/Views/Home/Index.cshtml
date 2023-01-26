@@ -87,6 +87,93 @@
             }
         }
 
+        @@media (max-width: 769px) {
+
+
+            .section-sub-title h2 {
+                font-size: 1rem;
+                font-weight: 700;
+                line-height: 0rem;
+                margin: 2rem 0;
+                margin-left: -17px;}
+
+         
+
+        .container-text p {
+            color: #05293c;
+            display: block;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1rem;
+            margin-left: -13px;}
+
+        }
+
+
+        .owl-carousel .owl-nav {
+            overflow: hidden;
+            height: 0px;
+        }
+
+        .owl-theme .owl-dots .owl-dot.active span,
+        .owl-theme .owl-dots .owl-dot:hover span {
+            background: #2caae1;
+        }
+
+
+        .owl-carousel .item {
+            text-align: center;
+        }
+
+        .owl-carousel .nav-btn {
+            height: 47px;
+            position: absolute;
+            width: 26px;
+            cursor: pointer;
+            top: 100px !important;
+        }
+
+        .owl-carousel .owl-prev.disabled,
+        .owl-carousel .owl-next.disabled {
+            pointer-events: none;
+            opacity: 0.2;
+        }
+
+        .owl-carousel .prev-slide {
+            background: url(nav-icon.png) no-repeat scroll 0 0;
+            left: -33px;
+        }
+
+        .owl-carousel .next-slide {
+            background: url(nav-icon.png) no-repeat scroll -24px 0px;
+            right: -33px;
+        }
+
+        .owl-carousel .prev-slide:hover {
+            background-position: 0px -53px;
+        }
+
+        .owl-carousel .next-slide:hover {
+            background-position: -24px -53px;
+        }
+
+        span.img-text {
+            text-decoration: none;
+            outline: none;
+            transition: all 0.4s ease;
+            -webkit-transition: all 0.4s ease;
+            -moz-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            cursor: pointer;
+            width: 100%;
+            font-size: 23px;
+            display: block;
+            text-transform: capitalize;
+        }
+
+            span.img-text:hover {
+                color: #2caae1;
+            }
 
      </style>
  }
@@ -238,8 +325,8 @@
                         <div id="ArticleSpotlightContainer">
                           
                         </div>
-                        <a asp-action="Index" asp-controller="Blog" title="More articles" id="MoreArticles">More articles</a> 
-                     </article>
+                    <a asp-action="Index" asp-controller="Blog"  title="More articles" id="MoreArticles">More articles</a>
+                </article>
                   </div>
                </div>
             </section>

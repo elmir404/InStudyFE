@@ -988,9 +988,7 @@ body.is-notScrollable {
         padding: 0 1rem
     }
 
-    #Footer #FooterCopyright {
-        margin-top: 1.5rem
-    }
+   
 
     #Footer #FooterBranding .FlexBranding {
         margin: 1rem 0
@@ -8670,7 +8668,7 @@ body[data-wishlist-drawer] {
 }
 
 #HeaderLoggedIn .HeaderUnibuddyLinkContainer, #HeaderLogin .HeaderUnibuddyLinkContainer {
-    color: #247ba0;
+    color: #000;
     text-decoration: none
 }
 
@@ -8725,7 +8723,6 @@ body[data-wishlist-drawer] {
 }
 
     #HeaderLoggedIn .HeaderUnibuddyLinkContainer .HeaderUnibuddyText:hover, #HeaderLogin .HeaderUnibuddyLinkContainer .HeaderUnibuddyText:hover {
-        color: #247ba0;
         opacity: .8
     }
 
@@ -8955,24 +8952,24 @@ body[data-wishlist-drawer] {
 
 @media(min-width:769px)and (max-width:1024px) {
     .AccountDropDown li .MenuItem {
-        color: #247ba0
+        color: #000
     }
 }
 
 @media(min-width:1025px) {
     .AccountDropDown li .MenuItem {
-        color: #247ba0
+        color: #000
     }
 }
 
 .AccountDropDown li .MenuItem:hover {
-    color: #cc4c2f;
+    color: #36454F;
     text-decoration: none
 }
 
 @media(min-width:769px)and (max-width:1024px) {
     .AccountDropDown li .MenuItem:hover {
-        color: #247ba0
+        color: #000
     }
 }
 
@@ -9810,7 +9807,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
 }
 
 #HeaderSearch form button:focus, #HeaderSearch form button:hover {
-    background: #a2eacb;
+    background: #6610f2;
     cursor: pointer
 }
 
@@ -10383,14 +10380,16 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
 }
 
 #FooterSocialMediaIcons {
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
+    margin-left: 201px;
 }
 
     #FooterSocialMediaIcons .Header {
+        margin-left: -72px;
         color: #05293c;
-        font-size: 1rem;
+        font-size: 2rem;
         font-weight: 700;
-        line-height: 1.5rem
+        line-height: 2.5rem;
     }
 
 @media(min-width:769px)and (max-width:1024px) {
@@ -10410,7 +10409,8 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
     display: flex;
     list-style-type: none;
     margin: 1rem 0 0;
-    padding: 0
+    padding: 0;
+    margin-left: -74px;
 }
 
 @media(max-width:480px) {
@@ -10468,18 +10468,67 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
     color: #fff
 }
 
-@media(min-width:769px)and (max-width:1024px) {
-    #FooterSocialMediaIcons .ListItem .Link:hover {
+
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .faceicon:hover {
+        background: #fff;
+        color: #3b5998
+    }
+}
+
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .linkicon:hover {
+        background: #fff;
+        color: #0077b5
+    }
+}
+
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .instaicon:hover {
         background: #fff;
         color: #f95c39
     }
 }
 
-@media(min-width:1025px) {
-    #FooterSocialMediaIcons .ListItem .Link:hover {
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .youicon:hover {
+        background: #fff;
+        color: #cd201f
+    }
+}
+
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .faceicon:hover {
+        background: #fff;
+        color: #3b5998
+    }
+}
+
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .instaicon:hover {
         background: #fff;
         color: #f95c39
     }
+}
+
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .youicon:hover {
+        background: #fff;
+        color: #cd201f
+    }
+}
+
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .linkicon:hover {
+        background: #fff;
+        color: #0077b5
+    }
+}
+
+#FooterAddToHomescreen .Link {
+    background-color: transparent;
+    border-color: #247ba0;
+    color: #247ba0
 }
 
 #FooterAddToHomescreen .Link {

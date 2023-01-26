@@ -339,10 +339,7 @@
             $(`#contactDetail`).append(
                 ` 
 
-<div id="map-responsive"  class="map-responsive">
-<iframe src="${data?.data?.mapAdress}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-</div>
 			<div class=" col-md-12 col-ms d-flex align-items-stretch"  style="padding-top: 10px;">
 							<div class="info-wrap bg-primary w-100 p-lg-5 p-8">
 							<h3 class="mb-8 mt-md-8" id="headerr">${$header}</h3>
@@ -375,6 +372,10 @@
 
 					 
 	</div>
+<div id="map-responsive"  class="map-responsive">
+<iframe src="${data?.data?.mapAdress}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>
 
 `
             );

@@ -1655,7 +1655,7 @@ body[data-wishlist-drawer]{
     vertical-align:top
 }
 #HeaderLoggedIn .HeaderUnibuddyLinkContainer,#HeaderLogin .HeaderUnibuddyLinkContainer{
-    color:#247ba0;
+    color:#000;
     text-decoration:none
 }
 @media (min-width:769px)and (max-width:1024px){
@@ -1702,7 +1702,6 @@ body[data-wishlist-drawer]{
     line-height:1rem
 }
 #HeaderLoggedIn .HeaderUnibuddyLinkContainer .HeaderUnibuddyText:hover,#HeaderLogin .HeaderUnibuddyLinkContainer .HeaderUnibuddyText:hover{
-    color:#247ba0;
     opacity:.8
 }
 #HeaderLoggedIn .AccountClickable,#HeaderLogin .AccountClickable{
@@ -2602,15 +2601,17 @@ body[data-wishlist-drawer]{
         transform:scale(1.1,1.3)
     }
 }
-#FooterSocialMediaIcons{
-    margin-bottom:2rem
+#FooterSocialMediaIcons {
+    margin-bottom: 2rem;
+    margin-left: 201px;
 }
-#FooterSocialMediaIcons .Header{
-    color:#05293c;
-    font-size:1rem;
-    font-weight:700;
-    line-height:1.5rem
-}
+    #FooterSocialMediaIcons .Header {
+        margin-left: -72px;
+        color: #05293c;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+    }
 @media (min-width:769px)and (max-width:1024px){
     #FooterSocialMediaIcons .Header{
         color:#fff
@@ -2621,12 +2622,13 @@ body[data-wishlist-drawer]{
         color:#fff
     }
 }
-#FooterSocialMediaIcons .List{
-    box-sizing:border-box;
-    display:flex;
-    list-style-type:none;
-    margin:1rem 0 0;
-    padding:0
+#FooterSocialMediaIcons .List {
+    box-sizing: border-box;
+    display: flex;
+    list-style-type: none;
+    margin: 1rem 0 0;
+    padding: 0;
+    margin-left: -74px;
 }
 @media (max-width:480px){
     #FooterSocialMediaIcons .List{
@@ -2675,16 +2677,60 @@ body[data-wishlist-drawer]{
     background:#247ba0;
     color:#fff
 }
-@media (min-width:769px)and (max-width:1024px){
-    #FooterSocialMediaIcons .ListItem .Link:hover{
-        background:#fff;
-        color:#f95c39
+
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .faceicon:hover {
+        background: #fff;
+        color: #3b5998
     }
 }
-@media (min-width:1025px){
-    #FooterSocialMediaIcons .ListItem .Link:hover{
-        background:#fff;
-        color:#f95c39
+
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .linkicon:hover {
+        background: #fff;
+        color: #0077b5
+    }
+}
+
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .instaicon:hover {
+        background: #fff;
+        color: #f95c39
+    }
+}
+
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .youicon:hover {
+        background: #fff;
+        color: #cd201f
+    }
+}
+
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .faceicon:hover {
+        background: #fff;
+        color: #3b5998
+    }
+}
+
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .instaicon:hover {
+        background: #fff;
+        color: #f95c39
+    }
+}
+
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .youicon:hover {
+        background: #fff;
+        color: #cd201f
+    }
+}
+
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .linkicon:hover {
+        background: #fff;
+        color: #0077b5
     }
 }
 #FooterAddToHomescreen .Link{
