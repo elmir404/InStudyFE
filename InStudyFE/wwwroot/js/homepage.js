@@ -139,7 +139,7 @@
                                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset=${image}">
                                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="${image}">
                                        <source media="all and (min-width: 80.063em)" srcset="${image}">
-                                       <img src="${image}" style="height: 13rem;">
+                                       <img src="${image}" width="143" style="width:236px;height:158px;" height="95">
                                     </picture>
                                  </span>
                               <figcaption>
@@ -838,7 +838,7 @@
                                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset=${image}">
                                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="${image}">
                                        <source media="all and (min-width: 80.063em)" srcset="${image}">
-                                       <img src="${image}" alt="data:image/png;base64, Netherlands" loading="lazy" width="143" style="height: 13rem;" height="95">
+                                       <img src="${image}" alt="data:image/png;base64, Netherlands" loading="lazy"style="width:236;height:158;">
                                     </picture>
                                  </span>
                               <figcaption>
