@@ -236,17 +236,18 @@
 
 .AutoCompleteContainer ul li.Link:hover {
     cursor: pointer;
-    text-decoration: none
+    text-decoration: none;
+    background-color: #A2EACB;
 }
 
 .AutoCompleteContainer ul li.Link:focus, .AutoCompleteContainer ul li.Selected {
-    background-color: #f95c39;
+    background-color: #A2EACB;
     color: #fff
 }
 
 .AutoCompleteContainer ul li.AutoCompleteHeading {
     background-color: #fff;
-    color: #3f5c6e;
+    color: #A2EACB;
     font-size: .75rem;
     padding-left: .5rem;
     text-transform: capitalize

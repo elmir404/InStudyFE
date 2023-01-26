@@ -374,9 +374,9 @@ body #galactus .Module[data-module="Banner:banner_adunit_all__discipline__advanc
     cursor:pointer;
     text-decoration:none
 }
-.AutoCompleteContainer ul li.Link:focus,.AutoCompleteContainer ul li.Selected{
-    background-color:#f95c39;
-    color:#fff
+.AutoCompleteContainer ul li.Link:focus, .AutoCompleteContainer ul li.Selected {
+    background-color: #A2EACB;
+    color: #fff
 }
 .AutoCompleteContainer ul li.AutoCompleteHeading{
     background-color:#fff;
