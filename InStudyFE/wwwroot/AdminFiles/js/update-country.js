@@ -98,7 +98,7 @@
                             <div class="row">
                                 <label class="col-md-3 form-label mb-4">Study(En):</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="content9" id="Study(En)" name="Study">${data.data.enStudy}</textarea>
+                                    <textarea class="content9" id="StudyEn" name="Study">${data.data.enStudy}</textarea>
                                 </div>
                             </div> 
                             <div class="row">          

@@ -51,45 +51,6 @@
 
         ]
     });
-    $('#personal-datatable').DataTable({
-        ajax: {
-            url: 'https://localhost:7223/api/PersonalAbout/GetAbouts',
-            dataSrc: 'data'
-        },
-        columns: [
-            {
-                data: 'phone1',
-            },
-            { data: 'email' },
-            { data: 'city' },
-            { data: 'street' },
-            { data: 'instagramLink' },
-            { data: 'facebookLink' },
-            {
-                data: 'id', render: function (data, type, row, meta) {
-                    return `
-                        <div class="btn-list">
-                            <button onclick=Delete(${JSON.stringify(data)}) type="button" class="btn btn-sm btn-danger">
-                                <span class="fe fe-trash-2"> </span>
-
-                            </button>
-                            <button onclick=Edit(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-success">
-                                <i class="fe fe-edit"></i>
-                            </button>
-                        </div>
-
-                        `;
-
-
-
-                }
-            },
-
-
-
-
-        ]
-    });
 
     $("#addCountry").click(function () {
 
@@ -135,7 +96,7 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/Country/CountryList"
+                   location.href = "/Admin/Country/CountryList"
                 }
                 else {
                     alert("error")

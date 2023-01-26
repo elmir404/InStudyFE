@@ -73,7 +73,7 @@
 });
 function Edit(content) {
 
-    localStorage.setItem('questionId', content);
+    localStorage.setItem('pageQuestionId', content);
     location.href = `/Admin/Content/UpdateShowedQuestions`;
 
 }

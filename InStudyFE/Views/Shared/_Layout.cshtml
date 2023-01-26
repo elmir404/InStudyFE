@@ -380,7 +380,7 @@
                         data.data, function (i, value) {
                              console.log("partners",value);
                             var image = `https://api.instudy.net/${value?.partnerFiles[0]?.path}`
-                            $('#partners').owlCarousel({ loop: true, margin: 10, autoplay: true, autoplayTimeout: 2000, autoplayHoverPause: true }).owlCarousel('add', `<div style="height:158px;  display: inline-block;"> <a href="${value.link}"><img style="height:100%; width:236px;" src="${image}" /></a></div>`).owlCarousel('update');
+                            $('#partners').owlCarousel({ loop: true, margin: 10, autoplay: true, autoplayTimeout: 2000, autoplayHoverPause: true,nav:true, navText: ["<i class='fa fa-long-arrow-left'></i>","<i class='fa fa- long-arrow-right'></i>"], }).owlCarousel('add', `<div style="height:158px;  display: inline-block;"> <a href="${value.link}"><img style="height:100%; width:236px;" src="${image}" /></a></div>`).owlCarousel('update');
                                
 
 

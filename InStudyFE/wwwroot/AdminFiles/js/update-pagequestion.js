@@ -1,13 +1,13 @@
 ﻿$(document).ready(function () {
-    const questionId = localStorage.getItem('questionId');
+    const questionId = localStorage.getItem('pageQuestionId');
 
-    var $form = $('#programForm')
+    var $form = $('#form')
     $.ajax({
         type: 'GET',
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Question/GetQuestion?id=${questionId}`,
+        url: `https://api.instudy.net/api/AboutQuestion/GetAboutQuestion?id=${questionId}`,
         success: function (data) {
 
             console.log(data);
@@ -18,71 +18,78 @@
                         <input type="hidden" id="questionId" value="${data.data.id}" class="form-control">
 
                       <div class="row mb-4">
-                                <label class="col-md-3 form-label">Question(AZ):</label>
+                                <label class="col-md-3 form-label">Az Title :</label>
                                 <div class="col-md-9">
-                                    <input type="text" id="azQuestion" value="${data.data.azQuestionTitle}" class="form-control" placeholder="Title Name">
+                                    <input type="text" id="azHeader" value="${data?.data?.azHeader}" class="form-control" placeholder="Title Name">
                                 </div>
                             </div>
                             <div class="row mb-4">
-                                <label class="col-md-3 form-label">Question(RU):</label>
+                                <label class="col-md-3 form-label">Ru Title :</label>
                                 <div class="col-md-9">
-                                    <input type="text" id="ruQuestion" value="${data.data.ruQuestionTitle}" class="form-control">
+                                    <input type="text" value="${data?.data?.ruHeader}" id="ruHeader" class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-4">
-                                <label class="col-md-3 form-label">Question(EN):</label>
+                                <label class="col-md-3 form-label">En Title :</label>
                                 <div class="col-md-9">
-                                    <input type="text" id="enQuestion" value="${data.data.enQuestionTitle}" class="form-control">
+                                    <input type="text" id="enHeader" value="${data?.data?.enHeader}" class="form-control">
                                 </div>
                             </div>
 
                             <!-- Row -->
                             <div class="row">
-                                <label class="col-md-3 form-label mb-4">Az Answer:</label>
+                                <label class="col-md-3 form-label mb-4">Az Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="content" id="azAnswer" name="example">${data.data.azQuestionAnswer}</textarea>
+                                    <textarea class="content" id="azDescription" name="example">${data?.data?.azBody}</textarea>
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="col-md-3 form-label mb-4">Ru Answer:</label>
+                                <label class="col-md-3 form-label mb-4">Ru Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="content" id="ruAnswer" name="example">${data.data.ruQuestionAnswer}</textarea>
+                                    <textarea class="content2" id="ruDescription" name="example">${data?.data?.ruBody}</textarea>
                                 </div>
                             </div> <div class="row">
-                                <label class="col-md-3 form-label mb-4">En Answer:</label>
+                                <label class="col-md-3 form-label mb-4">En Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="content" id="enAnswer" name="example">${data.data.enQuestionAnswer}</textarea>
+                                    <textarea class="content3" id="enDescription" name="example">${data?.data?.enBody}</textarea>
                                 </div>
                             </div>
                         
                         `
-            )
+            );
+             $('.content').richText();
+            $('.content2').richText();
+            $('.content3').richText();
 
 
 
         }
     })
-    $("#updateQuestion").click(function () {
+    $("#updateShowedQuestion").click(function () {
         var questionId = $("#questionId").val();
+        var questions = $("#questions").val();
         var formData = new FormData();
-        formData.append('AzQuestionTitle', $("#azQuestion").val());
-        formData.append('RuQuestionTitle', $("#ruQuestion").val());
-        formData.append('EnQuestionTitle', $("#enQuestion").val());
-        formData.append('AzQuestionAnswer', $("#azDescription").val());
-        formData.append('EnQuestionAnswer', $("#enDescription").val());
-        formData.append('RuQuestionAnswer', $("#ruDescription").val());
+        formData.append('AzHeader', $("#azHeader").val());
+        formData.append('RuHeader', $("#ruHeader").val());
+        formData.append('EnHeader', $("#enHeader").val());
+        formData.append('AzBody', $("#azDescription").val());
+        formData.append('EnBody', $("#enDescription").val());
+        formData.append('RuBody', $("#ruDescription").val());
+        for (var i = 0; i < questions.length; i++) {
+            formData.append('questionIds', questions[i]);
+        }
 
         console.log(formData);
 
         $.ajax({
             type: "PUT",
-            url: `https://api.instudy.net/api/Question/UpdateQuestion?id=${questionId}`,
+            url: `https://api.instudy.net/api/AboutQuestion/UpdateAboutQuestion?id=${questionId}`,
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/Question/QuestionList"
+                    location.href = "/Admin/Content/PageQuestion"
                 }
                 else {
                     alert("error")

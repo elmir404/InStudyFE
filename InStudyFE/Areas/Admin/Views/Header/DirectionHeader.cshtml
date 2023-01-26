@@ -1,0 +1,67 @@
+﻿<!--app-content open-->
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">Data Table</h1>
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Tables</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data Table</li>
+                    </ol>
+                </div>
+
+            </div>
+
+
+            <!-- Row -->
+            <div class="row row-sm">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Todo List</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <a class="btn btn-primary mb-4 data-table-btn" asp-area="Admin" asp-action="AddGoStudy" asp-controller="GoStudy">
+                                    Add GoStudy
+                                </a>
+                                <!-- Modal -->
+
+                                <table id="directionsheader-datatable" class="table table-bordered text-nowrap border-bottom">
+                                    <thead>
+                                        <tr>
+
+                                            <th class="border-bottom-0">Az Title</th>
+                                            <th class="border-bottom-0">Ru Title</th>
+                                            <th class="border-bottom-0">En Title</th>
+                                            <th class="border-bottom-0">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Row -->
+            <!-- Row -->
+
+
+        </div>
+        <!-- CONTAINER CLOSED -->
+
+    </div>
+</div>
+
+<!-- Sidebar-right -->
+@section Scripts {
+    <script src="~/AdminFiles/js/Headers/directions-header.js"></script>
+        }
+

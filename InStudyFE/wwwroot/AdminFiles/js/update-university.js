@@ -81,13 +81,13 @@
                             <div class="row mb-4">
                                 <label class="col-md-3 form-label">Student Count :</label>
                                 <div class="col-md-9">
-                                    <input type="text" id="stCount" value="${data?.data?.studentCount}" class="form-control">
+                                    <input type="number" id="stCount" value="${data?.data?.studentCount}" class="form-control">
                                 </div>
                             </div> 
                             <div class="row mb-4">
                                 <label class="col-md-3 form-label">Academic Staff :</label>
                                 <div class="col-md-9">
-                                    <input type="text" id="acdmStaff" value="${data?.data?.academicStaff}" class="form-control">
+                                    <input type="number" id="acdmStaff" value="${data?.data?.academicStaff}" class="form-control">
                                 </div>
                             </div> 
                             <div class="row mb-4">
@@ -105,7 +105,7 @@
                             <div class="row mb-4">
                                 <label class="col-md-3 form-label">Rank :</label>
                                 <div class="col-md-9">
-                                    <input type="text" id="rank" value="${data?.data?.rank}" class="form-control">
+                                    <input type="number" id="rank" value="${data?.data?.rank}" class="form-control">
                                 </div>
                             </div>
 
@@ -198,26 +198,25 @@
         formData.append('countryId', $("#country").val());
         formData.append('Address', $("#uniAdrress").val());
         formData.append('MapAdrress', $("#uniMapAdrress").val());
-        formData.append('stCount', $("#StudentCount").val());
+        formData.append('StudentCount', $("#stCount").val());
         formData.append('AcademicStaff', $("#acdmStaff").val());
         formData.append('StartDate', $("#startDate").val());
         formData.append('ApplyDate', $("#applyDate").val());
         formData.append('Rank', $("#rank").val());
-        formData.append('stCount', $("#azBachelor").val());
-        formData.append('stCount', $("#ruBachelor").val());
-        formData.append('stCount', $("#enBachelor").val());
-        formData.append('stCount', $("#azMaster").val());
-        formData.append('stCount', $("#ruMaster").val());
-        formData.append('stCount', $("#enMaster").val());
+        formData.append('AzBachelor', $("#azBachelor").val());
+        formData.append('RuBachelor', $("#ruBachelor").val());
+        formData.append('EnBachelor', $("#enBachelor").val());
+        formData.append('AzMaster', $("#azMaster").val());
+        formData.append('RuMaster', $("#ruMaster").val());
+        formData.append('EnMaster', $("#enMaster").val());
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);
         }
-        console.log(formData);
         for (var i = 0; i < program.length; i++) {
-            formData.append('programIds', program[i]);
+            formData.append('ProgramIds', program[i]);
         }
         for (var i = 0; i < direction.length; i++) {
-            formData.append('directionIds', direction[i]);
+            formData.append('DirectionIds', direction[i]);
         }
         $.ajax({
             type: "PUT",

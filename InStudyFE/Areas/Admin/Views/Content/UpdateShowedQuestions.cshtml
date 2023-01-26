@@ -1,5 +1,85 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">Add Question Home</h1>
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Add Question Home</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- PAGE-HEADER END -->
+            <!-- ROW-1 OPEN -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Add Question Home</div>
+                        </div>
+                        <div class="card-body">
+                            <div id="form">
+
+                             </div>
+                            <div class="row">
+                                <label class="col-md-3 form-label mb-4">Questions</label>
+                                <div class="col-md-9 mb-4">
+                                    <select multiple="multiple" id="questions">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <!--Row-->
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-9">
+                                    <a href="javascript:void(0)" id="updateShowedQuestion" class="btn btn-primary">Create</a>
+                                </div>
+                            </div>
+                            <!--End Row-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /ROW-1 CLOSED -->
+        </div>
+        <!-- CONTAINER CLOSED -->
+    </div>
+</div>
+@section Scripts{
+    <script src="~/AdminFiles/js/update-pagequestion.js"></script>
+    <script>
+        $.ajax({
+            type: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+
+            },
+            url: `https://api.instudy.net/api/Question/GetQuestions`,
+
+            success: function (data) {
+                var html = [];
+                $.each(
+                    data.data, function (i, value) {
+                        html.push(
+                            `
+                                                                                    <option value="${value.id}">${value.azQuestionTitle}</option>
+
+                                                                         `
+                        )
+
+                    }
+                )
+                $('#questions').html(html.join('')).multipleSelect();
+            }
+
+        });
+    </script>
 }
