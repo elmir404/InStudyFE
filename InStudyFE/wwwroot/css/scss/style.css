@@ -1310,7 +1310,7 @@ body[data-wishlist-drawer]{
     vertical-align:top
 }
 #HeaderLoggedIn .HeaderUnibuddyLinkContainer, #HeaderLogin .HeaderUnibuddyLinkContainer {
-    color: #247ba0;
+    color: #000;
     text-decoration: none
 }
 @media (min-width:769px)and (max-width:1024px){
@@ -2930,7 +2930,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu{
 }
 #FooterSocialMediaIcons {
     margin-bottom: 2rem;
-    margin-left: 235px;
+    margin-left: 201px;
 }
     #FooterSocialMediaIcons .Header {
         margin-left: -72px;
@@ -3004,16 +3004,60 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu{
     background:#247ba0;
     color:#fff
 }
-@media (min-width:769px)and (max-width:1024px){
-    #FooterSocialMediaIcons .ListItem .Link:hover{
-        background:#fff;
-        color:#f95c39
+
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .faceicon:hover {
+        background: #fff;
+        color: #3b5998
     }
 }
-@media (min-width:1025px){
-    #FooterSocialMediaIcons .ListItem .Link:hover{
-        background:#fff;
-        color:#f95c39
+
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .linkicon:hover {
+        background: #fff;
+        color: #0077b5
+    }
+}
+
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .instaicon:hover {
+        background: #fff;
+        color: #f95c39
+    }
+}
+
+@media (min-width:769px)and (max-width:1024px) {
+    #FooterSocialMediaIcons .ListItem .youicon:hover {
+        background: #fff;
+        color: #cd201f
+    }
+}
+
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .faceicon:hover {
+        background: #fff;
+        color: #3b5998
+    }
+}
+
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .instaicon:hover {
+        background: #fff;
+        color: #f95c39
+    }
+}
+
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .youicon:hover {
+        background: #fff;
+        color: #cd201f
+    }
+}
+
+@media (min-width:1025px) {
+    #FooterSocialMediaIcons .ListItem .linkicon:hover {
+        background: #fff;
+        color: #0077b5
     }
 }
 #FooterAddToHomescreen .Link{

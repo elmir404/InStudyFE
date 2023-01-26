@@ -1973,7 +1973,7 @@ body[data-wishlist-drawer]{
     vertical-align:top
 }
 #HeaderLoggedIn .HeaderUnibuddyLinkContainer, #HeaderLogin .HeaderUnibuddyLinkContainer {
-    color: #247ba0;
+    color: #000;
     text-decoration: none
 }
 @media (min-width:769px)and (max-width:1024px){
@@ -2896,7 +2896,7 @@ body[data-wishlist-drawer]{
 }
 #FooterSocialMediaIcons {
     margin-bottom: 2rem;
-    margin-left: 235px;
+    margin-left: 201px;
 }
     #FooterSocialMediaIcons .Header {
         margin-left: -72px;
