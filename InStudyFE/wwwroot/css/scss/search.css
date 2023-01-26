@@ -2576,12 +2576,14 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
 }
 
 #FooterSocialMediaIcons {
-    margin-bottom: 2rem
+    margin-bottom: 2rem ;
+    margin-left: 259px;
 }
 
     #FooterSocialMediaIcons .Header {
+        margin-left: -18px;
         color: #05293c;
-        font-size: 1rem;
+        font-size: 2rem;
         font-weight: 700;
         line-height: 1.5rem
     }
