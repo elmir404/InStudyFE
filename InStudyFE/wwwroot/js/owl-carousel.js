@@ -6,7 +6,7 @@ $(document).ready(function() {
 		autoplay:true,
 		rewind:true,
 		responsiveClass:true,
-		navText:["<img src='/~/css/images/icons/icon-bg-left.svg'>","<img src='/~/css/images/icons/icon-bg-right.svg'>"],
+		navText:["<img src='/css/images/icons/icon-bg-left.svg'>","<img src='~/css/images/icons/icon-bg-right.svg'>"],
 		responsive:{
 			0:{
 				items:1.2,

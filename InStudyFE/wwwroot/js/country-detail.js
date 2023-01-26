@@ -19,7 +19,7 @@
         $(`.about`).html("Haqqında") 
         $(`.university`).html("Universitetlər")
         $(`.student-visa`).html("Tələbə vizası")
-        $(`.work-permit`).html(" İş icazəsi")
+        $(`.work-permit`).html("Sənədlər")
         $(`.how-to-apply`).html("Müraciət")
 
     }
@@ -33,7 +33,7 @@
         $(`.about`).html("About")
         $(`.university`).html("Universities")
         $(`.student-visa`).html("Student visa")
-        $(`.work-permit`).html("Work permit")
+        $(`.work-permit`).html("Documents")
         $(`.how-to-apply`).html("Apply form")
     }
     else {
@@ -46,7 +46,7 @@
         $(`.about`).html("O")
         $(`.university`).html("Университет")
         $(`.student-visa`).html("Студенческая виза")
-        $(`.work-permit`).html("Разрешение на работу")
+        $(`.work-permit`).html("Документы")
         $(`.how-to-apply`).html("Обращение")
     } 
 
