@@ -795,14 +795,14 @@ body #galactus h4 {
     font-size: 2.25rem;
     font-weight: 400;
     line-height: 3rem;
-    margin: 1rem 0
+    margin: 1rem 0;
 }
 
 @media(max-width:480px) {
     #CountrySpotlight .CountrySpotlightTitle {
         font-size: 1.5rem;
         font-weight: 700;
-        line-height: 2rem
+        line-height: 2rem;
     }
 }
 
@@ -810,7 +810,7 @@ body #galactus h4 {
     #CountrySpotlight .CountrySpotlightTitle {
         font-size: 1.5rem;
         font-weight: 700;
-        line-height: 2rem
+        line-height: 2rem;
     }
 }
 
@@ -819,7 +819,7 @@ body #galactus h4 {
         font-size: 2.25rem;
         font-weight: 700;
         line-height: 3rem;
-        margin: 2rem 0
+        margin: 2rem 0;
     }
 }
 
@@ -827,7 +827,7 @@ body #galactus h4 {
     #CountrySpotlight .CountrySpotlightTitle {
         font-size: 2.25rem;
         font-weight: 400;
-        line-height: 3rem
+        line-height: 3rem;
     }
 }
 
@@ -835,7 +835,7 @@ body #galactus h4 {
     #CountrySpotlight .CountrySpotlightTitle {
         font-size: 2.25rem;
         font-weight: 400;
-        line-height: 3rem
+        line-height: 3rem;
     }
 }
 
@@ -844,7 +844,7 @@ body #galactus h4 {
         font-size: 2.25rem;
         font-weight: 700;
         line-height: 3rem;
-        margin: 2rem 0
+        margin: 2rem 0;
     }
 }
 
@@ -852,7 +852,7 @@ body #galactus h4 {
     #CountrySpotlight .CountrySpotlightTitle {
         font-size: 2.25rem;
         font-weight: 400;
-        line-height: 3rem
+        line-height: 3rem;
     }
 }
 
@@ -860,7 +860,7 @@ body #galactus h4 {
     #CountrySpotlight .CountrySpotlightTitle {
         font-size: 2.25rem;
         font-weight: 400;
-        line-height: 3rem
+        line-height: 3rem;
     }
 }
 
@@ -869,6 +869,9 @@ body #galactus h4 {
     text-align: center
 }
 
+    #CountrySpotlight .ViewAll a {
+        color: #6610f2;
+    }
 #CountrySpotlight #CountrySpotlightContainer {
     box-sizing: border-box;
     display: flex;
@@ -3625,8 +3628,8 @@ form#SingleBottomSearch.Form .SearchButton .SearchIcon, form#SingleSearch.Form .
     }
 
 #HeaderSearch form button {
-    background: #A2EACB;
-    border: 1px solid #A2EACB;
+    background: #6610f2;
+    border: 1px solid #6610f2;
     border-radius: 0 3px 3px 0;
     color: #fff;
     flex: 0 0 40px
@@ -3645,7 +3648,7 @@ form#SingleBottomSearch.Form .SearchButton .SearchIcon, form#SingleSearch.Form .
 }
 
 #HeaderSearch form button:focus, #HeaderSearch form button:hover {
-    background: #A2EACB;
+    background: #6610f2;
     cursor: pointer
 }
 
@@ -4230,14 +4233,16 @@ form#SingleBottomSearch.Form .SearchButton .SearchIcon, form#SingleSearch.Form .
 }
 
 #FooterSocialMediaIcons {
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
+    margin-left: 235px;
 }
 
     #FooterSocialMediaIcons .Header {
+        margin-left: -72px;
         color: #05293c;
         font-size: 2rem;
         font-weight: 700;
-        line-height: 1.5rem
+        line-height: 2.5rem;
     }
 
 @media(min-width:769px)and (max-width:1024px) {
@@ -4257,7 +4262,8 @@ form#SingleBottomSearch.Form .SearchButton .SearchIcon, form#SingleSearch.Form .
     display: flex;
     list-style-type: none;
     margin: 1rem 0 0;
-    padding: 0
+    padding: 0;
+    margin-left: -74px;
 }
 
 @media(max-width:480px) {

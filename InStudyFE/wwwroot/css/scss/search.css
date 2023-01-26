@@ -1947,7 +1947,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
     }
 
 #HeaderSearch form button {
-    background: #a2eacb;
+    background: #6610f2;
     border: 1px solid #a2eacb;
     border-radius: 0 3px 3px 0;
     color: #fff;
@@ -1967,7 +1967,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
 }
 
 #HeaderSearch form button:focus, #HeaderSearch form button:hover {
-    background: #a2eacb;
+    background: #6610f2;
     cursor: pointer
 }
 
@@ -2576,16 +2576,16 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
 }
 
 #FooterSocialMediaIcons {
-    margin-bottom: 2rem ;
-    margin-left: 259px;
+    margin-bottom: 2rem;
+    margin-left: 235px;
 }
 
     #FooterSocialMediaIcons .Header {
-        margin-left: -18px;
+        margin-left: -72px;
         color: #05293c;
         font-size: 2rem;
         font-weight: 700;
-        line-height: 1.5rem
+        line-height: 2.5rem;
     }
 
 @media(min-width:769px)and (max-width:1024px) {
@@ -2605,7 +2605,8 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
     display: flex;
     list-style-type: none;
     margin: 1rem 0 0;
-    padding: 0
+    padding: 0;
+    margin-left: -74px;
 }
 
 @media(max-width:480px) {

@@ -110,11 +110,11 @@
     width: calc(100% - 20px);
 }
 h2.section-sub-title {
-   
     font-size: 2.25rem;
     font-weight: 700;
     line-height: 3rem;
     margin: 2rem 0;
+    margin-left: -98px;
 }
 #ArticleOverview .ArticleSection {
     column-count: 1;
@@ -181,6 +181,7 @@ p.container-text {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 2rem;
+    margin-left: -98px;
 }
 p {
     letter-spacing: var(--unnamed-character-spacing-0);
@@ -2400,8 +2401,8 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu{
     text-indent:-999px
 }
 #HeaderSearch form button {
-    background: #a2eacb;
-    border: 1px solid #a2eacb;
+    background: #6610f2;
+    border: 1px solid #6610f2;
     border-radius: 0 3px 3px 0;
     color: #fff;
     flex: 0 0 40px
@@ -2417,7 +2418,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu{
     }
 }
 #HeaderSearch form button:focus, #HeaderSearch form button:hover {
-    background: #a2eacb;
+    background: #6610f2;
     cursor: pointer
 }
 #HeaderSearch form button:before{
@@ -2927,15 +2928,17 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu{
         transform:scale(1.1,1.3)
     }
 }
-#FooterSocialMediaIcons{
-    margin-bottom:2rem
+#FooterSocialMediaIcons {
+    margin-bottom: 2rem;
+    margin-left: 235px;
 }
-#FooterSocialMediaIcons .Header{
-    color:#05293c;
-    font-size:1rem;
-    font-weight:700;
-    line-height:1.5rem
-}
+    #FooterSocialMediaIcons .Header {
+        margin-left: -72px;
+        color: #05293c;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+    }
 @media (min-width:769px)and (max-width:1024px){
     #FooterSocialMediaIcons .Header{
         color:#fff
@@ -2946,12 +2949,13 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu{
         color:#fff
     }
 }
-#FooterSocialMediaIcons .List{
-    box-sizing:border-box;
-    display:flex;
-    list-style-type:none;
-    margin:1rem 0 0;
-    padding:0
+#FooterSocialMediaIcons .List {
+    box-sizing: border-box;
+    display: flex;
+    list-style-type: none;
+    margin: 1rem 0 0;
+    padding: 0;
+    margin-left: -74px;
 }
 @media (max-width:480px){
     #FooterSocialMediaIcons .List{

@@ -2601,15 +2601,17 @@ body[data-wishlist-drawer]{
         transform:scale(1.1,1.3)
     }
 }
-#FooterSocialMediaIcons{
-    margin-bottom:2rem
+#FooterSocialMediaIcons {
+    margin-bottom: 2rem;
+    margin-left: 235px;
 }
-#FooterSocialMediaIcons .Header{
-    color:#05293c;
-    font-size:1rem;
-    font-weight:700;
-    line-height:1.5rem
-}
+    #FooterSocialMediaIcons .Header {
+        margin-left: -72px;
+        color: #05293c;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+    }
 @media (min-width:769px)and (max-width:1024px){
     #FooterSocialMediaIcons .Header{
         color:#fff
@@ -2620,12 +2622,13 @@ body[data-wishlist-drawer]{
         color:#fff
     }
 }
-#FooterSocialMediaIcons .List{
-    box-sizing:border-box;
-    display:flex;
-    list-style-type:none;
-    margin:1rem 0 0;
-    padding:0
+#FooterSocialMediaIcons .List {
+    box-sizing: border-box;
+    display: flex;
+    list-style-type: none;
+    margin: 1rem 0 0;
+    padding: 0;
+    margin-left: -74px;
 }
 @media (max-width:480px){
     #FooterSocialMediaIcons .List{
