@@ -8725,7 +8725,6 @@ body[data-wishlist-drawer] {
 }
 
     #HeaderLoggedIn .HeaderUnibuddyLinkContainer .HeaderUnibuddyText:hover, #HeaderLogin .HeaderUnibuddyLinkContainer .HeaderUnibuddyText:hover {
-        color: #247ba0;
         opacity: .8
     }
 
@@ -8955,24 +8954,24 @@ body[data-wishlist-drawer] {
 
 @media(min-width:769px)and (max-width:1024px) {
     .AccountDropDown li .MenuItem {
-        color: #247ba0
+        color: #000
     }
 }
 
 @media(min-width:1025px) {
     .AccountDropDown li .MenuItem {
-        color: #247ba0
+        color: #000
     }
 }
 
 .AccountDropDown li .MenuItem:hover {
-    color: #cc4c2f;
+    color: #36454F;
     text-decoration: none
 }
 
 @media(min-width:769px)and (max-width:1024px) {
     .AccountDropDown li .MenuItem:hover {
-        color: #247ba0
+        color: #000
     }
 }
 

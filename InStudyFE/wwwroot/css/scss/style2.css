@@ -953,7 +953,6 @@ body[data-wishlist-drawer]{
     line-height:1rem
 }
     #HeaderLoggedIn .HeaderUnibuddyLinkContainer .HeaderUnibuddyText:hover, #HeaderLogin .HeaderUnibuddyLinkContainer .HeaderUnibuddyText:hover {
-        color: #247ba0;
         opacity: .8
     }
 #HeaderLoggedIn .AccountClickable,#HeaderLogin .AccountClickable{
