@@ -8834,7 +8834,7 @@ body[data-wishlist-drawer] {
 
 .AccountDropDown {
     background-color: #fff;
-    color: #247ba0;
+    color: #000;
     padding: 0;
     transition: top .5s
 }
@@ -9807,7 +9807,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
 }
 
 #HeaderSearch form button:focus, #HeaderSearch form button:hover {
-    background: #6610f2;
+    background: #a2eacb;
     cursor: pointer
 }
 

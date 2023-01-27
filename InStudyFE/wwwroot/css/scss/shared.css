@@ -1554,7 +1554,7 @@ iframe[name=google_conversion_frame]{
     display:none
 }
 .Suggestion:hover {
-    background-color: #522EBD !important;
+   
     color: #fff !important;
 }
 @media (min-width: 1025px) {
