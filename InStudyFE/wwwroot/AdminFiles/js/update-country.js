@@ -57,13 +57,13 @@
 <div class="row mb-4">
                                 <label class="col-md-3 form-label">Students Count:</label>
                                 <div class="col-md-9">
-                                    <input type="text" value="${data.data.currentStudents}" id="CurrentStudents" class="form-control">
+                                    <input type="number" value="${data.data.currentStudents}" id="CurrentStudents" class="form-control">
                                 </div>
                             </div> 
                             <div class="row mb-4">
                                 <label class="col-md-3 form-label">Population:</label>
                                 <div class="col-md-9">
-                                    <input type="text" id="Population" value="${data.data.population}" class="form-control">
+                                    <input type="number" id="Population" value="${data.data.population}" class="form-control">
                                 </div>
                             </div> 
                              <div class="row">

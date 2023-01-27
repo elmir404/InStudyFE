@@ -76,7 +76,7 @@ function Edit(id) {
 function Delete(id) {
 
     $.ajax({
-        type: "DELETE",
+        type: "PUT",
         url: `https://api.instudy.net/api/StudentWords/DeleteStudentWords?id=${id}`,
         success: function (result) {
             if (result.success == true) {

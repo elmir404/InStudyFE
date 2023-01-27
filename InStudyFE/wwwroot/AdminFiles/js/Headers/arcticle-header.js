@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $('#arcticles-datatable').DataTable({
+    $('#arcticlesheader-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/About/GetActiveAbouts',
+            url: 'https://api.instudy.net/api/BlogFront/GetLastBlogFronts',
             dataSrc: 'data'
         },
         columns: [
@@ -78,25 +78,22 @@
     //    ]
     //});
 
-    $("#addAbout").click(function () {
+    $("#addArcticlesHeader").click(function () {
 
 
         var formData = new FormData();
         formData.append('AzHeader', $("#azHeader").val());
         formData.append('RuHeader', $("#ruHeader").val());
         formData.append('EnHeader', $("#enHeader").val());
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
         $.ajax({
             type: "POST",
-            url: 'https://api.instudy.net/api/About/AddAbout',
+            url: 'https://api.instudy.net/api/BlogFront/AddBlogFront',
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/GoStudy/List"
+                    location.href = "/Admin/Header/ArcticlesHeader"
                 }
                 else {
                     alert("error")
@@ -109,20 +106,20 @@
     });
 
 });
-function Edit(about) {
+//function Edit(about) {
 
-    localStorage.setItem('goStudyId', about);
-    location.href = `/Admin/GoStudy/UpdateGoStudy`;
+//    localStorage.setItem('arhId', about);
+//    location.href = `/Admin/GoStudy/UpdateGoStudy`;
 
-}
+//}
 function Delete(about) {
 
     $.ajax({
-        type: "PUT",
-        url: `https://api.instudy.net/api/About/DeleteAbout?aboutId=${about}`,
+        type: "DELETE",
+        url: `https://api.instudy.net/api/BlogFront/DeleteBlogFront?id=${about}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/Admin/GoStudy/List`;
+                location.href = `/Admin/Header/ArcticlesHeader`;
             }
             else {
                 alert(result.message)

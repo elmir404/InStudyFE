@@ -70,7 +70,7 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/Speciality/SpecilityList"
+                    location.href = "/Admin/Speciality/SpecialityList"
                 }
                 else {
                     alert("error")

@@ -2,6 +2,7 @@
 
 namespace InStudyFE.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class HeaderController : Controller
     {
         public IActionResult DirectionHeader()

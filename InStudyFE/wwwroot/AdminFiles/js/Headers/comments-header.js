@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $('#gostudy-datatable').DataTable({
+    $('#commentsheader-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/About/GetActiveAbouts',
+            url: 'https://api.instudy.net/api/StudentWordsFront/GetAllStudentWordsFront',
             dataSrc: 'data'
         },
         columns: [
@@ -80,25 +80,23 @@
     //    ]
     //});
 
-    $("#addAbout").click(function () {
+    $("#addCommentsHeader").click(function () {
 
 
         var formData = new FormData();
         formData.append('AzHeader', $("#azHeader").val());
         formData.append('RuHeader', $("#ruHeader").val());
         formData.append('EnHeader', $("#enHeader").val());
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
+    
         $.ajax({
             type: "POST",
-            url: 'https://api.instudy.net/api/About/AddAbout',
+            url: 'https://api.instudy.net/api/StudentWordsFront/AddStudentWordsFront',
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/GoStudy/List"
+                    location.href = "/Admin/Header/CommentsHeader"
                 }
                 else {
                     alert("error")
@@ -111,20 +109,20 @@
     });
 
 });
-function Edit(about) {
+//function Edit(about) {
 
-    localStorage.setItem('goStudyId', about);
-    location.href = `/Admin/GoStudy/UpdateGoStudy`;
+//    localStorage.setItem('goStudyId', about);
+//    location.href = `/Admin/Header/CommentsHeader`;
 
-}
+//}
 function Delete(about) {
 
     $.ajax({
-        type: "PUT",
-        url: `https://api.instudy.net/api/About/DeleteAbout?aboutId=${about}`,
+        type: "DELETE",
+        url: `https://api.instudy.net/api/StudentWordsFront/DeleteStudentWordsFront?id=${about}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/Admin/GoStudy/List`;
+                location.href = `/Admin/Header/CommentsHeader`;
             }
             else {
                 alert(result.message)

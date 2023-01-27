@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $('#gostudy-datatable').DataTable({
+    $('#countryheader-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/About/GetActiveAbouts',
+            url: 'https://api.instudy.net/api/CountryFront/GetAllCountryFronts',
             dataSrc: 'data'
         },
         columns: [
@@ -23,9 +23,7 @@
                                 <span class="fe fe-trash-2"> </span>
 
                             </button>
-                            <button onclick=Edit(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-success">
-                                <i class="fe fe-edit"></i>
-                            </button>
+                           
                         </div>
 
                         `;
@@ -80,25 +78,23 @@
     //    ]
     //});
 
-    $("#addAbout").click(function () {
+    $("#addCountryHeader").click(function () {
 
 
         var formData = new FormData();
         formData.append('AzHeader', $("#azHeader").val());
         formData.append('RuHeader', $("#ruHeader").val());
         formData.append('EnHeader', $("#enHeader").val());
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
+   
         $.ajax({
             type: "POST",
-            url: 'https://api.instudy.net/api/About/AddAbout',
+            url: 'https://api.instudy.net/api/CountryFront/AddCountryFront',
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/GoStudy/List"
+                    location.href = "/Admin/Header/CountryHeader"
                 }
                 else {
                     alert("error")
@@ -121,10 +117,10 @@ function Delete(about) {
 
     $.ajax({
         type: "PUT",
-        url: `https://api.instudy.net/api/About/DeleteAbout?aboutId=${about}`,
+        url: `https://api.instudy.net/api/CountryFront/DeleteCountryFront?id=${about}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/Admin/GoStudy/List`;
+                location.href = `/Admin/Header/CountryHeader`;
             }
             else {
                 alert(result.message)
