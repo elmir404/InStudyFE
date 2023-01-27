@@ -184,21 +184,21 @@
                                     <form class="Form" id="SearchForm">
                                        <div class="InputWrapper">
                                           <input id="programInput1" type="text" value="" name="discipline" class="Keywords AutoCompleteInput" autocomplete="off" data-type="what" data-order="1"> 
-                                          <div id="program_div" class="AutoCompleteContainer Hidden " style="width: 197px;">
+                                          <div id="program_div" class="AutoCompleteContainer Hidden " style="width: 133px;">
                                              <ul id="program1" class="AutoComplete"> 
                                              </ul>
                                           </div>
                                        </div>
                                        <div class="InputWrapper">
                                           <input id="countryInput" type="text" value="" name="location" class="Keywords AutoCompleteInput" autocomplete="off" data-type="where" data-order="2">
-                                            <div id="country_div" class="AutoCompleteContainer Hidden " style="width: 197px;">
+                                            <div id="country_div" class="AutoCompleteContainer Hidden " style="width: 133px;">
                                              <ul id="country" class="AutoComplete">
                                              </ul>
                                           </div>
                                        </div>
                                        <div class="InputWrapper">
                                           <input id="directionInput" type="text" value="" name="location" class="Keywords AutoCompleteInput" autocomplete="off" data-type="where" data-order="2">
-                                            <div id="direction_div" class="AutoCompleteContainer Hidden " style="width: 197px;">
+                                            <div id="direction_div" class="AutoCompleteContainer Hidden " style="width: 133px;">
                                                 <ul id="direction" class="AutoComplete">
                                              </ul>
                                           </div>
@@ -411,7 +411,7 @@
                         data.data, function (i, value) {
                              console.log("partners",value);
                             var image = `https://api.instudy.net/${value?.partnerFiles[0]?.path}`
-                            $('#partners').owlCarousel({ loop: true, margin: 10, autoplay: true, autoplayTimeout: 2000, autoplayHoverPause: true,nav:true, navText: ["<i class='fa fa-long-arrow-left'></i>","<i class='fa fa- long-arrow-right'></i>"], }).owlCarousel('add', `<div style="height:158px;  display: inline-block;"> <a href="${value.link}"><img style="height:100%; width:236px;" src="${image}" /></a></div>`).owlCarousel('update');
+                            $('#partners').owlCarousel({ dots: false, loop: true, margin: 10, autoplay: true, autoplayTimeout: 2000, nav: true, navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"], }).owlCarousel('add', `<div style="height:158px;  display: inline-block;"> <a href="${value.link}"><img style="height:100%; width:236px;" src="${image}" /></a></div>`).owlCarousel('update');
                                
 
 
