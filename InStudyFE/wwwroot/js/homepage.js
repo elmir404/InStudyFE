@@ -2,7 +2,7 @@
 
     var $country = $('#CountrySpotlightContainer');
     var $partners = $('#partners');
-    var $questionHeader = $('#questionHeader');
+   
     $questions = $('#questionAcc');
     var $countryMenu = $('#countryMenu');
     var $countryHeader = $('#countryHeader');
@@ -12,12 +12,11 @@
     var $uniMore = $('#uniMore');
     var $countryMore = $('.countryMore');
     var $disciplinesHeader = $('#disciplinesHeader');
-    var $disciplineHeader = $('#disciplineHeader');
-    var $homeCoutryHeader = $('#homeCountryHeader');
-    var $partnersHeader = $('#partnerHeader');
-    var $arcticlesHeader = $('#articlesHeader');
+    
+   
+    
     var $homeHeader = $('#homeHeader');
-    var $quateHeader = $('#quateHeader');
+   
     var $quate = $('#quotes');
     var $arcticles = $('#MoreArticles');
     var $contact = $('#contactHeder');
@@ -32,12 +31,12 @@
         $countryHeader.html(`Seçilmiş ölkələr`);
         $universityHeader.html(`Seçilmiş universitetlər`);
         $disciplinesHeader.html(`İxtisaslar`);
-        $disciplineHeader.html(`İxtiaslara baxın`);
+        
         $countryMore.html(`Daha çox ölkə`);
         $uniMore.html(`Bütün universitetləri göstər`);
-        $homeCoutryHeader.html(`Başqa ölkələri kəşf et`);
-        $partnersHeader.html(`Tərəfdaşlar`);
-        $arcticlesHeader.html(`Maraqlı Məqalələr`);
+        
+       
+       
         $quateHeader.html(`Tələbələrin sözləri ilə biz`);
         $arcticles.html(`Daha çox məqalə`);
         $contact.html(`Əlaqə`);
@@ -51,10 +50,10 @@
         $countryHeader.html(`Popular countries`);
         $universityHeader.html(`Popular universities`);
         $disciplinesHeader.html(`Discipliens`);
-        $disciplineHeader.html(`Browse by Discipline`);
-        $homeCoutryHeader.html(`Discover other countries`);
-        $partnersHeader.html(`Partners`);
-        $arcticlesHeader.html(`Interesting Articles`);
+       
+       
+       
+       
         $quateHeader.html(`Us in students' words`);
         $countryMore.html(`More countries`);
         $uniMore.html(`View all universities`);
@@ -69,10 +68,9 @@
         $countryHeader.html(`Популярные страны`);
         $universityHeader.html(`Популярные университеты`); 
         $disciplinesHeader.html(`Дисциплины`);
-        $disciplineHeader.html(`Поиск по дисциплине`);
-        $homeCoutryHeader.html(`Откройте для себя другие страны`);
-        $partnersHeader.html(`Партнеры`);
-        $arcticlesHeader.html(`Интересные статьи`);
+       
+      
+       
         $countryMore.html(`Больше стран`);
         $quateHeader.html(`Мы словами студентов`);
         $uniMore.html(`Просмотреть все университеты`);

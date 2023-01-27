@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $('#arcticles-datatable').DataTable({
+    $('#arcticlesheader-datatable').DataTable({
         ajax: {
             url: 'https://api.instudy.net/api/About/GetActiveAbouts',
             dataSrc: 'data'
@@ -78,7 +78,7 @@
     //    ]
     //});
 
-    $("#addAbout").click(function () {
+    $("#addArcticlesHeader").click(function () {
 
 
         var formData = new FormData();

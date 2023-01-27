@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $('#gostudy-datatable').DataTable({
+    $('#directionsheader-datatable').DataTable({
         ajax: {
             url: 'https://api.instudy.net/api/About/GetActiveAbouts',
             dataSrc: 'data'
@@ -80,7 +80,7 @@
     //    ]
     //});
 
-    $("#addAbout").click(function () {
+    $("#addDirectionsHeader").click(function () {
 
 
         var formData = new FormData();

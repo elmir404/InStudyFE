@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $('#gostudy-datatable').DataTable({
+    $('#partnersheader-datatable').DataTable({
         ajax: {
             url: 'https://api.instudy.net/api/About/GetActiveAbouts',
             dataSrc: 'data'
@@ -80,7 +80,7 @@
     //    ]
     //});
 
-    $("#addAbout").click(function () {
+    $("#addPartnersHeader").click(function () {
 
 
         var formData = new FormData();
