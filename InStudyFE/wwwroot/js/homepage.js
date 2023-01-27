@@ -4,6 +4,7 @@
     var $partners = $('#partners');
    
     $questions = $('#questionAcc');
+    var $questionHeader = $('#questionHeader');
     var $countryMenu = $('#countryMenu');
     var $countryHeader = $('#countryHeader');
     var $universityMenu = $('#universityMenu');

@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#arcticlesheader-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/BlogFront/GetLastBlogFronts',
+            url: 'https://api.instudy.net/api/BlogFront/GetAllBlogFronts',
             dataSrc: 'data'
         },
         columns: [

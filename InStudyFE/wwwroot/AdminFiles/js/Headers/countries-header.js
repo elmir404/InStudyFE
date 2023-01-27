@@ -116,7 +116,7 @@ function Edit(about) {
 function Delete(about) {
 
     $.ajax({
-        type: "PUT",
+        type: "DELETE",
         url: `https://api.instudy.net/api/CountryFront/DeleteCountryFront?id=${about}`,
         success: function (result) {
             if (result.success == true) {

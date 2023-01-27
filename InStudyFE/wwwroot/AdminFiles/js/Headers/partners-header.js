@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#partnersheader-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/About/GetActiveAbouts',
+            url: 'https://api.instudy.net/api/PartnerFront/GetAllPartnerFronts',
             dataSrc: 'data'
         },
         columns: [
@@ -87,18 +87,16 @@
         formData.append('AzHeader', $("#azHeader").val());
         formData.append('RuHeader', $("#ruHeader").val());
         formData.append('EnHeader', $("#enHeader").val());
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
+
         $.ajax({
             type: "POST",
-            url: 'https://api.instudy.net/api/About/AddAbout',
+            url: 'https://api.instudy.net/api/PartnerFront/AddPartnerFront',
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/GoStudy/List"
+                    location.href = "/Admin/Header/PartnersHeader"
                 }
                 else {
                     alert("error")
@@ -120,11 +118,11 @@ function Edit(about) {
 function Delete(about) {
 
     $.ajax({
-        type: "PUT",
-        url: `https://api.instudy.net/api/About/DeleteAbout?aboutId=${about}`,
+        type: "DELETE",
+        url: `https://api.instudy.net/api/PartnerFront/DeletePartnerFront?id=${about}`,
         success: function (result) {
             if (result.success == true) {
-                location.href = `/Admin/GoStudy/List`;
+                location.href = `/Admin/Header/PartnersHeader`;
             }
             else {
                 alert(result.message)
