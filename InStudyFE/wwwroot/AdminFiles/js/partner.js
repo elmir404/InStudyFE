@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $('#partner-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/Partner/GetPartners',
+            url: 'https://api.instudy.net/api/Partner/GetActivePartners',
             dataSrc: 'data'
         },
         columns: [

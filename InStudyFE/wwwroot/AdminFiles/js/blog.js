@@ -53,8 +53,8 @@
         var files = $("#files").get(0).files;
         var formData = new FormData();
         formData.append('AzTitle', $("#azHeader").val());
-        formData.append('RuTite', $("#ruHeader").val());
-        formData.append('EnHeader', $("#enHeader").val());
+        formData.append('RuTitle', $("#ruHeader").val());
+        formData.append('EnTitle', $("#enHeader").val());
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
@@ -71,7 +71,7 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/Blog/List"
+                 /*   location.href = "/Admin/Blog/List"*/
                 }
                 else {
                     alert("error")

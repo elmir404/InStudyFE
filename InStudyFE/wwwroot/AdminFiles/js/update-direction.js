@@ -70,7 +70,7 @@
     })
     $("#updateDirection").click(function () {
         var directionId = $("#directionId").val();
-        var files = $("#files").get(0).files;
+       /* var files = $("#files").get(0).files;*/
         var formData = new FormData();
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
@@ -78,9 +78,10 @@
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
-        for (var i = 0; i < files.length; i++) {
-            formData.append('Files', files[i]);
-        }
+        formData.append('Icon', $("#iconSvg").val());
+        //for (var i = 0; i < files.length; i++) {
+        //    formData.append('Files', files[i]);
+        //}
         console.log(formData);
 
         $.ajax({

@@ -32,20 +32,7 @@
                                     <textarea class="" id="azDescription" maxlength="50"  name="example">${data.data.description}</textarea>
                                 </div>
                             </div>
-                        <div class="row">
-                                <label class="col-md-3 form-label mb-4">Country</label>
-                                <div class="col-md-9 mb-4">
-                                    <select id="country">
-                                    </select>
-                                </div>
-                            </div>
-                        <div class="row">
-                                <label class="col-md-3 form-label mb-4">File Upload :</label>
-                                <div class="col-md-9">
-                                    <input id="files" type="file" name="files" accept=".jpg, .png, image/jpeg, image/png" multiple>
-                                </div>
-                            </div>
-                         
+                       
                         
                         `
             )
@@ -57,9 +44,13 @@
     $("#updateComments").click(function () {
         var blogId = $("#commentId").val();
         var formData = new FormData();
+        var files = $("#files").get(0).files;
         formData.append('Name', $("#azHeader").val());
         formData.append('Description', $("#azDescription").val());
         formData.append('CountryId', $("#country").val());
+        for (var i = 0; i < files.length; i++) {
+            formData.append('Files', files[i]);
+        }
         $.ajax({
             type: "PUT",
             url: `https://api.instudy.net/api/StudentWords/UpdateStudentWords?id=${blogId}`,
@@ -68,7 +59,7 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/Blog/List"
+                    location.href = "/Admin/StudentWords/List"
                 }
                 else {
                     alert("error")

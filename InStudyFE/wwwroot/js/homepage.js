@@ -31,13 +31,8 @@
         $countryHeader.html(`Seçilmiş ölkələr`);
         $universityHeader.html(`Seçilmiş universitetlər`);
         $disciplinesHeader.html(`İxtisaslar`);
-        
         $countryMore.html(`Daha çox ölkə`);
         $uniMore.html(`Bütün universitetləri göstər`);
-        
-       
-       
-        $quateHeader.html(`Tələbələrin sözləri ilə biz`);
         $arcticles.html(`Daha çox məqalə`);
         $contact.html(`Əlaqə`);
         $topscroll.html(`Yuxarı`);
@@ -50,11 +45,6 @@
         $countryHeader.html(`Popular countries`);
         $universityHeader.html(`Popular universities`);
         $disciplinesHeader.html(`Discipliens`);
-       
-       
-       
-       
-        $quateHeader.html(`Us in students' words`);
         $countryMore.html(`More countries`);
         $uniMore.html(`View all universities`);
         $arcticles.html("More arcticles");
@@ -68,11 +58,7 @@
         $countryHeader.html(`Популярные страны`);
         $universityHeader.html(`Популярные университеты`); 
         $disciplinesHeader.html(`Дисциплины`);
-       
-      
-       
         $countryMore.html(`Больше стран`);
-        $quateHeader.html(`Мы словами студентов`);
         $uniMore.html(`Просмотреть все университеты`);
         $arcticles.html("Еще статьи");
         $contact.html(`Контакт`);
