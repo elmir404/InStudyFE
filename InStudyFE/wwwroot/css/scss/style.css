@@ -116,31 +116,38 @@ h2.section-sub-title {
     margin: 2rem 0;
     margin-left: -98px;
 }
-
-@media (min-width:426px)and (max-width:769px) {
-
-
+@media (max-width: 480px) {
     h2.section-sub-title {
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-weight: 700;
-        line-height: 1rem;
-        margin: 2rem 0;
-        margin-left: -88px;
+        line-height: 2rem;
+        margin-left: -12px;
     }
 }
-@media (max-width:426px) {
+@media (min-width: 481px) and (max-width: 768px) {
     h2.section-sub-title {
-        margin-left: -15px;
-    }
-    } 
-
-@media (min-width: 1440px) {
-    h2.section-sub-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 700;
-        line-height: 1rem;
-        margin: 1rem 0;
-        margin-left: -8px;
+        line-height: 2rem;
+        margin-left: -71px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    h2.section-sub-title {
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 3rem;
+        margin: 2rem 0;
+        margin-left: -71px;
+    }
+}
+@media (min-width: 1025px) {
+    h2.section-sub-title {
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 3rem;
+        margin: 2rem 0;
+        margin-left: -71px;
     }
 }
 
@@ -214,46 +221,31 @@ h2.section-sub-title {
         letter-spacing: .3px !important;
     }
 
+p.container-text {
+    color: #05293c;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+    margin-left: -71px;
+}
+
+@media (max-width: 480px) {
     p.container-text {
-        color: #05293c;
-        display: block;
+     
+        margin-left: -9px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    p.container-text {
         font-size: 1.5rem;
         font-weight: 700;
         line-height: 2rem;
-        margin-left: -98px;
-    }
-
-@media (min-width:426px)and (max-width:769px) {
-
-    p.container-text {
-        color: #05293c;
-        display: block;
-        font-size: 1rem;
-        font-weight: 700;
-        line-height: 1rem;
-        margin-left: -87px;
+        margin-left: -68px;
     }
 }
-@media (max-width:426px) {
-    p.container-text {
-        margin-left: -14px;
-        font-size: 1.4rem;
-    }
 
-} 
-
-
-@media (min-width: 1440px) {
-
-    p.container-text {
-        color: #05293c;
-        display: block;
-        font-size: 1rem;
-        font-weight: 700;
-        line-height: 2rem;
-        margin-left: -8px;
-    }
-}
 
 
     p {
