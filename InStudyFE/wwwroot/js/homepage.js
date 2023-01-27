@@ -673,9 +673,7 @@
                      <div class="info-count">
                        
                      </div>
-                     <div class="desc-div">
-                        <p class="container-text">${header}</p>
-                     </div>
+                    
                   </div>
                                          `
                 );
