@@ -340,7 +340,7 @@
                 ` 
 
 
-			<div class=" col-md-12 col-ms d-flex align-items-stretch"  style="padding-top: 10px;">
+			<div class=""  style="padding-top: 10px;">
 							<div class="info-wrap bg-primary w-100 p-lg-5 p-8">
 							<h3 class="mb-8 mt-md-8" id="headerr">${$header}</h3>
 				        	<div class="dbox w-100 d-flex align-items-center">
@@ -381,6 +381,67 @@
             );
 
              
+
+
+
+
+        }
+    });
+    $.ajax({
+        type: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        url: `https://api.instudy.net/api/AboutCompany/GetLastAboutCompany`,
+        success: function (data) {
+
+
+            $(`#applyDetail`).empty();
+            $(`#applyDetail`).append(
+                ` 
+                  <div id="map-responsive"  class="map-responsive">
+<iframe src="${data?.data?.mapAdress}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>
+
+			<div class=""  style="padding-top: 10px;">
+							<div class="info-wrap bg-primary w-100 p-lg-5 p-8">
+							<h3 class="mb-8 mt-md-8" id="headerr">${$header}</h3>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-map-marker"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>${adr}:</span>${data?.data?.adress}</p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-phone"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>${phone}:</span> <a href="tel:${data?.data?.phone}">${data?.data?.phone}</a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-paper-plane"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>${email}:</span> <a href="${data?.data?.email}">${data?.data?.email}</a></p>
+					          </div>
+				          </div>
+				        	
+			          </div>
+
+					 
+	</div>
+
+
+`
+            );
+
+
 
 
 

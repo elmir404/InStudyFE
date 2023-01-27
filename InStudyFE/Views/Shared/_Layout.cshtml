@@ -69,6 +69,26 @@
             }
            
            }
+
+        .owl-prev {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 35%;
+           /* margin-left: -10px;*/
+            display: block !important;
+            border: 0px solid black;
+        }
+
+        .owl-next {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 35%;
+            right: 15px;
+            display: block !important;
+            border: 0px solid black;
+        }
        </style>
 
       @RenderSection("Css",false)  
@@ -306,8 +326,8 @@
                                     <nav id="FooterSocialMediaIcons">
                                         <strong class="Header followlang">Follow us</strong>
                                         <div class="fadd col-md col-12 col">
-                                        <p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
-                                        <p><i class="fa fa-phone"></i>  +91-9999878398  </p>
+                                        <p id="adresFooter"> </p>
+                                        <p id="phoneFooter">  </p>
                                         </div>
                                         <ul  class="List">
                                             <li id="faceIcon" class="ListItem"> 
@@ -411,7 +431,24 @@
                         data.data, function (i, value) {
                              console.log("partners",value);
                             var image = `https://api.instudy.net/${value?.partnerFiles[0]?.path}`
-                            $('#partners').owlCarousel({ dots: false, loop: true, margin: 10, autoplay: true, autoplayTimeout: 2000, nav: true, navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"], }).owlCarousel('add', `<div style="height:158px;  display: inline-block;"> <a href="${value.link}"><img style="height:100%; width:236px;" src="${image}" /></a></div>`).owlCarousel('update');
+                            $('#partners').owlCarousel({
+                                dots: false, loop: true, margin: 10, autoplay: true, autoplayTimeout: 2000, nav: true, navText: ["<img src='/images/prev.png' style='width:30px;height:30px;'>", "<img src='/images/next.png' style='width:30px;height:30px;'>"], responsiveClass: true,
+                                responsive: {
+                                    0: {
+                                        items: 1,
+                                        nav: true
+                                    },
+                                    600: {
+                                        items: 2,
+                                        nav: true
+                                    },
+                                    1000: {
+                                        items: 3,
+                                        nav: true,
+                                        loop: true
+                                    }
+                                }
+                            }).owlCarousel('add', `<div style="height:158px;  display: inline-block;"> <a href="${value.link}"><img style="height:100%; width:236px;" src="${image}" /></a></div>`).owlCarousel('update');
                                
 
 

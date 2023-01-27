@@ -286,6 +286,19 @@
 `
                 )
             }
+            if (data?.data?.adress != null) {
+                $("#adresFooter").html(
+                    `<i class="fa fa-location-arrow"></i>&nbsp;${data?.data?.adress}
+`
+                )
+            }
+            if (data?.data?.phone != null) {
+                $("#phoneFooter").html(
+                    `<i class="fa fa-phone"></i>&nbsp;${data?.data?.phone}
+
+`
+                )
+            }
 
 
         }

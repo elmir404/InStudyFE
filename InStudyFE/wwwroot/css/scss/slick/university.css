@@ -9092,32 +9092,7 @@ body[data-wishlist-drawer] {
     position: relative
 }
 
-    #HeaderMainMenu .SectionNavigationItem .SectionNavigationLink {
-        align-items: center;
-        color: #247ba0;
-        cursor: pointer;
-        display: flex;
-        flex-direction: row;
-        padding: 1.25rem 0 1rem .75rem
-    }
-
-@media(min-width:769px)and (max-width:1024px) {
-    #HeaderMainMenu .SectionNavigationItem .SectionNavigationLink {
-        flex-direction: column;
-        padding-left: 0;
-        width: 56px
-    }
-}
-
-@media(min-width:1025px) {
-    #HeaderMainMenu .SectionNavigationItem .SectionNavigationLink {
-        padding-left: 1rem
-    }
-}
-
-#HeaderMainMenu .SectionNavigationItem .SectionNavigationLink:hover {
-    text-decoration: none
-}
+  
 
 #HeaderMainMenu .SectionNavigationItem .SectionNavigationIcon {
     font-size: 16px;

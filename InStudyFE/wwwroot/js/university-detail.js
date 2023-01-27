@@ -25,7 +25,7 @@
             if ($lang == 'AZ') {
                 var name1 = data.data?.azName
                 var description = data.data?.azDescription;
-                var shortDescription = data.data?.azDescription.slice(0,30);
+                var shortDescription = data.data?.azDescription?.slice(0,30);
                 var title = "Haqqında";
                 var duration = "Reytinq";
                 var attendence = "Dərs növü";
@@ -40,7 +40,7 @@
             else if ($lang == 'EN') {
                 var name1 = data.data?.enName
                 var description = data.data?.enDescription;
-                var shortDescription = data.data?.enDescription.slice(0,30);
+                var shortDescription = data.data?.enDescription?.slice(0,30);
                 var title = "About";
                 var duration = "Rating";
                 var attendence = "Type";
@@ -55,7 +55,7 @@
             } else {
                 var name1 = data.data?.ruName;
                 var description = data.data?.ruDescription;
-                var shortDescription = data.data?.ruDescription.slice(0,30);
+                var shortDescription = data.data?.ruDescription?.slice(0,30);
                 var title = "O нас";
                 var duration = "Рейтинг";
                 var attendence = "Тип урока";
