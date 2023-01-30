@@ -57,7 +57,7 @@
                             <div class="row">
                             <label class="col-md-3 form-label mb-4">Icon Svg :</label>
                             <div class="col-md-9 mb-4">
-                                <textarea class="content" id="icon" name="example"></textarea>
+                                <textarea class="content" id="iconSvg" name="example">${data.data?.icon}</textarea>
                             </div>
                         </div>
                         

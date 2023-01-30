@@ -74,4 +74,126 @@
 </div>
 @section Scripts{
     <script src="~/AdminFiles/js/duration.js"></script>
+    <script>
+        $.ajax({
+            type: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            url: `https://api.instudy.net/api/University/GetActiveUniversities`,
+
+            success: function (data) {
+                $.each(
+                    data.data, function (i, value) {
+
+
+
+
+
+                        $("#University").append(`
+                                                         <option value="${value.id}">${value.azName}</option>
+
+        `
+                        );
+
+
+
+
+                    }
+                )
+
+            }
+
+        });
+        $.ajax({
+            type: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            url: `https://api.instudy.net/api/Program/GetActivePrograms`,
+
+            success: function (data) {
+                $.each(
+                    data.data, function (i, value) {
+
+
+
+
+
+                        $("#EducationProgram").append(`
+                                                         <option value="${value.id}">${value.azName}</option>
+
+        `
+                        );
+
+
+
+
+                    }
+                )
+
+            }
+
+        });
+        $.ajax({
+            type: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            url: `https://api.instudy.net/api/Speciality/GetActiveSpecialities`,
+
+            success: function (data) {
+                $.each(
+                    data.data, function (i, value) {
+
+
+
+
+
+                        $("#Speciality").append(`
+                                                         <option value="${value.id}">${value.azName}</option>
+
+        `
+                        );
+
+
+
+
+                    }
+                )
+
+            }
+
+        });
+        $.ajax({
+            type: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            url: `https://api.instudy.net/api/DurationDate/GetActiveDurationDates`,
+
+            success: function (data) {
+                $.each(
+                    data.data, function (i, value) {
+
+
+
+
+
+                        $("#DurationDate").append(`
+                                                         <option value="${value.id}">${value.title}</option>
+
+        `
+                        );
+
+
+
+
+                    }
+                )
+
+            }
+
+        });
+    </script>
 }

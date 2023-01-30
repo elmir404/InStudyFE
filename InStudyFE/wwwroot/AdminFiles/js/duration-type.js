@@ -19,11 +19,9 @@ $(document).ready(function () {
                     return `
                         <div class="btn-list">
                            
-                            <button onclick=Edit(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-success">
-                                <i class="fe fe-edit"></i>
-                            </button>
+                           
                         <button onclick=Delete(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-success">
-                                                        <i class="fe fe-edit"></i>
+                                                        <i class="fe fe-delete"></i>
                                                     </button>
                                                 </div>
 
