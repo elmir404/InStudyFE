@@ -7,7 +7,48 @@
         columns: [
 
             {
-                data: 'title',
+                data: 'durationDate', render: function (data, type, row, meta) {
+                    return `
+                           <td>${data.date}</td>
+
+                        `;
+
+
+
+                }
+            },
+            {
+                data: 'educationProgram', render: function (data, type, row, meta) {
+                    return `
+                           <td>${data.azName}</td>
+
+                        `;
+
+
+
+                }
+            },
+            {
+                data: 'speciality', render: function (data, type, row, meta) {
+                    return `
+                           <td>${data.azName}</td>
+
+                        `;
+
+
+
+                }
+            },
+            {
+                data: 'university', render: function (data, type, row, meta) {
+                    return `
+                           <td>${data.azName}</td>
+
+                        `;
+
+
+
+                }
             },
            
             {

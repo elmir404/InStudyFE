@@ -179,10 +179,16 @@
                         <div class="card-footer">
                             <!--Row-->
                             <div class="row">
-                                <div class="col-md-3"></div>
+                              
                                 <div class="col-md-9">
                                         <a href="javascript:void(0)" id="addUniversty" class="btn btn-primary">Add University</a>
                                 </div>
+                                  <div class="col-md-3"> 
+                                      <button type="button" id="specialityBtn" class="btn btn-success mb-4 data-table-btn" style="display:none;"data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                Add Speciality
+                                            </button>
+                                            <!-- Modal -->
+                                      </div>
                             </div>
                             <!--End Row-->
                         </div>
@@ -194,6 +200,35 @@
         <!-- CONTAINER CLOSED -->
     </div>
 </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Specaility</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="md-form mb-5">
+                        <label data-error="wrong" data-success="right" for="form34">University Id</label>
+                        <input type="number" id="universityId">
+                    </div>
+                    <div class="md-form mb-5">
+                        <label data-error="wrong" data-success="right" for="form34">Specialities</label>
+                        <select name="claimName" multiple="multiple" id="specialityList">
+                          
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="addUniSpec" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 @section Scripts{
     <script src="~/AdminFiles/js/university.js"></script>
     <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
@@ -205,7 +240,7 @@
                 'Access-Control-Allow-Origin': '*',
 
             },
-            url: `https://api.instudy.net/api/Speciality/GetSpecialities`,
+            url: `https://api.instudy.net/api/Speciality/GetActiveSpecialities`,
 
             success: function (data) {
                 var html =[];
@@ -213,14 +248,14 @@
                     data.data, function (i, value) {
                         html.push(
                             `
-                                                    <option value="${value.id}">${value.ruName}</option>
+                                                    <option value="${value.id}">${value.enName}</option>
 
                                                  `
                         )
 
                     }
                 )
-                $('#speciality').html(html.join('')).multipleSelect();
+                $('#specialityList').html(html.join('')).multipleSelect();
             }
 
         });

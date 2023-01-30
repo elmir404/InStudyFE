@@ -99,7 +99,39 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                   /* location.href = "/Admin/University/UniversityList"*/
+
+
+                    $('#specialityBtn').show();
+                    $('#universityId').val(response.responseJSON.data);
+                }
+                else {
+                    alert("error")
+                }
+
+            },
+        });
+
+
+    });
+    $("#addUniSpec").click(function () {
+        var formData = new FormData();
+        var spec = $("#program").val();
+        var uniID = $("#universityId").val();
+        for (var i = 0; i < spec.length; i++) {
+            formData.append('SpecialityIds', spec[i]);
+        }
+
+        $.ajax({
+            type: "PUT",
+            url: `https://api.instudy.net/api/University/AddSpeciality?id=${uniID}`,
+            data: formData,
+            processData: false,  // tell jQuery not to process the data
+            contentType: false,
+            complete: function (response) {
+                if (response.status == 200) {
+
+                    location.href = "/Admin/University/UniversityList"
+                   
                 }
                 else {
                     alert("error")
