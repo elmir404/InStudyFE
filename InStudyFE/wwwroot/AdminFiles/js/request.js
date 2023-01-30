@@ -107,3 +107,9 @@ function Delete(message) {
 
 
 }
+function Edit(id) {
+
+    localStorage.setItem('requestId', id);
+    location.href = `/Admin/Request/RequestDetail`;
+
+}

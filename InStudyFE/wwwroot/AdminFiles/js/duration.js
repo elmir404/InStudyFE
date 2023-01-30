@@ -33,126 +33,7 @@
 
         ]
     });
-    $.ajax({
-        type: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        url: `https://api.instudy.net/api/University/GetActiveUniversities`,
-
-        success: function (data) {
-            $.each(
-                data.data, function (i, value) {
-
-                   
-
-                    
-
-                        $("#University").append(`
-                                                 <option value="${value.id}">${value.azName}</option>
-
-`
-                        );
-                  
-
-
-
-                }
-            )
-
-        }
-
-    });
-    $.ajax({
-        type: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        url: `https://api.instudy.net/api/Program/GetActivePrograms`,
-
-        success: function (data) {
-            $.each(
-                data.data, function (i, value) {
-
-                   
-
-                    
-
-                    $("#EducationProgram").append(`
-                                                 <option value="${value.id}">${value.azName}</option>
-
-`
-                        );
-                  
-
-
-
-                }
-            )
-
-        }
-
-    });
-    $.ajax({
-        type: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        url: `https://api.instudy.net/api/Speciality/GetActiveSpecialities`,
-
-        success: function (data) {
-            $.each(
-                data.data, function (i, value) {
-
-                   
-
-                    
-
-                    $("#Speciality").append(`
-                                                 <option value="${value.id}">${value.azName}</option>
-
-`
-                        );
-                  
-
-
-
-                }
-            )
-
-        }
-
-    });
-    $.ajax({
-        type: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        url: `https://api.instudy.net/api/DurationDate/GetActiveDurationDates`,
-
-        success: function (data) {
-            $.each(
-                data.data, function (i, value) {
-
-                   
-
-                    
-
-                    $("#DurationDate").append(`
-                                                 <option value="${value.id}">${value.title}</option>
-
-`
-                        );
-                  
-
-
-
-                }
-            )
-
-        }
-
-    });
+ 
     $("#addDuration").click(function () {
 
 
@@ -169,7 +50,7 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/Duration/List"
+                    /*location.href = "/Admin/Duration/List"*/
                 }
                 else {
                     alert("error")

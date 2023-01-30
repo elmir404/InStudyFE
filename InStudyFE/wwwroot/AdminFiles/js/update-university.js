@@ -177,6 +177,7 @@
             $('.content6').richText();
             $('.content7').richText();
             $('.content8').richText();
+            $('.content9').richText();
 
 
 
@@ -226,7 +227,7 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    //location.href = "/Admin/University/UniversityList"
+                    location.href = "/Admin/University/UniversityList"
                 }
                 else {
                     alert("error")

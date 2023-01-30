@@ -54,13 +54,7 @@
                                     <textarea class="content3" id="enDescription"  name="example">${data.data.enDescription}</textarea>
                                 </div>
                             </div>
-                            <!--Row-->
-                            <div class="row">
-                                <label class="col-md-3 form-label mb-4">About Upload :</label>
-                                <div class="col-md-9">
-                                    <input id="files" type="file" name="files" accept=".jpg, .png, image/jpeg, image/png" multiple>
-                                </div>
-                            </div>
+                           
                         
                         `
             )
