@@ -39,9 +39,9 @@
                         
                         $country.append(
                                                 `
-                                              <li data-name="Albania" data-studies="3"> <a
+                                              <li data-name="${name}" data-studies="3"> <a
                                     href="/Country/Detail/${value.id}"
-                                    title="Albania"> ${name} </a> </li>
+                                    title="${name}"> ${name} </a> </li>
                                          `
                         )
 

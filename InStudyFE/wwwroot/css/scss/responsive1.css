@@ -7,6 +7,10 @@
     height:300px;
     position:relative
 }
+* {
+    text-decoration: none !important;
+}
+
 @media (min-width:1025px){
     #galactus #HomeSearchBackground{
         height:500px

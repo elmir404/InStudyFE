@@ -663,7 +663,6 @@
                 $questionHeader.append(
                     `  <div class="detail-header-div">
                      <div class="detail-header-text-div">
-                        <h2 class="section-sub-title">${header}</h2>
                         <p class="container-text">${body}</p>
                      </div>
                   </div>

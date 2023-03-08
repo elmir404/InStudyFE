@@ -8,6 +8,9 @@
 html{
     font-size:16px
 }
+* {
+    text-decoration: none !important;
+}
 body{
     font-size:100%
 }
@@ -532,7 +535,7 @@ button,input,option,select,textarea{
     transform:skewX(-45deg)
 }
 #Footer .BgBars .BgBarA {
-    background: #A2EACB;
+    background: #6C39C5;
     flex: 1 0 40%;
     transform-origin: top left
 }
