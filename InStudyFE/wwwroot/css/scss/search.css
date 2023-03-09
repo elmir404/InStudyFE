@@ -6,7 +6,9 @@
     max-width: 480px;
     overflow: hidden
 }
-
+* {
+    text-decoration: none !important;
+}
 @media(min-width:481px)and (max-width:500px) {
     #OffCanvasFilterMenu {
         max-width: 500px

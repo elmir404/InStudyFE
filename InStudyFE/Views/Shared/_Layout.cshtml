@@ -45,6 +45,11 @@
 
        <link rel="stylesheet" type="text/css" href="~/css/scss/search.css">
        <style>
+
+           *{
+               text-decoration:none;
+
+           }
            .fadd
         {
             margin-left: -74px;
@@ -89,6 +94,20 @@
             display: block !important;
             border: 0px solid black;
         }
+
+        #HeaderMainMenu .SectionContent #disciplinesMenu a:hover {
+            color: #6610f2 !important;
+        }
+
+        #HeaderMainMenu .SectionContent #countryMenu a:hover {
+            color: #6610f2 !important;
+        }
+
+        #HeaderMainMenu .SectionContent #universityMenu a:hover {
+            color: #6610f2 !important;
+        }
+
+      
        </style>
 
       @RenderSection("Css",false)  
@@ -269,12 +288,9 @@
             <section id="FooterMain">
                 <div class="BgBars">
                     <div class="BgBarA">&nbsp;</div>
-                    <div class="BgBarB" >&nbsp;</div>
+                    <div class="BgBarB" style="background-color:#A2EACB;">&nbsp;</div>
                     <div class="BgBarC">&nbsp;</div>
-                    <div class="BgBarD"  style="background-color:#6C39C5
-                        ;">
-                        &nbsp;
-                    </div>
+                    <div class="BgBarD" > &nbsp;</div>
                 </div>
                 <div class="FooterMainCol1 ">
                     <div class="colblock no-top-margin">
@@ -293,7 +309,7 @@
                         <div id="FooterMainInner">
                             <div data-module="" class="Module StudyPortals_Shared_Modules_Footer_FooterAboutUs_FooterAboutUs">
                                 <div id="FooterAboutUs">
-                                    <strong class="Header">InStudy</strong>
+                                    <strong class="Header">Instudy</strong>
                                     <ul class="List">
                                         <li class="ListItem"> <a href="/About/Index" class="Link aboutlang" title="About Studyportals" target="_blank" rel="noopener"> About </a> </li>
                                         <li class="ListItem"> <a href="" class="Link articleslang" title="Our Marketing Services" target="_blank" rel="noopener"> Arcticles </a> </li>
@@ -324,10 +340,10 @@
                                
                                 <div data-module="" class="Module StudyPortals_Shared_Modules_Footer_FooterSocialMediaIcons_FooterSocialMediaIcons">
                                     <nav id="FooterSocialMediaIcons">
-                                        <strong class="Header followlang">Follow us</strong>
+                                        <strong class="Header followlang" style="color:#6C39C5;">Follow us</strong>
                                         <div class="fadd col-md col-12 col">
-                                        <p id="adresFooter"> </p>
-                                        <p id="phoneFooter">  </p>
+                                            <p id="adresFooter" style="color:#6C39C5;"> </p>
+                                            <p id="phoneFooter" style="color:#6C39C5;">  </p>
                                         </div>
                                         <ul  class="List">
                                             <li id="faceIcon" class="ListItem"> 
@@ -347,7 +363,7 @@
                             </div>
                         </div>
                     </div>
-             
+                  </div>
            </section>
             <section id="FooterBranding">
                 <div class="col1 no-vertical-padding wrapped">
@@ -356,24 +372,18 @@
                             <div data-module="" class="Module StudyPortals_Shared_Modules_Footer_FooterLogo_FooterLogo"> <img src="~/images/logo (2).png" class="SPLogo" alt="Studyportals" width="350" height="160" loading="lazy"> </div>
                         </div>
                         <div class="FooterDisclaimer">
-                            <div data-module="" class="Module StudyPortals_Shared_Modules_Footer_FooterDisclaimer_FooterDisclaimer">
+                            <div data-module=""  class="Module StudyPortals_Shared_Modules_Footer_FooterDisclaimer_FooterDisclaimer">
                                
                             </div>
+                            <div id="FooterHiring"> <a href="https://toogoo.az/" rel="noopener" class="FooterHiringLink" title="We are hiring!" target="_blank"> <span>Crafted with</span> <i class="lnr-heart"></i> <span>by TooGoo</span> </a> Copyright &copy; 2022 InStudy </div>
+
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="FooterCopyright">
-                <div class="FooterCopyrightCol1 col1 no-vertical-padding wrapped">
-                    <div class="FooterCopyrightColBlock colblock">
-                        <div data-module="" class="Module StudyPortals_Shared_Modules_Footer_FooterHiring_FooterHiring">
-                            <div id="FooterHiring"> <a href="https://toogoo.az/" rel="noopener" class="FooterHiringLink" title="We are hiring!" target="_blank"> <span>Crafted with</span> <i class="lnr-heart"></i> <span>by TooGoo</span> </a> Copyright &copy; 2022 InStudy </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div class="Hidden">
+            
+           @* <div class="Hidden">
                 <div data-module="" class="Module StudyPortals_Shared_Modules_LocalizationSettings_LocalizationSettings">
                     <div class="Hidden js-notAvailableTextMain">Unavailable</div>
                     <aside id="LocalizationSettings" class="PopupContent">
@@ -385,7 +395,7 @@
                         </div>
                     </aside>
                 </div>
-            </div>
+            </div>*@
        </footer>
     </div>
 
@@ -626,8 +636,14 @@
           
         });
 
-    
-       
+        $("#HomeSearchBackground, #PortalLogo, #HeaderMainMenu, #HeaderSearch, .WhiteBackgroundPane, .ftco-section, #HeroContainer, .WrappedContent, #Footer, #DetailsInformation, #LayoutWrapper, #LayoutDetailedInformation, #SearchPagePlaceholder ").click(function () {
+            const lang = document.getElementById('LoggedInDropDown');
+            lang.classList.remove("Selected");
+
+
+        });
+
+
             function searchProgram(name) {
                var  txtValue = name.textContent || name.innerText;
               

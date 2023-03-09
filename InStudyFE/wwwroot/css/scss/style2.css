@@ -24,6 +24,9 @@ body #galactus .NarrowWrapper{
         margin:1rem auto 0
     }
 }
+* {
+    text-decoration: none !important;
+}
 body #galactus .Module[data-module="Banner:banner_adunit_all__discipline__advanced_visibility"] .BannerPlaceHolderAdvancedVisibility,body #galactus .Module[data-module="Banner:banner_adunit_all__discipline__advanced_visibility"] .BannerPlaceHolderMobileAdvancedVisibility,body #galactus .Module[data-module="Banner:banner_adunit_all__discipline__mobile_advanced_visibility"] .BannerPlaceHolderAdvancedVisibility,body #galactus .Module[data-module="Banner:banner_adunit_all__discipline__mobile_advanced_visibility"] .BannerPlaceHolderMobileAdvancedVisibility{
     margin:3rem auto
 }

@@ -7282,7 +7282,9 @@ button.bg-dark:focus {
 }
 #box {
     display: none;
-    flex-direction: column;
+   flex-wrap:wrap;
+    flex-direction: row;
+    padding: 25px 0;
 }
 .border-top {
     border-top: 1px solid #dee2e6 !important;

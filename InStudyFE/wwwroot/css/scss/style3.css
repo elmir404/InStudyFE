@@ -1,6 +1,9 @@
 ﻿body #galactus {
     background-color: #edf3f6
 }
+* {
+    text-decoration: none !important;
+}
 
     body #galactus .WrappedContent {
         margin: 0 auto;

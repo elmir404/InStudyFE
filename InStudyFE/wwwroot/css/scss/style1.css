@@ -20,6 +20,9 @@
     background:linear-gradient(270deg,#fff 20%,hsla(0,0%,100%,0));
     right:0
 }
+* {
+    text-decoration: none !important;
+}
 .ContentSwitcherWrapper.scrollEnd:after,.ContentSwitcherWrapper.scrollStart:before{
     opacity:0;
     transition:opacity .5s

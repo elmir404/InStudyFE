@@ -20,9 +20,9 @@
         $(`#labeldate`).html('Tarix');
         $(`#havewp`).html('WhatsApp?');
         $(`#labelonline`).html('Onlayn?');
-        $(`#labelconsulted`).html('Konsultasiya?');
+        $(`#labelconsulted`).html('Ödənişsiz konsultasiyaya yazılmaq istəyirsiniz?');
         $(`#labelstcont`).html('Yaşadığınız ölkə');
-        $(`#labelcont`).html('Ölkə');
+        $(`#labelcont`).html('Təhsil almaq istədiyiniz ölkə:');
         $(`#labeldirection`).html('Istiqamət');
         $(`#requestSubmit`).html('Göndər');
         $(`.yes`).html('Bəli');
@@ -43,9 +43,9 @@
         $(`.labeldate`).html('Tarix');
         $(`.havewp`).html('WhatsApp?');
         $(`.labelonline`).html('Onlayn?');
-        $(`.labelconsulted`).html('Konsultasiya?');
+        $(`.labelconsulted`).html('Ödənişsiz konsultasiyaya yazılmaq istəyirsiniz?');
         $(`.labelstcont`).html('Yaşadığınız ölkə');
-        $(`.labelcont`).html('Ölkə');
+        $(`.labelcont`).html('Təhsil almaq istədiyiniz ölkə:ə');
         $(`.labeldirection`).html('Istiqamət');
         $(`.requestSubmit`).html('Göndər');
     }
@@ -70,9 +70,9 @@
         $(`#labeldate`).html('Date');
         $(`#havewp`).html('WhatsApp?');
         $(`#labelonline`).html('Online?');
-        $(`#labelconsulted`).html('Consulted?');
+        $(`#labelconsulted`).html('Want to sign up for a free consultation?');
         $(`#labelstcont`).html('Living country');
-        $(`#labelcont`).html('Country');
+        $(`#labelcont`).html('Country you want to study:');
         $(`#labeldirection`).html('Direction');
         $(`#requestSubmit`).html('Send message');
         $(`.yes`).html('Yes');
@@ -93,9 +93,9 @@
         $(`.labeldate`).html('Date');
         $(`.havewp`).html('WhatsApp?');
         $(`.labelonline`).html('Online?');
-        $(`.labelconsulted`).html('Consulted?');
+        $(`.labelconsulted`).html('Want to sign up for a free consultation?');
         $(`.labelstcont`).html('Living country');
-        $(`.labelcont`).html('Country');
+        $(`.labelcont`).html('Country you want to study:');
         $(`.labeldirection`).html('Direction');
         $(`.requestSubmit`).html('Send message');
     }
@@ -119,9 +119,9 @@
         $(`#labeltime`).html('Дата');
         $(`#havewp`).html('WhatsApp?');
         $(`#labelonline`).html('Онлайн?');
-        $(`#labelconsulted`).html('Kонсультируемый?');
+        $(`#labelconsulted`).html('Хотите записаться на бесплатную консультацию?');
         $(`#labelstcont`).html('Живая страна');
-        $(`#labelcont`).html('Cтрана');
+        $(`#labelcont`).html('Страна, в которой вы хотите учиться:');
         $(`#labeldirection`).html('Направление');
         $(`#requestSubmit`).html('Послать');
         $(`.yes`).html('Да');
@@ -142,9 +142,9 @@
         $(`.labeltime`).html('Дата');
         $(`.havewp`).html('WhatsApp?');
         $(`.labelonline`).html('Онлайн?');
-        $(`.labelconsulted`).html('Kонсультируемый?');
+        $(`.labelconsulted`).html('Хотите записаться на бесплатную консультацию?');
         $(`.labelstcont`).html('Живая страна');
-        $(`.labelcont`).html('Cтрана');
+        $(`.labelcont`).html('Страна, в которой вы хотите учиться:');
         $(`.labeldirection`).html('Направление');
         $(`.requestSubmit`).html('Послать');
         
@@ -217,7 +217,7 @@
     var $phone = $('#phone');
 
     var $reqCountry = $('#requestCountry')
-    var $reqStudentCountry = $('#requestStudentCountry')
+    //var $reqStudentCountry = $('#requestStudentCountry')
     var $reqDirect = $('#requestDirection')
     var $reqWhatsapp = $('#requestWhatsapp')
     var $reqDate = $('#requestDate')
@@ -288,7 +288,7 @@
        
         formData.append('ConsultationDate', $reqDate.val());
         formData.append('IsOnline',isOnline );
-        formData.append('YourContryId', $reqStudentCountry.val());
+        //formData.append('YourContryId', $reqStudentCountry.val());
         for (var i = 0; i < reqContries.length;i++){
             formData.append('CountryIds', reqContries[i]);
            }
