@@ -1507,7 +1507,8 @@ form#SingleBottomSearch.Form {
 
 .AutoCompleteContainer ul li.Link:hover {
     cursor: pointer;
-    text-decoration: none
+    text-decoration: none;
+    background-color: #A2EACB;
 }
 
 .AutoCompleteContainer ul li.Link:focus, .AutoCompleteContainer ul li.Selected {

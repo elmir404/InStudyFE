@@ -604,6 +604,10 @@ article.InfoSection .SectionSubTitle{
     text-decoration: none;
     background-color: #A2EACB;
 }
+
+.AutoCompleteContainer ul li :hover {
+    color: #6610f2;
+}
 .AutoCompleteContainer ul li.Link:focus, .AutoCompleteContainer ul li.Selected {
     background-color: #A2EACB;
     color: #fff
