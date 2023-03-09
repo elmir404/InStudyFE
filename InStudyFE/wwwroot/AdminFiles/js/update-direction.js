@@ -46,24 +46,27 @@
                             <div class="row">
                                 <label class="col-md-3 form-label mb-4">Ru Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="content" id="ruDescription"  name="example">${data.data.ruDescription}</textarea>
+                                    <textarea class="content2" id="ruDescription"  name="example">${data.data.ruDescription}</textarea>
                                 </div>
                             </div> <div class="row">
                                 <label class="col-md-3 form-label mb-4">En Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="content" id="enDescription"  name="example">${data.data.enDescription}</textarea>
+                                    <textarea class="content2" id="enDescription"  name="example">${data.data.enDescription}</textarea>
                                 </div>
                             </div>
                             <div class="row">
                             <label class="col-md-3 form-label mb-4">Icon Svg :</label>
                             <div class="col-md-9 mb-4">
-                                <textarea class="content" id="iconSvg" name="example">${data.data?.icon}</textarea>
+                                <textarea class="content4" id="iconSvg" name="example">${data.data?.icon}</textarea>
                             </div>
                         </div>
                         
                         `
             )
             $('.content').richText();
+            $('.content2').richText();
+            $('.content3').richText();
+            $('.content4').richText();
 
 
         }
@@ -86,7 +89,7 @@
 
         $.ajax({
             type: "PUT",
-            url: `https://api.instudy.net/api/Direction/GetDirection?id=${directionId}`,
+            url: `https://api.instudy.net/api/Direction/UpdateDirection?id=${directionId}`,
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,

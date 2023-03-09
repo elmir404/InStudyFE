@@ -120,7 +120,7 @@ function Delete(about) {
         url: `https://api.instudy.net/api/DirectionFront/DeleteDirectionFront?id=${about}`,
         success: function (result) {
             if (result.success == true) {
-              /*  location.href = `/Admin/Header/DirectionHeader`;*/
+                location.href = `/Admin/Header/DirectionHeader`;
             }
             else {
                 alert(result.message)

@@ -7,7 +7,15 @@
         columns: [
 
             {
-                data: 'date',
+                data: 'attendanceType', render: function (data, type, row, meta) {
+                    return `
+                       <td>${data.title}</td>
+
+                        `;
+
+
+
+                }
             },
 
             {
