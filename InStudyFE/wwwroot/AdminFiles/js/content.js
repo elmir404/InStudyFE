@@ -9,7 +9,7 @@
                 data: 'files', render: function (data, type, row, meta) {
                     console.log("dsds", data);
                     return `
-                             <td><img alt="https://api.instudy.net/${data[0]?.path}" style="width:200px !important;" class="text-center img-responsive" src="${data[0]?.path}"></td>
+                             <td><img alt="https://api.instudy.net/${data[0]?.path}" style="width:200px !important;" class="text-center img-responsive" src="https://api.instudy.net/${data[0]?.path}"></td>
                            `;
 
 
@@ -57,7 +57,6 @@
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);
         }
-        console.log(formData);
 
         $.ajax({
             type: "POST",

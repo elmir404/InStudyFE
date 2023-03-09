@@ -91,7 +91,7 @@
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    /*location.href = "/Admin/Duration/List"*/
+                    location.href = "/Admin/Duration/List"
                 }
                 else {
                     alert("error")

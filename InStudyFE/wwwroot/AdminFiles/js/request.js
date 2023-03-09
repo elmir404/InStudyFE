@@ -19,7 +19,7 @@
                                 <span class="fe fe-trash-2"> </span>
                             </button>
  <button onclick=Edit(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-success">
-                                <i class="fe fe-edit"></i>
+                                <i class="fe fe-eye"></i>
                             </button>
                         </div>
                         `;
@@ -94,7 +94,7 @@ function Delete(message) {
 
     $.ajax({
         type: "DELETE",
-        url: `https://api.instudy.net/api/Contact/DeleteMessage?messageId?messageId=${message}`,
+        url: `https://api.instudy.net/api/StudentRequest/DeleteStudentRequest?id=${message}`,
         success: function (result) {
             if (result.success == true) {
                 location.href = `/Admin/Request/RequestList`;

@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    const programId = localStorage.getItem('onboardingId');
+    const Id = localStorage.getItem('onboardingId');
 
     var $form = $('#form')
     $.ajax({
@@ -7,7 +7,7 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Header/GetHeader?id=${programId}`,
+        url: `https://api.instudy.net/api/Header/GetHeader?id=${Id}`,
         success: function (data) {
 
             console.log(data);
@@ -15,7 +15,7 @@
 
             $form.append(
                 `
-                        <input type="hidden" id="programId" value="${data.data.id}" class="form-control">
+                        <input type="hidden" id="Id" value="${data.data.id}" class="form-control">
 
                      <div class="row mb-4">
                                 <label class="col-md-3 form-label">Az Title :</label>
@@ -58,7 +58,11 @@
                             
                         
                         `
-            )
+            );
+            $('.content').richText();
+            $('.content2').richText();
+            $('.content3').richText();
+            $('.content4').richText();
             
 
 
@@ -66,27 +70,28 @@
         }
     })
     $("#updateOnboarding").click(function () {
-        var programId = $("#programId").val();
+        var onId = $("#Id").val();
         
         var formData = new FormData();
-        formData.append('AzName', $("#azHeader").val());
-        formData.append('RuName', $("#ruHeader").val());
-        formData.append('EnName', $("#enHeader").val());
+        formData.append('AzTitle', $("#azHeader").val());
+        formData.append('RuTitle', $("#ruHeader").val());
+        formData.append('EnTitle', $("#enHeader").val());
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
+        formData.append('IsActive', true);
         
         
 
         $.ajax({
             type: "PUT",
-            url: `https://api.instudy.net/api/Header/UpdateHeader?id=${programId}`,
+            url: `https://api.instudy.net/api/Header/UpdateHeader?id=${onId}`,
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/Program/ProgramList"
+                    location.href = "/Admin/Content/OnboardingList" 
                 }
                 else {
                     alert("error")
