@@ -937,10 +937,10 @@ p.container-text {
         text-decoration: none
     }
 
-    .AutoCompleteContainer ul li.Link:focus, .AutoCompleteContainer ul li.Selected {
-        background-color: #A2EACB;
-        color: #fff
-    }
+.AutoCompleteContainer ul li.Link:focus, .AutoCompleteContainer ul li.Selected {
+    background-color: #A2EACB;
+    color: #532EBD
+}
 
     .AutoCompleteContainer ul li.AutoCompleteHeading {
         background-color: #fff;

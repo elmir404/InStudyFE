@@ -240,11 +240,12 @@
     cursor: pointer;
     text-decoration: none;
     background-color: #A2EACB;
+    color: #532EBD;
 }
 
 .AutoCompleteContainer ul li.Link:focus, .AutoCompleteContainer ul li.Selected {
     background-color: #A2EACB;
-    color: #fff
+    color: #532EBD;
 }
 
 .AutoCompleteContainer ul li.AutoCompleteHeading {
@@ -2474,14 +2475,14 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
 
 @media(min-width:769px)and (max-width:1024px) {
     #FooterScrollToTop .FooterScrollToTopButton {
-        border-color: #6C39C5;
+        border-color: #A2EACB;
         box-shadow: 0 2px 2px #3f5c6e26
     }
 }
 
 @media(min-width:1025px) {
     #FooterScrollToTop .FooterScrollToTopButton {
-        border-color: #6C39C5;
+        border-color: #A2EACB;
         box-shadow: 0 2px 2px #3f5c6e26
     }
 }
