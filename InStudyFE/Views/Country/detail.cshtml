@@ -972,7 +972,7 @@
                                                                         </div>
                                                                         <div col-md-6 mb-2">
                                                                             <label class="labelphone" for="phone">Phone</label>
-                                                                            <input type="tel" class="form-control phone" id="phoneres" placeholder="Phone number" required>
+                                                                            <input type="tel" class="form-control phone" id="phone2" placeholder="Phone number" required>
 
 
 
@@ -1425,21 +1425,7 @@
 
 
 
-        const box2 = document.getElementById('wpphone');
-
-        function handleradioclick2() {
-            if (document.getElementById('show2').checked) {
-                box2.style.display = 'inline-block ';
-            } else {
-                box2.style.display = 'none';
-            }
-        }
-
-        const radiobuttons2 = document.querySelectorAll('input[name="wp"]');
-        radiobuttons2.forEach(radio => {
-            radio.addEventListener('click', handleradioclick2);
-        });
-
+        
 
 
 
