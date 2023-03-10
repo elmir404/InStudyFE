@@ -759,13 +759,13 @@
         line-height: 3rem;
     }
 }
-#FavouriteQuotes .Quotes{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    list-style-type:none;
-    margin:3rem 0 0;
-    padding:0
+#FavouriteQuotes .Quotes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style-type: none;
+    margin: 3rem 0 0;
+    padding: 0
 }
 #FavouriteQuotes .Quote{
     font-size:.75rem;
