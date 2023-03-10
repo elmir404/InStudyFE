@@ -227,7 +227,7 @@ h2.section-sub-title {
 p.container-text {
     color: #05293c;
     display: block;
-    font-size: 1.5rem;
+    font-size: 21px;
     font-weight: 700;
     line-height: 2rem;
     margin-left: -71px;
@@ -242,7 +242,7 @@ p.container-text {
 
 @media (min-width: 481px) and (max-width: 768px) {
     p.container-text {
-        font-size: 1.5rem;
+        font-size: 19px;
         font-weight: 700;
         line-height: 2rem;
         margin-left: -68px;
@@ -932,10 +932,15 @@ p.container-text {
         }
     }
 
-    .AutoCompleteContainer ul li.Link:hover {
-        cursor: pointer;
-        text-decoration: none
-    }
+.AutoCompleteContainer ul li.Link:hover {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #A2EACB;
+}
+
+.AutoCompleteContainer ul li :hover {
+    color: #6610f2;
+}
 
 .AutoCompleteContainer ul li.Link:focus, .AutoCompleteContainer ul li.Selected {
     background-color: #A2EACB;

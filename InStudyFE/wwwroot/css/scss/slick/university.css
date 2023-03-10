@@ -969,7 +969,7 @@ body.is-notScrollable {
     padding: 0
 }
 
-#Footer {
+/*#Footer {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.75rem
@@ -1006,7 +1006,7 @@ body.is-notScrollable {
 #Footer .BgBars {
     overflow: hidden
 }
-
+*/
 .ModuleWrapper.DarkBackground {
     background-color: #edf3f6
 }
@@ -7604,10 +7604,14 @@ div[data-module=SPScholarships] {
         padding: .2rem 0 .2rem 1.5rem
     }
 }
-
 .AutoCompleteContainer ul li.Link:hover {
     cursor: pointer;
-    text-decoration: none
+    text-decoration: none;
+    background-color: #A2EACB;
+}
+
+.AutoCompleteContainer ul li :hover {
+    color: #6610f2;
 }
 
 .AutoCompleteContainer ul li.Link:focus, .AutoCompleteContainer ul li.Selected {
@@ -7742,7 +7746,7 @@ div[data-module=SPScholarships] {
     color: #fff
 }
 
-#Lightbox #footer {
+/*#Lightbox #footer {
     bottom: 0;
     left: 10px;
     margin: 0 auto;
@@ -7817,7 +7821,7 @@ div[data-module=SPScholarships] {
     position: absolute;
     top: 50%
 }
-
+*/
 @media(max-width:480px) {
     #Lightbox .Actions .next, #Lightbox .Actions .prev {
         bottom: 25px;
@@ -8279,7 +8283,7 @@ body[data-wishlist-drawer] {
     }
 }
 
-@media(max-width:480px) {
+/*@media(max-width:480px) {
     #Footer {
         background-position: top -1px left
     }
@@ -8297,7 +8301,7 @@ body[data-wishlist-drawer] {
     #FooterMain {
         box-shadow: 0 -4px 8px #3f5c6e26
     }
-}
+}*/
 
 .SlideInElementFrame {
     bottom: 2rem;
@@ -9988,7 +9992,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
         margin: 0
     }
 
-#FooterHiring {
+/*#FooterHiring {
     display: block;
     margin: .5rem 0 0
 }
@@ -10235,7 +10239,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
         position: absolute;
         text-align: center;
         width: calc(6rem - 2px)
-    }
+    }*/
 
    /* #FooterScrollToTop .FooterScrollToTopButton {
         background-color: #fff;
@@ -10266,7 +10270,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
     }
 }*/
 
-#FooterScrollToTop .FooterScrollToTopButton .FooterScrollToTopRocket {
+/*#FooterScrollToTop .FooterScrollToTopButton .FooterScrollToTopRocket {
     display: block;
     height: 48px;
     left: 0;
@@ -10589,7 +10593,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
     #FooterDisclaimer .LegalLink:hover {
         color: #247ba0cc;
         text-decoration: underline
-    }
+    }*/
 
 .UnibuddyChat {
     padding: 1rem 0;

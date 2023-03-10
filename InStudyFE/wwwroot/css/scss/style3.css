@@ -879,7 +879,7 @@ body #galactus h4 {
     box-sizing: border-box;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     overflow: hidden;
     padding-top: .25em
 }
@@ -889,7 +889,8 @@ body #galactus h4 {
         box-sizing: border-box;
         overflow: hidden;
         position: relative;
-        width: 20%
+        width: 20%;
+        margin-left: 10px;
     }
 
 @media(min-width:1025px) {
@@ -1507,7 +1508,8 @@ form#SingleBottomSearch.Form {
 
 .AutoCompleteContainer ul li.Link:hover {
     cursor: pointer;
-    text-decoration: none
+    text-decoration: none;
+    background-color: #A2EACB;
 }
 
 .AutoCompleteContainer ul li.Link:focus, .AutoCompleteContainer ul li.Selected {

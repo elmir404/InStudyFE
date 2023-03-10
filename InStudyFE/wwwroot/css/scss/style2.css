@@ -373,9 +373,14 @@ body #galactus .Module[data-module="Banner:banner_adunit_all__discipline__advanc
         padding:.2rem 0 .2rem 1.5rem
     }
 }
-.AutoCompleteContainer ul li.Link:hover{
-    cursor:pointer;
-    text-decoration:none
+.AutoCompleteContainer ul li.Link:hover {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #A2EACB;
+}
+
+.AutoCompleteContainer ul li :hover {
+    color: #6610f2;
 }
 .AutoCompleteContainer ul li.Link:focus, .AutoCompleteContainer ul li.Selected {
     background-color: #A2EACB;
