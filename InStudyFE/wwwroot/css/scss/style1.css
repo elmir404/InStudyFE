@@ -610,7 +610,7 @@ article.InfoSection .SectionSubTitle{
 }
 .AutoCompleteContainer ul li.Link:focus, .AutoCompleteContainer ul li.Selected {
     background-color: #A2EACB;
-    color: #fff
+    color: #532EBD;
 }
 .AutoCompleteContainer ul li.AutoCompleteHeading{
     background-color:#fff;
