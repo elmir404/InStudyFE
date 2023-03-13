@@ -46,9 +46,13 @@ namespace InStudyFE.Controllers
             {
                 ModelState.AddModelError("", "User not found!");
                 return View(viewModel);
+            }if (tokenResponse == "loginfiled")
+            {
+                ModelState.AddModelError("", "Login filed!");
+                return View(viewModel);
             }
 
-            if (!string.IsNullOrEmpty(tokenResponse))
+            ////if (!string.IsNullOrEmpty(tokenResponse))
             {
                 _session.SetObject("token", tokenResponse);
 
