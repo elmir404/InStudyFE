@@ -20,7 +20,7 @@ namespace InStudyFE.Controllers
             _contextAccessor = httpContextAccessor;
             _session = httpContextAccessor.HttpContext.Session;
         }
-
+        [HttpGet]
         public IActionResult Login()
         {
             return View();
@@ -32,13 +32,21 @@ namespace InStudyFE.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Login([FromBody] LoginViewModel viewModel)
+        public async Task<IActionResult> Login(LoginViewModel viewModel)
         {
             var helper = new Helper(_httpClientFactory);
             var tokenResponse = await helper
                                 .LoginAsync(viewModel.UserName, viewModel.Password);
             if(tokenResponse== "emailnotverify")
-                return Ok("emailnotverify");
+            {
+                ModelState.AddModelError("", "Email not verify!");
+                return View(viewModel);
+            }
+            if (tokenResponse == "usernotfound")
+            {
+                ModelState.AddModelError("", "User not found!");
+                return View(viewModel);
+            }
 
             if (!string.IsNullOrEmpty(tokenResponse))
             {
@@ -75,7 +83,7 @@ namespace InStudyFE.Controllers
                 const string authenticationType = "Cookies";
                 var claimsIdentity = new ClaimsIdentity(claims, authenticationType);
                 await _contextAccessor.HttpContext.SignInAsync(authenticationType, new ClaimsPrincipal(claimsIdentity), authProperties);
-                return Ok();
+                return RedirectToAction("Index", "Home");
             }
             ModelState.AddModelError("Error", "Invalid username or password!");
             return BadRequest();
