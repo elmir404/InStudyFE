@@ -666,12 +666,7 @@
                         <p class="container-text">${body}</p>
                      </div>
                   </div>
-                  <div class="detail-text">
-                     <div class="info-count">
-                       
-                     </div>
-                    
-                  </div>
+                
                                          `
                 );
                 $.each(
@@ -833,7 +828,7 @@
                                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset=${image}">
                                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="${image}">
                                        <source media="all and (min-width: 80.063em)" srcset="${image}">
-                                       <img src="${image}" alt="data:image/png;base64, Netherlands" loading="lazy"style="width:236;height:158;">
+                                       <img src="${image}" width="143" style="width:236px;height:158px;" height="95">
                                     </picture>
                                  </span>
                               <figcaption>
@@ -843,8 +838,7 @@
                                  </div>
                               </figcaption>
                               </a>
-
-                           </figure>
+                             </figure>
                                          `
                             )
                         }

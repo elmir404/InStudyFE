@@ -1557,8 +1557,7 @@ iframe[name=google_conversion_frame]{
     display:none
 }
 .Suggestion:hover {
-   
-    color: #fff !important;
+    color: #532EBD !important;
 }
 @media (min-width: 1025px) {
     .ArticlesSpotlightTitle {
