@@ -2,6 +2,7 @@
 
     Layout = null;
 }
+@model LoginViewModel
 <!DOCTYPE html> 
 <html lang="tr">
    <!-- Mirrored from www.endlessabroad.com.tr/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Nov 2022 09:01:21 GMT -->
@@ -86,16 +87,18 @@
                         <span>Hesabınıza daxil olun.</span>
                     </div>
                     <div class="form-div form">
-                        <form method="post" >
-                            <input type="hidden" name="_token" value="XHMyMTeikVYXP5fy4NTHThH93KeSvxv19PU5F4eI">
-                            <div class="input-container"> <img src="~/css/images/icons/icob-email-login.svg" alt=""> <input id="loginUserName" type="text" class="form-control" placeholder="İstifadəçi adı" name="loginEmail" required /> </div>
-                            <div class="input-container"> <img src="~/css/images/icons/icon-pass.svg" alt="" class="togglePassword cursore-pointer" id="togglePassword"> <input id="loginPas" type="password" class="form-control password" placeholder="Enter password" name="loginPas"  required /> </div>
+                        <form method="POST" >
+                            <div asp-validation-summary="ModelOnly" style="font-style:normal !important" class="text-danger mb-2 "></div>
+                            <div class="input-container"> <img src="~/css/images/icons/icob-email-login.svg" alt="">
+                                <input asp-for="@Model.UserName" type="text" class="form-control" placeholder="İstifadəçi adı" required /> </div>
+                            <div class="input-container"> <img src="~/css/images/icons/icon-pass.svg" alt="" class="togglePassword cursore-pointer" id="togglePassword">
+                                <input  asp-for="@Model.Password" type="password" class="form-control password" placeholder="Enter password"  required /> </div>
                             <div class="check-div d-flex justify-content-between align-items-center">
                                 <div class="toggle-switch d-flex align-items-center">
                                     
                                 </div>
                             </div>
-                            <div class="text-center"> <button type="button" id="loginBtn" class="btn-blue w-100">Daxil Ol</button> </div>
+                            <div class="text-center"> <button type="submit" id="loginBtnm" class="btn-blue w-100">Daxil Ol</button> </div>
                         </form>
                     </div>
                 </div>
