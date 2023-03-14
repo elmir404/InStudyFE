@@ -207,15 +207,17 @@
     var $email = $('#requestEmail');
     var $name = $('#requestName');
     var $lastname = $('#lastName');
+        
     var $phone = $('#phone');
 
     var $reqCountry = $('#requestCountry')
     var $reqStudentCountry = $('#requestStudentCountry')
     var $reqDirect = $('#requestDirection')
     var $reqWhatsapp = $('#requestWhatsapp')
-    var $reqDate = $('#requestDate')
+        var $reqDate = $('#requestDate')
+        console.log("reg date", $reqDate);
         var $reqOnline = $('#requestType')
-     var isOnline = $('input[name="IsOnline"]:checked').val()
+        var isOnline = $('input[name="onlineRadioOptions"]:checked').val()
         var $message = $('#requestMessage');
     var re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         //var fullPhone = "+" + phone_number.selectedCountryData.dialCode + " " + $phone.val();

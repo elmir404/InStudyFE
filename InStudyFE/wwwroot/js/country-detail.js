@@ -58,7 +58,7 @@
         url: `https://api.instudy.net/api/Country/GetCountryWithId?id=${linkValues[3]}`,
         success: function (data) {
             const date = new Date(data.data.regDate)
-            console.log(data);
+            
             var dd = String(date.getDate()).padStart(2, '0');
             var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
             var yyyy = date.getFullYear();                                                                                             
@@ -110,23 +110,28 @@
  <h1>${name1}</h1> 
                                     
 `)
+            $('.StudyIn').empty();
             
             $('.StudyIn').append(`
 ${study}
 `);
+            $('.About').empty();
             $('.About').append(`
 ${description}
 `);
+            $('.Living').empty();
             $('.Living').append(`
 ${living}
 `);
+            $('.Visa').empty();
             $('.Visa').append(`
 ${studentVisa}
 `);
+            $('.WorkPermitContent').empty()
             $('.WorkPermitContent').append(`
 ${workPermit}
 `);
-           
+            $(".universityList").empty();
             $.each(
                 data?.data?.universities, function (i, value) {
                     console.log("sasa", value);
@@ -222,7 +227,7 @@ ${workPermit}
         const menuItem = document.getElementById('program_div_con');
         setTimeout(function delay() {
             menuItem.classList.add("Hidden");
-        }, 200);
+        }, 150);
 
 
     });
@@ -235,7 +240,7 @@ ${workPermit}
         const menuItem = document.getElementById('direction_div_con');
         setTimeout(function delay() {
             menuItem.classList.add("Hidden");
-        }, 200);
+        }, 150);
 
 
     });

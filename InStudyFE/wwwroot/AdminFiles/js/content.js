@@ -6,7 +6,7 @@
         },
         columns: [
             {
-                data: 'files', render: function (data, type, row, meta) {
+                data: 'contentFiles', render: function (data, type, row, meta) {
                     console.log("dsds", data);
                     return `
                              <td><img alt="https://api.instudy.net/${data[0]?.path}" style="width:200px !important;" class="text-center img-responsive" src="https://api.instudy.net/${data[0]?.path}"></td>
@@ -64,6 +64,9 @@
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
+            beforeSend: function () {
+                $('#addHeader').attr('disabled', 'disabled');
+            },
             complete: function (response) {
                 if (response.status == 200) {
                     location.href = "/Admin/Content/HeaderList"

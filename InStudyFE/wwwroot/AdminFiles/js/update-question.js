@@ -80,6 +80,9 @@
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
+            beforeSend: function () {
+                $('#updateQuestion').attr('disabled', 'disabled');
+            },
             complete: function (response) {
                 if (response.status == 200) {
                     location.href = "/Admin/Content/QuestionList"

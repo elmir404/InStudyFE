@@ -117,8 +117,8 @@
                             $country.append(
                                 ` 
                                 <figure data-clickable="clickable">
-                              <a href="/Country/Detail/${value.id}" title="Netherlands">
-                                 <span class="Picture" data-file-url="" data-title="Netherlands">
+                              <a href="/Country/Detail/${value.id}" title=" ${name}">
+                                 <span class="Picture" data-file-url="" data-title=" ${name}">
                                     <picture>
                                        <source media="all and (max-width: 30em)" srcset="${image}">
                                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset=${image}">
@@ -489,7 +489,7 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/About/GetAbouts`,
+        url: `https://api.instudy.net/api/About/GetActiveAbouts`,
 
         success: function (data) {
 
@@ -821,8 +821,8 @@
 
                             $country.append(
                                 ` <figure data-clickable="clickable">
-                              <a href="/Country/Detail/${value.id}" title="Netherlands">
-                                 <span class="Picture" data-file-url="" data-title="Netherlands">
+                              <a href="/Country/Detail/${value.id}" title="${name}">
+                                 <span class="Picture" data-file-url="" data-title=" ${name}">
                                     <picture>
                                        <source media="all and (max-width: 30em)" srcset="${image}">
                                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset=${image}">
@@ -833,7 +833,7 @@
                                  </span>
                               <figcaption>
                                  <span> ${name} </span> 
-                                 <div class="Toggle"> 
+                                 <div style="color:white;" class="Toggle"> 
                                        ${description}
                                  </div>
                               </figcaption>
