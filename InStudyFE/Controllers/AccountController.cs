@@ -42,7 +42,7 @@ namespace InStudyFE.Controllers
                 ModelState.AddModelError("", "Email not verify!");
                 return View(viewModel);
             }
-            if (tokenResponse == "usernotfound")
+            if (tokenResponse == "user not found")
             {
                 ModelState.AddModelError("", "User not found!");
                 return View(viewModel);

@@ -216,7 +216,7 @@
                             var description = data.data?.ruBody;
 
                         }
-                            var image = `https://api.instudy.net/${data?.data?.files[0]?.path}`
+                var image = `https://api.instudy.net/${data?.data?.contentFiles[0]?.path}`
 
                         $("#HomeSearchBackground").css("background-image", "url(" + image + ")");
                         $homeHeader.append(`

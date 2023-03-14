@@ -159,13 +159,7 @@
         hiddenInput: "full",
         utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
     })
-    var input = document.querySelector("#phone2");
-    var wp_number = window.intlTelInput(input, {
-        separateDialCode: true,
-        preferredCountries: ["in"],
-        hiddenInput: "full",
-        utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
-    })
+ 
 
 
 
@@ -202,7 +196,6 @@
         
 
         var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
-        var whatsapp = wp_number.getNumber(intlTelInputUtils.numberFormat.E164);
         //var full_number_res = phonenumber.getNumber(intlTelInputUtils.numberFormat.E164);
         //var whatsapp_res = wpnumber.getNumber(intlTelInputUtils.numberFormat.E164);
             
@@ -217,7 +210,7 @@
     var $phone = $('#phone');
 
     var $reqCountry = $('#requestCountry')
-    //var $reqStudentCountry = $('#requestStudentCountry')
+    var $reqStudentCountry = $('#requestStudentCountry')
     var $reqDirect = $('#requestDirection')
     var $reqWhatsapp = $('#requestWhatsapp')
     var $reqDate = $('#requestDate')
@@ -227,7 +220,7 @@
     var re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         //var fullPhone = "+" + phone_number.selectedCountryData.dialCode + " " + $phone.val();
         //var fullWhatsapp = "+" + wp_number.selectedCountryData.dialCode + " " + $phone2.val();
-        console.log(full_number, whatsapp );
+       
     if ($email.val() == '' || !re.test($email.val())) {
         /*toastr.warning("Please provide valid Email!");*/
         $('#emailNameValidation').show();
@@ -284,7 +277,7 @@
         formData.append('Description', $message.val());
        /* formData.append('HaveWhatsApp', $('input[name="wp"]:checked').val());*/
         formData.append('Phone', full_number);
-        formData.append('WhatsAppPhone', whatsapp);
+       
        
         formData.append('ConsultationDate', $reqDate.val());
         formData.append('IsOnline',isOnline );
