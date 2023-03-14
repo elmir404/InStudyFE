@@ -177,7 +177,7 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Duration/GetDurationes`,
+        url: `https://api.instudy.net/api/DurationDate/GetActiveDurationDates`,
 
         success: function (data) {
 
@@ -203,7 +203,7 @@
 
                     $(`#durationSearch`).append(
                         `
-                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="durations" class="CheckboxInput" data-filter="ci" value="${value.durationDate}" data-v-01633eac=""><span data-v-01633eac="">${value.durationDate}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""></ul></li>
+                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="durations" class="CheckboxInput" data-filter="ci" value="${value.date}" data-v-01633eac=""><span data-v-01633eac="">${value.date}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""></ul></li>
   
                                          `
                     )
