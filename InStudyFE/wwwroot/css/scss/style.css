@@ -110,7 +110,7 @@
     padding-top: 10px;
 }
 .faq-section .faq-section-detail-accordion {
-    width: calc(70% - 25px);
+    width: calc(100% - 25px);
 }
 h2.section-sub-title {
     font-size: 2.25rem;

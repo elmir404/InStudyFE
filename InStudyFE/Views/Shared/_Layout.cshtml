@@ -59,13 +59,58 @@
             margin-bottom: 8px;
             padding-top: 8px;
         }
+
+        @@media(max-width:321px) {
+            .adresslinkwidth {
+                width:280%;
+            }
+        }
+          @@media only screen and (max-width: 375px) and (min-width: 321px)
+       {
+            .adresslinkwidth {
+                width: 192%;
+            }
+        }
+
+        @@media only screen and (max-width: 426px) and (min-width: 376px)  {
+            .adresslinkwidth {
+                width: 153%;
+            }
+        }
+
+        @@media only screen and (max-width: 769px) and (min-width: 426px) {
+            .adresslinkwidth {
+                width: 166%;
+            }
+        }
+
+        @@media only screen and (max-width: 1025px) and (min-width: 769px) {
+            .adresslinkwidth {
+                width: 258%;
+            }
+        }
+
+        @@media only screen and (max-width: 1441px) and (min-width: 1025px)  {
+            .adresslinkwidth {
+                width: 123%;
+            }
+        }
+
+        @@media only screen and (max-width: 2560px) and (min-width: 1441px) {
+            .adresslinkwidth {
+                width: 49%;
+            }
+        }
+
            @@media(max-width:769px){
                .fadd{
                 margin-left: -200px;
                 color: #000;
                }
 
-            #FooterSocialMediaIcons .Header{
+            
+
+            #FooterSocialMediaIcons .Header {
                 margin-left: -206px;
             }
 
@@ -350,7 +395,7 @@
                                 <div data-module="" class="Module StudyPortals_Shared_Modules_Footer_FooterSocialMediaIcons_FooterSocialMediaIcons">
                                     <nav id="FooterSocialMediaIcons">
                                         <strong class="Header followlang" style="color:#6C39C5;">Follow us</strong>
-                                        <div class="fadd col-md col-12 col">
+                                        <div class="fadd adresslinkwidth  " >
                                             <p id="adresFooter" style="color:#6C39C5;"> </p>
                                             <p id="phoneFooter" style="color:#6C39C5;">  </p>
                                         </div>
