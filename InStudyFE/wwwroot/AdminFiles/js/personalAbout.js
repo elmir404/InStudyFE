@@ -61,6 +61,9 @@
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
+            beforeSend: function () {
+                $('#addPersonalAbout').attr('disabled', 'disabled');
+            },
             complete: function (response) {
                 console.log(response.responseJSON);
                 if (response.responseJSON.success==true) {

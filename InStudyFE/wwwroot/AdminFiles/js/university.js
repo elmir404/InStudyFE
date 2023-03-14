@@ -97,6 +97,9 @@
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
+            beforeSend: function () {
+                $('#addUniversty').attr('disabled', 'disabled');
+            },
             complete: function (response) {
                 if (response.status == 200) {
 
@@ -127,6 +130,9 @@
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
+            beforeSend: function () {
+                $('#addUniSpec').attr('disabled', 'disabled');
+            },
             complete: function (response) {
                 if (response.status == 200) {
 

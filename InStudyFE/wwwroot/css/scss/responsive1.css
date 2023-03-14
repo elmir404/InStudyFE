@@ -3155,4 +3155,11 @@ body[data-wishlist-drawer]{
 .Background{
     background-color:rgba(30,133,88,.1)
 }
+.Toggle * {
+    color: white !important;
+    font-size:14px !important
+}
+.Toggle > * {
+    color: white !important;
+}
 /*# sourceMappingURL=42099b4af021e53fd8fd4e056c2568d7c2e3ffa8.09bac03c08dcdf39c6a6.css.map*/

@@ -96,6 +96,9 @@
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
+            beforeSend: function () {
+                $('#addDirection').attr('disabled', 'disabled');
+            },
             complete: function (response) {
                 if (response.status == 200) {
                     location.href = "/Admin/Direction/DirectionList"

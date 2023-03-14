@@ -194,6 +194,9 @@
             type: "POST",
             url: 'https://fainablogapi.herokuapp.com/api/Meets/AddMeet',
             contentType: 'application/json',
+            beforeSend: function () {
+                $('#addMeeting').attr('disabled', 'disabled');
+            },
             data: JSON.stringify({
 
                 date: day,

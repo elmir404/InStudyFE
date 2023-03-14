@@ -94,9 +94,14 @@
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
+            beforeSend: function () {
+                setTimeout(function delay() {
+                    $('#updateHeader').attr('disabled', 'disabled');
+                }, 1500);         
+            },
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/Content/ContentList"
+                    location.href = "/Admin/Content/HeaderList"
                 }
                 else {
                     alert("error")

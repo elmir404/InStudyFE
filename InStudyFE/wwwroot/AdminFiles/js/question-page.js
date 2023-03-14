@@ -52,13 +52,16 @@
 
         $.ajax({
             type: "POST",
-            url: 'https://api.instudy.net/api/Question/AddQuestion',
+            url: 'https://api.instudy.net/api/AboutQuestion/AddAboutQuestion',
             data: formData,
             processData: false,  // tell jQuery not to process the data
             contentType: false,
+            beforeSend: function () {
+                $('#addShowedQuestion').attr('disabled', 'disabled');
+            },
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/Content/QuestionList"
+                    location.href = "/Admin/Content/PageQuestion"
                 }
                 else {
                     alert("error")

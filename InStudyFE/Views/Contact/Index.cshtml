@@ -101,9 +101,9 @@
 												
 					</div>
 					<div id="box" class="row">
-					                       	<div class="form-group col-md-4" id="requestDate">
+					                       	<div class="form-group col-md-4" >
 						                    <label id="labeltime" for="birthdaytime">Date (date and time):</label>
-						                    <input type="datetime-local" id="birthdaytime" name="birthdaytime" >
+						                    <input type="datetime-local" id="requestDate" name="birthdaytime" >
 					                        <div class="invalid-feedback">
 						                           Please choose a username.
 					                           </div>
@@ -113,26 +113,20 @@
 												<label id="labelonline" for="IsOnline">Online?</label>
 
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="onlineyes" value="option1">
-													<label class="form-check-label yes" for="online1">Yes</label>
+													<input class="form-check-input" type="radio" name="onlineRadioOptions" id="onlineyes" value="true">
+													<label class="form-check-label yes" for="onlineyes">Yes</label>
 												</div>
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="onlineno" value="option2">
-													<label class="form-check-label no" for="onlineno">No</label>
-												</div>
+												
 											</div>
 
 											<div class="form-group col-md-4">
-												<label id="labelonline" for="IsOnline">Offline?</label>
+												<label id="labeloffline" for="IsOnline">Offline?</label>
 
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="offlineyes" value="option1">
-													<label class="form-check-label yes" for="offlineyes">Yes</label>
+													<input class="form-check-input" type="radio" name="onlineRadioOptions" id="offlineyes" value="false">
+															<label class="form-check-label yes" for="offlineyes">Yes</label>
 												</div>
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="offlineno" value="option2">
-													<label class="form-check-label no" for="offlineno">No</label>
-												</div>
+												
 											</div>
 
 					</div>
@@ -152,7 +146,6 @@
 												<option value="Antarctica">Antarctica</option>
 												<option value="Antigua and Barbuda">Antigua and Barbuda</option>
 												<option value="Argentina">Argentina</option>
-												<option value="Armenia">Armenia</option>
 												<option value="Aruba">Aruba</option>
 												<option value="Australia">Australia</option>
 												<option value="Austria">Austria</option>
