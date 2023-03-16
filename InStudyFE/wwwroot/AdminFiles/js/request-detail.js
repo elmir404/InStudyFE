@@ -35,12 +35,7 @@
                                     <input type="text" readonly id="enHeader" value="${data?.data?.phone}" class="form-control">
                                 </div>
                             </div> 
-<div class="row mb-4">
-                                <label class="col-md-3 form-label">WhatsappPhone :</label>
-                                <div class="col-md-9">
-                                    <input type="text" readonly id="enHeader" value="${data?.data?.whatsAppPhone}" class="form-control">
-                                </div>
-                            </div>
+
 <div class="row mb-4">
                                 <label class="col-md-3 form-label">Email :</label>
                                 <div class="col-md-9">
@@ -63,29 +58,18 @@
 <div class="row mb-4">
                                 <label class="col-md-3 form-label">Student Country :</label>
                                 <div class="col-md-9">
-                                    <input type="text" readonly id="enHeader" value="${data?.data?.yourCountry?.azName}" class="form-control">
+                                    <input type="text" readonly id="enHeader" value="${data?.data?.yourCountry}" class="form-control">
                                 </div>
                             </div>
 
                             <!-- Row -->
                             <div class="row">
-                                <label class="col-md-3 form-label mb-4">Az Description :</label>
+                                <label class="col-md-3 form-label mb-4">Description :</label>
                                 <div class="col-md-9 mb-4">
                                     <textarea class="content" id="azDescription"  name="example">${data.data.description}</textarea>
                                 </div>
                             </div>
-                            <div class="row">
-                                <label class="col-md-3 form-label mb-4">Ru Description :</label>
-                                <div class="col-md-9 mb-4">
-                                    <textarea class="content2" id="ruDescription"  name="example">${data.data.ruDescription}</textarea>
-                                </div>
-                            </div> 
-<div class="row">
-                                <label class="col-md-3 form-label mb-4">En Description :</label>
-                                <div class="col-md-9 mb-4">
-                                    <textarea class="content3" id="enDescription"  name="example">${data.data.enDescription}</textarea>
-                                </div>
-                            </div>
+                        
                          
                         
                         `

@@ -2807,7 +2807,7 @@ form#SingleBottomSearch.Form .SearchButton .SearchIcon, form#SingleSearch.Form .
 @media(min-width:769px)and (max-width:1024px) {
     #HeroContainer .HeroContent {
         background-color: transparent;
-        min-height: 150px;
+        
         width: 40%
     }
 }
@@ -2815,7 +2815,7 @@ form#SingleBottomSearch.Form .SearchButton .SearchIcon, form#SingleSearch.Form .
 @media(min-width:1025px) {
     #HeroContainer .HeroContent {
         background-color: transparent;
-        min-height: 150px;
+        
         width: 40%
     }
 }

@@ -155,7 +155,7 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Program/GetPrograms`,
+        url: `https://api.instudy.net/api/Program/GetActivePrograms`,
 
         success: function (data) {
             /*$country.empty();*/

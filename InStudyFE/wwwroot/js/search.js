@@ -35,7 +35,7 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Speciality/GetSpecialities`,
+        url: `https://api.instudy.net/api/Speciality/GetActiveSpecialities`,
 
         success: function (data) {
            
@@ -130,7 +130,7 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Program/GetPrograms`,
+        url: `https://api.instudy.net/api/Program/GetActivePrograms`,
 
         success: function (data) {
 
@@ -219,7 +219,7 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/AttendamceType/GetAttendanceTypes`,
+        url: `https://api.instudy.net/api/AttendamceType/GetActiveAttendanceTypes`,
 
         success: function (data) {
 

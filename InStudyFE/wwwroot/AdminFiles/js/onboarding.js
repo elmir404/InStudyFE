@@ -10,10 +10,10 @@
                 data: 'azTitle',
             },
             {
-                data: 'enTitle',
+                data: 'ruTitle',
             },
             {
-                data: 'ruTitle',
+                data: 'enTitle',
             },
             {
                 data: 'id', render: function (data, type, row, meta) {
@@ -85,8 +85,8 @@
 
         var formData = new FormData();
         formData.append('AzTitle', $("#azHeader").val());
-        formData.append('EnTitle', $("#ruHeader").val());
-        formData.append('RuTitle', $("#enHeader").val());
+        formData.append('EnTitle', $("#enHeader").val());
+        formData.append('RuTitle', $("#ruHeader ").val());
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());

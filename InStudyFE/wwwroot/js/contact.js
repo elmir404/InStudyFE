@@ -283,7 +283,7 @@
        
         formData.append('ConsultationDate', $reqDate.val());
         formData.append('IsOnline',isOnline );
-        //formData.append('YourContryId', $reqStudentCountry.val());
+        formData.append('YourCountry', $reqStudentCountry.val());
         for (var i = 0; i < reqContries.length;i++){
             formData.append('CountryIds', reqContries[i]);
            }
@@ -308,7 +308,7 @@
                 if (response.success == true) {
                     toastr.success("Message send successfully!");
                     setTimeout(() => {
-                        //location.reload();
+                        location.reload();
                     }, 5000)
                 }
 
@@ -359,7 +359,7 @@
 				        			<span class="fa fa-paper-plane"></span>
 				        		</div>
 				        		<div class="text pl-3">
-					            <p><span>${email}:</span> <a href="${data?.data?.email}">${data?.data?.email}</a></p>
+					            <p><span>${email}:</span> <a href="mailto:${data?.data?.email}">${data?.data?.email}</a></p>
 					          </div>
 				          </div>
 				        	
@@ -423,7 +423,7 @@
 				        			<span class="fa fa-paper-plane"></span>
 				        		</div>
 				        		<div class="text pl-3">
-					            <p><span>${email}:</span> <a href="${data?.data?.email}">${data?.data?.email}</a></p>
+					            <p><span>${email}:</span> <a href="mailto:${data?.data?.email}">${data?.data?.email}</a></p>
 					          </div>
 				          </div>
 				        	

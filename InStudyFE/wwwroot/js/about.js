@@ -8,7 +8,7 @@ $.ajax({
     headers: {
         'Content-Type': 'application/json'
     },
-    url: `https://api.instudy.net/api/About/GetAbouts`,
+    url: `https://api.instudy.net/api/About/GetActiveAbouts`,
     success: function (data) {
         $(`#ContentSwitcher`).empty();
         $.each(

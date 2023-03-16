@@ -77,7 +77,7 @@
         var programId = $("#programId").val();
         var files = $("#files").get(0).files;
         var formData = new FormData();
-        formData.append('AzHeder', $("#azHeader").val());
+        formData.append('AzHeader', $("#azHeader").val());
         formData.append('RuHeader', $("#ruHeader").val());
         formData.append('EnHeader', $("#enHeader").val());
         formData.append('AzBody', $("#azDescription").val());

@@ -93,7 +93,7 @@
 function Delete(message) {
 
     $.ajax({
-        type: "DELETE",
+        type: "PUT",
         url: `https://api.instudy.net/api/StudentRequest/DeleteStudentRequest?id=${message}`,
         success: function (result) {
             if (result.success == true) {
