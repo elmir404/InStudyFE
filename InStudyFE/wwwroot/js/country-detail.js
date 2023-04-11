@@ -65,7 +65,7 @@
             var time = yyyy + "/" + mm + "/" + dd;
             if ($lang == 'AZ') {
                 var name1 = data.data.azName
-                var description = data.data?.azDescription;
+                var about = data.data?.azAbout;
                 var study = data.data?.azStudy;
                 var workPermit = data.data?.azWorkPermit;
                 var studentVisa = data.data?.azStudentVisa;
@@ -73,7 +73,7 @@
             }
             else if ($lang == 'EN') {
                 var name1 = data.data.enName
-                var description = data.data?.enDescription;
+                var about = data.data?.enAbout;
                 var study = data.data?.enStudy;
                 var workPermit = data.data?.enWorkPermit;
                 var studentVisa = data.data?.enStudentVisa;
@@ -81,7 +81,7 @@
 
             } else {
                 var name1 = data.data.ruName;
-                var description = data.data?.ruDescription;
+                var about = data.data?.ruAbout;
                 var study = data.data?.ruStudy;
                 var workPermit = data.data?.ruWorkPermit;
                 var studentVisa = data.data?.ruStudentVisa;
@@ -117,7 +117,7 @@ ${study}
 `);
             $('.About').empty();
             $('.About').append(`
-${description}
+${about}
 `);
             $('.Living').empty();
             $('.Living').append(`

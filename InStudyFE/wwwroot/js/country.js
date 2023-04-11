@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
 
     var $country = $('#countryList');
+    var $countryTitle = $('#countryTitle');
     const $lang = localStorage.getItem('lang');
     function getCountry() {
         $.ajax({
@@ -24,17 +25,17 @@
                         
                         if ($lang == 'AZ') {
                             var name = value.azName
-                            var description = value?.azDescription;
+                            $countryTitle = "Dünya üzrə Öyrənmə Proqramlarına baxın";
 
                         }
                         else if ($lang == 'EN') {
                             var name = value.enName
-                            var description = value?.enDescription;
+                            $countryTitle = "Browse Learning Programmes Worldwide";
+
 
                         } else {
                             var name = value.ruName;
-                            var description = value?.ruDescription;
-
+                            $countryTitle = "Обзор программ обучения по всему миру";
                         }
                         
                         $country.append(

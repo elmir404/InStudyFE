@@ -112,7 +112,7 @@
                             )
                         }   
                         //var description = value.description.slice(0, 5);
-                        if (i < 4) {
+                        if (i < 5) {
 
                             $country.append(
                                 ` 
@@ -124,7 +124,7 @@
                                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset=${image}">
                                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="${image}">
                                        <source media="all and (min-width: 80.063em)" srcset="${image}">
-                                       <img src="${image}" width="143" style="width:236px;height:158px;" height="95">
+                                       <img src="${image}" width="143" style="width:236px;height:158px;object-fit: cover;" height="95">
                                     </picture>
                                  </span>
                               <figcaption>
@@ -731,7 +731,7 @@
             headers: {
                 'Content-Type': 'application/json'
             },
-            url: `https://api.instudy.net/api/Blogs/GetBlogs`,
+            url: `https://api.instudy.net/api/Blogs/GetActiveBlogs`,
 
             success: function (data) {
                 $blog.empty();
@@ -745,16 +745,16 @@
                         var time = yyyy + "/" + mm + "/" + dd;
                         if ($lang == 'AZ') {
                             var name = value?.azTitle
-                            var description = value?.azDescription;
+                            var description = value?.azDescription.slice(0, 100)+"...";
 
                         }
                         else if ($lang == 'EN') {
                             var name = value?.enTitle
-                            var description = value?.enDescription;
+                            var description = value?.enDescription.slice(0, 100)+"...";
 
                         } else {
                             var name = value?.ruTitle;
-                            var description = value?.ruDescription;
+                            var description = value?.ruDescription.slice(0, 100) +"...";
 
                         }
                         
@@ -828,7 +828,8 @@
                                        <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset=${image}">
                                        <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="${image}">
                                        <source media="all and (min-width: 80.063em)" srcset="${image}">
-                                       <img src="${image}" width="143" style="width:236px;height:158px;" height="95">
+                                       <img src="${image}" width="143" style="width:236px;height:158px;object-fit: cover;
+" height="95">
                                     </picture>
                                  </span>
                               <figcaption>

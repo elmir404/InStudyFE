@@ -79,9 +79,6 @@
         formData.append('AzStudentVisa', $("#StudentVisaAz").val());
         formData.append('EnStudentVisa', $("#StudentVisaEn").val());
         formData.append('RuStudentVisa', $("#StudentVisaRu").val());
-        formData.append('AzLiving', $("#LivingAz").val());
-        formData.append('EnLiving', $("#LivingEn").val());
-        formData.append('RuLiving', $("#LivingRu").val());
         formData.append('isActive','True');
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);

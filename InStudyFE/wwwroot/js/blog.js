@@ -13,18 +13,18 @@
             url: `https://api.instudy.net/api/Blogs/GetActiveBlogs`,
 
             success: function (data) {
-                if ($lang == 'AZ') {
-                    var name = "Basliq"
+                //if ($lang == 'AZ') {
+                //    var name = "Basliq"
 
-                }
-                else if ($lang == 'EN') {
-                    var name = "Basliq en"
+                //}
+                //else if ($lang == 'EN') {
+                //    var name = "Basliq en"
                     
 
-                } else {
-                    var name = "Basliq ru";
+                //} else {
+                //    var name = "Basliq ru";
 
-                }
+                //}
                 $blogHeader.html(`${name}`);
                 $blog.empty();
 
@@ -33,16 +33,16 @@
                        
                         if ($lang == 'AZ') {
                             var name1 = value.azTitle
-                            var description = value?.azDescription;
+                            var description = value?.azDescription.slice(0, 100) + "...";
 
                         }
                         else if ($lang == 'EN') {
                             var name1 = value.enTitle
-                            var description = value?.enDescription;
+                            var description = value?.enDescription.slice(0, 100) + "...";
 
                         } else {
                             var name1 = value.ruTitle;
-                            var description = value?.ruDescription;
+                            var description = value?.ruDescription.slice(0, 100) + "...";
 
                         }
                         var image = `https://api.instudy.net/${value.blogFiles[0].path}`
