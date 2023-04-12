@@ -265,12 +265,12 @@
         var $attendenceSearch = JSON.parse(localStorage.getItem("attendenceSearch"));
         console.log($programSearch);
         var formData = new FormData();
-        formData.append('CountryName', $country);
-        formData.append('ProgramName', $program);
-        formData.append('DirectionName', $direction);
+        formData.append('CountryNames', $country);
+        formData.append('ProgramNames', $program);
+        formData.append('DirectionNames', $direction);
         if ($disciplinesSearch != null)
         for (var i = 0; i < $disciplinesSearch.length; i++) {
-            formData.append('DirectionNames', $disciplinesSearch[i]);
+            formData.append('SpecialityNames', $disciplinesSearch[i]);
             }
         if ($programSearch != null)
         for (var i = 0; i < $programSearch.length; i++) {
@@ -278,7 +278,7 @@
             }
         if ($locations != null)
         for (var i = 0; i < $locations.length; i++) {
-            formData.append('Addresses', $locations[i]);
+            formData.append('CountryNames', $locations[i]);
             }
         if ($durationSearch != null)
         for (var i = 0; i < $durationSearch.length; i++) {

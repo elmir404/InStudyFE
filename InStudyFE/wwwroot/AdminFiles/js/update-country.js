@@ -16,74 +16,7 @@
             $blogForm.append(
                 `
                         <input type="hidden" id="countryId" value="${data.data.id}" class="form-control">
-
-                     <div class="row mb-4">
-                                <label class="col-md-3 form-label">Az Title :</label>
-                                <div class="col-md-9">
-                                    <input type="text" id="azHeader" value="${data.data.azName}" class="form-control" placeholder="Title Name">
-                                </div>
-                            </div>
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Ru Title :</label>
-                                <div class="col-md-9">
-                                    <input type="text" id="ruHeader" value="${data.data.ruName}" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">En Title :</label>
-                                <div class="col-md-9">
-                                    <input type="text" id="enHeader" value="${data.data.enName}" class="form-control">
-                                </div>
-                            </div>
-
-                            <!-- Row -->
-                            <div class="row">
-                                <label class="col-md-3 form-label mb-4">Az Description :</label>
-                                <div class="col-md-9 mb-4">
-                                    <textarea class="content" id="azDescription"  name="example">${data.data.azDescription}</textarea>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <label class="col-md-3 form-label mb-4">Ru Description :</label>
-                                <div class="col-md-9 mb-4">
-                                    <textarea class="content7" id="ruDescription"  name="example">${data.data.ruDescription}</textarea>
-                                </div>
-                            </div> <div class="row">
-                                <label class="col-md-3 form-label mb-4">En Description :</label>
-                                <div class="col-md-9 mb-4">
-                                    <textarea class="content2" id="enDescription"  name="example">${data.data.enDescription}</textarea>
-                                </div>
-                            </div>
-<div class="row mb-4">
-                                <label class="col-md-3 form-label">Students Count:</label>
-                                <div class="col-md-9">
-                                    <input type="number" value="${data.data.currentStudents}" id="CurrentStudents" class="form-control">
-                                </div>
-                            </div> 
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Population:</label>
-                                <div class="col-md-9">
-                                    <input type="number" id="Population" value="${data.data.population}" class="form-control">
-                                </div>
-                            </div> 
-                             <div class="row">
-                                <label class="col-md-3 form-label mb-4">Work Permit(AZ):</label>
-                                <div class="col-md-9 mb-4">
-                                    <textarea class="content4" id="WorkPermitAz" name="WorkPermit">${data.data.azWorkPermit}</textarea>
-                                </div>
-                            </div> 
-                            <div class="row">
-                                <label class="col-md-3 form-label mb-4">Work Permit(Ru):</label>
-                                <div class="col-md-9 mb-4">
-                                    <textarea class="content5" id="WorkPermitRu" name="WorkPermit">${data.data.ruWorkPermit}</textarea>
-                                </div>
-                            </div>  <div class="row">
-                                <label class="col-md-3 form-label mb-4">Work Permit(En):</label>
-                                <div class="col-md-9 mb-4">
-                                    <textarea class="content6" id="WorkPermitEn" name="WorkPermit">${data.data.enWorkPermit}</textarea>
-                                </div>
-                            </div> 
-                            <div class="row">
+                       <div class="row">
                                 <label class="col-md-3 form-label mb-4">Study(Az):</label>
                                 <div class="col-md-9 mb-4">
                                     <textarea class="content7" id="StudyAz" name="Study">${data.data.azStudy}</textarea>
@@ -100,8 +33,8 @@
                                 <div class="col-md-9 mb-4">
                                     <textarea class="content9" id="StudyEn" name="Study">${data.data.enStudy}</textarea>
                                 </div>
-                            </div> 
-                            <div class="row">          
+                            </div>
+                         <div class="row">
                                 <label class="col-md-3 form-label mb-4">Living(Az):</label>
                                 <div class="col-md-9 mb-4">
                                     <textarea class="content10" id="LivingAz" name="Living">${data.data.azLiving}</textarea>
@@ -118,7 +51,7 @@
                                 <div class="col-md-9 mb-4">
                                     <textarea class="content12" id="LivingRu" name="Living">${data.data.ruLiving}</textarea>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="row">
                                 <label class="col-md-3 form-label mb-4">About(Az):</label>
                                 <div class="col-md-9 mb-4">
@@ -135,8 +68,8 @@
                                 <div class="col-md-9 mb-4">
                                     <textarea class="content15" id="AboutEn" name="About">${data.data.enAbout}</textarea>
                                 </div>
-                            </div> 
-                            <div class="row">
+                            </div>
+<div class="row">
                                 <label class="col-md-3 form-label mb-4">Student Visa(Az):</label>
                                 <div class="col-md-9 mb-4">
                                     <textarea class="content16" id="StudentVisaAz" name="StudentVisa">${data.data.azStudentVisa}</textarea>
@@ -154,6 +87,61 @@
                                     <textarea class="content18" id="StudentVisaRu" name="StudentVisa">${data.data.ruStudentVisa}</textarea>
                                 </div>
                             </div>
+                        <div class="row">
+                                <label class="col-md-3 form-label mb-4">Documents(AZ):</label>
+                                <div class="col-md-9 mb-4">
+                                    <textarea class="content4" id="WorkPermitAz" name="WorkPermit">${data.data.azWorkPermit}</textarea>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <label class="col-md-3 form-label mb-4">Documents(Ru):</label>
+                                <div class="col-md-9 mb-4">
+                                    <textarea class="content5" id="WorkPermitRu" name="WorkPermit">${data.data.ruWorkPermit}</textarea>
+                                </div>
+                            </div>  <div class="row">
+                                <label class="col-md-3 form-label mb-4">Documents(En):</label>
+                                <div class="col-md-9 mb-4">
+                                    <textarea class="content6" id="WorkPermitEn" name="WorkPermit">${data.data.enWorkPermit}</textarea>
+                                </div>
+                            </div>
+                     <div class="row mb-4">
+                                <label class="col-md-3 form-label">Az Name :</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="azHeader" value="${data.data.azName}" class="form-control" placeholder="Title Name">
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <label class="col-md-3 form-label">Ru Name :</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="ruHeader" value="${data.data.ruName}" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <label class="col-md-3 form-label">En Name :</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="enHeader" value="${data.data.enName}" class="form-control">
+                                </div>
+                            </div>
+
+                            
+                          
+<div class="row mb-4">
+                                <label class="col-md-3 form-label">Students Count:</label>
+                                <div class="col-md-9">
+                                    <input type="number" value="${data.data.currentStudents}" id="CurrentStudents" class="form-control">
+                                </div>
+                            </div> 
+                            <div class="row mb-4">
+                                <label class="col-md-3 form-label">Population:</label>
+                                <div class="col-md-9">
+                                    <input type="number" id="Population" value="${data.data.population}" class="form-control">
+                                </div>
+                            </div> 
+                             
+                           
+                           
+                           
+                            
                           
                             <!--End Row-->
                             <!--Row-->
@@ -196,9 +184,9 @@
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
         formData.append('EnName', $("#enHeader").val());
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
+        //formData.append('AzDescription', $("#azDescription").val());
+        //formData.append('EnDescription', $("#enDescription").val());
+        //formData.append('RuDescription', $("#ruDescription").val());
         formData.append('CurrentStudents', $("#CurrentStudents").val());
         formData.append('Population', $("#Population").val());
         formData.append('AzWorkPermit', $("#WorkPermitAz").val());

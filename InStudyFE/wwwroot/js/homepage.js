@@ -90,16 +90,16 @@
                         var time = yyyy + "/" + mm + "/" + dd;
                         if ($lang == 'AZ') {
                             var name = value.azName
-                            var description = value?.azDescription;
+                            var description = value?.azAbout;
 
                         }
                         else if ($lang == 'EN') {
                             var name = value.enName
-                            var description = value?.enDescription;
+                            var description = value?.enAbout;
 
                         } else {
                             var name = value.ruName;
-                            var description = value?.ruDescription;
+                            var description = value?.ruAbout;
 
                         }
                         var image = `https://api.instudy.net/${value?.countryFiles[0]?.path}`
@@ -471,7 +471,7 @@
                                  <div class="AuthorDetails"> <span class="AuthorName">${value.name}</span> <span class="AuthorCountry">${value?.country?.enName}</span> </div>
                               </div>
                               <blockquote>
-                                ${value.description.slice(0,20)};
+                                ${value.description};
                               </blockquote>
                            </li>         
 
@@ -803,16 +803,16 @@
                         var time = yyyy + "/" + mm + "/" + dd;
                         if ($lang == 'AZ') {
                             var name = value?.azName
-                            var description = value?.azDescription;
+                            var description = value?.azAbout;
 
                         }
                         else if ($lang == 'EN') {
                             var name = value?.enName
-                            var description = value?.enDescription;
+                            var description = value?.enAbout;
 
                         } else {
                             var name = value?.ruName;
-                            var description = value?.ruDescription;
+                            var description = value?.ruAbout;
 
                         }
                         var image = `https://api.instudy.net/${value?.countryFiles[0]?.path}`

@@ -16,12 +16,16 @@
         },
         url: `https://api.instudy.net/api/University/GetUniversityWithId?universityId=${linkValues[3]}`,
         success: function (data) {
-            const date = new Date(data.data.regDate)
-            console.log(data);
+            const date = new Date(data.data.applyDate)
             var dd = String(date.getDate()).padStart(2, '0');
             var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
             var yyyy = date.getFullYear();
-            var time = yyyy + "/" + mm + "/" + dd;
+            var timeApply = yyyy + "/" + mm + "/" + dd;
+            const date1 = new Date(data.data.startDate)
+            var dd1 = String(date1.getDate()).padStart(2, '0');
+            var mm1 = String(date1.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy1 = date1.getFullYear();
+            var startApply = yyyy1 + "/" + mm1 + "/" + dd1;
             if ($lang == 'AZ') {
                 var name1 = data.data?.azName
                 var description = data.data?.azDescription;
@@ -72,13 +76,10 @@
             
             $uniImage.empty();
             $uniImage.append(
-                `      <span class="HeroImage js-heroImage" style="background-image:url('${image}'); background-repeat: repeat;
-  background-size: auto;">
+                `      <span class="HeroImage js-heroImage" style="background-image:url('${image}'); background-repeat: no-repeat;
+  background-size: cover;object-fit:cover;">
 
-        </span> <span class="HeroImagePlaceholder HeroImage js-heroImageLowResPlaceholder" style="background-image:url('${image}'); background-repeat: repeat;
-  background-size: auto;">
-
-        </span> <span class="HeroOverlay"></span>   
+        </span><span class="HeroOverlay"></span>   
                         `
             );
             $quickFacts.append(`
@@ -113,7 +114,7 @@
                         <div class="LabelContainer">
                            <div class="Title">
                               <div class="js-LocalizedContent" data-country-id="1">
-                                 <div class="TimingContainer" data-target="general"> Anytime </div>
+                                 <div class="TimingContainer" data-target="general"> ${timeApply} </div>
                                  <div class="TimingContainer js-notAvailable Unknown Hidden">Unknown</div>
                               </div>
                            </div>
@@ -127,7 +128,7 @@
                         <div class="LabelContainer">
                            <div class="Title">
                               <div class="js-LocalizedContent">
-                                 <div class="TimingContainer" data-target="general"> <time datetime="2023-08-22" data-format="MMM YYYY">Aug 2023</time> </div>
+                                 <div class="TimingContainer" data-target="general"> <time datetime="2023-08-22" data-format="MMM YYYY">${startApply}</time> </div>
                                  <div class="TimingContainer js-notAvailable Unknown Hidden">Unknown</div>
                               </div>
                            </div>

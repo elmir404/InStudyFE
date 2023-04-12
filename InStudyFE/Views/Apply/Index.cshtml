@@ -10,6 +10,11 @@
 	<link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
 					@*	<link rel="stylesheet" href="~/PhoneInput/css/demo.css">
 *@
+<style>
+	.toast-success {
+  background-color: #A2EACB !important;
+}
+</style>
 	<link rel="stylesheet" href="~/PhoneInput/css/intlTelInput.min.css">
 }
 	<script>
@@ -110,7 +115,7 @@
 												<label id="labelonline" for="IsOnline">Online?</label>
 
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="onlineRadioOptions" id="onlineyes" value="option1">
+													<input class="form-check-input" type="radio" name="onlineRadioOptions" id="onlineyes" value="true">
 													<label class="form-check-label yes" for="onlineyes">Yes</label>
 												</div>
 												
@@ -120,7 +125,7 @@
 												<label id="labeloffline" for="IsOnline">Offline?</label>
 
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="onlineRadioOptions" id="offlineyes" value="option1">
+													<input class="form-check-input" type="radio" name="onlineRadioOptions" id="offlineyes" value="false">
 															<label class="form-check-label yes" for="offlineyes">Yes</label>
 												</div>
 												
