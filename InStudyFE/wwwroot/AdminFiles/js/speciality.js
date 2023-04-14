@@ -4,6 +4,16 @@
             url: 'https://api.instudy.net/api/Speciality/GetActiveSpecialities',
             dataSrc: 'data'
         },
+        bAutoWidth: false,
+        aoColumns: [
+            { sWidth: '15%' },
+            { sWidth: '15%' },
+            { sWidth: '15%' },
+            { sWidth: '15%' },
+            { sWidth: '15%' },
+            { sWidth: '15%' },
+            { sWidth: '10%' }
+        ],
         columns: [
             {
                 data: 'azName',
@@ -14,15 +24,7 @@
             {
                 data: 'enName',
             },
-            {
-                data: 'azDescription',
-            },
-            {
-                data: 'ruDescription',
-            },
-            {
-                data: 'enDescription',
-            },
+           
             {
                 data: 'id', render: function (data, type, row, meta) {
                     return `
@@ -93,19 +95,38 @@ function Edit(id) {
 
 }
 function Delete(speciality) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                type: "PUT",
+                url: `https://api.instudy.net/api/Speciality/DeleteSpeciality?id=${speciality}`,
+                success: function (result) {
+                    if (result.success == true) {
+                        Swal.fire(
+                            'Deleted!',
+                            'Your file has been deleted.',
+                            'success'
+                        ).then((result) => { if (result.isConfirmed) { location.reload(); } });
 
-    $.ajax({
-        type: "PUT",
-        url: `https://api.instudy.net/api/Speciality/DeleteSpeciality?id=${speciality}`,
-        success: function (result) {
-            if (result.success == true) {
-                location.href = `/Admin/Speciality/SpecialityList`;
-            }
-            else {
-                alert(result.message)
-            }
+                    }
+                    else {
+                        alert(result.message)
+                    }
+                }
+            });
+
         }
-    });
+    })
+
+  
 
 
 }

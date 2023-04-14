@@ -59,9 +59,7 @@
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
         formData.append('EnName', $("#enHeader").val());
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
+
         formData.append('CurrentStudents', $("#CurrentStudents").val());
         formData.append('Population', $("#Population").val());
         formData.append('AzWorkPermit', $("#WorkPermitAz").val());
@@ -119,19 +117,48 @@ function Edit(country) {
 
 }
 function Delete(id) {
-
-    $.ajax({
-        type: "PUT",
-        url: `https://api.instudy.net/api/Country/DeleteCountry?id=${id}`,
-        success: function (result) {
-            if (result.success == true) {
-                location.href = `/Admin/Country/CountryList`;
-            }
-            else {
-                alert(result.message)
-            }
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+             $.ajax({
+                    type: "PUT",
+                    url: `https://api.instudy.net/api/Country/DeleteCountry?id=${id}`,
+                    success: function (result) {
+                        if (result.success == true) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            ).then((result) => { if (result.isConfirmed) { location.reload(); } });
+                           
+                        }
+                        else {
+                            alert(result.message)
+                        }
+                    }
+                });
+            
         }
-    });
+    })
+    //$.ajax({
+    //    type: "PUT",
+    //    url: `https://api.instudy.net/api/Country/DeleteCountry?id=${id}`,
+    //    success: function (result) {
+    //        if (result.success == true) {
+    //            location.href = `/Admin/Country/CountryList`;
+    //        }
+    //        else {
+    //            alert(result.message)
+    //        }
+    //    }
+    //});
 
 
 }

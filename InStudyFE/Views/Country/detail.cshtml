@@ -377,33 +377,33 @@
                 <div id="ContentSwitcherWrapper" class="ContentSwitcherWrapper">
                     <div id="ContentSwitcher" class="ContentSwitcher">
                         <button type="button"
-                                class="ContentButton study js-contentButtons" onclick="swith('StudyIn')" data-id="study">
+                                class="ContentButton study js-contentButtons is-active "  onclick="swith('StudyIn')" id="StudyInBtn">
                             Study
                         </button>
                         <button type="button"
-                                class="ContentButton living js-contentButtons" onclick="swith('Living')" data-id="living">
+                                class="ContentButton living js-contentButtons " onclick="swith('Living')" id="LivingBtn">
                             Living
                         </button>
 
-                        <button type="button" class="ContentButton about js-contentButtons" onclick="swith('About')" data-id="about">
+                        <button type="button" class="ContentButton about js-contentButtons" onclick="swith('About')" id="AboutBtn">
                             About
                         </button>
 
-                        <button type="button" class="ContentButton university js-contentButtons" onclick="swith('Universities')" data-id="institutes">
+                        <button type="button" class="ContentButton university js-contentButtons" onclick="swith('Universities')" id="UniversitiesBtn">
                             Universities
                         </button>
 
                         <button type="button" onclick="swith('Visa')" class="ContentButton student-visa js-contentButtons"
-                                data-id="visa">
+                                id="VisaBtn">
                             Student visa
                         </button>
 
                         <button type="button"
-                                class="ContentButton work-permit js-contentButtons" onclick="swith('Permit')" data-id="work_permit">
-                            Work permit
+                                class="ContentButton work-permit js-contentButtons" onclick="swith('Permit')" id="PermitBtn">
+                            Documents
                         </button>
 
-                        <button type="button" onclick="swith('Apply')" class="ContentButton how-to-apply js-contentButtons" data-id="how_to_apply">
+                        <button type="button" onclick="swith('Apply')" class="ContentButton how-to-apply js-contentButtons" id="ApplyBtn">
                             Apply Form
                         </button>
                     </div>
@@ -1364,7 +1364,12 @@
                                 for (let i = 0; i < collection.length; i++) {
                       collection[i].classList.add("Hidden");
                     }
+                    const collectionMenu = document.getElementById("ContentSwitcher").children;
+                                for (let i = 0; i < collectionMenu.length; i++) {
+                      collectionMenu[i].classList.remove("is-active");
+                    }
                 document.getElementById(id).classList.remove("Hidden");
+                document.getElementById(id+"Btn").classList.add("is-active");
             }
 
         $(document).ready(function () {

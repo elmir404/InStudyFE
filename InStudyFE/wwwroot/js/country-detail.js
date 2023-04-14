@@ -21,6 +21,14 @@
         $(`.student-visa`).html("Tələbə vizası")
         $(`.work-permit`).html("Sənədlər")
         $(`.how-to-apply`).html("Müraciət")
+        $(`.study1`).html("Təhsil")  
+        $(`.living1`).html("Yaşayış")
+        $(`.about1`).html("Haqqında") 
+        $(`.university1`).html("Universitetlər")
+        $(`.student-visa1`).html("Tələbə vizası")
+        $(`.work-permit1`).html("Sənədlər")
+        $(`.how-to-apply1`).html("Müraciət")
+        var student="Tələbə"
 
     }
     else if ($lang == 'EN') {
@@ -35,6 +43,14 @@
         $(`.student-visa`).html("Student visa")
         $(`.work-permit`).html("Documents")
         $(`.how-to-apply`).html("Apply form")
+        $(`.study1`).html("Study") 
+        $(`.living1`).html("Living") 
+        $(`.about1`).html("About")
+        $(`.university1`).html("Universities")
+        $(`.student-visa1`).html("Student visa")
+        $(`.work-permit1`).html("Documents")
+        $(`.how-to-apply1`).html("Apply form")
+        var student = "Students"
     }
     else {
         $StudyUniversity.html(`Университеты`);
@@ -48,6 +64,14 @@
         $(`.student-visa`).html("Студенческая виза")
         $(`.work-permit`).html("Документы")
         $(`.how-to-apply`).html("Обращение")
+        $(`.study1`).html("Образование") 
+        $(`.living1`).html("Живущий")
+        $(`.about1`).html("O")
+        $(`.university1`).html("Университет")
+        $(`.student-visa1`).html("Студенческая виза")
+        $(`.work-permit1`).html("Документы")
+        $(`.how-to-apply1`).html("Обращение")
+        var student = "Студент"
     } 
 
     $.ajax({
@@ -137,7 +161,7 @@ ${workPermit}
                     console.log("sasa", value);
                     $(".universityList").append(
                         `
-			                <li> <a href="/University/Detail/${value.id}" title=""> <span>${value.enName}</span> </a> (${value.studentCount} Students) </li>
+			                <li> <a href="/University/Detail/${value.id}" title=""> <span>${value.enName}</span> </a> (${value.studentCount} ${student}) </li>
 
 
 														`

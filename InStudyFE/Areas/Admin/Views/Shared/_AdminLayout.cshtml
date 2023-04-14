@@ -33,7 +33,14 @@
     <!-- COLOR SKIN CSS -->
     <link id="theme" rel="stylesheet" type="text/css" media="all" href="~/AdminFiles/colors/color1.css" />
              @RenderSection("Css",false);
-
+<style>
+        b, strong {
+            font-weight: bolder !important;
+        }
+        ul {
+    list-style: disc;
+}
+</style>
 </head>
 
 <body class="app sidebar-mini ltr light-mode">
@@ -431,7 +438,6 @@
 
     <!-- JQUERY JS -->
     <script src="~/AdminFiles/js/jquery.min.js"></script>
-
     <!-- BOOTSTRAP JS -->
     <script src="~/AdminFiles/plugins/bootstrap/js/popper.min.js"></script>
     <script src="~/AdminFiles/plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -481,6 +487,7 @@
         <script src="~/AdminFiles/plugins/multipleselect/multi-select.js"></script>
     <!-- Color Theme js -->
     <script src="~/AdminFiles/js/themeColors.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Sticky js -->
     <script src="~/AdminFiles/js/sticky.js"></script>

@@ -1,4 +1,11 @@
-﻿ @section Css{
+﻿@inject IViewLocalizer Localizer
+@model HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+    var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
+    var i = 0;
+}
+ @section Css{
      <style>
          *, ::after, ::before {
     box-sizing:unset;
@@ -279,7 +286,90 @@
                      <section id="CountrySpotlight">
                         <h2 id="homeCountryHeader" class="CountrySpotlightTitle">Discover other countries</h2>
                         <div id="CountrySpotlightContainer">
-                          
+                          @foreach (var country in Model.country)
+                            {
+                                i++;
+                                @if(i<=5){
+                                    <figure data-clickable="clickable">
+                                        <a href="/Country/Detail/@country.Id" title=" ">
+                                            <span class="Picture" data-file-url="" data-title="">
+                                                <picture>
+                                                    <source media="all and (max-width: 30em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
+                                                    <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
+                                                    <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
+                                                    <source media="all and (min-width: 80.063em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
+                                                    <img src="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path" width="143" style="width:236px;height:158px;object-fit: cover;" height="95">
+                                                </picture>
+                                            </span>
+                                            <figcaption>
+                                                @if (culture == "en")
+                                                {
+                                                    <span>@country.EnName  </span>
+                                                    <div class="Toggle">
+                                                        @Html.Raw(country.EnAbout)
+                                                    </div>
+                                                }
+                                                else if (culture == "ru")
+                                                {
+
+                                                    <span>@country.RuName  </span>
+                                                    <div class="Toggle">
+                                                        @Html.Raw(country.RuAbout)
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <span>@country.AzName  </span>
+                                                    <div class="Toggle">
+                                                        @Html.Raw(country.AzAbout)
+                                                    </div>
+                                                }
+
+                                            </figcaption>
+                                        </a>
+                                    </figure>
+                                }else{
+                                     <figure class="hiddenCountry Hidden"data-clickable="clickable">
+                                        <a href="/Country/Detail/@country.Id" title=" ">
+                                            <span class="Picture" data-file-url="" data-title="">
+                                                <picture>
+                                                    <source media="all and (max-width: 30em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
+                                                    <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
+                                                    <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
+                                                    <source media="all and (min-width: 80.063em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
+                                                    <img src="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path" width="143" style="width:236px;height:158px;object-fit: cover;" height="95">
+                                                </picture>
+                                            </span>
+                                            <figcaption>
+                                                @if (culture == "en")
+                                                {
+                                                    <span>@country.EnName  </span>
+                                                    <div class="Toggle">
+                                                        @Html.Raw(country.EnAbout)
+                                                    </div>
+                                                }
+                                                else if (culture == "ru")
+                                                {
+
+                                                    <span>@country.RuName  </span>
+                                                    <div class="Toggle">
+                                                        @Html.Raw(country.RuAbout)
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <span>@country.AzName  </span>
+                                                    <div class="Toggle">
+                                                        @Html.Raw(country.AzAbout)
+                                                    </div>
+                                                }
+
+                                            </figcaption>
+                                        </a>
+                                    </figure>
+                                }
+                               
+                          }
                           
                         </div>
                     <div class="ViewAll"> <a style="cursor:pointer;" id="viewMore" class="countryMore" title="View all countries"></a> </div>
@@ -376,7 +466,7 @@
                         $(element).toggleClass('active');
                     }
                 };     
-                
+              
           </script>
     <script src="~/js/headers.js"></script>
    

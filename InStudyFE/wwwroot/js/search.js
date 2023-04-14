@@ -264,10 +264,14 @@
         var $durationSearch = JSON.parse(localStorage.getItem("durationsSearch"));
         var $attendenceSearch = JSON.parse(localStorage.getItem("attendenceSearch"));
         console.log($programSearch);
+        debugger;
         var formData = new FormData();
-        formData.append('CountryName', $country);
-        formData.append('ProgramName', $program);
-        formData.append('DirectionName', $direction);
+        if ($country!="")
+            formData.append('CountryNames', $country);
+        if ($program != "")
+            formData.append('ProgramNames', $program);
+        if ($direction != "")
+        formData.append('DirectionNames', $direction);
         if ($disciplinesSearch != null)
         for (var i = 0; i < $disciplinesSearch.length; i++) {
             formData.append('DirectionNames', $disciplinesSearch[i]);

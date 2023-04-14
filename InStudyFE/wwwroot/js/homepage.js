@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
 
-    var $country = $('#CountrySpotlightContainer');
+    var $country1 = $('#CountrySpotlightContainer');
     var $partners = $('#partners');
    
     $questions = $('#questionAcc');
@@ -32,7 +32,9 @@
         $countryHeader.html(`Seçilmiş ölkələr`);
         $universityHeader.html(`Seçilmiş universitetlər`);
         $disciplinesHeader.html(`İxtisaslar`);
-        $countryMore.html(`Daha çox ölkə`);
+        var $countryMore = `Daha çox ölkə`;
+        $(".countryMore").html("Daha çox ölkə");
+        var $countryFw=`Daha az ölkə`;
         $uniMore.html(`Bütün universitetləri göstər`);
         $arcticles.html(`Daha çox məqalə`);
         $contact.html(`Əlaqə`);
@@ -46,7 +48,9 @@
         $countryHeader.html(`Popular countries`);
         $universityHeader.html(`Popular universities`);
         $disciplinesHeader.html(`Discipliens`);
-        $countryMore.html(`More countries`);
+        var $countryMore = `More countries`;
+        $(".countryMore").html("More countries");
+       var  $countryFw =`Fewer countries`;
         $uniMore.html(`View all universities`);
         $arcticles.html("More arcticles");
         $contact.html(`Contact`);
@@ -59,7 +63,9 @@
         $countryHeader.html(`Популярные страны`);
         $universityHeader.html(`Популярные университеты`); 
         $disciplinesHeader.html(`Дисциплины`);
-        $countryMore.html(`Больше стран`);
+        $(".countryMore").html("Больше стран");
+        var $countryMore =`Больше стран`;
+        var $countryFw =`Меньше стран`;
         $uniMore.html(`Просмотреть все университеты`);
         $arcticles.html("Еще статьи");
         $contact.html(`Контакт`);
@@ -69,40 +75,43 @@
         $footercountries.html('Cтраны');
         $footercontact.html('Связь');
     }
-   
+    $(document).on('click', '#viewMore', function () {
+        debugger;
+        if ($(".hiddenCountry").hasClass("Hidden")) {
+            $(".hiddenCountry").removeClass("Hidden");
+            $(".countryMore").html($countryFw)
+        } else {
+            $(".hiddenCountry").addClass("Hidden");
+            $(".countryMore").html($countryMore)
+        }
+        
+        
+    });
         $.ajax({
             type: 'GET',
             headers: {
                 'Content-Type': 'application/json'
             },
-            url: `https://api.instudy.net/api/Country/GetActiveCountries`,
+            url: `https://api.instudy.net/api/Country/GetCountriesIdName`,
 
             success: function (data) {
                /* $country.empty();*/
                 $.each(
                     data.data, function (i, value) {
 
-                        const date = new Date(value.regDate)
-
-                        var dd = String(date.getDate()).padStart(2, '0');
-                        var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-                        var yyyy = date.getFullYear();
-                        var time = yyyy + "/" + mm + "/" + dd;
+                       
                         if ($lang == 'AZ') {
                             var name = value.azName
-                            var description = value?.azDescription;
 
                         }
                         else if ($lang == 'EN') {
                             var name = value.enName
-                            var description = value?.enDescription;
 
                         } else {
                             var name = value.ruName;
-                            var description = value?.ruDescription;
 
                         }
-                        var image = `https://api.instudy.net/${value?.countryFiles[0]?.path}`
+                       
 
                         if (i < 10) {
                             $countryMenu.append(`
@@ -112,32 +121,32 @@
                             )
                         }   
                         //var description = value.description.slice(0, 5);
-                        if (i < 4) {
+                        if (i < 5) {
 
-                            $country.append(
-                                ` 
-                                <figure data-clickable="clickable">
-                              <a href="/Country/Detail/${value.id}" title=" ${name}">
-                                 <span class="Picture" data-file-url="" data-title=" ${name}">
-                                    <picture>
-                                       <source media="all and (max-width: 30em)" srcset="${image}">
-                                       <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset=${image}">
-                                       <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="${image}">
-                                       <source media="all and (min-width: 80.063em)" srcset="${image}">
-                                       <img src="${image}" width="143" style="width:236px;height:158px;" height="95">
-                                    </picture>
-                                 </span>
-                              <figcaption>
-                                 <span> ${name} </span> 
-                                 <div class="Toggle"> 
-                                       ${description}
-                                 </div>
-                              </figcaption>
-                              </a>
-                             </figure>
-                                         `
-                            )
-                        }   
+                        //    $country.append(
+                        //        ` 
+                        //        <figure data-clickable="clickable">
+                        //      <a href="/Country/Detail/${value.id}" title=" ${name}">
+                        //         <span class="Picture" data-file-url="" data-title=" ${name}">
+                        //            <picture>
+                        //               <source media="all and (max-width: 30em)" srcset="${image}">
+                        //               <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset=${image}">
+                        //               <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="${image}">
+                        //               <source media="all and (min-width: 80.063em)" srcset="${image}">
+                        //               <img src="${image}" width="143" style="width:236px;height:158px;object-fit: cover;" height="95">
+                        //            </picture>
+                        //         </span>
+                        //      <figcaption>
+                        //         <span> ${name} </span> 
+                        //         <div class="Toggle"> 
+                        //               ${description}
+                        //         </div>
+                        //      </figcaption>
+                        //      </a>
+                        //     </figure>
+                        //                 `
+                        //    )
+                        //}   
                         $(`#country`).append(`
                                                  <li class="Suggestion Link" data-position="0" onclick='searchCountry(this)' data-param-value="351" data-param-name="discipline_ids">${name}</li>
 
@@ -311,33 +320,28 @@
             headers: {
                 'Content-Type': 'application/json'
             },
-            url: `https://api.instudy.net/api/University/GetActiveUniversities`,
+            url: `https://api.instudy.net/api/University/GetUniversitiesName`,
 
             success: function (data) {
                 $.each(
                     data.data, function (i, value) {
                        
-                        const date = new Date(value.regDate)
-
-                        var dd = String(date.getDate()).padStart(2, '0');
-                        var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-                        var yyyy = date.getFullYear();
-                        var time = yyyy + "/" + mm + "/" + dd;
+                        
                         if ($lang == 'AZ') {
                             var name = value.azName
-                            var description = value?.azDescription;
+                           
 
                         }
                         else if ($lang == 'EN') {
                             var name = value.enName
-                            var description = value?.enDescription;
+                           
 
                         } else {
                             var name = value.ruName;
-                            var description = value?.ruDescription;
+                          
 
                         }
-                        var image = `https://api.instudy.net/${value?.universityFiles[0]?.bytes}`
+                      
                         
                         if (i < 10) {
 
@@ -781,76 +785,77 @@
     }
 
     getBlogs();
-    $(document).on('click', '#viewMore', function () {
-        console.log("saAS");
-        $.ajax({
-            type: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            url: `https://api.instudy.net/api/Country/GetActiveCountries`,
+//    $(document).on('click', '#viewMore', function () {
+//        console.log("saAS");
+//        $.ajax({
+//            type: 'GET',
+//            headers: {
+//                'Content-Type': 'application/json'
+//            },
+//            url: `https://api.instudy.net/api/Country/GetActiveCountries`,
 
-            success: function (data) {
-              $country.empty();
-                $.each(
-                    data.data, function (i, value) {
+//            success: function (data) {
+//              $country.empty();
+//                $.each(
+//                    data.data, function (i, value) {
                         
-                        const date = new Date(value.regDate)
+//                        const date = new Date(value.regDate)
 
-                        var dd = String(date.getDate()).padStart(2, '0');
-                        var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-                        var yyyy = date.getFullYear();
-                        var time = yyyy + "/" + mm + "/" + dd;
-                        if ($lang == 'AZ') {
-                            var name = value?.azName
-                            var description = value?.azDescription;
+//                        var dd = String(date.getDate()).padStart(2, '0');
+//                        var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
+//                        var yyyy = date.getFullYear();
+//                        var time = yyyy + "/" + mm + "/" + dd;
+//                        if ($lang == 'AZ') {
+//                            var name = value?.azName
+//                            var description = value?.azAbout;
 
                         }
                         else if ($lang == 'EN') {
                             var name = value?.enName
-                            var description = value?.enDescription;
+                            var description = value?.enAbout;
 
-                        } else {
-                            var name = value?.ruName;
-                            var description = value?.ruDescription;
+//                        } else {
+//                            var name = value?.ruName;
+//                            var description = value?.ruAbout;
 
-                        }
-                        var image = `https://api.instudy.net/${value?.countryFiles[0]?.path}`
-                        //var description = value.description.slice(0, 5);
-                        if (i <10  ) {
+//                        }
+//                        var image = `https://api.instudy.net/${value?.countryFiles[0]?.path}`
+//                        //var description = value.description.slice(0, 5);
+//                        if (i <10  ) {
 
-                            $country.append(
-                                ` <figure data-clickable="clickable">
-                              <a href="/Country/Detail/${value.id}" title="${name}">
-                                 <span class="Picture" data-file-url="" data-title=" ${name}">
-                                    <picture>
-                                       <source media="all and (max-width: 30em)" srcset="${image}">
-                                       <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset=${image}">
-                                       <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="${image}">
-                                       <source media="all and (min-width: 80.063em)" srcset="${image}">
-                                       <img src="${image}" width="143" style="width:236px;height:158px;" height="95">
-                                    </picture>
-                                 </span>
-                              <figcaption>
-                                 <span> ${name} </span> 
-                                 <div style="color:white;" class="Toggle"> 
-                                       ${description}
-                                 </div>
-                              </figcaption>
-                              </a>
-                             </figure>
-                                         `
-                            )
-                        }
+//                            $country.append(
+//                                ` <figure data-clickable="clickable">
+//                              <a href="/Country/Detail/${value.id}" title="${name}">
+//                                 <span class="Picture" data-file-url="" data-title=" ${name}">
+//                                    <picture>
+//                                       <source media="all and (max-width: 30em)" srcset="${image}">
+//                                       <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset=${image}">
+//                                       <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="${image}">
+//                                       <source media="all and (min-width: 80.063em)" srcset="${image}">
+//                                       <img src="${image}" width="143" style="width:236px;height:158px;object-fit: cover;
+//" height="95">
+//                                    </picture>
+//                                 </span>
+//                              <figcaption>
+//                                 <span> ${name} </span> 
+//                                 <div style="color:white;" class="Toggle"> 
+//                                       ${description}
+//                                 </div>
+//                              </figcaption>
+//                              </a>
+//                             </figure>
+//                                         `
+//                            )
+//                        }
 
 
-                    }
-                )
+//                    }
+//                )
 
-            }
+//            }
 
-        });
-    });
+//        });
+//    });
     
     $(document).on('click', '#searchButton', async function () {
         console.log("adsadsad");

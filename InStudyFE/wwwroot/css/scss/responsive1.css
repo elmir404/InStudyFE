@@ -1259,7 +1259,8 @@
         overflow: hidden;
         position: relative;
         width: 20%;
-        margin-left: 10px;
+        margin-left: unset !important;
+        margin-top: 1.7px !important;
     }
 @media (min-width:1025px){
     #CountrySpotlight #CountrySpotlightContainer figure:hover{

@@ -1,7 +1,11 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Localization;
+using System.Globalization;
+
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddViewLocalization();
+builder.Services.AddLocalization(option => { option.ResourcesPath = "Resources"; });
 builder.Services.AddHttpContextAccessor();
 #region Session
 builder.Services.AddDistributedMemoryCache();
@@ -44,7 +48,19 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseSession();
+var supportedCultures = new[]
+{
+    new CultureInfo("az"),
+    new CultureInfo("en"),
+    new CultureInfo("ru"),
+};
 
+app.UseRequestLocalization(new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new RequestCulture("az"),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures
+});
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(

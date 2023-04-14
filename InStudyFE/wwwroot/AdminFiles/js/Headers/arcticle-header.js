@@ -113,19 +113,37 @@
 
 //}
 function Delete(about) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                type: "DELETE",
+                url: `https://api.instudy.net/api/BlogFront/DeleteBlogFront?id=${about}`,
+                success: function (result) {
+                    if (result.success == true) {
+                        Swal.fire(
+                            'Deleted!',
+                            'Your file has been deleted.',
+                            'success'
+                        ).then((result) => { if (result.isConfirmed) { location.reload() } });
 
-    $.ajax({
-        type: "DELETE",
-        url: `https://api.instudy.net/api/BlogFront/DeleteBlogFront?id=${about}`,
-        success: function (result) {
-            if (result.success == true) {
-                location.href = `/Admin/Header/ArcticlesHeader`;
-            }
-            else {
-                alert(result.message)
-            }
+                    }
+                    else {
+                        alert(result.message)
+                    }
+                }
+            });
+
         }
-    });
+    })
+   
 
 
 }

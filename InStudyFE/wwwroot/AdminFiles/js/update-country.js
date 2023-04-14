@@ -16,44 +16,27 @@
             $blogForm.append(
                 `
                         <input type="hidden" id="countryId" value="${data.data.id}" class="form-control">
-
-                     <div class="row mb-4">
-                                <label class="col-md-3 form-label">Az Title :</label>
+<div class="row mb-4">
+                                <label class="col-md-3 form-label">Az Name :</label>
                                 <div class="col-md-9">
                                     <input type="text" id="azHeader" value="${data.data.azName}" class="form-control" placeholder="Title Name">
                                 </div>
                             </div>
                             <div class="row mb-4">
-                                <label class="col-md-3 form-label">Ru Title :</label>
+                                <label class="col-md-3 form-label">Ru Name :</label>
                                 <div class="col-md-9">
                                     <input type="text" id="ruHeader" value="${data.data.ruName}" class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-4">
-                                <label class="col-md-3 form-label">En Title :</label>
+                                <label class="col-md-3 form-label">En Name :</label>
                                 <div class="col-md-9">
                                     <input type="text" id="enHeader" value="${data.data.enName}" class="form-control">
                                 </div>
                             </div>
 
-                            <!-- Row -->
-                            <div class="row">
-                                <label class="col-md-3 form-label mb-4">Az Description :</label>
-                                <div class="col-md-9 mb-4">
-                                    <textarea class="content" id="azDescription"  name="example">${data.data.azDescription}</textarea>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <label class="col-md-3 form-label mb-4">Ru Description :</label>
-                                <div class="col-md-9 mb-4">
-                                    <textarea class="content7" id="ruDescription"  name="example">${data.data.ruDescription}</textarea>
-                                </div>
-                            </div> <div class="row">
-                                <label class="col-md-3 form-label mb-4">En Description :</label>
-                                <div class="col-md-9 mb-4">
-                                    <textarea class="content2" id="enDescription"  name="example">${data.data.enDescription}</textarea>
-                                </div>
-                            </div>
+                            
+                          
 <div class="row mb-4">
                                 <label class="col-md-3 form-label">Students Count:</label>
                                 <div class="col-md-9">
@@ -65,25 +48,22 @@
                                 <div class="col-md-9">
                                     <input type="number" id="Population" value="${data.data.population}" class="form-control">
                                 </div>
-                            </div> 
-                             <div class="row">
-                                <label class="col-md-3 form-label mb-4">Work Permit(AZ):</label>
-                                <div class="col-md-9 mb-4">
-                                    <textarea class="content4" id="WorkPermitAz" name="WorkPermit">${data.data.azWorkPermit}</textarea>
-                                </div>
-                            </div> 
+                            </div>
+
+
+
+
+
+
+                            <!--End Row-->
+                            <!--Row-->
                             <div class="row">
-                                <label class="col-md-3 form-label mb-4">Work Permit(Ru):</label>
-                                <div class="col-md-9 mb-4">
-                                    <textarea class="content5" id="WorkPermitRu" name="WorkPermit">${data.data.ruWorkPermit}</textarea>
+                                <label class="col-md-3 form-label mb-4">Country File Upload :</label>
+                                <div class="col-md-9">
+                                    <input id="files" type="file" name="files" accept=".jpg, .png, image/jpeg, image/png" multiple>
                                 </div>
-                            </div>  <div class="row">
-                                <label class="col-md-3 form-label mb-4">Work Permit(En):</label>
-                                <div class="col-md-9 mb-4">
-                                    <textarea class="content6" id="WorkPermitEn" name="WorkPermit">${data.data.enWorkPermit}</textarea>
-                                </div>
-                            </div> 
-                            <div class="row">
+                            </div>
+                       <div class="row">
                                 <label class="col-md-3 form-label mb-4">Study(Az):</label>
                                 <div class="col-md-9 mb-4">
                                     <textarea class="content7" id="StudyAz" name="Study">${data.data.azStudy}</textarea>
@@ -154,15 +134,24 @@
                                     <textarea class="content18" id="StudentVisaRu" name="StudentVisa">${data.data.ruStudentVisa}</textarea>
                                 </div>
                             </div>
-                          
-                            <!--End Row-->
-                            <!--Row-->
+                        <div class="row">
+                                <label class="col-md-3 form-label mb-4">Documents(AZ):</label>
+                                <div class="col-md-9 mb-4">
+                                    <textarea class="content4" id="WorkPermitAz" name="WorkPermit">${data.data.azWorkPermit}</textarea>
+                                </div>
+                            </div> 
                             <div class="row">
-                                <label class="col-md-3 form-label mb-4">Country File Upload :</label>
-                                <div class="col-md-9">
-                                    <input id="files" type="file" name="files" accept=".jpg, .png, image/jpeg, image/png" multiple>
+                                <label class="col-md-3 form-label mb-4">Documents(Ru):</label>
+                                <div class="col-md-9 mb-4">
+                                    <textarea class="content5" id="WorkPermitRu" name="WorkPermit">${data.data.ruWorkPermit}</textarea>
+                                </div>
+                            </div>  <div class="row">
+                                <label class="col-md-3 form-label mb-4">Documents(En):</label>
+                                <div class="col-md-9 mb-4">
+                                    <textarea class="content6" id="WorkPermitEn" name="WorkPermit">${data.data.enWorkPermit}</textarea>
                                 </div>
                             </div>
+                     
                         
                         `
             )

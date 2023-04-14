@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>   
+﻿  @inject IViewLocalizer Localizer
+  @{
+    var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
+    var context = Context.Request;
+    var url = context.Path + context.QueryString;
+}
+<!DOCTYPE html>   
 <html lang="en">
    <head>
       <meta charset="UTF-8">
@@ -312,9 +318,9 @@
                                         
                                     <div id="LoggedInDropDown"  class="AccountDropDown">
                                        <ul class="Content">
-                                          <li> <a title="My account page" onclick="setLang('AZ')" class="MenuItem">AZ</a> </li>
-                                          <li> <a title="Interesting for you" onclick="setLang('EN')" class="MenuItem">EN</a> </li>
-                                          <li> <a title="My settings page" onclick="setLang('RU')" class="MenuItem">RU</a></li>
+                                            <li> <a asp-controller="Home" asp-action="SetLanguage" asp-route-culture="az" asp-route-url="@url" title="My account page" onclick="setLang('AZ')" class="MenuItem">AZ</a> </li>
+                                            <li> <a asp-controller="Home" asp-action="SetLanguage" asp-route-culture="en" asp-route-url="@url" title="Interesting for you" onclick="setLang('EN')" class="MenuItem">EN</a> </li>
+                                          <li> <a asp-controller="Home" asp-action="SetLanguage" asp-route-culture="ru" asp-route-url="@url" title="My settings page" onclick="setLang('RU')" class="MenuItem">RU</a></li>
                                        </ul>
                                     </div>
                                  </div>
