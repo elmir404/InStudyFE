@@ -30,14 +30,20 @@ namespace InStudyFE.Controllers
             var responseString = await response.Content.ReadAsStringAsync();
             var result = JsonConvert.DeserializeObject<CountryModel>(responseString);
             var country = result.data as List<GetCountryDto>;
-            var responsePartner = await client.GetAsync("api/Partner/GetActivePartners");
-            var responsePartnerString = await responsePartner.Content.ReadAsStringAsync();
-            var resultPartner = JsonConvert.DeserializeObject<PartnerModel>(responsePartnerString);
-            var partners = resultPartner.data as List<GetPartnerDto>;
+            var responseHeader = await client.GetAsync("api/Content/GetLastContent");
+            var responseHeaderString = await responseHeader.Content.ReadAsStringAsync();
+            var resultHeader = JsonConvert.DeserializeObject<HeaderModel>(responseHeaderString);
+            var header = resultHeader.data as GetHeaderDto;
+            var responseOnboard = await client.GetAsync("api/Header/GetActiveHeaders");
+            var responseOnboardString = await responseOnboard.Content.ReadAsStringAsync();
+            var resultOnboard = JsonConvert.DeserializeObject<OboardModel>(responseOnboardString);
+            var onboard = resultOnboard.data as List<GetOnboardingDto>;
             var model = new HomeViewModel()
             {
                 country = country,
-                partner = partners
+                onboard = onboard,
+                header=header,
+                
             };
             return View(model);
         }

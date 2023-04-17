@@ -8,7 +8,7 @@
             headers: {
                 'Content-Type': 'application/json'
             },
-            url: `https://api.instudy.net/api/Country/GetActiveCountries`,
+            url: `https://api.instudy.net/api/Country/GetCountriesIdName`,
 
               success: function (data) {
                 $country.empty();
@@ -24,16 +24,13 @@
                         
                         if ($lang == 'AZ') {
                             var name = value.azName
-                            var description = value?.azDescription;
 
                         }
                         else if ($lang == 'EN') {
                             var name = value.enName
-                            var description = value?.enDescription;
 
                         } else {
                             var name = value.ruName;
-                            var description = value?.ruDescription;
 
                         }
                         

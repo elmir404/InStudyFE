@@ -21,9 +21,6 @@
                 data: 'azName',
             },
             {
-                data: 'ruName',
-            },
-            {
                 data: 'enName',
             },            
             {

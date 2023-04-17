@@ -191,14 +191,31 @@
      </style>
  }
 <div class="forlang">
-<div id="HomeSearchBackground">
+<div id="HomeSearchBackground" style="background-image:url(https://api.instudy.net/@Model.header.ContentFiles[0].Path)">
             <section id="SecondRow" class="col1 wrapped">
                <div class="colblock no-vertical-margin">
                   <div data-module="" class="Module StudyPortals_Shared_Modules_HomeSearchRR_HomeSearch">
                      <section id="HomeSearch">
                         <div class="HeadingTextWrapper">
                            <div id="homeHeader" class="HeadingTextBottom">
-                              
+                                @if (culture == "en")
+                                {
+                                    <h1 class="DegreeType"> @Model.header.EnBody </h1>
+                                    <h2 class="HeadingMainTitle">@Model.header.EnHeader  </h2>
+                                   
+                                }
+                                else if (culture == "ru")
+                                {
+                                    <h1 class="DegreeType"> @Model.header.RuBody </h1>
+                                    <h2 class="HeadingMainTitle">@Model.header.RuHeader  </h2>
+                                     
+                                }
+                                else
+                                {
+                                    <h1 class="DegreeType"> @Model.header.AzBody </h1>
+                                    <h2 class="HeadingMainTitle">@Model.header.AzHeader  </h2>
+                                   
+                                }
                            </div>
                         </div>
                        
@@ -216,16 +233,55 @@
                            <li class="OnboardingItem Explore">
                               <div class="OnboardingBullet"><i class="OnboardingIcon lnr-compass2"></i></div>
                               <div id="header1" class="OnboardingText">
+                                    @if (culture == "en")
+                                                {
+                                                    <p> <span class="ItemHeader">@Model.onboard[0]?.EnTitle</span> @Html.Raw(@Model.onboard[0]?.EnDescription) </p>
+                                                }
+                                                else if (culture == "ru")
+                                                {
+
+                                                     <p> <span class="ItemHeader">@Model.onboard[0]?.RuTitle</span> @Html.Raw(@Model.onboard[0]?.RuDescription) </p>
+                                                }
+                                                else
+                                                {
+                                        <p> <span class="ItemHeader">@Model.onboard[0]?.AzTitle</span> @Html.Raw(@Model.onboard[0]?.AzDescription) </p>
+                                                }
                               </div>
                            </li>
                            <li class="OnboardingItem Compare">
                               <div class="OnboardingBullet"><i class="OnboardingIcon lnr-compare"></i></div>
                               <div id="header2" class="OnboardingText">
+                                    @if (culture == "en")
+                                    {
+                                        <p> <span class="ItemHeader">@Model.onboard[1]?.EnTitle</span> @Html.Raw(@Model.onboard[1]?.EnDescription) </p>
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                        <p> <span class="ItemHeader">@Model.onboard[1]?.RuTitle</span> @Html.Raw(@Model.onboard[1]?.RuDescription) </p>
+                                    }
+                                    else
+                                    {
+                                        <p> <span class="ItemHeader">@Model.onboard[1]?.AzTitle</span>@Html.Raw(@Model.onboard[1]?.AzDescription) </p>
+                                    }
                               </div>
                            </li>
                            <li class="OnboardingItem Decide">
                               <div class="OnboardingBullet"><i class="OnboardingIcon lnr-archery"></i></div>
                               <div id="header3" class="OnboardingText">
+                                   @if (culture == "en")
+                                    {
+                                        <p> <span class="ItemHeader">@Model.onboard[2]?.EnTitle</span> @Html.Raw(@Model.onboard[2]?.EnDescription) </p>
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                        <p> <span class="ItemHeader">@Model.onboard[2]?.RuTitle</span>@Html.Raw(@Model.onboard[2]?.RuDescription)  </p>
+                                    }
+                                    else
+                                    {
+                                        <p> <span class="ItemHeader">@Model.onboard[2]?.AzTitle</span> @Html.Raw(@Model.onboard[2]?.AzDescription) </p>
+                                    }
                               </div>
                            </li>
                            <li class="OnboardingItem Apply">
@@ -246,6 +302,19 @@
                                  </i>
                               </div>
                               <div id="header4" class="OnboardingText">
+                                    @if (culture == "en")
+                                    {
+                                        <p> <span class="ItemHeader">@Model.onboard[3]?.EnTitle</span>@Html.Raw(@Model.onboard[3]?.EnDescription)  </p>
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                        <p> <span class="ItemHeader">@Model.onboard[3]?.RuTitle</span> @Html.Raw(@Model.onboard[3]?.RuDescription) </p>
+                                    }
+                                    else
+                                    {
+                                        <p> <span class="ItemHeader">@Model.onboard[3]?.AzTitle</span> @Html.Raw(@Model.onboard[3]?.AzDescription) </p>
+                                    }
                               </div>
                            </li>
                            <li class="OnboardingItem Apply">
@@ -255,6 +324,19 @@
                                  </i>
                               </div>
                               <div id="header5" class="OnboardingText">
+                                  @if (culture == "en")
+                                    {
+                                        <p> <span class="ItemHeader">@Model.onboard[4]?.EnTitle</span>@Html.Raw(@Model.onboard[4]?.EnDescription) </p>
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                        <p> <span class="ItemHeader">@Model.onboard[4]?.RuTitle</span> @Html.Raw(@Model.onboard[4]?.RuDescription) </p>
+                                    }
+                                    else
+                                    {
+                                        <p> <span class="ItemHeader">@Model.onboard[4]?.AzTitle</span> @Html.Raw(@Model.onboard[4]?.AzDescription) </p>
+                                    }
                               </div>
                            </li>
                         </ul>

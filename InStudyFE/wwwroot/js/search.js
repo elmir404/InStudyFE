@@ -35,32 +35,23 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Speciality/GetActiveSpecialities`,
+        url: `https://api.instudy.net/api/Direction/GetActiveDirections`,
 
         success: function (data) {
            
             $.each(
                 data.data, function (i, value) {
-                    console.log(value);
-                    //const date = new Date(value.regDate)
 
-                    //var dd = String(date.getDate()).padStart(2, '0');
-                    //var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-                    //var yyyy = date.getFullYear();
-                    //var time = yyyy + "/" + mm + "/" + dd;
 
                     if ($lang == 'AZ') {
                         var name = value.azName
-                        var description = value?.azDescription;
 
                     }
                     else if ($lang == 'EN') {
                         var name = value.enName
-                        var description = value?.enDescription;
 
                     } else {
                         var name = value.ruName;
-                        var description = value?.ruDescription;
 
                     }
 

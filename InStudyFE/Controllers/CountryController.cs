@@ -10,8 +10,11 @@ namespace InStudyFE.Controllers
         {
             return View();
         }
-        public IActionResult Detail()
+        [HttpGet]
+
+        public IActionResult Detail(int id)
         {
+
             return View();
         }
     }

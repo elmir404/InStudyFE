@@ -2838,7 +2838,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
     .sitewrapper .AsideDesktopContainer {
         display: block;
         position: fixed;
-        width: 288px;
+        width: 300px;
     }
 }
 @media (min-width: 1025px) {
