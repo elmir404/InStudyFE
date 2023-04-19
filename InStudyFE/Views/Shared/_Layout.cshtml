@@ -720,6 +720,22 @@
               var  txtValue = name.textContent || name.innerText;
                document.getElementById('countryInput').value = txtValue;
             }
+            function countryDetail(id){
+                console.log(id);
+                $.ajax({
+                    type: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    url: ``,
+
+                    success: function (data) {
+                    
+
+                    }
+
+                });
+            }
         </script>
         @RenderSection("Scripts",false)
 </body>

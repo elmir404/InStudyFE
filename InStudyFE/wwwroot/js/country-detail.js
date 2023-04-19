@@ -81,12 +81,7 @@
         },                                                            
         url: `https://api.instudy.net/api/Country/GetCountryWithId?id=${linkValues[3]}`,
         success: function (data) {
-            const date = new Date(data.data.regDate)
-            
-            var dd = String(date.getDate()).padStart(2, '0');
-            var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-            var yyyy = date.getFullYear();                                                                                             
-            var time = yyyy + "/" + mm + "/" + dd;
+           
             if ($lang == 'AZ') {
                 var name1 = data.data.azName
                 var description = data.data?.azDescription;
@@ -180,7 +175,7 @@ ${workPermit}
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/University/GetActiveUniversities`,
+        url: `https://api.instudy.net/api/University/GetUniversityWithCountryId?countryId=${linkValues[3]}`,
         success: function (data) {
             $universities.empty();
             $.each(

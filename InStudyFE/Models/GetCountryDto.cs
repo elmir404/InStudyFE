@@ -42,7 +42,7 @@
         public string EnStudentVisa { get; set; }
         public string RuStudentVisa { get; set; }
 
-        public IEnumerable<GetUniversityIdNameDto> Universities { get; set; }
-        public IEnumerable<GetCountryFileDto> CountryFiles { get; set; }
+        public List<GetUniversityIdNameDto> Universities { get; set; }
+        public List<GetCountryFileDto> CountryFiles { get; set; }
     }
 }

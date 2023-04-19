@@ -294,13 +294,13 @@
             headers: {
                 'Content-Type': 'application/json'
             },
-            url: `https://api.instudy.net/api/Direction/GetActiveDirections`,
+            url: `https://api.instudy.net/api/Direction/GetActiveDirections?Lang=${$lang}`,
 
             success: function (data) {
                
                 $.each(
                     data.data, function (i, value) {
-                       
+                        console.log(data);
                        
                         if ($lang == 'AZ') {
                             var name = value?.azName

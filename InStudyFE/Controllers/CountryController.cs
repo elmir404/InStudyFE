@@ -12,7 +12,7 @@ namespace InStudyFE.Controllers
         }
         [HttpGet]
 
-        public IActionResult Detail(int id)
+        public IActionResult Detail()
         {
 
             return View();
