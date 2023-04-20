@@ -55,31 +55,6 @@
 @section Scripts{
     <script src="~/AdminFiles/js/update-pagequestion.js"></script>
     <script>
-        $.ajax({
-            type: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-
-            },
-            url: `https://api.instudy.net/api/Question/GetQuestions`,
-
-            success: function (data) {
-                var html = [];
-                $.each(
-                    data.data, function (i, value) {
-                        html.push(
-                            `
-                                                                                    <option value="${value.id}">${value.azQuestionTitle}</option>
-
-                                                                         `
-                        )
-
-                    }
-                )
-                $('#questions').html(html.join('')).multipleSelect({position: 'top'});
-            }
-
-        });
+      
     </script>
 }

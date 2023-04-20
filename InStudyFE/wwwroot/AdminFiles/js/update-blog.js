@@ -10,7 +10,6 @@
         url: `https://api.instudy.net/api/Blogs/GetBlog?blogId=${blogId}`,
         success: function (data) {
 
-            console.log(data);
             $blogForm.empty()
 
             $blogForm.append(
@@ -82,7 +81,6 @@
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);
         }
-        console.log(formData);
 
         $.ajax({
             type: "PUT",

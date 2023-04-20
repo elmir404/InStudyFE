@@ -674,12 +674,14 @@
 #OnboardingBar .OnboardingText p{
     max-width:450px
 }
-#OnboardingBar .OnboardingText .ItemHeader{
-    color:#05293c;
-    display:block;
-    font-size:1.5rem;
-    font-weight:700;
-    line-height:2rem
+#OnboardingBar .OnboardingText .ItemHeader {
+    color: #05293c;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 700;
+    line-height: 2rem
 }
 @media (max-width:480px){
     #OnboardingBar .OnboardingText .ItemHeader{

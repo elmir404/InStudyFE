@@ -6,6 +6,16 @@
         },
         columns: [
             {
+                data: 'directionFiles', render: function (data, type, row, meta) {
+                    return `
+                      <td><img alt="${data[0]?.fileName}" style="width:200px !important;" class="text-center img-responsive" src="https://api.instudy.net/${data[0]?.path}"></td>
+                        `;
+
+
+
+                },
+            },
+            {
                 data: 'azName',
             },
             {
@@ -81,15 +91,17 @@
     //});
 
     $("#addDirection").click(function () {
-
+        var files = $("#files").get(0).files;
         var formData = new FormData();
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
-        formData.append('EnName', $("#enHeader").val());
+         formData.append('EnName', $("#enHeader").val());
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
-        formData.append('Icon', $("#iconSvg").val());
+         formData.append('RuDescription', $("#ruDescription").val());
+        for (var i = 0; i < files.length; i++) {
+            formData.append('Files', files[i]);
+        }
         $.ajax({
             type: "POST",
             url: 'https://api.instudy.net/api/Direction/CreateDirection',

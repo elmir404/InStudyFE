@@ -304,19 +304,16 @@
                        
                         if ($lang == 'AZ') {
                             var name = value?.azName
-                            var description = value?.description;
 
                         }
                         else if ($lang == 'EN') {
                             var name = value?.enName
-                            var description = value?.enDescription;
 
                         } else {
                             var name = value?.ruName;
-                            var description = value?.ruDescription;
 
                         }
-                        
+                        var image = `https://api.instudy.net/${value?.directionFiles[0]?.path}`;
                         
 
                         $disciplinesMenu.append(`
@@ -326,7 +323,7 @@
                         );
                         $("#disciplines").append(`
                            <li data-clickable="clickable"> <a href="/Discipline/Detail/${value.id}" title="${name}">
-                            ${value.icon}
+                            <img alt="image" style="width:100px !important;" class="text-center img-responsive" src="${image}">
 <span style="display:block;">${name}</span> </a> </li>
 
 `);

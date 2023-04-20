@@ -12,17 +12,26 @@
         url: `https://api.instudy.net/api/University/GetUniversityWithId?universityId=${universityId}`,
         success: function (data) {
 
-            console.log(data.data);
-            $programs = [];
-            $.each(
-                data.data.programs, function (i, value) {
-                    $programs.push(
-                        `${value.id}`
-                    )
+            //console.log(data.data);
+            //$programs = [];
+            //$.each(
+            //    data.data.programs, function (i, value) {
+            //        $programs.push(
+            //            `${value.id}`
+            //        )
 
-                }
-            );
-            console.log($programs);
+            //    }
+            //);
+            //$specilitys = [];
+            //$.each(
+            //    data.data.programs, function (i, value) {
+            //        $specilitys.push(
+            //            `${value.id}`
+            //        )
+
+            //    }
+            //);
+            //console.log($programs);
             $.ajax({
                 type: 'GET',
                 headers: {
@@ -32,62 +41,70 @@
                 },
                 url: `https://api.instudy.net/api/Program/GetActivePrograms`,
 
-                success: function (data) {
+                success: function (result) {
                     var html = [];
                     debugger;
                     $.each(
-                        data.data, function (i, value) {
+                        result.data, function (i, value) {
+                            var isSelected = false;
                             $.each(
-                                $programs, function (p, pvalue) {
+                                data.data.programs, function (p, pvalue) {
                                     console.log(pvalue);
-                                    if (pvalue == value.id) {
+                                    if (pvalue.id == value.id) {
+                                        isSelected = true;
                                         debugger;
-                                        html.push(
-                                            `
-                                                                                <option selected value="${value.id}">${value.enName}</option>
 
-                                                                             `
-                                        );
                                     }
                                     else {
-                                        html.push(
-                                            `
-                                                                                <option value="${value.id}">${value.enName}</option>
-
-                                                                                `
-                                        );
+                                        isSelected = false;
                                     }
 
                                 });
+                            if (isSelected) {
+                                html.push(
+                                    `
+                                                                                <option selected value="${value.id}">${value.enName}</option>
+
+                                                                             `
+                                );
+                            } else {
+                                html.push(
+                                    `
+                                                                                <option value="${value.id}">${value.enName}</option>
+
+                                                                             `
+                                );
+
+                            }
+
                         }
                     )
                     $('#program').html(html.join('')).multipleSelect();
                 }
 
             });
-            $('#hiddenProgram').val(`${$programs}`);
-            var $specialities = [];
+            //var $specialities = [];
            
-            $.each(
-                data.data.specialities, function (i, value) {
-                    console.log(value);
-                    $specialities.push(
-                        `${value.id}`
-                    )
+            //$.each(
+            //    data.data.specialities, function (i, value) {
+            //        console.log(value);
+            //        $specialities.push(
+            //            `${value.id}`
+            //        )
 
-                }
-            );
-            console.log($specialities);
-            $('#hiddenSpeciality').val(`${$specialities}`);
-            var $directions = [];
-            $.each(
-                data.data.directions, function (i, value) {
-                    $directions.push(
-                        `${value.id}`
-                    )
+            //    }
+            //);
+            //console.log($specialities);
+            //$('#hiddenSpeciality').val(`${$specialities}`);
+            ////var $directions = [];
+            ////$.each(
+            ////    data.data.directions, function (i, value) {
+            ////        $directions.push(
+            ////            `${value.id}`
+            ////        )
 
-                }
-            );
+            ////    }
+            ////);
             $.ajax({
                 type: 'GET',
                 headers: {
@@ -97,16 +114,16 @@
                 },
                 url: `https://api.instudy.net/api/Direction/GetActiveDirections`,
 
-                success: function (data) {
+                success: function (result) {
                     var html = [];
                     debugger;
                     $.each(
-                        data.data, function (i, value) {
+                        result.data, function (i, value) {
                                 var isSelected = false;
                             $.each(
-                                $directions, function (p, pvalue) {
+                                data.data.directions, function (p, pvalue) {
                                     console.log(pvalue);
-                                    if (pvalue == value.id) {
+                                    if (pvalue.id == value.id) {
                                         isSelected = true;
                                         debugger;
                                         
@@ -137,6 +154,58 @@
                         }
                     )
                     $('#direction').html(html.join('')).multipleSelect();
+                }
+
+            });
+            $.ajax({
+                type: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+
+                },
+                url: `https://api.instudy.net/api/Speciality/GetActiveSpecialities`,
+
+                success: function (result) {
+                    var html = [];
+                    debugger;
+                    $.each(
+                        result.data, function (i, value) {
+                                var isSelected = false;
+                            $.each(
+                                data.data.specialities, function (p, pvalue) {
+                                    console.log(pvalue);
+                                    if (pvalue.id == value.id) {
+                                        isSelected = true;
+                                        debugger;
+                                        
+                                    }
+                                    else {
+                                        isSelected = false;
+                                    }
+
+                            });
+                            if (isSelected) {
+                                html.push(
+                                    `
+                                                                                <option selected value="${value.id}">${value.enName}</option>
+
+                                                                             `
+                                );
+                            } else {
+                                html.push(
+                                    `
+                                                                                <option value="${value.id}">${value.enName}</option>
+
+                                                                             `
+                                );
+
+                            }
+
+
+                        }
+                    )
+                    $('#speciality').html(html.join('')).multipleSelect();
                 }
 
             });
@@ -324,6 +393,7 @@
         var files = $("#files").get(0).files;
         var program = $("#program").val();
         var direction = $("#direction").val();
+        var speciality = $("#speciality").val();
         var formData = new FormData();
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
@@ -350,6 +420,8 @@
         }
         for (var i = 0; i < program.length; i++) {
             formData.append('ProgramIds', program[i]);
+        } for (var i = 0; i < speciality.length; i++) {
+            formData.append('SpecialityIds', speciality[i]);
         }
         for (var i = 0; i < direction.length; i++) {
             formData.append('DirectionIds', direction[i]);
@@ -365,7 +437,7 @@
             },
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/University/UniversityList"
+                    //location.href = "/Admin/University/UniversityList"
                 }
                 else {
                     alert("error")

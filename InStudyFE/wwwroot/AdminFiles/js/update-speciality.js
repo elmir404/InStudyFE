@@ -9,7 +9,44 @@
         },
         url: `https://api.instudy.net/api/Speciality/GetSpeciality/id?id=${specialityId}`,
         success: function (data) {
+            $.ajax({
+                type: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
 
+                },
+                url: `https://api.instudy.net/api/Direction/GetActiveDirections`,
+
+                success: function (result) {
+                    var html = [];
+                    $.each(
+                       
+                        result.data, function (i, value) {
+                            if (data.data.direction.id == value.id) {
+                                html.push(
+                                    `
+                                                                            <option selected value="${value.id}">${value.azName}</option>
+
+                                                                         `
+                                )
+                            }
+                                
+                            else {
+                                html.push(
+                                    `
+                                                                            <option value="${value.id}">${value.azName}</option>
+
+                                                                         `
+                                )
+                            }
+
+                        }
+                    )
+                    $('#directionid').html(html.join(''));
+                }
+
+            });
             console.log(data);
             $form.empty()
 

@@ -1,22 +1,11 @@
 ﻿$(document).ready(function () {
     $('#country-datatable').DataTable({
         ajax: {
-            url: 'https://api.instudy.net/api/Country/GetActiveCountries',
+            url: 'https://api.instudy.net/api/Country/GetCountriesIdName',
             dataSrc: 'data'
         },
         columns: [
-            {
-                data: 'countryFiles', render: function (data, type, row, meta) {
-                    console.log("dsds", data);
-                    return `
-                      <td><img alt="https://api.instudy.net/${data[0]?.path}" style="width:200px !important;" class="text-center img-responsive" src="https://api.instudy.net/${data[0]?.path}"></td>
-
-                        `;
-
-
-
-                }
-            },
+           
             {
                 data: 'azName',
             },
