@@ -109,13 +109,6 @@
             }
             localStorage.setItem('country', name1);
             var image = `https://api.instudy.net/${data.data?.countryFiles[0]?.path}`
-            $countryImage.append(
-                `
-                <span class="HeroImage js-heroImage" style="background-image:url(${image});background-repeat: no-repeat;background-size:cover;"></span>
-                <span class="HeroImage HeroImagePlaceholder js-heroImageLowResPlaceholder"></span> <span class="HeroOverlay" style="background-image:url(${image});background-repeat: no-repeat;background-size: auto;" ></span>
-                
-                `
-            );
               
             $countryHeader.append(` <ul class="LinkTrail">
                                             <li> <a href="/Home/Index"
@@ -156,7 +149,7 @@ ${workPermit}
                     console.log("sasa", value);
                     $(".universityList").append(
                         `
-			                <li> <a href="/University/Detail/${value.id}" title=""> <span>${value.enName}</span> </a> (${value.studentCount} ${student}) </li>
+			                
 
 
 														`

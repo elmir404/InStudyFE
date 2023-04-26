@@ -115,7 +115,7 @@
 
                         if (i < 10) {
                             $countryMenu.append(`
-                                                <li class="SubSectionContentItem"> <a class="ContentItemLink js-ContentItemLink" href="/Country/Detail/${value.id}" title="${name}">${name}</a> </li>
+                                                <li class="SubSectionContentItem"> <a class="ContentItemLink js-ContentItemLink" href="/Country/Detail?countryId=${value.id}" title="${name}">${name}</a> </li>
 
 `
                             )
@@ -272,7 +272,7 @@
 
 
                             $universityMenu.append(`
-                                                <li class="SubSectionContentItem"> <a class="ContentItemLink js-ContentItemLink" href="/University/Detail/${value.id}" title="${name}">${name}</a> </li>
+                                                <li class="SubSectionContentItem"> <a class="ContentItemLink js-ContentItemLink" href="/University/Detail?uniId=${value.id}" title="${name}">${name}</a> </li>
 
 `
                             );
@@ -317,16 +317,16 @@
                         
 
                         $disciplinesMenu.append(`
-                                                <li class="SubSectionContentItem"> <a class="ContentItemLink js-ContentItemLink" href="/Discipline/Detail/${value.id}" title="${name}">${name}</a> </li>
+                                                <li class="SubSectionContentItem"> <a class="ContentItemLink js-ContentItemLink" href="/Discipline/Detail?disId=${value.id}" title="${name}">${name}</a> </li>
 
 `
                         );
                         $("#disciplines").append(`
-                           <li data-clickable="clickable"> <a href="/Discipline/Detail/${value.id}" title="${name}">
-                            <img alt="image" style="width:100px !important;" class="text-center img-responsive" src="${image}">
+                           <li data-clickable="clickable"> <a href="/Discipline/Detail?disId=${value.id}" title="${name}">
+                            <img alt="image" style="width:37px !important;" class="text-center img-responsive" src="${image}">
 <span style="display:block;">${name}</span> </a> </li>
 
-`);
+`); 
                         $("#direction").append(`
                                                  <li class="Suggestion Link" data-position="0" onclick='searchDirection(this)' data-param-value="351" data-param-name="discipline_ids">${name}</li>
 
@@ -576,7 +576,7 @@
                                             <a href="/Blog/Detail/${value.id}" title="${name}">
                                             ${name}
                                      </a>
-                                <span>${description.slice(0,50)}
+                                <span>${description?.slice(0,50)}    
                                         </span> </article>
                                `
 

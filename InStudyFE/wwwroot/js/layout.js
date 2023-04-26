@@ -5,7 +5,7 @@
         $(`.apply`).html(`<a href="/Apply" class="SectionNavigationLink js-SectionNavigationLink"><i class="SectionNavigationIcon lnr-paper-plane"></i>  <span class="SectionNavigationLabel">Müraciət</span> </a>`);
         $(`.goStudy`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-archery"></i> <span class="SectionNavigationLabel">Tehsil al</span> </a>`);
         $(`#goStudyHeader`).html(`Müraciət üçün məsləhətlər`);
-        $(`#programInput1`).attr(`placeholder`,`Proqram`);
+        $(`#programInput1`).attr(`placeholder`,`Dərəcə növü`);
         $(`#countryInput`).attr(`placeholder`, `Ölkə`);
         $(`#directionInput`).attr(`placeholder`, `İstiqamət`);
         $(`#exploreHeader`).html(`Araşdırın`);
@@ -23,7 +23,7 @@
         $(`.apply`).html(`<a href="/Apply" class="SectionNavigationLink js-SectionNavigationLink"><i class="SectionNavigationIcon lnr-paper-plane"></i>  <span class="SectionNavigationLabel">Apply</span> </a>`);
         $(`.goStudy`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-archery"></i> <span class="SectionNavigationLabel">Go Study</span> </a>`);
         $(`#goStudyHeader`).html(`Tips to apply`);
-        $(`#programInput1`).attr(`placeholder`, `Program`);
+        $(`#programInput1`).attr(`placeholder`, `Degree Type`);
         $(`#countryInput`).attr(`placeholder`,`Сountry`);
         $(`#directionInput`).attr(`placeholder`, `Direction`);
         $(`#exploreHeader`).html(`Explore`);
@@ -42,7 +42,7 @@
         $(`.apply`).html(`<a href="/Apply" class="SectionNavigationLink js-SectionNavigationLink"><i class="SectionNavigationIcon lnr-paper-plane"></i>  <span class="SectionNavigationLabel">Применять</span> </a>`);
         $(`.goStudy`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-archery"></i> <span class="SectionNavigationLabel"> Иди учись</span> </a>`);
         $(`#goStudyHeader`).html(`Советы по применению`);
-        $(`#programInput1`).attr(`placeholder`,`Программа`);
+        $(`#programInput1`).attr(`placeholder`,`Тип степени`);
         $(`#countryInput`).attr(`placeholder`,`Страна`);
         $(`#directionInput`).attr(`placeholder`,`Направление`);
         $(`#exploreHeader`).html(`Исследовать`);

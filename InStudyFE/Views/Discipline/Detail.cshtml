@@ -1,5 +1,67 @@
-﻿ @section Css{
+﻿@model GetDirectionDto
+@{
+    var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
+}
+@section Css{
+    
      <style>
+
+        body {
+            background-color: #edf3f6;
+        }
+        body #galactus .NarrowWrapper {
+            background-color: #fff;
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 0;
+        }
+          @@media (min-width: 1025px){
+            body #galactus .NarrowWrapper {
+                margin: 3rem auto 0;
+            }
+          }
+       
+     
+
+#SubdisciplinesList {
+    padding: 1rem 0;
+}
+   @@media (min-width: 1025px){
+       #SubdisciplinesList {
+    padding: 4rem 4rem;
+     }
+   }
+
+
+            #SubdisciplinesList .Specialisations {
+                font-size: 1rem;
+                font-weight: 700;
+                line-height: 1.5rem;
+                margin: 0 0 2rem;
+            }
+        
+
+#SubdisciplinesList .SubDisciplinesList {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+        @@media (min-width: 1025px){
+             #SubdisciplinesList .SubDisciplinesList {
+            column-count: 3;
+        }
+        }
+#SubdisciplinesList .SubDisciplinesList li {
+    margin: 1rem 0 0;
+}
+
+                #SubdisciplinesList .SubDisciplinesList li a {
+                     color: #05293c; 
+                }
         @@media(min-width: 1025px){
     #HeroContainer .HeroContent {
         background: #247ba0cc;
@@ -62,7 +124,7 @@
 }
 @@media (min-width: 1025px){
 .ContentCard[data-v-6e0e8e37] {
-    flex: 0 0 calc(33.3% - 1rem);
+    flex: 0 0 calc(25% - 1rem);
 }}
         .StudyCoverWrapper[data-v-78fa3586] {
             min-height: 9.5rem;
@@ -214,7 +276,22 @@
                 <div class="colblock">
                     <div data-module=""
                         class="Module StudyPortals_Shared_Modules_Discipline_HeaderBase_HeaderBase StudyPortals_DistanceLearning_Modules_Discipline_Header_HeaderDistanceLearning">
-                        <div id="DisciplineHeader"> 
+                        <div id="DisciplineHeader">
+                        @if (culture == "en")
+                        {
+                            <img alt="image" style="width:100px !important;" class="text-center img-responsive" src="https://api.instudy.net/@Model.DirectionFiles[0].Path">
+                            <h1>@Model.EnName</h1>
+                        }
+                        else if (culture == "ru")
+                        {
+                            <img alt="image" style="width:100px !important;" class="text-center img-responsive" src="https://api.instudy.net/@Model.DirectionFiles[0].Path">
+                            <h1>@Model.RuName</h1>
+                        }
+                        else
+                        {
+                            <img alt="image" style="width:100px !important;" class="text-center img-responsive" src="https://api.instudy.net/@Model.DirectionFiles[0].Path">
+                            <h1>@Model.AzName</h1>
+                        }
                         </div>
                     </div>
                 </div>
@@ -227,7 +304,19 @@
                     <div data-module=""
                         class="Module StudyPortals_Shared_Modules_Discipline_DisciplineDescription_DisciplineDescription">
                         <article id="DisciplineDescription">
-                           
+                        @if (culture == "en")
+                        {
+                            @Html.Raw(@Model.EnDescription)
+                        }
+                        else if (culture == "ru")
+                        {
+
+                             @Html.Raw(@Model.RuDescription)
+                        }
+                        else
+                        {
+                              @Html.Raw(@Model.AzDescription)
+                        }
                             
                         </article>
                     </div>
@@ -238,21 +327,153 @@
             </div>
         </div>
 <section class="col1 WrappedContent no-vertical-padding">
+     @if(Model.Specialities.Count>0){
+        <div class="NarrowWrapper">
+             
+            <div data-module="" class="Module StudyPortals_Shared_Modules_SubdisciplinesList_SubdisciplinesList">
+                <section id="SubdisciplinesList">
+                          @if (culture == "en")
+                        {
+                            <h3 class="Specialisations">Specialisations within the field of @Model.EnName</h3>
+                        }
+                        else if (culture == "ru")
+                        {
+
+                            <h3 class="Specialisations">Специализации в области @Model.RuName</h3>
+                        }
+                        else
+                        {
+                            <h3 class="Specialisations">@Model.AzName sahəsində ixtisaslar</h3>
+                        }
+                        
+                        <ul id="specList" class="SubDisciplinesList">
+                            @foreach (var spec in Model.Specialities)
+                            {
+                                 @if (culture == "en")
+                        {
+                                    <li> <a href="/Faculty/Detail?facultyId=@spec.Id">@spec.EnName </a> </li>
+                        }
+                        else if (culture == "ru")
+                        {
+
+                                    <li> <a href="/Faculty/Detail?facultyId=@spec.Id">@spec.RuName </a> </li>
+                        }
+                        else
+                        {
+                                    <li> <a href="/Faculty/Detail?facultyId=@spec.Id">@spec.AzName </a> </li>
+                        }
+                            }
+                        </ul>
+                   
+                </section>
+            </div>
+        </div>
+        }
+
+         @if(Model.Universities.Count>0){
     <div class="colblock no-vertical-margin">
         <div data-module=""
              class="Module StudyPortals_Shared_Modules_Country_StudyRecommendations_StudyRecommendations">
             <div>
-                <h3 id="StudyUniversity" class="Title"> </h3>
+                
+                        @if (culture == "en")
+                        {
+                            <h3 class="Specialisations">Universities</h3>
+                        }
+                        else if (culture == "ru")
+                        {
+
+                            <h3 class="Specialisations">Университеты</h3>
+                        }
+                        else
+                        {
+                            <h3 class="Specialisations">Universitetlər</h3>
+                        }
                 <div id="Recommendations" class="mdc-layout-grid">
                     <div>
                         <div data-v-71d9db58="" class="" identifier="account-page-programmes-recommendations">
                             <div data-v-60a22860="" class="js-StudyProgrammes" data-v-71d9db58="">
                                 <div data-v-60a22860="" id="universities" class="StudyCardGrid js-StudyCards">
+
+
+                                            @foreach (var uni in Model.Universities)
+                                            {
+                                                @if (culture == "en")
+                                                            {
+                                                            <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail?uniId=@uni.Id" target="_blank" class="ContentCard js-studyCard">
+                                                                <div data-v-78fa3586="" data-v-6e0e8e37="">
+                                                                    <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="https://api.instudy.net/@uni.UniversityFiles[0]?.Path" loading="lazy" width="288" height="152"></div>
+                                                                </div>
+                                                                <div data-v-6e0e8e37="">
+                                                                    <div data-v-6e0e8e37="" class="BestfitWishlist">
+                                                                    </div>
+                                                                    <div data-v-6e0e8e37="" class="OrganisationTitle">
+                                                                        <h3 data-v-6e0e8e37="" class="StudyTitle">@uni.EnName</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div data-v-6e0e8e37="" class="OrganisationInformation">
+                                                                    <div data-v-6e0e8e37="" class="NameLocation">
+                                                                        <div data-v-6e0e8e37="" class="Name"></div>
+                                                                        <div data-v-6e0e8e37="" class="Location">@uni.Address</div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                            }
+                                                            else if (culture == "ru")
+                                                            {
+
+                                                    <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail?uniId=@uni." target="_blank" class="ContentCard js-studyCard">
+                                                        <div data-v-78fa3586="" data-v-6e0e8e37="">
+                                                            <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="https://api.instudy.net/@uni.UniversityFiles[0]?.Path" loading="lazy" width="288" height="152"></div>
+                                                        </div>
+                                                        <div data-v-6e0e8e37="">
+                                                            <div data-v-6e0e8e37="" class="BestfitWishlist">
+                                                            </div>
+                                                            <div data-v-6e0e8e37="" class="OrganisationTitle">
+                                                                <h3 data-v-6e0e8e37="" class="StudyTitle">@uni.RuName</h3>
+                                                            </div>
+                                                        </div>
+                                                        <div data-v-6e0e8e37="" class="OrganisationInformation">
+                                                            <div data-v-6e0e8e37="" class="NameLocation">
+                                                                <div data-v-6e0e8e37="" class="Name"></div>
+                                                                <div data-v-6e0e8e37="" class="Location">@uni.Address</div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                            }
+                                                            else
+                                                            {
+                                                                <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail?uniId=@uni.Id" target="_blank" class="ContentCard js-studyCard">
+                                                                    <div data-v-78fa3586="" data-v-6e0e8e37="">
+                                                                        <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="https://api.instudy.net/@uni.UniversityFiles[0]?.Path" loading="lazy" width="288" height="152"></div>
+                                                                    </div>
+                                                                    <div data-v-6e0e8e37="">
+                                                                        <div data-v-6e0e8e37="" class="BestfitWishlist">
+                                                                        </div>
+                                                                        <div data-v-6e0e8e37="" class="OrganisationTitle">
+                                                                            <h3 data-v-6e0e8e37="" class="StudyTitle">@uni.AzName</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div data-v-6e0e8e37="" class="OrganisationInformation">
+                                                                        <div data-v-6e0e8e37="" class="NameLocation">
+                                                                            <div data-v-6e0e8e37="" class="Name"></div>
+                                                                            <div data-v-6e0e8e37="" class="Location">@uni.Address</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            }
+
+                                               
+
+                                            }
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                  
+                    
+
                 <div class="Recommendations" data-identifier="carousel-recommendations"
                      data-recommendation-type="programmes" data-template="carousel" data-filter-countries="1"
                      data-page="country">
@@ -260,8 +481,9 @@
             </div>
         </div>
     </div>
+        }
 </section>
-
+      
 </div>
         @section Scripts{
             <script src="~/js/disciplines.js"></script>

@@ -371,9 +371,9 @@
                           @foreach (var country in Model.country)
                             {
                                 i++;
-                                @if(i<=5){
+                                @if(i<=10){
                                     <figure data-clickable="clickable">
-                                        <a href="/Country/Detail/@country.Id" title=" ">
+                                        <a href="/Country/Detail?countryId=@country.Id" title=" ">
                                             <span class="Picture" data-file-url="" data-title="">
                                                 <picture>
                                                     <source media="all and (max-width: 30em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
@@ -412,7 +412,7 @@
                                     </figure>
                                 }else{
                                      <figure class="hiddenCountry Hidden"data-clickable="clickable">
-                                        <a href="/Country/Detail/@country.Id" title=" ">
+                                        <a href="/Country/Detail?countryId=@country.Id" title=" ">
                                             <span class="Picture" data-file-url="" data-title="">
                                                 <picture>
                                                     <source media="all and (max-width: 30em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
@@ -517,8 +517,10 @@
         <div class="faq-section-detail colblock">
                 <div id="questionHeader" class="faq-section-detail-text">
                 </div>
-                <div class="faq-section-detail-accordion mt-5">
-                    <div class="accordion accordion-div mt-5" id="questionAcc">
+            </div>
+            <div class="faq-section-detail colblock">
+                <div class="faq-section-detail-accordion">
+                    <div class="accordion accordion-div" id="questionAcc">
 
                        
                     </div>

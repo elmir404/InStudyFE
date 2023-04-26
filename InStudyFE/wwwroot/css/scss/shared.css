@@ -536,7 +536,7 @@ button,input,option,select,textarea{
 }
 #Footer .BgBars .BgBarA {
     background: #532EBD;
-    flex: 1 0 40%;
+    flex: 1 0 20%;
     transform-origin: top left
 }
 #Footer .BgBars .BgBarB{
@@ -550,7 +550,7 @@ button,input,option,select,textarea{
     transform-origin:bottom left
 }
 #Footer .BgBars .BgBarD {
-    background: #A2EACB;
+    background: #532EBD;
     flex: 1 0 7.5%;
     transform-origin: bottom left
 }
@@ -698,13 +698,13 @@ button,input,option,select,textarea{
 @media (min-width:769px)and (max-width:1024px){
     #Footer #FooterMainInner>div{
         margin:0;
-        width:30%
+        width:25%
     }
 }
 @media (min-width:1025px){
     #Footer #FooterMainInner>div{
         margin:0;
-        width:30%
+        width:25%
     }
 }
 #Footer #FooterBranding{

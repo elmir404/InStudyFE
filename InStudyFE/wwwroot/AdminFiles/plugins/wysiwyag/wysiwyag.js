@@ -20,4 +20,10 @@ $(function (e) {
 	$('.content17').richText();
 	$('.content18').richText();
 	$('.content19').richText();
+	$('.content19').richText();
+	$('.content20').richText();
+	$('.content21').richText();
+	$('.content22').richText();
+	$('.content23').richText();
+	$('.content24').richText();
 });

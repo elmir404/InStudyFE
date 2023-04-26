@@ -3,6 +3,7 @@ using InStudyFE.Extensions;
 using InStudyFE.Helpers;
 using InStudyFE.Models;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -79,14 +80,14 @@ namespace InStudyFE.Controllers
 
                 var authProperties = new AuthenticationProperties
                 {
-                    IssuedUtc = DateTimeOffset.UtcNow,
-                    ExpiresUtc = DateTimeOffset.UtcNow.AddHours(1),
-                    IsPersistent = false
+                    AllowRefresh =true,
+                    ExpiresUtc = DateTime.Now.AddDays(1),
+                    IsPersistent = true
                 };
 
                 const string authenticationType = "Cookies";
-                var claimsIdentity = new ClaimsIdentity(claims, authenticationType);
-                await _contextAccessor.HttpContext.SignInAsync(authenticationType, new ClaimsPrincipal(claimsIdentity), authProperties);
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                await _contextAccessor.HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
                 return RedirectToAction("Index", "Home");
             }
             ModelState.AddModelError("Error", "Invalid username or password!");

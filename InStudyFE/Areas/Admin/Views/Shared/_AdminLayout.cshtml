@@ -40,6 +40,17 @@
         ul {
     list-style: disc;
 }
+table.dataTable {
+    clear: unset !important;
+    margin-top: unset !important;
+    margin-bottom: unset !important;
+    max-width: unset !important;
+    border-collapse: unset !important;
+    border-spacing: unset !important;
+}
+table.dataTable.nowrap th, table.dataTable.nowrap td {
+    white-space: unset !important;
+}
 </style>
 </head>
 
@@ -194,13 +205,13 @@
                                 </ul>
                             </li>
                             <li class="sub-category">
-                                <h3>Program</h3>
+                                <h3>Degree</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Program</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Degree</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="ProgramList" asp-controller="Program">Program List</a></li>
-                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddProgram" asp-controller="Program">Add Program</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="ProgramList" asp-controller="Program">Degree List</a></li>
+                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddProgram" asp-controller="Program">Add Degree</a></li>
                                 </ul>
                             </li>  
                             <li class="sub-category">
@@ -245,19 +256,7 @@
 
                                 </ul>
                             </li>  
-                            <li class="sub-category">
-                                <h3>Attendence</h3>
-                            </li>
-                            <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Attendence</span><i class="angle fe fe-chevron-right"></i></a>
-                                <ul class="slide-menu">
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="List" asp-controller="Attendence">Attendence List</a></li>
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddAttendence" asp-controller="Attendence">Add Attendence</a></li>
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="AttendenceTypeList" asp-controller="Attendence">Attendence Type List</a></li>
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddAttendenceType" asp-controller="Attendence">Add Attendence Type</a></li>
-
-                                </ul>
-                            </li> 
+                         
                             <li class="sub-category">
                                 <h3>Duration</h3>
                             </li>
@@ -512,6 +511,8 @@
         });
     });
         } );
+           
+
 </script>
     <!-- CUSTOM JS -->
           <script src="~/AdminFiles/js/custom.js"></script>

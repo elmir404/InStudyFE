@@ -38,7 +38,13 @@
 
 
 
-        ]
+        ],
+        columnDefs: [
+            { 'max-width': '100px', 'targets': 0 },
+            { 'max-width': '100px', 'targets': 1 },
+            { 'max-width': '100px', 'targets': 2 },
+            { 'max-width': '100px', 'targets': 3 }
+        ],
     });
     //$('#personal-datatable').DataTable({
     //    ajax: {

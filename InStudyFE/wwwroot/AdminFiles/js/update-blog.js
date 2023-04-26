@@ -57,7 +57,9 @@
                             <div class="row">
                                 <label class="col-md-3 form-label mb-4">About Upload :</label>
                                 <div class="col-md-9">
-                                    <input id="files" type="file" name="files" accept=".jpg, .png, image/jpeg, image/png" multiple>
+                                    <input id="files" type="file" name="files" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])"  accept=".jpg, .png, image/jpeg, image/png">
+                                                <img id="output" src="https://api.instudy.net/${data.data.blogFiles[0]?.path}" width="100" height="100">
+
                                 </div>
                             </div>
                         

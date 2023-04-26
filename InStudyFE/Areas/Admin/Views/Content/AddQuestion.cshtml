@@ -18,7 +18,7 @@
             <!-- ROW-1 OPEN -->
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="card">
+                    <form id="form" class="card">
                         <div class="card-header">
                             <div class="card-title">Add Question</div>
                         </div>
@@ -74,7 +74,7 @@
                             </div>
                             <!--End Row-->
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
             <!-- /ROW-1 CLOSED -->
@@ -84,4 +84,37 @@
 </div>
 @section Scripts{
     <script src="~/AdminFiles/js/question.js"></script>
+    <script>
+        $("#form :input").change(function () {
+
+            $("#form").data("changed", true);
+        });
+        var isClicked = false;
+        $('#addQuestion').on('click', function (evt) {
+            debugger;
+            isClicked = true;
+        });
+        debugger;
+
+        window.addEventListener("beforeunload", function (e) {
+            var confirmationMessage = 'It looks like you have been editing something. '
+                + 'If you leave before saving, your changes will be lost.';
+
+            (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+            debugger;
+            if ($("#form").data("changed") && isClicked == false) {
+
+                return confirmationMessage;
+
+            }
+
+            //Gecko + Webkit, Safari, Chrome etc.
+        });
+
+
+
+
+
+
+    </script>
 }

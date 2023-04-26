@@ -1,4 +1,8 @@
-﻿ @section Css{
+﻿@model CountryViewModel
+@{
+    var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
+} 
+@section Css{
     <link rel="stylesheet" href="~/css/scss/style3.css" />
     <link rel="stylesheet" href="~/css/contact.css" />
     <link rel="stylesheet"
@@ -12,8 +16,7 @@
     <style>
         @@media(min-width: 1025px){
     #HeroContainer .HeroContent {
-                background: #A2EACB;
-                opacity:0.7;
+                background: rgba(162, 234, 203,0.7);
     }
 }
 @@media(min-width: 769px){
@@ -77,7 +80,7 @@
 }
 @@media (min-width: 1025px){
 .ContentCard[data-v-6e0e8e37] {
-    flex: 0 0 calc(33.3% - 1rem);
+    flex: 0 0 calc(25% - 1rem);
 }}
         .StudyCoverWrapper[data-v-78fa3586] {
             min-height: 9.5rem;
@@ -317,6 +320,8 @@
     <section id="HeroContainer">
         <div class="HeroContainerHelper">
             <div id="HeroImage">
+                    <span class="HeroImage js-heroImage" style="background-image:url(https://api.instudy.net/@Model.country.CountryFiles[0].Path);background-repeat: no-repeat;background-size:cover;"></span>
+                    <span class="HeroImage HeroImagePlaceholder js-heroImageLowResPlaceholder"></span> <span class="HeroOverlay" style="background-image:url(https://api.instudy.net/@Model.country.CountryFiles[0].Path);background-repeat: no-repeat;background-size: auto;"></span>
             </div>
 
             <div class="HeroContentWrapper">
@@ -325,10 +330,24 @@
                     <section class="HeroBackground"></section>
                     <section class="HeroContent">
                         <div id="countryImage" class="HeroImageSources js-heroImageSources">
+                             
                         </div>
                         <div class="">
                             <div class="HeroTextContent">
                                 <section id="CountryHeader" data-level="master">
+                                      @if (culture == "en")
+                                    {
+                                        <h1>@Model.country.EnName</h1> 
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                         <h1>@Model.country.RuName</h1> 
+                                    }
+                                    else
+                                    {
+                                         <h1>@Model.country.AzName</h1> 
+                                    }
                                 </section>
                             </div>
                         </div>
@@ -420,6 +439,19 @@
 
             <div data-module="Country:study_in" id="StudyIn" style="padding: 20px;" class="StudyIn Module StudyPortals_Shared_Modules_Country_StudyIn_StudyIn js-contentSwitchable js-content-study">
                 <div class="StudyIn">
+                      @if (culture == "en")
+                                    {
+                                       @Html.Raw(@Model.country.EnStudy)
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                          @Html.Raw(@Model.country.RuStudy)
+                                    }
+                                    else
+                                    {
+                                          @Html.Raw(@Model.country.AzStudy)
+                                    }
                 </div>
             </div>
             <div class="ToggleButton js-contentButtons" data-id="living"><span class="ToggleButtonTitle">Living</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
@@ -427,13 +459,40 @@
                 <hr>
             </div>
             <div data-module="Country:living" id="Living" style="padding: 20px;" class="Living Module StudyPortals_Shared_Modules_Country_Living_Living js-contentSwitchable js-content-living Hidden">
+                 @if (culture == "en")
+                                    {
+                                       @Html.Raw(@Model.country.EnLiving)
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                          @Html.Raw(@Model.country.RuLiving)
+                                    }
+                                    else
+                                    {
+                                          @Html.Raw(@Model.country.AzLiving)
+                                    }
             </div>
             <div class="ToggleButton js-contentButtons" data-id="about"><span class="ToggleButtonTitle">About</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
             <div class="LineWrapper js-content-about">
                 <hr>
             </div>
             <div data-module="Country:about" id="About" style="padding: 20px;" class="About Module StudyPortals_Shared_Modules_Country_About_About js-contentSwitchable js-content-about Hidden">
-                <div class="About">  </div>
+                <div class="About"> 
+                    @if (culture == "en")
+                                    {
+                                       @Html.Raw(@Model.country.EnAbout)
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                          @Html.Raw(@Model.country.RuAbout)
+                                    }
+                                    else
+                                    {
+                                          @Html.Raw(@Model.country.AzAbout)
+                                    }
+                    </div>
             </div>
             <div class="ToggleButton js-contentButtons" style="padding: 20px;" data-id="institutes"><span class="ToggleButtonTitle">Universities</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
             <div class="LineWrapper js-content-institutes">
@@ -442,6 +501,23 @@
             <div data-module="Country:institutes" id="Universities" style="padding: 20px;" class="Universities Module StudyPortals_Shared_Modules_Country_Institutes_Institutes js-contentSwitchable js-content-institutes Hidden">
                 <div class="CountryStudies">
                     <ul class="universityList Content">
+                          @foreach (var uni in Model.country.Universities)
+                                    {
+                                          @if (culture == "en")
+                                    {
+                                        <li> <a href="/University/Detail?uniId=@uni.Id" title=""> <span>@uni.EnName</span> </a> </li>
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                        <li> <a href="/University/Detail?uniId=@uni.Id" title=""> <span>@uni.RuName</span> </a> </li>
+
+                                    }
+                                    else
+                                    {
+                                         <li> <a href="/University/Detail?uniId=@uni.Id" title=""> <span>@uni.AzName</span> </a> </li>
+                                    }
+                                    }
                     </ul>
                 </div>
             </div>
@@ -450,14 +526,42 @@
                 <hr>
             </div>
             <div data-module="Country:visa" id="Visa" style="padding: 20px;" class="Visa Module StudyPortals_Shared_Modules_Country_Visa_Visa js-contentSwitchable js-content-visa Hidden">
-                <article class="Visa"></article>
+                <article class="Visa">
+                    @if (culture == "en")
+                                    {
+                                       @Html.Raw(@Model.country.EnStudentVisa)
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                          @Html.Raw(@Model.country.RuStudentVisa)
+                                    }
+                                    else
+                                    {
+                                          @Html.Raw(@Model.country.AzStudentVisa)
+                                    }
+                </article>
             </div>
             <div class="ToggleButton js-contentButtons" style="padding: 20px;" data-id="work_permit"><span class="ToggleButtonTitle">Work permit</span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
             <div class="LineWrapper js-content-work_permit">
                 <hr>
             </div>
             <div data-module="Country:WorkPermitContent" id="Permit" style="padding: 20px;" class="Permit Module StudyPortals_Shared_Modules_Country_WorkPermitContent_WorkPermitContent js-contentSwitchable js-content-work_permit Hidden">
-                <section id="WorkPermitContent" class="WorkPermitContent"></section>
+                <section id="WorkPermitContent" class="WorkPermitContent">
+                    @if (culture == "en")
+                                    {
+                                       @Html.Raw(@Model.country.EnWorkPermit)
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                          @Html.Raw(@Model.country.RuWorkPermit)
+                                    }
+                                    else
+                                    {
+                                          @Html.Raw(@Model.country.AzWorkPermit)
+                                    }
+                </section>
             </div>
             <div class="ToggleButton js-contentButtons" data-id="how_to_apply"><span class="ToggleButtonTitle">How to Apply<i class="lnricon lnr-sp-logo"></i></span><i class="ToggleButtonIcon lnr-chevron-down"></i></div>
             <div class="LineWrapper js-content-how_to_apply">
@@ -867,6 +971,19 @@
                             </h2>
                             <div id="collaps" class="accordion-collapse collapse acc-content show">
                                 <div class="StudyIn accordion-body">
+                                      @if (culture == "en")
+                                    {
+                                       @Html.Raw(@Model.country.EnStudy)
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                          @Html.Raw(@Model.country.RuStudy)
+                                    }
+                                    else
+                                    {
+                                          @Html.Raw(@Model.country.AzStudy)
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -876,6 +993,19 @@
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse acc-content collapse">
                                 <div class="Living accordion-body">
+                                      @if (culture == "en")
+                                    {
+                                       @Html.Raw(@Model.country.EnLiving)
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                          @Html.Raw(@Model.country.RuLiving)
+                                    }
+                                    else
+                                    {
+                                          @Html.Raw(@Model.country.AzLiving)
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -886,7 +1016,21 @@
 
                             </h2>
                             <div id="collapseThree" class="accordion-collapse acc-content collapse">
-                                <div class="About accordion-body"> </div>
+                                <div class="About accordion-body"> 
+                                      @if (culture == "en")
+                                    {
+                                       @Html.Raw(@Model.country.EnAbout)
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                          @Html.Raw(@Model.country.RuAbout)
+                                    }
+                                    else
+                                    {
+                                          @Html.Raw(@Model.country.AzAbout)
+                                    }
+                                </div>
                             </div>
                         </div>
                         <div class="accordion-item show">
@@ -897,6 +1041,23 @@
                             </h2>
                             <div id="collapseThree" class="accordion-collapse acc-content collapse">
                                 <div class="CountryStudies accordion-body">
+                                    @foreach (var uni in Model.country.Universities)
+                                    {
+                                          @if (culture == "en")
+                                    {
+                                        <li> <a href="/University/Detail?uniId=@uni.Id" title=""> <span>@uni.EnName</span> </a> </li>
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                        <li> <a href="/University/Detail?uniId=@uni.Id" title=""> <span>@uni.RuName</span> </a> </li>
+
+                                    }
+                                    else
+                                    {
+                                         <li> <a href="/University/Detail?uniId=@uni.Id" title=""> <span>@uni.AzName</span> </a> </li>
+                                    }
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -908,6 +1069,19 @@
                             </h2>
                             <div id="collapseThree" class="accordion-collapse acc-content collapse">
                                 <div class="Visa accordion-body">
+                                      @if (culture == "en")
+                                    {
+                                       @Html.Raw(@Model.country.EnStudentVisa)
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                          @Html.Raw(@Model.country.RuStudentVisa)
+                                    }
+                                    else
+                                    {
+                                          @Html.Raw(@Model.country.AzStudentVisa)
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -919,6 +1093,19 @@
                             </h2>
                             <div id="collapseThree" class="accordion-collapse acc-content collapse">
                                 <div class="WorkPermitContent accordion-body">
+                                      @if (culture == "en")
+                                    {
+                                       @Html.Raw(@Model.country.EnWorkPermit)
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                          @Html.Raw(@Model.country.RuWorkPermit)
+                                    }
+                                    else
+                                    {
+                                          @Html.Raw(@Model.country.AzWorkPermit)
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -1330,6 +1517,79 @@
                             <div data-v-71d9db58="" class="" identifier="account-page-programmes-recommendations">
                                 <div data-v-60a22860="" class="js-StudyProgrammes" data-v-71d9db58="">
                                     <div data-v-60a22860="" id="universities" class="StudyCardGrid js-StudyCards">
+                                        @foreach (var university in Model.country.Universities)
+                                        {
+                                              @if (culture == "en")
+                                    {
+                                       <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail?uniId=@university.Id" target="_blank" class="ContentCard js-studyCard">
+                                <div data-v-78fa3586="" data-v-6e0e8e37="">
+                                   <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="https://api.instudy.net/@university.UniversityFiles[0].Path" loading="lazy" width="288" height="152"></div>
+                                </div>
+                                <div data-v-6e0e8e37="">
+                                   <div data-v-6e0e8e37="" class="BestfitWishlist">
+                     
+                      
+                                   </div>
+                                   <div data-v-6e0e8e37="" class="OrganisationTitle">
+                                      <h3 data-v-6e0e8e37="" class="StudyTitle">@university.EnName</h3>
+                                   </div>
+                                </div>
+                                <div data-v-6e0e8e37="" class="OrganisationInformation">
+                                   <div data-v-6e0e8e37="" class="NameLocation">
+                                      <div data-v-6e0e8e37="" class="Name"></div>
+                                      <div data-v-6e0e8e37="" class="Location">@Model.country.EnName</div>
+                                   </div>
+                                </div>
+                             </a>
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                           <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail?uniId=@university.Id" target="_blank" class="ContentCard js-studyCard">
+                                <div data-v-78fa3586="" data-v-6e0e8e37="">
+                                   <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="https://api.instudy.net/@university.UniversityFiles[0].Path" loading="lazy" width="288" height="152"></div>
+                                </div>
+                                <div data-v-6e0e8e37="">
+                                   <div data-v-6e0e8e37="" class="BestfitWishlist">
+                     
+                      
+                                   </div>
+                                   <div data-v-6e0e8e37="" class="OrganisationTitle">
+                                      <h3 data-v-6e0e8e37="" class="StudyTitle">@university.RuName</h3>
+                                   </div>
+                                </div>
+                                <div data-v-6e0e8e37="" class="OrganisationInformation">
+                                   <div data-v-6e0e8e37="" class="NameLocation">
+                                      <div data-v-6e0e8e37="" class="Name"></div>
+                                      <div data-v-6e0e8e37="" class="Location">@Model.country.RuName</div>
+                                   </div>
+                                </div>
+                             </a>
+                                    }
+                                    else
+                                    {
+                                           <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail?uniId=@university.Id" target="_blank" class="ContentCard js-studyCard">
+                                <div data-v-78fa3586="" data-v-6e0e8e37="">
+                                   <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="https://api.instudy.net/@university.UniversityFiles[0].Path" loading="lazy" width="288" height="152"></div>
+                                </div>
+                                <div data-v-6e0e8e37="">
+                                   <div data-v-6e0e8e37="" class="BestfitWishlist">
+                     
+                      
+                                   </div>
+                                   <div data-v-6e0e8e37="" class="OrganisationTitle">
+                                      <h3 data-v-6e0e8e37="" class="StudyTitle">@university.AzName</h3>
+                                   </div>
+                                </div>
+                                <div data-v-6e0e8e37="" class="OrganisationInformation">
+                                   <div data-v-6e0e8e37="" class="NameLocation">
+                                      <div data-v-6e0e8e37="" class="Name"></div>
+                                      <div data-v-6e0e8e37="" class="Location">@Model.country.AzName</div>
+                                   </div>
+                                </div>
+                             </a>
+                                    }
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -1427,7 +1687,7 @@
         </script>
         <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
 	<script>
-		
+		const $lang = localStorage.getItem('lang');
 		$.ajax({
 			type: 'GET',
 			headers: {
@@ -1441,11 +1701,22 @@
 				var html = [];
 				$.each(
 					data.data, function (i, value) {
+						  if ($lang == 'AZ') {
+                            var name = value?.azName
+
+                        }
+                        else if ($lang == 'EN') {
+                            var name = value?.enName
+
+                        } else {
+                            var name = value?.ruName;
+
+                        }
 						html.push(
 							`
-																	<option value="${value.id}">${value.enName}</option>
+																			<option value="${value.id}">${name}</option>
 
-																 `
+																		 `
 						)
 
 					}
@@ -1461,18 +1732,29 @@
 				'Access-Control-Allow-Origin': '*',
 
 			},
-			url: `https://api.instudy.net/api/Country/GetActiveCountries`,
+			url: `https://api.instudy.net/api/Country/GetCountriesIdName`,
 
 			success: function (data) {
 				var html = [];
 				$.each(
 					data.data, function (i, value) {
+						  if ($lang == 'AZ') {
+                            var name = value?.azName
+
+                        }
+                        else if ($lang == 'EN') {
+                            var name = value?.enName
+
+                        } else {
+                            var name = value?.ruName;
+
+                        }
 						html.push(
 							`
-																			<option value="${value.id}">${value.enName}</option>
+																			<option value="${value.id}">${name}</option>
 
 																		 `
-						);
+						)
 
 						$('.requestStudentCountry').append(`<option value="${value.id}">${value.enName}</option>`);
 					}
@@ -1495,11 +1777,22 @@
 				var html = [];
 				$.each(
 					data.data, function (i, value) {
+						  if ($lang == 'AZ') {
+                            var name = value?.azName
+
+                        }
+                        else if ($lang == 'EN') {
+                            var name = value?.enName
+
+                        } else {
+                            var name = value?.ruName;
+
+                        }
 						html.push(
 							`
-																	<option value="${value.id}">${value.ruName}</option>
+																			<option value="${value.id}">${name}</option>
 
-																 `
+																		 `
 						)
 
 					}

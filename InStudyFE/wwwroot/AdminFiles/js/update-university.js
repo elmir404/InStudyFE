@@ -275,43 +275,6 @@
                                     <input type="text" id="uniAdrress" value="${data?.data?.address}" class="form-control">
                                 </div>
                             </div>
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Map Adress :</label>
-                                <div class="col-md-9">
-                                    <input type="text" id="uniMapAdrress" value="${data?.data?.mapAdrress}" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Student Count :</label>
-                                <div class="col-md-9">
-                                    <input type="number" id="stCount" value="${data?.data?.studentCount}" class="form-control">
-                                </div>
-                            </div> 
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Academic Staff :</label>
-                                <div class="col-md-9">
-                                    <input type="number" id="acdmStaff" value="${data?.data?.academicStaff}" class="form-control">
-                                </div>
-                            </div> 
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Start Date :</label>
-                                <div class="col-md-9">
-                                    <input type="datetime-local" id="startDate" value="${data?.data?.startDate}" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Apply Date :</label>
-                                <div class="col-md-9">
-                                    <input type="datetime-local" id="applyDate" value="${data?.data?.applyDate}" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Rank :</label>
-                                <div class="col-md-9">
-                                    <input type="number" id="rank" value="${data?.data?.rank}" class="form-control">
-                                </div>
-                            </div>
-
                             <!-- Row -->
                             <div class="row">
                                 <label class="col-md-3 form-label mb-4">Az Description :</label>
@@ -367,7 +330,13 @@
                                         <textarea class="content9" id="enMaster" name="example">${data?.data?.enMaster}</textarea>
                                 </div>
                             </div>
-                          
+                           <div class="row">
+                                        <label class="col-md-3 form-label mb-4">File Upload :</label>
+                                        <div class="col-md-9">
+                                             <input id="files" type="file" name="files" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])"  accept=".jpg, .png, image/jpeg, image/png">
+                                      <img id="output" src="https://api.instudy.net/${data.data.universityFiles[0]?.path}" width="100" height="100">
+                                        </div>
+                                    </div>
                            
                         
                         `

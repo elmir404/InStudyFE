@@ -89,6 +89,26 @@
 
     //});
     //getBlogs();
+    $("#excelButton").click(function () {
+        $.ajax({
+            type: "POST",
+            url: 'https://api.instudy.net/api/StudentRequest/ExportToExcel',
+           
+           
+           
+            complete: function (response) {
+                if (response.status == 200) {
+                    $(`#excelLink`).html(`<a href="https://api.instudy.net/${response.responseJSON.message}" class="btn btn-success mb-4 data-table-btn" rel="nofollow">Download Here</a>`);
+                }
+                else {
+                    alert("error")
+                }
+
+            },
+        });
+
+
+    });
 });
 function Delete(message) {
     Swal.fire({

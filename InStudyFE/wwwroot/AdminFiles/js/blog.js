@@ -4,6 +4,7 @@
             url: 'https://api.instudy.net/api/Blogs/GetActiveBlogs',
             dataSrc: 'data'
         },
+        autoWidth: false,
         columns: [
             {
                 data: 'blogFiles', render: function (data, type, row, meta) {
@@ -46,6 +47,10 @@
 
 
 
+        ],
+        columnDefs: [
+            { width: '10%', targets: [0,1, 2,3,4] },
+            
         ]
     });
     $("#addBlog").click(function () {

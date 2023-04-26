@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 
@@ -11,7 +12,7 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(conf =>
 {
-    conf.IdleTimeout = TimeSpan.FromHours(1);
+    conf.IdleTimeout = TimeSpan.FromDays(1);
     conf.Cookie.HttpOnly = false;
     conf.Cookie.IsEssential = true;
     conf.Cookie.SameSite = SameSiteMode.None;
@@ -21,11 +22,15 @@ builder.Services.AddSession(conf =>
 #endregion
 builder.Services.AddAuthentication(options =>
 {
+    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 }).AddCookie(options =>
 {
     options.LoginPath = "/Account/ComingSoon";
     options.LogoutPath = "/auth/Logout";
+    options.Cookie.Name = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.ExpireTimeSpan = TimeSpan.FromDays(1);
 });
 builder.Services.AddHttpClient("InStudy", c =>
 {

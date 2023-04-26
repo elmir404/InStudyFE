@@ -335,7 +335,9 @@
     font-size:1rem;
     font-weight:400;
     line-height:1.5rem;
-    transition:none!important
+    transition:none!important;
+    height:140px;
+     
 }
 #DisciplineSpotlight ul li a .DisciplineIcons{
     display:block;
@@ -345,10 +347,10 @@
 #DisciplineSpotlight ul li:hover {
     background-color: #A2EACB
 }
-#DisciplineSpotlight ul li:hover a{
-    color:#edf3f6;
-    text-decoration:none
-}
+    #DisciplineSpotlight ul li:hover a {
+        color: #05293c;
+        text-decoration: none
+    }
 #DisciplineSpotlight ul li:hover a .DisciplineIcons{
     color:#edf3f6
 }
