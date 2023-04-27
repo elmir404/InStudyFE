@@ -1,13 +1,15 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.IdentityModel.Tokens;
 using System.Globalization;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddViewLocalization();
 builder.Services.AddLocalization(option => { option.ResourcesPath = "Resources"; });
-builder.Services.AddHttpContextAccessor();
+//builder.Services.AddHttpContextAccessor();
 #region Session
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(conf =>
@@ -20,18 +22,35 @@ builder.Services.AddSession(conf =>
 
 });
 #endregion
+
 builder.Services.AddAuthentication(options =>
 {
-    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-}).AddCookie(options =>
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(token =>
 {
-    options.LoginPath = "/Account/ComingSoon";
-    options.LogoutPath = "/auth/Logout";
-    options.Cookie.Name = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.ExpireTimeSpan = TimeSpan.FromDays(1);
+    token.RequireHttpsMetadata = false;
+    token.SaveToken = true;
+    token.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        //Same Secret key will be used while creating the token
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("toogookeytoogookeytoogookey")),
+        ValidateIssuer = true,
+        //Usually, this is your application base URL
+        ValidIssuer = "education",
+        ValidateAudience = true,
+        //Here, we are creating and using JWT within the same application.
+        //In this case, base URL is fine.
+        //If the JWT is created using a web service, then this would be the consumer URL.
+        ValidAudience = "education",
+        RequireExpirationTime = true,
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero
+    };
 });
+
+
 builder.Services.AddHttpClient("InStudy", c =>
 {
     c.BaseAddress = new Uri("https://api.instudy.net/");
@@ -50,9 +69,21 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseSession();
+
+app.Use(async (context, next) =>
+{
+    var JWToken = context.Request.Cookies["JWToken"];
+    if (!string.IsNullOrEmpty(JWToken))
+    {
+        context.Request.Headers.Add("Authorization", "Bearer " + JWToken);
+    }
+    
+    await next();
+});
+
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseSession();
 var supportedCultures = new[]
 {
     new CultureInfo("az"),

@@ -1,6 +1,4 @@
-﻿
-using InStudyFE.Extensions;
-using InStudyFE.Helpers;
+﻿using InStudyFE.Helpers;
 using InStudyFE.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -13,13 +11,9 @@ namespace InStudyFE.Controllers
     public class AccountController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
-        private readonly ISession _session;
-        private readonly IHttpContextAccessor _contextAccessor;
-        public AccountController(IHttpClientFactory httpClientFactory, IHttpContextAccessor httpContextAccessor)
+        public AccountController(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
-            _contextAccessor = httpContextAccessor;
-            _session = httpContextAccessor.HttpContext.Session;
         }
         [HttpGet]
         public IActionResult Login()
@@ -55,39 +49,41 @@ namespace InStudyFE.Controllers
 
             ////if (!string.IsNullOrEmpty(tokenResponse))
             {
-                _session.SetObject("token", tokenResponse);
+                //_session.SetObject("token", tokenResponse);
+
+                Response.Cookies.Append("JWToken", tokenResponse);
 
 
-                var handler = new JwtSecurityTokenHandler();
-                var jwtSecurityToken = handler.ReadJwtToken(tokenResponse);
-                var email = jwtSecurityToken.Claims.First(claim => claim.Type == "email").Value;
-                var role = jwtSecurityToken.Claims.FirstOrDefault(claim => claim.Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/role")?.Value;
-                var userName = jwtSecurityToken.Claims.FirstOrDefault(claim => claim.Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/userdata")?.Value;
-                var name = jwtSecurityToken.Claims.First(claim => claim.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name").Value;
-                var notBefore = jwtSecurityToken.Claims.First(claim => claim.Type == "nbf").Value;
-                var expDate = jwtSecurityToken.Claims.First(claim => claim.Type == "exp").Value;
-                var audience = jwtSecurityToken.Claims.First(claim => claim.Type == "aud").Value;
-                HttpContext.Response.Cookies.Append("user_token", tokenResponse);
+                //var handler = new JwtSecurityTokenHandler();
+                //var jwtSecurityToken = handler.ReadJwtToken(tokenResponse);
+                //var email = jwtSecurityToken.Claims.First(claim => claim.Type == "email").Value;
+                //var role = jwtSecurityToken.Claims.FirstOrDefault(claim => claim.Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/role")?.Value;
+                //var userName = jwtSecurityToken.Claims.FirstOrDefault(claim => claim.Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/userdata")?.Value;
+                //var name = jwtSecurityToken.Claims.First(claim => claim.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name").Value;
+                //var notBefore = jwtSecurityToken.Claims.First(claim => claim.Type == "nbf").Value;
+                //var expDate = jwtSecurityToken.Claims.First(claim => claim.Type == "exp").Value;
+                //var audience = jwtSecurityToken.Claims.First(claim => claim.Type == "aud").Value;
+                ////HttpContext.Response.Cookies.Append("user_token", tokenResponse);
 
-                if (role == null)
-                    role = "";
+                //if (role == null)
+                //    role = "";
 
-                var claims = new List<Claim>
-                {
+                //var claims = new List<Claim>
+                //{
 
-                 new Claim("role", role)
-                };
+                // new Claim("role", role)
+                //};
 
-                var authProperties = new AuthenticationProperties
-                {
-                    AllowRefresh =true,
-                    ExpiresUtc = DateTime.Now.AddDays(1),
-                    IsPersistent = true
-                };
+                //var authProperties = new AuthenticationProperties
+                //{
+                //    AllowRefresh =true,
+                //    ExpiresUtc = DateTime.Now.AddDays(1),
+                //    IsPersistent = true
+                //};
 
-                const string authenticationType = "Cookies";
-                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                await _contextAccessor.HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+                //const string authenticationType = "Cookies";
+                //var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                //await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
                 return RedirectToAction("Index", "Home");
             }
             ModelState.AddModelError("Error", "Invalid username or password!");
@@ -113,9 +109,11 @@ namespace InStudyFE.Controllers
         }
         public async Task<IActionResult> Logout()
         {
+            Response.Cookies.Delete("JWToken");
+
             var logout = new Helper(_httpClientFactory);
             var response = await logout.LogOutAsync();
-            await _contextAccessor.HttpContext.SignOutAsync();
+            //await HttpContext.SignOutAsync();
             return Ok(response);
         }
 

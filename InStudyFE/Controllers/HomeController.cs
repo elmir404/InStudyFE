@@ -1,16 +1,14 @@
-﻿using InStudyFE.Models;
-using Microsoft.AspNetCore.Authorization;
+﻿using InStudyFE.Extensions;
+using InStudyFE.Models;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.Diagnostics;
-using System.Net.Http;
 
 namespace InStudyFE.Controllers
 {
 
 
-    [Authorize]
+    [CustomAuthorizeAttribute]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -41,13 +39,13 @@ namespace InStudyFE.Controllers
             {
                 country = country.Result,
                 onboard = onboard.Result,
-                header=header.Result,
-                
+                header = header.Result,
+
             };
             return View(model);
         }
 
-        private async Task<List<GetCountryDto>> GetCountries (HttpClient client)
+        private async Task<List<GetCountryDto>> GetCountries(HttpClient client)
         {
             var response = await client.GetAsync("api/Country/GetRandomActiveCountries");
             var responseString = await response.Content.ReadAsStringAsync();

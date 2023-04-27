@@ -113,7 +113,49 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                         <!-- FULL-SCREEN -->
                                        
                                         <!-- NOTIFICATIONS -->
-                                       
+                                        <div class="dropdown  d-flex message">
+                                            <a class="nav-link icon text-center" id="notificationHead" data-bs-toggle="dropdown" aria-expanded="true">
+                                                <i class="fe fe-message-square"></i>
+                                               
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow" data-bs-popper="none">
+                                                <div class="drop-heading border-bottom">
+                                                    <div class="d-flex">
+                                                        <h6 class="mt-1 mb-0 fs-16 fw-semibold text-dark">
+                                                            You have 5
+                                                            Messages
+                                                        </h6>
+                                                        <div class="ms-auto">
+                                                            <a href="javascript:void(0)" class="text-muted p-0 fs-12">make all unread</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="message-menu message-menu-scroll ps">
+                                                    <a class="dropdown-item d-flex" href="chat.html">
+                                                        <span class="avatar avatar-md brround me-3 align-self-center cover-image" data-bs-image-src="../assets/images/users/1.jpg" style="background: url(&quot;../assets/images/users/1.jpg&quot;) center center;"></span>
+                                                        <div class="wd-90p">
+                                                            <div class="d-flex">
+                                                                <h5 class="mb-1">Peter Theil</h5>
+                                                                <small class="text-muted ms-auto text-end">
+                                                                    6:45 am
+                                                                </small>
+                                                            </div>
+                                                            <span>Commented on file Guest list....</span>
+                                                        </div>
+                                                    </a>
+                                                    
+                                                   
+                                                   
+
+                                                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div>
+                                                </div>
+                                                <div class="dropdown-divider m-0"></div>
+                                                <a href="/Admin/Request/RequestList" class="dropdown-item text-center p-3 text-muted">
+                                                    See all
+                                                    Messages
+                                                </a>
+                                            </div>
+                                        </div>
                                         <!-- MESSAGE-BOX -->
                                         <div class="dropdown d-flex header-settings">
                                             <a href="/Home/Index" class="nav-link icon">
@@ -477,7 +519,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
 
     <!-- INTERNAL File-Uploads Js-->
     <script src="~/AdminFiles/plugins/fancyuploder/jquery.ui.widget.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
     <!-- Perfect SCROLLBAR JS-->
     <script src="~/AdminFiles/plugins/p-scroll/perfect-scrollbar.js"></script>
     <script src="~/AdminFiles/plugins/p-scroll/pscroll.js"></script>
@@ -487,7 +529,34 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
     <!-- Color Theme js -->
     <script src="~/AdminFiles/js/themeColors.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const connection = new signalR.HubConnectionBuilder()
+                .withUrl("https://api.instudy.net/NotificationHub")
+  
+    .build();
 
+async function start() {
+    try {
+        await connection.start();
+        console.log("SignalR Connected.");
+    } catch (err) {
+        console.log(err);
+        setTimeout(start, 5000);
+    }
+};
+debugger;
+connection.on("ReceiveNotification", (user, message) => {
+    $("#notificationHead").append("<span class='pulse-danger'></span>");
+    
+    console.log("message",user);
+});
+connection.onclose(async () => {
+    await start();
+});
+
+// Start the connection.
+start();
+    </script>
     <!-- Sticky js -->
     <script src="~/AdminFiles/js/sticky.js"></script>
     <script src="~/AdminFiles/js/sticky.js"></script>

@@ -292,7 +292,7 @@
 
                                 $('#searchContent').append(`
   <li class="HoverEffect SearchResultItem">
-                              <a class="SearchStudyCard js-bestFitStudycard" href="/University/Detail/${value.id}" target="_blank" data-v-0363ab3a="">
+                              <a class="SearchStudyCard js-bestFitStudycard" href="/University/Detail?uniId=${value.id}" target="_blank" data-v-0363ab3a="">
                                  <article data-v-0363ab3a="">
                                     <header class="CardHeader" data-v-0363ab3a="">
                                        <h2 class="StudyName" data-v-0363ab3a="">${name}</h2>

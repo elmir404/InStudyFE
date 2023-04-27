@@ -1,4 +1,7 @@
-﻿@section Css{
+﻿@{
+    var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
+} 
+@section Css{
 	<link rel="stylesheet" href="~/css/contact.css">
 	<link rel="stylesheet"
 	  href="https://fonts.googleapis.com/css?family=PT+Sans|Rubik|Roboto+Condensed&amp;subset=cyrillic&amp;sort=popularity" />
@@ -131,7 +134,9 @@
 
 										<div class="form-group col-sm-4">
 											<label id="labelstcont" for="yourcontry"> Student Country</label>
-											<select class="form-select" id="requestStudentCountry" required>
+											            @if (culture == "en")
+                                    {
+                                        <select class="form-select" id="requestStudentCountry" required>
 												<option value="Afghanistan">Afghanistan</option>
 												<option value="Åland Islands">Åland Islands</option>
 												<option value="Albania">Albania</option>
@@ -375,7 +380,186 @@
 												<option value="Yemen">Yemen</option>
 												<option value="Zambia">Zambia</option>
 												<option value="Zimbabwe">Zimbabwe</option>
-											</select>
+							</select>
+                                    }
+                                    else if (culture == "ru")
+                                    {
+										<select class="form-select" id="requestStudentCountry" required>
+<option value="Афганистан">Афганистан</option>
+<option value="Аландские острова">Аландские острова</option>
+<option value="Албания">Албания</option>
+<option value="Алжир">Алжир</option>
+<option value="Американское Самоа">Американское Самоа</option>
+<option value="Андорра">Андорра</option>
+<option value="Ангола">Ангола</option>
+<option value="Ангилья">Ангилья</option>
+<option value="Антарктида">Антарктида</option>
+<option value="Антигуа и Барбуда">Антигуа и Барбуда</option>
+<option value="Аргентина">Аргентина</option>
+<option value="Аруба">Аруба</option>
+<option value="Австралия">Австралия</option>
+<option value="Австрия">Австрия</option>
+<option selected value="Азербайджан">Азербайджан</option>
+<option value="Багамы">Багамы</option>
+<option value="Бахрейн">Бахрейн</option>
+<option value="Бангладеш">Бангладеш</option>
+<option value="Барбадос">Барбадос</option>
+<option value="Беларусь">Беларусь</option>
+<option value="Бельгия">Бельгия</option>
+<option value="Белиз">Белиз</option>
+<option value="Бенин">Бенин</option>
+<option value="Бермуды">Бермуды</option>
+<option value="Бутан">Бутан</option>
+<option value="Боливия">Боливия</option>
+<option value="Босния и Герцеговина">Босния и Герцеговина</option>
+<option value="Ботсвана">Ботсвана</option>
+<option value="Остров Буве">Остров Буве</option>
+<option value="Бразилия">Бразилия</option>
+<option value="Британская территория в Индийском океане">Британская территория в Индийском океане</option>
+<option value="Бруней-Даруссалам">Бруней-Даруссалам</option>
+<option value="Болгария">Болгария</option>
+<option value="Буркина-Фасо">Буркина-Фасо</option>
+<option value="Бурунди">Бурунди</option>
+<option value="Камбоджа">Камбоджа</option>
+<option value="Камерун">Камерун</option>
+<option value="Канада">Канада</option>
+<option value="Кабо-Верде">Кабо-Верде</option>
+<option value="Каймановы острова">Каймановы острова</option>
+<option value="Центральноафриканская Республика">Центральноафриканская Республика</option>
+<option value="Чад">Чад</option>
+<option value="Чили">Чили</option>
+<option value="Китай">Китай</option>
+<option value="Остров Рождества">Остров Рождества</option>
+<option value="Кокосовые острова (Килинг)">Кокосовые острова (Килинг)</option>
+<option value="Колумбия">Колумбия</option>
+<option value="Коморские острова">Коморские острова</option>
+<option value="Конго">Конго</option>
+<option value="Конго, Демократическая Республика">Конго, Демократическая Республика</option>
+<option value="Острова Кука">Острова Кука</option>
+<option value="Коста-Рика">Коста-Рика</option>
+<option value="Кот-Д'Ивуар">Кот-Д'Ивуар</option>
+<option value="Хорватия">Хорватия</option>
+<option value="Куба">Куба</option>
+<option value="Кипр">Кипр</option>
+<option value="Чешская Республика">Чешская Республика</option>
+<option value="Дания">Дания</option>
+<option value="Джибути">Джибути</option>
+<option value="Доминика">Доминика</option>
+<option value="Доминиканская Республика">Доминиканская Республика</option>
+<option value="Эквадор">Эквадор</option>
+<option value="Египет">Египет</option>
+<option value="Сальвадор">Сальвадор</option>
+<option value="Экваториальная Гвинея">Экваториальная Гвинея</option>
+<option value="Эритрея">Эритрея</option>
+<option value="Эстония">Эстония</option>
+<option value="Эфиопия">Эфиопия</option>
+<option value="Фолклендские (Мальвинские) острова">Фолклендские (Мальвинские) острова</option>
+<option value="Фарерские острова">Фарерские острова</option>
+<option value="Фиджи">Фиджи</option>
+<option value="Финляндия">Финляндия</option>
+<option value="Франция">Франция</option>
+<option value="Французская Гвиана">Французская Гвиана</option>
+<option value="Французская Полинезия">Французская Полинезия</option>
+<option value="Южные территории Франции">Южные территории Франции</option>
+<option value="Габон">Габон</option>
+<option value="Гамбия">Гамбия</option>
+<option value="Грузия">Грузия</option>
+<option value="Германия">Германия</option>
+<option value="Гана">Гана</option>
+<option value="Гибралтар">Гибралтар</option>
+<option value="Греция">Греция</option>
+	</select>
+                        
+                                    }
+                                    else
+                                    {
+										   <select class="form-select" id="requestStudentCountry" required>
+														<option value="Əfqanıstan">Əfqanistan</option>
+														<option value="Aland adaları">Aland adaları</option>
+														<option value="Albania">Albaniya</option>
+														<option value="Algeria">Əlcəzair</option>
+														<option value="Amerikan Samoası">Amerika Samoası</option>
+														<option value="Andorra">Andorra</option>
+														<option value="Angola">Anqola</option>
+														<option value="Anguilla">Anguilla</option>
+														<option value="Antarctica">Antarktida</option>
+														<option value="Antiqua və Barbuda">Antiqua və Barbuda</option>
+														<option value="Argentina">Argentina</option>
+														<option value="Aruba">Aruba</option>
+														<option value="Australia">Avstraliya</option>
+														<option value="Austria">Avstriya</option>
+														<option selected value="Azerbaijan">Azərbaycan</option>
+														<option value="Bahamas">Baham adaları</option>
+														<option value="Bahrain">Bəhreyn</option>
+														<option value="Banqladeş">Banqladeş</option>
+														<option value="Barbados">Barbados</option>
+														<option value="Belarus">Belarus</option>
+														<option value="Belgium">Belçika</option>
+														<option value="Belize">Beliz</option>
+														<option value="Benin">Benin</option>
+														<option value="Bermuda">Bermud adaları</option>
+														<option value="Butan">Butan</option>
+														<option value="Bolivia">Boliviya</option>
+														<option value="Bosniya və Herseqovina">Bosniya və Herseqovina</option>
+														<option value="Botsvana">Botsvana</option>
+														<option value="Bouvet Island">Buvet Adası</option>
+														<option value="Brazil">Braziliya</option>
+														<option value="Britaniya Hind Okeanı Ərazisi">Britaniya Hind Okeanı Ərazisi</option>
+														<option value="Brunei Darussalam">Bruney Darussalam</option>
+														<option value="Bolqariya">Bolqarıstan</option>
+														<option value="Burkina Faso">Burkina Faso</option>
+														<option value="Burundi">Burundi</option>
+														<option value="Cambodia">Kamboca</option>
+														<option value="Cameroon">Kamerun</option>
+														<option value="Canada">Kanada</option>
+														<option value="Kabo Verde">Kabo Verde</option>
+														<option value="Kayman Adaları">Kayman Adaları</option>
+														<option value="Mərkəzi Afrika Respublikası">Mərkəzi Afrika Respublikası</option>
+														<option value="Chad">Çad</option>
+														<option value="Chile">Çili</option>
+														<option value="China">Çin</option>
+														<option value="Christmas Island">Milad adası</option>
+														<option value="Kokos (Kiling) Adaları">Kokos (Kiling) Adaları</option>
+														<option value="Kolumbiya">Kolumbiya</option>
+														<option value="Komorlar">Komorlar</option>
+														<option value="Konqo">Konqo</option>
+														<option value="Konqo, Demokratik Respublikası">Konqo, Demokratik Respublikası</option>
+														<option value="Kuk Adaları">Kuk Adaları</option>
+														<option value="Costa Rica">Kosta Rika</option>
+														<option value="Cote D'ivoire">Divuar sahili</option>
+														<option value="Croatia">Xorvatiya</option>
+														<option value="Cuba">Kuba</option>
+														<option value="Cyprus">Kipr</option>
+														<option value="Çexiya">Çexiya</option>
+														<option value="Danimarka">Danimarka</option>
+														<option value="Cibuti">Cibuti</option>
+														<option value="Dominica">Dominika</option>
+														<option value="Dominikan Respublikası">Dominikan Respublikası</option>
+														<option value="Ecuador">Ekvador</option>
+														<option value="Egypt">Misir</option>
+														<option value="El Salvador">El Salvador</option>
+														<option value="Equatorial Guinea">Ekvatorial Qvineya</option>
+														<option value="Eritrea">Eritrea</option>
+														<option value="Estonia">Estoniya</option>
+														<option value="Efiopiya">Efiopiya</option>
+														<option value="Folklend Adaları (Malvin adaları)">Folklend Adaları (Malvinas)</option>
+														<option value="Faroe Islands">Farer Adaları</option>
+														<option value="Fiji">Fici</option>
+														<option value="Finland">Finlandiya</option>
+														<option value="France">Fransa</option>
+														<option value="Fransız Qvianası">Fransız Qvianası</option>
+														<option value="Fransız Polinezyası">Fransız Polineziyası</option>
+														<option value="French Southern Territories">Fransız Cənub Əraziləri</option>
+														<option value="Qabon">Qabon</option>
+														<option value="Gambia">Qambiya</option>
+														<option value="Georgia">Gürcüstan</option>
+														<option value="Almaniya">Almaniya</option>
+														<option value="Ghana">Qana</option>
+														<option value="Gibraltar">Cəbəllütariq</option>
+														<option value="Greece">Yunanıstan</option>
+														<option value="Greenland">Qrenlandiya</option>
+							</select>
+                                    }
 											<div id="scValidation" class="invalid-feedback">
 												Please choose a country.
 											</div>
