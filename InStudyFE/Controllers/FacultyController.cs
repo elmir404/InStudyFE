@@ -15,23 +15,23 @@ namespace InStudyFE.Controllers
         {
             return View();
         }
-        public async Task<IActionResult> Detail(int facultyId)
+        public async Task<IActionResult> Detail(int disId)
         {
             var client = _httpClientFactory.CreateClient("InStudy");
 
-            var faculty = GetFaculty(client, facultyId);
+            var direction = GetDisciplines(client, disId);
 
 
-            await Task.WhenAll(faculty);
-
-            return View(faculty.Result);
+            await Task.WhenAll(direction);
+           
+            return View(direction.Result);
         }
-        private async Task<GetFacultyDto> GetFaculty(HttpClient client, int facultyId)
+        private async Task<GetDirectionDto> GetDisciplines(HttpClient client, int disId)
         {
-            var response = await client.GetAsync("api/Speciality/GetSpeciality/id?id=" + facultyId);
+            var response = await client.GetAsync("api/Direction/GetDirection?id=" + disId);
             var responseString = await response.Content.ReadAsStringAsync();
-            var result = JsonConvert.DeserializeObject<FacultyModel>(responseString);
-            var direction = result.data as GetFacultyDto;
+            var result = JsonConvert.DeserializeObject<DirectionModel>(responseString);
+            var direction = result.data as GetDirectionDto;
 
             return direction;
         }

@@ -49,7 +49,7 @@
                             var isSelected = false;
                             $.each(
                                 data.data.programs, function (p, pvalue) {
-                                    console.log(pvalue);
+                                   
                                     if (pvalue.id == value.id) {
                                         isSelected = true;
                                         debugger;
@@ -122,7 +122,7 @@
                                 var isSelected = false;
                             $.each(
                                 data.data.directions, function (p, pvalue) {
-                                    console.log(pvalue);
+                                   
                                     if (pvalue.id == value.id) {
                                         isSelected = true;
                                         debugger;
@@ -157,6 +157,7 @@
                 }
 
             });
+
             $.ajax({
                 type: 'GET',
                 headers: {
@@ -174,7 +175,7 @@
                                 var isSelected = false;
                             $.each(
                                 data.data.specialities, function (p, pvalue) {
-                                    console.log(pvalue);
+                                   
                                     if (pvalue.id == value.id) {
                                         isSelected = true;
                                         debugger;

@@ -122,27 +122,20 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                                 <div class="drop-heading border-bottom">
                                                     <div class="d-flex">
                                                         <h6 class="mt-1 mb-0 fs-16 fw-semibold text-dark">
-                                                            You have 5
+                                                            You have
                                                             Messages
                                                         </h6>
                                                         <div class="ms-auto">
-                                                            <a href="javascript:void(0)" class="text-muted p-0 fs-12">make all unread</a>
+                                                            @*<a href="javascript:void(0)" class="text-muted p-0 fs-12">make all unread</a>*@
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="message-menu message-menu-scroll ps">
-                                                    <a class="dropdown-item d-flex" href="chat.html">
-                                                        <span class="avatar avatar-md brround me-3 align-self-center cover-image" data-bs-image-src="../assets/images/users/1.jpg" style="background: url(&quot;../assets/images/users/1.jpg&quot;) center center;"></span>
-                                                        <div class="wd-90p">
-                                                            <div class="d-flex">
-                                                                <h5 class="mb-1">Peter Theil</h5>
-                                                                <small class="text-muted ms-auto text-end">
-                                                                    6:45 am
-                                                                </small>
-                                                            </div>
-                                                            <span>Commented on file Guest list....</span>
-                                                        </div>
-                                                    </a>
+                                                    <div id="notifications">
+                                                        
+                                                        
+                                                    </div>
+                                                   
                                                     
                                                    
                                                    
@@ -150,7 +143,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                                     <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div>
                                                 </div>
                                                 <div class="dropdown-divider m-0"></div>
-                                                <a href="/Admin/Request/RequestList" class="dropdown-item text-center p-3 text-muted">
+                                                <a asp-area="Admin" asp-action="NonSeedRequestList" asp-controller="Request" class="dropdown-item text-center p-3 text-muted">
                                                     See all
                                                     Messages
                                                 </a>
@@ -227,6 +220,16 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                       <li class="slide-item"><a href="/Country/Index">Country Page</a></li>
                                 </ul>
                             </li>
+                              <li class="sub-category">
+                                <h3>Faculty</h3>
+                            </li>
+                            <li class="slide">
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Faculty</span><i class="angle fe fe-chevron-right"></i></a>
+                                <ul class="slide-menu">
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="DirectionList" asp-controller="Direction">Faculty List</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddDirection" asp-controller="Direction">Add Faculty</a></li>
+                                </ul>
+                            </li>
                             <li class="sub-category">
                                 <h3>University</h3>
                             </li>
@@ -277,16 +280,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 </ul>
                             </li> 
 
-                            <li class="sub-category">
-                                <h3>Direction</h3>
-                            </li>
-                            <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Direction</span><i class="angle fe fe-chevron-right"></i></a>
-                                <ul class="slide-menu">
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="DirectionList" asp-controller="Direction">Direction List</a></li>
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddDirection" asp-controller="Direction">Add Direction</a></li>
-                                </ul>
-                            </li>
+                          
                              <li class="sub-category">
                                 <h3>Articles</h3>
                             </li>
@@ -319,7 +313,8 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                             <li class="slide">
                                 <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Student Requests</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="RequestList" asp-controller="Request">Requests</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="RequestList" asp-controller="Request">Requests</a></li> 
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="NonSeedRequestList" asp-controller="Request">Non Seed Requests</a></li>
                                 </ul>
                             </li> 
                              <li class="sub-category">
@@ -541,14 +536,26 @@ async function start() {
         console.log("SignalR Connected.");
     } catch (err) {
         console.log(err);
-        setTimeout(start, 5000);
+        setTimeout(start, 5000);                   
     }
 };
-debugger;
-connection.on("ReceiveNotification", (user, message) => {
+connection.on("ReceiveNotification", (id, user,description) => {
+    var desc=description.slice(0,20)+"...";
     $("#notificationHead").append("<span class='pulse-danger'></span>");
+    $("#notifications").append(`
+       <a class="dropdown-item d-flex" href="/Admin/Request/RequestDetail/${id}">
+                                                        <span class="avatar avatar-md brround me-3 align-self-center cover-image" data-bs-image-src="/images/users/1.jpg" style="background: url(&quot;../assets/images/users/1.jpg&quot;) center center;"></span>
+                                                        <div class="wd-90p">
+                                                            <div class="d-flex">
+                                                                <h5 class="mb-1">${user}</h5>
+                                                               
+                                                            </div>
+                                                            <span>${desc}</span>
+                                                        </div>
+                                                       </a>
+    `);
     
-    console.log("message",user);
+    console.log("message",user,message,description);
 });
 connection.onclose(async () => {
     await start();
@@ -579,6 +586,42 @@ start();
 
         });
     });
+                $.ajax({
+                    type: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    url: `https://api.instudy.net/api/StudentRequest/GetNonSeenStudentRequests`,
+
+                    success: function (data) {
+                        if(data.data.length>0){
+                            $("#notificationHead").append("<span class='pulse-danger'></span>");
+                        }
+                        $.each(         
+                            data.data, function (i, value) {
+                                var desc=value.description.slice(0,20)+"...";
+                                $(`#notifications`).append(`
+                               <a class="dropdown-item d-flex" href="/Admin/Request/RequestDetail/${value.id}">
+                                                        <span class="avatar avatar-md brround me-3 align-self-center cover-image" data-bs-image-src="/images/users/1.jpg" style="background: url(&quot;../assets/images/users/1.jpg&quot;) center center;"></span>
+                                                        <div class="wd-90p">
+                                                            <div class="d-flex">
+                                                                            <h5 class="mb-1">${value.name} ${value.surName}</h5>
+                                                               
+                                                            </div>
+                                                            <span>${desc}</span>
+                                                        </div>
+                                                       </a>
+
+
+            `
+                                );
+                            }
+                        )
+
+                    }
+
+                });
+          
         } );
            
 

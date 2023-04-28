@@ -34,6 +34,41 @@
 
         ]
     });
+    $('#nonseed-requests').DataTable({
+        ajax: {
+            url: 'https://api.instudy.net/api/StudentRequest/GetNonSeenStudentRequests',
+            dataSrc: 'data'
+        },
+        columns: [
+            {
+                data: 'name',
+            },
+            { data: 'email' },
+            { data: 'phone' },
+
+            
+            {
+                data: 'id', render: function (data, type, row, meta) {
+                    return `<div class="btn-list">
+                            <button onclick=Delete(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-danger">
+                                <span class="fe fe-trash-2"> </span>
+                            </button>
+ <button onclick=Edit(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-success">
+                                <i class="fe fe-eye"></i>
+                            </button>
+                        </div>
+                        `;
+
+
+
+                }
+            },
+
+
+
+
+        ]
+    });
     //var $messages = $('#messages');
     //function getBlogs() {
     //    $.ajax({
@@ -145,8 +180,7 @@ function Delete(message) {
 
 }
 function Edit(id) {
-
-    localStorage.setItem('requestId', id);
-    location.href = `/Admin/Request/RequestDetail`;
+    debugger;
+    location.href = `/Admin/Request/RequestDetail/${id}`;
 
 }

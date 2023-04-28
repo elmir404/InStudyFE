@@ -31,7 +31,7 @@
     if ($lang == 'AZ') {
         $countryHeader.html(`Seçilmiş ölkələr`);
         $universityHeader.html(`Seçilmiş universitetlər`);
-        $disciplinesHeader.html(`İstiqamətlər`);
+        $disciplinesHeader.html(`Fakultələr`);
         var $countryMore = `Daha çox ölkə`;
         $(".countryMore").html("Daha çox ölkə");
         var $countryFw=`Daha az ölkə`;
@@ -47,7 +47,7 @@
     else if ($lang == 'EN') {
         $countryHeader.html(`Popular countries`);
         $universityHeader.html(`Popular universities`);
-        $disciplinesHeader.html(`Discipliens`);
+        $disciplinesHeader.html(`Faculties`);
         var $countryMore = `More countries`;
         $(".countryMore").html("More countries");
        var  $countryFw =`Fewer countries`;
@@ -62,7 +62,7 @@
     } else {
         $countryHeader.html(`Популярные страны`);
         $universityHeader.html(`Популярные университеты`); 
-        $disciplinesHeader.html(`Дисциплины`);
+        $disciplinesHeader.html(`Факультеты`);
         $(".countryMore").html("Больше стран");
         var $countryMore =`Больше стран`;
         var $countryFw =`Меньше стран`;
@@ -317,12 +317,12 @@
                         
 
                         $disciplinesMenu.append(`
-                                                <li class="SubSectionContentItem"> <a class="ContentItemLink js-ContentItemLink" href="/Discipline/Detail?disId=${value.id}" title="${name}">${name}</a> </li>
+                                                <li class="SubSectionContentItem"> <a class="ContentItemLink js-ContentItemLink" href="/Faculty/Detail?disId=${value.id}" title="${name}">${name}</a> </li>
 
 `
                         );
                         $("#disciplines").append(`
-                           <li data-clickable="clickable"> <a href="/Discipline/Detail?disId=${value.id}" title="${name}">
+                           <li data-clickable="clickable"> <a href="/Faculty/Detail?disId=${value.id}" title="${name}">
                             <img alt="image" style="width:37px !important;" class="text-center img-responsive" src="${image}">
 <span style="display:block;">${name}</span> </a> </li>
 

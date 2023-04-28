@@ -33,7 +33,7 @@
                                     <div class="row">
                                         <label class="col-md-3 form-label mb-4">Direction</label>
                                         <div class="col-md-9 mb-4">
-                                            <select multiple="multiple" id="direction">
+                                            <select  multiple="multiple" id="direction">
                                             </select>
                                         </div>
                                     </div>
@@ -86,36 +86,44 @@
     <script src="~/AdminFiles/js/update-university.js"></script>
        
            <script>
-        var $selectedPrograms = $("#hiddenProgram").val();
-        console.log("hidden programsa", $selectedPrograms);
-        //$.ajax({
-        //    type: 'GET',
-        //    headers: {
-        //        'Content-Type': 'application/json',
-        //        'Access-Control-Allow-Origin': '*',
+        //function selectFunction() {
+        //           debugger;
+        //            var direction = $("#direction").val();
+        //            $("#speciality").empty();
 
-        //    },
-        //    url: `https://api.instudy.net/api/Speciality/GetSpecialities`,
-
-        //    success: function (data) {
-        //        var html =[];
-        //        $.each(
-        //            data.data, function (i, value) {
-        //                html.push(
-        //                    `
-        //                                            <option  value="${value.id}">${value.enName}</option>
-
-        //                                         `
-        //                )
-
+        //            var formData = new FormData();
+        //            for (var i = 0; i < direction.length; i++) {
+        //                formData.append('DirectionIds', direction[i]);
         //            }
-        //        )
-        //        $('#speciality').html(html.join('')).multipleSelect();
-        //    }
+        //    var html = [];
+        //    $.ajax({
+        //        type: "POST",
+        //        url: `https://api.instudy.net/api/Speciality/SearchSpeciality?currentPage=1&pageSize=100`,
+        //        data: formData,
+        //        processData: false,  // tell jQuery not to process the data
+        //        contentType: false,
+        //    }).done(function (response) {
+        //        if (response.data.dataCount > 0) {
+        //        $.each(
+        //            response?.data.value, function (i, value) {
+        //                console.log(value);
+        //                    html.push(
+        //                        `
+        //                                                                                <option value="${value.id}">${value.enName}</option>
 
-        //});
-      
-      
+        //                                                                             `
+        //                    );
+        //            }
+        //        );
+        //        }
+               
+        //    });
+        //    $('#speciality').html(html.join('')).multipleSelect();
+        //    $('#speciality').multiple('refresh');
+
+
+        //}
+       
      
     </script>
     <script>
