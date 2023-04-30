@@ -72,10 +72,9 @@
             
             $uniImage.empty();
             $uniImage.append(
-                `      <span class="HeroImage js-heroImage" style="background-image:url('${image}'); background-repeat: repeat;
-  background-size: auto;">
+                `      <span class="HeroImage js-heroImage" style="background-image:url('${image}');background-repeat: no-repeat;background-size:cover;">
 
-        </span> <span class="HeroImagePlaceholder HeroImage js-heroImageLowResPlaceholder" style="background-image:url('${image}'); background-repeat: repeat;
+        </span> <span class="HeroImagePlaceholder HeroImage js-heroImageLowResPlaceholder" style="background-image:url('${image}'); background-repeat: no-repeat;
   background-size: auto;">
 
         </span> <span class="HeroOverlay"></span>   
@@ -139,10 +138,10 @@
 `);
             $headerName.append(` <h1 class="StudyTitle">${name1}</h1>`);
 
-            $shortDetail.html(`
-        <h2>${title}</h2>
-               <p>${shortDescription}</p>
-            `);
+        //    $shortDetail.html(`
+        ////<h2>${title}</h2>
+        ////       ${shortDescription}
+        ////    `);
 
             $(".overView").append(`${description}`);
             $(".bachelor").append(`${bachelor}`);
@@ -161,12 +160,7 @@
             $.each(
                 data.data, function (i, value) {
 
-                    const date = new Date(value.regDate)
-
-                    var dd = String(date.getDate()).padStart(2, '0');
-                    var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-                    var yyyy = date.getFullYear();
-                    var time = yyyy + "/" + mm + "/" + dd;
+                    
                     var description = value.description.slice(0, 5);
                     $countryList.append(
                         `<a id="learnMore" value="${value.id}" class="list-group-item sidebar-item font-weight-bold bg-light mt-3 list-group-item-action">${value.name}</a>

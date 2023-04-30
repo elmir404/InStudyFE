@@ -10,7 +10,7 @@
         $(`.disciplinlang`).html("İstiqamət");
         $(`.locationlang`).html("Ölkə");
         $(`.durationlang`).html("Müddət");
-        $(`.attendancelang`).html("Davamiyyət"); 
+        $(`.attendancelang`).html("Fakultə"); 
         $(`.degreetypelang`).html("Dərəcə növü");
     }
     else if ($lang == 'EN') {
@@ -18,7 +18,7 @@
         $(`.disciplinlang`).html("Disciplen");
         $(`.locationlang`).html("Country");
         $(`.durationlang`).html("Duration");
-        $(`.attendancelang`).html("Attendance");
+        $(`.attendancelang`).html("Faculty");
         $(`.degreetypelang`).html("Degree Type");
     }
     else {
@@ -35,32 +35,23 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Speciality/GetActiveSpecialities`,
+        url: `https://api.instudy.net/api/Direction/GetActiveDirections`,
 
         success: function (data) {
            
             $.each(
                 data.data, function (i, value) {
-                    console.log(value);
-                    //const date = new Date(value.regDate)
 
-                    //var dd = String(date.getDate()).padStart(2, '0');
-                    //var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-                    //var yyyy = date.getFullYear();
-                    //var time = yyyy + "/" + mm + "/" + dd;
 
                     if ($lang == 'AZ') {
                         var name = value.azName
-                        var description = value?.azDescription;
 
                     }
                     else if ($lang == 'EN') {
                         var name = value.enName
-                        var description = value?.enDescription;
 
                     } else {
                         var name = value.ruName;
-                        var description = value?.ruDescription;
 
                     }
 
@@ -82,32 +73,23 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/Country/GetActiveCountries`,
+        url: `https://api.instudy.net/api/Country/GetCountriesIdName`,
 
         success: function (data) {
 
             $.each(
                 data.data, function (i, value) {
-                    console.log(value);
-                    //const date = new Date(value.regDate)
-
-                    //var dd = String(date.getDate()).padStart(2, '0');
-                    //var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-                    //var yyyy = date.getFullYear();
-                    //var time = yyyy + "/" + mm + "/" + dd;
+                   
 
                     if ($lang == 'AZ') {
                         var name = value.azName
-                        var description = value?.azDescription;
 
                     }
                     else if ($lang == 'EN') {
                         var name = value.enName
-                        var description = value?.enDescription;
 
                     } else {
                         var name = value.ruName;
-                        var description = value?.ruDescription;
 
                     }
 
@@ -136,13 +118,7 @@
 
             $.each(
                 data.data, function (i, value) {
-                    console.log(value);
-                    //const date = new Date(value.regDate)
-
-                    //var dd = String(date.getDate()).padStart(2, '0');
-                    //var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-                    //var yyyy = date.getFullYear();
-                    //var time = yyyy + "/" + mm + "/" + dd;
+                  
 
                     if ($lang == 'AZ') {
                         var name = value.azName
@@ -183,23 +159,7 @@
 
             $.each(
                 data.data, function (i, value) {
-                    console.log(value);
-                    
-
-                    //if ($lang == 'AZ') {
-                    //    var name = value.azName
-                    //    var description = value?.azDescription;
-
-                    //}
-                    //else if ($lang == 'EN') {
-                    //    var name = value.enName
-                    //    var description = value?.enDescription;
-
-                    //} else {
-                    //    var name = value.ruName;
-                    //    var description = value?.ruDescription;
-
-                    //}
+                   
 
                     $(`#durationSearch`).append(
                         `
@@ -219,33 +179,26 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/AttendamceType/GetActiveAttendanceTypes`,
+        url: `https://api.instudy.net/api/Speciality/GetActiveSpecialities`,
 
         success: function (data) {
 
             $.each(
                 data.data, function (i, value) {
-                    console.log(value);
+                    if ($lang == 'AZ') {
+                        var name = value.azName
 
+                    }
+                    else if ($lang == 'EN') {
+                        var name = value.enName
 
-                    //if ($lang == 'AZ') {
-                    //    var name = value.azName
-                    //    var description = value?.azDescription;
+                    } else {
+                        var name = value.ruName;
 
-                    //}
-                    //else if ($lang == 'EN') {
-                    //    var name = value.enName
-                    //    var description = value?.enDescription;
-
-                    //} else {
-                    //    var name = value.ruName;
-                    //    var description = value?.ruDescription;
-
-                    //}
-
+                    }
                     $(`#attendenceSearch`).append(
                         `
-                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="attendence" class="CheckboxInput" data-filter="ci" value="${value.title}" data-v-01633eac=""><span data-v-01633eac="">${value.title}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""></ul></li>
+                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="attendence" class="CheckboxInput" data-filter="ci" value="${name}" data-v-01633eac=""><span data-v-01633eac="">${name}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""></ul></li>
   
                                          `
                     )
@@ -264,10 +217,14 @@
         var $durationSearch = JSON.parse(localStorage.getItem("durationsSearch"));
         var $attendenceSearch = JSON.parse(localStorage.getItem("attendenceSearch"));
         console.log($programSearch);
+        debugger;
         var formData = new FormData();
-        formData.append('CountryName', $country);
-        formData.append('ProgramName', $program);
-        formData.append('DirectionName', $direction);
+        if ($country!="")
+            formData.append('CountryNames', $country);
+        if ($program != "")
+            formData.append('ProgramNames', $program);
+        if ($direction != "")
+        formData.append('DirectionNames', $direction);
         if ($disciplinesSearch != null)
         for (var i = 0; i < $disciplinesSearch.length; i++) {
             formData.append('DirectionNames', $disciplinesSearch[i]);
@@ -286,7 +243,7 @@
             }
         if ($attendenceSearch != null)
         for (var i = 0; i < $attendenceSearch.length; i++) {
-            formData.append('Attendances', $attendenceSearch[i]);
+            formData.append('SpecialityNames', $attendenceSearch[i]);
         }
         $.ajax({
             type: "POST",
@@ -335,7 +292,7 @@
 
                                 $('#searchContent').append(`
   <li class="HoverEffect SearchResultItem">
-                              <a class="SearchStudyCard js-bestFitStudycard" href="/University/Detail/${value.id}" target="_blank" data-v-0363ab3a="">
+                              <a class="SearchStudyCard js-bestFitStudycard" href="/University/Detail?uniId=${value.id}" target="_blank" data-v-0363ab3a="">
                                  <article data-v-0363ab3a="">
                                     <header class="CardHeader" data-v-0363ab3a="">
                                        <h2 class="StudyName" data-v-0363ab3a="">${name}</h2>

@@ -21,7 +21,7 @@
             <!-- ROW-1 OPEN -->
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="card">
+                    <form id="form" class="card">
                         <div class="card-header">
                             <div class="card-title">Add University</div>
                         </div>
@@ -50,42 +50,7 @@
                                     <input type="text" id="uniAdrress" class="form-control">
                                 </div>
                             </div>
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Map Adress :</label>
-                                <div class="col-md-9">
-                                    <input type="text" id="uniMapAdrress" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Student Count :</label>
-                                <div class="col-md-9">
-                                    <input type="number" id="stCount" class="form-control">
-                                </div>
-                            </div> 
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Academic Staff :</label>
-                                <div class="col-md-9">
-                                    <input type="number" id="acdmStaff" class="form-control">
-                                </div>
-                            </div> 
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Start Date :</label>
-                                <div class="col-md-9">
-                                    <input type="datetime-local" id="startDate" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Apply Date :</label>
-                                <div class="col-md-9">
-                                    <input type="datetime-local" id="applyDate" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Rank :</label>
-                                <div class="col-md-9">
-                                    <input type="number" id="rank" class="form-control">
-                                </div>
-                            </div>
+                          
 
                             <!-- Row -->
                             <div class="row">
@@ -142,7 +107,13 @@
                                         <textarea class="content9" id="enMaster" name="example"></textarea>
                                 </div>
                             </div>
-                          
+                              <div class="row">
+                                <label class="col-md-3 form-label mb-4">Direction</label>
+                                        <div class="col-md-9 mb-4">
+                                            <select multiple="multiple" id="direction">
+                                            </select>
+                                        </div>
+                            </div>
                             <div class="row">
                                 <label class="col-md-3 form-label mb-4">Program</label>
                                 <div class="col-md-9 mb-4">
@@ -152,13 +123,7 @@
                                     </select>
                                 </div>
                             </div> 
-                            <div class="row">
-                                <label class="col-md-3 form-label mb-4">Direction</label>
-                                        <div class="col-md-9 mb-4">
-                                            <select multiple="multiple" id="direction">
-                                            </select>
-                                        </div>
-                            </div>
+                           
                                 <div class="row">
                                     <label class="col-md-3 form-label mb-4">Country</label>
                                     <div class="col-md-9 mb-4">
@@ -171,7 +136,8 @@
                             <div class="row">
                                 <label class="col-md-3 form-label mb-4">University File Upload :</label>
                                 <div class="col-md-9">
-                                    <input id="files" type="file" name="files" accept=".jpg, .png, image/jpeg, image/png" multiple>
+                                        <input id="files" type="file" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])" name="files" accept=".jpg, .png, image/jpeg, image/png">
+                                        <img id="output" src="" width="100" height="100">
                                 </div>
                             </div>
                             <!--End Row-->
@@ -192,7 +158,7 @@
                             </div>
                             <!--End Row-->
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
             <!-- /ROW-1 CLOSED -->
@@ -274,7 +240,7 @@
                     data.data, function (i, value) {
                         html.push(
                             `
-                                                            <option value="${value.id}">${value.ruName}</option>
+                                                            <option value="${value.id}">${value.enName}</option>
 
                                                          `
                         )
@@ -300,7 +266,7 @@
                     data.data, function (i, value) {
                         html.push(
                             `
-                                                                    <option value="${value.id}">${value.ruName}</option>
+                                                                    <option value="${value.id}">${value.enName}</option>
 
                                                                  `
                         )
@@ -326,7 +292,7 @@
                     data.data, function (i, value) {
                         html.push(
                             `
-                                                            <option value="${value.id}">${value.ruName}</option>
+                                                            <option value="${value.id}">${value.enName}</option>
 
                                                          `
                         )
@@ -337,5 +303,38 @@
             }
 
         });
+    </script>
+    <script>
+        $("#form :input").change(function () {
+
+            $("#form").data("changed", true);
+        });
+        var isClicked = false;
+        $('#addUniversty').on('click', function (evt) {
+            debugger;
+            isClicked = true;
+        });
+        debugger;
+
+        window.addEventListener("beforeunload", function (e) {
+            var confirmationMessage = 'It looks like you have been editing something. '
+                + 'If you leave before saving, your changes will be lost.';
+
+            (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+            debugger;
+            if ($("#form").data("changed") && isClicked == false) {
+
+                return confirmationMessage;
+
+            }
+
+            //Gecko + Webkit, Safari, Chrome etc.
+        });
+
+
+
+
+
+
     </script>
 }

@@ -10,7 +10,6 @@
         url: `https://api.instudy.net/api/Direction/GetDirection?id=${directionId}`,
         success: function (data) {
 
-            console.log(data);
             $directionForm.empty()
 
             $directionForm.append(
@@ -51,29 +50,30 @@
                             </div> <div class="row">
                                 <label class="col-md-3 form-label mb-4">En Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="content2" id="enDescription"  name="example">${data.data.enDescription}</textarea>
+                                    <textarea class="content3" id="enDescription"  name="example">${data.data.enDescription}</textarea>
                                 </div>
                             </div>
-                            <div class="row">
-                            <label class="col-md-3 form-label mb-4">Icon Svg :</label>
-                            <div class="col-md-9 mb-4">
-                                <textarea class="content4" id="iconSvg" name="example">${data.data?.icon}</textarea>
-                            </div>
-                        </div>
+                             <div class="row">
+                                        <label class="col-md-3 form-label mb-4">File Upload :</label>
+                                        <div class="col-md-9">
+                                             <input id="files" type="file" name="files" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])"  accept=".jpg, .png, image/jpeg, image/png">
+                                      <img id="output" src="https://api.instudy.net/${data.data.directionFiles[0]?.path}" width="100" height="100">
+                                        </div>
+                                    </div>
                         
                         `
             )
             $('.content').richText();
             $('.content2').richText();
             $('.content3').richText();
-            $('.content4').richText();
+           
 
 
         }
     })
     $("#updateDirection").click(function () {
         var directionId = $("#directionId").val();
-       /* var files = $("#files").get(0).files;*/
+        var files = $("#files").get(0).files;
         var formData = new FormData();
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
@@ -81,11 +81,9 @@
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
-        formData.append('Icon', $("#iconSvg").val());
-        //for (var i = 0; i < files.length; i++) {
-        //    formData.append('Files', files[i]);
-        //}
-        console.log(formData);
+        for (var i = 0; i < files.length; i++) {
+            formData.append('Files', files[i]);
+        }
 
         $.ajax({
             type: "PUT",

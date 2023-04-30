@@ -11,11 +11,11 @@
 
                         <!-- PAGE-HEADER -->
                         <div class="page-header">
-                            <h1 class="page-title">Data Table</h1>
+                            <h1 class="page-title">User</h1>
                             <div>
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="javascript:void(0)">Tables</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Data Table</li>
+                                    <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">List</li>
                                 </ol>
                             </div>
 
@@ -27,13 +27,17 @@
                             <div class="col-lg-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h3 class="card-title">Todo List</h3>
+                                        <h3 class="card-title"> List</h3>
                                     </div>
                                     <div class="card-body">
+                                          
                                         <div class="table-responsive">
-                                            <button type="button" class="btn btn-primary mb-4 data-table-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <button type="button" style="position:unset;" class="btn btn-primary mb-4 data-table-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                                 Add Claim
                                             </button>
+                                            <a class="btn btn-success ml-4 mb-4 data-table-btn" style="position:unset;" asp-action="AddUser" asp-controller="User" asp-area="Admin">
+                                                Add User
+                                            </a>
                                             <!-- Modal -->
                                                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                   <div class="modal-dialog">
@@ -51,8 +55,8 @@
                                                         <div class="md-form mb-5">
                                                           <label data-error="wrong" data-success="right" for="form34">Claim Name</label>
                                                          <select name="claimName" id="claimName">
-                                                          <option value="admin">Admin</option>
-                                                           <option value="user">User</option>
+                                                          <option value="Admin">Admin</option>
+                                                           <option value="Moderator">Moderator</option>
                                                         </select>
                                                         </div>
                                                          <div class="md-form mb-5">
@@ -71,14 +75,16 @@
                                                 </div>
 
                                             @*<button id="button" class="btn btn-primary mb-4 data-table-btn">Add Task</button>*@
-                                            <table id="user-datatable" class="table table-bordered text-nowrap border-bottom">
+                                <table id="user-datatable" class="table table-bordered display nowrap" width="100%">
                                                 <thead>
                                                     <tr>
                                                         <th class="border-bottom-0">Id</th>
                                                         <th class="border-bottom-0">Name</th>
                                                         <th class="border-bottom-0">SurName</th>
                                                         <th class="border-bottom-0">UserName</th>
+                                                       
                                                         <th class="border-bottom-0">Email</th>
+                                            <th class="border-bottom-0">Position</th>
 
                                                     </tr>
                                                 </thead>

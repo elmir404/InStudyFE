@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>   
+﻿  @inject IViewLocalizer Localizer
+  @{
+    var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
+    var context = Context.Request;
+    var url = context.Path + context.QueryString;
+}
+<!DOCTYPE html>   
 <html lang="en">
    <head>
       <meta charset="UTF-8">
@@ -98,7 +104,7 @@
 
         @@media only screen and (max-width: 2560px) and (min-width: 1441px) {
             .adresslinkwidth {
-                width: 49%;
+               
             }
         }
 
@@ -291,7 +297,7 @@
                                        </div>
                                        <div class="InputWrapper">
                                           <input id="directionInput" type="text" value="" name="location" class="Keywords AutoCompleteInput" autocomplete="off" data-type="where" data-order="2">
-                                            <div id="direction_div" class="AutoCompleteContainer Hidden " style="width: 179px;">
+                                            <div id="direction_div" class="AutoCompleteContainer Hidden " style="width: 279px;">
                                                 <ul id="direction" class="AutoComplete">
                                              </ul>
                                           </div>
@@ -308,13 +314,13 @@
                                     <a title="Chat with students" class="HeaderUnibuddyLinkContainer DesktopOnlyBlock Textlink" href="/Contact">
                                            <i class="lnr-bubbles UnibuddyIcon "></i> <span id="contactHeder" class="HeaderUnibuddyText">Contact</span> </a> 
                                            <a title="Chat with students" style="cursor: pointer;" class="HeaderUnibuddyLinkContainer DesktopOnlyBlock Textlink" onclick="changeLang()">
-                                           <h3 style="color:#000" id="curLang" class="h1"></h3> </a> 
+                                           <h3 style="color:#247ba0" id="curLang" class="h1"></h3> </a> 
                                         
                                     <div id="LoggedInDropDown"  class="AccountDropDown">
                                        <ul class="Content">
-                                          <li> <a title="My account page" onclick="setLang('AZ')" class="MenuItem">AZ</a> </li>
-                                          <li> <a title="Interesting for you" onclick="setLang('EN')" class="MenuItem">EN</a> </li>
-                                          <li> <a title="My settings page" onclick="setLang('RU')" class="MenuItem">RU</a></li>
+                                            <li> <a asp-controller="Home" asp-action="SetLanguage" asp-route-culture="az" asp-route-url="@url" title="My account page" onclick="setLang('AZ')" class="MenuItem">AZ</a> </li>
+                                            <li> <a asp-controller="Home" asp-action="SetLanguage" asp-route-culture="en" asp-route-url="@url" title="Interesting for you" onclick="setLang('EN')" class="MenuItem">EN</a> </li>
+                                          <li> <a asp-controller="Home" asp-action="SetLanguage" asp-route-culture="ru" asp-route-url="@url" title="My settings page" onclick="setLang('RU')" class="MenuItem">RU</a></li>
                                        </ul>
                                     </div>
                                  </div>
@@ -361,7 +367,7 @@
                             </div>
                         </div>
                         <div id="FooterMainInner">
-                            <div data-module="" class="Module StudyPortals_Shared_Modules_Footer_FooterAboutUs_FooterAboutUs">
+                            <div data-module="" class="Module StudyPortals_Shared_Modules_Footer_FooterOurPortals_FooterOurPortals">
                                 <div id="FooterAboutUs">
                                     <strong class="Header">Instudy</strong>
                                     <ul class="List">
@@ -713,6 +719,22 @@
             function searchCountry(name) {
               var  txtValue = name.textContent || name.innerText;
                document.getElementById('countryInput').value = txtValue;
+            }
+            function countryDetail(id){
+                console.log(id);
+                $.ajax({
+                    type: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    url: ``,
+
+                    success: function (data) {
+                    
+
+                    }
+
+                });
             }
         </script>
         @RenderSection("Scripts",false)

@@ -8,6 +8,10 @@ namespace InStudyFE.Areas.Admin.Controllers
         public IActionResult RequestList()
         {
             return View();
+        } 
+        public IActionResult NonSeedRequestList()
+        {
+            return View();
         }
         public IActionResult RequestDetail()
         {

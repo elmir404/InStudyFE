@@ -827,7 +827,7 @@ body[data-wishlist-drawer] {
 }
 
 #HeaderLoggedIn .HeaderUnibuddyLinkContainer, #HeaderLogin .HeaderUnibuddyLinkContainer {
-    color: #000;
+    color: #247ba0;
     text-decoration: none
 }
 
@@ -1253,7 +1253,7 @@ body[data-wishlist-drawer] {
 
     #HeaderMainMenu .SectionNavigationItem .SectionNavigationLink {
         align-items: center;
-        color: #000;
+        color: #247ba0;
         cursor: pointer;
         display: flex;
         flex-direction: row;
@@ -2590,7 +2590,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
     #FooterSocialMediaIcons .Header {
         margin-left: -72px;
         color: #05293c;
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 700;
         line-height: 2.5rem;
     }
@@ -2838,7 +2838,7 @@ body.js-HeaderMainMenuOpened #HeaderMainMenu {
     .sitewrapper .AsideDesktopContainer {
         display: block;
         position: fixed;
-        width: 288px;
+        width: 320px;
     }
 }
 @media (min-width: 1025px) {

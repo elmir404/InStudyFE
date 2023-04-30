@@ -12,41 +12,245 @@
         url: `https://api.instudy.net/api/University/GetUniversityWithId?universityId=${universityId}`,
         success: function (data) {
 
-            console.log(data.data);
-            $programs = [];
-            $.each(
-                data.data.programs, function (i, value) {
-                    $programs.push(
-                        `${value.id}`
-                    )
+            //console.log(data.data);
+            //$programs = [];
+            //$.each(
+            //    data.data.programs, function (i, value) {
+            //        $programs.push(
+            //            `${value.id}`
+            //        )
 
-                }
-            );
-            console.log($programs);
-            $('#hiddenProgram').val($programs);
-            var $specialities= [];
-            $.each(
-                data.data.specialities, function (i, value) {
-                    $specialities.push(
-                        `${value.id}`
-                    )
+            //    }
+            //);
+            //$specilitys = [];
+            //$.each(
+            //    data.data.programs, function (i, value) {
+            //        $specilitys.push(
+            //            `${value.id}`
+            //        )
 
-                }
-            );
-            $('#hiddenSpeciality').val($specialities);
-            var $directions = [];
-            $.each(
-                data.data.directions, function (i, value) {
-                    $directions.push(
-                        `${value.id}`
-                    )
+            //    }
+            //);
+            //console.log($programs);
+            $.ajax({
+                type: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
 
+                },
+                url: `https://api.instudy.net/api/Program/GetActivePrograms`,
+
+                success: function (result) {
+                    var html = [];
+                    debugger;
+                    $.each(
+                        result.data, function (i, value) {
+                            var isSelected = false;
+                            $.each(
+                                data.data.programs, function (p, pvalue) {
+                                   
+                                    if (pvalue.id == value.id) {
+                                        isSelected = true;
+                                        debugger;
+
+                                    }
+                                    else {
+                                        isSelected = false;
+                                    }
+
+                                });
+                            if (isSelected) {
+                                html.push(
+                                    `
+                                                                                <option selected value="${value.id}">${value.enName}</option>
+
+                                                                             `
+                                );
+                            } else {
+                                html.push(
+                                    `
+                                                                                <option value="${value.id}">${value.enName}</option>
+
+                                                                             `
+                                );
+
+                            }
+
+                        }
+                    )
+                    $('#program').html(html.join('')).multipleSelect();
                 }
-            );
-            $('#hiddenDirection').val($directions);
+
+            });
+            //var $specialities = [];
+           
+            //$.each(
+            //    data.data.specialities, function (i, value) {
+            //        console.log(value);
+            //        $specialities.push(
+            //            `${value.id}`
+            //        )
+
+            //    }
+            //);
+            //console.log($specialities);
+            //$('#hiddenSpeciality').val(`${$specialities}`);
+            ////var $directions = [];
+            ////$.each(
+            ////    data.data.directions, function (i, value) {
+            ////        $directions.push(
+            ////            `${value.id}`
+            ////        )
+
+            ////    }
+            ////);
+            $.ajax({
+                type: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+
+                },
+                url: `https://api.instudy.net/api/Direction/GetActiveDirections`,
+
+                success: function (result) {
+                    var html = [];
+                    debugger;
+                    $.each(
+                        result.data, function (i, value) {
+                                var isSelected = false;
+                            $.each(
+                                data.data.directions, function (p, pvalue) {
+                                   
+                                    if (pvalue.id == value.id) {
+                                        isSelected = true;
+                                        debugger;
+                                        
+                                    }
+                                    else {
+                                        isSelected = false;
+                                    }
+
+                            });
+                            if (isSelected) {
+                                html.push(
+                                    `
+                                                                                <option selected value="${value.id}">${value.enName}</option>
+
+                                                                             `
+                                );
+                            } else {
+                                html.push(
+                                    `
+                                                                                <option value="${value.id}">${value.enName}</option>
+
+                                                                             `
+                                );
+
+                            }
+
+
+                        }
+                    )
+                    $('#direction').html(html.join('')).multipleSelect();
+                }
+
+            });
+
+            $.ajax({
+                type: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+
+                },
+                url: `https://api.instudy.net/api/Speciality/GetActiveSpecialities`,
+
+                success: function (result) {
+                    var html = [];
+                    debugger;
+                    $.each(
+                        result.data, function (i, value) {
+                                var isSelected = false;
+                            $.each(
+                                data.data.specialities, function (p, pvalue) {
+                                   
+                                    if (pvalue.id == value.id) {
+                                        isSelected = true;
+                                        debugger;
+                                        
+                                    }
+                                    else {
+                                        isSelected = false;
+                                    }
+
+                            });
+                            if (isSelected) {
+                                html.push(
+                                    `
+                                                                                <option selected value="${value.id}">${value.enName}</option>
+
+                                                                             `
+                                );
+                            } else {
+                                html.push(
+                                    `
+                                                                                <option value="${value.id}">${value.enName}</option>
+
+                                                                             `
+                                );
+
+                            }
+
+
+                        }
+                    )
+                    $('#speciality').html(html.join('')).multipleSelect();
+                }
+
+            });
+            $.ajax({
+                type: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+
+                },
+                url: `https://api.instudy.net/api/Country/GetActiveCountries`,
+
+                success: function (result) {
+                    var html = [];
+                    $.each(
+                        result.data, function (i, value) {
+                            debugger;
+                            if (data.data.country.id == value.id) {
+                                html.push(
+                                    `
+                                                                    <option selected value="${value.id}">${value.enName}</option>
+
+                                                                 `
+                                )
+                            } else {
+                                html.push(
+                                    `
+                                                                    <option value="${value.id}">${value.enName}</option>
+
+                                                                 `
+                                )
+                            }
+                          
+
+                        }
+                    )
+                    $('#country').html(html.join(''));
+                }
+
+            });
             $blogForm.append(
                 `
                         <input type="hidden" id="universityId" value="${data.data.id}" class="form-control">
+                      
 
                     <div class="row mb-4">
                                 <label class="col-md-3 form-label">Az Title :</label>
@@ -72,43 +276,6 @@
                                     <input type="text" id="uniAdrress" value="${data?.data?.address}" class="form-control">
                                 </div>
                             </div>
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Map Adress :</label>
-                                <div class="col-md-9">
-                                    <input type="text" id="uniMapAdrress" value="${data?.data?.mapAdrress}" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Student Count :</label>
-                                <div class="col-md-9">
-                                    <input type="number" id="stCount" value="${data?.data?.studentCount}" class="form-control">
-                                </div>
-                            </div> 
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Academic Staff :</label>
-                                <div class="col-md-9">
-                                    <input type="number" id="acdmStaff" value="${data?.data?.academicStaff}" class="form-control">
-                                </div>
-                            </div> 
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Start Date :</label>
-                                <div class="col-md-9">
-                                    <input type="datetime-local" id="startDate" value="${data?.data?.startDate}" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Apply Date :</label>
-                                <div class="col-md-9">
-                                    <input type="datetime-local" id="applyDate" value="${data?.data?.applyDate}" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Rank :</label>
-                                <div class="col-md-9">
-                                    <input type="number" id="rank" value="${data?.data?.rank}" class="form-control">
-                                </div>
-                            </div>
-
                             <!-- Row -->
                             <div class="row">
                                 <label class="col-md-3 form-label mb-4">Az Description :</label>
@@ -164,7 +331,13 @@
                                         <textarea class="content9" id="enMaster" name="example">${data?.data?.enMaster}</textarea>
                                 </div>
                             </div>
-                          
+                           <div class="row">
+                                        <label class="col-md-3 form-label mb-4">File Upload :</label>
+                                        <div class="col-md-9">
+                                             <input id="files" type="file" name="files" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])"  accept=".jpg, .png, image/jpeg, image/png">
+                                      <img id="output" src="https://api.instudy.net/${data.data.universityFiles[0]?.path}" width="100" height="100">
+                                        </div>
+                                    </div>
                            
                         
                         `
@@ -183,12 +356,14 @@
 
         }
     });
+   
     //console.log($programs);
     $("#updateUniversity").click(function () {
         var universityId = $("#universityId").val();
         var files = $("#files").get(0).files;
         var program = $("#program").val();
         var direction = $("#direction").val();
+        var speciality = $("#speciality").val();
         var formData = new FormData();
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
@@ -215,6 +390,8 @@
         }
         for (var i = 0; i < program.length; i++) {
             formData.append('ProgramIds', program[i]);
+        } for (var i = 0; i < speciality.length; i++) {
+            formData.append('SpecialityIds', speciality[i]);
         }
         for (var i = 0; i < direction.length; i++) {
             formData.append('DirectionIds', direction[i]);
@@ -230,7 +407,7 @@
             },
             complete: function (response) {
                 if (response.status == 200) {
-                    location.href = "/Admin/University/UniversityList"
+                    //location.href = "/Admin/University/UniversityList"
                 }
                 else {
                     alert("error")

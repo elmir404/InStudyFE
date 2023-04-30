@@ -335,7 +335,9 @@
     font-size:1rem;
     font-weight:400;
     line-height:1.5rem;
-    transition:none!important
+    transition:none!important;
+    height:140px;
+     
 }
 #DisciplineSpotlight ul li a .DisciplineIcons{
     display:block;
@@ -345,10 +347,10 @@
 #DisciplineSpotlight ul li:hover {
     background-color: #A2EACB
 }
-#DisciplineSpotlight ul li:hover a{
-    color:#edf3f6;
-    text-decoration:none
-}
+    #DisciplineSpotlight ul li:hover a {
+        color: #05293c;
+        text-decoration: none
+    }
 #DisciplineSpotlight ul li:hover a .DisciplineIcons{
     color:#edf3f6
 }
@@ -674,12 +676,14 @@
 #OnboardingBar .OnboardingText p{
     max-width:450px
 }
-#OnboardingBar .OnboardingText .ItemHeader{
-    color:#05293c;
-    display:block;
-    font-size:1.5rem;
-    font-weight:700;
-    line-height:2rem
+#OnboardingBar .OnboardingText .ItemHeader {
+    color: #05293c;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 700;
+    line-height: 2rem
 }
 @media (max-width:480px){
     #OnboardingBar .OnboardingText .ItemHeader{
@@ -1259,7 +1263,8 @@
         overflow: hidden;
         position: relative;
         width: 20%;
-        margin-left: 10px;
+        margin-left: unset !important;
+        margin-top: 1.7px !important;
     }
 @media (min-width:1025px){
     #CountrySpotlight #CountrySpotlightContainer figure:hover{

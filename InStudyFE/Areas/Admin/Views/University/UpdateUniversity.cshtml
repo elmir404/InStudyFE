@@ -12,7 +12,7 @@
                 <h1 class="page-title">Update Country</h1>
                 <div>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
+                             <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Update University</li>
                     </ol>
                 </div>
@@ -21,7 +21,7 @@
             <!-- ROW-1 OPEN -->
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="card">
+                    <form id="form" class="card">
                         <div class="card-header">
                             <div class="card-title">Update University</div>
                         </div>
@@ -31,25 +31,27 @@
                                </div>
                                <div>
                                     <div class="row">
+                                        <label class="col-md-3 form-label mb-4">Direction</label>
+                                        <div class="col-md-9 mb-4">
+                                            <select  multiple="multiple" id="direction">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
                                         <label class="col-md-3 form-label mb-4">Speciality</label>
                                         <div class="col-md-9 mb-4">
                                             <select multiple="multiple" id="speciality">
                                             </select>
                                         </div>
-                                    </div> <div class="row">
+                                    </div>
+                                    <div class="row">
                                         <label class="col-md-3 form-label mb-4">Program</label>
                                         <div class="col-md-9 mb-4">
                                             <select multiple="multiple" id="program">
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <label class="col-md-3 form-label mb-4">Direction</label>
-                                        <div class="col-md-9 mb-4">
-                                            <select multiple="multiple" id="direction">
-                                            </select>
-                                        </div>
-                                    </div>
+                                  
                                     <div class="row">
                                         <label class="col-md-3 form-label mb-4">Country</label>
                                         <div class="col-md-9 mb-4">
@@ -57,12 +59,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <label class="col-md-3 form-label mb-4">File Upload :</label>
-                                        <div class="col-md-9">
-                                            <input id="files" type="file" name="files" accept=".jpg, .png, image/jpeg, image/png" multiple>
-                                        </div>
-                                    </div>
+                                    
                                </div>
                             <!--End Row-->
                         </div>
@@ -76,7 +73,7 @@
                             </div>
                             <!--End Row-->
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
             <!-- /ROW-1 CLOSED -->
@@ -89,110 +86,78 @@
     <script src="~/AdminFiles/js/update-university.js"></script>
        
            <script>
-        $.ajax({
-            type: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
+        //function selectFunction() {
+        //           debugger;
+        //            var direction = $("#direction").val();
+        //            $("#speciality").empty();
 
-            },
-            url: `https://api.instudy.net/api/Speciality/GetSpecialities`,
+        //            var formData = new FormData();
+        //            for (var i = 0; i < direction.length; i++) {
+        //                formData.append('DirectionIds', direction[i]);
+        //            }
+        //    var html = [];
+        //    $.ajax({
+        //        type: "POST",
+        //        url: `https://api.instudy.net/api/Speciality/SearchSpeciality?currentPage=1&pageSize=100`,
+        //        data: formData,
+        //        processData: false,  // tell jQuery not to process the data
+        //        contentType: false,
+        //    }).done(function (response) {
+        //        if (response.data.dataCount > 0) {
+        //        $.each(
+        //            response?.data.value, function (i, value) {
+        //                console.log(value);
+        //                    html.push(
+        //                        `
+        //                                                                                <option value="${value.id}">${value.enName}</option>
 
-            success: function (data) {
-                var html =[];
-                $.each(
-                    data.data, function (i, value) {
-                        html.push(
-                            `
-                                                    <option value="${value.id}">${value.ruName}</option>
+        //                                                                             `
+        //                    );
+        //            }
+        //        );
+        //        }
+               
+        //    });
+        //    $('#speciality').html(html.join('')).multipleSelect();
+        //    $('#speciality').multiple('refresh');
 
-                                                 `
-                        )
 
-                    }
-                )
-                $('#speciality').html(html.join('')).multipleSelect();
+        //}
+       
+     
+    </script>
+    <script>
+        $("#form :input").change(function () {
+
+            $("#form").data("changed", true);
+        });
+        var isClicked = false;
+        $('#updateUniversity').on('click', function (evt) {
+            debugger;
+            isClicked = true;
+        });
+        debugger;
+
+        window.addEventListener("beforeunload", function (e) {
+            var confirmationMessage = 'It looks like you have been editing something. '
+                + 'If you leave before saving, your changes will be lost.';
+
+            (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+            debugger;
+            if ($("#form").data("changed") && isClicked == false) {
+
+                return confirmationMessage;
+
             }
 
+            //Gecko + Webkit, Safari, Chrome etc.
         });
-        $.ajax({
-            type: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
 
-            },
-            url: `https://api.instudy.net/api/Program/GetPrograms`,
 
-            success: function (data) {
-                var html = [];
-                $.each(
-                    data.data, function (i, value) {
-                        html.push(
-                            `
-                                                            <option value="${value.id}">${value.ruName}</option>
 
-                                                         `
-                        )
 
-                    }
-                )
-                $('#program').html(html.join('')).multipleSelect();
-            }
 
-        });
-        $.ajax({
-            type: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
 
-            },
-            url: `https://api.instudy.net/api/Country/GetActiveCountries`,
-
-            success: function (data) {
-                var html = [];
-                $.each(
-                    data.data, function (i, value) {
-                        html.push(
-                            `
-                                                                    <option value="${value.id}">${value.ruName}</option>
-
-                                                                 `
-                        )
-
-                    }
-                )
-                $('#country').html(html.join(''));
-            }
-
-        });
-        $.ajax({
-            type: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-
-            },
-            url: `https://api.instudy.net/api/Direction/GetActiveDirections`,
-
-            success: function (data) {
-                var html = [];
-                $.each(
-                    data.data, function (i, value) {
-                        html.push(
-                            `
-                                                            <option value="${value.id}">${value.ruName}</option>
-
-                                                         `
-                        )
-
-                    }
-                )
-                $('#direction').html(html.join('')).multipleSelect();
-            }
-
-        });
     </script>
         
         }

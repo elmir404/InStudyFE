@@ -21,6 +21,14 @@
         $(`.student-visa`).html("Tələbə vizası")
         $(`.work-permit`).html("Sənədlər")
         $(`.how-to-apply`).html("Müraciət")
+        $(`.study1`).html("Təhsil")  
+        $(`.living1`).html("Yaşayış")
+        $(`.about1`).html("Haqqında") 
+        $(`.university1`).html("Universitetlər")
+        $(`.student-visa1`).html("Tələbə vizası")
+        $(`.work-permit1`).html("Sənədlər")
+        $(`.how-to-apply1`).html("Müraciət")
+        var student="Tələbə"
 
     }
     else if ($lang == 'EN') {
@@ -35,6 +43,14 @@
         $(`.student-visa`).html("Student visa")
         $(`.work-permit`).html("Documents")
         $(`.how-to-apply`).html("Apply form")
+        $(`.study1`).html("Study") 
+        $(`.living1`).html("Living") 
+        $(`.about1`).html("About")
+        $(`.university1`).html("Universities")
+        $(`.student-visa1`).html("Student visa")
+        $(`.work-permit1`).html("Documents")
+        $(`.how-to-apply1`).html("Apply form")
+        var student = "Students"
     }
     else {
         $StudyUniversity.html(`Университеты`);
@@ -48,6 +64,14 @@
         $(`.student-visa`).html("Студенческая виза")
         $(`.work-permit`).html("Документы")
         $(`.how-to-apply`).html("Обращение")
+        $(`.study1`).html("Образование") 
+        $(`.living1`).html("Живущий")
+        $(`.about1`).html("O")
+        $(`.university1`).html("Университет")
+        $(`.student-visa1`).html("Студенческая виза")
+        $(`.work-permit1`).html("Документы")
+        $(`.how-to-apply1`).html("Обращение")
+        var student = "Студент"
     } 
 
     $.ajax({
@@ -57,31 +81,26 @@
         },                                                            
         url: `https://api.instudy.net/api/Country/GetCountryWithId?id=${linkValues[3]}`,
         success: function (data) {
-            const date = new Date(data.data.regDate)
-            
-            var dd = String(date.getDate()).padStart(2, '0');
-            var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-            var yyyy = date.getFullYear();                                                                                             
-            var time = yyyy + "/" + mm + "/" + dd;
+           
             if ($lang == 'AZ') {
-                var name1 = data.data.azName
-                var description = data.data?.azDescription;
+                var name1 = data.data?.azName
+                var description = data.data?.azAbout
                 var study = data.data?.azStudy;
                 var workPermit = data.data?.azWorkPermit;
                 var studentVisa = data.data?.azStudentVisa;
                 var living = data.data?.azLiving;
             }
             else if ($lang == 'EN') {
-                var name1 = data.data.enName
-                var description = data.data?.enDescription;
+                var name1 = data.data?.enName
+                var description = data.data?.enAbout;
                 var study = data.data?.enStudy;
                 var workPermit = data.data?.enWorkPermit;
                 var studentVisa = data.data?.enStudentVisa;
                 var living = data.data?.enLiving;
 
             } else {
-                var name1 = data.data.ruName;
-                var description = data.data?.ruDescription;
+                var name1 = data.data?.ruName;
+                var description = data.data?.ruAbout;
                 var study = data.data?.ruStudy;
                 var workPermit = data.data?.ruWorkPermit;
                 var studentVisa = data.data?.ruStudentVisa;
@@ -90,13 +109,6 @@
             }
             localStorage.setItem('country', name1);
             var image = `https://api.instudy.net/${data.data?.countryFiles[0]?.path}`
-            $countryImage.append(
-                `
-                <span class="HeroImage js-heroImage" style="background-image:url(${image});background-repeat: no-repeat;background-size:cover;"></span>
-                <span class="HeroImage HeroImagePlaceholder js-heroImageLowResPlaceholder"></span> <span class="HeroOverlay" style="background-image:url(${image});background-repeat: no-repeat;background-size: auto;" ></span>
-                
-                `
-            );
               
             $countryHeader.append(` <ul class="LinkTrail">
                                             <li> <a href="/Home/Index"
@@ -137,7 +149,7 @@ ${workPermit}
                     console.log("sasa", value);
                     $(".universityList").append(
                         `
-			                <li> <a href="/University/Detail/${value.id}" title=""> <span>${value.enName}</span> </a> (${value.studentCount} Students) </li>
+			                
 
 
 														`
@@ -156,7 +168,7 @@ ${workPermit}
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/University/GetActiveUniversities`,
+        url: `https://api.instudy.net/api/University/GetUniversityWithCountryId?countryId=${linkValues[3]}`,
         success: function (data) {
             $universities.empty();
             $.each(

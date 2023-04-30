@@ -33,7 +33,25 @@
     <!-- COLOR SKIN CSS -->
     <link id="theme" rel="stylesheet" type="text/css" media="all" href="~/AdminFiles/colors/color1.css" />
              @RenderSection("Css",false);
-
+<style>
+        b, strong {
+            font-weight: bolder !important;
+        }
+        ul {
+    list-style: disc;
+}
+table.dataTable {
+    clear: unset !important;
+    margin-top: unset !important;
+    margin-bottom: unset !important;
+    max-width: unset !important;
+    border-collapse: unset !important;
+    border-spacing: unset !important;
+}
+table.dataTable.nowrap th, table.dataTable.nowrap td {
+    white-space: unset !important;
+}
+</style>
 </head>
 
 <body class="app sidebar-mini ltr light-mode">
@@ -95,7 +113,42 @@
                                         <!-- FULL-SCREEN -->
                                        
                                         <!-- NOTIFICATIONS -->
-                                       
+                                        <div class="dropdown  d-flex message">
+                                            <a class="nav-link icon text-center" id="notificationHead" data-bs-toggle="dropdown" aria-expanded="true">
+                                                <i class="fe fe-message-square"></i>
+                                               
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow" data-bs-popper="none">
+                                                <div class="drop-heading border-bottom">
+                                                    <div class="d-flex">
+                                                        <h6 class="mt-1 mb-0 fs-16 fw-semibold text-dark">
+                                                            You have
+                                                            Messages
+                                                        </h6>
+                                                        <div class="ms-auto">
+                                                            @*<a href="javascript:void(0)" class="text-muted p-0 fs-12">make all unread</a>*@
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="message-menu message-menu-scroll ps">
+                                                    <div id="notifications">
+                                                        
+                                                        
+                                                    </div>
+                                                   
+                                                    
+                                                   
+                                                   
+
+                                                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div>
+                                                </div>
+                                                <div class="dropdown-divider m-0"></div>
+                                                <a asp-area="Admin" asp-action="NonSeedRequestList" asp-controller="Request" class="dropdown-item text-center p-3 text-muted">
+                                                    See all
+                                                    Messages
+                                                </a>
+                                            </div>
+                                        </div>
                                         <!-- MESSAGE-BOX -->
                                         <div class="dropdown d-flex header-settings">
                                             <a href="/Home/Index" class="nav-link icon">
@@ -167,6 +220,16 @@
                                       <li class="slide-item"><a href="/Country/Index">Country Page</a></li>
                                 </ul>
                             </li>
+                              <li class="sub-category">
+                                <h3>Faculty</h3>
+                            </li>
+                            <li class="slide">
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Faculty</span><i class="angle fe fe-chevron-right"></i></a>
+                                <ul class="slide-menu">
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="DirectionList" asp-controller="Direction">Faculty List</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddDirection" asp-controller="Direction">Add Faculty</a></li>
+                                </ul>
+                            </li>
                             <li class="sub-category">
                                 <h3>University</h3>
                             </li>
@@ -187,13 +250,13 @@
                                 </ul>
                             </li>
                             <li class="sub-category">
-                                <h3>Program</h3>
+                                <h3>Degree</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Program</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Degree</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="ProgramList" asp-controller="Program">Program List</a></li>
-                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddProgram" asp-controller="Program">Add Program</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="ProgramList" asp-controller="Program">Degree List</a></li>
+                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddProgram" asp-controller="Program">Add Degree</a></li>
                                 </ul>
                             </li>  
                             <li class="sub-category">
@@ -217,16 +280,7 @@
                                 </ul>
                             </li> 
 
-                            <li class="sub-category">
-                                <h3>Direction</h3>
-                            </li>
-                            <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Destionation</span><i class="angle fe fe-chevron-right"></i></a>
-                                <ul class="slide-menu">
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="DirectionList" asp-controller="Direction">Direction List</a></li>
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddDirection" asp-controller="Direction">Add Direction</a></li>
-                                </ul>
-                            </li>
+                          
                              <li class="sub-category">
                                 <h3>Articles</h3>
                             </li>
@@ -238,19 +292,7 @@
 
                                 </ul>
                             </li>  
-                            <li class="sub-category">
-                                <h3>Attendence</h3>
-                            </li>
-                            <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Attendence</span><i class="angle fe fe-chevron-right"></i></a>
-                                <ul class="slide-menu">
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="List" asp-controller="Attendence">Attendence List</a></li>
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddAttendence" asp-controller="Attendence">Add Attendence</a></li>
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="AttendenceTypeList" asp-controller="Attendence">Attendence Type List</a></li>
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddAttendenceType" asp-controller="Attendence">Add Attendence Type</a></li>
-
-                                </ul>
-                            </li> 
+                         
                             <li class="sub-category">
                                 <h3>Duration</h3>
                             </li>
@@ -271,7 +313,8 @@
                             <li class="slide">
                                 <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Student Requests</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="RequestList" asp-controller="Request">Requests</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="RequestList" asp-controller="Request">Requests</a></li> 
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="NonSeedRequestList" asp-controller="Request">Non Seed Requests</a></li>
                                 </ul>
                             </li> 
                              <li class="sub-category">
@@ -431,7 +474,6 @@
 
     <!-- JQUERY JS -->
     <script src="~/AdminFiles/js/jquery.min.js"></script>
-
     <!-- BOOTSTRAP JS -->
     <script src="~/AdminFiles/plugins/bootstrap/js/popper.min.js"></script>
     <script src="~/AdminFiles/plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -472,7 +514,7 @@
 
     <!-- INTERNAL File-Uploads Js-->
     <script src="~/AdminFiles/plugins/fancyuploder/jquery.ui.widget.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
     <!-- Perfect SCROLLBAR JS-->
     <script src="~/AdminFiles/plugins/p-scroll/perfect-scrollbar.js"></script>
     <script src="~/AdminFiles/plugins/p-scroll/pscroll.js"></script>
@@ -481,7 +523,47 @@
         <script src="~/AdminFiles/plugins/multipleselect/multi-select.js"></script>
     <!-- Color Theme js -->
     <script src="~/AdminFiles/js/themeColors.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const connection = new signalR.HubConnectionBuilder()
+                .withUrl("https://api.instudy.net/NotificationHub")
+  
+    .build();
 
+async function start() {
+    try {
+        await connection.start();
+        console.log("SignalR Connected.");
+    } catch (err) {
+        console.log(err);
+        setTimeout(start, 5000);                   
+    }
+};
+connection.on("ReceiveNotification", (id, user,description) => {
+    var desc=description.slice(0,20)+"...";
+    $("#notificationHead").append("<span class='pulse-danger'></span>");
+    $("#notifications").append(`
+       <a class="dropdown-item d-flex" href="/Admin/Request/RequestDetail/${id}">
+                                                        <span class="avatar avatar-md brround me-3 align-self-center cover-image" data-bs-image-src="/images/users/1.jpg" style="background: url(&quot;../assets/images/users/1.jpg&quot;) center center;"></span>
+                                                        <div class="wd-90p">
+                                                            <div class="d-flex">
+                                                                <h5 class="mb-1">${user}</h5>
+                                                               
+                                                            </div>
+                                                            <span>${desc}</span>
+                                                        </div>
+                                                       </a>
+    `);
+    
+    console.log("message",user,message,description);
+});
+connection.onclose(async () => {
+    await start();
+});
+
+// Start the connection.
+start();
+    </script>
     <!-- Sticky js -->
     <script src="~/AdminFiles/js/sticky.js"></script>
     <script src="~/AdminFiles/js/sticky.js"></script>
@@ -504,7 +586,45 @@
 
         });
     });
+                $.ajax({
+                    type: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    url: `https://api.instudy.net/api/StudentRequest/GetNonSeenStudentRequests`,
+
+                    success: function (data) {
+                        if(data.data.length>0){
+                            $("#notificationHead").append("<span class='pulse-danger'></span>");
+                        }
+                        $.each(         
+                            data.data, function (i, value) {
+                                var desc=value.description.slice(0,20)+"...";
+                                $(`#notifications`).append(`
+                               <a class="dropdown-item d-flex" href="/Admin/Request/RequestDetail/${value.id}">
+                                                        <span class="avatar avatar-md brround me-3 align-self-center cover-image" data-bs-image-src="/images/users/1.jpg" style="background: url(&quot;../assets/images/users/1.jpg&quot;) center center;"></span>
+                                                        <div class="wd-90p">
+                                                            <div class="d-flex">
+                                                                            <h5 class="mb-1">${value.name} ${value.surName}</h5>
+                                                               
+                                                            </div>
+                                                            <span>${desc}</span>
+                                                        </div>
+                                                       </a>
+
+
+            `
+                                );
+                            }
+                        )
+
+                    }
+
+                });
+          
         } );
+           
+
 </script>
     <!-- CUSTOM JS -->
           <script src="~/AdminFiles/js/custom.js"></script>

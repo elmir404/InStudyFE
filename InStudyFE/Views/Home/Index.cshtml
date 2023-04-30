@@ -1,4 +1,11 @@
-﻿ @section Css{
+﻿@inject IViewLocalizer Localizer
+@model HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+    var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
+    var i = 0;
+}
+ @section Css{
      <style>
          *, ::after, ::before {
     box-sizing:unset;
@@ -184,14 +191,31 @@
      </style>
  }
 <div class="forlang">
-<div id="HomeSearchBackground">
+<div id="HomeSearchBackground" style="background-image:url(https://api.instudy.net/@Model.header.ContentFiles[0].Path)">
             <section id="SecondRow" class="col1 wrapped">
                <div class="colblock no-vertical-margin">
                   <div data-module="" class="Module StudyPortals_Shared_Modules_HomeSearchRR_HomeSearch">
                      <section id="HomeSearch">
                         <div class="HeadingTextWrapper">
                            <div id="homeHeader" class="HeadingTextBottom">
-                              
+                                @if (culture == "en")
+                                {
+                                    <h1 class="DegreeType"> @Model.header.EnBody </h1>
+                                    <h2 class="HeadingMainTitle">@Model.header.EnHeader  </h2>
+                                   
+                                }
+                                else if (culture == "ru")
+                                {
+                                    <h1 class="DegreeType"> @Model.header.RuBody </h1>
+                                    <h2 class="HeadingMainTitle">@Model.header.RuHeader  </h2>
+                                     
+                                }
+                                else
+                                {
+                                    <h1 class="DegreeType"> @Model.header.AzBody </h1>
+                                    <h2 class="HeadingMainTitle">@Model.header.AzHeader  </h2>
+                                   
+                                }
                            </div>
                         </div>
                        
@@ -209,16 +233,55 @@
                            <li class="OnboardingItem Explore">
                               <div class="OnboardingBullet"><i class="OnboardingIcon lnr-compass2"></i></div>
                               <div id="header1" class="OnboardingText">
+                                    @if (culture == "en")
+                                                {
+                                                    <p> <span class="ItemHeader">@Model.onboard[0]?.EnTitle</span> @Html.Raw(@Model.onboard[0]?.EnDescription) </p>
+                                                }
+                                                else if (culture == "ru")
+                                                {
+
+                                                     <p> <span class="ItemHeader">@Model.onboard[0]?.RuTitle</span> @Html.Raw(@Model.onboard[0]?.RuDescription) </p>
+                                                }
+                                                else
+                                                {
+                                        <p> <span class="ItemHeader">@Model.onboard[0]?.AzTitle</span> @Html.Raw(@Model.onboard[0]?.AzDescription) </p>
+                                                }
                               </div>
                            </li>
                            <li class="OnboardingItem Compare">
                               <div class="OnboardingBullet"><i class="OnboardingIcon lnr-compare"></i></div>
                               <div id="header2" class="OnboardingText">
+                                    @if (culture == "en")
+                                    {
+                                        <p> <span class="ItemHeader">@Model.onboard[1]?.EnTitle</span> @Html.Raw(@Model.onboard[1]?.EnDescription) </p>
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                        <p> <span class="ItemHeader">@Model.onboard[1]?.RuTitle</span> @Html.Raw(@Model.onboard[1]?.RuDescription) </p>
+                                    }
+                                    else
+                                    {
+                                        <p> <span class="ItemHeader">@Model.onboard[1]?.AzTitle</span>@Html.Raw(@Model.onboard[1]?.AzDescription) </p>
+                                    }
                               </div>
                            </li>
                            <li class="OnboardingItem Decide">
                               <div class="OnboardingBullet"><i class="OnboardingIcon lnr-archery"></i></div>
                               <div id="header3" class="OnboardingText">
+                                   @if (culture == "en")
+                                    {
+                                        <p> <span class="ItemHeader">@Model.onboard[2]?.EnTitle</span> @Html.Raw(@Model.onboard[2]?.EnDescription) </p>
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                        <p> <span class="ItemHeader">@Model.onboard[2]?.RuTitle</span>@Html.Raw(@Model.onboard[2]?.RuDescription)  </p>
+                                    }
+                                    else
+                                    {
+                                        <p> <span class="ItemHeader">@Model.onboard[2]?.AzTitle</span> @Html.Raw(@Model.onboard[2]?.AzDescription) </p>
+                                    }
                               </div>
                            </li>
                            <li class="OnboardingItem Apply">
@@ -239,6 +302,19 @@
                                  </i>
                               </div>
                               <div id="header4" class="OnboardingText">
+                                    @if (culture == "en")
+                                    {
+                                        <p> <span class="ItemHeader">@Model.onboard[3]?.EnTitle</span>@Html.Raw(@Model.onboard[3]?.EnDescription)  </p>
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                        <p> <span class="ItemHeader">@Model.onboard[3]?.RuTitle</span> @Html.Raw(@Model.onboard[3]?.RuDescription) </p>
+                                    }
+                                    else
+                                    {
+                                        <p> <span class="ItemHeader">@Model.onboard[3]?.AzTitle</span> @Html.Raw(@Model.onboard[3]?.AzDescription) </p>
+                                    }
                               </div>
                            </li>
                            <li class="OnboardingItem Apply">
@@ -248,6 +324,19 @@
                                  </i>
                               </div>
                               <div id="header5" class="OnboardingText">
+                                  @if (culture == "en")
+                                    {
+                                        <p> <span class="ItemHeader">@Model.onboard[4]?.EnTitle</span>@Html.Raw(@Model.onboard[4]?.EnDescription) </p>
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                        <p> <span class="ItemHeader">@Model.onboard[4]?.RuTitle</span> @Html.Raw(@Model.onboard[4]?.RuDescription) </p>
+                                    }
+                                    else
+                                    {
+                                        <p> <span class="ItemHeader">@Model.onboard[4]?.AzTitle</span> @Html.Raw(@Model.onboard[4]?.AzDescription) </p>
+                                    }
                               </div>
                            </li>
                         </ul>
@@ -279,7 +368,90 @@
                      <section id="CountrySpotlight">
                         <h2 id="homeCountryHeader" class="CountrySpotlightTitle">Discover other countries</h2>
                         <div id="CountrySpotlightContainer">
-                          
+                          @foreach (var country in Model.country)
+                            {
+                                i++;
+                                @if(i<=10){
+                                    <figure data-clickable="clickable">
+                                        <a href="/Country/Detail?countryId=@country.Id" title=" ">
+                                            <span class="Picture" data-file-url="" data-title="">
+                                                <picture>
+                                                    <source media="all and (max-width: 30em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
+                                                    <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
+                                                    <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
+                                                    <source media="all and (min-width: 80.063em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
+                                                    <img src="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path" width="143" style="width:236px;height:158px;object-fit: cover;" height="95">
+                                                </picture>
+                                            </span>
+                                            <figcaption>
+                                                @if (culture == "en")
+                                                {
+                                                    <span>@country.EnName  </span>
+                                                    <div class="Toggle">
+                                                        @Html.Raw(country.EnAbout)
+                                                    </div>
+                                                }
+                                                else if (culture == "ru")
+                                                {
+
+                                                    <span>@country.RuName  </span>
+                                                    <div class="Toggle">
+                                                        @Html.Raw(country.RuAbout)
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <span>@country.AzName  </span>
+                                                    <div class="Toggle">
+                                                        @Html.Raw(country.AzAbout)
+                                                    </div>
+                                                }
+
+                                            </figcaption>
+                                        </a>
+                                    </figure>
+                                }else{
+                                     <figure class="hiddenCountry Hidden"data-clickable="clickable">
+                                        <a href="/Country/Detail?countryId=@country.Id" title=" ">
+                                            <span class="Picture" data-file-url="" data-title="">
+                                                <picture>
+                                                    <source media="all and (max-width: 30em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
+                                                    <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
+                                                    <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
+                                                    <source media="all and (min-width: 80.063em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
+                                                    <img src="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path" width="143" style="width:236px;height:158px;object-fit: cover;" height="95">
+                                                </picture>
+                                            </span>
+                                            <figcaption>
+                                                @if (culture == "en")
+                                                {
+                                                    <span>@country.EnName  </span>
+                                                    <div class="Toggle">
+                                                        @Html.Raw(country.EnAbout)
+                                                    </div>
+                                                }
+                                                else if (culture == "ru")
+                                                {
+
+                                                    <span>@country.RuName  </span>
+                                                    <div class="Toggle">
+                                                        @Html.Raw(country.RuAbout)
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <span>@country.AzName  </span>
+                                                    <div class="Toggle">
+                                                        @Html.Raw(country.AzAbout)
+                                                    </div>
+                                                }
+
+                                            </figcaption>
+                                        </a>
+                                    </figure>
+                                }
+                               
+                          }
                           
                         </div>
                     <div class="ViewAll"> <a style="cursor:pointer;" id="viewMore" class="countryMore" title="View all countries"></a> </div>
@@ -345,8 +517,10 @@
         <div class="faq-section-detail colblock">
                 <div id="questionHeader" class="faq-section-detail-text">
                 </div>
-                <div class="faq-section-detail-accordion mt-5">
-                    <div class="accordion accordion-div mt-5" id="questionAcc">
+            </div>
+            <div class="faq-section-detail colblock">
+                <div class="faq-section-detail-accordion">
+                    <div class="accordion accordion-div" id="questionAcc">
 
                        
                     </div>
@@ -376,7 +550,7 @@
                         $(element).toggleClass('active');
                     }
                 };     
-                
+              
           </script>
     <script src="~/js/headers.js"></script>
    

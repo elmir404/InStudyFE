@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace InStudyFE.Extensions
@@ -14,11 +13,10 @@ namespace InStudyFE.Extensions
         }
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            var hasAllRequredClaims = _requiredClaims.All(claim => context.HttpContext.User.HasClaim(x => x.Value == claim));
-            //var hasAllRequredClaims = _requiredClaims.All(claim => role==claim);
-            if (!hasAllRequredClaims)
+            var isAuthenticated = context.HttpContext.User.Identity.IsAuthenticated;
+            if (!isAuthenticated)
             {
-                context.Result = new RedirectToActionResult("Login", "Account",null);
+                context.Result = new RedirectToActionResult("Login", "Account", null);
                 return;
             }
         }

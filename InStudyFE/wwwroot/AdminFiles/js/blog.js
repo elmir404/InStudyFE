@@ -4,6 +4,7 @@
             url: 'https://api.instudy.net/api/Blogs/GetActiveBlogs',
             dataSrc: 'data'
         },
+        autoWidth: false,
         columns: [
             {
                 data: 'blogFiles', render: function (data, type, row, meta) {
@@ -46,6 +47,10 @@
 
 
 
+        ],
+        columnDefs: [
+            { width: '10%', targets: [0,1, 2,3,4] },
+            
         ]
     });
     $("#addBlog").click(function () {
@@ -96,19 +101,36 @@ function Edit(blog) {
 
 }
 function Delete(blog) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                type: "PUT",
+                url: `https://api.instudy.net/api/Blogs/DeleteBlog?blogId=${blog}`, 
+                success: function (result) {
+                    if (result.success == true) {
+                        Swal.fire(
+                            'Deleted!',
+                            'Your file has been deleted.',
+                            'success'
+                        ).then((result) => { if (result.isConfirmed) { location.reload(); } });
 
-    $.ajax({
-        type: "PUT",
-        url: `https://api.instudy.net/api/Blogs/DeleteBlog?blogId=${blog}`, 
-        success: function (result) {
-            if (result.success == true) {
-                location.href = `/Admin/Blog/List`;
-            }
-            else {
-                alert(result.message)
-            }
+                    }
+                    else {
+                        alert(result.message)
+                    }
+                }
+            });
+
         }
-    });
-    
+    })
+   
 
 }

@@ -10,6 +10,7 @@
             { data: 'surname' },
             { data: 'userName' },
             { data: 'email' },
+            { data: 'position' },
             
            
 
@@ -25,7 +26,7 @@
         var type = $("#claimType").val();
         $.ajax({
             type: "POST",
-            url: 'https://fainablogapi.herokuapp.com/api/Meets/AddMeet',
+            url: 'https://api.instudy.net/api/Users/AddClaim',
             contentType: 'application/json',
             data: JSON.stringify({
 
@@ -37,7 +38,7 @@
             }),
             success: function (response) {
                 if (response.success == true) {
-                    location.href = "/FainaAdmin/User/List"
+                    location.href = "/Admin/User/List"
                 } else {
                     alert(response.message);
                 }

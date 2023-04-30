@@ -9,7 +9,56 @@
         },
         url: `https://api.instudy.net/api/AboutQuestion/GetAboutQuestion?id=${questionId}`,
         success: function (data) {
+            $.ajax({
+                type: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
 
+                },
+                url: `https://api.instudy.net/api/Question/GetQuestions`,
+
+                success: function (result) {
+                    var html = [];
+                    $.each(
+                        result.data, function (i, value) {
+                            var isSelected = false;
+                            $.each(
+                                data.data.questions, function (p, pvalue) {
+                                    console.log(pvalue);
+                                    if (pvalue.id == value.id) {
+                                        isSelected = true;
+                                        debugger;
+
+                                    }
+                                    else {
+                                        isSelected = false;
+                                    }
+
+                                });
+                            if (isSelected) {
+                                html.push(
+                                    `
+                                                                                <option selected value="${value.id}">${value.enQuestionTitle}</option>
+
+                                                                             `
+                                );
+                            } else {
+                                html.push(
+                                    `
+                                                                                <option value="${value.id}">${value.enQuestionTitle}</option>
+
+                                                                             `
+                                );
+
+                            }
+
+                        }
+                    )
+                    $('#questions').html(html.join('')).multipleSelect({ position: 'top' });
+                }
+
+            });
             console.log(data);
             $form.empty()
 

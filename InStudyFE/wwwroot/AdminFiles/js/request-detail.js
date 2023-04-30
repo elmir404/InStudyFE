@@ -1,13 +1,27 @@
 ﻿$(document).ready(function () {
-    const aboutId = localStorage.getItem('requestId');
+    var pathname = window.location.pathname;
+    console.log(pathname);
+    const linkValues = pathname.split("/");
+    $.ajax({
+        type: "POST",
+        url: `https://api.instudy.net/api/StudentRequest/MakeSeenRequest?id=${linkValues[4]}`,
+        success: function (result) {
+            if (result.success == true) {
+               
 
+            }
+            else {
+                alert(result.message)
+            }
+        }
+    });
     var $aboutForm = $('#form')
     $.ajax({
         type: 'GET',
         headers: {
             'Content-Type': 'application/json'
         },
-        url: `https://api.instudy.net/api/StudentRequest/GetStudentRequest?id=${aboutId}`,
+        url: `https://api.instudy.net/api/StudentRequest/GetStudentRequest?id=${linkValues[4]}`,
         success: function (data) {
 
             console.log(data);

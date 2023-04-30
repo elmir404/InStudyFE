@@ -34,6 +34,41 @@
 
         ]
     });
+    $('#nonseed-requests').DataTable({
+        ajax: {
+            url: 'https://api.instudy.net/api/StudentRequest/GetNonSeenStudentRequests',
+            dataSrc: 'data'
+        },
+        columns: [
+            {
+                data: 'name',
+            },
+            { data: 'email' },
+            { data: 'phone' },
+
+            
+            {
+                data: 'id', render: function (data, type, row, meta) {
+                    return `<div class="btn-list">
+                            <button onclick=Delete(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-danger">
+                                <span class="fe fe-trash-2"> </span>
+                            </button>
+ <button onclick=Edit(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-success">
+                                <i class="fe fe-eye"></i>
+                            </button>
+                        </div>
+                        `;
+
+
+
+                }
+            },
+
+
+
+
+        ]
+    });
     //var $messages = $('#messages');
     //function getBlogs() {
     //    $.ajax({
@@ -89,27 +124,63 @@
 
     //});
     //getBlogs();
+    $("#excelButton").click(function () {
+        $.ajax({
+            type: "POST",
+            url: 'https://api.instudy.net/api/StudentRequest/ExportToExcel',
+           
+           
+           
+            complete: function (response) {
+                if (response.status == 200) {
+                    $(`#excelLink`).html(`<a href="https://api.instudy.net/${response.responseJSON.message}" class="btn btn-success mb-4 data-table-btn" rel="nofollow">Download Here</a>`);
+                }
+                else {
+                    alert("error")
+                }
+
+            },
+        });
+
+
+    });
 });
 function Delete(message) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                type: "PUT",
+                url: `https://api.instudy.net/api/StudentRequest/DeleteStudentRequest?id=${message}`,
+                success: function (result) {
+                    if (result.success == true) {
+                        Swal.fire(
+                            'Deleted!',
+                            'Your file has been deleted.',
+                            'success'
+                        ).then((result) => { if (result.isConfirmed) { location.reload(); } });
 
-    $.ajax({
-        type: "PUT",
-        url: `https://api.instudy.net/api/StudentRequest/DeleteStudentRequest?id=${message}`,
-        success: function (result) {
-            if (result.success == true) {
-                location.href = `/Admin/Request/RequestList`;
-            }
-            else {
-                alert(result.message)
-            }
+                    }
+                    else {
+                        alert(result.message)
+                    }
+                }
+            });
+
         }
-    });
-
+    })
+  
 
 }
 function Edit(id) {
-
-    localStorage.setItem('requestId', id);
-    location.href = `/Admin/Request/RequestDetail`;
+    debugger;
+    location.href = `/Admin/Request/RequestDetail/${id}`;
 
 }
