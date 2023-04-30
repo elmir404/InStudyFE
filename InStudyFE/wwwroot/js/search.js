@@ -2,7 +2,7 @@
     var $program = localStorage.getItem('program');
     var $country = localStorage.getItem('country');
     var $direction = localStorage.getItem('direction');
-    
+  
    
     const $lang = localStorage.getItem('lang');
     if ($lang == 'AZ') {
@@ -54,13 +54,22 @@
                         var name = value.ruName;
 
                     }
-
-                    $(`#disciplinesSearch`).append(
-                        `
-                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="disciplines" class="CheckboxInput" data-filter="ci" value="${name}" data-v-01633eac=""><span data-v-01633eac="">${name}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--></ul></li>
+                    if (name == $direction) {
+                        $(`#disciplinesSearch`).append(
+                            `
+                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="disciplines" class="CheckboxInput" data-filter="ci" checked value="${name}" data-v-01633eac=""><span data-v-01633eac="">${name}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--></ul></li>
                                          
                                          `
-                    )
+                        )
+                    } else {
+                        $(`#disciplinesSearch`).append(
+                            `
+                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="disciplines" class="CheckboxInput" data-filter="ci"  value="${name}" data-v-01633eac=""><span data-v-01633eac="">${name}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--></ul></li>
+                                         
+                                         `
+                        )
+                    }
+                    
 
                 }
             )
@@ -92,13 +101,22 @@
                         var name = value.ruName;
 
                     }
-
-                    $(`#locationSearch`).append(
-                        `
+                    if (name == $country) {
+                        $(`#locationSearch`).append(
+                            `
+                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="location" class="CheckboxInput" data-filter="ci" checked value="${name}" data-v-01633eac=""><span data-v-01633eac="">${name}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--></ul></li>
+                                         
+                                         `
+                        )
+                    } else {
+                        $(`#locationSearch`).append(
+                            `
                                  <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="location" class="CheckboxInput" data-filter="ci" value="${name}" data-v-01633eac=""><span data-v-01633eac="">${name}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--></ul></li>
                                          
                                          `
-                    )
+                        )
+                    }
+                  
 
                 }
             )
@@ -134,13 +152,22 @@
                         var description = value?.ruDescription;
 
                     }
-
-                    $(`#searchProgram`).append(
-                        `
-                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="location" class="CheckboxInput" data-filter="ci" value="${name}" data-v-01633eac=""><span data-v-01633eac="">${name}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--></ul></li>
+                    if (name == $program) {
+                        $(`#searchProgram`).append(
+                            `
+                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="program" class="CheckboxInput" data-filter="ci" checked value="${name}" data-v-01633eac=""><span data-v-01633eac="">${name}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--></ul></li>
                                          
                                          `
-                    )
+                        )
+                    } else {
+                        $(`#searchProgram`).append(
+                            `
+                                 <li data-v-a8327806=""><div class="" data-v-01633eac="" data-v-a8327806=""><label class="CheckboxRow" data-v-01633eac=""><div data-v-01633eac=""><input type="checkbox" name="program" class="CheckboxInput" data-filter="ci" value="${name}" data-v-01633eac=""><span data-v-01633eac="">${name}</span></div><div class="FacetContainer" data-v-01633eac=""><span class="Facet" data-v-01633eac=""></span><div class="AreaSwitcher" data-v-01633eac=""></div></div></label></div><ul class="AreaFilterWrapper" data-v-dd3ea9ca="" data-v-a8327806=""><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--></ul></li>
+                                         
+                                         `
+                        )
+                    }
+                    
 
                 }
             )
@@ -219,12 +246,12 @@
         console.log($programSearch);
         debugger;
         var formData = new FormData();
-        if ($country!="")
-            formData.append('CountryNames', $country);
-        if ($program != "")
-            formData.append('ProgramNames', $program);
-        if ($direction != "")
-        formData.append('DirectionNames', $direction);
+        if (localStorage.getItem('country') !="")
+            formData.append('CountryNames', localStorage.getItem('country'));
+        if (localStorage.getItem('program') != "")
+            formData.append('ProgramNames', localStorage.getItem('program'));
+        if (localStorage.getItem('direction') != "")
+            formData.append('DirectionNames', localStorage.getItem('direction'));
         if ($disciplinesSearch != null)
         for (var i = 0; i < $disciplinesSearch.length; i++) {
             formData.append('DirectionNames', $disciplinesSearch[i]);
@@ -351,12 +378,16 @@
     var locArr = [];
     $(document).on("change", "input[name='location']", function () {
        
-       
         if (this.checked) {
             localStorage.setItem('locationSearch', "");
             locArr.push($(this).val());
             localStorage.setItem('locationSearch', JSON.stringify(locArr));
         } else {
+            if ($(this).val() == localStorage.getItem('country')) {
+                degreArr.push($(this).val());
+                localStorage.setItem('locationSearch', JSON.stringify(degreArr));
+                localStorage.setItem('country', "");
+            }
             localStorage.setItem('locationSearch', "");
 
             locArr.splice($.inArray($(this).val(), locArr), 1);
@@ -367,13 +398,19 @@
     });
     var descArr = [];
     $(document).on("change", "input[name='disciplines']", function () {
-        
+       
+
        
         if (this.checked) {
             localStorage.setItem('disciplinesSearch', "");
             descArr.push($(this).val());           
             localStorage.setItem('disciplinesSearch', JSON.stringify(descArr));
         } else {
+            if ($(this).val() == localStorage.getItem('direction')) {
+                degreArr.push($(this).val());
+                localStorage.setItem('disciplinesSearch', JSON.stringify(degreArr));
+                localStorage.setItem('direction', "");
+            }
             localStorage.setItem('disciplinesSearch', "");
            descArr.splice($.inArray($(this).val(), descArr), 1);            
             localStorage.setItem('disciplinesSearch', JSON.stringify(descArr));
@@ -384,7 +421,6 @@
     });
     var durArr = [];
     $(document).on("change", "input[name='durations']", function () {
-        console.log("sadsadasd")
        
         if (this.checked) {
             localStorage.setItem('durationsSearch', "");
@@ -419,19 +455,26 @@
     });
     var degreArr = [];
     $(document).on("change", "input[name='program']", function () {
-        
        
         if (this.checked) {
-            localStorage.setItem('programSearch',"");
+            localStorage.setItem('programSearch', "");
+            debugger;
+            
             degreArr.push($(this).val());
             localStorage.setItem('programSearch', JSON.stringify(degreArr));
         } else {
+            if ($(this).val() == localStorage.getItem('program')) {
+                degreArr.push($(this).val());
+                localStorage.setItem('programSearch', JSON.stringify(degreArr));
+                localStorage.setItem('program', "");
+            }
+               
             localStorage.setItem('programSearch', "");
             degreArr.splice($.inArray($(this).val(), degreArr), 1);
             localStorage.setItem('programSearch', JSON.stringify(degreArr));
 
         }
-       
+        localStorage.setItem('programSearch', JSON.stringify(degreArr));
         searchUniversity();
     });
 

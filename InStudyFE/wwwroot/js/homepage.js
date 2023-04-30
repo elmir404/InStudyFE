@@ -595,7 +595,6 @@
 
     
     $(document).on('click', '#searchButton', async function () {
-        console.log("adsadsad");
         localStorage.setItem('program', $(`#programInput1`).val());
         localStorage.setItem('country', $(`#countryInput`).val());
         localStorage.setItem('direction', $(`#directionInput`).val());
