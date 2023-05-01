@@ -3830,6 +3830,7 @@ p.container-text {
     body #galactus .WrappedContent {
         margin: 0 auto;
         max-width: 960px;
+        
     }
 
     body #galactus #DetailsInformation div.Module:not(.Hidden):not(.EmptyModule) {

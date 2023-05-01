@@ -1,7 +1,18 @@
 ﻿$(document).ready(function () {
-
-    var $country = $('#countryList');
     const $lang = localStorage.getItem('lang');
+    debugger;
+    if ($lang == 'AZ') {
+        $(`#countrypageHeader`).html("Ölkələr");
+    }
+    else if ($lang == 'EN') {
+        $(`#countrypageHeader`).html("Countries");
+    }
+    else {
+        $(`#countrypageHeader`).html("Страны");
+
+    }
+    var $country = $('#countryList');
+    
     function getCountry() {
         $.ajax({
             type: 'GET',

@@ -279,17 +279,26 @@
                         <div id="DisciplineHeader">
                         @if (culture == "en")
                         {
-                            <img alt="image" style="width:100px !important;" class="text-center img-responsive" src="https://api.instudy.net/@Model.DirectionFiles[0].Path">
+                            if(Model.DirectionFiles.Count>0){
+                                 <img alt="image" style="width:100px !important;" class="text-center img-responsive" src="https://api.instudy.net/@Model?.DirectionFiles[0]?.Path">
+                            }
+                           
                             <h1>@Model.EnName</h1>
                         }
                         else if (culture == "ru")
                         {
-                            <img alt="image" style="width:100px !important;" class="text-center img-responsive" src="https://api.instudy.net/@Model.DirectionFiles[0].Path">
+                            if (Model.DirectionFiles.Count > 0)
+                            {
+                                <img alt="image" style="width:100px !important;" class="text-center img-responsive" src="https://api.instudy.net/@Model?.DirectionFiles[0]?.Path">
+                            }
                             <h1>@Model.RuName</h1>
                         }
                         else
                         {
-                            <img alt="image" style="width:100px !important;" class="text-center img-responsive" src="https://api.instudy.net/@Model.DirectionFiles[0].Path">
+                            if (Model.DirectionFiles.Count > 0)
+                            {
+                                <img alt="image" style="width:100px !important;" class="text-center img-responsive" src="https://api.instudy.net/@Model?.DirectionFiles[0]?.Path">
+                            }
                             <h1>@Model.AzName</h1>
                         }
                         </div>

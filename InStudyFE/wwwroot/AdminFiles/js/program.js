@@ -88,10 +88,9 @@
         formData.append('EnName', $("#enHeader").val());
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
+        formData.append('RuDescription', $("#ruDescription").val());s
       
-        console.log(formData);
-
+        x
         $.ajax({
             type: "POST",
             url: 'https://api.instudy.net/api/Program/AddPorgram',

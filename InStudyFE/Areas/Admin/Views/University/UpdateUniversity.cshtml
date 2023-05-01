@@ -33,7 +33,7 @@
                                     <div class="row">
                                         <label class="col-md-3 form-label mb-4">Direction</label>
                                         <div class="col-md-9 mb-4">
-                                            <select  multiple="multiple" id="direction">
+                                            <select onchange="selectFunction()" multiple="multiple" id="direction">
                                             </select>
                                         </div>
                                     </div>
@@ -86,43 +86,43 @@
     <script src="~/AdminFiles/js/update-university.js"></script>
        
            <script>
-        //function selectFunction() {
-        //           debugger;
-        //            var direction = $("#direction").val();
-        //            $("#speciality").empty();
+        function selectFunction() {
+                   debugger;
+                    var direction = $("#direction").val();
+                    $("#speciality").empty();
 
-        //            var formData = new FormData();
-        //            for (var i = 0; i < direction.length; i++) {
-        //                formData.append('DirectionIds', direction[i]);
-        //            }
-        //    var html = [];
-        //    $.ajax({
-        //        type: "POST",
-        //        url: `https://api.instudy.net/api/Speciality/SearchSpeciality?currentPage=1&pageSize=100`,
-        //        data: formData,
-        //        processData: false,  // tell jQuery not to process the data
-        //        contentType: false,
-        //    }).done(function (response) {
-        //        if (response.data.dataCount > 0) {
-        //        $.each(
-        //            response?.data.value, function (i, value) {
-        //                console.log(value);
-        //                    html.push(
-        //                        `
-        //                                                                                <option value="${value.id}">${value.enName}</option>
+                    var formData = new FormData();
+                    for (var i = 0; i < direction.length; i++) {
+                        formData.append('DirectionIds', direction[i]);
+                    }
+            var html = [];
+            $.ajax({
+                type: "POST",
+                url: `https://api.instudy.net/api/Speciality/SearchSpeciality?currentPage=1&pageSize=100`,
+                data: formData,
+                processData: false,  // tell jQuery not to process the data
+                contentType: false,
+            }).done(function (response) {
+               console.log("response",response);
+                if (response.data.dataCount > 0) {
+                  $.each(
+                    response?.data.value, function (i, value) {
+                           $('#speciality').append(
+                                `
+                                                                                        <option value="${value.id}">${value.enName}</option>
 
-        //                                                                             `
-        //                    );
-        //            }
-        //        );
-        //        }
+                                                                                     `
+                            );
+                    }
+                );
+                }
                
-        //    });
-        //    $('#speciality').html(html.join('')).multipleSelect();
-        //    $('#speciality').multiple('refresh');
+            });
+           
+        
 
 
-        //}
+        }
        
      
     </script>
@@ -142,10 +142,10 @@
             var confirmationMessage = 'It looks like you have been editing something. '
                 + 'If you leave before saving, your changes will be lost.';
 
-            (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+          
             debugger;
             if ($("#form").data("changed") && isClicked == false) {
-
+                (e || window.event).returnValue = confirmationMessage; //Gecko + IE
                 return confirmationMessage;
 
             }

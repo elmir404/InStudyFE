@@ -32,7 +32,6 @@
                                 <div class="col-md-3"></div>
                                 <div class="col-md-9">
                                     <a href="javascript:void(0)" id="updateAbout" class="btn btn-primary">Update About</a>
-                                    <a href="javascript:void(0)" class="btn btn-default float-end">Discard</a>
                                 </div>
                             </div>
                             <!--End Row-->
@@ -49,7 +48,7 @@
     <script src="~/AdminFiles/js/update-about.js"></script>
     <script>
         $("#form :input").change(function () {
-
+            debugger;
             $("#form").data("changed", true);
         });
         var isClicked = false;
@@ -63,10 +62,10 @@
             var confirmationMessage = 'It looks like you have been editing something. '
                 + 'If you leave before saving, your changes will be lost.';
 
-            (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+          
             debugger;
             if ($("#form").data("changed") && isClicked == false) {
-
+                (e || window.event).returnValue = confirmationMessage; //Gecko + IE
                 return confirmationMessage;
 
             }

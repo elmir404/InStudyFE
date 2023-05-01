@@ -206,7 +206,7 @@
 
                         }
                     )
-                    $('#speciality').html(html.join('')).multipleSelect();
+                    $('#speciality').html(html.join(''));
                 }
 
             });

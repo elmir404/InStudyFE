@@ -10,7 +10,6 @@
         url: `https://api.instudy.net/api/AboutCompany/GetAboutCompany?id=${aboutId}`,
         success: function (data) {
 
-            console.log(data);
             $aboutForm.empty()
 
             $aboutForm.append(

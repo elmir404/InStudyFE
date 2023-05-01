@@ -262,7 +262,7 @@
             }
         if ($locations != null)
         for (var i = 0; i < $locations.length; i++) {
-            formData.append('Addresses', $locations[i]);
+            formData.append('CountryNames', $locations[i]);
             }
         if ($durationSearch != null)
         for (var i = 0; i < $durationSearch.length; i++) {
@@ -384,8 +384,8 @@
             localStorage.setItem('locationSearch', JSON.stringify(locArr));
         } else {
             if ($(this).val() == localStorage.getItem('country')) {
-                degreArr.push($(this).val());
-                localStorage.setItem('locationSearch', JSON.stringify(degreArr));
+                locArr.push($(this).val());
+                localStorage.setItem('locationSearch', JSON.stringify(locArr));
                 localStorage.setItem('country', "");
             }
             localStorage.setItem('locationSearch', "");
@@ -406,9 +406,10 @@
             descArr.push($(this).val());           
             localStorage.setItem('disciplinesSearch', JSON.stringify(descArr));
         } else {
-            if ($(this).val() == localStorage.getItem('direction')) {
-                degreArr.push($(this).val());
-                localStorage.setItem('disciplinesSearch', JSON.stringify(degreArr));
+            debugger;
+            if ($(this).val() == localStorage.getItem('direction')) {   
+                descArr.push($(this).val());
+                localStorage.setItem('disciplinesSearch', JSON.stringify(descArr));
                 localStorage.setItem('direction', "");
             }
             localStorage.setItem('disciplinesSearch', "");
@@ -416,7 +417,7 @@
             localStorage.setItem('disciplinesSearch', JSON.stringify(descArr));
 
         }
-
+        localStorage.setItem('disciplinesSearch', JSON.stringify(degreArr));
         searchUniversity();
     });
     var durArr = [];
