@@ -61,17 +61,12 @@
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
         formData.append('EnName', $("#enHeader").val());
-        formData.append('Description', $("#azDescription").val());
+        formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
         formData.append('countryId', $("#country").val());
         formData.append('Address', $("#uniAdrress").val());
-        formData.append('MapAdrress', $("#uniMapAdrress").val());
-        formData.append('StudentCount', $("#stCount").val());
-        formData.append('AcademicStaff', $("#acdmStaff").val());
-        formData.append('StartDate', $("#startDate").val());
-        formData.append('ApplyDate', $("#applyDate").val());
-        formData.append('Rank', $("#rank").val());
+        
         formData.append('AzBachelor', $("#azBachelor").val());
         formData.append('RuBachelor', $("#ruBachelor").val());
         formData.append('EnBachelor', $("#enBachelor").val());

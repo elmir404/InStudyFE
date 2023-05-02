@@ -47,6 +47,8 @@
 @section Scripts{
     <script src="~/AdminFiles/js/update-gostudy.js"></script>
     <script>
+        $(document).ready(function () {
+          
         $(document).on('change', '#azHeader', function () {
             debugger;
             $("#form").data("changed", true);
@@ -93,6 +95,7 @@
             }
 
             //Gecko + Webkit, Safari, Chrome etc.
+        });
         });
 
 

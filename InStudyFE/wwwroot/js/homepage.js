@@ -437,7 +437,7 @@
 
 
                     $(`#goStudys`).append(`
-                                                <li class="SubSectionContentItem"> <a class="ContentItemLink js-ContentItemLink" href="/GoStudy/Index/value${value.id}" title="${name1}">${name1} </a> </li>
+                                                <li class="SubSectionContentItem"> <a class="ContentItemLink js-ContentItemLink" href="/GoStudy/Index?studyId=${value.id}" title="${name1}">${name1} </a> </li>
                                  
 
 `

@@ -137,7 +137,7 @@
                                     }
                                     else
                                     {
-                            <h1><b>@Model.AzName</b></h1>
+                                  <h1><b>@Model.AzName</b></h1>
                                     }
             </section>
                     </div>
@@ -164,7 +164,7 @@
                                     }
                                     else
                                     {
-                                        @Html.Raw(@Model.EnDescription)
+                                        @Html.Raw(@Model.AzDescription)
                                     }
                                     </article>
                                 </div>
@@ -219,9 +219,26 @@
             <div id="SwitchableContentButtons" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
                <div id="ContentSwitcherWrapper" class="ContentSwitcherWrapper">
                   <nav id="ContentSwitcher" class="ContentSwitcher">
-                                <button type="button" class="ContentButton js-contentButtons description is-active " id="overview" onclick="swith('overview')"> Overview </button>
-                                <button type="button" class="ContentButton js-contentButtons contents" id="bachelor" onclick="swith('bachelor')"> Bachelor </button>
-                                <button type="button" class="ContentButton js-contentButtons requirement" id="master" onclick="swith('master')"> Master </button>
+                        @if (culture == "en")
+                                    {
+                                        <button type="button" class="ContentButton js-contentButtons description is-active " id="overview" onclick="swith('overview')"> Overview </button>
+                                        <button type="button" class="ContentButton js-contentButtons contents" id="bachelor" onclick="swith('bachelor')"> Bachelor </button>
+                                        <button type="button" class="ContentButton js-contentButtons requirement" id="master" onclick="swith('master')"> Master </button>
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                <button type="button" class="ContentButton js-contentButtons description is-active " id="overview" onclick="swith('overview')"> Обзор </button>
+                                <button type="button" class="ContentButton js-contentButtons contents" id="bachelor" onclick="swith('bachelor')"> Холостяк </button>
+                                <button type="button" class="ContentButton js-contentButtons requirement" id="master" onclick="swith('master')"> Владелец </button>
+                                    }
+                                    else
+                                    {
+                                <button type="button" class="ContentButton js-contentButtons description is-active " id="overview" onclick="swith('overview')"> Ümumi baxış </button>
+                                <button type="button" class="ContentButton js-contentButtons contents" id="bachelor" onclick="swith('bachelor')"> Bakalavr </button>
+                                <button type="button" class="ContentButton js-contentButtons requirement" id="master" onclick="swith('master')"> Maqistratura </button>
+                                    }
+                             
                   </nav>
                </div>
             </div>

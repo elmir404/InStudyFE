@@ -13,7 +13,7 @@
     <meta name="keywords" content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
     
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="~/AdminFiles/images/brand/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/images/favicon.png" />
 
     <!-- TITLE -->
     <title>InStudy | Admin</title>
@@ -159,11 +159,11 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                         <!-- SIDE-MENU -->
                                         <div class="dropdown d-flex profile-1">
                                             <a href="javascript:void(0)" data-bs-toggle="dropdown" class="nav-link leading-none d-flex">
-                                                <img src="~/AdminFiles/images/users/21.jpg" alt="profile-user"
+                                                <img src="~/images/favicon.png" alt="profile-user"
                                                     class="avatar  profile-user brround cover-image">
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                                <a class="dropdown-item" id="logOut">
+                                                <a class="dropdown-item" href="#" id="logOut">
                                                     <i class="dropdown-icon fe fe-alert-circle"></i> Sign out
                                                 </a>
                                             </div>
@@ -221,13 +221,13 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 </ul>
                             </li>
                               <li class="sub-category">
-                                <h3>Faculty</h3>
+                                <h3>Direction</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Faculty</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Direction</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="DirectionList" asp-controller="Direction">Faculty List</a></li>
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddDirection" asp-controller="Direction">Add Faculty</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="DirectionList" asp-controller="Direction">Direction List</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddDirection" asp-controller="Direction">Add Direction</a></li>
                                 </ul>
                             </li>
                             <li class="sub-category">
@@ -240,13 +240,13 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                      <li class="slide-item"><a asp-area="Admin" asp-action="AddUniversity" asp-controller="University">Add University</a></li>
                                 </ul>
                             </li> <li class="sub-category">
-                                <h3>Speciality</h3>
+                                <h3>Faculty</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Speciality</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Faculty</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="SpecialityList" asp-controller="Speciality">Speciality List</a></li>
-                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddSpeciality" asp-controller="Speciality">Add Speciality</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="SpecialityList" asp-controller="Speciality">Faculty List</a></li>
+                                    <li class="slide-item"><a asp-area="Admin" asp-action="AddSpeciality" asp-controller="Speciality">Add Faculty</a></li>
                                 </ul>
                             </li>
                             <li class="sub-category">

@@ -47,10 +47,19 @@
 @section Scripts {
     <script src="~/AdminFiles/js/update-program.js"></script>
     <script>
-        $("#formProgram :input").change(function () {
-
-            $("#formProgram").data("changed", true);
-        });
+        $(document).ready(function () {
+            $(document).on('change', '#azHeader', function () {
+                debugger;
+                $("#formProgram").data("changed", true);
+            });
+            $(document).on('change', '#enHeader', function () {
+                debugger;
+                $("#formProgram").data("changed", true);
+            });
+            $(document).on('change', '#ruHeader', function () {
+                debugger;
+                $("#formProgram").data("changed", true);
+            });
         var isClicked = false;
         $('#updateProgram').on('click', function (evt) {
             debugger;
@@ -71,6 +80,7 @@
             }
 
             //Gecko + Webkit, Safari, Chrome etc.
+        });
         });
 
 

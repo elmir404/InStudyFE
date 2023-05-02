@@ -18,7 +18,7 @@
             <!-- ROW-1 OPEN -->
             <div class="row">
                 <div class="col-lg-12">
-                    <form id="form" class="card">
+                    <form id="formSpeciality" class="card">
                         <div class="card-header">
                             <div class="card-title">Update Speciality</div>
                         </div>
@@ -56,10 +56,22 @@
 @section Scripts {
     <script src="~/AdminFiles/js/update-speciality.js"></script>
     <script>
-        $("#form :input").change(function () {
-
-            $("#form").data("changed", true);
-        });
+        $(document).ready(function () {
+            $(document).on('change', '#azHeader', function () {
+                debugger;
+                $("#formSpeciality").data("changed", true);
+            });
+            $(document).on('change', '#enHeader', function () {
+                debugger;
+                $("#formSpeciality").data("changed", true);
+            });
+            $(document).on('change', '#ruHeader', function () {
+                debugger;
+                $("#formSpeciality").data("changed", true);
+            }); $(document).on('change', '#files', function () {
+                debugger;
+                $("#formSpeciality").data("changed", true);
+            });
         var isClicked = false;
         $('#updateSpeciality').on('click', function (evt) {
             debugger;
@@ -73,13 +85,14 @@
 
            
             debugger;
-            if ($("#form").data("changed") && isClicked == false) {
+                if ($("#formSpeciality").data("changed") && isClicked == false) {
                 (e || window.event).returnValue = confirmationMessage; //Gecko + IE
                 return confirmationMessage;
 
             }
 
             //Gecko + Webkit, Safari, Chrome etc.
+        });
         });
 
 

@@ -108,10 +108,45 @@
 @section Scripts{
     <script src="~/AdminFiles/js/about.js"></script>
         <script>
-            $("#form :input").change(function () {
-
-                $("#form").data("changed", true);
-            });
+            $(document).ready(function () {
+                $(document).on('change', '#address', function () {
+                    debugger;
+                    $("#form").data("changed", true);
+                }); $(document).on('change', '#phone', function () {
+                    debugger;
+                    $("#form").data("changed", true);
+                }); $(document).on('change', '#email', function () {
+                    debugger;
+                    $("#form").data("changed", true);
+                });
+                $(document).on('change', '#mapAddress', function () {
+                    debugger;
+                    $("#form").data("changed", true);
+                });
+                $(document).on('change', '#instaLink', function () {
+                    debugger;
+                    $("#form").data("changed", true);
+                });
+                $(document).on('change', '#faceLink', function () {
+                    debugger;
+                    $("#form").data("changed", true);
+                });
+                $(document).on('change', '#twitLink', function () {
+                    debugger;
+                    $("#form").data("changed", true);
+                });
+                $(document).on('change', '#youtubeLink', function () {
+                    debugger;
+                    $("#form").data("changed", true);
+                });
+                $(document).on('change', '#linkedLink', function () {
+                    debugger;
+                    $("#form").data("changed", true);
+                });
+                $(document).on('change', '#telLink', function () {
+                    debugger;
+                    $("#form").data("changed", true);
+                });
             var isClicked = false;
             $('#addAbout').on('click', function (evt) {
                 debugger;
@@ -132,6 +167,7 @@
                 }
 
                 //Gecko + Webkit, Safari, Chrome etc.
+            });
             });
 
 

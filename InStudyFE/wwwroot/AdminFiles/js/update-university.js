@@ -363,22 +363,16 @@
         var files = $("#files").get(0).files;
         var program = $("#program").val();
         var direction = $("#direction").val();
-        var speciality = $("#speciality").val();
         var formData = new FormData();
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
         formData.append('EnName', $("#enHeader").val());
-        formData.append('Description', $("#azDescription").val());
+        formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
         formData.append('countryId', $("#country").val());
         formData.append('Address', $("#uniAdrress").val());
-        formData.append('MapAdrress', $("#uniMapAdrress").val());
-        formData.append('StudentCount', $("#stCount").val());
-        formData.append('AcademicStaff', $("#acdmStaff").val());
-        formData.append('StartDate', $("#startDate").val());
-        formData.append('ApplyDate', $("#applyDate").val());
-        formData.append('Rank', $("#rank").val());
+
         formData.append('AzBachelor', $("#azBachelor").val());
         formData.append('RuBachelor', $("#ruBachelor").val());
         formData.append('EnBachelor', $("#enBachelor").val());
@@ -390,8 +384,6 @@
         }
         for (var i = 0; i < program.length; i++) {
             formData.append('ProgramIds', program[i]);
-        } for (var i = 0; i < speciality.length; i++) {
-            formData.append('SpecialityIds', speciality[i]);
         }
         for (var i = 0; i < direction.length; i++) {
             formData.append('DirectionIds', direction[i]);
@@ -407,7 +399,7 @@
             },
             complete: function (response) {
                 if (response.status == 200) {
-                    //location.href = "/Admin/University/UniversityList"
+                    location.href = "/Admin/University/UniversityList"
                 }
                 else {
                     alert("error")

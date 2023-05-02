@@ -103,10 +103,27 @@
 
       </script>
       <script>
-        $("#form :input").change(function () {
-
-            $("#form").data("changed", true);
-        });
+        $(document).ready(function () {
+            $(document).on('change', '#azHeader', function () {
+                debugger;
+                $("#form").data("changed", true);
+            });
+            $(document).on('change', '#enHeader', function () {
+                debugger;
+                $("#form").data("changed", true);
+            });
+            $(document).on('change', '#ruHeader', function () {
+                debugger;
+                $("#form").data("changed", true);
+            }); 
+            $(document).on('change', '#country', function () {
+                debugger;
+                $("#form").data("changed", true);
+            });
+            $(document).on('change', '#files', function () {
+                debugger;
+                $("#form").data("changed", true);
+            });
         var isClicked = false;
         $('#addWords').on('click', function (evt) {
             debugger;
@@ -127,6 +144,7 @@
             }
 
             //Gecko + Webkit, Safari, Chrome etc.
+        });
         });
 
 

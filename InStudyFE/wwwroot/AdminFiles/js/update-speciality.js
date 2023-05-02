@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     const specialityId = localStorage.getItem('specialityId');
-
+    debugger;
     var $form = $('#form')
     $.ajax({
         type: 'GET',
@@ -105,7 +105,7 @@
         }
     })
     $("#updateSpeciality").click(function () {
-        var specialityId = $("#specialityId").val();
+        
        
         var formData = new FormData();
         formData.append('AzName', $("#azHeader").val());
@@ -114,6 +114,7 @@
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
+        formData.append('DirectionId', $("#directionid").val());
        
         console.log(formData);
 

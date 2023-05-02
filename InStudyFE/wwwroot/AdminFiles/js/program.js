@@ -88,7 +88,7 @@
         formData.append('EnName', $("#enHeader").val());
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());s
+        formData.append('RuDescription', $("#ruDescription").val());
       
         x
         $.ajax({

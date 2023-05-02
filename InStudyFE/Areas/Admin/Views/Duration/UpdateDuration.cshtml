@@ -47,10 +47,34 @@
 @section Scripts {
     <script src="~/AdminFiles/js/update-duration.js"></script>
     <script>
-        $("#form :input").change(function () {
-
-            $("#form").data("changed", true);
-        });
+        $(document).ready(function () {
+            $(document).on('change', '#University', function () {
+                debugger;
+                $("#form").data("changed", true);
+            });
+            $(document).on('change', '#EducationProgram', function () {
+                debugger;
+                $("#form").data("changed", true);
+            });
+            $(document).on('change', '#Speciality', function () {
+                debugger;
+                $("#form").data("changed", true);
+            });
+            $(document).on('change', '#DurationDate', function () {
+                debugger;
+                $("#form").data("changed", true);
+            });
+            $(document).on('change', '#enDescription', function () {
+                debugger;
+                $("#form").data("changed", true);
+            });
+            $(document).on('change', '#ruDescription', function () {
+                debugger;
+                $("#form").data("changed", true);
+            }); $(document).on('change', '#files', function () {
+                debugger;
+                $("#form").data("changed", true);
+            });
         var isClicked = false;
         $('#updateDuration').on('click', function (evt) {
             debugger;
@@ -71,6 +95,7 @@
             }
 
             //Gecko + Webkit, Safari, Chrome etc.
+        });
         });
 
 
