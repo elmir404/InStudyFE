@@ -43,7 +43,6 @@
 
                 success: function (result) {
                     var html = [];
-                    debugger;
                     $.each(
                         result.data, function (i, value) {
                             var isSelected = false;
@@ -52,7 +51,6 @@
                                    
                                     if (pvalue.id == value.id) {
                                         isSelected = true;
-                                        debugger;
 
                                     }
                                     else {
@@ -84,7 +82,7 @@
 
             });
             //var $specialities = [];
-           
+
             //$.each(
             //    data.data.specialities, function (i, value) {
             //        console.log(value);
@@ -105,6 +103,7 @@
 
             ////    }
             ////);
+            var formData1 = new FormData();
             $.ajax({
                 type: 'GET',
                 headers: {
@@ -116,16 +115,18 @@
 
                 success: function (result) {
                     var html = [];
-                    debugger;
+                  
                     $.each(
                         result.data, function (i, value) {
                                 var isSelected = false;
                             $.each(
                                 data.data.directions, function (p, pvalue) {
-                                   
+                                    debugger;
                                     if (pvalue.id == value.id) {
                                         isSelected = true;
                                         debugger;
+                                        console.log("Direction", value);
+                                        formData1.append('DirectionIds', pvalue.id);
                                         
                                     }
                                     else {
@@ -154,62 +155,86 @@
                         }
                     )
                     $('#direction').html(html.join('')).multipleSelect();
-                }
+                    var html1 = [];
+                    $.ajax({
+                        type: "POST",
+                        url: `https://api.instudy.net/api/Speciality/SearchSpeciality?currentPage=1&pageSize=100`,
+                        processData: false,
+                        contentType: false,
+                        cache: false,
+                        data: formData1,
+                        enctype: 'multipart/form-data',
+                    })
+                        .done(function (response) {
+                            // Make sure that the formMessages div has the 'success' class.
+                            if (response.success == true) {
+                               
+                                debugger;
+                                if (data.data.specialities.length == 0) {
 
-            });
 
-            $.ajax({
-                type: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*',
+                                    $.each(
 
-                },
-                url: `https://api.instudy.net/api/Speciality/GetActiveSpecialities`,
-
-                success: function (result) {
-                    var html = [];
-                    debugger;
-                    $.each(
-                        result.data, function (i, value) {
-                                var isSelected = false;
-                            $.each(
-                                data.data.specialities, function (p, pvalue) {
-                                   
-                                    if (pvalue.id == value.id) {
-                                        isSelected = true;
-                                        debugger;
-                                        
-                                    }
-                                    else {
-                                        isSelected = false;
-                                    }
-
-                            });
-                            if (isSelected) {
-                                html.push(
-                                    `
-                                                                                <option selected value="${value.id}">${value.enName}</option>
-
-                                                                             `
-                                );
-                            } else {
-                                html.push(
-                                    `
+                                        response.data.value, function (p, value) {
+                                            html1.push(
+                                                `
                                                                                 <option value="${value.id}">${value.enName}</option>
 
                                                                              `
-                                );
+                                            );
+                                           
 
+                                        });
+                                }
+                                else {
+                                    var isSelected = false;
+                                    $.each(
+
+                                        data.data.specialities, function (p, svalue) {
+                                        response.data.value, function (p, value) {
+                                            if (svalue.id == value.id) {
+                                                isSelected = true;
+                                            }
+                                            else {
+                                                isSelected = false;
+                                            }
+
+                                        }
+
+                                    });
+                                    if (isSelected) {
+                                        html1.push(
+                                            `
+                                                                                <option selected value="${value.id}">${value.enName}</option>
+
+                                                                             `
+                                        );
+                                    } else {
+                                        html1.push(
+                                            `
+                                                                                <option value="${value.id}">${value.enName}</option>
+
+                                                                             `
+                                        );
+
+                                    }
+                                }
+
+                               
                             }
+                            $('#speciality').html(html1.join(''));
 
-
-                        }
-                    )
-                    $('#speciality').html(html.join(''));
+                        })
+                        .fail(function (data) {
+                            // Make sure that the formMessages div has the 'error' class.
+                            toastr.warning("An error ocured!");
+                        });
+                   
                 }
-
+                
             });
+
+           
             $.ajax({
                 type: 'GET',
                 headers: {
@@ -217,13 +242,12 @@
                     'Access-Control-Allow-Origin': '*',
 
                 },
-                url: `https://api.instudy.net/api/Country/GetActiveCountries`,
+                url: `https://api.instudy.net/api/Country/GetCountriesIdName`,
 
                 success: function (result) {
                     var html = [];
                     $.each(
                         result.data, function (i, value) {
-                            debugger;
                             if (data.data.country.id == value.id) {
                                 html.push(
                                     `

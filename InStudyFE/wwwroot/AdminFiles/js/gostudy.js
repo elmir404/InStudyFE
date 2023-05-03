@@ -7,10 +7,10 @@
         columns: [
            
             {
-                data: 'azHeader',
+                data: 'ruHeader',
             },
             {
-                data: 'ruHeader',
+                data: 'azHeader',
             },
             {
                 data: 'enHeader',

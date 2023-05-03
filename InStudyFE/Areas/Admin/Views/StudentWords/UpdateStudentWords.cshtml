@@ -62,32 +62,32 @@
 @section Scripts {
     <script src="~/AdminFiles/js/update-comments.js"></script>
     <script>
-        $.ajax({
-            type: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
+        //$.ajax({
+        //    type: 'GET',
+        //    headers: {
+        //        'Content-Type': 'application/json',
+        //        'Access-Control-Allow-Origin': '*',
 
-            },
-            url: `https://api.instudy.net/api/Country/GetActiveCountries`,
+        //    },
+        //    url: `https://api.instudy.net/api/Country/GetCountriesIdName`,
 
-            success: function (data) {
-                var html = [];
-                $.each(
-                    data.data, function (i, value) {
-                        $("#country").append(
-                            `
-                                                                                    <option value="${value.id}">${value.azName}</option>
+        //    success: function (data) {
+        //        var html = [];
+        //        $.each(
+        //            data.data, function (i, value) {
+        //                $("#country").append(
+        //                    `
+        //                                                                            <option value="${value.id}">${value.azName}</option>
 
-                                                                                 `
-                        )
+        //                                                                         `
+        //                )
 
-                    }
-                )
+        //            }
+        //        )
 
-            }
+        //    }
 
-        });
+        //});
 
     </script>
     <script>

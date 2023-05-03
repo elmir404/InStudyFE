@@ -13,7 +13,7 @@
                 data: 'email',
             },
             {
-                data: 'adress',
+                data: 'enAdress',
             },
             {
                 data: 'id', render: function (data, type, row, meta) {
@@ -90,7 +90,9 @@
 
 
         var formData = new FormData();
-        formData.append('Adress', $("#address").val());
+        formData.append('AzAdress', $("#azAdress").val());
+        formData.append('EnAdress', $("#enAdress").val());
+        formData.append('RuAdress', $("#ruAdress").val());
         formData.append('Phone', $("#phone").val());
         formData.append('Email', $("#email").val());
         formData.append('MapAdress', $("#mapAddress").val());

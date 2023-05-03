@@ -1,35 +1,34 @@
 ﻿@section Css{
     <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
 }
-<div class="main-content app-content mt-0">
-    <div class="side-app">
+    <div class="main-content app-content mt-0">
+        <div class="side-app">
 
-        <!-- CONTAINER -->
-        <div class="main-container container-fluid">
+            <!-- CONTAINER -->
+            <div class="main-container container-fluid">
 
-            <!-- PAGE-HEADER -->
-            <div class="page-header">
-                <h1 class="page-title">Update Country</h1>
-                <div>
-                    <ol class="breadcrumb">
-                             <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Update University</li>
-                    </ol>
+                <!-- PAGE-HEADER -->
+                <div class="page-header">
+                    <h1 class="page-title">Update Country</h1>
+                    <div>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Update University</li>
+                        </ol>
+                    </div>
                 </div>
-            </div>
-            <!-- PAGE-HEADER END -->
-            <!-- ROW-1 OPEN -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <form id="form" class="card">
-                        <div class="card-header">
-                            <div class="card-title">Update University</div>
-                        </div>
-                        <div class="card-body">
-                               <div id="universityForm">
-
-                               </div>
-                               <div>
+                <!-- PAGE-HEADER END -->
+                <!-- ROW-1 OPEN -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="form" class="card">
+                            <div class="card-header">
+                                <div class="card-title">Update University</div>
+                            </div>
+                            <div class="card-body">
+                                <div id="universityForm">
+                                </div>
+                                <div>
                                     <div class="row">
                                         <label class="col-md-3 form-label mb-4">Direction</label>
                                         <div class="col-md-9 mb-4">
@@ -51,7 +50,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                  
+
                                     <div class="row">
                                         <label class="col-md-3 form-label mb-4">Country</label>
                                         <div class="col-md-9 mb-4">
@@ -59,43 +58,44 @@
                                             </select>
                                         </div>
                                     </div>
-                                    
-                               </div>
-                            <!--End Row-->
-                        </div>
-                        <div class="card-footer">
-                            <!--Row-->
-                            <div class="row">
-                                <div class="col-md-3"></div>
-                                <div class="col-md-9">
-                                    <a href="javascript:void(0)" id="updateUniversity" class="btn btn-primary">Update University</a>
+
                                 </div>
+                                <!--End Row-->
                             </div>
-                            <!--End Row-->
-                        </div>
-                    </form>
+                            <div class="card-footer">
+                                <!--Row-->
+                                <div class="row">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-9">
+                                        <a href="javascript:void(0)" id="updateUniversity" class="btn btn-primary">Update University</a>
+                                    </div>
+                                </div>
+                                <!--End Row-->
+                            </div>
+                        </form>
+                    </div>
                 </div>
+                <!-- /ROW-1 CLOSED -->
             </div>
-            <!-- /ROW-1 CLOSED -->
+            <!-- CONTAINER CLOSED -->
         </div>
-        <!-- CONTAINER CLOSED -->
     </div>
-</div>
-@section Scripts {
+    @section Scripts {
     <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
     <script src="~/AdminFiles/js/update-university.js"></script>
-       
-           <script>
-        function selectFunction() {
-                   debugger;
-                    var direction = $("#direction").val();
-                    $("#speciality").empty();
 
-                    var formData = new FormData();
-                    for (var i = 0; i < direction.length; i++) {
-                        formData.append('DirectionIds', direction[i]);
-                    }
+    <script>
+        function selectFunction() {
+            debugger;
+            var direction = $("#direction").val();
+
+
+            var formData = new FormData();
+            for (var i = 0; i < direction.length; i++) {
+                formData.append('DirectionIds', direction[i]);
+            }
             var html = [];
+
             $.ajax({
                 type: "POST",
                 url: `https://api.instudy.net/api/Speciality/SearchSpeciality?currentPage=1&pageSize=100`,
@@ -103,28 +103,33 @@
                 processData: false,  // tell jQuery not to process the data
                 contentType: false,
             }).done(function (response) {
-               console.log("response",response);
+                console.log("response", response);
+                debugger;
                 if (response.data.dataCount > 0) {
-                  $.each(
-                    response?.data.value, function (i, value) {
-                           $('#speciality').append(
-                                `
-                                                                                        <option value="${value.id}">${value.enName}</option>
+                    $("#speciality").empty();
 
-                                                                                     `
+                    $.each(
+                        response?.data.value, function (i, value) {
+                            html.push(
+                                `
+                                        <option value="${value.id}">${value.enName}</option>
+
+                                        `
                             );
-                    }
-                );
+                        }
+                    );
+                    $('#speciality').html(html.join(''));
+                    //$('#speciality').html(html.join(''));
                 }
-               
+
             });
-           
-        
+
+
 
 
         }
-       
-     
+
+
     </script>
     <script>
         $(document).ready(function () {
@@ -160,27 +165,27 @@
                 debugger;
                 $("#form").data("changed", true);
             });
-        var isClicked = false;
-        $('#updateUniversity').on('click', function (evt) {
+            var isClicked = false;
+            $('#updateUniversity').on('click', function (evt) {
+                debugger;
+                isClicked = true;
+            });
             debugger;
-            isClicked = true;
-        });
-        debugger;
 
-        window.addEventListener("beforeunload", function (e) {
-            var confirmationMessage = 'It looks like you have been editing something. '
-                + 'If you leave before saving, your changes will be lost.';
+            window.addEventListener("beforeunload", function (e) {
+                var confirmationMessage = 'It looks like you have been editing something. '
+                    + 'If you leave before saving, your changes will be lost.';
 
-          
-            debugger;
-            if ($("#form").data("changed") && isClicked == false) {
-                (e || window.event).returnValue = confirmationMessage; //Gecko + IE
-                return confirmationMessage;
 
-            }
+                debugger;
+                if ($("#form").data("changed") && isClicked == false) {
+                    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+                    return confirmationMessage;
 
-            //Gecko + Webkit, Safari, Chrome etc.
-        });
+                }
+
+                //Gecko + Webkit, Safari, Chrome etc.
+            });
         });
 
 
@@ -189,5 +194,5 @@
 
 
     </script>
-        
+
         }

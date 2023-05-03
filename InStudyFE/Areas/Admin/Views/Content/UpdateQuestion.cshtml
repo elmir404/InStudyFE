@@ -18,12 +18,11 @@
             <!-- ROW-1 OPEN -->
             <div class="row">
                 <div class="col-lg-12">
-                    <form id="form" class="card">
+                    <form id="formQuestion" class="card">
                         <div class="card-header">
                             <div class="card-title">Update Question</div>
                         </div>
                         <div id="form" class="card-body">
-                          
                         </div>
                         <div class="card-footer">
                             <!--Row-->
@@ -49,52 +48,52 @@
         $(document).ready(function () {
             $(document).on('change', '#azHeader', function () {
                 debugger;
-                $("#form").data("changed", true);
+                $("#formQuestion").data("changed", true);
             });
             $(document).on('change', '#enHeader', function () {
                 debugger;
-                $("#form").data("changed", true);
+                $("#formQuestion").data("changed", true);
             });
             $(document).on('change', '#ruHeader', function () {
                 debugger;
-                $("#form").data("changed", true);
+                $("#formQuestion").data("changed", true);
             });
             $(document).on('change', '#azDescription', function () {
                 debugger;
-                $("#form").data("changed", true);
+                $("#formQuestion").data("changed", true);
             });
             $(document).on('change', '#enDescription', function () {
                 debugger;
-                $("#form").data("changed", true);
+                $("#formQuestion").data("changed", true);
             });
             $(document).on('change', '#ruDescription', function () {
                 debugger;
-                $("#form").data("changed", true);
+                $("#formQuestion").data("changed", true);
             }); $(document).on('change', '#files', function () {
                 debugger;
-                $("#form").data("changed", true);
+                $("#formQuestion").data("changed", true);
             });
-        var isClicked = false;
-        $('#updateQuestion').on('click', function (evt) {
+            var isClicked = false;
+            $('#updateQuestion').on('click', function (evt) {
+                debugger;
+                isClicked = true;
+            });
             debugger;
-            isClicked = true;
-        });
-        debugger;
 
-        window.addEventListener("beforeunload", function (e) {
-            var confirmationMessage = 'It looks like you have been editing something. '
-                + 'If you leave before saving, your changes will be lost.';
+            window.addEventListener("beforeunload", function (e) {
+                var confirmationMessage = 'It looks like you have been editing something. '
+                    + 'If you leave before saving, your changes will be lost.';
 
-            
-            debugger;
-            if ($("#form").data("changed") && isClicked == false) {
-                (e || window.event).returnValue = confirmationMessage; //Gecko + IE
-                return confirmationMessage;
 
-            }
+                debugger;
+                if ($("#formQuestion").data("changed") && isClicked == false) {
+                    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+                    return confirmationMessage;
 
-            //Gecko + Webkit, Safari, Chrome etc.
-        });
+                }
+
+                //Gecko + Webkit, Safari, Chrome etc.
+            });
         });
 
 

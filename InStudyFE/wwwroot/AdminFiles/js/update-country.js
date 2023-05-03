@@ -185,9 +185,7 @@
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
         formData.append('EnName', $("#enHeader").val());
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
+       
         formData.append('CurrentStudents', $("#CurrentStudents").val());
         formData.append('Population', $("#Population").val());
         formData.append('AzWorkPermit', $("#WorkPermitAz").val());

@@ -4,10 +4,10 @@ using Newtonsoft.Json;
 
 namespace InStudyFE.Controllers
 {
-    public class FacultyController : Controller
+    public class DirectionController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
-        public FacultyController(IHttpClientFactory httpClientFactory)
+        public DirectionController(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
@@ -19,19 +19,19 @@ namespace InStudyFE.Controllers
         {
             var client = _httpClientFactory.CreateClient("InStudy");
 
-            var faculty = GetFaculty(client,Id);
+            var direction = GetDisciplines(client,Id);
 
 
-            await Task.WhenAll(faculty);
-
-            return View(faculty.Result);
+            await Task.WhenAll(direction);
+           
+            return View(direction.Result);
         }
-        private async Task<GetFacultyDto> GetFaculty(HttpClient client, int Id)
+        private async Task<GetDirectionDto> GetDisciplines(HttpClient client, int Id)
         {
-            var response = await client.GetAsync("api/Speciality/GetSpeciality/id?id=" + Id);
+            var response = await client.GetAsync("api/Direction/GetDirection?id=" + Id);
             var responseString = await response.Content.ReadAsStringAsync();
-            var result = JsonConvert.DeserializeObject<FacultyModel>(responseString);
-            var direction = result.data as GetFacultyDto;
+            var result = JsonConvert.DeserializeObject<DirectionModel>(responseString);
+            var direction = result.data as GetDirectionDto;
 
             return direction;
         }

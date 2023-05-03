@@ -9,7 +9,42 @@
         },
         url: `https://api.instudy.net/api/StudentWords/GetStudentWords?id=${id}`,
         success: function (data) {
+            $.ajax({
+                type: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
 
+                },
+                url: `https://api.instudy.net/api/Country/GetCountriesIdName`,
+
+                success: function (result) {
+                    var html = [];
+                    $.each(
+                        result.data, function (i, value) {
+                            if (data.data.country.id == value.id) {
+                                html.push(
+                                    `
+                                                                    <option selected value="${value.id}">${value.enName}</option>
+
+                                                                 `
+                                )
+                            } else {
+                                html.push(
+                                    `
+                                                                    <option value="${value.id}">${value.enName}</option>
+
+                                                                 `
+                                )
+                            }
+
+
+                        }
+                    )
+                    $('#country').html(html.join(''));
+                }
+
+            });
             console.log(data);
             $blogForm.empty()
 

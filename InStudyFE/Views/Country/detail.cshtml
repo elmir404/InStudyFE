@@ -320,8 +320,13 @@
     <section id="HeroContainer">
         <div class="HeroContainerHelper">
             <div id="HeroImage">
+                @if (@Model.country.CountryFiles.Count > 0)
+                {
+
+
                     <span class="HeroImage js-heroImage" style="background-image:url(https://api.instudy.net/@Model.country.CountryFiles[0].Path);background-repeat: no-repeat;background-size:cover;"></span>
                     <span class="HeroImage HeroImagePlaceholder js-heroImageLowResPlaceholder"></span> <span class="HeroOverlay" style="background-image:url(https://api.instudy.net/@Model.country.CountryFiles[0].Path);background-repeat: no-repeat;background-size: auto;"></span>
+                }
             </div>
 
             <div class="HeroContentWrapper">

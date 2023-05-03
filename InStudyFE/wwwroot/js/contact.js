@@ -328,7 +328,17 @@
         },
         url: `https://api.instudy.net/api/AboutCompany/GetLastAboutCompany`,
         success: function (data) {
-            
+            if ($lang == 'AZ') {
+                var addreess = data?.data?.azAdress
+
+            }
+            else if ($lang == 'EN') {
+                var addreess = data?.data?.enAdress
+
+            } else {
+                var addreess = data?.data?.ruAdress;
+
+            }
            
                     $(`#contactDetail`).empty();
             $(`#contactDetail`).append(
@@ -343,7 +353,7 @@
 				        			<span class="fa fa-map-marker"></span>
 				        		</div>
 				        		<div class="text pl-3">
-					            <p><span>${adr}:</span>${data?.data?.adress}</p>
+					            <p><span>${adr}:</span>${addreess}</p>
 					          </div>
 				          </div>
 				        	<div class="dbox w-100 d-flex align-items-center">
@@ -389,7 +399,17 @@
         },
         url: `https://api.instudy.net/api/AboutCompany/GetLastAboutCompany`,
         success: function (data) {
+            if ($lang == 'AZ') {
+                var addreess = data?.data?.azAdress
 
+            }
+            else if ($lang == 'EN') {
+                var addreess = data?.data?.enAdress
+
+            } else {
+                var addreess = data?.data?.ruAdress;
+
+            }
 
             $(`#applyDetail`).empty();
             $(`#applyDetail`).append(
@@ -407,7 +427,7 @@
 				        			<span class="fa fa-map-marker"></span>
 				        		</div>
 				        		<div class="text pl-3">
-					            <p><span>${adr}:</span>${data?.data?.adress}</p>
+					            <p><span>${adr}:</span>${addreess}</p>
 					          </div>
 				          </div>
 				        	<div class="dbox w-100 d-flex align-items-center">

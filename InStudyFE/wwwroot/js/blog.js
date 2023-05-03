@@ -14,15 +14,15 @@
 
             success: function (data) {
                 if ($lang == 'AZ') {
-                    var name = "Basliq"
+                    var name = "Maraqlı Məqalələr"
 
                 }
                 else if ($lang == 'EN') {
-                    var name = "Basliq en"
+                    var name = "Interesting Articles"
                     
 
                 } else {
-                    var name = "Basliq ru";
+                    var name = "Интересные статьи";
 
                 }
                 $blogHeader.html(`${name}`);
@@ -33,16 +33,16 @@
                        
                         if ($lang == 'AZ') {
                             var name1 = value.azTitle
-                            var description = value?.azDescription;
+                            var description = value?.azDescription.slice(0,150)+"...";
 
                         }
                         else if ($lang == 'EN') {
                             var name1 = value.enTitle
-                            var description = value?.enDescription;
+                            var description = value?.enDescription.slice(0, 150) + "...";
 
                         } else {
                             var name1 = value.ruTitle;
-                            var description = value?.ruDescription;
+                            var description = value?.ruDescription.slice(0, 150) + "...";
 
                         }
                         var image = `https://api.instudy.net/${value.blogFiles[0].path}`

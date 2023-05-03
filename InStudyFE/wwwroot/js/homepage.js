@@ -31,7 +31,7 @@
     if ($lang == 'AZ') {
         $countryHeader.html(`Seçilmiş ölkələr`);
         $universityHeader.html(`Seçilmiş universitetlər`);
-        $disciplinesHeader.html(`Fakultələr`);
+        $disciplinesHeader.html(`Istiqamətlər`);
         var $countryMore = `Daha çox ölkə`;
         $(".countryMore").html("Daha çox ölkə");
         var $countryFw=`Daha az ölkə`;
@@ -47,7 +47,7 @@
     else if ($lang == 'EN') {
         $countryHeader.html(`Popular countries`);
         $universityHeader.html(`Popular universities`);
-        $disciplinesHeader.html(`Faculties`);
+        $disciplinesHeader.html(`Directions`);
         var $countryMore = `More countries`;
         $(".countryMore").html("More countries");
        var  $countryFw =`Fewer countries`;
@@ -62,7 +62,7 @@
     } else {
         $countryHeader.html(`Популярные страны`);
         $universityHeader.html(`Популярные университеты`); 
-        $disciplinesHeader.html(`Факультеты`);
+        $disciplinesHeader.html(`Направления`);
         $(".countryMore").html("Больше стран");
         var $countryMore =`Больше стран`;
         var $countryFw =`Меньше стран`;
@@ -179,7 +179,17 @@
         url: `https://api.instudy.net/api/AboutCompany/GetLastAboutCompany`,
 
         success: function (data) {
-            
+            if ($lang == 'AZ') {
+                var addreess = data?.data?.azAdress
+
+            }
+            else if ($lang == 'EN') {
+                var addreess = data?.data?.enAdress
+
+            } else {
+                var addreess = data?.data?.ruAdress;
+
+            }
             
                     if (data?.data?.facebookLink != null) {
                         $("#faceIcon").append(
@@ -220,12 +230,12 @@
 `
                 )
             }
-            if (data?.data?.adress != null) {
+           
                 $("#adresFooter").html(
-                    `<i class="fa fa-location-arrow"></i>&nbsp;${data?.data?.adress}
+                    `<i class="fa fa-location-arrow"></i>&nbsp;${addreess}
 `
                 )
-            }
+            
             if (data?.data?.phone != null) {
                 $("#phoneFooter").html(
                     `<i class="fa fa-phone"></i>&nbsp;${data?.data?.phone}
@@ -317,12 +327,12 @@
                         
 
                         $disciplinesMenu.append(`
-                                                <li class="SubSectionContentItem"> <a class="ContentItemLink js-ContentItemLink" href="/Faculty/Detail?disId=${value.id}" title="${name}">${name}</a> </li>
+                                                <li class="SubSectionContentItem"> <a class="ContentItemLink js-ContentItemLink" href="/Direction/Detail?Id=${value.id}" title="${name}">${name}</a> </li>
 
 `
                         );
                         $("#disciplines").append(`
-                           <li data-clickable="clickable"> <a href="/Faculty/Detail?disId=${value.id}" title="${name}">
+                           <li data-clickable="clickable"> <a href="/Direction/Detail?Id=${value.id}" title="${name}">
                             <img alt="image" style="width:37px !important;" class="text-center img-responsive" src="${image}">
 <span style="display:block;">${name}</span> </a> </li>
 
@@ -419,16 +429,14 @@
 
                     if ($lang == 'AZ') {
                         var name1 = value.azHeader
-                        var description = value?.azDescription;
+
 
                     }
                     else if ($lang == 'EN') {
                         var name1 = value.enHeader
-                        var description = value?.enDescription;
 
                     } else {
                         var name1 = value.ruHeader;
-                        var description = value?.ruDescription;
 
                     }
 
@@ -461,16 +469,13 @@
                 $questionHeader.empty();
                 $questions.empty();
                         if ($lang == 'AZ') {
-                            var header = data?.data?.azHeader
                             var body = data?.data?.azBody;
 
                         }
                         else if ($lang == 'EN') {
-                            var header = data?.data?.enHeader
                             var body = data?.data?.enBody;
 
                         } else {
-                            var header = data?.data?.ruHeader
                             var body = data?.data?.ruBody;
 
                         }
