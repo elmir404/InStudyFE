@@ -82,7 +82,7 @@
         for (var i = 0; i < direction.length; i++) {
             formData.append('DirectionIds', direction[i]);
         }
-
+        var html1 = [];
         $.ajax({
             type: "POST",
             url: 'https://api.instudy.net/api/University/CreateUniversity',
@@ -98,6 +98,53 @@
 
                     $('#specialityBtn').show();
                     $('#universityId').val(response.responseJSON.data);
+                    debugger;
+                    var formData1 = new FormData();
+                    for (var i = 0; i < direction.length; i++) {
+                        formData1.append('DirectionIds', direction[i]);
+                    }
+                    $.ajax({
+                        type: "POST",
+                        url: `https://api.instudy.net/api/Speciality/SearchSpeciality?currentPage=1&pageSize=100`,
+                        processData: false,
+                        contentType: false,
+                        cache: false,
+                        data: formData1,
+                        enctype: 'multipart/form-data',
+                    })
+                        .done(function (response) {
+                            // Make sure that the formMessages div has the 'success' class.
+                            if (response.success == true) {
+
+                                debugger;
+                               
+
+
+                                    $.each(
+
+                                        response.data.value, function (p, value) {
+                                            html1.push(
+                                                `
+                                                                                <option value="${value.id}">${value.enName}</option>
+
+                                                                             `
+                                            );
+
+
+                                        });
+                                
+                               
+
+
+                            }
+                            $('#specialityList').html(html1.join('')).multipleSelect();
+
+                        })
+                        .fail(function (data) {
+                            // Make sure that the formMessages div has the 'error' class.
+                            toastr.warning("An error ocured!");
+                        });
+
                 }
                 else {
                     alert("error")

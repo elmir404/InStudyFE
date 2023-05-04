@@ -48,6 +48,7 @@
     <script src="~/AdminFiles/js/update-direction.js"></script>
     <script>
         $(document).ready(function () {
+          
             $(document).on('change', '#azHeader', function () {
                 debugger;
                 $("#form").data("changed", true);
@@ -64,9 +65,9 @@
                 debugger;
                 $("#form").data("changed", true);
             });
-            $(document).on('change', '#enDescription', function () {
-                debugger;
-                $("#form").data("changed", true);
+           
+            $(document).on('input', '#enDescription', function () {
+             
             });
             $(document).on('change', '#ruDescription', function () {
                 debugger;
@@ -85,7 +86,7 @@
         window.addEventListener("beforeunload", function (e) {
             var confirmationMessage = 'It looks like you have been editing something. '
                 + 'If you leave before saving, your changes will be lost.';
-
+              
            
             debugger;
             if ($("#form").data("changed") && isClicked == false) {

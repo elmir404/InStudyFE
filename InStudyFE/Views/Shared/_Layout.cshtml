@@ -706,37 +706,39 @@
 
 
             function searchProgram(name) {
+               debugger;
                var  txtValue = name.textContent || name.innerText;
-                 
-             
-
-    
                document.getElementById('programInput1').value = txtValue;
+               $("#program_div").addClass("Hidden");
             }  
+             $(document).click(function(event) {
+                if (!$(event.target).closest("#program_div").length && !$(event.target).is("#programInput1")) {
+
+                    $("#program_div").addClass("Hidden");
+                }
+              });
             function searchDirection(name) {
               var  txtValue = name.textContent || name.innerText;
                document.getElementById('directionInput').value = txtValue;
+                $("#direction_div").addClass("Hidden");
             }
+            $(document).click(function (event) {
+                if (!$(event.target).closest("#direction_div").length && !$(event.target).is("#directionInput")) {
+
+                    $("#direction_div").addClass("Hidden");
+                }
+            });
             function searchCountry(name) {
               var  txtValue = name.textContent || name.innerText;
                document.getElementById('countryInput').value = txtValue;
+                $("#country_div").addClass("Hidden");
             }
-            function countryDetail(id){
-                console.log(id);
-                $.ajax({
-                    type: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    url: ``,
+            $(document).click(function (event) {
+                if (!$(event.target).closest("#country_div").length && !$(event.target).is("#countryInput")) {
 
-                    success: function (data) {
-                    
-
-                    }
-
-                });
-            }
+                    $("#country_div").addClass("Hidden");
+                }
+            });
         </script>
         @RenderSection("Scripts",false)
 </body>

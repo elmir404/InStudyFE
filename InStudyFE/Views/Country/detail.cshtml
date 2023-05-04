@@ -2172,14 +2172,29 @@
 	</script>
     <script>
          function searchProgramCon(name) {
-        var txtValue = name.textContent || name.innerText;
+               debugger;
+               var  txtValue = name.textContent || name.innerText;
+               document.getElementById('programInputCon').value = txtValue;
+               $("#program_div_con").addClass("Hidden");
+            }  
+             $(document).click(function(event) {
+                if (!$(event.target).closest("#program_div_con").length && !$(event.target).is("#programInputCon")) {
 
-        document.getElementById('programInputCon').value = txtValue;
-    }
-    function searchDirectionCon(name) {
-        var txtValue = name.textContent || name.innerText;
-        document.getElementById('directionInputCon').value = txtValue;
-    }
+                    $("#program_div_con").addClass("Hidden");
+                }
+              });
+          function searchDirectionCon(name) {
+              var  txtValue = name.textContent || name.innerText;
+               document.getElementById('directionInputCon').value = txtValue;
+                $("#direction_div_con").addClass("Hidden");
+            }
+            $(document).click(function (event) {
+                if (!$(event.target).closest("#direction_div_con").length && !$(event.target).is("#directionInputCon")) {
+
+                    $("#direction_div_con").addClass("Hidden");
+                }
+            });
+   
     </script>
     }    
         

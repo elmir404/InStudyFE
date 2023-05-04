@@ -46,34 +46,23 @@
                     $.each(
                         result.data, function (i, value) {
                             var isSelected = false;
-                            $.each(
-                                data.data.programs, function (p, pvalue) {
-                                   
-                                    if (pvalue.id == value.id) {
-                                        isSelected = true;
-
-                                    }
-                                    else {
-                                        isSelected = false;
-                                    }
-
-                                });
-                            if (isSelected) {
+                            if (data.data.programs.find(x => x.id === value.id)) {
                                 html.push(
                                     `
                                                                                 <option selected value="${value.id}">${value.enName}</option>
 
                                                                              `
                                 );
-                            } else {
+                            }
+                            else {
                                 html.push(
                                     `
                                                                                 <option value="${value.id}">${value.enName}</option>
 
                                                                              `
                                 );
-
                             }
+                          
 
                         }
                     )
@@ -115,45 +104,40 @@
 
                 success: function (result) {
                     var html = [];
-                  
+
                     $.each(
-                        result.data, function (i, value) {
-                                var isSelected = false;
-                            $.each(
-                                data.data.directions, function (p, pvalue) {
-                                    debugger;
-                                    if (pvalue.id == value.id) {
-                                        isSelected = true;
-                                        debugger;
-                                        console.log("Direction", value);
-                                        formData1.append('DirectionIds', pvalue.id);
-                                        
-                                    }
-                                    else {
-                                        isSelected = false;
-                                    }
+                        result.data,
+                        function (i, value) {
 
-                            });
-                            if (isSelected) {
+                            if (data.data.directions.find(x => x.id === value.id)) {
+                                debugger;
+                                formData1.append('DirectionIds', value.id);
                                 html.push(
                                     `
-                                                                                <option selected value="${value.id}">${value.enName}</option>
+                                                                                        <option selected value="${value.id}">${value.enName}</option>
 
-                                                                             `
-                                );
-                            } else {
-                                html.push(
-                                    `
+                                                                                     `
+                           
+                        );
+
+
+                } 
+                else {
+                    html.push(
+                        `
                                                                                 <option value="${value.id}">${value.enName}</option>
 
                                                                              `
-                                );
+                    );
+                }
+            })
 
-                            }
 
 
-                        }
-                    )
+                         
+
+                        
+                    
                     $('#direction').html(html.join('')).multipleSelect();
                     var html1 = [];
                     $.ajax({
@@ -168,7 +152,7 @@
                         .done(function (response) {
                             // Make sure that the formMessages div has the 'success' class.
                             if (response.success == true) {
-                               
+
                                 debugger;
                                 if (data.data.specialities.length == 0) {
 
@@ -182,45 +166,33 @@
 
                                                                              `
                                             );
-                                           
+
 
                                         });
                                 }
                                 else {
-                                    var isSelected = false;
-                                    $.each(
-
-                                        data.data.specialities, function (p, svalue) {
-                                        response.data.value, function (p, value) {
-                                            if (svalue.id == value.id) {
-                                                isSelected = true;
-                                            }
-                                            else {
-                                                isSelected = false;
-                                            }
-
-                                        }
-
-                                    });
-                                    if (isSelected) {
+                                    if (data.data.specialities.find(x => x.id === value.id)) {
                                         html1.push(
                                             `
                                                                                 <option selected value="${value.id}">${value.enName}</option>
 
                                                                              `
                                         );
-                                    } else {
+                                    
+                                    }
+                                    else {
                                         html1.push(
                                             `
                                                                                 <option value="${value.id}">${value.enName}</option>
 
                                                                              `
                                         );
-
                                     }
+
+                                   
                                 }
 
-                               
+
                             }
                             $('#speciality').html(html1.join(''));
 
@@ -229,12 +201,12 @@
                             // Make sure that the formMessages div has the 'error' class.
                             toastr.warning("An error ocured!");
                         });
-                   
+
                 }
-                
+
             });
 
-           
+
             $.ajax({
                 type: 'GET',
                 headers: {
@@ -263,7 +235,7 @@
                                                                  `
                                 )
                             }
-                          
+
 
                         }
                     )
@@ -380,12 +352,13 @@
 
         }
     });
-   
+
     //console.log($programs);
     $("#updateUniversity").click(function () {
         var universityId = $("#universityId").val();
         var files = $("#files").get(0).files;
         var program = $("#program").val();
+        var speciality = $("#speciality").val();
         var direction = $("#direction").val();
         var formData = new FormData();
         formData.append('AzName', $("#azHeader").val());
@@ -411,6 +384,9 @@
         }
         for (var i = 0; i < direction.length; i++) {
             formData.append('DirectionIds', direction[i]);
+        }
+        for (var i = 0; i < speciality.length; i++) {
+            formData.append('SpecialityIds', direction[i]);
         }
         $.ajax({
             type: "PUT",

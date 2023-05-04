@@ -235,27 +235,13 @@ ${workPermit}
         menuItem.classList.remove("Hidden");
 
     });
-    $("#programInputCon").focusout(function () {
-        const menuItem = document.getElementById('program_div_con');
-        setTimeout(function delay() {
-            menuItem.classList.add("Hidden");
-        }, 150);
-
-
-    });
+    
     $("#directionInputCon").focusin(function () {
         const menuItem = document.getElementById('direction_div_con');
         menuItem.classList.remove("Hidden");
 
     });
-    $("#directionInputCon").focusout(function () {
-        const menuItem = document.getElementById('direction_div_con');
-        setTimeout(function delay() {
-            menuItem.classList.add("Hidden");
-        }, 150);
-
-
-    });
+   
     $("#directionInputCon").keyup(function () {
         const menuItem = document.getElementById('direction_div_con');
         menuItem.classList.remove("Hidden");
