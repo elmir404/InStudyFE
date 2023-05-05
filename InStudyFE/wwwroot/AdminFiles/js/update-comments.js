@@ -9,7 +9,42 @@
         },
         url: `https://api.instudy.net/api/StudentWords/GetStudentWords?id=${id}`,
         success: function (data) {
+            $.ajax({
+                type: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
 
+                },
+                url: `https://api.instudy.net/api/Country/GetCountriesIdName`,
+
+                success: function (result) {
+                    var html = [];
+                    $.each(
+                        result.data, function (i, value) {
+                            if (data.data.country.id == value.id) {
+                                html.push(
+                                    `
+                                                                    <option selected value="${value.id}">${value.enName}</option>
+
+                                                                 `
+                                )
+                            } else {
+                                html.push(
+                                    `
+                                                                    <option value="${value.id}">${value.enName}</option>
+
+                                                                 `
+                                )
+                            }
+
+
+                        }
+                    )
+                    $('#country').html(html.join(''));
+                }
+
+            });
             console.log(data);
             $blogForm.empty()
 
@@ -29,10 +64,16 @@
                             <div class="row">
                                 <label class="col-md-3 form-label mb-4">Az Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="" id="azDescription" maxlength="50"  name="example">${data.data.description}</textarea>
+                                    <textarea class="" id="azDescription" maxlength="256" rows="4" cols="50"  name="example">${data.data.description}</textarea>
                                 </div>
                             </div>
-                       
+                         <div class="row">
+                                        <label class="col-md-3 form-label mb-4">File Upload :</label>
+                                        <div class="col-md-9">
+                                             <input id="files" type="file" name="files" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])"  accept=".jpg, .png, image/jpeg, image/png">
+                                      <img id="output" src="https://api.instudy.net/${data.data.studentFiles[0]?.path}" width="100" height="100">
+                                        </div>
+                                    </div>
                         
                         `
             )

@@ -191,7 +191,10 @@
      </style>
  }
 <div class="forlang">
-<div id="HomeSearchBackground" style="background-image:url(https://api.instudy.net/@Model.header.ContentFiles[0].Path)">
+    @if(Model.header.ContentFiles.Count>0){
+    }
+<div id="HomeSearchBackground"
+    style="background-image:url(https://api.instudy.net/@Model.header.ContentFiles[0].Path)">
             <section id="SecondRow" class="col1 wrapped">
                <div class="colblock no-vertical-margin">
                   <div data-module="" class="Module StudyPortals_Shared_Modules_HomeSearchRR_HomeSearch">
@@ -375,6 +378,7 @@
                                     <figure data-clickable="clickable">
                                         <a href="/Country/Detail?countryId=@country.Id" title=" ">
                                             <span class="Picture" data-file-url="" data-title="">
+                                                @if(country.CountryFiles.Count>0){
                                                 <picture>
                                                     <source media="all and (max-width: 30em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
                                                     <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
@@ -382,6 +386,8 @@
                                                     <source media="all and (min-width: 80.063em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
                                                     <img src="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path" width="143" style="width:236px;height:158px;object-fit: cover;" height="95">
                                                 </picture>
+                                                }
+                                                
                                             </span>
                                             <figcaption>
                                                 @if (culture == "en")
@@ -414,6 +420,7 @@
                                      <figure class="hiddenCountry Hidden"data-clickable="clickable">
                                         <a href="/Country/Detail?countryId=@country.Id" title=" ">
                                             <span class="Picture" data-file-url="" data-title="">
+                                                @if(country.CountryFiles.Count>0){
                                                 <picture>
                                                     <source media="all and (max-width: 30em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
                                                     <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
@@ -421,6 +428,7 @@
                                                     <source media="all and (min-width: 80.063em)" srcset="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path">
                                                     <img src="https://api.instudy.net/@country.CountryFiles.FirstOrDefault().Path" width="143" style="width:236px;height:158px;object-fit: cover;" height="95">
                                                 </picture>
+                                                }
                                             </span>
                                             <figcaption>
                                                 @if (culture == "en")

@@ -34,7 +34,7 @@
                                         <div class="row">
                                             <label class="col-md-3 form-label mb-4">Az Description :</label>
                                             <div class="col-md-9 mb-4">
-                                    <textarea class="" id="azDescription" maxlength="50" name="example"></textarea>
+                                             <textarea class="" id="azDescription" maxlength="256" rows="4" cols="50" name="example"></textarea>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -81,7 +81,7 @@
                 'Access-Control-Allow-Origin': '*',
 
             },
-            url: `https://api.instudy.net/api/Country/GetActiveCountries`,
+            url: `https://api.instudy.net/api/Country/GetCountriesIdName`,
 
             success: function (data) {
                
@@ -135,7 +135,15 @@
             var confirmationMessage = 'It looks like you have been editing something. '
                 + 'If you leave before saving, your changes will be lost.';
 
-            
+                if ($('#azDescription').val() != '') {
+                    $("#form").data("changed", true);
+                }
+                if ($('#enDescription').val() != '') {
+                    $("#form").data("changed", true);
+                }
+                if ($('#ruDescription').val() != '') {
+                    $("#form").data("changed", true);
+                }
             debugger;
             if ($("#form").data("changed") && isClicked == false) {
                 (e || window.event).returnValue = confirmationMessage; //Gecko + IE

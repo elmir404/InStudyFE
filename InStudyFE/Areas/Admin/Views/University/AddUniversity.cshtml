@@ -199,32 +199,7 @@
     <script src="~/AdminFiles/js/university.js"></script>
     <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
     <script>
-        $.ajax({
-            type: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-
-            },
-            url: `https://api.instudy.net/api/Speciality/GetActiveSpecialities`,
-
-            success: function (data) {
-                var html =[];
-                $.each(
-                    data.data, function (i, value) {
-                        html.push(
-                            `
-                                                    <option value="${value.id}">${value.enName}</option>
-
-                                                 `
-                        )
-
-                    }
-                )
-                $('#specialityList').html(html.join('')).multipleSelect();
-            }
-
-        });
+       
         $.ajax({
             type: 'GET',
             headers: {
@@ -348,7 +323,33 @@
         window.addEventListener("beforeunload", function (e) {
             var confirmationMessage = 'It looks like you have been editing something. '
                 + 'If you leave before saving, your changes will be lost.';
-
+                if ($('#azDescription').val() != '') {
+                    $("#form").data("changed", true);
+                }
+                if ($('#enDescription').val() != '') {
+                    $("#form").data("changed", true);
+                }
+                if ($('#ruDescription').val() != '') {
+                    $("#form").data("changed", true);
+                }
+                if ($('#azBachelor').val() != '') {
+                    $("#form").data("changed", true);
+                }
+                if ($('#enBachelor').val() != '') {
+                    $("#form").data("changed", true);
+                }
+                if ($('#ruBachelor').val() != '') {
+                    $("#form").data("changed", true);
+                }
+                if ($('#azMaster').val() != '') {
+                    $("#form").data("changed", true);
+                }
+                if ($('#enMaster').val() != '') {
+                    $("#form").data("changed", true);
+                }
+                if ($('#ruMaster').val() != '') {
+                    $("#form").data("changed", true);
+                }
            
             debugger;
             if ($("#form").data("changed") && isClicked == false) {

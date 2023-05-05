@@ -17,9 +17,19 @@
                         <input type="hidden" id="aboutId" value="${data.data.id}" class="form-control">
 
                      <div class="row mb-4">
-                                          <label class="col-md-3 form-label">Adress:</label>
+                                          <label class="col-md-3 form-label">Az Adress:</label>
                                             <div class="col-md-9">
-                                                <input type="text" value="${data.data.adress}" id="address" class="form-control" placeholder="Title Name">
+                                                <input type="text" value="${data.data.azAdress}" id="azAdress" class="form-control" placeholder="Title Name">
+                                            </div>
+                                        </div> <div class="row mb-4">
+                                          <label class="col-md-3 form-label">En Adress:</label>
+                                            <div class="col-md-9">
+                                                <input type="text" value="${data.data.enAdress}" id="enAdress" class="form-control" placeholder="Title Name">
+                                            </div>
+                                        </div> <div class="row mb-4">
+                                          <label class="col-md-3 form-label">Ru Adress:</label>
+                                            <div class="col-md-9">
+                                                <input type="text" value="${data.data.ruAdress}" id="ruAdress" class="form-control" placeholder="Title Name">
                                             </div>
                                         </div>
                                         <div class="row mb-4">
@@ -90,7 +100,9 @@
     $("#updateAbout").click(function () {
         var aboutId = $("#aboutId").val();
         var formData = new FormData();
-        formData.append('Adress', $("#address").val());
+        formData.append('AzAdress', $("#azAdress").val());
+        formData.append('EnAdress', $("#enAdress").val());
+        formData.append('RuAdress', $("#ruAdress").val());
         formData.append('Phone', $("#phone").val());
         formData.append('Email', $("#email").val());
         formData.append('MapAdress', $("#mapAddress").val());

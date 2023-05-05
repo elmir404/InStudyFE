@@ -43,39 +43,26 @@
 
                 success: function (result) {
                     var html = [];
-                    debugger;
                     $.each(
                         result.data, function (i, value) {
                             var isSelected = false;
-                            $.each(
-                                data.data.programs, function (p, pvalue) {
-                                   
-                                    if (pvalue.id == value.id) {
-                                        isSelected = true;
-                                        debugger;
-
-                                    }
-                                    else {
-                                        isSelected = false;
-                                    }
-
-                                });
-                            if (isSelected) {
+                            if (data.data.programs.find(x => x.id === value.id)) {
                                 html.push(
                                     `
                                                                                 <option selected value="${value.id}">${value.enName}</option>
 
                                                                              `
                                 );
-                            } else {
+                            }
+                            else {
                                 html.push(
                                     `
                                                                                 <option value="${value.id}">${value.enName}</option>
 
                                                                              `
                                 );
-
                             }
+                          
 
                         }
                     )
@@ -84,7 +71,7 @@
 
             });
             //var $specialities = [];
-           
+
             //$.each(
             //    data.data.specialities, function (i, value) {
             //        console.log(value);
@@ -105,6 +92,7 @@
 
             ////    }
             ////);
+            var formData1 = new FormData();
             $.ajax({
                 type: 'GET',
                 headers: {
@@ -116,100 +104,109 @@
 
                 success: function (result) {
                     var html = [];
-                    debugger;
+
                     $.each(
-                        result.data, function (i, value) {
-                                var isSelected = false;
-                            $.each(
-                                data.data.directions, function (p, pvalue) {
-                                   
-                                    if (pvalue.id == value.id) {
-                                        isSelected = true;
-                                        debugger;
-                                        
-                                    }
-                                    else {
-                                        isSelected = false;
-                                    }
+                        result.data,
+                        function (i, value) {
 
-                            });
-                            if (isSelected) {
+                            if (data.data.directions.find(x => x.id === value.id)) {
+                                debugger;
+                                formData1.append('DirectionIds', value.id);
                                 html.push(
                                     `
-                                                                                <option selected value="${value.id}">${value.enName}</option>
+                                                                                        <option selected value="${value.id}">${value.enName}</option>
 
-                                                                             `
-                                );
-                            } else {
-                                html.push(
-                                    `
+                                                                                     `
+                           
+                        );
+
+
+                } 
+                else {
+                    html.push(
+                        `
                                                                                 <option value="${value.id}">${value.enName}</option>
 
                                                                              `
-                                );
+                    );
+                }
+            })
 
-                            }
 
 
-                        }
-                    )
+                         
+
+                        
+                    
                     $('#direction').html(html.join('')).multipleSelect();
-                }
+                    var html1 = [];
+                    $.ajax({
+                        type: "POST",
+                        url: `https://api.instudy.net/api/Speciality/SearchSpeciality?currentPage=1&pageSize=100`,
+                        processData: false,
+                        contentType: false,
+                        cache: false,
+                        data: formData1,
+                        enctype: 'multipart/form-data',
+                    })
+                        .done(function (response) {
+                            // Make sure that the formMessages div has the 'success' class.
+                            if (response.success == true) {
 
-            });
+                                debugger;
+                                if (data.data.specialities.length == 0) {
 
-            $.ajax({
-                type: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*',
 
-                },
-                url: `https://api.instudy.net/api/Speciality/GetActiveSpecialities`,
+                                    $.each(
 
-                success: function (result) {
-                    var html = [];
-                    debugger;
-                    $.each(
-                        result.data, function (i, value) {
-                                var isSelected = false;
-                            $.each(
-                                data.data.specialities, function (p, pvalue) {
-                                   
-                                    if (pvalue.id == value.id) {
-                                        isSelected = true;
-                                        debugger;
-                                        
-                                    }
-                                    else {
-                                        isSelected = false;
-                                    }
-
-                            });
-                            if (isSelected) {
-                                html.push(
-                                    `
-                                                                                <option selected value="${value.id}">${value.enName}</option>
-
-                                                                             `
-                                );
-                            } else {
-                                html.push(
-                                    `
+                                        response.data.value, function (p, value) {
+                                            html1.push(
+                                                `
                                                                                 <option value="${value.id}">${value.enName}</option>
 
                                                                              `
-                                );
+                                            );
+
+
+                                        });
+                                }
+                                else {
+                                    if (data.data.specialities.find(x => x.id === value.id)) {
+                                        html1.push(
+                                            `
+                                                                                <option selected value="${value.id}">${value.enName}</option>
+
+                                                                             `
+                                        );
+                                    
+                                    }
+                                    else {
+                                        html1.push(
+                                            `
+                                                                                <option value="${value.id}">${value.enName}</option>
+
+                                                                             `
+                                        );
+                                    }
+
+                                   
+                                }
+
 
                             }
+                            $('#speciality').html(html1.join(''));
 
+                        })
+                        .fail(function (data) {
+                            // Make sure that the formMessages div has the 'error' class.
+                            toastr.warning("An error ocured!");
+                        });
 
-                        }
-                    )
-                    $('#speciality').html(html.join(''));
                 }
 
             });
+
+
             $.ajax({
                 type: 'GET',
                 headers: {
@@ -217,13 +214,12 @@
                     'Access-Control-Allow-Origin': '*',
 
                 },
-                url: `https://api.instudy.net/api/Country/GetActiveCountries`,
+                url: `https://api.instudy.net/api/Country/GetCountriesIdName`,
 
                 success: function (result) {
                     var html = [];
                     $.each(
                         result.data, function (i, value) {
-                            debugger;
                             if (data.data.country.id == value.id) {
                                 html.push(
                                     `
@@ -239,7 +235,7 @@
                                                                  `
                                 )
                             }
-                          
+
 
                         }
                     )
@@ -356,12 +352,13 @@
 
         }
     });
-   
+
     //console.log($programs);
     $("#updateUniversity").click(function () {
         var universityId = $("#universityId").val();
         var files = $("#files").get(0).files;
         var program = $("#program").val();
+        var speciality = $("#speciality").val();
         var direction = $("#direction").val();
         var formData = new FormData();
         formData.append('AzName', $("#azHeader").val());
@@ -387,6 +384,9 @@
         }
         for (var i = 0; i < direction.length; i++) {
             formData.append('DirectionIds', direction[i]);
+        }
+        for (var i = 0; i < speciality.length; i++) {
+            formData.append('SpecialityIds', direction[i]);
         }
         $.ajax({
             type: "PUT",

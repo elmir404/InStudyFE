@@ -78,10 +78,10 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 alt="logo">
                         </a>
                         <!-- LOGO -->
-                        <div class="main-header-center ms-3 d-none d-lg-block">
+                        @*<div class="main-header-center ms-3 d-none d-lg-block">
                             <input type="text" class="form-control" id="typehead" placeholder="Search for results..." autocomplete="off">
                             <button class="btn px-0 pt-2"><i class="fe fe-search" aria-hidden="true"></i></button>
-                        </div>
+                        </div>*@
                         <div class="d-flex order-lg-2 ms-auto header-right-icons">
                             <!-- SEARCH -->
                             <button class="navbar-toggler navresponsive-toggler d-lg-none ms-auto" type="button"
@@ -191,7 +191,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 <h3>GoStudy</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">GoStudy</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-book"></i><span class="side-menu__label">GoStudy</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="List" asp-controller="GoStudy">GoStudy List</a></li>
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddGoStudy" asp-controller="GoStudy">Add GoStudy</a></li>
@@ -203,7 +203,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 <h3>About</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">About</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-layers"></i><span class="side-menu__label">About</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AboutList" asp-controller="About">About List</a></li>
                                      <li class="slide-item"><a asp-area="Admin" asp-action="AddAbout" asp-controller="About">Add About</a></li>
@@ -213,7 +213,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 <h3>Country</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Country</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-map-pin"></i><span class="side-menu__label">Country</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="CountryList" asp-controller="Country">Country List</a></li>
                                      <li class="slide-item"><a asp-area="Admin" asp-action="AddCountry" asp-controller="Country">Add Coutry</a></li>
@@ -224,7 +224,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 <h3>Direction</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Direction</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-map"></i><span class="side-menu__label">Direction</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="DirectionList" asp-controller="Direction">Direction List</a></li>
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddDirection" asp-controller="Direction">Add Direction</a></li>
@@ -234,7 +234,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 <h3>University</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">University</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-book-open"></i><span class="side-menu__label">University</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="UniversityList" asp-controller="University">University List</a></li>
                                      <li class="slide-item"><a asp-area="Admin" asp-action="AddUniversity" asp-controller="University">Add University</a></li>
@@ -243,7 +243,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 <h3>Faculty</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Faculty</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-bookmark"></i><span class="side-menu__label">Faculty</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="SpecialityList" asp-controller="Speciality">Faculty List</a></li>
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddSpeciality" asp-controller="Speciality">Add Faculty</a></li>
@@ -253,7 +253,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 <h3>Degree</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Degree</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-award"></i><span class="side-menu__label">Degree</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="ProgramList" asp-controller="Program">Degree List</a></li>
                                      <li class="slide-item"><a asp-area="Admin" asp-action="AddProgram" asp-controller="Program">Add Degree</a></li>
@@ -263,7 +263,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 <h3>Partner</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Partner</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-link"></i><span class="side-menu__label">Partner</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="List" asp-controller="Partner">Partner List</a></li>
                                      <li class="slide-item"><a asp-area="Admin" asp-action="AddPartner" asp-controller="Partner">Add Partner</a></li>
@@ -273,7 +273,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 <h3>Student Comments</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Comments</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-message-square"></i><span class="side-menu__label">Comments</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="List" asp-controller="StudentWords">Comment List</a></li>
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddStudentWords" asp-controller="StudentWords">Add Comment</a></li>
@@ -285,7 +285,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 <h3>Articles</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Articles</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-cast"></i><span class="side-menu__label">Articles</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="List" asp-controller="Blog">Articles List</a></li>
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddBlog" asp-controller="Blog">Add Articles</a></li>
@@ -297,7 +297,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 <h3>Duration</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Duration</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-clock"></i><span class="side-menu__label">Duration</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="List" asp-controller="Duration">Duration List</a></li>
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddDuration" asp-controller="Duration">Add Duration</a></li>
@@ -311,7 +311,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 <h3>Student Requests</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Student Requests</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-mail"></i><span class="side-menu__label">Student Requests</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="RequestList" asp-controller="Request">Requests</a></li> 
                                     <li class="slide-item"><a asp-area="Admin" asp-action="NonSeedRequestList" asp-controller="Request">Non Seed Requests</a></li>
@@ -321,35 +321,35 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 <h3>Headers</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Direction Headers</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-layers"></i><span class="side-menu__label">Direction Headers</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="DirectionHeader" asp-controller="Header">Direction Header</a></li>
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddDirectionHeader" asp-controller="Header">Add Direction Header</a></li>
                                 </ul>
                             </li> 
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Country Headers</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-layers"></i><span class="side-menu__label">Country Headers</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="CountryHeader" asp-controller="Header">Country Header</a></li>
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddCountryHeader" asp-controller="Header">Add Country Header</a></li>
                                 </ul>
                             </li> 
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Comments Headers</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-layers"></i><span class="side-menu__label">Comments Headers</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="CommentsHeader" asp-controller="Header">Comments Header</a></li>
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddCommentsHeader" asp-controller="Header">Add Comments Header</a></li>
                                 </ul>
                             </li>  
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Partners Headers</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-layers"></i><span class="side-menu__label">Partners Headers</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="PartnersHeader" asp-controller="Header">Partners Header</a></li>
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddPartnersHeader" asp-controller="Header">Add Partners Header</a></li>
                                 </ul>
                             </li> 
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Arcticles Headers</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-layers"></i><span class="side-menu__label">Arcticles Headers</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="ArcticlesHeader" asp-controller="Header">Arcticles Header</a></li>
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddArcticlesHeader" asp-controller="Header">Add Arcticles Header</a></li>
@@ -359,14 +359,14 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 <h3>Site Content</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Site Headers</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-file-text"></i><span class="side-menu__label">Site Headers</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="HeaderList" asp-controller="Content">Home Page Header</a></li>
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddHeader" asp-controller="Content">Add Home Page Header</a></li>
                                 </ul>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Home Onboarding</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-file-text"></i><span class="side-menu__label">Home Onboarding</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="OnboardingList" asp-controller="Content">Onboarding List</a></li>
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddOnboarding" asp-controller="Content">Add Onboarding</a></li>
@@ -380,7 +380,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 </ul>
                             </li> *@
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">Questions</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-help-circle"></i><span class="side-menu__label">Questions</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="QuestionList" asp-controller="Content">Questions List</a></li>
                                     <li class="slide-item"><a asp-area="Admin" asp-action="AddQuestion" asp-controller="Content">Add Question</a></li>
@@ -405,7 +405,7 @@ table.dataTable.nowrap th, table.dataTable.nowrap td {
                                 <h3>Users</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-slack"></i><span class="side-menu__label">User</span><i class="angle fe fe-chevron-right"></i></a>
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-users"></i><span class="side-menu__label">User</span><i class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="slide-item"><a asp-area="Admin" asp-action="List" asp-controller="User">Users</a></li>
                                 </ul>

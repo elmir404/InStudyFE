@@ -59,42 +59,16 @@
     $("#programInput1").focusin(function () {
         const menuItem = document.getElementById('program_div');
         menuItem.classList.remove("Hidden");
-
-    });
-    $("#programInput1").focusout(function () {
-        const menuItem = document.getElementById('program_div');
-        setTimeout(function delay() {
-            menuItem.classList.add("Hidden");
-        }, 150);
-       
-       
     });
     $("#countryInput").focusin(function () {
         const menuItem = document.getElementById('country_div');
         menuItem.classList.remove("Hidden");
-
-    });
-    $("#countryInput").focusout(function () {
-        const menuItem = document.getElementById('country_div');
-        setTimeout(function delay() {
-            menuItem.classList.add("Hidden");
-        }, 150);
-
-
-    });
+    });   
     $("#directionInput").focusin(function () {
         const menuItem = document.getElementById('direction_div');
         menuItem.classList.remove("Hidden");
-
     });
-    $("#directionInput").focusout(function () {
-        const menuItem = document.getElementById('direction_div');
-        setTimeout(function delay() {
-            menuItem.classList.add("Hidden");
-        }, 150);
-
-
-    });
+    
 
     $("#countryInput").keyup(function () {
         const menuItem = document.getElementById('country_div');
@@ -114,14 +88,6 @@
             }
         }
     });
-
-    $("#countryInput").focusout(function () {
-        const menuItem = document.getElementById('country_div');
-        setTimeout(function delay() {
-            menuItem.classList.add("Hidden");
-        }, 150);
-    });
-
     $("#directionInput").keyup(function () {
         const menuItem = document.getElementById('direction_div');
         menuItem.classList.remove("Hidden");
