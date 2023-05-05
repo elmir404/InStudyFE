@@ -88,7 +88,7 @@
         function selectFunction() {
             debugger;
             var direction = $("#direction").val();
-
+            var $specialityes = JSON.parse(localStorage.getItem("currentSpecialities"));
 
             var formData = new FormData();
             for (var i = 0; i < direction.length; i++) {
@@ -107,17 +107,42 @@
                 debugger;
                
                     $("#speciality").empty();
+                    if ($specialityes.length == 0) {
+                            $.each(
+                                response?.data.value, function (i, value) {
+                                    html.push(
+                                        `
+                                                        <option value="${value.id}">${value.enName}</option>
 
+                                                        `
+                                    );
+                                }
+                            );
+                    }
+                    else{
                     $.each(
                         response?.data.value, function (i, value) {
-                            html.push(
-                                `
-                                        <option value="${value.id}">${value.enName}</option>
+                            if ($specialityes.find(x => x === value.id)){
+                                html.push(
+                                    `
+                                                                <option selected value="${value.id}">${value.enName}</option>
 
-                                        `
-                            );
+                                                                `
+                                );
+                            }
+                            else{
+                                html.push(
+                                    `
+                                                                        <option value="${value.id}">${value.enName}</option>
+
+                                                                        `
+                                );
+                            }
+                         
                         }
                     );
+                    }
+                  
                     $('#speciality').html(html.join(''));
                     //$('#speciality').html(html.join(''));
                 

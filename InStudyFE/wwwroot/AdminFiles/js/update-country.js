@@ -36,18 +36,7 @@
 
                             
                           
-<div class="row mb-4">
-                                <label class="col-md-3 form-label">Students Count:</label>
-                                <div class="col-md-9">
-                                    <input type="number" value="${data.data.currentStudents}" id="CurrentStudents" class="form-control">
-                                </div>
-                            </div> 
-                            <div class="row mb-4">
-                                <label class="col-md-3 form-label">Population:</label>
-                                <div class="col-md-9">
-                                    <input type="number" id="Population" value="${data.data.population}" class="form-control">
-                                </div>
-                            </div>
+
 
 
 
@@ -186,8 +175,8 @@
         formData.append('RuName', $("#ruHeader").val());
         formData.append('EnName', $("#enHeader").val());
        
-        formData.append('CurrentStudents', $("#CurrentStudents").val());
-        formData.append('Population', $("#Population").val());
+        formData.append('CurrentStudents', 0);
+        formData.append('Population', 0);
         formData.append('AzWorkPermit', $("#WorkPermitAz").val());
         formData.append('EnWorkPermit', $("#WorkPermitEn").val());
         formData.append('RuWorkPermit', $("#WorkPermitRu").val());

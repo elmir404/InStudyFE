@@ -140,6 +140,7 @@
                     
                     $('#direction').html(html.join('')).multipleSelect();
                     var html1 = [];
+                    var locArr = [];
                     $.ajax({
                         type: "POST",
                         url: `https://api.instudy.net/api/Speciality/SearchSpeciality?currentPage=1&pageSize=100`,
@@ -160,6 +161,7 @@
                                     $.each(
 
                                         response.data.value, function (p, value) {
+
                                             html1.push(
                                                 `
                                                                                 <option value="${value.id}">${value.enName}</option>
@@ -171,6 +173,9 @@
                                         });
                                 }
                                 else {
+                                    $.each(
+
+                                        response.data.value, function (p, value) {
                                     if (data.data.specialities.find(x => x.id === value.id)) {
                                         html1.push(
                                             `
@@ -178,6 +183,8 @@
 
                                                                              `
                                         );
+                                        locArr.push(value.id);
+                                        localStorage.setItem('currentSpecialities', JSON.stringify(locArr));
                                     
                                     }
                                     else {
@@ -188,7 +195,7 @@
                                                                              `
                                         );
                                     }
-
+                                    });
                                    
                                 }
 
@@ -386,7 +393,7 @@
             formData.append('DirectionIds', direction[i]);
         }
         for (var i = 0; i < speciality.length; i++) {
-            formData.append('SpecialityIds', direction[i]);
+            formData.append('SpecialityIds', speciality[i]);
         }
         $.ajax({
             type: "PUT",

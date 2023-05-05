@@ -12,12 +12,20 @@ namespace InStudyFE.Areas.Admin.Controllers
         public IActionResult AddDirectionHeader()
         {
             return View();
+        }  
+        public IActionResult UpdateDirectionHeader()
+        {
+            return View();
         } 
         public IActionResult CountryHeader()
         {
             return View();
         } 
         public IActionResult AddCountryHeader()
+        {
+            return View();
+        }
+        public IActionResult UpdateCountryHeader()
         {
             return View();
         }
@@ -29,6 +37,10 @@ namespace InStudyFE.Areas.Admin.Controllers
         {
             return View();
         }
+        public IActionResult UpdateCommentsHeader()
+        {
+            return View();
+        }
         public IActionResult PartnersHeader()
         {
             return View();
@@ -37,11 +49,20 @@ namespace InStudyFE.Areas.Admin.Controllers
         {
             return View();
         }
+        public IActionResult UpdatePartnersHeader()
+        {
+            return View();
+        } 
+        
         public IActionResult ArcticlesHeader()
         {
             return View();
         } 
         public IActionResult AddArcticlesHeader()
+        {
+            return View();
+        } 
+        public IActionResult UpdateArcticlesHeader()
         {
             return View();
         }

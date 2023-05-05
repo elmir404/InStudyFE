@@ -1,4 +1,8 @@
-﻿<style>
+﻿@model List<GetCountryDto>
+@{
+    var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
+}
+<style>
     #DetailsInformation #CountryOverview #countryList li a :hover {
         color: #6610f2 !important;
     }
@@ -17,9 +21,47 @@
             <div data-module=""
                  class="Module StudyPortals_Shared_Modules_Country_OverviewBase_CountryOverviewBase StudyPortals_DistanceLearning_Modules_Country_Overview_CountryOverviewDistanceLearning">
                 <article id="CountryOverview">
-                    <h1 id="countrypageHeader"> </h1>
+                    @if (culture == "en")
+                    {
+                        <h1>Countries</h1>
+                    }
+                    else if (culture == "ru")
+                    {
+
+                        <h1>Страны</h1>
+                    }
+                    else
+                    {
+                        <h1>Ölkələr</h1>
+                    }
 
                     <ul id="countryList">
+                        @foreach (var country in Model)
+                        {
+                            @if (culture == "en")
+                            {
+                                <li data-name="@country.EnName" data-studies="@country.Id">
+                                    <a href="/Country/Detail?countryId=@country.Id"
+                               title="@country.EnName"> @country.EnName </a>
+                                </li>
+                            }
+                            else if (culture == "ru")
+                            {
+
+                                <li data-name="@country.RuName" data-studies="@country.Id">
+                                <a href="/Country/Detail?countryId=@country.Id"
+                               title="@country.RuName"> @country.RuName </a>
+                            </li>
+                            }
+                            else
+                            {
+                                <li data-name="@country.AzName" data-studies="@country.Id">
+                                    <a href="/Country/Detail?countryId=@country.Id"
+                               title="@country.AzName"> @country.AzName </a>
+                                </li>
+                            }
+                           
+                        }
                     </ul>
                 </article>
             </div>
@@ -30,7 +72,4 @@
 </div>
 
      
-        @section Scripts{
-        <script src="~/js/country.js" async crossorigin="anonymous"></script>
-
-        }
+    

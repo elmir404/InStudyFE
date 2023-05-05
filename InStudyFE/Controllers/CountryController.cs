@@ -13,9 +13,16 @@ namespace InStudyFE.Controllers
         {
             _httpClientFactory = httpClientFactory;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var client = _httpClientFactory.CreateClient("InStudy");
+
+            var country = await GetActiveCountries(client);
+
+
+            //await Task.WhenAll(country);
+          
+            return View(country);
         }
 
         [HttpGet]
@@ -24,13 +31,14 @@ namespace InStudyFE.Controllers
         {
             var client = _httpClientFactory.CreateClient("InStudy");
 
-            var country = GetCountries(client,countryId);
+            var country = await GetCountries(client,countryId);
 
           
-            await Task.WhenAll(country);
+            //await Task.WhenAll(country);
             var model = new CountryViewModel()
             {
-                country = country.Result,
+                country = country,
+                university = new List<GetUniversityDto>()
                
 
 
@@ -44,6 +52,14 @@ namespace InStudyFE.Controllers
             var result = JsonConvert.DeserializeObject<CountryDetailModel>(responseString);
             var country = result.data as GetCountryDto;
 
+            return country;
+        }  
+        private async Task<List<GetCountryDto>> GetActiveCountries(HttpClient client)
+        {
+            var response = await client.GetAsync("/api/Country/GetCountriesIdName");
+            var responseString = await response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<CountryModel>(responseString);
+            var country = result.data as List<GetCountryDto>;
             return country;
         }
 

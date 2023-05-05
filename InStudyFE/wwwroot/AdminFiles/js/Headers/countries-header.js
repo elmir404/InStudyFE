@@ -23,7 +23,9 @@
                                 <span class="fe fe-trash-2"> </span>
 
                             </button>
-                           
+                            <button onclick=Edit(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-success">
+                                <i class="fe fe-edit"></i>
+                            </button>
                         </div>
 
                         `;
@@ -107,10 +109,9 @@
     });
 
 });
-function Edit(about) {
+function Edit(id) {
 
-    localStorage.setItem('goStudyId', about);
-    location.href = `/Admin/GoStudy/UpdateGoStudy`;
+    location.href = `/admin/header/updatecountryheader/${id}`;
 
 }
 function Delete(about) {

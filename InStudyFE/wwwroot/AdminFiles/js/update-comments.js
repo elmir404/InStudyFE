@@ -53,9 +53,21 @@
                         <input type="hidden" id="commentId" value="${data.data.id}" class="form-control">
 
                      <div class="row mb-4">
-                                <label class="col-md-3 form-label">Student Name :</label>
+                                <label class="col-md-3 form-label">Az Student Name :</label>
                                 <div class="col-md-9">
-                                    <input type="text" id="azHeader" value="${data.data.name}" class="form-control" placeholder="Title Name">
+                                    <input type="text" id="azHeader" value="${data.data.azName}" class="form-control" placeholder="Title Name">
+                                </div>
+                            </div>  
+<div class="row mb-4">
+                                <label class="col-md-3 form-label">En Student Name :</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="enHeader" value="${data.data.enName}" class="form-control" placeholder="Title Name">
+                                </div>
+                            </div>  
+<div class="row mb-4">
+                                <label class="col-md-3 form-label">Ru Student Name :</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="ruHeader" value="${data.data.ruName}" class="form-control" placeholder="Title Name">
                                 </div>
                             </div>
                            
@@ -64,7 +76,19 @@
                             <div class="row">
                                 <label class="col-md-3 form-label mb-4">Az Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="" id="azDescription" maxlength="256" rows="4" cols="50"  name="example">${data.data.description}</textarea>
+                                    <textarea class="" id="azDescription" maxlength="400" rows="4" cols="50"  name="example">${data.data.azDescription}</textarea>
+                                </div>
+                            </div>  
+<div class="row">
+                                <label class="col-md-3 form-label mb-4">En Description :</label>
+                                <div class="col-md-9 mb-4">
+                                    <textarea class="" id="enDescription" maxlength="400" rows="4" cols="50"  name="example">${data.data.enDescription}</textarea>
+                                </div>
+                            </div> 
+<div class="row">
+                                <label class="col-md-3 form-label mb-4">Ru Description :</label>
+                                <div class="col-md-9 mb-4">
+                                    <textarea class="" id="ruDescription" maxlength="400" rows="4" cols="50"  name="example">${data.data.ruDescription}</textarea>
                                 </div>
                             </div>
                          <div class="row">
@@ -85,10 +109,15 @@
     $("#updateComments").click(function () {
         var blogId = $("#commentId").val();
         var formData = new FormData();
+        formData.append('AzName', $("#azHeader").val());
+        formData.append('EnName', $("#enHeader").val());
+        formData.append('RuName', $("#ruHeader").val());
         var files = $("#files").get(0).files;
-        formData.append('Name', $("#azHeader").val());
-        formData.append('Description', $("#azDescription").val());
+        formData.append('AzDescription', $("#azDescription").val());
+        formData.append('EnDescription', $("#enDescription").val());
+        formData.append('RuDescription', $("#ruDescription").val());
         formData.append('CountryId', $("#country").val());
+        formData.append('IsActive', 'True');
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);
         }

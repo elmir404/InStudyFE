@@ -48,9 +48,6 @@
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
         formData.append('EnName', $("#enHeader").val());
-
-        formData.append('CurrentStudents', $("#CurrentStudents").val());
-        formData.append('Population', $("#Population").val());
         formData.append('AzWorkPermit', $("#WorkPermitAz").val());
         formData.append('EnWorkPermit', $("#WorkPermitEn").val());
         formData.append('RuWorkPermit', $("#WorkPermitRu").val());

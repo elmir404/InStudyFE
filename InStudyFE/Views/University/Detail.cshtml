@@ -108,7 +108,10 @@
       <div data-module="" class="Module StudyPortals_Shared_Modules_Study_Hero_Hero">
          <div id="Hero" class="js-Hero">
                     <div id="HeroContainer" class="HeroImageContainer">
+                        @if(Model.UniversityFiles.Count()>0){
                         <span class="HeroImage js-heroImage" style="background-image:url(https://api.instudy.net/@Model.UniversityFiles[0].Path);background-repeat: no-repeat;background-size:cover;"></span>
+
+                        }
                             
 
   

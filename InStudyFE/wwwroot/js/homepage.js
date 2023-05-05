@@ -390,7 +390,25 @@
 
                     
                     var image = `https://api.instudy.net/${value?.studentFiles[0]?.path}`
+                    if ($lang == 'AZ') {
+                        var name = value?.azName
+                        var description = value?.azDescription;
+                        var country = value?.country?.azName
 
+                    }
+                    else if ($lang == 'EN') {
+                        var name = value?.enName
+                        var description = value?.enDescription;
+                        var country = value?.country?.enName
+
+
+                    } else {
+                        var name = value?.ruName;
+                        var description = value?.ruDescription;
+                        var country = value?.country?.ruName
+
+
+                    }
                     
 
 
@@ -399,10 +417,10 @@
                            <li class="Quote">
                               <div class="Author">
                                  <img class="AuthorImage" src="${image}" style="width:80px;height:80px;" alt="Luna" width="20" height="20" loading="lazy"> 
-                                 <div class="AuthorDetails"> <span class="AuthorName">${value.name}</span> <span class="AuthorCountry">${value?.country?.enName}</span> </div>
+                                 <div class="AuthorDetails"> <span class="AuthorName">${name}</span> <span class="AuthorCountry">${country}</span> </div>
                               </div>
                               <blockquote>
-                                ${value.description.slice(0,20)};
+                                ${description};
                               </blockquote>
                            </li>         
 

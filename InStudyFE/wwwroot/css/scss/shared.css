@@ -442,10 +442,10 @@ button,input,option,select,textarea{
         padding:0
     }
 }
-#Footer{
-    background:#fff url(//monet-prtl-co.imgix.net/Shared/Footer/bg-mobile-top.svg) no-repeat 0 0;
+#Footer {
+    background-color: #A2EACB;
     margin-top:6rem;
-    padding-top:0
+    padding-top: 0
 }
 @media (min-width:769px)and (max-width:1024px){
     #Footer{
@@ -480,7 +480,7 @@ button,input,option,select,textarea{
     }
 }
 #Footer #FooterMain{
-    background:transparent url(//monet-prtl-co.imgix.net/Shared/Footer/bg-mobile-bottom.svg) no-repeat 100% 100%;
+    
     background-size:50%;
     display:block;
     padding:4rem 0;

@@ -6,11 +6,15 @@
         },
         columns: [
             {
-                data: 'name',
+                data: 'azName',
+            },
+{
+                data: 'enName',
             },
             {
-                data: 'description',
+                data: 'ruName',
             },
+          
            
             {
                 data: 'id', render: function (data, type, row, meta) {
@@ -37,9 +41,13 @@
     });
     $("#addWords").click(function () {
         var formData = new FormData();
-        formData.append('Name', $("#azHeader").val());
+        formData.append('AzName', $("#azHeader").val());
+        formData.append('EnName', $("#enHeader").val());
+        formData.append('RuName', $("#ruHeader").val());
         var files = $("#files").get(0).files;
-        formData.append('Description', $("#azDescription").val());
+        formData.append('AzDescription', $("#azDescription").val());
+        formData.append('EnDescription', $("#enDescription").val());
+        formData.append('RuDescription', $("#ruDescription").val());
         formData.append('CountryId', $("#country").val());
         formData.append('IsActive', 'True');
         for (var i = 0; i < files.length; i++) {

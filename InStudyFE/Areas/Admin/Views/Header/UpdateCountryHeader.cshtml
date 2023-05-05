@@ -1,0 +1,93 @@
+﻿<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">Update Partner</h1>
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Update Country</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- PAGE-HEADER END -->
+            <!-- ROW-1 OPEN -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <form id="form" class="card">
+                        <div class="card-header">
+                            <div class="card-title">Update Country</div>
+                        </div>
+                        <div id="updateForm" class="card-body">
+
+                            <!--End Row-->
+                        </div>
+                        <div class="card-footer">
+                            <!--Row-->
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-9">
+                                    <a href="javascript:void(0)" id="update" class="btn btn-primary">Update</a>
+                                </div>
+                            </div>
+                            <!--End Row-->
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /ROW-1 CLOSED -->
+        </div>
+        <!-- CONTAINER CLOSED -->
+    </div>
+</div>
+@section Scripts {
+    <script src="~/AdminFiles/js/Headers/update-country.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(document).on('change', '#azHeader', function () {
+                debugger;
+                $("#form").data("changed", true);
+            });
+            $(document).on('change', '#enHeader', function () {
+                debugger;
+                $("#form").data("changed", true);
+            });
+            $(document).on('change', '#ruHeader', function () {
+                debugger;
+                $("#form").data("changed", true);
+            });
+
+            var isClicked = false;
+            $('#update').on('click', function (evt) {
+                debugger;
+                isClicked = true;
+            });
+            debugger;
+
+            window.addEventListener("beforeunload", function (e) {
+                var confirmationMessage = 'It looks like you have been editing something. '
+                    + 'If you leave before saving, your changes will be lost.';
+
+
+                debugger;
+                if ($("#form").data("changed") && isClicked == false) {
+                    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+                    return confirmationMessage;
+
+                }
+
+                //Gecko + Webkit, Safari, Chrome etc.
+            });
+        });
+
+
+
+
+
+
+    </script>
+        }
