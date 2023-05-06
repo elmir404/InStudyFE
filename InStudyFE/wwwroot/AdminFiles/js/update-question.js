@@ -46,12 +46,12 @@
                             <div class="row">
                                 <label class="col-md-3 form-label mb-4">Ru Answer:</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="content" id="ruAnswer" name="example">${data.data.ruQuestionAnswer}</textarea>
+                                    <textarea class="content2" id="ruAnswer" name="example">${data.data.ruQuestionAnswer}</textarea>
                                 </div>
                             </div> <div class="row">
                                 <label class="col-md-3 form-label mb-4">En Answer:</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="content" id="enAnswer" name="example">${data.data.enQuestionAnswer}</textarea>
+                                    <textarea class="content3" id="enAnswer" name="example">${data.data.enQuestionAnswer}</textarea>
                                 </div>
                             </div>
                         

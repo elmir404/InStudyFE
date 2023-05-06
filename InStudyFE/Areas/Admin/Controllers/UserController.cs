@@ -53,6 +53,11 @@ namespace InStudyFE.Areas.Admin.Controllers
                 ModelState.AddModelError("", "Email already in use!");
                 return View(model);
             }
+            if (result.message == "unknownerror")
+            {
+                ModelState.AddModelError("", "An error ocured.Please try again!");
+                return View(model);
+            }
             return RedirectToAction("List", "User","Admin");
         }
     }
