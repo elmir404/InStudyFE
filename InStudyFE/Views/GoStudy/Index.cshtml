@@ -2,7 +2,7 @@
 
 @{
     var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
-    
+    var length = Model.goStudy.Count() - 1;
 }
 @section Css{
  <link rel="stylesheet" href="~/css/scss/slick/university.css"/>
@@ -112,7 +112,10 @@
    <div id="LayoutHero">
       <div data-module="" class="Module StudyPortals_Shared_Modules_Study_Hero_Hero">
          <div id="Hero" class="js-Hero">
-            <div class="HeroImageContainer"> <span class="HeroImage"> <span class="HeroImageDefaultWrapper"> <img fetchpriority="high" rel="preconnect" src="//monet-prtl-co.imgix.net/Shared/StudyPage/CoverImageBasicDesktop.svg" alt="Studyportals"> </span> </span> </div>
+             @if(Model.goStudy[length].AboutFiles.Count()>0){
+                        <div class="HeroImageContainer"> <span class="HeroImage"> <span class="HeroImageDefaultWrapper"> <img fetchpriority="high" rel="preconnect" src="https://api.instudy.net/@Model.goStudy[length].AboutFiles[0].Path" alt="Studyportals"> </span> </span> </div>
+
+             }
               
             </div>
 
@@ -192,7 +195,7 @@
                                     <div data-module="Study:study_key_facts" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_KeyFacts_KeyFacts">
                                         <section>
                                             <div id="StudyKeyFacts">
-                                                <h2 class="KeyFactsTitle">@item.Id</h2>
+                                                <h2 class="KeyFactsTitle">@item.AzHeader</h2>
                                                 <article class="FactItem">
                                                     <div>
                                                       @Html.Raw(@item.AzDescription)
@@ -264,7 +267,7 @@
                                     <div data-module="Study:study_key_facts" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_KeyFacts_KeyFacts">
                                         <section>
                                             <div id="StudyKeyFacts">
-                                                <h2 class="KeyFactsTitle">@item.Id</h2>
+                                                <h2 class="KeyFactsTitle">@item.AzHeader</h2>
                                                 <article class="FactItem">
                                                     <div>
                                                       @Html.Raw(@item.AzDescription)

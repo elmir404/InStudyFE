@@ -82,7 +82,7 @@
 
     $("#addAbout").click(function () {
 
-      
+        var files = $("#files").get(0).files;
         var formData = new FormData();
         formData.append('AzHeader', $("#azHeader").val());
         formData.append('RuHeader', $("#ruHeader").val());
@@ -90,6 +90,9 @@
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
+        for (var i = 0; i < files.length; i++) {
+            formData.append('Files', files[i]);
+        }
         $.ajax({
             type: "POST",
             url: 'https://api.instudy.net/api/About/AddAbout',

@@ -1166,6 +1166,10 @@ body[data-wishlist-drawer] {
     color: #05293c
 }
 
+.ContentItemLink:hover {
+    color: #6610f2 !important;
+}
+
 #HeaderMainMenu ul {
     list-style: none;
     padding: 0
@@ -1257,7 +1261,7 @@ body[data-wishlist-drawer] {
         cursor: pointer;
         display: flex;
         flex-direction: row;
-        padding: 1.25rem 0 1rem .75rem
+        padding: 1.25rem 0 1rem .75rem;
     }
 
 @media(min-width:769px)and (max-width:1024px) {
@@ -1366,7 +1370,8 @@ body[data-wishlist-drawer] {
     background-color: #fff;
     color: #247ba0;
     position: absolute;
-    top: -60px
+    top: -60px;
+    display:none;
 }
 
 @media(max-width:480px) {

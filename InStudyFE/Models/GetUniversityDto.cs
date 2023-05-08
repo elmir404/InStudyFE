@@ -12,7 +12,12 @@
         public string RuDescription { get; set; }
 
         public string MapAdrress { get; set; }
-        public string Address { get; set; }
+        public string AzAddress { get; set; }
+        public string EnAddress { get; set; }
+        public string RuAddress { get; set; }
+        public string AzCity { get; set; }
+        public string EnCity { get; set; }
+        public string RuCity { get; set; }
 
         public int StudentCount { get; set; }
         public int AcademicStaff { get; set; }

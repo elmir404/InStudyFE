@@ -55,10 +55,18 @@
                                             <div class="col-md-9 mb-4">
                                                 <textarea class="content2" id="ruDescription" name="example"></textarea>
                                             </div>
-                                        </div> <div class="row">
+                                        </div>
+                                        <div class="row">
                                             <label class="col-md-3 form-label mb-4">En Description :</label>
                                             <div class="col-md-9 mb-4">
                                                 <textarea class="content3" id="enDescription" name="example"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-md-3 form-label mb-4">File Upload :</label>
+                                            <div class="col-md-9">
+                                                <input id="files" type="file" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])" name="files" accept=".jpg, .png, image/jpeg, image/png">
+                                                <img id="output" src="" width="100" height="100">
                                             </div>
                                         </div>
                                     </div>
@@ -111,6 +119,10 @@
             debugger;
             $("#form").data("changed", true);
         });
+            $(document).on('change', '#files', function () {
+                debugger;
+                $("#form").data("changed", true);
+            });
       
         var isClicked = false;
         $('#addAbout').on('click', function (evt) {

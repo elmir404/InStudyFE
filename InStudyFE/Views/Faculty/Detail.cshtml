@@ -370,49 +370,7 @@
         </div>
     </div>
     <section class="col1 WrappedContent no-vertical-padding">
-        @if (Model.Direction.Id!=null)
-        {
-            <div class="NarrowWrapper">
-
-                <div data-module="" class="Module StudyPortals_Shared_Modules_SubdisciplinesList_SubdisciplinesList">
-                    <section id="SubdisciplinesList">
-                        @if (culture == "en")
-                        {
-                            <h3 class="Specialisations">Directions within the field of @Model.EnName</h3>
-                        }
-                        else if (culture == "ru")
-                        {
-
-                            <h3 class="Specialisations">Направления в области @Model.RuName</h3>
-                        }
-                        else
-                        {
-                            <h3 class="Specialisations">@Model.AzName sahəsində istiqamətlər</h3>
-                        }
-
-                        <ul id="specList" class="SubDisciplinesList">
-                           
-                                @if (culture == "en")
-                                {
-                                    <li> <a href="/Direction/Detail?Id=@Model.Direction.Id">@Model.Direction.EnName </a> </li>
-                                }
-                                else if (culture == "ru")
-                                {
-
-                                                                       <li> <a href="/Direction/Detail?Id=@Model.Direction.Id">@Model.Direction.RuName </a> </li>
-
-                                }
-                                else
-                                {
-                                <li> <a href="/Direction/Detail?Id=@Model.Direction.Id">@Model.Direction.AzName </a> </li>
-                                }
-                            
-                        </ul>
-
-                    </section>
-                </div>
-            </div>
-        }
+       
 
         @if (Model.Universities.Count > 0)
         {

@@ -177,7 +177,7 @@
                        
                             <article class="ModulesContainer">
                                 <div data-module="Study:study_admission_requirements" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_AdmissionRequirements_AdmissionRequirements">
-                                    <section  id="AdmissionRequirements">
+                                   
                                         <article class="bachelor" id="AcademicRequirements">
                                         @if (culture == "en")
                                         {
@@ -195,7 +195,7 @@
                                         </article>
                                        
                                         
-                                    </section>
+                                    
                                 </div>
                             </article>
                         </div>
@@ -203,6 +203,7 @@
                     <div class="SwitchableGroup js-content-work_permit work_permit " id="master_content" onclick="swith('master_content')">
                            
                             <article  class="ModulesContainer master">
+                                 <div data-module="Study:study_admission_requirements" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_AdmissionRequirements_AdmissionRequirements">
                                  @if (culture == "en")
                                     {
                                         @Html.Raw(@Model.EnMaster)
@@ -216,6 +217,7 @@
                                     {
                                         @Html.Raw(@Model.AzMaster)
                                     }
+                                 </div>
                             </article>
                         </div>
             </div>

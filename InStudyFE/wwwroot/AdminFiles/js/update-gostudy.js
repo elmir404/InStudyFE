@@ -54,6 +54,13 @@
                                     <textarea class="content3" id="enDescription"  name="example">${data.data.enDescription}</textarea>
                                 </div>
                             </div>
+                           <div class="row">
+                                <label class="col-md-3 form-label mb-4">About Upload :</label>
+                                <div class="col-md-9">
+                                     <input id="files" type="file" name="files" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])"  accept=".jpg, .png, image/jpeg, image/png">
+                                      <img id="output" src="https://api.instudy.net/${data.data.aboutFiles[0]?.path}" width="100" height="100">
+                                </div>
+                            </div>
                          
                         
                         `
@@ -67,6 +74,7 @@
     })
     $("#updategoStudy").click(function () {
         var aboutId = $("#aboutId").val();
+        var files = $("#files").get(0).files;
         var formData = new FormData();
         formData.append('AzHeader', $("#azHeader").val());
         formData.append('RuHeader', $("#ruHeader").val());
@@ -74,7 +82,9 @@
         formData.append('AzDescription', $("#azDescription").val());
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
-       
+            for (var i = 0; i < files.length; i++) {
+                formData.append('Files', files[i]);
+            }
        
         console.log(formData);
 
