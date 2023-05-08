@@ -93,11 +93,11 @@
                 $('#addDuration').attr('disabled', 'disabled');
             },
             complete: function (response) {
-                if (response.status == 200) {
+                if (response.success == true) {
                     location.href = "/Admin/Duration/List"
                 }
                 else {
-                    alert("error")
+                    alert("Seçilən speciality və ya program universitetlə əlaqəli deyil!")
                 }
 
             },
@@ -127,7 +127,7 @@ function Delete(id) {
         if (result.isConfirmed) {
             $.ajax({
                 type: "PUT",
-                url: `https://api.instudy.net/api/AboutCompany/DeleteAboutCompany?id=${id}`,
+                url: `https://api.instudy.net/api/Duration/DeleteDuration?id=${id}`,
                 success: function (result) {
                     if (result.success == true) {
                         Swal.fire(

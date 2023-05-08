@@ -25,10 +25,6 @@
     <None Include="Areas\Admin\Views\Blog\BlogDetail.cshtml" />
     <None Include="Areas\Admin\Views\Blog\List.cshtml" />
     <None Include="Areas\Admin\Views\Contact\MessageList.cshtml" />
-    <None Include="Areas\Admin\Views\Meetings\ActiveMeetings.cshtml" />
-    <None Include="Areas\Admin\Views\Meetings\ApprovedMeetings.cshtml" />
-    <None Include="Areas\Admin\Views\Meetings\CanceledMeetings.cshtml" />
-    <None Include="Areas\Admin\Views\Meetings\MeetingList.cshtml" />
     <None Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
     <None Include="Areas\Admin\Views\User\List.cshtml" />
     <None Include="Areas\Admin\Views\_ViewImports.cshtml" />
