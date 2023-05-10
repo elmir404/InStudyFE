@@ -2,7 +2,7 @@
 
 @{
     var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
-    var length = Model.goStudy.Count() - 1;
+   
 }
 @section Css{
  <link rel="stylesheet" href="~/css/scss/slick/university.css"/>
@@ -112,8 +112,8 @@
    <div id="LayoutHero">
       <div data-module="" class="Module StudyPortals_Shared_Modules_Study_Hero_Hero">
          <div id="Hero" class="js-Hero">
-             @if(Model.goStudy[length].AboutFiles.Count()>0){
-                        <div class="HeroImageContainer"> <span class="HeroImage"> <span class="HeroImageDefaultWrapper"> <img fetchpriority="high" rel="preconnect" src="https://api.instudy.net/@Model.goStudy[length].AboutFiles[0].Path" alt="Studyportals"> </span> </span> </div>
+             @if(Model.goStudyFront.GoStudyFiles.Count()>0){
+                        <div class="HeroImageContainer"> <span class="HeroImage"> <span class="HeroImageDefaultWrapper"> <img fetchpriority="high" rel="preconnect" src="https://api.instudy.net/@Model.goStudyFront.GoStudyFiles[0].Path" alt="Studyportals"> </span> </span> </div>
 
              }
               

@@ -24,7 +24,6 @@ namespace InStudyFE.Controllers
 
             var university = GetUniversity(client, uniId);
 
-
             await Task.WhenAll(university);
            
             return View(university.Result);

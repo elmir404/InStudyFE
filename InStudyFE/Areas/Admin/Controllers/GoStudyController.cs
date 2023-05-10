@@ -10,8 +10,16 @@ namespace InStudyFE.Areas.Admin.Controllers
         public IActionResult AddGoStudy()
         {
             return View();
+        } 
+        public IActionResult AddHeader()
+        {
+            return View();
         }
         public IActionResult List()
+        {
+            return View();
+        }
+        public IActionResult HeaderList()
         {
             return View();
         }
@@ -20,6 +28,10 @@ namespace InStudyFE.Areas.Admin.Controllers
             return View();
         }
         public IActionResult UpdateGoStudy()
+        {
+            return View();
+        } 
+        public IActionResult UpdateHeader()
         {
             return View();
         }

@@ -140,16 +140,13 @@
 
                     if ($lang == 'AZ') {
                         var name = value.azName
-                        var description = value?.azDescription;
 
                     }
                     else if ($lang == 'EN') {
                         var name = value.enName
-                        var description = value?.enDescription;
 
                     } else {
                         var name = value.ruName;
-                        var description = value?.ruDescription;
 
                     }
                     if (name == $program) {
@@ -288,28 +285,22 @@
                     if (response.data.dataCount > 0) {
                         $.each(
                             response?.data.value, function (i, value) {
-                                console.log(value);
 
                                 if ($lang == 'AZ') {
                                     var name = value.azName
-                                    var decription = value.azDescription?.slice(0,20);
-                                    console.log(decription);
+                                    var city = value.azCity;
 
                                     var countryName = value.country?.azName;
                                 }
                                 else if ($lang == 'EN') {
                                     var name = value.enName
-                                    var decription = value.enDescription?.slice(0,10);
-                                    console.log(decription);
-
+                                    var city = value.enCity;
                                     var countryName = value.country?.enName;
 
 
                                 } else {
                                     var name = value.ruName;
-                                    var decription = value.ruDescription?.slice(0,10);
-                                    console.log(decription);
-
+                                    var city = value.ruCity;
                                     var countryName = value.country?.ruName;
 
 
@@ -333,7 +324,7 @@
                                     </div>
                                     <div class="OrganisationInfo" data-v-0363ab3a="">
                                       
-                                       <div class="NameLocation" data-v-0363ab3a=""><strong class="OrganisationName" data-v-0363ab3a="">${countryName}</strong></div>
+                                       <div class="NameLocation" data-v-0363ab3a=""><strong class="OrganisationName" data-v-0363ab3a="">${city},${countryName}</strong></div>
                                        <div class="Promoted" data-v-0363ab3a="">
                                           <div class="Featured" data-study-id="63138" data-v-0363ab3a="" style="position: relative;">
                                             

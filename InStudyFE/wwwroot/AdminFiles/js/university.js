@@ -65,7 +65,12 @@
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
         formData.append('countryId', $("#country").val());
-        formData.append('Address', $("#uniAdrress").val());
+        formData.append('AzAddress', $("#azAdrress").val());
+        formData.append('EnAddress', $("#enAdrress").val());
+        formData.append('RuAddress', $("#ruAdrress").val());
+        formData.append('AzCity', $("#azCity").val());
+        formData.append('EnCity', $("#enCity").val());
+        formData.append('RuCity', $("#ruCity").val());
         
         formData.append('AzBachelor', $("#azBachelor").val());
         formData.append('RuBachelor', $("#ruBachelor").val());

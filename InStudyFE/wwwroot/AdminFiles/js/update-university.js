@@ -274,9 +274,39 @@
                                 </div>
                             </div>
                             <div class="row mb-4">
-                                <label class="col-md-3 form-label">Adress :</label>
+                                <label class="col-md-3 form-label">Az Adress :</label>
                                 <div class="col-md-9">
-                                    <input type="text" id="uniAdrress" value="${data?.data?.address}" class="form-control">
+                                    <input type="text" id="azAdrress" value="${data?.data?.azAddress}" class="form-control">
+                                </div>
+                            </div>
+<div class="row mb-4">
+                                <label class="col-md-3 form-label">En Adress :</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="enAdrress" value="${data?.data?.enAddress}" class="form-control">
+                                </div>
+                            </div>
+<div class="row mb-4">
+                                <label class="col-md-3 form-label">Ru Adress :</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="ruAdrress" value="${data?.data?.ruAddress}" class="form-control">
+                                </div>
+                            </div>
+<div class="row mb-4">
+                                <label class="col-md-3 form-label">Az City :</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="azCity" value="${data?.data?.azCity}" class="form-control">
+                                </div>
+                            </div>
+<div class="row mb-4">
+                                <label class="col-md-3 form-label">En City :</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="enCity" value="${data?.data?.enCity}" class="form-control">
+                                </div>
+                            </div>
+<div class="row mb-4">
+                                <label class="col-md-3 form-label">Ru City :</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="ruCity" value="${data?.data?.ruCity}" class="form-control">
                                 </div>
                             </div>
                             <!-- Row -->
@@ -375,7 +405,12 @@
         formData.append('EnDescription', $("#enDescription").val());
         formData.append('RuDescription', $("#ruDescription").val());
         formData.append('countryId', $("#country").val());
-        formData.append('Address', $("#uniAdrress").val());
+        formData.append('AzAddress', $("#azAdrress").val());
+        formData.append('EnAddress', $("#enAdrress").val());
+        formData.append('RuAddress', $("#ruAdrress").val());
+        formData.append('AzCity', $("#azCity").val());
+        formData.append('EnCity', $("#enCity").val());
+        formData.append('RuCity', $("#ruCity").val());
 
         formData.append('AzBachelor', $("#azBachelor").val());
         formData.append('RuBachelor', $("#ruBachelor").val());

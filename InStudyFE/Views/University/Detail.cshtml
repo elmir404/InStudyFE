@@ -130,6 +130,8 @@
                                     @if (culture == "en")
                                     {
                                         <h1><b>@Model.EnName</b></h1>
+                                        <br />
+                                        <span><b>@Model.EnAddress</b></span>
                                     }
                                     else if (culture == "ru")
                                     {
@@ -137,10 +139,14 @@
                             <h1><b>@Model.RuName</b>
 
                             </h1>
+                            <br />
+                             <span><b>@Model.RuAddress</b></span>
                                     }
                                     else
                                     {
                                   <h1><b>@Model.AzName</b></h1>
+                            <br />
+                            <span><b>@Model.AzAddress</b></span>
                                     }
             </section>
                     </div>
@@ -217,7 +223,7 @@
                                     {
                                         @Html.Raw(@Model.AzMaster)
                                     }
-                                 </div>
+                                    </div>
                             </article>
                         </div>
             </div>

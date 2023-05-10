@@ -1,0 +1,67 @@
+﻿<!--app-content open-->
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">Go Study Header</h1>
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">GoStudy Header</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">List</li>
+                    </ol>
+                </div>
+
+            </div>
+
+
+            <!-- Row -->
+            <div class="row row-sm">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">List</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <a class="btn btn-primary mb-4 data-table-btn" asp-area="Admin" asp-action="AddHeader" asp-controller="GoStudy">
+                                    Add Header
+                                </a>
+                                <!-- Modal -->
+
+                                <table id="gostudyheader-datatable" class="table table-bordered display nowrap" width="100%">
+                                    <thead>
+                                        <tr>
+
+                                            <th class="border-bottom-0">Image</th>
+                                           
+                                            <th class="border-bottom-0">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Row -->
+            <!-- Row -->
+
+
+        </div>
+        <!-- CONTAINER CLOSED -->
+
+    </div>
+</div>
+<!--app-content closed-->
+
+<!-- Sidebar-right -->
+@section Scripts {
+    <script src="~/AdminFiles/js/Headers/gostudy-header.js"></script>
+        }
+
