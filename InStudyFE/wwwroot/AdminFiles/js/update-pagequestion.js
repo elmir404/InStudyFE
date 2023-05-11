@@ -106,9 +106,167 @@
                         
                         `
             );
-             $('.content').richText();
-            $('.content2').richText();
-            $('.content3').richText();
+            tinymce.init({
+                selector: ".content",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content2",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content3",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            }); tinymce.init({
+                selector: ".content4",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content5",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content6",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            }); tinymce.init({
+                selector: ".content7",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content8",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content9",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content10",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content11",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+
+            tinymce.init({
+                selector: ".content12",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content13",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content14",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content15",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content16",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content17",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content18",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
 
 
 
@@ -121,9 +279,10 @@
         formData.append('AzHeader', $("#azHeader").val());
         formData.append('RuHeader', $("#ruHeader").val());
         formData.append('EnHeader', $("#enHeader").val());
-        formData.append('AzBody', $("#azDescription").val());
-        formData.append('EnBody', $("#enDescription").val());
-        formData.append('RuBody', $("#ruDescription").val());
+        formData.append('AzBody', tinymce.get("azDescription").getContent());
+        formData.append('EnBody', tinymce.get("enDescription").getContent());
+        formData.append('RuBody', tinymce.get("ruDescription").getContent());
+        
         for (var i = 0; i < questions.length; i++) {
             formData.append('questionIds', questions[i]);
         }

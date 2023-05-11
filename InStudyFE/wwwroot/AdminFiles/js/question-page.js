@@ -43,9 +43,9 @@
         formData.append('AzHeader', $("#azheader").val());
         formData.append('RuHeader', $("#ruheader").val());
         formData.append('EnHeader', $("#enheader").val());
-        formData.append('AzBody', $("#azdescription").val());
-        formData.append('EnBody', $("#endescription").val());
-        formData.append('RuBody', $("#rudescription").val());
+        formData.append('AzBody', tinymce.get("azDescription").getContent());
+        formData.append('EnBody', tinymce.get("enDescription").getContent());
+        formData.append('RuBody', tinymce.get("ruDescription").getContent());
         for (var i = 0; i < questions.length; i++) {
             formData.append('questionIds', questions[i]);
         }

@@ -144,25 +144,170 @@
                         
                         `
             )
-            $('.content').richText();
-            $('.content1').richText();
-            $('.content2').richText();
-            $('.content3').richText();
-            $('.content4').richText();
-            $('.content5').richText();
-            $('.content6').richText();
-            $('.content7').richText();
-            $('.content8').richText();
-            $('.content9').richText();
-            $('.content10').richText();
-            $('.content11').richText();
-            $('.content12').richText();
-            $('.content13').richText();
-            $('.content14').richText();
-            $('.content15').richText();
-            $('.content16').richText();
-            $('.content17').richText();
-            $('.content18').richText();
+            tinymce.init({
+                selector: ".content",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content2",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content3",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            }); tinymce.init({
+                selector: ".content4",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content5",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content6",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            }); tinymce.init({
+                selector: ".content7",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content8",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content9",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content10",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content11",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+         
+            tinymce.init({
+                selector: ".content12",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content13",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content14",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content15",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content16",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content17",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content18",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+           
+          
+
 
 
         }
@@ -177,24 +322,21 @@
        
         formData.append('CurrentStudents', 0);
         formData.append('Population', 0);
-        formData.append('AzWorkPermit', $("#WorkPermitAz").val());
-        formData.append('EnWorkPermit', $("#WorkPermitEn").val());
-        formData.append('RuWorkPermit', $("#WorkPermitRu").val());
-        formData.append('AzStudy', $("#StudyAz").val());
-        formData.append('EnStudy', $("#StudyEn").val());
-        formData.append('RuStudy', $("#StudyRu").val());
-        formData.append('AzLiving', $("#LivingAz").val());
-        formData.append('EnLiving', $("#LivingEn").val());
-        formData.append('RuLiving', $("#LivingRu").val());
-        formData.append('AzAbout', $("#AboutAz").val());
-        formData.append('EnAbout', $("#AboutEn").val());
-        formData.append('RuAbout', $("#AboutRu").val());
-        formData.append('AzStudentVisa', $("#StudentVisaAz").val());
-        formData.append('EnStudentVisa', $("#StudentVisaEn").val());
-        formData.append('RuStudentVisa', $("#StudentVisaRu").val());
-        formData.append('AzLiving', $("#LivingAz").val());
-        formData.append('EnLiving', $("#LivingEn").val());
-        formData.append('RuLiving', $("#LivingRu").val());
+        formData.append('AzWorkPermit', tinymce.get("WorkPermitAz").getContent());
+        formData.append('EnWorkPermit', tinymce.get("WorkPermitEn").getContent());
+        formData.append('RuWorkPermit', tinymce.get("WorkPermitRu").getContent());
+        formData.append('AzStudy', tinymce.get("StudyAz").getContent());
+        formData.append('EnStudy', tinymce.get("StudyEn").getContent());
+        formData.append('RuStudy', tinymce.get("StudyRu").getContent());
+        formData.append('AzLiving', tinymce.get("LivingAz").getContent());
+        formData.append('EnLiving', tinymce.get("LivingEn").getContent());
+        formData.append('RuLiving', tinymce.get("LivingRu").getContent());
+        formData.append('AzAbout', tinymce.get("AboutAz").getContent());
+        formData.append('EnAbout', tinymce.get("AboutEn").getContent());
+        formData.append('RuAbout', tinymce.get("AboutRu").getContent());
+        formData.append('AzStudentVisa', tinymce.get("StudentVisaAz").getContent());
+        formData.append('EnStudentVisa', tinymce.get("StudentVisaEn").getContent());
+        formData.append('RuStudentVisa', tinymce.get("StudentVisaRu").getContent());
         formData.append('isActive', 'True');
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);

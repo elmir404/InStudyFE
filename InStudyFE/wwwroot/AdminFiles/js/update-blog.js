@@ -65,10 +65,33 @@
                         
                         `
             )
-            $('.content').richText();
-            $('.content1').richText();
-            $('.content2').richText();
-            $('.content3').richText();
+            tinymce.init({
+                selector: ".content",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content2",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content3",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
 
 
         }
@@ -80,9 +103,9 @@
         formData.append('AzTitle', $("#azHeader").val());
         formData.append('RuTitle', $("#ruHeader").val());
         formData.append('EnTitle', $("#enHeader").val());
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
+        formData.append('AzDescription', tinymce.get("azDescription").getContent());
+        formData.append('EnDescription', tinymce.get("enDescription").getContent());
+        formData.append('RuDescription', tinymce.get("ruDescription").getContent());
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);
         }

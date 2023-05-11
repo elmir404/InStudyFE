@@ -51,9 +51,9 @@
         formData.append('AzHeader', $("#azHeader").val());
         formData.append('RuHeader', $("#ruHeader").val());
         formData.append('EnHeader', $("#enHeader").val());
-        formData.append('AzBody', $("#azDescription").val());
-        formData.append('EnBody', $("#enDescription").val());
-        formData.append('RuBody', $("#ruDescription").val());
+        formData.append('AzBody', tinymce.get("azDescription").getContent());
+        formData.append('EnBody', tinymce.get("enDescription").getContent());
+        formData.append('RuBody', tinymce.get("ruDescription").getContent());
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);
         }

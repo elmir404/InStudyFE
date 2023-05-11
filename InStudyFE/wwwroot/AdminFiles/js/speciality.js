@@ -57,9 +57,9 @@
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
         formData.append('EnName', $("#enHeader").val());
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
+        formData.append('AzDescription', tinymce.get("azDescription").getContent());
+        formData.append('EnDescription', tinymce.get("enDescription").getContent());
+        formData.append('RuDescription', tinymce.get("ruDescription").getContent());
         formData.append('DirectionId', $("#directionid").val());
          
         console.log(formData);

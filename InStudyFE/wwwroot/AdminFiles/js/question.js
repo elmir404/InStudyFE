@@ -45,9 +45,9 @@
         formData.append('AzQuestionTitle', $("#azQuestion").val());
         formData.append('RuQuestionTitle', $("#ruQuestion").val());
         formData.append('EnQuestionTitle', $("#enQuestion").val());
-        formData.append('AzQuestionAnswer', $("#azAnswer").val());
-        formData.append('EnQuestionAnswer', $("#enAnswer").val());
-        formData.append('RuQuestionAnswer', $("#ruAnswer").val());
+        formData.append('AzQuestionAnswer', tinymce.get("azDescription").getContent());
+        formData.append('EnQuestionAnswer', tinymce.get("enDescription").getContent());
+        formData.append('RuQuestionAnswer', tinymce.get("ruDescription").getContent());
        
         console.log(formData);
 

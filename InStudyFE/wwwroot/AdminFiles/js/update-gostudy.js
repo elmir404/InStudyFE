@@ -40,7 +40,7 @@
                             <div class="row">
                                 <label class="col-md-3 form-label mb-4">Az Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="content" id="azDescription"  name="example">${data.data.azDescription}</textarea>
+                                    <textarea class="content" id="azDescription">${data.data.azDescription}</textarea>
                                 </div>
                             </div>
                             <div class="row">
@@ -65,9 +65,33 @@
                         
                         `
 			)
-            $('.content').richText();
-            $('.content2').richText();
-            $('.content3').richText();
+            tinymce.init({
+                selector: ".content",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content2",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content3",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
 
 
 		}
@@ -79,9 +103,9 @@
         formData.append('AzHeader', $("#azHeader").val());
         formData.append('RuHeader', $("#ruHeader").val());
         formData.append('EnHeader', $("#enHeader").val());
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
+        formData.append('AzDescription', tinymce.get("azDescription").getContent());
+        formData.append('EnDescription', tinymce.get("enDescription").getContent());
+        formData.append('RuDescription', tinymce.get("ruDescription").getContent());
             for (var i = 0; i < files.length; i++) {
                 formData.append('Files', files[i]);
             }

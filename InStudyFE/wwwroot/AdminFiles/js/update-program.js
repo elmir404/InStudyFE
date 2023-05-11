@@ -58,10 +58,167 @@
                         
                         `
             )
-            $('.content').richText();
-            $('.content2').richText();
-            $('.content3').richText();
-            $('.content4').richText();
+            tinymce.init({
+                selector: ".content",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content2",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content3",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            }); tinymce.init({
+                selector: ".content4",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content5",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content6",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            }); tinymce.init({
+                selector: ".content7",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content8",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content9",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content10",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content11",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+
+            tinymce.init({
+                selector: ".content12",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content13",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content14",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content15",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content16",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content17",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content18",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
 
 
 
@@ -73,9 +230,9 @@
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
         formData.append('EnName', $("#enHeader").val());
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
+        formData.append('AzDescription', tinymce.get("azDescription").getContent());
+        formData.append('EnDescription', tinymce.get("enDescription").getContent());
+        formData.append('RuDescription', tinymce.get("ruDescription").getContent());
        
 
         $.ajax({

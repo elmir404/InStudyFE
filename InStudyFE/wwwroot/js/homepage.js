@@ -255,7 +255,7 @@
             headers: {
                 'Content-Type': 'application/json'
             },
-            url: `https://api.instudy.net/api/University/GetUniversitiesName`,
+            url: `https://api.instudy.net/api/University/GetRandomActiveUniversities`,
 
             success: function (data) {
                 $.each(
@@ -278,7 +278,7 @@
                         }
                       
                         
-                        if (i < 10) {
+                        if (i <= 18) {
 
 
                             $universityMenu.append(`

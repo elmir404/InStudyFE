@@ -523,11 +523,36 @@ button,input,option,select,textarea{
     #Footer .BgBars{
         display:flex
     }
+        #Footer .BgBars .BgBarA {
+            background: unset !important;
+            flex: unset !important;
+            transform-origin: unset !important;
+        }
+
+        #Footer .BgBars .BgBarB {
+            background: transparent;
+            flex: unset !important;
+            transform-origin: unset !important;
+        }
+
+        #Footer .BgBars .BgBarC {
+            background: unset !important;
+            flex: unset !important;
+            transform-origin: unset !important;
+        }
+
+        #Footer .BgBars .BgBarD {
+            background: unset !important;
+            flex: unset !important;
+            transform-origin: unset !important;
+        }
+
 }
 @media (min-width:1025px){
     #Footer .BgBars{
         display:flex
     }
+       
 }
 #Footer .BgBars .BgBarA,#Footer .BgBars .BgBarB,#Footer .BgBars .BgBarC,#Footer .BgBars .BgBarD{
     display:block;
@@ -676,6 +701,14 @@ button,input,option,select,textarea{
     #Footer #FooterMainInner{
         background:none
     }
+    #Footer #FooterMainInner {
+        justify-content: space-evenly !important;
+    }
+
+    #FooterSocialMediaIcons {
+        margin-bottom: unset !important;
+        margin-left: unset !important;
+    }
 }
 @media (min-width:1025px){
     #Footer #FooterMainInner{
@@ -699,6 +732,14 @@ button,input,option,select,textarea{
     #Footer #FooterMainInner>div{
         margin:0;
         width:25%
+    }
+    #Footer #FooterMainInner {
+        justify-content: space-evenly !important;
+    }
+
+    #FooterSocialMediaIcons {
+        margin-bottom: unset !important;
+        margin-left: unset !important;
     }
 }
 @media (min-width:1025px){
@@ -1333,8 +1374,9 @@ body a{
 body a:hover{
     text-decoration:underline
 }
-body p{
-    margin:0 0 .75rem
+body p {
+    margin: 0 0 .75rem;
+    font-family: Arial !important;
 }
 body abbr{
     border-bottom:1px dotted;
@@ -1407,6 +1449,9 @@ body ol li:last-child{
         content:"";
         display:block
     }
+    #Footer #FooterMainInner {
+        justify-content: space-evenly
+    }
 }
 @media (min-width:769px)and (max-width:1024px){
     body .ModuleDivider .colblock div.Module:not(.EmptyModule),body .ModuleDivider.colblock div.Module:not(.EmptyModule){
@@ -1417,6 +1462,7 @@ body ol li:last-child{
     body .ModuleDivider .colblock div.Module:not(.EmptyModule),body .ModuleDivider.colblock div.Module:not(.EmptyModule){
         margin:0 0 1.5rem
     }
+   
 }
 body .ModuleDivider:last-of-type .colblock:last-of-type div.Module:last-of-type:not(.EmptyModule){
     padding-bottom:0
@@ -1527,11 +1573,23 @@ body{
     body .WhiteBackgroundPane{
         background-color:#fff
     }
+    #Footer #FooterMainInner {
+        justify-content: space-evenly !important;
+    }
+    #FooterSocialMediaIcons {
+        margin-bottom: unset !important;
+        margin-left: 52px !important;
+    }
+    #FooterHiring {
+        display: block;
+        margin: -0.5rem 0 0 !important;
+    }
 }
 @media (min-width:1025px){
     body .WhiteBackgroundPane{
         background-color:#fff
     }
+   
 }
 body .Wrapper{
     margin-left:auto;
@@ -1549,6 +1607,10 @@ body .Wrapper{
     body .Wrapper{
         padding:0 0 0 1.5em
     }
+    #FooterSocialMediaIcons {
+        margin-bottom: unset !important;
+        margin-left: unset !important;
+    }
 }
 body #StudyHeaderContainer .col2-left{
     background-color:#fff
@@ -1565,6 +1627,16 @@ iframe[name=google_conversion_frame]{
         font-weight: 700;
         line-height: 3rem;
         margin: 2rem 0;
+    }
+    #FooterHiring {
+        display: block;
+        margin: -0.5rem 1rem 0 !important;
+    }
+    #Footer #FooterBranding .FlexBranding {
+        align-items: center ;
+        justify-content: center !important;
+        display: flex;
+        flex-direction: row;
     }
 }
 /*# sourceMappingURL=shared.6ec21bf4cac8394260fd.css.map*/

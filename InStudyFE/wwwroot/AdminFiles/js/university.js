@@ -61,9 +61,9 @@
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
         formData.append('EnName', $("#enHeader").val());
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
+        formData.append('AzDescription', tinymce.get("azDescription").getContent());
+        formData.append('EnDescription', tinymce.get("enDescription").getContent());
+        formData.append('RuDescription', tinymce.get("ruDescription").getContent());
         formData.append('countryId', $("#country").val());
         formData.append('AzAddress', $("#azAdrress").val());
         formData.append('EnAddress', $("#enAdrress").val());
@@ -71,13 +71,13 @@
         formData.append('AzCity', $("#azCity").val());
         formData.append('EnCity', $("#enCity").val());
         formData.append('RuCity', $("#ruCity").val());
-        
-        formData.append('AzBachelor', $("#azBachelor").val());
-        formData.append('RuBachelor', $("#ruBachelor").val());
-        formData.append('EnBachelor', $("#enBachelor").val());
-        formData.append('AzMaster', $("#azMaster").val());
-        formData.append('RuMaster', $("#ruMaster").val());
-        formData.append('EnMaster', $("#enMaster").val());
+        formData.append('AzBachelor', tinymce.get("azBachelor").getContent());
+        formData.append('EnBachelor', tinymce.get("enBachelor").getContent());
+        formData.append('RuBachelor', tinymce.get("ruBachelor").getContent());
+        formData.append('AzMaster', tinymce.get("azMaster").getContent());
+        formData.append('RuMaster', tinymce.get("ruMaster").getContent());
+        formData.append('EnMaster', tinymce.get("enMaster").getContent());
+
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);
         }

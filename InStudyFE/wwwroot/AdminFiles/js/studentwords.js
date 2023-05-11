@@ -45,9 +45,9 @@
         formData.append('EnName', $("#enHeader").val());
         formData.append('RuName', $("#ruHeader").val());
         var files = $("#files").get(0).files;
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
+        formData.append('AzDescription', tinymce.get("azDescription").getContent());
+        formData.append('EnDescription', tinymce.get("enDescription").getContent());
+        formData.append('RuDescription', tinymce.get("ruDescription").getContent());
         formData.append('CountryId', $("#country").val());
         formData.append('IsActive', 'True');
         for (var i = 0; i < files.length; i++) {
