@@ -96,7 +96,7 @@
 
 @media (min-width:1025px) {
     .ContentCard[data-v-6e0e8e37] {
-        flex: 0 0 calc(33.3% - 1rem)
+        flex: 0 0 calc(25% - 1rem)
     }
 }
 
@@ -123,14 +123,14 @@
 @media (min-width:769px)and (max-width:1024px) {
     .ContentCard[data-v-6e0e8e37]:after {
         display: none;
-        flex: 0 0 calc(33.33333% - 1rem)
+        flex: 0 0 calc(25% - 1rem)
     }
 }
 
 @media (min-width:1025px) {
     .ContentCard[data-v-6e0e8e37]:after {
         display: none;
-        flex: 0 0 calc(33.33333% - 1rem)
+        flex: 0 0 calc(25% - 1rem)
     }
 }
 
@@ -390,7 +390,7 @@
         padding: 0;
         margin: 0 0 0 -1rem;
         overflow: visible;
-        background: #fff
+       
     }
 }
 
@@ -399,7 +399,7 @@
         padding: 0;
         margin: 0 0 0 -1rem;
         overflow: visible;
-        background: #fff
+       
     }
 }
 

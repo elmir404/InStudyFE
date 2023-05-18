@@ -31,7 +31,7 @@
     if ($lang == 'AZ') {
         $countryHeader.html(`Seçilmiş ölkələr`);
         $universityHeader.html(`Seçilmiş universitetlər`);
-        $disciplinesHeader.html(`Istiqamətlər`);
+        $disciplinesHeader.html(`Fənlər`);
         var $countryMore = `Daha çox ölkə`;
         $(".countryMore").html("Daha çox ölkə");
         var $countryFw=`Daha az ölkə`;
@@ -47,7 +47,7 @@
     else if ($lang == 'EN') {
         $countryHeader.html(`Popular countries`);
         $universityHeader.html(`Popular universities`);
-        $disciplinesHeader.html(`Directions`);
+        $disciplinesHeader.html(`Disciplines`);
         var $countryMore = `More countries`;
         $(".countryMore").html("More countries");
        var  $countryFw =`Fewer countries`;
@@ -62,9 +62,9 @@
     } else {
         $countryHeader.html(`Популярные страны`);
         $universityHeader.html(`Популярные университеты`); 
-        $disciplinesHeader.html(`Направления`);
+        $disciplinesHeader.html(`Дисциплины`);
         $(".countryMore").html("Больше стран");
-        var $countryMore =`Больше стран`;
+        var $countryMore =`Больше стран`;   
         var $countryFw =`Меньше стран`;
         $uniMore.html(`Просмотреть все университеты`);
         $arcticles.html("Еще статьи");
@@ -278,7 +278,7 @@
                         }
                       
                         
-                        if (i <= 18) {
+                        if (i <= 11) {
 
 
                             $universityMenu.append(`
@@ -468,6 +468,14 @@
 
 `
                     );
+                    if (i <= 3) {
+                        $(`#gostudyFooter`).append(`
+                                                <li class="ListItem"> <a class="Link" href="/GoStudy/Index?studyId=${value.id}" title="${name1}">${name1} </a> </li>
+                                 
+
+`
+                        );
+                    }
                 }
             )
 
@@ -618,15 +626,15 @@
 
     
     $(document).on('click', '#searchButton', async function () {
-        localStorage.setItem('program', $(`#programInput1`).val());
-        localStorage.setItem('country', $(`#countryInput`).val());
-        localStorage.setItem('direction', $(`#directionInput`).val());
-        var empty = [];
-        localStorage.setItem('locationSearch', JSON.stringify(empty));
-        localStorage.setItem('disciplinesSearch', JSON.stringify(empty));
-        localStorage.setItem('durationsSearch', JSON.stringify(empty));
-        localStorage.setItem('attendenceSearch', JSON.stringify(empty));
-        localStorage.setItem('programSearch', JSON.stringify(empty));
-        location.href = "/Search";
+        //localStorage.setItem('program', $(`#programInput1`).val());
+        //localStorage.setItem('country', $(`#countryInput`).val());
+        //localStorage.setItem('direction', $(`#directionInput`).val());
+        //var empty = [];
+        //localStorage.setItem('locationSearch', JSON.stringify(empty));
+        //localStorage.setItem('disciplinesSearch', JSON.stringify(empty));
+        //localStorage.setItem('durationsSearch', JSON.stringify(empty));
+        //localStorage.setItem('attendenceSearch', JSON.stringify(empty));
+        //localStorage.setItem('programSearch', JSON.stringify(empty));
+        location.href = `/Search/Index?program=${$(`#programInput1`).val()}&country=${$(`#countryInput`).val()}&faculty=${$(`#directionInput`).val() }`;
     });
 });

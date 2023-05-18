@@ -7,7 +7,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content2",
@@ -16,7 +16,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content3",
@@ -25,7 +25,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     }); tinymce.init({
         selector: ".content4",
         setup: function (ed) {
@@ -33,7 +33,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content5",
@@ -42,7 +42,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content6",
@@ -51,7 +51,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     }); tinymce.init({
         selector: ".content7",
         setup: function (ed) {
@@ -59,7 +59,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content8",
@@ -68,7 +68,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content9",
@@ -77,7 +77,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content10",
@@ -86,7 +86,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content11",
@@ -95,7 +95,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content12",
@@ -104,7 +104,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content",
@@ -113,7 +113,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content13",
@@ -122,7 +122,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content14",
@@ -131,7 +131,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content15",
@@ -140,7 +140,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content16",
@@ -149,7 +149,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content17",
@@ -158,7 +158,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content",
@@ -167,7 +167,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content18",
@@ -176,7 +176,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content3",
@@ -185,7 +185,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content",
@@ -194,7 +194,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content19",
@@ -203,7 +203,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content3",
@@ -212,7 +212,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content20",
@@ -221,7 +221,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content21",
@@ -230,7 +230,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content22",
@@ -239,7 +239,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial;line-height: 1; }"
     });
     tinymce.init({
         selector: ".content25",
@@ -248,7 +248,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial; }"
     });
     tinymce.init({
         selector: ".content23",
@@ -257,7 +257,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial; }"
     });
     tinymce.init({
         selector: ".content24",
@@ -266,7 +266,7 @@ $(function (e) {
                 $("#form").data("changed", true);
             })
         },
-        content_style: "body { font-family: Arial; }"
+        content_style: "p { font-family: Arial; }"
     });
 	
 });

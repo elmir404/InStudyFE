@@ -4,7 +4,10 @@
      <link rel="stylesheet" href="~/css/scss/search.css"/>
      <link rel="stylesheet" href="~/css/scss/university1.css"/>
 }
-
+@model  List<GetUniversityDto>
+@{
+    var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
+}
 <div class="forlang">
 <div id="SearchPagePlaceholder" data-v-app="">
    <main class="sitewrapper">
@@ -393,15 +396,50 @@
                      <div class="MobileOnlyBlock">
                         
                      </div>
-                     <section>
-                        <!--v-if-->
-                        <ul id="searchContent" class="SearchResultsList">
-                        </ul>
-                        <!--v-if-->
-                        <div>
-                           <!--v-if--><!--v-if-->
-                        </div>
-                     </section>
+                                    <section class="col1 WrappedContent no-vertical-padding">
+                                        <div class="colblock no-vertical-margin">
+                                            <div data-module="" class="Module StudyPortals_Shared_Modules_Country_StudyRecommendations_StudyRecommendations">
+                                                <div>
+                                                    <h3 class="Specialisations">Universitetlər</h3>
+                                                    <div id="Recommendations" class="mdc-layout-grid">
+                                                        <div>
+                                                            <div data-v-71d9db58="" class="" identifier="account-page-programmes-recommendations">
+                                                                <div data-v-60a22860="" class="js-StudyProgrammes" data-v-71d9db58="">
+                                                                    <div data-v-60a22860="" id="universities" class="StudyCardGrid js-StudyCards">
+                                                                        @foreach (var uni in Model)
+                                                                        {
+                                                                             <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail?uniId=@uni.Id" target="_blank" class="ContentCard js-studyCard">
+                                                                            <div data-v-78fa3586="" data-v-6e0e8e37="">
+                                                                                <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="https://api.instudy.net/resurce/photo-university/MIT-Accreditation_0.jpg" loading="lazy" width="288" height="152"></div>
+                                                                            </div>
+                                                                            <div data-v-6e0e8e37="">
+                                                                                <div data-v-6e0e8e37="" class="BestfitWishlist">
+                                                                                </div>
+                                                                                <div data-v-6e0e8e37="" class="OrganisationTitle">
+                                                                                    <h3 data-v-6e0e8e37="" class="StudyTitle">@uni.AzName </h3>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div data-v-6e0e8e37="" class="OrganisationInformation">
+                                                                                <div data-v-6e0e8e37="" class="NameLocation">
+                                                                                    <div data-v-6e0e8e37="" class="Name"></div>
+                                                                                    <div data-v-6e0e8e37="" class="Location"> @uni.AzCity</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </a>
+                                                                        }
+                                                                      
+                                                                      
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="Recommendations" data-identifier="carousel-recommendations" data-recommendation-type="programmes" data-template="carousel" data-filter-countries="1" data-page="country">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
                      <!--v-if-->
                   </article>
                </div>

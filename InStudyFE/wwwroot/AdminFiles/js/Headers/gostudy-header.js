@@ -115,7 +115,7 @@
 });
 function Edit(id) {
 
-    location.href = `/admin/header/updateheader/${id}`;
+    location.href = `/admin/gostudy/updateheader/${id}`;
 
 }
 function Delete(about) {

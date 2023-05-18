@@ -7,23 +7,23 @@
     const $lang = localStorage.getItem('lang');
     if ($lang == 'AZ') {
         var $notFount = "Axtarışa uyğun univeristet tapılmadı!"
-        $(`.disciplinlang`).html("İstiqamət");
+        $(`.disciplinlang`).html("Fənlər");
         $(`.locationlang`).html("Ölkə");
         $(`.durationlang`).html("Müddət");
         $(`.attendancelang`).html("Fakultə"); 
-        $(`.degreetypelang`).html("Dərəcə növü");
+        $(`.degreetypelang`).html("Təhsil Pilləsi");
     }
     else if ($lang == 'EN') {
         var $notFount = "No university matching your search was found!";
-        $(`.disciplinlang`).html("Disciplen");
+        $(`.disciplinlang`).html("Disciplines");
         $(`.locationlang`).html("Country");
         $(`.durationlang`).html("Duration");
         $(`.attendancelang`).html("Faculty");
-        $(`.degreetypelang`).html("Degree Type");
+        $(`.degreetypelang`).html("Degree");
     }
     else {
         var $notFount = "Университет, соответствующий вашему запросу, не найден!"
-        $(`.disciplinlang`).html("Направление");
+        $(`.disciplinlang`).html("Дисциплины");
         $(`.locationlang`).html("Страна");
         $(`.durationlang`).html("Продолжительность");
         $(`.attendancelang`).html("Посещаемость");

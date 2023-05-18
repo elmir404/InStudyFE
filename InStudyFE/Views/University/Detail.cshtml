@@ -131,7 +131,7 @@
                                     {
                                         <h1><b>@Model.EnName</b></h1>
                                         <br />
-                                        <span><b>@Model.EnAddress</b></span>
+                                        <span><b>@Model.EnAddress, @Model.EnCity, @Model.Country.EnName</b></span>
                                     }
                                     else if (culture == "ru")
                                     {
@@ -140,13 +140,13 @@
 
                             </h1>
                             <br />
-                             <span><b>@Model.RuAddress</b></span>
+                            <span><b>@Model.RuAddress, @Model.RuCity, @Model.Country.RuName</b></span>
                                     }
                                     else
                                     {
                                   <h1><b>@Model.AzName</b></h1>
                             <br />
-                            <span><b>@Model.AzAddress</b></span>
+                            <span><b>@Model.AzAddress, @Model.EnCity, @Model.Country.AzName</b></span>
                                     }
             </section>
                     </div>
@@ -247,7 +247,7 @@
                                     {
                                 <button type="button" class="ContentButton js-contentButtons description is-active " id="overview" onclick="swith('overview')"> Ümumi baxış </button>
                                 <button type="button" class="ContentButton js-contentButtons contents" id="bachelor" onclick="swith('bachelor')"> Bakalavr </button>
-                                <button type="button" class="ContentButton js-contentButtons requirement" id="master" onclick="swith('master')"> Maqistratura </button>
+                                <button type="button" class="ContentButton js-contentButtons requirement" id="master" onclick="swith('master')"> Magistratura </button>
                                     }
                              
                   </nav>
