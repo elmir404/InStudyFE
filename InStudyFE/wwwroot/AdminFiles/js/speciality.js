@@ -54,15 +54,18 @@
 
     $("#addSpeciality").click(function () {
         var formData = new FormData();
+        var direction = $("#directionid").val();
+        debugger;
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
         formData.append('EnName', $("#enHeader").val());
         formData.append('AzDescription', tinymce.get("azDescription").getContent());
         formData.append('EnDescription', tinymce.get("enDescription").getContent());
         formData.append('RuDescription', tinymce.get("ruDescription").getContent());
-        formData.append('DirectionId', $("#directionid").val());
-         
-        console.log(formData);
+        for (var i = 0; i < direction.length; i++) {
+            formData.append('DirectionIds', direction[i]);
+        }
+       
 
         $.ajax({
             type: "POST",

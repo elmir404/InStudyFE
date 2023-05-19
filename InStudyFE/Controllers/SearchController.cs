@@ -1,5 +1,6 @@
 ﻿using InStudyFE.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Reflection;
@@ -29,24 +30,31 @@ namespace InStudyFE.Controllers
 
             MultipartFormDataContent form = new MultipartFormDataContent();
 
-            if (program != null)
+            if (program[0] != null)
             {
                 form.Add(new StringContent(string.Join(",",program)), "documentSearchModel.ProgramNames");
             }
-            if (country != null)
+            if (country[0] != null)
             {
                 form.Add(new StringContent(string.Join(",", country)), "documentSearchModel.CountryNames");
             }
 
-            if (faculty !=null)
+            if (faculty[0] !=null)
             {
                 form.Add(new StringContent(string.Join(",", faculty)), "documentSearchModel.DirectionNames");
             }
-                
+            if(program[0] == null && country[0] == null && faculty[0] == null)
+            {
+                form.Headers.ContentType.MediaType = "application/json";
+            }
+            else
+            {
+                form.Headers.ContentType.MediaType = "multipart/form-data";
+            }
             //form.Add(new StringContent(program), "ProgramNames");
             //form.Add(new StringContent(country), "CountryNames");
             //form.Add(new StringContent(faculty), "DirectionNames");
-            form.Headers.ContentType.MediaType = "application/json";
+           
             var response= await client.PostAsync("api/University/SearchUniversity?currentPage=1&pageSize=100",form);
             Console.WriteLine(response);
             var responseString = await response.Content.ReadAsStringAsync();

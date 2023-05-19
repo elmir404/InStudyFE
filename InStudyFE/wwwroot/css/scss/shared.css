@@ -566,7 +566,7 @@ button,input,option,select,textarea{
 }
 #Footer .BgBars .BgBarB{
     background:transparent;
-    flex:1 1 40%;
+    flex:1 1 60%;
     transform-origin:top left
 }
 #Footer .BgBars .BgBarC{

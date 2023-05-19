@@ -308,22 +308,40 @@
                            <li class="OnboardingItem Apply">
                               <div class="OnboardingBullet">
                                  <i class="OnboardingIcon icon-magic-wand">
-                                   <i class="lnr-bubble UnibuddyIcon"></i>
+                                  
+                                        <svg class="ApplySVG IconImg" viewBox="0 0 64 63" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <defs>
+                                        <path d="M63.52 11.056a1.43 1.43 0 0 0-1.518-.256L7.282 34.011a1.45 1.45 0 0 0-.88 1.393c.023.604.414 1.13.983 1.32l16.295 5.472v16.362a1.449 1.449 0 0 0 1.44 1.45c.425 0 .839-.19 1.118-.536l7.958-9.866L47.148 62.49a1.433 1.433 0 0 0 2.393-.622l14.4-49.322a1.459 1.459 0 0 0-.422-1.49zM52.853 17.83L24.848 39.53 11.922 35.19l40.932-17.363v.002zM26.56 41.866l27.115-21.012-20.72 25.689-.001.002-6.396 7.928V41.865l.002.001zm20.898 16.859L36.021 47.346l23.133-28.685-11.696 40.062v.002z" id="plane"></path>
+                                        <path d="M13.752 21.844c-.58 0-1.05-.469-1.05-1.048a3.152 3.152 0 0 0-3.151-3.144 1.049 1.049 0 1 1 0-2.097 3.152 3.152 0 0 0 3.15-3.144c0-.58.47-1.048 1.05-1.048.581 0 1.051.469 1.051 1.048a3.152 3.152 0 0 0 3.15 3.144 1.049 1.049 0 1 1 0 2.097 3.152 3.152 0 0 0-3.15 3.144c0 .58-.47 1.048-1.05 1.048zm-1.053-5.24c.399.298.753.653 1.054 1.05.3-.398.655-.752 1.054-1.05a5.335 5.335 0 0 1-1.054-1.051c-.3.398-.655.752-1.054 1.05z" fill="#FDAC10" id="star1"></path>
+                                        <path d="M24.156 14.674c-.58 0-1.05-.47-1.05-1.048 0-2.89-2.356-5.24-5.252-5.24a1.049 1.049 0 1 1 0-2.097c2.896 0 5.252-2.35 5.252-5.24 0-.58.47-1.049 1.05-1.049.58 0 1.05.469 1.05 1.048 0 2.89 2.355 5.24 5.251 5.24a1.049 1.049 0 1 1 0 2.097c-2.896 0-5.25 2.35-5.25 5.24 0 .58-.47 1.049-1.051 1.049zm-2.518-7.337a7.398 7.398 0 0 1 2.518 2.513 7.398 7.398 0 0 1 2.518-2.513 7.398 7.398 0 0 1-2.518-2.513 7.398 7.398 0 0 1-2.518 2.513z" fill="#FDAC10" id="star2"></path>
+                                        <path d="M5.352 12.244c-.58 0-1.05-.469-1.05-1.048A3.152 3.152 0 0 0 1.15 8.052a1.049 1.049 0 1 1 0-2.097A3.152 3.152 0 0 0 4.3 2.811c0-.58.47-1.048 1.05-1.048.581 0 1.051.469 1.051 1.048a3.152 3.152 0 0 0 3.15 3.144 1.049 1.049 0 1 1 0 2.097 3.152 3.152 0 0 0-3.15 3.144c0 .58-.47 1.048-1.05 1.048zm-1.053-5.24c.399.298.753.653 1.054 1.05.3-.398.655-.752 1.054-1.05a5.335 5.335 0 0 1-1.054-1.051c-.3.398-.655.752-1.054 1.05z" fill="#FDAC10" id="star3"></path>
+                                        </defs>
+                                        <use fill="#444" xlink:href="#plane"></use>
+                                        <use fill="#FDAC10" xlink:href="#star1" id="Star1"></use>
+                                        <use fill="#FDAC10" xlink:href="#star2" id="Star2"></use>
+                                        <use fill="#FDAC10" xlink:href="#star3" id="Star3"></use>
+                                        </svg>
                                  </i>
                               </div>
                               <div id="header5" class="OnboardingText">
                                   @if (culture == "en")
                                     {
+                                        @if(Model.onboard.Count > 0){
                                         <p> <span class="ItemHeader">@Model.onboard[4]?.EnTitle</span>@Html.Raw(@Model.onboard[4]?.EnDescription) </p>
+
+                                        }
                                     }
                                     else if (culture == "ru")
                                     {
-
+                                         @if(Model.onboard.Count > 0){
                                         <p> <span class="ItemHeader">@Model.onboard[4]?.RuTitle</span> @Html.Raw(@Model.onboard[4]?.RuDescription) </p>
+                                         }
                                     }
                                     else
                                     {
+                                         @if(Model.onboard.Count > 0){
                                         <p> <span class="ItemHeader">@Model.onboard[4]?.AzTitle</span> @Html.Raw(@Model.onboard[4]?.AzDescription) </p>
+                                         }
                                     }
                               </div>
                            </li>
@@ -339,8 +357,49 @@
                   <div data-module="" class="Module StudyPortals_Shared_Modules_Discipline_Spotlight_Spotlight">
                      <section id="DisciplineSpotlight">
                         <h2 id="disciplineHeader" class="DisciplineSpotlightTitle"> </h2>
-                        <ul id="disciplines">
-                           
+                        <ul >
+                            @foreach (var direction in Model.directions)
+                            {
+                                 @if (culture == "en")
+                                                {
+                                    <li data-clickable="clickable">
+                                        <a href="/Direction/Detail?Id=@direction.Id" title="@direction.EnName">
+                                            @if(@direction.DirectionFiles.Count>0){
+                                            <img alt="image" style="width:37px !important;" class="text-center img-responsive" src="https://api.instudy.net/@direction.DirectionFiles.FirstOrDefault().Path">
+                                                
+                                            }
+                                            <span style="display:block;">@direction.EnName</span>
+                                        </a>
+                                    </li>
+                                                }
+                                                else if (culture == "ru")
+                                                {
+
+                                                                 
+                                    <li data-clickable="clickable">
+                                        <a href="/Direction/Detail?Id=@direction.Id" title="@direction.RuName">
+                                            @if(@direction.DirectionFiles.Count>0){
+                                            <img alt="image" style="width:37px !important;" class="text-center img-responsive" src="https://api.instudy.net/@direction.DirectionFiles.FirstOrDefault().Path">
+
+                                            }
+                                            <span style="display:block;">@direction.RuName</span>
+                                        </a>
+                                    </li>
+                                                }
+                                                else
+                                                {
+                                        
+                                            <li data-clickable="clickable">
+                                                <a href="/Direction/Detail?Id=@direction.Id" title="@direction.AzName">
+                                            @if(@direction.DirectionFiles.Count>0){
+                                            <img alt="image" style="width:37px !important;" class="text-center img-responsive" src="https://api.instudy.net/@direction.DirectionFiles.FirstOrDefault().Path">
+
+                                            }
+                                                    <span style="display:block;">@direction.AzName</span>
+                                                </a>
+                                            </li>
+                                                }
+                            }
                         </ul>
                         <a class="ShowMoreDisciplines HelperButton js-showMoreDisciplines" data-expanded="Show less disciplines" data-condensed="Show all disciplines" title="Show all disciplines"> Show all disciplines </a> 
                      </section>

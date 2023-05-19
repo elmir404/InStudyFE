@@ -23,7 +23,7 @@
                     $.each(
                        
                         result.data, function (i, value) {
-                            if (data.data.direction.id == value.id) {
+                            if (data.data.directions.find(x => x.id === value.id)) {
                                 html.push(
                                     `
                                                                             <option selected value="${value.id}">${value.azName}</option>
@@ -43,7 +43,7 @@
 
                         }
                     )
-                    $('#directionid').html(html.join(''));
+                    $('#directionid').html(html.join('')).multipleSelect({ position: 'top' });
                 }
 
             });
@@ -265,14 +265,16 @@
         
        
         var formData = new FormData();
+        var direction = $("#directionid").val();
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
         formData.append('EnName', $("#enHeader").val());
-        formData.append('AzDescription', $("#azDescription").val());
-        formData.append('EnDescription', $("#enDescription").val());
-        formData.append('RuDescription', $("#ruDescription").val());
-        formData.append('DirectionId', $("#directionid").val());
-       
+        formData.append('AzDescription', tinymce.get("azDescription").getContent());
+        formData.append('EnDescription', tinymce.get("enDescription").getContent());
+        formData.append('RuDescription', tinymce.get("ruDescription").getContent());
+        for (var i = 0; i < direction.length; i++) {
+            formData.append('DirectionIds', direction[i]);
+        }
         console.log(formData);
 
         $.ajax({

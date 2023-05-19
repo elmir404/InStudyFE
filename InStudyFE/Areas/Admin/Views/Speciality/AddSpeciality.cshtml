@@ -72,7 +72,7 @@
                              <div class="row">
                                     <label class="col-md-3 form-label mb-4">Disciplines</label>
                                     <div class="col-md-9 mb-4">
-                                        <select  id="directionid">
+                                    <select multiple="multiple" id="directionid">
                                         </select>
                                     </div>
                                 </div>
@@ -122,7 +122,7 @@
 
                     }
                 )
-                $('#directionid').html(html.join(''));
+                $('#directionid').html(html.join('')).multipleSelect();
             }
 
         });
