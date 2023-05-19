@@ -296,7 +296,7 @@
         box-sizing: border-box;
         margin: 0;
         overflow: hidden;
-        padding: 2em 1em 1em 1em;
+        padding: 2em 1em 0em 1em;
         text-align:center;
         transition: background-color .15s linear;
         width: 20%
