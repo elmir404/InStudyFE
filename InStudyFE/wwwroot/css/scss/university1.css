@@ -397,7 +397,7 @@
 @media (min-width:1025px) {
     .StudyCardGrid[data-v-60a22860] {
         padding: 0;
-        margin: 0 0 0 -1rem;
+        margin: 0 0 0 1rem;
         overflow: visible;
        
     }

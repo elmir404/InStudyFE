@@ -400,13 +400,15 @@
                                         <div class="colblock no-vertical-margin">
                                             <div data-module="" class="Module StudyPortals_Shared_Modules_Country_StudyRecommendations_StudyRecommendations">
                                                 <div>
-                                                    <h3 class="Specialisations">Universitetlər</h3>
+                                                   
                                                     <div id="Recommendations" class="mdc-layout-grid">
                                                         <div>
                                                             <div data-v-71d9db58="" class="" identifier="account-page-programmes-recommendations">
                                                                 <div data-v-60a22860="" class="js-StudyProgrammes" data-v-71d9db58="">
-                                                                    <div data-v-60a22860="" id="universities" class="StudyCardGrid js-StudyCards">
-                                                                        @foreach (var uni in Model)
+                                                                    <div data-v-60a22860="" id="searchContent" class="StudyCardGrid js-StudyCards">
+                                                                        @if(Model.Count>0)
+                                                                       {
+                                                                           @foreach (var uni in Model)
                                                                         {
                                                                                                                  @if (culture == "en")
                                                                                 {
@@ -483,6 +485,23 @@
                                                                            
                                                                         }
                                                                       
+                                                                       }
+                                                                       else{
+                                                                           @if (culture == "en")
+                                                                            {
+                                                                                <div style="height:400px;"><h2>No university matching your search was found!</h2></div>
+                                                                            }
+                                                                            else if (culture == "ru")
+                                                                            {
+
+                                                                            <div style="height:400px;"><h2>Университет, соответствующий вашему запросу, не найден!</h2></div>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                            <div style="height:400px;"><h2>Axtarışa uyğun univeristet tapılmadı!</h2></div>
+                                                                            }
+                                                                       }
+                                                                        
                                                                       
                                                                     </div>
                                                                 </div>

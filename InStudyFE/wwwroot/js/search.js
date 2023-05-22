@@ -305,41 +305,31 @@
 
 
                                 }
-                                /* var image = `data:image/png;base64,${value?.universityFiles[0]?.bytes}`*/
+                                var image = `https://api.instudy.net/${value?.universityFiles[0]?.path}`
                                 //var image = `https://api.instudy.net/${value.country.countryFiles[0].path}`
 
                                 $('#searchContent').append(`
-  <li class="HoverEffect SearchResultItem">
-                              <a class="SearchStudyCard js-bestFitStudycard" href="/University/Detail?uniId=${value.id}" target="_blank" data-v-0363ab3a="">
-                                 <article data-v-0363ab3a="">
-                                    <header class="CardHeader" data-v-0363ab3a="">
-                                       <h2 class="StudyName" data-v-0363ab3a="">${name}</h2>
-                                    
-                                    </header>
-                                    <div class="StudyInfo" data-v-0363ab3a="">
-                          
-                                       <div class="SummaryContainer is-collapsed" data-v-0363ab3a="">
-                                          <p class="Summary is-collapsed"style="font-size:16px;" data-v-0363ab3a=""></p>
-                                       </div>
-                                    </div>
-                                    <div class="OrganisationInfo" data-v-0363ab3a="">
-                                      
-                                       <div class="NameLocation" data-v-0363ab3a=""><strong class="OrganisationName" data-v-0363ab3a="">${city},${countryName}</strong></div>
-                                       <div class="Promoted" data-v-0363ab3a="">
-                                          <div class="Featured" data-study-id="63138" data-v-0363ab3a="" style="position: relative;">
-                                            
-                                             <div class="Tooltip Bottom" style="display: none;">
-                                                <div class="TooltipInner">
-                                                   The university partners with us for this programme to reach students like you.
-                                                </div>
-                                                <div class="TooltipArrow"></div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </article>
-                              </a>
-                           </li>
+   <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail?uniId=${value.Id}" target="_blank" class="ContentCard js-studyCard">
+                                                                                        <div data-v-78fa3586="" data-v-6e0e8e37="">
+                                                                                            
+                                                                                            <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="${image}" loading="lazy" width="288" height="152"></div>
+
+                                                                                        
+                                                                                        </div>
+                                                                                        <div data-v-6e0e8e37="">
+                                                                                            <div data-v-6e0e8e37="" class="BestfitWishlist">
+                                                                                            </div>
+                                                                                            <div data-v-6e0e8e37="" class="OrganisationTitle">
+                                                                                                <h3 data-v-6e0e8e37="" class="StudyTitle">${name} </h3>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div data-v-6e0e8e37="" class="OrganisationInformation">
+                                                                                            <div data-v-6e0e8e37="" class="NameLocation">
+                                                                                                <div data-v-6e0e8e37="" class="Name"></div>
+                                                                                                <div data-v-6e0e8e37="" class="Location">${city}, ${countryName}</div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </a>
 
 
 
@@ -365,7 +355,7 @@
             });
     }
 
-    searchUniversity();
+   
     var locArr = [];
     $(document).on("change", "input[name='location']", function () {
        
@@ -390,7 +380,7 @@
     var descArr = [];
     $(document).on("change", "input[name='disciplines']", function () {
        
-
+        debugger;
        
         if (this.checked) {
             localStorage.setItem('disciplinesSearch', "");
@@ -408,7 +398,6 @@
             localStorage.setItem('disciplinesSearch', JSON.stringify(descArr));
 
         }
-        localStorage.setItem('disciplinesSearch', JSON.stringify(degreArr));
         searchUniversity();
     });
     var durArr = [];

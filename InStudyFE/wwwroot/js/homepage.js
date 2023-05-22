@@ -626,15 +626,15 @@
 
     
     $(document).on('click', '#searchButton', async function () {
-        //localStorage.setItem('program', $(`#programInput1`).val());
-        //localStorage.setItem('country', $(`#countryInput`).val());
-        //localStorage.setItem('direction', $(`#directionInput`).val());
-        //var empty = [];
-        //localStorage.setItem('locationSearch', JSON.stringify(empty));
-        //localStorage.setItem('disciplinesSearch', JSON.stringify(empty));
-        //localStorage.setItem('durationsSearch', JSON.stringify(empty));
-        //localStorage.setItem('attendenceSearch', JSON.stringify(empty));
-        //localStorage.setItem('programSearch', JSON.stringify(empty));
+        localStorage.setItem('program', $(`#programInput1`).val());
+        localStorage.setItem('country', $(`#countryInput`).val());
+        localStorage.setItem('direction', $(`#directionInput`).val());
+        var empty = [];
+        localStorage.setItem('locationSearch', JSON.stringify(empty));
+        localStorage.setItem('disciplinesSearch', JSON.stringify(empty));
+        localStorage.setItem('durationsSearch', JSON.stringify(empty));
+        localStorage.setItem('attendenceSearch', JSON.stringify(empty));
+        localStorage.setItem('programSearch', JSON.stringify(empty));
         location.href = `/Search/Index?program=${$(`#programInput1`).val()}&country=${$(`#countryInput`).val()}&faculty=${$(`#directionInput`).val() }`;
     });
 });

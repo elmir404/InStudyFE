@@ -7,7 +7,7 @@
         $(`#goStudyHeader`).html(`Müraciət üçün məsləhətlər`);
         $(`#programInput1`).attr(`placeholder`,`Təhsil Pilləsi`);
         $(`#countryInput`).attr(`placeholder`, `Ölkə`);
-        $(`#directionInput`).attr(`placeholder`, `Fakultə`);
+        $(`#directionInput`).attr(`placeholder`, `Fənlər`);
         $(`#exploreHeader`).html(`Araşdırın`);
         $(`#decideContent`).html(`Müraciət`);
         $(`#goStudyHeader`).html(`Təhsil al`);
@@ -25,7 +25,7 @@
         $(`#goStudyHeader`).html(`Tips to apply`);
         $(`#programInput1`).attr(`placeholder`, `Degree Type`);
         $(`#countryInput`).attr(`placeholder`,`Сountry`);
-        $(`#directionInput`).attr(`placeholder`, `Faculty`);
+        $(`#directionInput`).attr(`placeholder`, `Disciplines`);
         $(`#exploreHeader`).html(`Explore`);
         //$(`#decideContent`).html(`Apply`);
         $(`#goStudyHeader`).html(`Go Study`);
@@ -44,7 +44,7 @@
         $(`#goStudyHeader`).html(`Советы по применению`);
         $(`#programInput1`).attr(`placeholder`,`Тип степени`);
         $(`#countryInput`).attr(`placeholder`,`Страна`);
-        $(`#directionInput`).attr(`placeholder`,`Факультеты`);
+        $(`#directionInput`).attr(`placeholder`,`Дисциплины`);
         $(`#exploreHeader`).html(`Исследовать`);
         //$(`#decideContent`).html(`Применять`);
         $(`#goStudyHeader`).html(`Иди учись`);
