@@ -10,7 +10,6 @@
         url: `https://api.instudy.net/api/About/GetAboutWithId?id=${aboutId}`,
         success: function (data) {
 
-            console.log(data);
             $form.empty()
 
             $form.append(

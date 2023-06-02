@@ -125,19 +125,13 @@
 
            @@media(max-width:769px){
                .fadd{
-                margin-left: -200px;
+               
                 color: #000;
                }
 
             
 
-            #FooterSocialMediaIcons .Header {
-                margin-left: -206px;
-            }
-
-            #FooterSocialMediaIcons .List{
-               margin-left: -191px;
-            }
+           
            
            }
 
@@ -216,7 +210,9 @@
                                        <div class="HeaderToggleContent"></div>
                                     </a>*@
                                     <a title="Chat with students" class="HeaderUnibuddyLinkContainer HeaderToggleItem Textlink MobileOnlyBlock" href="/Contact/Index">
-                                        <i class="lnr-bubbles UnibuddyIcon HeaderIcon "></i> 
+                                        <div class=" UnibuddyIcon HeaderIcon "> 
+                                            <img src="~/images/Untitled (1).png" alt="contact" />
+                                        </div> 
                                     </a>
                                    @* <a title="Chat with students" style="cursor: pointer;" class="HeaderToggleItem js-wishlistButton MobileOnlyBlock" onclick="changeLang()">
                                         <i class="lnr-earth UnibuddyIcon HeaderIcon "></i>
@@ -330,8 +326,9 @@
                                  <div id="HeaderLogin" class="Hidden">    <a title="Wishlisted studies" class="HeaderWishlistContainer js-wishlistButton"> <i class="lnr-heart WishlistIcon HeaderIcon"></i> <span class="HeaderWishlistText">Wishlist</span> </a> <a title="Chat with students" class="HeaderUnibuddyLinkContainer Textlink" href="https://www.mastersportal.com/chat-with-students/"> <i class="lnr-bubble UnibuddyIcon"></i> <span class="HeaderUnibuddyText">Chat</span> </a> <button id="LoginButton" class="InUpButton AccountClickable Textlink" data-ga-tracking="{&quot;category&quot;:&quot;Profile&quot;,&quot;action&quot;:&quot;Register Incentive Click&quot;,&quot;label&quot;:&quot;Header:Login&quot;,&quot;event&quot;:&quot;click&quot;}" data-ga-parsed="true"> <i class="lnr-user UserIcon"></i> <span class="LoggedInUserText">Sign in</span> </button> </div>
                                  <div id="HeaderLoggedIn" class="">
                                     <a title="Chat with students" class="HeaderUnibuddyLinkContainer DesktopOnlyBlock Textlink" href="/Contact">
-                                           <i class="lnr-bubbles UnibuddyIcon "></i> <span id="contactHeder" class="HeaderUnibuddyText">Contact</span> </a> 
-                                           <a title="Chat with students" style="cursor: pointer;" class="HeaderUnibuddyLinkContainer DesktopOnlyBlock Textlink" onclick="changeLang()">
+                                        <img src="~/images/Untitled (1).png" alt="contact" style="width: 1.5rem; margin: 0 auto;" /> <span id="contactHeder" class="HeaderUnibuddyText">Contact</span>
+                                    </a>
+                                    <a title="Chat with students" style="cursor: pointer;" class="HeaderUnibuddyLinkContainer DesktopOnlyBlock Textlink" onclick="changeLang()">
                                            <h3 style="color:black;" id="curLang" class="h1"></h3> </a> 
                                         
                                     <div id="LoggedInDropDown"  class="AccountDropDown">

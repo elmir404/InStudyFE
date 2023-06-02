@@ -22,36 +22,24 @@
                     var html = [];
                     $.each(
                         result.data, function (i, value) {
-                            var isSelected = false;
-                            $.each(
-                                data.data.questions, function (p, pvalue) {
-                                    console.log(pvalue);
-                                    if (pvalue.id == value.id) {
-                                        isSelected = true;
-                                        debugger;
-
-                                    }
-                                    else {
-                                        isSelected = false;
-                                    }
-
-                                });
-                            if (isSelected) {
+                            if (data.data.questions.find(x => x.id === value.id)) {
                                 html.push(
                                     `
                                                                                 <option selected value="${value.id}">${value.enQuestionTitle}</option>
 
                                                                              `
                                 );
-                            } else {
+                            }
+                            else {
                                 html.push(
                                     `
                                                                                 <option value="${value.id}">${value.enQuestionTitle}</option>
 
                                                                              `
                                 );
-
                             }
+
+                         
 
                         }
                     )
@@ -59,7 +47,6 @@
                 }
 
             });
-            console.log(data);
             $form.empty()
 
             $form.append(
@@ -287,7 +274,6 @@
             formData.append('questionIds', questions[i]);
         }
 
-        console.log(formData);
 
         $.ajax({
             type: "PUT",

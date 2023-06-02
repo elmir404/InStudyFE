@@ -829,9 +829,9 @@
 }
 #FavouriteQuotes .Author .AuthorName{
     display:block;
-    font-size:2.25rem;
+    font-size:1.6rem;
     font-weight:400;
-    line-height:3rem;
+    line-height:1.6rem;
     vertical-align:top
 }
 @media (max-width:480px){

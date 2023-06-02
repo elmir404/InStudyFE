@@ -47,7 +47,6 @@
                 }
 
             });
-            console.log(data);
             $form.empty()
 
             $form.append(
@@ -275,7 +274,6 @@
         for (var i = 0; i < direction.length; i++) {
             formData.append('DirectionIds', direction[i]);
         }
-        console.log(formData);
 
         $.ajax({
             type: "PUT",

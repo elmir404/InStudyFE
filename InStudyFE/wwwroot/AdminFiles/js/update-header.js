@@ -244,7 +244,6 @@
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);
         }
-        console.log(formData);
 
         $.ajax({
             type: "PUT",

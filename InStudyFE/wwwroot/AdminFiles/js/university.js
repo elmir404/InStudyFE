@@ -195,9 +195,8 @@
 
 });
 function Edit(university) {
-
-    localStorage.setItem('universityId', university);
-    location.href = `/Admin/University/UpdateUniversity`;
+    debugger;
+    location.href = `/Admin/University/UpdateUniversity?uniId=${university}`;
 
 }
 function Delete(university) {

@@ -89,8 +89,6 @@
         formData.append('AzDescription', tinymce.get("azDescription").getContent());
         formData.append('EnDescription', tinymce.get("enDescription").getContent());
         formData.append('RuDescription', tinymce.get("ruDescription").getContent());
-      
-        x
         $.ajax({
             type: "POST",
             url: 'https://api.instudy.net/api/Program/AddPorgram',

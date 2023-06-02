@@ -420,7 +420,7 @@
                                  <div class="AuthorDetails"> <span class="AuthorName">${name}</span> <span class="AuthorCountry">${country}</span> </div>
                               </div>
                               <blockquote>
-                                ${description};
+                                ${description}
                               </blockquote>
                            </li>         
 
@@ -495,14 +495,14 @@
                 $questionHeader.empty();
                 $questions.empty();
                         if ($lang == 'AZ') {
-                            var body = data?.data?.azBody;
+                            var body = data?.data?.azHeader;
 
                         }
                         else if ($lang == 'EN') {
-                            var body = data?.data?.enBody;
+                            var body = data?.data?.enHeader;
 
                         } else {
-                            var body = data?.data?.ruBody;
+                            var body = data?.data?.ruHeader;
 
                         }
                       
@@ -587,16 +587,14 @@
                     data.data, function (i, value) {
                         if ($lang == 'AZ') {
                             var name = value?.azTitle
-                            var description = value?.azDescription;
 
                         }
                         else if ($lang == 'EN') {
                             var name = value?.enTitle
-                            var description = value?.enDescription;
 
-                        } else {
+                        }
+                        else {
                             var name = value?.ruTitle;
-                            var description = value?.ruDescription;
 
                         }
                         
@@ -605,10 +603,10 @@
                             $blog.append(
                                 `  <article data-clickable="clickable"> 
                                             <a href="/Blog/Detail/${value.id}" title="${name}">
-                                            ${name}
+                                              ${name}
+                                           
                                      </a>
-                                <span>${description?.slice(0,50)}    
-                                        </span> </article>
+                               </article>
                                `
 
                             );

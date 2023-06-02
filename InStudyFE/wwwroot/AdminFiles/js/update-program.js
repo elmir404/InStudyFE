@@ -10,7 +10,6 @@
         url: `https://api.instudy.net/api/Program/GetProgram?programId=${programId}`,
         success: function (data) {
 
-            console.log(data);
             $form.empty()
 
             $form.append(

@@ -45,6 +45,9 @@
         public DateTime ApplyDate { get; set; }
         public bool IsActive { get; set; }
         public GetCountryIdName Country { get; set; }
+        public List<GetCountryIdName>? Programs { get; set; }
+        public List<GetDirectionDto>? Directions { get; set; }
+        public List<GetFacultyDto>? Specialities { get; set; }
         public List<FileDto> UniversityFiles { get; set; }
         
     }

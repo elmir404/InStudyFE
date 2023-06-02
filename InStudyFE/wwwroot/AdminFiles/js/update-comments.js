@@ -76,19 +76,19 @@
                             <div class="row">
                                 <label class="col-md-3 form-label mb-4">Az Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="" id="azDescription" maxlength="400" rows="4" cols="50"  name="example">${data.data.azDescription}</textarea>
+                                    <textarea class="content" id="azDescription" maxlength="400" rows="4" cols="50"  name="example">${data.data.azDescription}</textarea>
                                 </div>
                             </div>  
 <div class="row">
                                 <label class="col-md-3 form-label mb-4">En Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="" id="enDescription" maxlength="400" rows="4" cols="50"  name="example">${data.data.enDescription}</textarea>
+                                    <textarea class="content2" id="enDescription" maxlength="400" rows="4" cols="50"  name="example">${data.data.enDescription}</textarea>
                                 </div>
                             </div> 
 <div class="row">
                                 <label class="col-md-3 form-label mb-4">Ru Description :</label>
                                 <div class="col-md-9 mb-4">
-                                    <textarea class="" id="ruDescription" maxlength="400" rows="4" cols="50"  name="example">${data.data.ruDescription}</textarea>
+                                    <textarea class="content3" id="ruDescription" maxlength="400" rows="4" cols="50"  name="example">${data.data.ruDescription}</textarea>
                                 </div>
                             </div>
                          <div class="row">
@@ -104,6 +104,24 @@
 
             tinymce.init({
                 selector: ".content",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content2",
+                setup: function (ed) {
+                    ed.on("change", function () {
+                        $("#form").data("changed", true);
+                    })
+                },
+                content_style: "body { font-family: Arial; }"
+            });
+            tinymce.init({
+                selector: ".content3",
                 setup: function (ed) {
                     ed.on("change", function () {
                         $("#form").data("changed", true);

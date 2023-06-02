@@ -10,7 +10,6 @@
         url: `https://api.instudy.net/api/Partner/GetPartner?id=${partnerId}`,
         success: function (data) {
 
-            console.log(data);
             $partnerForm.empty()
 
             $partnerForm.append(
@@ -250,7 +249,6 @@
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);
         }
-        console.log(formData);
 
         $.ajax({
             type: "PUT",

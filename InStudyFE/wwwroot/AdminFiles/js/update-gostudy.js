@@ -10,7 +10,6 @@
         url: `https://api.instudy.net/api/About/GetAbout?id=${aboutId}`,
 		success: function (data) {
 
-			console.log(data);
             $aboutForm.empty()
 			
 			$aboutForm.append(
@@ -110,7 +109,6 @@
                 formData.append('Files', files[i]);
             }
        
-        console.log(formData);
 
         $.ajax({
             type: "PUT",

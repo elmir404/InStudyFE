@@ -2,8 +2,8 @@
     const $lang = localStorage.getItem('lang');
     if ($lang == 'AZ') {
         $(`.explore`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-compass2"></i> <span class="SectionNavigationLabel">Araşdır</span> </a>`);
-        $(`.apply`).html(`<a href="/Apply" class="SectionNavigationLink js-SectionNavigationLink"><div class="SectionNavigationIcon" style="width:2.5rem;"><img  src="/images/Untitled (2).png" alt="apply"  ></div> <span class="SectionNavigationLabel">Müraciət</span> </a>`);
-        $(`.goStudy`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-archery"></i> <span class="SectionNavigationLabel">Təhsil al</span> </a>`);
+        $(`.apply`).html(`<a href="/Apply" class="SectionNavigationLink js-SectionNavigationLink"><div class="SectionNavigationIcon" ><img  src="/images/apply.png" alt="apply"  ></div> <span class="SectionNavigationLabel">Müraciət</span> </a>`);
+        $(`.goStudy`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"><div class="SectionNavigationIcon" ><img  src="/images/abroad.png" alt="apply"  ></div><span class="SectionNavigationLabel">Təhsil al</span> </a>`);
         $(`#goStudyHeader`).html(`Müraciət üçün məsləhətlər`);
         $(`#programInput1`).attr(`placeholder`,`Təhsil Pilləsi`);
         $(`#countryInput`).attr(`placeholder`, `Ölkə`);
@@ -20,8 +20,8 @@
     else if ($lang == 'EN') {
 
         $(`.explore`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-compass2"></i> <span class="SectionNavigationLabel">Explore</span> </a>`);
-        $(`.apply`).html(`<a href="/Apply" class="SectionNavigationLink js-SectionNavigationLink"><div class="SectionNavigationIcon" style="width:2.5rem;"><img  src="/images/Untitled (2).png" alt="apply"  ></div>   <span class="SectionNavigationLabel">Apply</span> </a>`);
-        $(`.goStudy`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-archery"></i> <span class="SectionNavigationLabel">Study Abroad</span> </a>`);
+        $(`.apply`).html(`<a href="/Apply" class="SectionNavigationLink js-SectionNavigationLink"><div class="SectionNavigationIcon"><img  src="/images/apply.png" alt="apply"  ></div>   <span class="SectionNavigationLabel">Apply</span> </a>`);
+        $(`.goStudy`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <div class="SectionNavigationIcon" ><img  src="/images/abroad.png" alt="apply"  ></div> <span class="SectionNavigationLabel">Study Abroad</span> </a>`);
         $(`#goStudyHeader`).html(`Tips to apply`);
         $(`#programInput1`).attr(`placeholder`, `Degree Type`);
         $(`#countryInput`).attr(`placeholder`,`Сountry`);
@@ -39,8 +39,8 @@
     }
     else {
         $(`.explore`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-compass2"></i> <span class="SectionNavigationLabel">Исследовать</span> </a>`);
-        $(`.apply`).html(`<a href="/Apply" class="SectionNavigationLink js-SectionNavigationLink"><div class="SectionNavigationIcon" style="width:2.5rem;"><img  src="/images/Untitled (2).png" alt="apply"  ></div>   <span class="SectionNavigationLabel">Применять</span> </a>`);
-        $(`.goStudy`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <i class="SectionNavigationIcon lnr-archery"></i> <span class="SectionNavigationLabel">Учеба за границей</span> </a>`);
+        $(`.apply`).html(`<a href="/Apply" class="SectionNavigationLink js-SectionNavigationLink"><div class="SectionNavigationIcon" ><img  src="/images/apply.png" alt="apply"  ></div>   <span class="SectionNavigationLabel">Применять</span> </a>`);
+        $(`.goStudy`).html(`<a class="SectionNavigationLink js-SectionNavigationLink"> <div class="SectionNavigationIcon"><img  src="/images/abroad.png" alt="apply"  ></div><span class="SectionNavigationLabel">Учеба за границей</span> </a>`);
         $(`#goStudyHeader`).html(`Советы по применению`);
         $(`#programInput1`).attr(`placeholder`,`Тип степени`);
         $(`#countryInput`).attr(`placeholder`,`Страна`);
