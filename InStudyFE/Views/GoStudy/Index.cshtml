@@ -113,7 +113,12 @@
       <div data-module="" class="Module StudyPortals_Shared_Modules_Study_Hero_Hero">
          <div id="Hero" class="js-Hero">
              @if(Model.goStudyFront.GoStudyFiles.Count()>0){
-                        <div class="HeroImageContainer"> <span class="HeroImage"> <span class="HeroImageDefaultWrapper"> <img fetchpriority="high" rel="preconnect" src="https://api.instudy.net/@Model.goStudyFront.GoStudyFiles[0].Path" alt="Studyportals"> </span> </span> </div>
+                        <div class="HeroImageContainer">
+                            <span class="HeroImage">
+                                <span class="HeroImage js-heroImage" style="background-image:url(https://api.instudy.net/@Model.goStudyFront.GoStudyFiles[0].Path);background-repeat: no-repeat;background-size:cover;"></span>
+                                <span class="HeroImage HeroImagePlaceholder js-heroImageLowResPlaceholder"></span> <span class="HeroOverlay" style="background-image:url(https://api.instudy.net/@Model.goStudyFront.GoStudyFiles[0].Path);background-repeat: no-repeat;background-size: auto;"></span>
+                            </span>
+                        </div>
 
              }
               
