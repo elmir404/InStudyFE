@@ -16,7 +16,7 @@ namespace InStudyFE.Extensions
             var isAuthenticated = context.HttpContext.User.Identity.IsAuthenticated;
             if (!isAuthenticated)
             {
-                context.Result = new RedirectToActionResult("Login", "Account", null);
+                context.Result = new RedirectToActionResult("Login", "Account", new { area = "" });
                 return;
             }
         }

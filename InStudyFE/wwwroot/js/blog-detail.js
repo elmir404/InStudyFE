@@ -21,19 +21,19 @@
             var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
             var yyyy = date.getFullYear();
             var time = yyyy + "/" + mm + "/" + dd;
-            if ($lang == 'AZ') {
-                var name1 = data.data.azTitle;
-                var description = data.data?.azDescription;
-
+            if ($lang == 'RU') {
+               
+                var name1 = data.data.ruTitle;
+                var description = data.data?.ruDescription;
             }
             else if ($lang == 'EN') {
                 var name1 = data.data.enTitle;
                 var description = data.data?.enDescription;
 
             } else {
-                var name1 = data.data.ruTitle;
-                var description = data.data?.ruDescription;
-
+               
+                var name1 = data.data.azTitle;
+                var description = data.data?.azDescription;
             }
             var image = `https://api.instudy.net/${data.data?.blogFiles[0]?.path}`
             $blogImage.empty();

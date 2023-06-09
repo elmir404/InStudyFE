@@ -58,33 +58,33 @@
     <script>
         $(document).ready(function () {
             $(document).on('change', '#azHeader', function () {
-                debugger;
+                
                 $("#formSpeciality").data("changed", true);
             });
             $(document).on('change', '#enHeader', function () {
-                debugger;
+                
                 $("#formSpeciality").data("changed", true);
             });
             $(document).on('change', '#ruHeader', function () {
-                debugger;
+                
                 $("#formSpeciality").data("changed", true);
             }); $(document).on('change', '#files', function () {
-                debugger;
+                
                 $("#formSpeciality").data("changed", true);
             });
         var isClicked = false;
         $('#updateSpeciality').on('click', function (evt) {
-            debugger;
+            
             isClicked = true;
         });
-        debugger;
+        
 
         window.addEventListener("beforeunload", function (e) {
             var confirmationMessage = 'It looks like you have been editing something. '
                 + 'If you leave before saving, your changes will be lost.';
 
            
-            debugger;
+            
                 if ($("#formSpeciality").data("changed") && isClicked == false) {
                 (e || window.event).returnValue = confirmationMessage; //Gecko + IE
                 return confirmationMessage;

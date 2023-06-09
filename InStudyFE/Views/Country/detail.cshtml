@@ -1892,7 +1892,7 @@
                                        <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail?uniId=@university.Id" target="_blank" class="ContentCard js-studyCard">
                                 <div data-v-78fa3586="" data-v-6e0e8e37="">
                                     @if(university.UniversityFiles.Count()>0){
-                                   <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="https://api.instudy.net/@university.UniversityFiles[0].Path" loading="lazy" width="288" height="152"></div>
+                                   <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586=""  class="universityimage" alt="Study cover image" src="https://api.instudy.net/@university.UniversityFiles[0].Path" loading="lazy" width="288" height="152"></div>
 
                                     }
                                 </div>
@@ -1919,7 +1919,7 @@
                                            <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail?uniId=@university.Id" target="_blank" class="ContentCard js-studyCard">
                                 <div data-v-78fa3586="" data-v-6e0e8e37="">
                                        @if(university.UniversityFiles.Count()>0){
-                                   <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="https://api.instudy.net/@university.UniversityFiles[0].Path" loading="lazy" width="288" height="152"></div>
+                                   <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586=""  class="universityimage" alt="Study cover image" src="https://api.instudy.net/@university.UniversityFiles[0].Path" loading="lazy" width="288" height="152"></div>
 
                                     }
                                 </div>
@@ -1945,7 +1945,7 @@
                                            <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail?uniId=@university.Id" target="_blank" class="ContentCard js-studyCard">
                                 <div data-v-78fa3586="" data-v-6e0e8e37="">
                                         @if(university.UniversityFiles.Count()>0){
-                                   <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="https://api.instudy.net/@university.UniversityFiles[0].Path" loading="lazy" width="288" height="152"></div>
+                                   <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" class="universityimage" alt="Study cover image" src="https://api.instudy.net/@university.UniversityFiles[0].Path" loading="lazy" width="288" height="152"></div>
 
                                     }
                                 </div>
@@ -1996,7 +1996,7 @@
         
 
             function swith(id){
-                console.log(id);
+                
                 const collection = document.getElementById("menuChildren").children;
                                 for (let i = 0; i < collection.length; i++) {
                       collection[i].classList.add("Hidden");
@@ -2078,15 +2078,16 @@
 				var html = [];
 				$.each(
 					data.data, function (i, value) {
-						  if ($lang == 'AZ') {
-                            var name = value?.azName
+						  if ($lang == 'RU') {
+                              var name = value?.ruName;
 
                         }
                         else if ($lang == 'EN') {
                             var name = value?.enName
 
                         } else {
-                            var name = value?.ruName;
+                            var name = value?.azName
+                            
 
                         }
 						html.push(
@@ -2115,15 +2116,15 @@
 				var html = [];
 				$.each(
 					data.data, function (i, value) {
-						  if ($lang == 'AZ') {
-                            var name = value?.azName
-
+						  if ($lang == 'RU') {
+                             var name = value?.ruName;
                         }
                         else if ($lang == 'EN') {
                             var name = value?.enName
 
                         } else {
-                            var name = value?.ruName;
+                            var name = value?.azName
+                           
 
                         }
 						html.push(
@@ -2154,15 +2155,15 @@
 				var html = [];
 				$.each(
 					data.data, function (i, value) {
-						  if ($lang == 'AZ') {
-                            var name = value?.azName
-
+						  if ($lang == 'RU') {
+                             var name = value?.ruName;
                         }
                         else if ($lang == 'EN') {
                             var name = value?.enName
 
                         } else {
-                            var name = value?.ruName;
+                           
+                            var name = value?.azName
 
                         }
 						html.push(
@@ -2181,7 +2182,7 @@
 	</script>
     <script>
          function searchProgramCon(name) {
-               debugger;
+               
                var  txtValue = name.textContent || name.innerText;
                document.getElementById('programInputCon').value = txtValue;
                $("#program_div_con").addClass("Hidden");

@@ -2,7 +2,6 @@
     const $lang = localStorage.getItem('lang');
     var pathname = window.location.pathname;
     const linkValues = pathname.split("/");
-    console.log(linkValues[3]);
 //$.ajax({
 //    type: 'GET',
 //    headers: {

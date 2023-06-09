@@ -110,7 +110,7 @@
     //                    function (i, value) {
 
     //                        if (data.data.directions.find(x => x.id === value.id)) {
-    //                            debugger;
+    //                            
     //                            formData1.append('DirectionIds', value.id);
     //                            html.push(
     //                                `
@@ -154,7 +154,7 @@
     //                        // Make sure that the formMessages div has the 'success' class.
     //                        if (response.success == true) {
 
-    //                            debugger;
+    //                            
     //                            if (data.data.specialities.length == 0) {
 
 

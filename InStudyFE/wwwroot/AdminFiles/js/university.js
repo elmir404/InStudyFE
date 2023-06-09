@@ -7,7 +7,6 @@
         columns: [
             {
                 data: 'universityFiles', render: function (data, type, row, meta) {
-                    console.log("dsds", data);
                     return `
                       <td><img alt="data:image/png;base64,${data[0]?.path}" style="width:200px !important;" class="text-center img-responsive" src="https://api.instudy.net/${data[0]?.path}"></td>
 
@@ -103,7 +102,7 @@
 
                     $('#specialityBtn').show();
                     $('#universityId').val(response.responseJSON.data);
-                    debugger;
+                    
                     var formData1 = new FormData();
                     for (var i = 0; i < direction.length; i++) {
                         formData1.append('DirectionIds', direction[i]);
@@ -121,7 +120,7 @@
                             // Make sure that the formMessages div has the 'success' class.
                             if (response.success == true) {
 
-                                debugger;
+                                
                                
 
 
@@ -195,7 +194,7 @@
 
 });
 function Edit(university) {
-    debugger;
+    
     location.href = `/Admin/University/UpdateUniversity?uniId=${university}`;
 
 }

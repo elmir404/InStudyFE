@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace InStudyFE.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[CustomAuthorize(claims: "admin")]
+    [CustomAuthorize]
     public class AboutController : Controller
     {
         public IActionResult AddAbout()

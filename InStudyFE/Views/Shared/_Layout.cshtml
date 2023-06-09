@@ -8,9 +8,7 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8">
-      <meta name="description" content="sads">
-      <meta name="google" content="nopagereadaloud" />
-      <meta name="referrer" content="unsafe-url">
+      
       <link rel="preconnect" href="https://cdn.jsdelivr.net">
       <link rel="icon" type="image/png" href="~/images/favicon.png" sizes="32x32">
       <link rel="icon" type="image/png" href="~/images/favicon.png" sizes="16x16">
@@ -29,18 +27,39 @@
       <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/26905/Studyportalslineariconset/style-cf.css?dnl644">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-      <title>instudy | Xaricdə Təhsil </title>
+                     @if (culture == "en")
+                        {
+                          <title>instudy | Study Abroad </title>
+                    <meta name="description" content="InStudy study abroad">
+                       <meta name="keywords" content="study,abroad,education,abroad education,innab">
+                       <meta name="author" content="InStudy">
+                        }
+                        else if (culture == "ru")
+                        {
+                        <title>instudy | Учеба За Границей </title>
+                             <meta name="description" content="InStudy учится за границей">
+                   <meta name="keywords" content="обучение,за границей,образование,обучение за границей,innab">
+                   <meta name="author" content="InStudy">
+                        }
+                        else
+                        {
+                    <title>instudy | Xaricdə Təhsil </title>
+                    <meta name="description" content="InStudy xaricde tehsil">
+                    <meta name="keywords" content="istudy,xaricde,tehsil,xaricde tehsil,innab">
+                    <meta name="author" content="InStudy">
+                        }
+      
       <link rel="stylesheet" href="~/css/scss/shared.css" />
       <link rel="stylesheet" href="~/css/scss/style.css" />
       <link rel="stylesheet" href="~/css/scss/responsive1.css" />
-      <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-71NDLV0QHE"></script>
+     <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NQTSSNHS8"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-71NDLV0QHE');
+          gtag('config', 'G-9NQTSSNHS8');
         </script>
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous">
         </script>
@@ -178,6 +197,13 @@
         }
         #country_div :hover{
             display:block !important;
+        }
+
+        .universityimage {
+            height: 100% !important;
+        }
+        .StudyCoverWrapper{
+            height:9rem;
         }
 
        </style>
@@ -514,7 +540,7 @@
                   
                     $.each(
                         data.data, function (i, value) {
-                             console.log("partners",value);
+                             
                             var image = `https://api.instudy.net/${value?.partnerFiles[0]?.path}`
                             $('#partners').owlCarousel({
                                 dots: false, loop: true, margin: 10, autoplay: true, autoplayTimeout: 2000, nav: true, navText: ["<img src='/images/prev.png' style='width:30px;height:30px;'>", "<img src='/images/next.png' style='width:30px;height:30px;'>"], responsiveClass: true,
@@ -578,7 +604,7 @@
             $(document).ready(function () {
 	            var curLang = localStorage.getItem('lang');
                 var $lang = $('#curLang');
-                console.log(curLang);
+               
                 if(curLang ==null  || curLang == undefined){
                     localStorage.setItem('lang', 'AZ');
 
@@ -599,7 +625,7 @@
                 var isOpen = li.classList.contains('is-open');
                 var sectionContent = document.getElementById('exploreContent');
                 var studyContent = document.getElementById('goStudyContent');
-                console.log(isOpen);
+               
                 if (id == 'explore') {
 
                     if (isOpen == false) {
@@ -612,7 +638,7 @@
                         searchWrapper.style.paddingRight = "17px";
                     }
                     else {
-                        console.log("dsdsddsd");
+
                         li.classList.remove("is-open");
                         body.classList.remove("js-HeaderMainMenuOpened");
                         content.classList.remove("is-open");
@@ -631,7 +657,7 @@
                         searchWrapper.style.paddingRight = "17px"
                     }
                     else {
-                        console.log("dsdsddsd");
+                        
                         li.classList.remove("is-open");
                         body.classList.remove("js-HeaderMainMenuOpened");
                         content.classList.remove("is-open");
@@ -719,7 +745,7 @@
 
 
             function searchProgram(name) {
-               debugger;
+               
                var  txtValue = name.textContent || name.innerText;
                document.getElementById('programInput1').value = txtValue;
                $("#program_div").addClass("Hidden");

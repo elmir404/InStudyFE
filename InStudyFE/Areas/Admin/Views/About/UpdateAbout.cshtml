@@ -49,56 +49,56 @@
     <script>
         $(document).ready(function () {
             $(document).on('change', '#address', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             }); $(document).on('change', '#phone', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             }); $(document).on('change', '#email', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             }); 
             $(document).on('change', '#mapAddress', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#instaLink', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#faceLink', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#twitLink', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#youtubeLink', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#linkedLink', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#telLink', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
         var isClicked = false;
         $('#updateAbout').on('click', function (evt) {
-            debugger;
+            
             isClicked = true;
         });
-        debugger;
+        
 
         window.addEventListener("beforeunload", function (e) {
             var confirmationMessage = 'It looks like you have been editing something. '
                 + 'If you leave before saving, your changes will be lost.';
 
           
-            debugger;
+            
             if ($("#form").data("changed") && isClicked == false) {
                 (e || window.event).returnValue = confirmationMessage; //Gecko + IE
                 return confirmationMessage;

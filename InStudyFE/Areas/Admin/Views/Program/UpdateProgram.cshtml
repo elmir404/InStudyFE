@@ -49,30 +49,30 @@
     <script>
         $(document).ready(function () {
             $(document).on('change', '#azHeader', function () {
-                debugger;
+                
                 $("#formProgram").data("changed", true);
             });
             $(document).on('change', '#enHeader', function () {
-                debugger;
+                
                 $("#formProgram").data("changed", true);
             });
             $(document).on('change', '#ruHeader', function () {
-                debugger;
+                
                 $("#formProgram").data("changed", true);
             });
         var isClicked = false;
         $('#updateProgram').on('click', function (evt) {
-            debugger;
+            
             isClicked = true;
         });
-        debugger;
+        
 
         window.addEventListener("beforeunload", function (e) {
             var confirmationMessage = 'It looks like you have been editing something. '
                 + 'If you leave before saving, your changes will be lost.';
 
            
-            debugger;
+            
             if ($("#formProgram").data("changed") && isClicked == false) {
                 (e || window.event).returnValue = confirmationMessage; //Gecko + IE
                 return confirmationMessage;

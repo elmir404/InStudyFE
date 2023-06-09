@@ -199,45 +199,45 @@
     <script>
         $(document).ready(function () {
             $(document).on('change', '#University', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#EducationProgram', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#Speciality', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#DurationDate', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#enDescription', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#ruDescription', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             }); $(document).on('change', '#files', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
         var isClicked = false;
         $('#addDuration').on('click', function (evt) {
-            debugger;
+            
             isClicked = true;
         });
-        debugger;
+        
 
         window.addEventListener("beforeunload", function (e) {
             var confirmationMessage = 'It looks like you have been editing something. '
                 + 'If you leave before saving, your changes will be lost.';
 
             
-            debugger;
+            
             if ($("#form").data("changed") && isClicked == false) {
                 (e || window.event).returnValue = confirmationMessage; //Gecko + IE
                 return confirmationMessage;

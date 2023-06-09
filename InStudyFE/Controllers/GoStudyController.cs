@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace InStudyFE.Controllers
 {
-    [Authorize]
+  
     public class GoStudyController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;

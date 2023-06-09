@@ -5,13 +5,15 @@
   
    
     const $lang = localStorage.getItem('lang');
-    if ($lang == 'AZ') {
-        var $notFount = "Axtarışa uyğun univeristet tapılmadı!"
-        $(`.disciplinlang`).html("Fənlər");
-        $(`.locationlang`).html("Ölkə");
-        $(`.durationlang`).html("Müddət");
-        $(`.attendancelang`).html("Fakultə"); 
-        $(`.degreetypelang`).html("Təhsil Pilləsi");
+    if ($lang == 'RU') {
+        var $notFount = "Университет, соответствующий вашему запросу, не найден!"
+        $(`.disciplinlang`).html("Дисциплины");
+        $(`.locationlang`).html("Страна");
+        $(`.durationlang`).html("Продолжительность");
+        $(`.attendancelang`).html("Посещаемость");
+        $(`.degreetypelang`).html("Тип степени");
+
+       
     }
     else if ($lang == 'EN') {
         var $notFount = "No university matching your search was found!";
@@ -22,13 +24,13 @@
         $(`.degreetypelang`).html("Degree");
     }
     else {
-        var $notFount = "Университет, соответствующий вашему запросу, не найден!"
-        $(`.disciplinlang`).html("Дисциплины");
-        $(`.locationlang`).html("Страна");
-        $(`.durationlang`).html("Продолжительность");
-        $(`.attendancelang`).html("Посещаемость");
-        $(`.degreetypelang`).html("Тип степени");
-
+       
+        var $notFount = "Axtarışa uyğun univeristet tapılmadı!"
+        $(`.disciplinlang`).html("Fənlər");
+        $(`.locationlang`).html("Ölkə");
+        $(`.durationlang`).html("Müddət");
+        $(`.attendancelang`).html("Fakultə");
+        $(`.degreetypelang`).html("Təhsil Pilləsi");
     }
     $.ajax({
         type: 'GET',
@@ -43,15 +45,15 @@
                 data.data, function (i, value) {
 
 
-                    if ($lang == 'AZ') {
-                        var name = value.azName
-
+                    if ($lang == 'RU') {
+                        var name = value.ruName;
                     }
                     else if ($lang == 'EN') {
                         var name = value.enName
 
                     } else {
-                        var name = value.ruName;
+                        var name = value.azName
+
 
                     }
                     if (name == $direction) {
@@ -90,15 +92,15 @@
                 data.data, function (i, value) {
                    
 
-                    if ($lang == 'AZ') {
-                        var name = value.azName
+                    if ($lang == 'RU') {
+                        var name = value.ruName;
 
                     }
                     else if ($lang == 'EN') {
                         var name = value.enName
 
                     } else {
-                        var name = value.ruName;
+                        var name = value.azName
 
                     }
                     if (name == $country) {
@@ -138,15 +140,15 @@
                 data.data, function (i, value) {
                   
 
-                    if ($lang == 'AZ') {
-                        var name = value.azName
+                    if ($lang == 'RU') {
+                        var name = value.ruName;
 
                     }
                     else if ($lang == 'EN') {
                         var name = value.enName
 
                     } else {
-                        var name = value.ruName;
+                        var name = value.azName
 
                     }
                     if (name == $program) {
@@ -209,15 +211,16 @@
 
             $.each(
                 data.data, function (i, value) {
-                    if ($lang == 'AZ') {
-                        var name = value.azName
+                    if ($lang == 'RU') {
+                        var name = value.ruName;
+
 
                     }
                     else if ($lang == 'EN') {
                         var name = value.enName
 
                     } else {
-                        var name = value.ruName;
+                        var name = value.azName
 
                     }
                     $(`#attendenceSearch`).append(
@@ -240,8 +243,8 @@
         var $programSearch = JSON.parse(localStorage.getItem("programSearch"));
         var $durationSearch = JSON.parse(localStorage.getItem("durationsSearch"));
         var $attendenceSearch = JSON.parse(localStorage.getItem("attendenceSearch"));
-        console.log($programSearch);
-        debugger;
+       
+        
         var formData = new FormData();
         if (localStorage.getItem('country') !="")
             formData.append('CountryNames', localStorage.getItem('country'));
@@ -286,11 +289,11 @@
                         $.each(
                             response?.data.value, function (i, value) {
 
-                                if ($lang == 'AZ') {
-                                    var name = value.azName
-                                    var city = value.azCity;
-
-                                    var countryName = value.country?.azName;
+                                if ($lang == 'RU') {
+                                    var name = value.ruName;
+                                    var city = value.ruCity;
+                                    var countryName = value.country?.ruName;
+                                    
                                 }
                                 else if ($lang == 'EN') {
                                     var name = value.enName
@@ -299,9 +302,10 @@
 
 
                                 } else {
-                                    var name = value.ruName;
-                                    var city = value.ruCity;
-                                    var countryName = value.country?.ruName;
+                                    var name = value.azName
+                                    var city = value.azCity;
+
+                                    var countryName = value.country?.azName;
 
 
                                 }
@@ -312,7 +316,7 @@
    <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail?uniId=${value.Id}" target="_blank" class="ContentCard js-studyCard">
                                                                                         <div data-v-78fa3586="" data-v-6e0e8e37="">
                                                                                             
-                                                                                            <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="${image}" loading="lazy" width="288" height="152"></div>
+                                                                                            <div data-v-78fa3586="" class="StudyCoverWrapper"><img class="universityimage" data-v-78fa3586="" alt="Study cover image" src="${image}" loading="lazy" width="288" height="152"></div>
 
                                                                                         
                                                                                         </div>
@@ -380,14 +384,14 @@
     var descArr = [];
     $(document).on("change", "input[name='disciplines']", function () {
        
-        debugger;
+        
        
         if (this.checked) {
             localStorage.setItem('disciplinesSearch', "");
             descArr.push($(this).val());           
             localStorage.setItem('disciplinesSearch', JSON.stringify(descArr));
         } else {
-            debugger;
+            
             if ($(this).val() == localStorage.getItem('direction')) {   
                 descArr.push($(this).val());
                 localStorage.setItem('disciplinesSearch', JSON.stringify(descArr));
@@ -439,7 +443,7 @@
        
         if (this.checked) {
             localStorage.setItem('programSearch', "");
-            debugger;
+            
             
             degreArr.push($(this).val());
             localStorage.setItem('programSearch', JSON.stringify(degreArr));

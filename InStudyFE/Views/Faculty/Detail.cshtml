@@ -37,7 +37,7 @@
 
 
         #SubdisciplinesList .Specialisations {
-            font-size: 1rem;
+            font-size: 1.5rem;
             font-weight: 700;
             line-height: 1.5rem;
             margin: 0 0 2rem;
@@ -146,6 +146,7 @@
         .StudyCoverWrapper[data-v-78fa3586] {
             min-height: 9.5rem;
             max-height: 9.5rem;
+            height:9rem;
             margin: -1.5rem -1.5rem 1.5rem;
             overflow: hidden;
             border-radius: 0.5rem 0.5rem 0 0;
@@ -308,6 +309,14 @@
             color: #3f5c6e;
         }
 
+        #SubdisciplinesList .SubDisciplinesList li a:hover {
+            text-decoration: underline !important;
+        }
+       /* #galactus img {
+            height: 100% !important;
+           
+        }*/
+
     </style>
  }
 
@@ -405,7 +414,7 @@
                                                     <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail?uniId=@uni.Id" target="_blank" class="ContentCard js-studyCard">
                                                         <div data-v-78fa3586="" data-v-6e0e8e37="">
                                                             @if(uni.UniversityFiles.Count()>0){
-                                                            <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="https://api.instudy.net/@uni.UniversityFiles[0]?.Path" loading="lazy" width="288" height="152"></div>
+                                                                <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" class="universityimage" alt="Study cover image" src="https://api.instudy.net/@uni.UniversityFiles[0]?.Path" loading="lazy" width="288" height="152"></div>
 
                                                             }
                                                         </div>
@@ -431,7 +440,7 @@
                                                         <div data-v-78fa3586="" data-v-6e0e8e37="">
                                                             @if (uni.UniversityFiles.Count() > 0)
                                                             {
-                                                                <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="https://api.instudy.net/@uni.UniversityFiles[0]?.Path" loading="lazy" width="288" height="152"></div>
+                                                                <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" class="universityimage" alt="Study cover image" src="https://api.instudy.net/@uni.UniversityFiles[0]?.Path" loading="lazy" width="288" height="152"></div>
 
                                                             }
                                                         </div>
@@ -456,7 +465,7 @@
                                                         <div data-v-78fa3586="" data-v-6e0e8e37="">
                                                             @if (uni.UniversityFiles.Count() > 0)
                                                             {
-                                                                <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" alt="Study cover image" src="https://api.instudy.net/@uni.UniversityFiles[0]?.Path" loading="lazy" width="288" height="152"></div>
+                                                                <div data-v-78fa3586="" class="StudyCoverWrapper"><img data-v-78fa3586="" class="universityimage" alt="Study cover image" src="https://api.instudy.net/@uni.UniversityFiles[0]?.Path" loading="lazy" width="288" height="152"></div>
 
                                                             }
                                                         </div>

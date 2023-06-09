@@ -87,24 +87,24 @@
     <script>
         $(document).ready(function () {
             $(document).on('change', '#azHeader', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#enHeader', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#ruHeader', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
           
         var isClicked = false;
         $('#addProgram').on('click', function (evt) {
-            debugger;
+            
             isClicked = true;
         });
-        debugger;
+        
 
         window.addEventListener("beforeunload", function (e) {
             var confirmationMessage = 'It looks like you have been editing something. '
@@ -119,7 +119,7 @@
                 if ($('#ruDescription').val() != '') {
                     $("#form").data("changed", true);
                 }
-            debugger;
+            
             if ($("#form").data("changed") && isClicked == false) {
                 (e || window.event).returnValue = confirmationMessage; //Gecko + IE
                 return confirmationMessage;

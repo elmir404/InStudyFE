@@ -312,43 +312,43 @@
     <script>
         $(document).ready(function () {
             $(document).on('change', '#azHeader', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#enHeader', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#ruHeader', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#files', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#direction', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#country', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             }); 
             $(document).on('change', '#program', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#uniAdrress', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
         var isClicked = false;
         $('#addUniversty').on('click', function (evt) {
-            debugger;
+            
             isClicked = true;
         });
-        debugger;
+        
 
         window.addEventListener("beforeunload", function (e) {
             var confirmationMessage = 'It looks like you have been editing something. '
@@ -381,7 +381,7 @@
                     $("#form").data("changed", true);
                 }
            
-            debugger;
+            
             if ($("#form").data("changed") && isClicked == false) {
                 (e || window.event).returnValue = confirmationMessage; //Gecko + IE
                 return confirmationMessage;

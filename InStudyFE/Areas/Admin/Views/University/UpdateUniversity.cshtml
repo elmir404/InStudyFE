@@ -265,7 +265,7 @@
         $('#speciality').multipleSelect();
         $('#direction').multipleSelect();
         function selectFunction() {
-            debugger;
+            
             var direction = $("#direction").val();
             var $specialityes = JSON.parse(localStorage.getItem("currentSpecialities"));
 
@@ -282,8 +282,7 @@
                 processData: false,  // tell jQuery not to process the data
                 contentType: false,
             }).done(function (response) {
-                console.log("response", response);
-                debugger;
+                
                
                     $("#speciality").empty();
                     if ($specialityes.length == 0) {
@@ -338,50 +337,50 @@
     <script>
         $(document).ready(function () {
             $(document).on('change', '#azHeader', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#enHeader', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#ruHeader', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#files', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#direction', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#country', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#program', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             $(document).on('change', '#uniAdrress', function () {
-                debugger;
+                
                 $("#form").data("changed", true);
             });
             var isClicked = false;
             $('#updateUniversity').on('click', function (evt) {
-                debugger;
+                
                 isClicked = true;
             });
-            debugger;
+            
 
             window.addEventListener("beforeunload", function (e) {
                 var confirmationMessage = 'It looks like you have been editing something. '
                     + 'If you leave before saving, your changes will be lost.';
 
 
-                debugger;
+                
                 if ($("#form").data("changed") && isClicked == false) {
                     (e || window.event).returnValue = confirmationMessage; //Gecko + IE
                     return confirmationMessage;

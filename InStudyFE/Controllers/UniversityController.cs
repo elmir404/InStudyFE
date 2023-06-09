@@ -6,7 +6,7 @@ using System.Net.Http;
 
 namespace InStudyFE.Controllers
 {
-    [Authorize]
+   
     public class UniversityController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;

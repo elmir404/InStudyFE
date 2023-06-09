@@ -180,7 +180,7 @@ function Delete(message) {
 
 }
 function Edit(id) {
-    debugger;
+    
     location.href = `/Admin/Request/RequestDetail/${id}`;
 
 }

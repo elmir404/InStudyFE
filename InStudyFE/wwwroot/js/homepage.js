@@ -28,21 +28,23 @@
     var $footercontact = $('.footercontact');
     
     const $lang = localStorage.getItem('lang');
-    if ($lang == 'AZ') {
-        $countryHeader.html(`Seçilmiş ölkələr`);
-        $universityHeader.html(`Seçilmiş universitetlər`);
-        $disciplinesHeader.html(`Fənlər`);
-        var $countryMore = `Daha çox ölkə`;
-        $(".countryMore").html("Daha çox ölkə");
-        var $countryFw=`Daha az ölkə`;
-        $uniMore.html(`Bütün universitetləri göstər`);
-        $arcticles.html(`Daha çox məqalə`);
-        $contact.html(`Əlaqə`);
-        $topscroll.html(`Yuxarı`);
-        $footerabout.html('Haqqında');
-        $footerarticles.html('Məqalə');
-        $footercountries.html('Ölkələr');
-        $footercontact.html('Əlaqə');
+    if ($lang == 'RU') {
+        $countryHeader.html(`Популярные страны`);
+        $universityHeader.html(`Популярные университеты`);
+        $disciplinesHeader.html(`Дисциплины`);
+        $(".countryMore").html("Больше стран");
+        var $countryMore = `Больше стран`;
+        var $countryFw = `Меньше стран`;
+        $uniMore.html(`Просмотреть все университеты`);
+        $arcticles.html("Еще статьи");
+        $contact.html(`Контакт`);
+        $topscroll.html(`Bверх`)
+        $footerabout.html('O');
+        $footerarticles.html('Cтатьи');
+        $footercountries.html('Cтраны');
+        $footercontact.html('Связь');
+
+       
     }
     else if ($lang == 'EN') {
         $countryHeader.html(`Popular countries`);
@@ -60,23 +62,23 @@
         $footercountries.html('Countries');
         $footercontact.html('contact');
     } else {
-        $countryHeader.html(`Популярные страны`);
-        $universityHeader.html(`Популярные университеты`); 
-        $disciplinesHeader.html(`Дисциплины`);
-        $(".countryMore").html("Больше стран");
-        var $countryMore =`Больше стран`;   
-        var $countryFw =`Меньше стран`;
-        $uniMore.html(`Просмотреть все университеты`);
-        $arcticles.html("Еще статьи");
-        $contact.html(`Контакт`);
-        $topscroll.html(`Bверх`)
-        $footerabout.html('O');
-        $footerarticles.html('Cтатьи');
-        $footercountries.html('Cтраны');
-        $footercontact.html('Связь');
+        $countryHeader.html(`Seçilmiş ölkələr`);
+        $universityHeader.html(`Seçilmiş universitetlər`);
+        $disciplinesHeader.html(`Fənlər`);
+        var $countryMore = `Daha çox ölkə`;
+        $(".countryMore").html("Daha çox ölkə");
+        var $countryFw = `Daha az ölkə`;
+        $uniMore.html(`Bütün universitetləri göstər`);
+        $arcticles.html(`Daha çox məqalə`);
+        $contact.html(`Əlaqə`);
+        $topscroll.html(`Yuxarı`);
+        $footerabout.html('Haqqında');
+        $footerarticles.html('Məqalə');
+        $footercountries.html('Ölkələr');
+        $footercontact.html('Əlaqə');
     }
     $(document).on('click', '#viewMore', function () {
-        debugger;
+        
         if ($(".hiddenCountry").hasClass("Hidden")) {
             $(".hiddenCountry").removeClass("Hidden");
             $(".countryMore").html($countryFw)
@@ -100,15 +102,16 @@
                     data.data, function (i, value) {
 
 
-                        if ($lang == 'AZ') {
-                            var name = value.azName
+                        if ($lang == 'RU') {
+                            var name = value.ruName;
+
 
                         }
                         else if ($lang == 'EN') {
                             var name = value.enName
 
                         } else {
-                            var name = value.ruName;
+                            var name = value.azName
 
                         }
 
@@ -141,16 +144,16 @@
             /*$country.empty();*/
             $.each(
                 data.data, function (i, value) {
-                    if ($lang == 'AZ') {
-                        var name = value.azName
+                    if ($lang == 'RU') {
+                        var name = value.ruName;
 
                     }
                     else if ($lang == 'EN') {
                         var name = value.enName
 
                     } else {
-                        var name = value.ruName;
-                       
+                        var name = value.azName
+
 
                     }  
                     $(`#program1`).append(`
@@ -179,15 +182,15 @@
         url: `https://api.instudy.net/api/AboutCompany/GetLastAboutCompany`,
 
         success: function (data) {
-            if ($lang == 'AZ') {
-                var addreess = data?.data?.azAdress
-
+            if ($lang == 'RU') {
+                var addreess = data?.data?.ruAdress;
             }
             else if ($lang == 'EN') {
                 var addreess = data?.data?.enAdress
 
             } else {
-                var addreess = data?.data?.ruAdress;
+                var addreess = data?.data?.azAdress
+
 
             }
             
@@ -262,18 +265,18 @@
                     data.data, function (i, value) {
                        
                         
-                        if ($lang == 'AZ') {
-                            var name = value.azName
+                        if ($lang == 'RU') {
                            
-
+                            var name = value.ruName;
                         }
                         else if ($lang == 'EN') {
                             var name = value.enName
                            
 
                         } else {
-                            var name = value.ruName;
-                          
+                            
+                            var name = value.azName
+
 
                         }
                       
@@ -310,17 +313,17 @@
                
                 $.each(
                     data.data, function (i, value) {
-                        console.log(data);
+                        
                        
-                        if ($lang == 'AZ') {
-                            var name = value?.azName
-
+                        if ($lang == 'RU') {
+                            var name = value?.ruName;
                         }
                         else if ($lang == 'EN') {
                             var name = value?.enName
 
                         } else {
-                            var name = value?.ruName;
+                            var name = value?.azName
+
 
                         }
                         var image = `https://api.instudy.net/${value?.directionFiles[0]?.path}`;
@@ -390,10 +393,12 @@
 
                     
                     var image = `https://api.instudy.net/${value?.studentFiles[0]?.path}`
-                    if ($lang == 'AZ') {
-                        var name = value?.azName
-                        var description = value?.azDescription;
-                        var country = value?.country?.azName
+                    if ($lang == 'RU') {
+                       
+
+                        var name = value?.ruName;
+                        var description = value?.ruDescription;
+                        var country = value?.country?.ruName
 
                     }
                     else if ($lang == 'EN') {
@@ -403,10 +408,9 @@
 
 
                     } else {
-                        var name = value?.ruName;
-                        var description = value?.ruDescription;
-                        var country = value?.country?.ruName
-
+                        var name = value?.azName
+                        var description = value?.azDescription;
+                        var country = value?.country?.azName
 
                     }
                     
@@ -445,16 +449,16 @@
             $.each(
                 data.data, function (i, value) {
 
-                    if ($lang == 'AZ') {
-                        var name1 = value.azHeader
+                    if ($lang == 'RU') {
 
+                        var name1 = value.ruHeader;
 
                     }
                     else if ($lang == 'EN') {
                         var name1 = value.enHeader
 
                     } else {
-                        var name1 = value.ruHeader;
+                        var name1 = value.azHeader
 
                     }
 
@@ -494,15 +498,16 @@
             success: function (data) {
                 $questionHeader.empty();
                 $questions.empty();
-                        if ($lang == 'AZ') {
-                            var body = data?.data?.azHeader;
+                        if ($lang == 'RU') {
+
+                            var body = data?.data?.ruHeader;
 
                         }
                         else if ($lang == 'EN') {
                             var body = data?.data?.enHeader;
 
                         } else {
-                            var body = data?.data?.ruHeader;
+                            var body = data?.data?.azHeader;
 
                         }
                       
@@ -526,19 +531,19 @@
                         //var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
                         //var yyyy = date.getFullYear();
                         //var time = yyyy + "/" + mm + "/" + dd;
-                        if ($lang == 'AZ') {
-                            var title = value?.azQuestionTitle;
-                            var answer = value?.azQuestionAnswer;
-;
+                        if ($lang == 'RU') {
+                            
 
+                            var title = value?.ruQuestionTitle;
+                            var answer = value?.ruQuestionAnswer;
                         }
                         else if ($lang == 'EN') {
                             var title = value?.enQuestionTitle;
                             var answer = value?.enQuestionAnswer;
 
                         } else {
-                            var title = value?.ruQuestionTitle;
-                            var answer = value?.ruQuestionAnswer;
+                            var title = value?.azQuestionTitle;
+                            var answer = value?.azQuestionAnswer;
 
                         }
                         /*$("#questionAcc").empty()*/
@@ -585,16 +590,16 @@
                 $blog.empty();
                 $.each(
                     data.data, function (i, value) {
-                        if ($lang == 'AZ') {
-                            var name = value?.azTitle
-
+                        if ($lang == 'RU') {
+                            var name = value?.ruTitle;
                         }
                         else if ($lang == 'EN') {
                             var name = value?.enTitle
 
                         }
                         else {
-                            var name = value?.ruTitle;
+                           
+                            var name = value?.azTitle
 
                         }
                         
@@ -602,7 +607,7 @@
                         if (i <= 4) {
                             $blog.append(
                                 `  <article data-clickable="clickable"> 
-                                            <a href="/Blog/Detail/${value.id}" title="${name}">
+                                            <a target="_blank" class="blogclass" href="/Blog/Detail?blogId=${value.id}" title="${name}">
                                               ${name}
                                            
                                      </a>

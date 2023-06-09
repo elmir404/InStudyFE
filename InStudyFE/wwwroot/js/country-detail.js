@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     var pathname = window.location.pathname;
-    console.log(pathname);
+    
     const linkValues = pathname.split("/");
     const $lang = localStorage.getItem('lang');
 
@@ -9,27 +9,29 @@
     var $countryImg = $('#CountryHeader');
     var $universities = $('#universities');
     var $StudyUniversity = $('#StudyUniversity');
-    if ($lang == 'AZ') {
-        $StudyUniversity.html(`Universitetlər`);
-        $(`#programInputCon`).attr(`placeholder`, `Proqram`);
-        $(`#directionInputCon`).attr(`placeholder`, `İstiqamət`);
-        $(`.directionInput`).attr(`placeholder`, `İstiqamət`);
-        $(`.study`).html("Təhsil")  
-        $(`.living`).html("Yaşayış")
-        $(`.about`).html("Haqqında") 
-        $(`.university`).html("Universitetlər")
-        $(`.student-visa`).html("Tələbə vizası")
-        $(`.work-permit`).html("Sənədlər")
-        $(`.how-to-apply`).html("Müraciət")
-        $(`.study1`).html("Təhsil")  
-        $(`.living1`).html("Yaşayış")
-        $(`.about1`).html("Haqqında") 
-        $(`.university1`).html("Universitetlər")
-        $(`.student-visa1`).html("Tələbə vizası")
-        $(`.work-permit1`).html("Sənədlər")
-        $(`.how-to-apply1`).html("Müraciət")
-        var student="Tələbə"
+    if ($lang == 'RU') {
+  
 
+
+        $StudyUniversity.html(`Университеты`);
+        $(`#programInputCon`).attr(`placeholder`, `Программа`);
+        $(`#directionInputCon`).attr(`placeholder`, `Направление`);
+        $(`.directionInput`).attr(`placeholder`, `Направление`);
+        $(`.study`).html("Образование")
+        $(`.living`).html("Живущий")
+        $(`.about`).html("O")
+        $(`.university`).html("Университет")
+        $(`.student-visa`).html("Студенческая виза")
+        $(`.work-permit`).html("Документы")
+        $(`.how-to-apply`).html("Обращение")
+        $(`.study1`).html("Образование")
+        $(`.living1`).html("Живущий")
+        $(`.about1`).html("O")
+        $(`.university1`).html("Университет")
+        $(`.student-visa1`).html("Студенческая виза")
+        $(`.work-permit1`).html("Документы")
+        $(`.how-to-apply1`).html("Обращение")
+        var student = "Студент"
     }
     else if ($lang == 'EN') {
         $StudyUniversity.html(`Universities`);
@@ -53,25 +55,25 @@
         var student = "Students"
     }
     else {
-        $StudyUniversity.html(`Университеты`);
-        $(`#programInputCon`).attr(`placeholder`, `Программа`);
-        $(`#directionInputCon`).attr(`placeholder`, `Направление`);
-        $(`.directionInput`).attr(`placeholder`, `Направление`);
-        $(`.study`).html("Образование") 
-        $(`.living`).html("Живущий")
-        $(`.about`).html("O")
-        $(`.university`).html("Университет")
-        $(`.student-visa`).html("Студенческая виза")
-        $(`.work-permit`).html("Документы")
-        $(`.how-to-apply`).html("Обращение")
-        $(`.study1`).html("Образование") 
-        $(`.living1`).html("Живущий")
-        $(`.about1`).html("O")
-        $(`.university1`).html("Университет")
-        $(`.student-visa1`).html("Студенческая виза")
-        $(`.work-permit1`).html("Документы")
-        $(`.how-to-apply1`).html("Обращение")
-        var student = "Студент"
+        $StudyUniversity.html(`Universitetlər`);
+        $(`#programInputCon`).attr(`placeholder`, `Proqram`);
+        $(`#directionInputCon`).attr(`placeholder`, `İstiqamət`);
+        $(`.directionInput`).attr(`placeholder`, `İstiqamət`);
+        $(`.study`).html("Təhsil")
+        $(`.living`).html("Yaşayış")
+        $(`.about`).html("Haqqında")
+        $(`.university`).html("Universitetlər")
+        $(`.student-visa`).html("Tələbə vizası")
+        $(`.work-permit`).html("Sənədlər")
+        $(`.how-to-apply`).html("Müraciət")
+        $(`.study1`).html("Təhsil")
+        $(`.living1`).html("Yaşayış")
+        $(`.about1`).html("Haqqında")
+        $(`.university1`).html("Universitetlər")
+        $(`.student-visa1`).html("Tələbə vizası")
+        $(`.work-permit1`).html("Sənədlər")
+        $(`.how-to-apply1`).html("Müraciət")
+        var student = "Tələbə"
     } 
 
     $.ajax({
@@ -146,7 +148,7 @@ ${workPermit}
             $(".universityList").empty();
             $.each(
                 data?.data?.universities, function (i, value) {
-                    console.log("sasa", value);
+                  
                     $(".universityList").append(
                         `
 			                
@@ -173,7 +175,7 @@ ${workPermit}
             $universities.empty();
             $.each(
                 data.data, function (i, value) {
-                    console.log("ssadsa",value);
+                   
                     const date = new Date(value.regDate)
 
                     var dd = String(date.getDate()).padStart(2, '0');
@@ -263,7 +265,7 @@ ${workPermit}
     });
 
     $(document).on('click', '#searchButtonCon', async function () {
-        console.log("adsadsad");
+        
         localStorage.setItem('program', $(`#programInputCon`).val());
         localStorage.setItem('direction', $(`#directionInputCon`).val());
         var empty = [];
@@ -272,7 +274,7 @@ ${workPermit}
         localStorage.setItem('durationsSearch', JSON.stringify(empty));
         localStorage.setItem('attendenceSearch', JSON.stringify(empty));
         localStorage.setItem('programSearch', JSON.stringify(empty));
-        location.href = "/Search";
+        location.href = `/Search/Index?program=${$(`#programInput1`).val()}&country=${$(`#countryInput`).val()}&faculty=${$(`#directionInput`).val()}`;
     });
   
 });

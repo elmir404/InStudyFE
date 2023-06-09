@@ -347,13 +347,13 @@
     <script src="~/js/university-detail.js"></script>
     <script>
         function swith(id) {
-                console.log(`${id}`);
+                (`${id}`);
                 const collection = document.getElementById("SwitchableContent").children;
                 const buttons = document.getElementById("ContentSwitcher").children;
                 for (let i = 0; i < collection.length; i++) {
                 buttons[i].classList.remove("is-active");
                 collection[i].classList.remove("is-visible");
-                console.log(collection[i]);
+                
               
             }
 

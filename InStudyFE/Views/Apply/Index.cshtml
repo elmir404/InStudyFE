@@ -661,15 +661,15 @@
 				var html = [];
 				$.each(
 					data.data, function (i, value) {
-						  if ($lang == 'AZ') {
-                            var name = value?.azName
+						  if ($lang == 'RU') {
+                            var name = value?.ruName;
 
                         }
                         else if ($lang == 'EN') {
                             var name = value?.enName
 
                         } else {
-                            var name = value?.ruName;
+                            var name = value?.azName
 
                         }
 						html.push(
@@ -698,15 +698,15 @@
 				var html = [];
 				$.each(
 					data.data, function (i, value) {
-						  if ($lang == 'AZ') {
-                            var name = value?.azName
-
+						  if ($lang == 'RU') {
+							var name = value?.ruName;
                         }
                         else if ($lang == 'EN') {
                             var name = value?.enName
 
                         } else {
-                            var name = value?.ruName;
+                            var name = value?.azName
+                            
 
                         }
 						html.push(
@@ -737,15 +737,15 @@
 				var html = [];
 				$.each(
 					data.data, function (i, value) {
-						  if ($lang == 'AZ') {
-                            var name = value?.azName
-
+						  if ($lang == 'RU') {
+							 var name = value?.ruName;
                         }
                         else if ($lang == 'EN') {
                             var name = value?.enName
 
                         } else {
-                            var name = value?.ruName;
+                           
+                            var name = value?.azName
 
                         }
 						html.push(

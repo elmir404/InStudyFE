@@ -55,7 +55,7 @@
     $("#addSpeciality").click(function () {
         var formData = new FormData();
         var direction = $("#directionid").val();
-        debugger;
+        
         formData.append('AzName', $("#azHeader").val());
         formData.append('RuName', $("#ruHeader").val());
         formData.append('EnName', $("#enHeader").val());

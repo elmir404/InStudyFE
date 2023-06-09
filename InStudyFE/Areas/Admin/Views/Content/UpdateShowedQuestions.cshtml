@@ -56,45 +56,45 @@
     <script>
         $(document).ready(function () {
             $(document).on('change', '#azHeader', function () {
-                debugger;
+                
                 $("#formQuestion").data("changed", true);
             });
             $(document).on('change', '#enHeader', function () {
-                debugger;
+                
                 $("#formQuestion").data("changed", true);
             });
             $(document).on('change', '#ruHeader', function () {
-                debugger;
+                
                 $("#formQuestion").data("changed", true);
             });
             $(document).on('change', '#azDescription', function () {
-                debugger;
+                
                 $("#formQuestion").data("changed", true);
             });
             $(document).on('change', '#enDescription', function () {
-                debugger;
+                
                 $("#formQuestion").data("changed", true);
             });
             $(document).on('change', '#ruDescription', function () {
-                debugger;
+                
                 $("#formQuestion").data("changed", true);
             }); $(document).on('change', '#files', function () {
-                debugger;
+                
                 $("#formQuestion").data("changed", true);
             });
             var isClicked = false;
             $('#updateShowedQuestion').on('click', function (evt) {
-                debugger;
+                
                 isClicked = true;
             });
-            debugger;
+            
 
             window.addEventListener("beforeunload", function (e) {
                 var confirmationMessage = 'It looks like you have been editing something. '
                     + 'If you leave before saving, your changes will be lost.';
 
 
-                debugger;
+                
                 if ($("#formQuestion").data("changed") && isClicked == false) {
                     (e || window.event).returnValue = confirmationMessage; //Gecko + IE
                     return confirmationMessage;

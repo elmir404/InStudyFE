@@ -334,7 +334,7 @@
     <script>
         ﻿$(document).ready(function () {
     $("#loginBtn").click(async function () {
-        console.log("sdfsfdsf");
+        
         var hasError = false;
         var $email = $('form input[name="loginEmail');
         var $name = $('form input[name="loginPas');
@@ -356,10 +356,10 @@
                     Password: $("#loginPas").val(),
                 }),
                 complete: function (response) {
-                    console.log(response);
+                   
                     if ( response.responseText == "") {
                          location.href = `/Home/Index`
-                        console.log("dsdsd");
+                       
                     }
                     else if (response.responseText == "emailnotverify") {
                         toastr.warning("Emailiniz təsdiqləyib yenidən giriş edin!");

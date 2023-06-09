@@ -46,9 +46,9 @@
             $(`#specList`).empty();
             $.each(
                 data.data.specialities, function (i, value) {
-                    if ($lang == 'AZ') {
-                        var specName = value.azName
+                    if ($lang == 'RU') {
                         
+                        var specName = value.azName
 
                     }
                     else if ($lang == 'EN') {

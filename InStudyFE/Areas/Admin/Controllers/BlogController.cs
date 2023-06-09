@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace InStudyFE.Areas.FainaAdmin.Controllers
 {
     [Area("Admin")]
+    [CustomAuthorize]
     //[CustomAuthorize(claims: "admin")]
     public class BlogController : Controller
     {

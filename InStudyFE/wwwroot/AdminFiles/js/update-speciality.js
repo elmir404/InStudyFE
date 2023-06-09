@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     const specialityId = localStorage.getItem('specialityId');
-    debugger;
+    
     var $form = $('#form')
     $.ajax({
         type: 'GET',

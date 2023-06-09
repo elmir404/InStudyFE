@@ -22,20 +22,23 @@
             var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
             var yyyy = date.getFullYear();
             var time = yyyy + "/" + mm + "/" + dd;
-            if ($lang == 'AZ') {
-                var name1 = data.data?.azName
-                var description = data.data?.azDescription;
-                var shortDescription = data.data?.azDescription?.slice(0,30);
-                var title = "Haqqında";
-                var duration = "Reytinq";
-                var attendence = "Dərs növü";
-                var apply = "Müraciət";
-                var start = "Başlama";     
-                var magistr = data.data?.azMaster;
-                var bachelor = data.data?.azBachelor;
-                $(`#overview`).html("Ümumi")
-                $(`#bachelor`).html("Bakalavr")
-                $(`#master`).html("Magistr")
+            if ($lang == 'RU') {
+                var name1 = data.data?.ruName;
+                var description = data.data?.ruDescription;
+                var shortDescription = data.data?.ruDescription?.slice(0, 30);
+                var title = "O нас";
+                var duration = "Рейтинг";
+                var attendence = "Тип урока";
+                var apply = "Применять";
+                var start = "Hачинай";
+                var magistr = data.data?.ruMaster;
+                var bachelor = data.data?.ruBachelor;
+                $(`#overview`).html("Обзор")
+                $(`#bachelor`).html("Холостяк")
+                $(`#master`).html("Владелец")
+
+
+              
             }
             else if ($lang == 'EN') {
                 var name1 = data.data?.enName
@@ -53,19 +56,19 @@
                 $(`#master`).html("Master")
 
             } else {
-                var name1 = data.data?.ruName;
-                var description = data.data?.ruDescription;
-                var shortDescription = data.data?.ruDescription?.slice(0,30);
-                var title = "O нас";
-                var duration = "Рейтинг";
-                var attendence = "Тип урока";
-                var apply = "Применять";
-                var start = "Hачинай";
-                var magistr = data.data?.ruMaster;
-                var bachelor = data.data?.ruBachelor;
-                $(`#overview`).html("Обзор")
-                $(`#bachelor`).html("Холостяк")
-                $(`#master`).html("Владелец")
+                var name1 = data.data?.azName
+                var description = data.data?.azDescription;
+                var shortDescription = data.data?.azDescription?.slice(0, 30);
+                var title = "Haqqında";
+                var duration = "Reytinq";
+                var attendence = "Dərs növü";
+                var apply = "Müraciət";
+                var start = "Başlama";
+                var magistr = data.data?.azMaster;
+                var bachelor = data.data?.azBachelor;
+                $(`#overview`).html("Ümumi")
+                $(`#bachelor`).html("Bakalavr")
+                $(`#master`).html("Magistr")
 
             }
             var image = `https://api.instudy.net/${data.data?.universityFiles[0]?.path}`;

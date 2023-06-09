@@ -1,10 +1,12 @@
-﻿using InStudyFE.Managers;
+﻿using InStudyFE.Extensions;
+using InStudyFE.Managers;
 using InStudyFE.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InStudyFE.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [CustomAuthorize]
     public class UniversityController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;

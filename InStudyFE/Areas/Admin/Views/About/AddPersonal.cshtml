@@ -113,10 +113,10 @@
         });
         var isClicked = false;
         $('#addPersonalAbout').on('click', function (evt) {
-            debugger;
+            
             isClicked = true;
         });
-        debugger;
+        
 
         window.addEventListener("beforeunload", function (e) {
             var confirmationMessage = 'It looks like you have been editing something. '
@@ -125,7 +125,7 @@
            
             if ($("#form").data("changed") && isClicked == false) {
                 (e || window.event).returnValue = confirmationMessage; //Gecko + IE
-                debugger;
+                
                 return confirmationMessage;
 
             }

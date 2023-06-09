@@ -12,7 +12,6 @@
 		url: `https://fainablogapi.herokuapp.com/api/About/GetAboutWithId?id=${aboutId}`,
 		success: function (data) {
 
-			console.log(data);
 			$aboutDetail.empty();
 			$aboutImage.empty();
 			$aboutSlideDetail.empty();

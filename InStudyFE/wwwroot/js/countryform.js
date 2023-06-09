@@ -1,53 +1,56 @@
 ﻿$(document).ready(function () {
     const $lang = localStorage.getItem('lang');
-    if ($lang == 'AZ') {
-        var $header = "Bizimlə əlaqə"
-        var adr = "Ünvan"
-        var phone = "Telefon"
-        var email = "E-poçt"
-        $(`#contactheader`).html(`Əlaqə`);
-        $(`#labellast`).html("Soyad");
-        $(`#lastName`).attr(`placeholder`, `Soyad `);
-        $(`#labelEmail`).html("Email");
-        $(`#requestEmail`).attr(`placeholder`, `Email`);
-        $(`#labelname`).html("Ad");
-        $(`#requestName`).attr(`placeholder`, `Ad`);
-        $(`#labelphone`).html("Telefon");
-        $(`#phone`).attr(`placeholder`, `Əlaqə nömrəsi`);
-        $(`#labelphone2`).html("WhatsApp nömrə");
-        $(`#phone2`).attr(`placeholder`, `Əlaqə nömrəsi`);
-        $(`#labeldescription`).html("Açıqlama");
-        $(`#labeldate`).html('Tarix');
-        $(`#havewp`).html('WhatsApp?');
-        $(`#labelonline`).html('Onlayn?');
-        $(`#labelconsulted`).html('Konsultasiya?');
-        $(`#labelstcont`).html('Yaşadığınız ölkə');
-        $(`#labelcont`).html('Ölkə');
-        $(`#labeldirection`).html('Istiqamət');
-        $(`#requestSubmit`).html('Göndər');
-        $(`.yes`).html('Bəli');
-        $(`.no`).html('Xeyr');
+    if ($lang == 'RU') {
+   
 
-        $(`.contactheader`).html(`Əlaqə`);
-        $(`.labellast`).html("Soyad");
-        $(`.lastName`).attr(`placeholder`, `Soyad `);
-        $(`.labelEmail`).html("Email");
-        $(`.requestEmail`).attr(`placeholder`, `Email`);
-        $(`.labelname`).html("Ad");
-        $(`.requestName`).attr(`placeholder`, `Ad`);
-        $(`.labelphone`).html("Telefon");
-        $(`.phone`).attr(`placeholder`, `Əlaqə nömrəsi`);
-        $(`.labelphone2`).html("WhatsApp nömrə");
-        $(`.phone2`).attr(`placeholder`, `Əlaqə nömrəsi`);
-        $(`.labeldescription`).html("Açıqlama");
-        $(`.labeldate`).html('Tarix');
+
+        var $header = "Связаться с нами"
+        var adr = "Адрес"
+        var email = "Эл. почт"
+        var phone = "Телефон"
+        $(`#contactheader`).html(`Контакт`);
+        $(`#labellast`).html("Фамилия");
+        $(`#lastName`).attr(`placeholder`, `Фамилия`);
+        $(`#labelEmail`).html("Электронная почта");
+        $(`#requestEmail`).attr(`placeholder`, `Электронная почта`);
+        $(`#labelname`).html("Имя");
+        $(`#requestName`).attr(`placeholder`, `Имя`);
+        $(`#labelphone`).html("Телефон");
+        $(`#phone`).attr(`placeholder`, `Контактный номер`);
+        $(`#labelphone2`).html("Номер WhatsApp");
+        $(`#phone2`).attr(`placeholder`, `Контактный номер`);
+        $(`#labeldescription`).html("Oписание");
+        $(`#labeltime`).html('Дата');
+        $(`#havewp`).html('WhatsApp?');
+        $(`#labelonline`).html('Онлайн?');
+        $(`#labelconsulted`).html('Kонсультируемый?');
+        $(`#labelstcont`).html('Живая страна');
+        $(`#labelcont`).html('Cтрана');
+        $(`#labeldirection`).html('Направление');
+        $(`#requestSubmit`).html('Послать');
+        $(`.yes`).html('Да');
+        $(`.no`).html('Нет');
+
+        $(`.contactheader`).html(`Контакт`);
+        $(`.labellast`).html("Фамилия");
+        $(`.lastName`).attr(`placeholder`, `Фамилия`);
+        $(`.labelEmail`).html("Электронная почта");
+        $(`.requestEmail`).attr(`placeholder`, `Электронная почта`);
+        $(`.labelname`).html("Имя");
+        $(`.requestName`).attr(`placeholder`, `Имя`);
+        $(`.labelphone`).html("Телефон");
+        $(`.phone`).attr(`placeholder`, `Контактный номер`);
+        $(`.labelphone2`).html("Номер WhatsApp");
+        $(`.phone2`).attr(`placeholder`, `Контактный номер`);
+        $(`.labeldescription`).html("Oписание");
+        $(`.labeltime`).html('Дата');
         $(`.havewp`).html('WhatsApp?');
-        $(`.labelonline`).html('Onlayn?');
-        $(`.labelconsulted`).html('Konsultasiya?');
-        $(`.labelstcont`).html('Yaşadığınız ölkə');
-        $(`.labelcont`).html('Ölkə');
-        $(`.labeldirection`).html('Istiqamət');
-        $(`.requestSubmit`).html('Göndər');
+        $(`.labelonline`).html('Онлайн?');
+        $(`.labelconsulted`).html('Kонсультируемый?');
+        $(`.labelstcont`).html('Живая страна');
+        $(`.labelcont`).html('Cтрана');
+        $(`.labeldirection`).html('Направление');
+        $(`.requestSubmit`).html('Послать');
     }
     else if ($lang == 'EN') {
 
@@ -100,54 +103,54 @@
         $(`.requestSubmit`).html('Send message');
     }
     else {
-        var $header = "Связаться с нами"
-        var adr = "Адрес"
-        var email = "Эл. почт"
-        var phone = "Телефон"
-        $(`#contactheader`).html(`Контакт`);
-        $(`#labellast`).html("Фамилия");
-        $(`#lastName`).attr(`placeholder`, `Фамилия`);
-        $(`#labelEmail`).html("Электронная почта");
-        $(`#requestEmail`).attr(`placeholder`, `Электронная почта`);
-        $(`#labelname`).html("Имя");
-        $(`#requestName`).attr(`placeholder`, `Имя`);
-        $(`#labelphone`).html("Телефон");
-        $(`#phone`).attr(`placeholder`, `Контактный номер`);
-        $(`#labelphone2`).html("Номер WhatsApp");
-        $(`#phone2`).attr(`placeholder`, `Контактный номер`);
-        $(`#labeldescription`).html("Oписание");
-        $(`#labeltime`).html('Дата');
+     
+        var $header = "Bizimlə əlaqə"
+        var adr = "Ünvan"
+        var phone = "Telefon"
+        var email = "E-poçt"
+        $(`#contactheader`).html(`Əlaqə`);
+        $(`#labellast`).html("Soyad");
+        $(`#lastName`).attr(`placeholder`, `Soyad `);
+        $(`#labelEmail`).html("Email");
+        $(`#requestEmail`).attr(`placeholder`, `Email`);
+        $(`#labelname`).html("Ad");
+        $(`#requestName`).attr(`placeholder`, `Ad`);
+        $(`#labelphone`).html("Telefon");
+        $(`#phone`).attr(`placeholder`, `Əlaqə nömrəsi`);
+        $(`#labelphone2`).html("WhatsApp nömrə");
+        $(`#phone2`).attr(`placeholder`, `Əlaqə nömrəsi`);
+        $(`#labeldescription`).html("Açıqlama");
+        $(`#labeldate`).html('Tarix');
         $(`#havewp`).html('WhatsApp?');
-        $(`#labelonline`).html('Онлайн?');
-        $(`#labelconsulted`).html('Kонсультируемый?');
-        $(`#labelstcont`).html('Живая страна');
-        $(`#labelcont`).html('Cтрана');
-        $(`#labeldirection`).html('Направление');
-        $(`#requestSubmit`).html('Послать');
-        $(`.yes`).html('Да');
-        $(`.no`).html('Нет');
+        $(`#labelonline`).html('Onlayn?');
+        $(`#labelconsulted`).html('Konsultasiya?');
+        $(`#labelstcont`).html('Yaşadığınız ölkə');
+        $(`#labelcont`).html('Ölkə');
+        $(`#labeldirection`).html('Istiqamət');
+        $(`#requestSubmit`).html('Göndər');
+        $(`.yes`).html('Bəli');
+        $(`.no`).html('Xeyr');
 
-        $(`.contactheader`).html(`Контакт`);
-        $(`.labellast`).html("Фамилия");
-        $(`.lastName`).attr(`placeholder`, `Фамилия`);
-        $(`.labelEmail`).html("Электронная почта");
-        $(`.requestEmail`).attr(`placeholder`, `Электронная почта`);
-        $(`.labelname`).html("Имя");
-        $(`.requestName`).attr(`placeholder`, `Имя`);
-        $(`.labelphone`).html("Телефон");
-        $(`.phone`).attr(`placeholder`, `Контактный номер`);
-        $(`.labelphone2`).html("Номер WhatsApp");
-        $(`.phone2`).attr(`placeholder`, `Контактный номер`);
-        $(`.labeldescription`).html("Oписание");
-        $(`.labeltime`).html('Дата');
+        $(`.contactheader`).html(`Əlaqə`);
+        $(`.labellast`).html("Soyad");
+        $(`.lastName`).attr(`placeholder`, `Soyad `);
+        $(`.labelEmail`).html("Email");
+        $(`.requestEmail`).attr(`placeholder`, `Email`);
+        $(`.labelname`).html("Ad");
+        $(`.requestName`).attr(`placeholder`, `Ad`);
+        $(`.labelphone`).html("Telefon");
+        $(`.phone`).attr(`placeholder`, `Əlaqə nömrəsi`);
+        $(`.labelphone2`).html("WhatsApp nömrə");
+        $(`.phone2`).attr(`placeholder`, `Əlaqə nömrəsi`);
+        $(`.labeldescription`).html("Açıqlama");
+        $(`.labeldate`).html('Tarix');
         $(`.havewp`).html('WhatsApp?');
-        $(`.labelonline`).html('Онлайн?');
-        $(`.labelconsulted`).html('Kонсультируемый?');
-        $(`.labelstcont`).html('Живая страна');
-        $(`.labelcont`).html('Cтрана');
-        $(`.labeldirection`).html('Направление');
-        $(`.requestSubmit`).html('Послать');
-
+        $(`.labelonline`).html('Onlayn?');
+        $(`.labelconsulted`).html('Konsultasiya?');
+        $(`.labelstcont`).html('Yaşadığınız ölkə');
+        $(`.labelcont`).html('Ölkə');
+        $(`.labeldirection`).html('Istiqamət');
+        $(`.requestSubmit`).html('Göndər');
 
 
     }
@@ -195,7 +198,7 @@
     $(document).on('click', '#requestSubmit', async function () {
 
         $('form#contact_form .error').remove();
-        debugger;
+        
 
 
 
@@ -226,7 +229,6 @@
         var re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         //var fullPhone = "+" + phone_number.selectedCountryData.dialCode + " " + $phone.val();
         //var fullWhatsapp = "+" + wp_number.selectedCountryData.dialCode + " " + $phone2.val();
-        console.log(full_number, whatsapp);
         if ($email.val() == '' || !re.test($email.val())) {
             /*toastr.warning("Please provide valid Email!");*/
 
@@ -277,7 +279,6 @@
         if (isOnline == undefined) {
             isOnline = false;
         }
-        console.log($name.val());
         if (!hasError) {
             var url = "https://api.instudy.net/api/StudentRequest/AddStudentRequest";
             var reqContries = $reqCountry.val();
@@ -335,7 +336,7 @@
     $(document).on('click', '#requestSubmitMob', async function () {
 
         $('form#contact_formMob .error').remove();
-        debugger;
+        
 
 
 
@@ -365,7 +366,6 @@
         var re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         //var fullPhone = "+" + phone_number.selectedCountryData.dialCode + " " + $phone.val();
         //var fullWhatsapp = "+" + wp_number.selectedCountryData.dialCode + " " + $phone2.val();
-        console.log(full_number, whatsapp);
         if ($email.val() == '' || !re.test($email.val())) {
             /*toastr.warning("Please provide valid Email!");*/
 
@@ -416,7 +416,6 @@
         if (isOnline == undefined) {
             isOnline = false;
         }
-        console.log($name.val());
         if (!hasError) {
             var url = "https://api.instudy.net/api/StudentRequest/AddStudentRequest";
             var reqContries = $reqCountry.val();
