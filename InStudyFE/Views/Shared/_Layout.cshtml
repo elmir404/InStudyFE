@@ -355,7 +355,22 @@
                                         <img src="~/images/Untitled (1).png" alt="contact" style="width: 1.5rem; margin: 0 auto;" /> <span id="contactHeder" class="HeaderUnibuddyText">Contact</span>
                                     </a>
                                     <a title="Chat with students" style="cursor: pointer;" class="HeaderUnibuddyLinkContainer DesktopOnlyBlock Textlink" onclick="changeLang()">
-                                           <h3 style="color:black;" id="curLang" class="h1"></h3> </a> 
+                                          
+                                               @if (culture == "en")
+                                                {
+                                                     <h3 style="color:black;" id="curLang" class="h1">EN</h3>
+                                                }
+                                                else if (culture == "ru")
+                                                {
+                                                       <h3 style="color:black;" id="curLang" class="h1">RU</h3>
+                                                   
+                                                }
+                                                else
+                                                {
+                                                       <h3 style="color:black;" id="curLang" class="h1">AZ</h3>
+                                                }
+
+                                            </a> 
                                         
                                     <div id="LoggedInDropDown"  class="AccountDropDown">
                                        <ul class="Content">
@@ -603,14 +618,13 @@
         <script>
             $(document).ready(function () {
 	            var curLang = localStorage.getItem('lang');
-                var $lang = $('#curLang');
-               
-                if(curLang ==null  || curLang == undefined){
-                    localStorage.setItem('lang', 'AZ');
+                var $lang = $('#curLang').text().replace(/ /g,' ');
+                console.log($lang);
+                localStorage.setItem('lang', $lang);
 
-                }
+                
                 curLang = localStorage.getItem('lang');
-                $lang.html(curLang);
+                console.log(curLang);
 
 
             });

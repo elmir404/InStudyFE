@@ -3915,12 +3915,12 @@ form#SingleBottomSearch.Form .SearchButton .SearchIcon, form#SingleSearch.Form .
     width: 1rem
 }
 
-#FooterAboutUs .Header {
+/*#FooterAboutUs .Header {
     color: #05293c;
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.5rem
-}
+}*/
 
 #FooterAboutUs .List {
     list-style-type: none;
@@ -3932,11 +3932,11 @@ form#SingleBottomSearch.Form .SearchButton .SearchIcon, form#SingleSearch.Form .
         padding: 0
     }
 
-#FooterAboutUs .Link {
+/*#FooterAboutUs .Link {
     color: #05293c
-}
+}*/
 
-@media(min-width:769px)and (max-width:1024px) {
+/*@media(min-width:769px)and (max-width:1024px) {
     #FooterAboutUs .Header, #FooterAboutUs .Link, #FooterAboutUs .Link:hover {
         color: #fff
     }
@@ -3946,7 +3946,7 @@ form#SingleBottomSearch.Form .SearchButton .SearchIcon, form#SingleSearch.Form .
     #FooterAboutUs .Header, #FooterAboutUs .Link, #FooterAboutUs .Link:hover {
         color: #fff
     }
-}
+}*/
 
 #FooterOurPortals .Header {
     color: #05293c;

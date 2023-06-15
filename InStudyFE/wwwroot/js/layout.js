@@ -15,7 +15,7 @@
             $(`.articleslang`).html(`Статьи`);
             $(`.countrieslang`).html(`Страны`);
             $(`.contactlang`).html(`Свяжитесь с нами`);
-            $(`.followlang`).html(`Подписывайтесь на нас`);
+            $(`.followlang`).html(`Следуйте за нами`);
 
 
        

@@ -2,8 +2,23 @@
 
     var $blog = $('#FeaturedArticles');
     var $blogHeader = $('#FeaturedArticlesHeader');
+    
     var $topic = $('#topics');
+    var $topicHeader = $('#headerTopics');
     const $lang = localStorage.getItem('lang');
+    if ($lang == 'RU') {
+        $topicHeader.html("Темы статей")
+
+    }
+    else if ($lang == 'EN') {
+        $topicHeader.html("Article Topics")
+
+
+    } else {
+        $topicHeader.html("Məqalə Mövzuları")
+
+
+    }
     function getBlogs() {
         $.ajax({
             type: 'GET',
@@ -48,9 +63,9 @@
                         }
                         var image = `https://api.instudy.net/${value.blogFiles[0].path}`
                         
-                        if (i <= 3) {
+                        if (i <= 10) {
                             $topic.append(
-                                `                <li> <a id="topic-1" title="Start studying abroad" href=""/Blog/Detail?blogId=${value.id}">${name1}</a> </li>
+                                `                <li> <a id="topic-1" title="Start studying abroad" href="/Blog/Detail?blogId=${value.id}">${name1}</a> </li>
 
                          
                            
@@ -69,7 +84,7 @@
                         <source media="all and (min-width: 80.063em)" srcset="${image}">
                         <img src="${image}" height="320" width="213" alt="st to Apply for a"> 
                      </picture>
-                     <figcaption> <a href=""/Blog/Detail?blogId=${value.id}" title="Test to Apply"> ${name1} </a> </figcaption>
+                     <figcaption> <a href="/Blog/Detail?blogId=${value.id}" title="Test to Apply"> ${name1} </a> </figcaption>
                      <div class="ShortDescription">${description}</div>
                   </figure>
                </div>`

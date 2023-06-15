@@ -6,6 +6,9 @@
     #DetailsInformation #CountryOverview #countryList li a :hover {
         color: #6610f2 !important;
     }
+    .countryText:hover{
+        text-decoration:underline !important;
+    }
         </style>
 
 <div class="forlang">
@@ -41,7 +44,7 @@
                             @if (culture == "en")
                             {
                                 <li data-name="@country.EnName" data-studies="@country.Id">
-                                    <a href="/Country/Detail?countryId=@country.Id"
+                                    <a class="countryText" href="/Country/Detail?countryId=@country.Id"
                                title="@country.EnName"> @country.EnName </a>
                                 </li>
                             }
@@ -49,14 +52,14 @@
                             {
 
                                 <li data-name="@country.RuName" data-studies="@country.Id">
-                                <a href="/Country/Detail?countryId=@country.Id"
+                                <a class="countryText" href="/Country/Detail?countryId=@country.Id"
                                title="@country.RuName"> @country.RuName </a>
                             </li>
                             }
                             else
                             {
                                 <li data-name="@country.AzName" data-studies="@country.Id">
-                                    <a href="/Country/Detail?countryId=@country.Id"
+                                    <a class="countryText"  href="/Country/Detail?countryId=@country.Id"
                                title="@country.AzName"> @country.AzName </a>
                                 </li>
                             }

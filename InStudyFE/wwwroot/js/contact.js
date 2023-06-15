@@ -24,7 +24,7 @@
         $(`#labelonline`).html('Онлайн?');
         $(`#labelconsulted`).html('Хотите записаться на бесплатную консультацию?');
         $(`#labelstcont`).html('Живая страна');
-        $(`#labelcont`).html('Страна, в которой вы хотите учиться:');
+        $(`#labelcont`).html('Страна,в которой хотите учиться:');
         $(`#labeldirection`).html('Направление');
         $(`#requestSubmit`).html('Послать');
         $(`.yes`).html('Да');

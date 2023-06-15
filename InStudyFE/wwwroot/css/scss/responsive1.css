@@ -829,7 +829,7 @@
 }
 #FavouriteQuotes .Author .AuthorName{
     display:block;
-    font-size:1.6rem;
+    font-size:1.5rem;
     font-weight:400;
     line-height:1.6rem;
     vertical-align:top
@@ -2655,8 +2655,8 @@ body[data-wishlist-drawer]{
 #FooterAboutUs .List .ListItem{
     padding:0
 }
-#FooterAboutUs .Link{
-    color:#05293c
+#FooterAboutUs .Link {
+    color: #6C39C5;s
 }
 @media (min-width:769px)and (max-width:1024px){
     #FooterAboutUs .Header, #FooterAboutUs .Link, #FooterAboutUs .Link:hover {
@@ -3136,6 +3136,9 @@ body[data-wishlist-drawer]{
 @media (max-width:480px){
     .BannerContainer .BannerContent .Web{
         display:none
+    }
+    #Footer #FooterMainInner > div{
+        width:unset;
     }
 }
 @media (min-width:481px)and (max-width:768px){

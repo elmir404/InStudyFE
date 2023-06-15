@@ -57,8 +57,8 @@
             /*$country.empty();*/
 
 
-            if ($lang == 'AZ') {
-                var name = data.data?.azHeader
+            if ($lang == 'RU') {
+                var name = data.data?.ruHeader
 
 
             }
@@ -67,7 +67,7 @@
 
 
             } else {
-                var name = data.data?.ruHeader
+                var name = data.data?.azHeader
 
 
             }

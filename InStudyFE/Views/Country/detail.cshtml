@@ -313,6 +313,15 @@
                 margin-left: 10px;
             }
         }
+        .ms-parent{
+            width:100% !important;
+                   
+        }
+        .ms-choice{
+            height:38px;
+            border: 1px solid #ced4da;
+                    border-radius: 0.375rem;
+        }
 
     </style>
  }
@@ -1152,9 +1161,21 @@
                 <div class="faq-section-detail-accordion">
                     <div class="accordion accordion-div" id="accordionExample">
                         <div class="accordion-item show">
-                            <h2 class="accordion-header acc-head">
-                                Study
-                            </h2>
+                           
+                                @if (culture == "en")
+                                    {
+                                        <h2 class="accordion-header acc-head">Study</h2>
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                         <h2 class="accordion-header acc-head">Образование</h2>
+                                    }
+                                    else
+                                    {
+                                         <h2 class="accordion-header acc-head"> Təhsil</h2>
+                                    }
+                            
                             <div id="collaps" class="accordion-collapse collapse acc-content show">
                                 <div class="StudyIn accordion-body">
                                       @if (culture == "en")
@@ -1174,9 +1195,22 @@
                             </div>
                         </div>
                         <div class="accordion-item show">
-                            <h2 class="accordion-header acc-head" id="headingTw">
-                                Living
-                            </h2>
+                            
+                                
+                                  @if (culture == "en")
+                                    {
+                                     <h2 class="accordion-header acc-head"> Living</h2>
+                                    }
+                                    else if (culture == "ru")
+                                    {
+
+                                       <h2 class="accordion-header acc-head"> Живущий</h2>
+                                    }
+                                    else
+                                    {
+                                         <h2 class="accordion-header acc-head"> Yaşayış </h2>
+                                    }
+                           
                             <div id="collapseTwo" class="accordion-collapse acc-content collapse">
                                 <div class="Living accordion-body">
                                       @if (culture == "en")
@@ -1196,11 +1230,22 @@
                             </div>
                         </div>
                         <div class="accordion-item show">
-                            <h2 class="accordion-header acc-head" id="headingThree">
+                           
+                                  @if (culture == "en")
+                                    {
+                                      <h2 class="accordion-header acc-head"> About</h2>
+                                    }
+                                    else if (culture == "ru")
+                                    {
 
-                                About
+                                          <h2 class="accordion-header acc-head">О нас</h2>
+                                    }
+                                    else
+                                    {
+                                          <h2 class="accordion-header acc-head"> Haqqımızda</h2>
+                                    }
+                                
 
-                            </h2>
                             <div id="collapseThree" class="accordion-collapse acc-content collapse">
                                 <div class="About accordion-body"> 
                                       @if (culture == "en")
@@ -1220,11 +1265,23 @@
                             </div>
                         </div>
                         <div class="accordion-item show">
-                            <h2 class="accordion-header acc-head" id="headingThree">
+                          
+                                 @if (culture == "en")
+                                    {
+                                      <h2 class="accordion-header acc-head"> Universities</h2>
+                                    }
+                                    else if (culture == "ru")
+                                    {
 
-                                Universities
+                                         <h2 class="accordion-header acc-head"> Университет</h2>
+                                    }
+                                    else
+                                    {
+                                         <h2 class="accordion-header acc-head">  Universitetlər</h2>
+                                    }
+                                
 
-                            </h2>
+                            
                             <div id="collapseThree" class="accordion-collapse acc-content collapse">
                                 <div class="CountryStudies accordion-body">
                                     @foreach (var uni in Model.country.Universities)
@@ -1248,11 +1305,24 @@
                             </div>
                         </div>
                         <div class="accordion-item show">
-                            <h2 class="accordion-header acc-head" id="headingThree">
+                            
+                                  @if (culture == "en")
+                                    {
+                                       <h2 class="accordion-header acc-head">Student visa</h2>
+                                    }
+                                    else if (culture == "ru")
+                                    {
 
-                                Student visa
+                                          <h2 class="accordion-header acc-head">Студенческая виза</h2>
 
-                            </h2>
+                                    }
+                                    else
+                                    {
+                                           <h2 class="accordion-header acc-head">Tələbə vizası</h2>
+                                    }
+                                
+
+                           
                             <div id="collapseThree" class="accordion-collapse acc-content collapse">
                                 <div class="Visa accordion-body">
                                       @if (culture == "en")
@@ -1272,11 +1342,24 @@
                             </div>
                         </div>
                         <div class="accordion-item show">
-                            <h2 class="accordion-header acc-head" id="headingThree">
+                            
+                                 @if (culture == "en")
+                                    {
+                                        <h2 class="accordion-header acc-head">Documents</h2>
+                                    }
+                                    else if (culture == "ru")
+                                    {
 
-                                Work permit
+                                          <h2 class="accordion-header acc-head">Документы</h2>
 
-                            </h2>
+                                    }
+                                    else
+                                    {
+                                          <h2 class="accordion-header acc-head"> Sənədlər</h2>
+                                    }
+                               
+
+                            
                             <div id="collapseThree" class="accordion-collapse acc-content collapse">
                                 <div class="WorkPermitContent accordion-body">
                                       @if (culture == "en")
@@ -1296,9 +1379,21 @@
                             </div>
                         </div>
                         <div class="accordion-item show">
-                            <h2 class="accordion-header acc-head" id="headingThree">
+                           
+                                 @if (culture == "en")
+                                    {
+                                       <h2 class="accordion-header acc-head">Apply form</h2>
+                                    }
+                                    else if (culture == "ru")
+                                    {
 
-                                Apply Form
+                                          <h2 class="accordion-header acc-head">Обращение</h2>
+                                    }
+                                    else
+                                    {
+                                    <h2 class="accordion-header acc-head"> Müraciət</h2>
+                                    }
+                                
 
                             </h2>
                             <div id="collapseThree" class="accordion-collapse acc-content collapse">
@@ -1935,7 +2030,7 @@
                                 <div data-v-6e0e8e37="" class="OrganisationInformation">
                                    <div data-v-6e0e8e37="" class="NameLocation">
                                       <div data-v-6e0e8e37="" class="Name"></div>
-                                      <div data-v-6e0e8e37="" class="Location">@university.RuCity, @Model.country.EnName</div>
+                                      <div data-v-6e0e8e37="" class="Location">@university.RuCity, @Model.country.RuName</div>
                                    </div>
                                 </div>
                              </a>
@@ -1961,7 +2056,7 @@
                                 <div data-v-6e0e8e37="" class="OrganisationInformation">
                                    <div data-v-6e0e8e37="" class="NameLocation">
                                       <div data-v-6e0e8e37="" class="Name"></div>
-                                      <div data-v-6e0e8e37="" class="Location">@university.AzCity, @Model.country.EnName</div>
+                                      <div data-v-6e0e8e37="" class="Location">@university.AzCity, @Model.country.AzName</div>
                                    </div>
                                 </div>
                              </a>

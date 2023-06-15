@@ -205,19 +205,19 @@
                            <div id="homeHeader" class="HeadingTextBottom">
                                 @if (culture == "en")
                                 {
-                                    <h1 class="DegreeType"> @Model.header.EnBody </h1>
+                                    <h1 class="DegreeType">@Html.Raw(@Model.header.EnBody) </h1>
                                     <h2 class="HeadingMainTitle">@Model.header.EnHeader  </h2>
                                    
                                 }
                                 else if (culture == "ru")
                                 {
-                                    <h1 class="DegreeType"> @Model.header.RuBody </h1>
+                                    <h1 class="DegreeType"> @Html.Raw(@Model.header.RuBody) </h1>
                                     <h2 class="HeadingMainTitle">@Model.header.RuHeader  </h2>
                                      
                                 }
                                 else
                                 {
-                                    <h1 class="DegreeType"> @Model.header.AzBody </h1>
+                                    <h1 class="DegreeType">@Html.Raw(@Model.header.AzBody) </h1>
                                     <h2 class="HeadingMainTitle">@Model.header.AzHeader  </h2>
                                    
                                 }
