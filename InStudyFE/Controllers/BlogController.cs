@@ -3,6 +3,7 @@ using InStudyFE.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Diagnostics.Metrics;
 
 namespace InStudyFE.Controllers
 {
@@ -25,8 +26,17 @@ namespace InStudyFE.Controllers
             var manager = new BlogManager(_httpClientFactory);
 
             var blog = await manager.GetBlog(blogId);
+            var blogs = await manager.GetBlogs();
+            var model = new BlogDetailViewModel()
+            {
+                blog=blog,
+                blogs=blogs
 
-            return View(blog);
+
+
+
+            };
+            return View(model);
         }
        
     }

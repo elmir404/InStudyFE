@@ -21,6 +21,16 @@ namespace InStudyFE.Managers
             var blog = result.data as GetBlogDto;
 
             return blog;
+        } 
+        public async Task<List<GetBlogDto>> GetBlogs()
+        {
+            var client = _httpClientFactory.CreateClient("InStudy");
+            var response = await client.GetAsync("api/Blogs/GetActiveBlogs");
+            var responseString = await response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<BlogsViewModel>(responseString);
+            var blog = result.data as List<GetBlogDto>;
+
+            return blog;
         }
     }
 }

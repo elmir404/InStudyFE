@@ -64,7 +64,7 @@
     } else {
         $countryHeader.html(`Seçilmiş ölkələr`);
         $universityHeader.html(`Seçilmiş universitetlər`);
-        $disciplinesHeader.html(`Fənlər`);
+        $disciplinesHeader.html(`İstiqamətlər`);
         var $countryMore = `Daha çox ölkə`;
         $(".countryMore").html("Daha çox ölkə");
         var $countryFw = `Daha az ölkə`;

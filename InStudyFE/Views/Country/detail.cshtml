@@ -16,7 +16,7 @@
     <style>
         @@media(min-width: 1025px){
     #HeroContainer .HeroContent {
-                background: rgba(162, 234, 203,0.7);
+     background: rgba(162, 234, 203,0.7);
     }
 }
 @@media(min-width: 769px){
@@ -1111,11 +1111,43 @@
                                                             <div class="form-group col-sm-4">
                                                                 <label id="labelcont" for="yourcontry"> Country</label>
                                                                 <select multiple="multiple" class="requestCountry" id="requestCountry" required>
+                                                                      @foreach (var country in Model.countries)
+                                                                                    {
+                                                                                         @if (culture == "en")
+                                                                                            {
+                                                                                                <option value="@country.Id">@country.EnName</option>
+                                                                                            }
+                                                                                            else if (culture == "ru")
+                                                                                            {
+
+                                                                                                      <option value="@country.Id">@country.RuName</option>
+                                                                                            }
+                                                                                            else
+                                                                                            {
+                                                                                                    <option value="@country.Id">@country.AzName</option>
+                                                                                            }
+                                                                                    }
                                                                 </select>
                                                             </div>
                                                             <div class="form-group col-sm-4">
                                                                 <label id="labeldirection" for="direction">Direction</label>
                                                                 <select class="requestDirection" multiple="multiple" id="requestDirection" required>
+                                                                     @foreach (var direction in Model.directions)
+                                                                                    {
+                                                                                         @if (culture == "en")
+                                                                                            {
+                                                                                                <option value="@direction.Id">@direction.EnName</option>
+                                                                                            }
+                                                                                            else if (culture == "ru")
+                                                                                            {
+
+                                                                                                      <option value="@direction.Id">@direction.RuName</option>
+                                                                                            }
+                                                                                            else
+                                                                                            {
+                                                                                            <option value="@direction.Id">@direction.AzName</option>
+                                                                                            }
+                                                                                    }
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -1238,11 +1270,11 @@
                                     else if (culture == "ru")
                                     {
 
-                                          <h2 class="accordion-header acc-head">О нас</h2>
+                                          <h2 class="accordion-header acc-head">О</h2>
                                     }
                                     else
                                     {
-                                          <h2 class="accordion-header acc-head"> Haqqımızda</h2>
+                                          <h2 class="accordion-header acc-head"> Haqqında</h2>
                                     }
                                 
 
@@ -1462,8 +1494,10 @@
                                                                             <div id="resbox" class="row">
                                                                                 <div class="form-group col-md-4 requestDate">
                                                                                     <label class="labeltime" for="birthdaytime">Date (date and time):</label>
-                                                                                    <input type="datetime-local" class="birthdaytime" name="name" required>
-
+                                                                                    <input type="datetime-local" class="birthdaytime" id="requestDate" name="birthdaytime" required>
+                                                                                        <div id="dateValidation" class="invalid-feedback">
+													                                        Please choose a date.
+												                                        </div>
                                                                                 </div>
 
                                                                                <div class="form-group col-md-4">
@@ -1923,11 +1957,43 @@
                                                                             <div class="form-group col-sm-4">
                                                                                 <label class="labelcont" for="yourcontry"> Country</label>
                                                                                 <select multiple="multiple" id="requestCountryMob" class="requestCountry" required>
+                                                                                    @foreach (var country in Model.countries)
+                                                                                    {
+                                                                                         @if (culture == "en")
+                                                                                            {
+                                                                                                <option value="@country.Id">@country.EnName</option>
+                                                                                            }
+                                                                                            else if (culture == "ru")
+                                                                                            {
+
+                                                                                                      <option value="@country.Id">@country.RuName</option>
+                                                                                            }
+                                                                                            else
+                                                                                            {
+                                                                                                    <option value="@country.Id">@country.AzName</option>
+                                                                                            }
+                                                                                    }
                                                                                 </select>
                                                                             </div>
                                                                             <div class="form-group col-sm-4">
                                                                                 <label class="labeldirection" for="direction">Direction</label>
                                                                                 <select class="requestDirection" id="requestDirectionMob" multiple="multiple" required>
+                                                                                     @foreach (var direction in Model.directions)
+                                                                                    {
+                                                                                         @if (culture == "en")
+                                                                                            {
+                                                                                                <option value="@direction.Id">@direction.EnName</option>
+                                                                                            }
+                                                                                            else if (culture == "ru")
+                                                                                            {
+
+                                                                                                      <option value="@direction.Id">@direction.RuName</option>
+                                                                                            }
+                                                                                            else
+                                                                                            {
+                                                                                            <option value="@direction.Id">@direction.AzName</option>
+                                                                                            }
+                                                                                    }
                                                                                 </select>
                                                                             </div>
                                                                         </div>
@@ -2160,120 +2226,122 @@
         <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
 	<script>
 		const $lang = localStorage.getItem('lang');
-		$.ajax({
-			type: 'GET',
-			headers: {
-				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': '*',
+		//$.ajax({
+		//	type: 'GET',
+		//	headers: {
+		//		'Content-Type': 'application/json',
+		//		'Access-Control-Allow-Origin': '*',
 
-			},
-			url: `https://api.instudy.net/api/Program/GetPrograms`,
+		//	},
+		//	url: `https://api.instudy.net/api/Program/GetPrograms`,
 
-			success: function (data) {
-				var html = [];
-				$.each(
-					data.data, function (i, value) {
-						  if ($lang == 'RU') {
-                              var name = value?.ruName;
+		//	success: function (data) {
+		//		var html = [];
+		//		$.each(
+		//			data.data, function (i, value) {
+		//				  if ($lang == 'RU') {
+  //                            var name = value?.ruName;
 
-                        }
-                        else if ($lang == 'EN') {
-                            var name = value?.enName
+  //                      }
+  //                      else if ($lang == 'EN') {
+  //                          var name = value?.enName
 
-                        } else {
-                            var name = value?.azName
+  //                      } else {
+  //                          var name = value?.azName
                             
 
-                        }
-						html.push(
-							`
-																			<option value="${value.id}">${name}</option>
+  //                      }
+		//				html.push(
+		//					`
+		//																	<option value="${value.id}">${name}</option>
 
-																		 `
-						)
+		//																 `
+		//				)
 
-					}
-				)
-				$('.program').html(html.join('')).multipleSelect({position: 'top'});
-			}
+		//			}
+		//		)
+		//		$('.program').html(html.join('')).multipleSelect({position: 'top'});
+		//	}
 
-		});
-		$.ajax({
-			type: 'GET',
-			headers: {
-				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': '*',
+		//});
+        $('.program').multipleSelect({position: 'top'});
+		//$.ajax({
+		//	type: 'GET',
+		//	headers: {
+		//		'Content-Type': 'application/json',
+		//		'Access-Control-Allow-Origin': '*',
 
-			},
-			url: `https://api.instudy.net/api/Country/GetCountriesIdName`,
+		//	},
+		//	url: `https://api.instudy.net/api/Country/GetCountriesIdName`,
 
-			success: function (data) {
-				var html = [];
-				$.each(
-					data.data, function (i, value) {
-						  if ($lang == 'RU') {
-                             var name = value?.ruName;
-                        }
-                        else if ($lang == 'EN') {
-                            var name = value?.enName
+		//	success: function (data) {
+		//		var html = [];
+		//		$.each(
+		//			data.data, function (i, value) {
+		//				  if ($lang == 'RU') {
+  //                           var name = value?.ruName;
+  //                      }
+  //                      else if ($lang == 'EN') {
+  //                          var name = value?.enName
 
-                        } else {
-                            var name = value?.azName
+  //                      } else {
+  //                          var name = value?.azName
                            
 
-                        }
-						html.push(
-							`
-																			<option value="${value.id}">${name}</option>
+  //                      }
+		//				html.push(
+		//					`
+		//																	<option value="${value.id}">${name}</option>
 
-																		 `
-						)
+		//																 `
+		//				)
 
-						$('.requestStudentCountry').append(`<option value="${value.id}">${value.enName}</option>`);
-					}
-				)
-				$('.requestCountry').html(html.join('')).multipleSelect({position: 'top'});
-			}
+		//				$('.requestStudentCountry').append(`<option value="${value.id}">${value.enName}</option>`);
+		//			}
+		//		)
+				
+		//	}
 
-		});
+		//});
+        $('.requestCountry').multipleSelect({position: 'top'});
+		//$.ajax({
+		//	type: 'GET',
+		//	headers: {
+		//		'Content-Type': 'application/json',
+		//		'Access-Control-Allow-Origin': '*',
 
-		$.ajax({
-			type: 'GET',
-			headers: {
-				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': '*',
+		//	},
+  //          url: `https://api.instudy.net/api/Direction/GetActiveDirections`,
 
-			},
-            url: `https://api.instudy.net/api/Direction/GetActiveDirections`,
+		//	success: function (data) {
+		//		var html = [];
+		//		$.each(
+		//			data.data, function (i, value) {
+		//				  if ($lang == 'RU') {
+  //                           var name = value?.ruName;
+  //                      }
+  //                      else if ($lang == 'EN') {
+  //                          var name = value?.enName
 
-			success: function (data) {
-				var html = [];
-				$.each(
-					data.data, function (i, value) {
-						  if ($lang == 'RU') {
-                             var name = value?.ruName;
-                        }
-                        else if ($lang == 'EN') {
-                            var name = value?.enName
-
-                        } else {
+  //                      } else {
                            
-                            var name = value?.azName
+  //                          var name = value?.azName
 
-                        }
-						html.push(
-							`
-																			<option value="${value.id}">${name}</option>
+  //                      }
+		//				html.push(
+		//					`
+		//																	<option value="${value.id}">${name}</option>
 
-																		 `
-						)
+		//																 `
+		//				)
 
-					}
-				)
-				$('.requestDirection').html(html.join('')).multipleSelect({position: 'top'});
-			}
+		//			}
+		//		)
+				
+		//	}
 
-		});
+		//});
+        $('.requestDirection').multipleSelect({position: 'top'});
 	</script>
     <script>
          function searchProgramCon(name) {

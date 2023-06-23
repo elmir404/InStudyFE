@@ -105,6 +105,11 @@
             list-style-type: disc;
         }
 
+        .KeyFactsTitle{
+            font-weight:900 !important;
+
+
+        }
         
     </style>
 
@@ -156,7 +161,7 @@
                                     <div data-module="Study:study_key_facts" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_KeyFacts_KeyFacts">
                                         <section>
                                             <div id="StudyKeyFacts">
-                                                <h2 class="KeyFactsTitle">@item.EnHeader</h2>
+                                                <h1 class="KeyFactsTitle">@item.EnHeader</h1>
                                                 <article class="FactItem">
                                                     <div>
                                                             @Html.Raw(@item.EnDescription)
@@ -180,7 +185,7 @@
                                     <div data-module="Study:study_key_facts" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_KeyFacts_KeyFacts">
                                         <section>
                                             <div id="StudyKeyFacts">
-                                                <h2 class="KeyFactsTitle">@item.RuHeader</h2>
+                                                <h1 class="KeyFactsTitle">@item.RuHeader</h1>
                                                 <article class="FactItem">
                                                     <div>
                                                         @Html.Raw(@item.RuDescription)
@@ -203,7 +208,7 @@
                                     <div data-module="Study:study_key_facts" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_KeyFacts_KeyFacts">
                                         <section>
                                             <div id="StudyKeyFacts">
-                                                <h2 class="KeyFactsTitle">@item.AzHeader</h2>
+                                                <h1 class="KeyFactsTitle">@item.AzHeader</h1>
                                                 <article class="FactItem">
                                                     <div>
                                                       @Html.Raw(@item.AzDescription)
@@ -228,7 +233,7 @@
                                     <div data-module="Study:study_key_facts" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_KeyFacts_KeyFacts">
                                         <section>
                                             <div id="StudyKeyFacts">
-                                                <h2 class="KeyFactsTitle">@item.EnHeader</h2>
+                                                <h1 class="KeyFactsTitle">@item.EnHeader</h1>
                                                 <article class="FactItem">
                                                     <div>
                                                         @Html.Raw(@item.EnDescription)
@@ -252,7 +257,7 @@
                                     <div data-module="Study:study_key_facts" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_KeyFacts_KeyFacts">
                                         <section>
                                             <div id="StudyKeyFacts">
-                                                <h2 class="KeyFactsTitle">@item.RuHeader</h2>
+                                                <h1 class="KeyFactsTitle">@item.RuHeader</h1>
                                                 <article class="FactItem">
                                                     <div>
                                                         @Html.Raw(@item.RuDescription)
@@ -275,7 +280,7 @@
                                     <div data-module="Study:study_key_facts" class="Module StudyPortals_Shared_Modules_Study_DetailedInformation_KeyFacts_KeyFacts">
                                         <section>
                                             <div id="StudyKeyFacts">
-                                                <h2 class="KeyFactsTitle">@item.AzHeader</h2>
+                                                <h1 class="KeyFactsTitle">@item.AzHeader</h1>
                                                 <article class="FactItem">
                                                     <div>
                                                       @Html.Raw(@item.AzDescription)
@@ -303,7 +308,7 @@
                                     @if (culture == "en")
                                     {
                                         <button type="button" class="ContentButton js-contentButtons key_facts is-active" id="value@{@item.Id}" onclick="swith(`value@{
-                                    @item.Id}`)"> @item.EnHeader </button>
+                                            @item.Id}`)"> @item.EnHeader </button>
                                     }
                                     else if (culture == "ru")
                                     {
@@ -315,7 +320,7 @@
                                     else
                                     {
                                         <button type="button" class="ContentButton js-contentButtons key_facts is-active" id="value@{
-                                            @item.Id
+                                                    @item.Id
 }" onclick="swith(`value@{@item.Id}`)">
                                             @item.AzHeader
                                         </button>
@@ -325,16 +330,16 @@
                                     @if (culture == "en")
                                     {
                                         <button type="button" class="ContentButton js-contentButtons key_facts" id="value@{
-                                    @item.Id
+                                            @item.Id
 }" onclick="swith(`value@{@item.Id}`)"> @item.EnHeader </button>
                                     }
                                     else if (culture == "ru")
                                     {
 
                                         <button type="button" class="ContentButton js-contentButtons key_facts" id="value@{
-                                        @item.Id
+                                                @item.Id
 }" onclick="swith(`value@{
-                                        @item.Id
+                                                @item.Id
 }`)">
                                             @item.RuHeader
                                         </button>
@@ -342,9 +347,9 @@
                                     else
                                     {
                                         <button type="button" class="ContentButton js-contentButtons key_facts" id="value@{
-                                            @item.Id
+                                                    @item.Id
 }" onclick="swith(`value@{
-                                            @item.Id
+                                                    @item.Id
 }`)">
                                             @item.AzHeader
                                         </button>

@@ -7,15 +7,15 @@
     var $topicHeader = $('#headerTopics');
     const $lang = localStorage.getItem('lang');
     if ($lang == 'RU') {
-        $topicHeader.html("Темы статей")
+        $topicHeader.html("Другие Cтатьи")
 
     }
     else if ($lang == 'EN') {
-        $topicHeader.html("Article Topics")
+        $topicHeader.html("Other Articles")
 
 
     } else {
-        $topicHeader.html("Məqalə Mövzuları")
+        $topicHeader.html("Digər Məqalələr")
 
 
     }
@@ -29,15 +29,15 @@
 
             success: function (data) {
                 if ($lang == 'RU') {
-                    var name = "Интересные статьи";
+                    var name = "Cтатьи";
 
                 }
                 else if ($lang == 'EN') {
-                    var name = "Interesting Articles"
+                    var name = "Articles"
                     
 
                 } else {
-                    var name = "Maraqlı Məqalələr"
+                    var name = "Məqalələr"
                   
 
                 }
@@ -65,9 +65,9 @@
                         
                         if (i <= 10) {
                             $topic.append(
-                                `                <li> <a id="topic-1" title="Start studying abroad" href="/Blog/Detail?blogId=${value.id}">${name1}</a> </li>
+                                `               
 
-                         
+                                   <li> <a href="/Blog/Detail?blogId=${value.id}"> ${name1}</a> </li>
                            
                               
                                `

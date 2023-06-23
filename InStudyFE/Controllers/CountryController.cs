@@ -1,4 +1,5 @@
-﻿using InStudyFE.Models;
+﻿using InStudyFE.Managers;
+using InStudyFE.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -32,13 +33,17 @@ namespace InStudyFE.Controllers
             var client = _httpClientFactory.CreateClient("InStudy");
 
             var country = await GetCountries(client,countryId);
+            var manager = new UniversityManager(_httpClientFactory);
+            var countries = await manager.GetActiveCountries();
 
-          
+            var directions = await manager.GetDirections();
             //await Task.WhenAll(country);
             var model = new CountryViewModel()
             {
                 country = country,
-                university = new List<GetUniversityDto>()
+                university = new List<GetUniversityDto>(),
+                countries=countries,
+                directions=directions
                
 
 

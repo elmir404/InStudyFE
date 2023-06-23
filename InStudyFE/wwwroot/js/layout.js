@@ -47,7 +47,7 @@
             $(`#goStudyHeader`).html(`Müraciət üçün məsləhətlər`);
             $(`#programInput1`).attr(`placeholder`, `Təhsil Pilləsi`);
             $(`#countryInput`).attr(`placeholder`, `Ölkə`);
-            $(`#directionInput`).attr(`placeholder`, `Fənlər`);
+            $(`#directionInput`).attr(`placeholder`, `İstiqamətlər`);
             $(`#exploreHeader`).html(`Araşdırın`);
             $(`#decideContent`).html(`Müraciət`);
             $(`#goStudyHeader`).html(`Təhsil al`);

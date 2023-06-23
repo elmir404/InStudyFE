@@ -3,6 +3,121 @@
         #galactus{
             background-color:#EDF3F6;
         }
+
+        body #galactus .WrappedContent {
+            margin: 0 auto;
+            max-width: 1188px;
+        }
+
+        #galactus .no-vertical-padding {
+            padding-bottom: 0 !important;
+            padding-top: 0 !important;
+        }
+
+        #galactus .col1, #galactus .col2, #galactus .col2-left, #galactus .col2-right {
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+        }
+
+        #galactus .col1, #galactus .col2, #galactus .col2-left, #galactus .col2-right, #galactus .nav-bar:after {
+            clear: both;
+        }
+       @@media (min-width: 1025px){
+            body #galactus .NarrowWrapper {
+                margin: 3rem auto 0;
+            }}
+        body #galactus .NarrowWrapper {
+            background-color: #fff;
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 0;
+        }
+@@media (min-width: 1025px){
+#SubdisciplinesList {
+    padding: 4rem 6rem;
+    margin-bottom: 15px;
+}}
+
+
+
+        #SubdisciplinesList .Specialisations {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.5rem;
+            margin: 0 0 2rem;
+        }
+
+        body h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 2rem;
+        }
+
+        body h1, body h2, body h3, body h4, body h5, body h6 {
+            color: #05293c;
+            font-weight: 400;
+            margin: 0 0 0.25rem;
+        }
+        @@media (min-width: 1025px){
+#SubdisciplinesList .SubDisciplinesList {
+    column-count: 3;
+}}
+#SubdisciplinesList .SubDisciplinesList {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+            #SubdisciplinesList .SubDisciplinesList li {
+                /* margin: 1rem 0 0; */
+            }
+
+        body ul li:first-child {
+            margin-top: 0;
+        }
+
+        body ul li:first-child {
+            margin-top: 0;
+        }
+
+        body ul li:first-child {
+            margin-top: 0;
+        }
+
+        body ul li {
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        #SubdisciplinesList .SubDisciplinesList li a {
+            color: #05293c;
+        }
+
+            #SubdisciplinesList .SubDisciplinesList li a:hover {
+                text-decoration: underline !important;
+            }
+
+        a:-webkit-any-link {
+            color: -webkit-link;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        @@media (min-width: 1025px){
+       #SubdisciplinesList {
+         padding: 4rem 6rem;
+         margin-bottom: 15px;
+        }}
+
+        #SubdisciplinesList {
+            padding: 1rem 3rem;
+        }
+        body a {
+            color: #1e8558;
+            text-decoration: none;
+        }
     </style>
 }
 
@@ -12,7 +127,7 @@
       <div data-module="" class="Module StudyPortals_Shared_Modules_Article_Overview_Overview">
          <article id="ArticleOverview" data-url="/Blog/Index" data-tags="mastersportal" data-type="General" data-topics="1|Start studying abroad||2|Where to study||3|Decide what to study||4|Choose a university||6|After you get accepted||7|Costs and funding||9|Student experiences||10|How to apply to a university">
             <h1 id="ArticleOverviewTitle"></h1>
-            <h2 id="FeaturedArticlesHeader"></h2>
+            <h1 id="FeaturedArticlesHeader"></h1>
             <div id="FeaturedArticles" class="ArticleSection">
                
               
@@ -22,7 +137,7 @@
       </div>
       
    </div>
-   <div class="colblock ModuleDivider">
+   @*<div class="colblock ModuleDivider">
       <div data-module="" class="Module StudyPortals_Shared_Modules_Article_Topics_Topics">
          <aside id="ArticleTopics">
             <h3 id="headerTopics"></h3>
@@ -36,9 +151,38 @@
      
      
      
-   </div>
+   </div>*@
 </section>
+        <section class="col1 WrappedContent no-vertical-padding">
+      
+            <div class="NarrowWrapper">
 
+                <div data-module="" class="Module StudyPortals_Shared_Modules_SubdisciplinesList_SubdisciplinesList">
+                    <section id="SubdisciplinesList">
+
+                        <h3 id="headerTopics" class="Specialisations"> </h3>
+
+
+
+
+
+
+                        <ul id="topics" class="SubDisciplinesList">
+                           
+                                   
+                               
+                               
+                                    
+                          
+                        </ul>
+
+                    </section>
+                </div>
+      
+      
+          </div>
+        
+    </section>
 </div>
   @section Scripts{
     <script src="~/js/blog.js" defer></script>

@@ -1452,7 +1452,7 @@ button.Textlink, input[type=button].Textlink, input[type=reset].Textlink, input[
 
 @media(min-width:1025px) {
     #Hero {
-        min-height: 39.5rem;
+        min-height: 26.5rem;
         position: relative
     }
 
@@ -1846,6 +1846,13 @@ button.Textlink, input[type=button].Textlink, input[type=reset].Textlink, input[
 @media(max-width:480px) {
     #Hero .ChampionButton:hover {
         background-color: #f95c39
+    }
+    #Hero .HeroImageContainer {
+       
+        height: unset !important;
+    }
+    #SubdisciplinesList {
+        padding: 1rem 2rem;
     }
 }
 

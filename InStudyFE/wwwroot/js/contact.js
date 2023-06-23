@@ -7,6 +7,7 @@
         var adr = "Адрес"
         var email = "Эл. почт"
         var phone = "Телефон"
+        var message ="Сообщение успешно отправлено!"
         $(`#contactheader`).html(`Контакт`);
         $(`#labellast`).html("Фамилия");
         $(`#lastName`).attr(`placeholder`, `Фамилия`);
@@ -53,7 +54,7 @@
 
     }
     else if ($lang == 'EN') {
-
+        var message = "Message send successfully!"
         var $header = "Contact us"
         var adr = "Address"
         var email = "Email"
@@ -103,6 +104,7 @@
         $(`.requestSubmit`).html('Send message');
     }
     else {
+        var message = "Mesaj uğurla göndərildi!"
         var $header = "Bizimlə əlaqə"
         var adr = "Ünvan"
         var phone = "Telefon"
@@ -146,9 +148,9 @@
         $(`.havewp`).html('WhatsApp?');
         $(`.labelonline`).html('Onlayn?');
         $(`.labelconsulted`).html('Ödənişsiz konsultasiyaya yazılmaq istəyirsiniz?');
-        $(`.labelstcont`).html('Yaşadığınız ölkə');
-        $(`.labelcont`).html('Təhsil almaq istədiyiniz ölkə:ə');
-        $(`.labeldirection`).html('Istiqamət');
+        $(`.labelstcont`).html('Yaşadığınız ölkə:');
+        $(`.labelcont`).html('Təhsil almaq istədiyiniz ölkə:');
+        $(`.labeldirection`).html('İstiqamət:');
         $(`.requestSubmit`).html('Göndər');
         
       
@@ -187,8 +189,43 @@
     //    hiddenInput: "full",
     //    utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
     //})
+    $(document).on('change', '#requestEmail', function () {
 
+        $('#emailNameValidation').hide();
+    });
+    $(document).on('change', '#requestDate', function () {
 
+        $('#dateValidation').hide();
+    });
+    $(document).on('change', '#requestName', function () {
+
+        $('#nameValidation').hide();
+    });
+    $(document).on('change', '#lastName', function () {
+
+        $('#lastNameValidation').hide();
+    });
+    $(document).on('change', '#phone', function () {
+
+        $('#phnoneValidation').hide();
+    });
+    $(document).on('change', '#requestMessage', function () {
+
+        $('#messageValidation').hide();
+    });
+    $(document).on('change', '#requestStudentCountry', function () {
+
+        $('#scValidation').hide();
+    });
+    $(document).on('change', '#requestCountry', function () {
+
+        $('#cValidation').hide();
+    });
+    $(document).on('change', '#requestDirection', function () {
+
+        $('#rdValidation').hide();
+    });
+    
    
     $(document).on('click', '#requestSubmit', async function () {
 
@@ -229,7 +266,11 @@
         /*toastr.warning("Please provide valid Email!");*/
         $('#emailNameValidation').show();
         hasError = true;
-    }
+        }
+        if (isOnline) {
+            $('#dateValidation').show();
+            hasError = true;
+        }
 
     if ($name.val() == '') {
         //toastr.warning("Please provide Your name!");
@@ -307,7 +348,7 @@
             .done(function (response) {
                 // Make sure that the formMessages div has the 'success' class.
                 if (response.success == true) {
-                    toastr.success("Message send successfully!");
+                    toastr.success(message);
                     setTimeout(() => {
                         location.reload();
                     }, 5000)

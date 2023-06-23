@@ -206,6 +206,36 @@
             height:9rem;
         }
 
+      
+         @@media(max-width:769px){
+                .Module article{
+            padding: 2rem 3rem !important;
+               }
+
+            
+
+           
+           
+           }
+
+            .ShortDescription p {
+                text-align: unset !important;
+            }
+            .ShortDescription div {
+                text-align: unset !important;
+            } 
+            .Module p {
+                text-align: unset !important;
+            }
+            .Module div {
+                text-align: unset !important;
+            }
+            .ms-choice>span{
+                    top:6px !important;
+            }
+            .toast-success {
+          background-color: #A2EACB !important;
+}
        </style>
 
       @RenderSection("Css",false)  
@@ -605,9 +635,9 @@
             "preventDuplicates": false,
             "onclick": null,
             "showDuration": "500",
-            "hideDuration": "10000",
-            "timeOut": "50000",
-            "extendedTimeOut": "10000",
+            "hideDuration": "500",
+            "timeOut": "500",
+            "extendedTimeOut": "500",
             "showEasing": "swing",
             "hideEasing": "linear",
             "showMethod": "fadeIn",

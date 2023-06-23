@@ -3,8 +3,13 @@
 
      <link rel="stylesheet" href="~/css/scss/search.css"/>
      <link rel="stylesheet" href="~/css/scss/university1.css"/>
+     <style>
+         body ul .page-item:first-child {
+               margin-top: 0.5rem !important;
+            }
+     </style>
 }
-@model  List<GetUniversityDto>
+@model  UniSearchResponse
 @{
     var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
 }
@@ -43,7 +48,7 @@
                               </div>
                            </section>
                          
-                           <section class="DurationFilterWrapper is-collapsed">
+                         @*  <section class="DurationFilterWrapper is-collapsed">
                               <header onclick="showMenu(this)" class="RefineSectionHeading">
                                  <i class="lnr-clock3 FilterIcon"></i>
                                  <div class="Title durationlang"> Duration </div>
@@ -51,8 +56,8 @@
                               </header>
                               <ul id="durationSearch" class="RefineContentOptionsList">
                                  
-                              </ul>
-                           </section>
+                              </ul> 
+                           </section>*@
                           
                            <section class="AttendanceFilterWrapper is-collapsed">
                               <header onclick="showMenu(this)" class="RefineSectionHeading">
@@ -405,10 +410,13 @@
                                                         <div>
                                                             <div data-v-71d9db58="" class="" identifier="account-page-programmes-recommendations">
                                                                 <div data-v-60a22860="" class="js-StudyProgrammes" data-v-71d9db58="">
-                                                                    <div data-v-60a22860="" id="searchContent" class="StudyCardGrid js-StudyCards">
-                                                                        @if(Model.Count>0)
+                                                                   <img src="~/images/animation2.gif" style="width:100%;display: none;" id="loading" alt="Loading..." />
+                                                                <div data-v-60a22860="" id="searchContent" class="StudyCardGrid js-StudyCards">
+                                                                      
+                                                                        @if(Model.value.Count>0)
                                                                        {
-                                                                           @foreach (var uni in Model)
+                                                                           
+                                                                           @foreach (var uni in Model.value)
                                                                         {
                                                                                                                  @if (culture == "en")
                                                                                 {
@@ -484,7 +492,8 @@
                                                                                 }
                                                                            
                                                                         }
-                                                                      
+                                                                          
+                                                                        
                                                                        }
                                                                        else{
                                                                            @if (culture == "en")
@@ -504,7 +513,23 @@
                                                                         
                                                                       
                                                                     </div>
-                                                                </div>
+                                                                    <nav class="ml-3" aria-label="...">
+                                                                          <ul id="pagination" class="pagination">
+                                                                            
+                                                                             @for (var i = 1; i <=Model.PageCount; i++)
+                                                                            {
+                                                                                @if(i==1){
+                                                                                        <li class="page-item active"><a  class="page-link">@i</a></li>
+                                                                                }
+                                                                                else{
+                                                                                        <li class="page-item"><a  class="page-link">@i</a></li>
+                                                                                }
+                                                                                
+                                                                            }
+                                                                           
+                                                                          </ul>
+                                                                    </nav>
+                                                              </div>
                                                             </div>
                                                         </div>
                                                     </div>

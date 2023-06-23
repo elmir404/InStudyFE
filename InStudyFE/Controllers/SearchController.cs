@@ -25,7 +25,7 @@ namespace InStudyFE.Controllers
 
             return View(uni);
          }
-        private async Task<List<GetUniversityDto>> SarchUnivrsity(HttpClient client, List<string>? program, List<string>? country, List<string>? faculty)
+        private async Task<UniSearchResponse> SarchUnivrsity(HttpClient client, List<string>? program, List<string>? country, List<string>? faculty)
         {
 
             MultipartFormDataContent form = new MultipartFormDataContent();
@@ -55,12 +55,12 @@ namespace InStudyFE.Controllers
             //form.Add(new StringContent(country), "CountryNames");
             //form.Add(new StringContent(faculty), "DirectionNames");
            
-            var response= await client.PostAsync("api/University/SearchUniversity?currentPage=1&pageSize=100",form);
-            Console.WriteLine(response);
+            var response= await client.PostAsync("api/University/SearchUniversity?currentPage=1&pageSize=20",form);
+            
             var responseString = await response.Content.ReadAsStringAsync();
-            Console.WriteLine(responseString);
+           
             var result = JsonConvert.DeserializeObject<SearchModel>(responseString);
-            var uni =result.data.value as List<GetUniversityDto>;
+            var uni =result.data as UniSearchResponse;
 
             return uni;
         }

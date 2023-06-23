@@ -1,6 +1,7 @@
 ﻿@{
     var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
 } 
+@model CountryViewModel
 @section Css{
 	<link rel="stylesheet" href="~/css/contact.css">
 <link rel="stylesheet"
@@ -59,27 +60,75 @@
 												<div class="form-group">
 												<label id="labelname"for="phone">Name</label>
 													<input type="text" class="form-control" name="name" id="requestName" placeholder="Name" required>
-													<div id="nameValidation" class="invalid-feedback">
-														Please type name.
-													</div>
+													@if (culture == "en")
+																{
+														   <div id="nameValidation" class="invalid-feedback">
+																			Please type name.
+																		</div>
+																}
+																else if (culture == "ru")
+																{
+                                                            <div id="nameValidation" class="invalid-feedback">
+																			Пожалуйста, введите имя.
+																		</div>
+																}
+																else
+																{
+                                                            <div id="nameValidation" class="invalid-feedback">
+																			Zəhmət olmasa adınızı yazın.
+																		</div>
+																}
+													
 												</div>
 											</div>
 										<div class="col-md-6 mb-2">
 												<div class="form-group">
 												<label id="labellast" for="phone">Surname</label>
 													<input type="text" class="form-control" name="lastname" id="lastName" placeholder="Lastname" required>
-													<div id="lastNameValidation" class="invalid-feedback">
-        Please type a last name.
-      </div>
+													
+	                                              @if (culture == "en")
+																{
+														   <div id="lastNameValidation" class="invalid-feedback">
+																		 Please type a last name.
+																		</div>
+																}
+																else if (culture == "ru")
+																{
+                                                            <div id="lastNameValidation" class="invalid-feedback">
+																			Пожалуйста, введите фамилию.
+																		</div>
+																}
+																else
+																{
+                                                            <div id="lastNameValidation" class="invalid-feedback">
+																			Zəhmət olmasa soyadınızı yazın.
+																		</div>
+																}
 												</div>
 											</div>
 										<div class="col-md-6 mb-2">
 											<div class="form-group">
 												<label id="labelEmail" for="phone">Email</label>
 													<input type="email" class="form-control" name="email" id="requestEmail" placeholder="Email" required>
-													<div id="emailNameValidation" class="invalid-feedback">
-														Please choose a email.
-													</div>
+													
+													@if (culture == "en")
+																{
+														   <div id="emailNameValidation" class="invalid-feedback">
+																		 Please type email.
+																		</div>
+																}
+																else if (culture == "ru")
+																{
+                                                            <div id="emailNameValidation" class="invalid-feedback">
+																			Пожалуйста, введите адрес электронной почты.
+																		</div>
+																}
+																else
+																{
+                                                            <div id="emailNameValidation" class="invalid-feedback">
+																			Zəhmət olmasa e-poçt yazın.
+																		</div>
+																}
 												</div>
 											</div>
 							
@@ -87,9 +136,25 @@
 												<div class="col-md-6 mb-2">
 												<label id="labelphone" for="phone">Phone</label>
 												<input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
-												<div id="phnoneValidation" class="invalid-feedback">
-        Please choose a phone number.
-      </div>
+										
+														  @if (culture == "en")
+																													{
+																											   <div id="phnoneValidation" class="invalid-feedback">
+														Please type phone number.
+																															</div>
+																													}
+																else if (culture == "ru")
+																{
+                                                            <div id="phnoneValidation" class="invalid-feedback">
+																			Пожалуйста, введите номер телефона.
+																		</div>
+																}
+																else
+																{
+                                                            <div id="phnoneValidation" class="invalid-feedback">
+																			Zəhmət olmasa telefon nömrəsini yazın.
+																		</div>
+																}
 
 											</div>
 											
@@ -98,9 +163,25 @@
 										<div class="form-group col-md-6" id="">
 											<label id="labeldescription" for="comment">Description:</label>
 												<textarea class="form-control overflow-auto" name="name" rows="3" id="requestMessage" required></textarea  >
-												<div id="messageValidation" class="invalid-feedback">
-													Please type a message.
-												</div>
+													  @if (culture == "en")
+																													{
+																											   <div id="messageValidation" class="invalid-feedback">
+														Please type a message.
+																															</div>
+																													}
+																else if (culture == "ru")
+																{
+                                                            <div id="messageValidation" class="invalid-feedback">
+																			Пожалуйста, введите сообщение.
+																		</div>
+																}
+																else
+																{
+                                                            <div id="messageValidation" class="invalid-feedback">
+																			Zəhmət olmasa mesaj yazın.
+																		</div>
+																}
+												
 										</div>
 					<div class="form-group col-md-6">
 						<label id="labelconsulted" for="consulted">Consulted</label>
@@ -121,9 +202,25 @@
 					                       	<div class="form-group col-md-4" >
 						                    <label id="labeltime" for="birthdaytime">Date (date and time):</label>
 						                    <input type="datetime-local" id="requestDate" name="birthdaytime" >
-					                        <div class="invalid-feedback">
-						                           Please choose date.
-					                           </div>
+					                       
+											     @if (culture == "en")
+																													{
+																											   <div id="dateValidation" class="invalid-feedback">
+														Please choose date.
+																															</div>
+																													}
+																else if (culture == "ru")
+																{
+                                                            <div id="dateValidation" class="invalid-feedback">
+																			ППожалуйста, выберите дату.
+																		</div>
+																}
+																else
+																{
+                                                            <div id="dateValidation" class="invalid-feedback">
+																			Zəhmət olmasa tarixi seçin.
+																		</div>
+																}
 				                                   	</div>
 					
 											<div class="form-group col-md-4">
@@ -578,27 +675,106 @@
 							</select>
                                     }
 											
-												<div id="scValidation" class="invalid-feedback">
-													Please choose a country.
-												</div>
+												
+												  @if (culture == "en")
+																													{
+																											   <div id="scValidation" class="invalid-feedback">
+														Please choose a country.
+																															</div>
+																													}
+																else if (culture == "ru")
+																{
+                                                            <div id="scValidation" class="invalid-feedback">
+														Пожалуйста, выберите страну.
+																		</div>
+																}
+																else
+																{
+													<div id="scValidation" class="invalid-feedback">
+																			Zəhmət olmasa ölkə seçin.
+																		</div>
+																}
 							</div>
 							<div class="form-group col-sm-4">
 						<label id="labelcont" for="yourcontry"> Country</label>
 											<select multiple="multiple"  id="requestCountry" style="width: 10em;height:20px;" required>
+												  @foreach (var country in Model.countries)
+                                                                                    {
+                                                                                         @if (culture == "en")
+                                                                                            {
+                                                                                                <option value="@country.Id">@country.EnName</option>
+                                                                                            }
+                                                                                            else if (culture == "ru")
+                                                                                            {
+
+                                                                                                      <option value="@country.Id">@country.RuName</option>
+                                                                                            }
+                                                                                            else
+                                                                                            {
+                                                                                                    <option value="@country.Id">@country.AzName</option>
+                                                                                            }
+                                                                                    }
 												
 							</select>
-								<div id="cValidation" class="invalid-feedback">
-        Please choose country.
-      </div>
+								 @if (culture == "en")
+																													{
+																											   <div id="cValidation" class="invalid-feedback">
+														Please choose a country.
+																															</div>
+																													}
+																else if (culture == "ru")
+																{
+													<div id="cValidation" class="invalid-feedback">
+														Пожалуйста, выберите страну.
+																		</div>
+																}
+																else
+																{
+                                                            <div id="cValidation" class="invalid-feedback">
+																			Zəhmət olmasa ölkə seçin.
+																		</div>
+																}
 							</div>
 							<div class="form-group col-sm-4">
 						<label id="labeldirection" for="direction">Direction</label>
 											<select multiple="multiple" id="requestDirection" style="width: 10em;height:20px;" required>
+												 @foreach (var direction in Model.directions)
+                                                                                    {
+                                                                                         @if (culture == "en")
+                                                                                            {
+                                                                                                <option value="@direction.Id">@direction.EnName</option>
+                                                                                            }
+                                                                                            else if (culture == "ru")
+                                                                                            {
+
+                                                                                                      <option value="@direction.Id">@direction.RuName</option>
+                                                                                            }
+                                                                                            else
+                                                                                            {
+                                                                                            <option value="@direction.Id">@direction.AzName</option>
+                                                                                            }
+                                                                                    }
 							
 						</select>
-												<div id="rdValidation" class="invalid-feedback">
-													Please choose direction.
-												</div>
+												
+												 @if (culture == "en")
+																													{
+																											   <div id="rdValidation" class="invalid-feedback">
+														Please choose direction.
+																															</div>
+																													}
+																else if (culture == "ru")
+																{
+													<div id="rdValidation" class="invalid-feedback">
+														Пожалуйста, выберите направление.
+																		</div>
+																}
+																else
+																{
+                                                            <div id="rdValidation" class="invalid-feedback">
+																			Zəhmət olmasa istiqamət seçin.
+																		</div>
+																}
 					</div>
 										</div>
 										<div class="col-md-12">
@@ -666,121 +842,123 @@
 
 	    const $lang = localStorage.getItem('lang');
 		
-		$.ajax({
-			type: 'GET',
-			headers: {
-				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': '*',
+		//$.ajax({
+		//	type: 'GET',
+		//	headers: {
+		//		'Content-Type': 'application/json',
+		//		'Access-Control-Allow-Origin': '*',
 
-			},
-			url: `https://api.instudy.net/api/Program/GetPrograms`,
+		//	},
+		//	url: `https://api.instudy.net/api/Program/GetPrograms`,
 
-			success: function (data) {
-				var html = [];
-				$.each(
-					data.data, function (i, value) {
-						   if ($lang == 'RU') {
-                            var name = value?.ruName;
+		//	success: function (data) {
+		//		var html = [];
+		//		$.each(
+		//			data.data, function (i, value) {
+		//				   if ($lang == 'RU') {
+  //                          var name = value?.ruName;
 
-                        }
-                        else if ($lang == 'EN') {
-                            var name = value?.enName
+  //                      }
+  //                      else if ($lang == 'EN') {
+  //                          var name = value?.enName
 
-                        } else {
-                            var name = value?.azName
+  //                      } else {
+  //                          var name = value?.azName
 
-                        }
-						html.push(
-							`
-																	<option value="${value.id}">${name}</option>
+  //                      }
+		//				html.push(
+		//					`
+		//															<option value="${value.id}">${name}</option>
 
-																 `
-						)
+		//														 `
+		//				)
 
-					}
-				)
-				$('#program').html(html.join('')).multipleSelect({position: 'top'});
-			}
+		//			}
+		//		)
+		//		$('#program').html(html.join('')).multipleSelect({position: 'top'});
+		//	}
 
-		});
-		$.ajax({
-			type: 'GET',
-			headers: {
-				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': '*',
+		//});
+		$('#program').multipleSelect({position: 'top'});
+		//$.ajax({
+		//	type: 'GET',
+		//	headers: {
+		//		'Content-Type': 'application/json',
+		//		'Access-Control-Allow-Origin': '*',
 
-			},
-			url: `https://api.instudy.net/api/Country/GetCountriesIdName`,
+		//	},
+		//	url: `https://api.instudy.net/api/Country/GetCountriesIdName`,
 
-			success: function (data) {
-				var html = [];
-				$.each(
-					data.data, function (i, value) {
-						   if ($lang == 'RU') {
-                            var name = value?.ruName;
-
-
-                        }
-                        else if ($lang == 'EN') {
-                            var name = value?.enName
-
-                        } else {
-                            var name = value?.azName
-
-                        }
-						html.push(
-							`
-																			<option value="${value.id}">${name}</option>
-
-																		 `
-						);
-
-						$('#requestStudentCountry').append(`<option value="${value.id}">${value.enName}</option>`);
-					}
-				)
-				$('#requestCountry').html(html.join('')).multipleSelect({position: 'top'});
-			}
-
-		});
-
-		$.ajax({
-			type: 'GET',
-			headers: {
-				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': '*',
-
-			},
-			url: `https://api.instudy.net/api/Direction/GetActiveDirections`,
-
-			success: function (data) {
-				var html = [];
-				$.each(
-					data.data, function (i, value) {
-						   if ($lang == 'RU') {
-                            var name = value?.ruName;
+		//	success: function (data) {
+		//		var html = [];
+		//		$.each(
+		//			data.data, function (i, value) {
+		//				   if ($lang == 'RU') {
+  //                          var name = value?.ruName;
 
 
-                        }
-                        else if ($lang == 'EN') {
-                            var name = value?.enName
+  //                      }
+  //                      else if ($lang == 'EN') {
+  //                          var name = value?.enName
 
-                        } else {
-                            var name = value?.azName
+  //                      } else {
+  //                          var name = value?.azName
 
-                        }
-						html.push(
-							`
-																	<option value="${value.id}">${name}</option>
+  //                      }
+		//				html.push(
+		//					`
+		//																	<option value="${value.id}">${name}</option>
 
-																 `
-						)
+		//																 `
+		//				);
 
-					}
-				)
-				$('#requestDirection').html(html.join('')).multipleSelect({position: 'top'});
-			}
+		//				$('#requestStudentCountry').append(`<option value="${value.id}">${value.enName}</option>`);
+		//			}
+		//		)
+		//		$('#requestCountry').html(html.join('')).multipleSelect({position: 'top'});
+		//	}
 
-		});
+		//});
+		$('#requestCountry').multipleSelect({position: 'top'});
+		//$.ajax({
+		//	type: 'GET',
+		//	headers: {
+		//		'Content-Type': 'application/json',
+		//		'Access-Control-Allow-Origin': '*',
+
+		//	},
+		//	url: `https://api.instudy.net/api/Direction/GetActiveDirections`,
+
+		//	success: function (data) {
+		//		var html = [];
+		//		$.each(
+		//			data.data, function (i, value) {
+		//				   if ($lang == 'RU') {
+  //                          var name = value?.ruName;
+
+
+  //                      }
+  //                      else if ($lang == 'EN') {
+  //                          var name = value?.enName
+
+  //                      } else {
+  //                          var name = value?.azName
+
+  //                      }
+		//				html.push(
+		//					`
+		//															<option value="${value.id}">${name}</option>
+
+		//														 `
+		//				)
+
+		//			}
+		//		)
+		//		$('#requestDirection').html(html.join('')).multipleSelect({position: 'top'});
+		//	}
+
+		//});
+		$('#requestDirection').multipleSelect({position: 'top'});
 	</script>
 	<script>
 		

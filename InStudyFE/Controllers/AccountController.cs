@@ -84,7 +84,7 @@ namespace InStudyFE.Controllers
                 //const string authenticationType = "Cookies";
                 //var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 //await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
-                return RedirectToAction("Index", "Home");
+                return Redirect("/Admin/About/AboutList");
             }
             ModelState.AddModelError("Error", "Invalid username or password!");
             return BadRequest();

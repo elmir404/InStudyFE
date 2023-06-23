@@ -1,4 +1,4 @@
-﻿@model GetBlogDto
+﻿@model BlogDetailViewModel
 @{
     var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
 }
@@ -25,15 +25,7 @@
 
 
 
-        #SubdisciplinesList {
-            padding: 1rem 0;
-        }
-
-        @@media (min-width: 1025px) {
-            #SubdisciplinesList {
-                padding: 4rem 4rem;
-            }
-        }
+      
 
 
         #SubdisciplinesList .Specialisations {
@@ -59,9 +51,7 @@
             }
         }
 
-        #SubdisciplinesList .SubDisciplinesList li {
-            margin: 1rem 0 0;
-        }
+        
 
             #SubdisciplinesList .SubDisciplinesList li a {
                 color: #05293c;
@@ -231,6 +221,15 @@
                 font-size: .8rem;
             }
         }
+          #SubdisciplinesList {
+            padding: 1rem 3rem;
+        }
+
+        @@media (min-width: 1025px) {
+            #SubdisciplinesList {
+                padding: 4rem 4rem;
+            }
+        }
 
         .WishlistButtonContainer[data-v-0d5610aa] {
             margin: auto;
@@ -309,6 +308,9 @@
             color: #3f5c6e;
         }
 
+        #SubdisciplinesList .SubDisciplinesList li a:hover {
+            text-decoration: underline !important;
+        }
       
 
     </style>
@@ -325,17 +327,17 @@
                         @if (culture == "en")
                         {
                             @*<img alt="image" style="width:100px !important;" class="text-center img-responsive" src="https://api.instudy.net/@Model.DirectionFiles[0].Path">*@
-                            <h1>@Model.EnTitle</h1>
+                            <h1>@Model.blog.EnTitle</h1>
                         }
                         else if (culture == "ru")
                         {
                             @*<img alt="image" style="width:100px !important;" class="text-center img-responsive" src="https://api.instudy.net/@Model.DirectionFiles[0].Path">*@
-                            <h1>@Model.RuTitle</h1>
+                            <h1>@Model.blog.RuTitle</h1>
                         }
                         else
                         {
                             @*<img alt="image" style="width:100px !important;" class="text-center img-responsive" src="https://api.instudy.net/@Model.DirectionFiles[0].Path">*@
-                            <h1>@Model.AzTitle</h1>
+                            <h1>@Model.blog.AzTitle</h1>
                         }
                     </div>
                 </div>
@@ -351,16 +353,16 @@
                     <article style="padding: 4rem 6rem;" id="DisciplineDescription">
                         @if (culture == "en")
                         {
-                            @Html.Raw(@Model.EnDescription)
+                            @Html.Raw(@Model.blog.EnDescription)
                         }
                         else if (culture == "ru")
                         {
 
-                            @Html.Raw(@Model.RuDescription)
+                            @Html.Raw(@Model.blog.RuDescription)
                         }
                         else
                         {
-                            @Html.Raw(@Model.AzDescription)
+                            @Html.Raw(@Model.blog.AzDescription)
                         }
 
                     </article>
@@ -371,6 +373,41 @@
 
         </div>
     </div>
+   
+    <section class="col1 WrappedContent no-vertical-padding">
+
+        <div class="NarrowWrapper">
+
+            <div data-module="" class="Module StudyPortals_Shared_Modules_SubdisciplinesList_SubdisciplinesList">
+                <section id="SubdisciplinesList">
+
+                    <h3 id="headerTopics" class="Specialisations"> </h3>
+                    <ul  class="SubDisciplinesList">
+                        @foreach (var blog in Model.blogs)
+                        {
+                            @if (culture == "en")
+                            {
+                                <li> <a href="/Blog/Detail?Id=@blog.Id">@blog.EnTitle </a> </li>
+                            }
+                            else if (culture == "ru")
+                            {
+
+                                <li> <a href="/Blog/Detail?Id=@blog.Id">@blog.RuTitle </a> </li>
+                            }
+                            else
+                            {
+                                <li> <a href="/Blog/Detail?Id=@blog.Id">@blog.AzTitle </a> </li>
+                            }
+                        }
+                    </ul>
+
+                </section>
+            </div>
+
+
+        </div>
+
+    </section>
    @* <section class="col1 WrappedContent no-vertical-padding">
 
 
@@ -503,5 +540,5 @@
 
 </div>
 @section Scripts{
-    <script src="~/js/disciplines.js"></script>
+    <script src="~/js/blog.js"></script>
         }

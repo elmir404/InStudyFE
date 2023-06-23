@@ -175,7 +175,7 @@ h2.section-sub-title {
 
     @media (min-width: 1025px) {
         #ArticleOverview .ArticleSection {
-            column-count: 3;
+            column-count: 5;
         }
     }
 
@@ -356,7 +356,7 @@ p.container-text {
         letter-spacing: var(--unnamed-character-spacing--0-2);
         letter-spacing: -.2px;
         opacity: 1;
-        padding-top: 30px;
+       /* padding-top: 30px;*/
         text-align: left;
     }
 

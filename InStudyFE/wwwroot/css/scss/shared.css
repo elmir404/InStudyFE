@@ -186,12 +186,12 @@ button,input,option,select,textarea{
         clear:none;
         margin-left:1rem
     }
-    #galactus .col2-left>.colblock{
-        float:left;
-        margin-bottom:1rem;
-        margin-right:-100%;
-        margin-top:1rem;
-        width:calc(66.66667% - 1.66667rem)
+    #galactus .col2-left > .colblock {
+        float: left;
+        margin-bottom: 1rem;
+        margin-right: -100%;
+        margin-top: 1rem;
+        width: 100%;
     }
     #galactus .col2-left>.colblock:nth-child(odd){
         clear:both;
@@ -200,14 +200,14 @@ button,input,option,select,textarea{
     #galactus .col2-left>.colblock:nth-child(2n+2){
         clear:none;
         margin-left:calc(66.66667% + .33333rem);
-        width:calc(33.33333% - 1.33333rem)
+        width:100%
     }
 }
 @media (min-width:1025px){
-    #galactus .col1>.colblock{
-        float:left;
-        margin-left:1rem!important;
-        width:calc(100% - 2rem)
+    #galactus .col1 > .colblock {
+        float: left;
+        margin-left: 1rem !important;
+        width: 100%;
     }
     #galactus .col2>.colblock{
         float:left;
@@ -245,17 +245,17 @@ button,input,option,select,textarea{
         margin-bottom:1rem;
         margin-right:-100%;
         margin-top:1rem;
-        width:calc(66.66667% - 1.66667rem)
+        width:100%;
     }
     #galactus .col2-left>.colblock:nth-child(odd){
         clear:both;
         margin-left:1rem
     }
-    #galactus .col2-left>.colblock:nth-child(2n+2){
-        clear:none;
-        margin-left:calc(66.66667% + .33333rem);
-        width:calc(33.33333% - 1.33333rem)
-    }
+        #galactus .col2-left > .colblock:nth-child(2n+2) {
+            clear: none;
+            margin-left: calc(66.66667% + .33333rem);
+            width: 100%;
+        }
 }
 #galactus img{
     height:auto;
