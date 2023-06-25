@@ -17,9 +17,14 @@ namespace InStudyFE.Controllers
             _httpClientFactory = httpClientFactory;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var manager = new BlogManager(_httpClientFactory);
+
+           
+            var blogs = await manager.GetBlogs();
+           
+            return View(blogs);
         }
         public async Task<IActionResult> Detail(int blogId)
         {

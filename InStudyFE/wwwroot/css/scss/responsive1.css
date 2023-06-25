@@ -570,8 +570,8 @@
 @media (min-width:1025px){
     #OnboardingBar .OnboardingBullet .IconImg{
         height:36px;
-        margin-left:-20px;
-        margin-top:-20px;
+        margin-left:-17.5px;
+        margin-top:-18px;
         width:36px
     }
 }

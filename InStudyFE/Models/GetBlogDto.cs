@@ -12,6 +12,6 @@
         public string RuDescription { get; set; }
         public DateTime RegDate { get; set; }
         public bool IsActive { get; set; }
-        public IEnumerable<FileDto> BlogFiles { get; set; }
+        public List<FileDto> BlogFiles { get; set; }
     }
 }
