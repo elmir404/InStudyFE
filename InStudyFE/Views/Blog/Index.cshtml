@@ -162,7 +162,14 @@
                           }
                         
                          <figcaption> <a href="/Blog/Detail?blogId=@blog.Id" title="Test to Apply"> @blog.EnTitle </a> </figcaption>
-                         <div class="ShortDescription">@Html.Raw(@blog.EnDescription.Substring(0,150))</div>
+                                        @if (@blog.EnDescription.Length>150)
+                                        {
+                                         <div class="ShortDescription">@Html.Raw(@blog.EnDescription.Substring(0,150))</div>
+                                       }
+                                       else{
+                                            <div class="ShortDescription">@Html.Raw(@blog.EnDescription)</div>
+                                       }
+                         
                       </figure>
                    </div>
                             }
@@ -183,7 +190,14 @@
                                         }
 
                                         <figcaption> <a href="/Blog/Detail?blogId=@blog.Id" title="Test to Apply"> @blog.RuTitle </a> </figcaption>
-                                        <div class="ShortDescription">@Html.Raw(@blog.RuDescription.Substring(0,150))</div>
+                                        @if (@blog.RuDescription.Length > 150)
+                                        {
+                                            <div class="ShortDescription">@Html.Raw(@blog.RuDescription.Substring(0,150))</div>
+                                        }
+                                        else
+                                        {
+                                            <div class="ShortDescription">@Html.Raw(@blog.RuDescription)</div>
+                                        }
                                     </figure>
                                 </div>
                             }
@@ -204,7 +218,14 @@
                                         }
 
                                         <figcaption> <a href="/Blog/Detail?blogId=@blog.Id" title="Test to Apply"> @blog.AzTitle </a> </figcaption>
-                                        <div class="ShortDescription">@Html.Raw(@blog.AzDescription.Substring(0,150))</div>
+                                        @if (@blog.AzDescription.Length > 150)
+                                        {
+                                            <div class="ShortDescription">@Html.Raw(@blog.AzDescription.Substring(0,150))</div>
+                                        }
+                                        else
+                                        {
+                                            <div class="ShortDescription">@Html.Raw(@blog.AzDescription)</div>
+                                        }
                                     </figure>
                                 </div>
                             }
