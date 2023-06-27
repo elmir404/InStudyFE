@@ -320,7 +320,7 @@
                                 //var image = `https://api.instudy.net/${value.country.countryFiles[0].path}`
                                 $('#loading').hide();
                                 $('#searchContent').append(`
-   <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail?uniId=${value.Id}" target="_blank" class="ContentCard js-studyCard">
+   <a data-v-6e0e8e37="" data-v-60a22860="" data-study-id="319857" data-organisation-id="237" title="Strategic Events Management" href="/University/Detail?uniId=${value.id}" target="_blank" class="ContentCard js-studyCard">
                                                                                         <div data-v-78fa3586="" data-v-6e0e8e37="">
                                                                                             
                                                                                             <div data-v-78fa3586="" class="StudyCoverWrapper"><img class="universityimage" data-v-78fa3586="" alt="Study cover image" src="${image}" loading="lazy" width="288" height="152"></div>

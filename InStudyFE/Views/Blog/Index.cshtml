@@ -1,4 +1,8 @@
-﻿@section Css{
+﻿@model List<GetBlogDto>
+@{
+    var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
+}
+@section Css{
     <style>
         #galactus{
             background-color:#EDF3F6;
@@ -125,11 +129,88 @@
 <section class="col2-left wrapped">
    <div class="colblock">
       <div data-module="" class="Module StudyPortals_Shared_Modules_Article_Overview_Overview">
-         <article id="ArticleOverview" data-url="/Blog/Index" data-tags="mastersportal" data-type="General" data-topics="1|Start studying abroad||2|Where to study||3|Decide what to study||4|Choose a university||6|After you get accepted||7|Costs and funding||9|Student experiences||10|How to apply to a university">
-            <h1 id="ArticleOverviewTitle"></h1>
+         <article id="ArticleOverview" data-url="/Blog/Index" data-tags="instudy" data-type="General" data-topics="1|Start studying abroad||2|Where to study||3|Decide what to study||4|Choose a university||6|After you get accepted||7|Costs and funding||9|Student experiences||10|How to apply to a university">
+                    @if (culture == "en")
+                    {
+                        <h1 id="ArticleOverviewTitle"></h1>
+                    }
+                    else if (culture == "ru")
+                    {
+                        <h1 id="ArticleOverviewTitle"></h1>
+                    }
+                    else
+                    {
+                        <h1 id="ArticleOverviewTitle"></h1>
+                    }
+            
             <h1 id="FeaturedArticlesHeader"></h1>
             <div id="FeaturedArticles" class="ArticleSection">
-               
+               @foreach (var blog in Model)
+               {
+                            @if (culture == "en")
+                            {
+                                <div onclick="setLink(@blog.Id)" class="Article">
+                      <figure data-clickable="clickable">
+                          @if(blog.BlogFiles.Count()>0){
+                                            <picture>
+                                                <source media="all and (max-width: 30em)" srcset="https://api.instudy.net/@blog.BlogFiles[0].Path">
+                                                <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="https://api.instudy.net/@blog.BlogFiles[0].Path">
+                                                <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="https://api.instudy.net/@blog.BlogFiles[0].Path">
+                                                <source media="all and (min-width: 80.063em)" srcset="https://api.instudy.net/@blog.BlogFiles[0].Path">
+                                                <img src="https://api.instudy.net/@blog.BlogFiles[0].Path" height="320" width="213" alt="st to Apply for a">
+                                            </picture>
+                          }
+                        
+                         <figcaption> <a href="/Blog/Detail?blogId=@blog.Id" title="Test to Apply"> @blog.EnTitle </a> </figcaption>
+                         <div class="ShortDescription">@Html.Raw(@blog.EnDescription.Substring(0,150))</div>
+                      </figure>
+                   </div>
+                            }
+                            else if (culture == "ru")
+                            {
+
+                                <div  onclick="setLink(@blog.Id)" class="Article">
+                                    <figure data-clickable="clickable">
+                                        @if (blog.BlogFiles.Count() > 0)
+                                        {
+                                            <picture>
+                                                <source media="all and (max-width: 30em)" srcset="https://api.instudy.net/@blog.BlogFiles[0].Path">
+                                                <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="https://api.instudy.net/@blog.BlogFiles[0].Path">
+                                                <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="https://api.instudy.net/@blog.BlogFiles[0].Path">
+                                                <source media="all and (min-width: 80.063em)" srcset="https://api.instudy.net/@blog.BlogFiles[0].Path">
+                                                <img src="https://api.instudy.net/@blog.BlogFiles[0].Path" height="320" width="213" alt="st to Apply for a">
+                                            </picture>
+                                        }
+
+                                        <figcaption> <a href="/Blog/Detail?blogId=@blog.Id" title="Test to Apply"> @blog.RuTitle </a> </figcaption>
+                                        <div class="ShortDescription">@Html.Raw(@blog.RuDescription.Substring(0,150))</div>
+                                    </figure>
+                                </div>
+                            }
+                            else
+                            {
+
+                                <div onclick="setLink(@blog.Id)" class="Article">
+                                    <figure data-clickable="clickable">
+                                        @if (blog.BlogFiles.Count() > 0)
+                                        {
+                                            <picture>
+                                                <source media="all and (max-width: 30em)" srcset="https://api.instudy.net/@blog.BlogFiles[0].Path">
+                                                <source media="all and (min-width: 30.063em) and (max-width: 48em)" srcset="https://api.instudy.net/@blog.BlogFiles[0].Path">
+                                                <source media="all and (min-width: 48.063em) and (max-width: 80em)" srcset="https://api.instudy.net/@blog.BlogFiles[0].Path">
+                                                <source media="all and (min-width: 80.063em)" srcset="https://api.instudy.net/@blog.BlogFiles[0].Path">
+                                                <img src="https://api.instudy.net/@blog.BlogFiles[0].Path" height="320" width="213" alt="st to Apply for a">
+                                            </picture>
+                                        }
+
+                                        <figcaption> <a href="/Blog/Detail?blogId=@blog.Id" title="Test to Apply"> @blog.AzTitle </a> </figcaption>
+                                        <div class="ShortDescription">@Html.Raw(@blog.AzDescription.Substring(0,150))</div>
+                                    </figure>
+                                </div>
+                            }
+
+
+                        }
               
             </div>
 
@@ -159,8 +240,19 @@
 
                 <div data-module="" class="Module StudyPortals_Shared_Modules_SubdisciplinesList_SubdisciplinesList">
                     <section id="SubdisciplinesList">
-
-                        <h3 id="headerTopics" class="Specialisations"> </h3>
+                    @if (culture == "en")
+                    {
+                        <h3 id="headerTopics" class="Specialisations">Другие Cтатьи </h3>
+                    }
+                    else if (culture == "ru")
+                    {
+                        <h3 id="headerTopics" class="Specialisations">Other Articles </h3>
+                    }
+                    else
+                    {
+                        <h3 id="headerTopics" class="Specialisations"> Digər Məqalələr</h3>
+                    }
+                        
 
 
 
@@ -169,7 +261,26 @@
 
                         <ul id="topics" class="SubDisciplinesList">
                            
-                                   
+                                @foreach (var blogs in Model)
+                        {
+                            @if (Model.Count() <= 10)
+                            {
+
+
+                                @if (culture == "en")
+                                {
+                                    <li> <a href="/Blog/Detail?blogId=@blogs.Id"> @blogs.EnTitle</a> </li>
+                                }
+                                else if (culture == "ru")
+                                {
+                                    <li> <a href="/Blog/Detail?blogId=@blogs.Id"> @blogs.RuTitle</a> </li>
+                                }
+                                else
+                                {
+                                    <li> <a href="/Blog/Detail?blogId=@blogs.Id"> @blogs.AzTitle</a> </li>
+                                }
+                            }
+                        }   
                                
                                
                                     
@@ -185,6 +296,11 @@
     </section>
 </div>
   @section Scripts{
-    <script src="~/js/blog.js" defer></script>
+    <script src="~/js/blo1g.js" defer></script>
+    <script>
+        function setLink(id){
+            location.href=`/Blog/Detail?blogId=${id}`
+        }
+    </script>
 
   }

@@ -127,7 +127,7 @@
         $(`#labelconsulted`).html('Ödənişsiz konsultasiyaya yazılmaq istəyirsiniz?');
         $(`#labelstcont`).html('Yaşadığınız ölkə');
         $(`#labelcont`).html('Təhsil almaq istədiyiniz ölkə:');
-        $(`#labeldirection`).html('Istiqamət');
+        $(`#labeldirection`).html('İstiqamət');
         $(`#requestSubmit`).html('Göndər');
         $(`.yes`).html('Bəli');
         $(`.no`).html('Xeyr');
