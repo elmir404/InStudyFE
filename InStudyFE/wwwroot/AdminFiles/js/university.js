@@ -26,10 +26,10 @@
                 data: 'id', render: function (data, type, row, meta) {
                     return `
                         <div class="btn-list">
-                            <button onclick=Delete(${JSON.stringify(data)}) type="button" class="btn btn-sm btn-danger">
-                                <span class="fe fe-trash-2"> </span>
+                            <button id="${JSON.stringify(data)}" type="button" class="btn remove   btn-sm btn-danger">
+                    <span class="fe fe-trash-2"> </span>
+                </button>
 
-                            </button>
                             <button onclick=Edit(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-success">
                                 <i class="fe fe-eye"></i>
                             </button>
@@ -191,45 +191,56 @@
 
 
     });
+    $('#university-datatable').on('click', '.remove', function () {
+        var table = $('#university-datatable').DataTable();
+        var id = $(this).attr("id");
+        var thh = $(this);
+        debugger;
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "PUT",
+                    url: `https://api.instudy.net/api/University/DeleteUniversity?id=${id}`,
+                    success: function (result) {
+                        if (result.success == true) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            ).then((result) => {
+                                if (result.isConfirmed) {
+                                    table
+                                        .row($(thh).parents('tr'))
+                                        .remove()
+                                        .draw(false);
+                                    debugger;
+                                }
+                            });
+
+                        }
+                        else {
+                            alert(result.message)
+                        }
+                    }
+                });
+
+            }
+        })
+
+        debugger;
+    });
 
 });
 function Edit(university) {
     
     location.href = `/Admin/University/UpdateUniversity?uniId=${university}`;
-
-}
-function Delete(university) {
-    Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            $.ajax({
-                type: "PUT",
-                url: `https://api.instudy.net/api/University/DeleteUniversity?id=${university}`,
-                success: function (result) {
-                    if (result.success == true) {
-                        Swal.fire(
-                            'Deleted!',
-                            'Your file has been deleted.',
-                            'success'
-                        ).then((result) => { if (result.isConfirmed) { location.reload(); } });
-
-                    }
-                    else {
-                        alert(result.message)
-                    }
-                }
-            });
-
-        }
-    })
- 
-
 
 }

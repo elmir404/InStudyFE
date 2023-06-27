@@ -72,6 +72,7 @@
 
 });
 function Delete(id) {
+    var table = $('#user-datatable').DataTable();
     Swal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
@@ -91,7 +92,7 @@ function Delete(id) {
                             'Deleted!',
                             'Your file has been deleted.',
                             'success'
-                        ).then((result) => { if (result.isConfirmed) { location.reload(); } });
+                        ).then((result) => { if (result.isConfirmed) { table.row(this).remove().draw(false); } });
 
                     }
                     else {

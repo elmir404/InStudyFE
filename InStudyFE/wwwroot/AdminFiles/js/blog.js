@@ -32,10 +32,11 @@
                 <button onclick=Edit(${JSON.stringify(data)}) type="button" class="btn btn-sm btn-primary">
                     <i class="fe fe-edit"></i>
                 </button>
-                <button onclick=Delete(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-danger">
+                 <button id="${JSON.stringify(data)}" type="button" class="btn remove   btn-sm btn-danger">
                     <span class="fe fe-trash-2"> </span>
                 </button>
-               
+
+
             </div>
                         `;
 
@@ -54,7 +55,7 @@
         ]
     });
     $("#addBlog").click(function () {
-        console.log("sadsadsa");
+       
         var files = $("#files").get(0).files;
         var formData = new FormData();
         formData.append('AzTitle', $("#azHeader").val());
@@ -66,7 +67,7 @@
         for (var i = 0; i < files.length; i++) {
             formData.append('Files', files[i]);
         }
-        console.log(formData);
+       
 
         $.ajax({
             type: "POST",
@@ -93,44 +94,57 @@
 
 
     });
+        $('#blog-datatable').on('click', '.remove', function () {
+            var table = $('#blog-datatable').DataTable();
+            var id = $(this).attr("id");
+            var thh = $(this);
+            debugger;
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: "PUT",
+                        url: `https://api.instudy.net/api/Blogs/DeleteBlog?blogId=${id}`,
+                        success: function (result) {
+                            if (result.success == true) {
+                                Swal.fire(
+                                    'Deleted!',
+                                    'Your file has been deleted.',
+                                    'success'
+                                ).then((result) => {
+                                    if (result.isConfirmed) {
+                                        table
+                                            .row($(thh).parents('tr'))
+                                            .remove()
+                                            .draw(false);
+                                        debugger;
+                                    }
+                                });
+
+                            }
+                            else {
+                                alert(result.message)
+                            }
+                        }
+                    });
+
+                }
+            })
+
+            debugger;
+        });
+       
 });
 function Edit(blog) {
 
     localStorage.setItem('blogId', blog);
     location.href = `/Admin/Blog/UpdateBlog`;
-
-}
-function Delete(blog) {
-    Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            $.ajax({
-                type: "PUT",
-                url: `https://api.instudy.net/api/Blogs/DeleteBlog?blogId=${blog}`, 
-                success: function (result) {
-                    if (result.success == true) {
-                        Swal.fire(
-                            'Deleted!',
-                            'Your file has been deleted.',
-                            'success'
-                        ).then((result) => { if (result.isConfirmed) { location.reload(); } });
-
-                    }
-                    else {
-                        alert(result.message)
-                    }
-                }
-            });
-
-        }
-    })
-   
 
 }

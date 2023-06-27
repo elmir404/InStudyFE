@@ -16,9 +16,10 @@
             {
                 data: 'id', render: function (data, type, row, meta) {
                     return `<div class="btn-list">
-                            <button onclick=Delete(${JSON.stringify(data)}) type="button" class="btn  btn-sm btn-danger">
-                                <span class="fe fe-trash-2"> </span>
-                            </button>
+                            <button id="${JSON.stringify(data)}" type="button" class="btn remove   btn-sm btn-danger">
+                    <span class="fe fe-trash-2"> </span>
+                </button>
+
                         </div>
                         `;
 
@@ -89,6 +90,7 @@
     //getBlogs();
 });
 function Delete(message) {
+    var table = $('#message-datatable').DataTable();
     Swal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
@@ -108,7 +110,7 @@ function Delete(message) {
                             'Deleted!',
                             'Your file has been deleted.',
                             'success'
-                        ).then((result) => { if (result.isConfirmed) { location.reload(); } });
+                        ).then((result) => { if (result.isConfirmed) { table.row(this).remove().draw(false); } });
 
                     }
                     else {

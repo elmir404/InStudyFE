@@ -193,35 +193,35 @@
      </style>
  }
 <div class="forlang">
-    @if(Model.header.ContentFiles.Count>0){
-    }
-<div id="HomeSearchBackground"
+    @if (Model.header.ContentFiles.Count > 0)
+    {
+        <div id="HomeSearchBackground"
     style="background-image:url(https://api.instudy.net/@Model.header.ContentFiles[0].Path)">
             <section id="SecondRow" class="col1 wrapped">
-               <div class="colblock no-vertical-margin">
-                  <div data-module="" class="Module StudyPortals_Shared_Modules_HomeSearchRR_HomeSearch">
-                     <section id="HomeSearch">
-                        <div class="HeadingTextWrapper">
-                           <div id="homeHeader" class="HeadingTextBottom">
-                                @if (culture == "en")
-                                {
-                                    <h1 class="DegreeType">@Html.Raw(@Model.header.EnBody) </h1>
-                                    <h2 class="HeadingMainTitle">@Model.header.EnHeader  </h2>
-                                   
-                                }
-                                else if (culture == "ru")
-                                {
-                                    <h1 class="DegreeType"> @Html.Raw(@Model.header.RuBody) </h1>
-                                    <h2 class="HeadingMainTitle">@Model.header.RuHeader  </h2>
-                                     
-                                }
-                                else
-                                {
-                                    <h1 class="DegreeType">@Html.Raw(@Model.header.AzBody) </h1>
-                                    <h2 class="HeadingMainTitle">@Model.header.AzHeader  </h2>
-                                   
-                                }
-                           </div>
+                <div class="colblock no-vertical-margin">
+                    <div data-module="" class="Module StudyPortals_Shared_Modules_HomeSearchRR_HomeSearch">
+                        <section id="HomeSearch">
+                            <div class="HeadingTextWrapper">
+                                <div id="homeHeader" class="HeadingTextBottom">
+                                    @if (culture == "en")
+                                    {
+                                        <h1 class="DegreeType">@Html.Raw(@Model.header.EnBody) </h1>
+                                        <h2 class="HeadingMainTitle">@Model.header.EnHeader  </h2>
+
+                                    }
+                                    else if (culture == "ru")
+                                    {
+                                        <h1 class="DegreeType"> @Html.Raw(@Model.header.RuBody) </h1>
+                                        <h2 class="HeadingMainTitle">@Model.header.RuHeader  </h2>
+
+                                    }
+                                    else
+                                    {
+                                        <h1 class="DegreeType">@Html.Raw(@Model.header.AzBody) </h1>
+                                        <h2 class="HeadingMainTitle">@Model.header.AzHeader  </h2>
+
+                                    }
+                                </div>
                         </div>
                        
                      </section>
@@ -229,6 +229,7 @@
                </div>
             </section>
          </div>
+}
          <div class="WhiteBackgroundPane">
             <section class="col1 wrapped">
                <div class="colblock">
